@@ -71,8 +71,12 @@ export function FlightExperienceSection() {
     const card = cards[index];
     if (!card) return;
 
+    const containerWidth = container.offsetWidth;
+    const cardWidth = card.offsetWidth;
+    const cardOffset = card.offsetLeft;
+
     container.scrollTo({
-      left: card.offsetLeft - container.offsetWidth / 2 + card.offsetWidth / 2,
+      left: cardOffset - containerWidth / 2 + cardWidth / 2,
       behavior,
     });
 
@@ -90,55 +94,55 @@ export function FlightExperienceSection() {
     if (!isDragging || !scrollContainerRef.current) return;
     e.preventDefault();
     const x = e.pageX - scrollContainerRef.current.offsetLeft;
-    scrollContainerRef.current.scrollLeft = scrollLeft - (x - startX) * 1.5;
+    const walk = (x - startX) * 1.5;
+    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
   };
 
   const stopDragging = () => setIsDragging(false);
 
+  // Efecto para centrar la tarjeta del medio cuando cambia la categoría
   useEffect(() => {
-    // centra la card del medio al cambiar filtro
     const timer = setTimeout(() => {
-      if (visibleFlights.length > 1) {
-        scrollToCard(1, 'auto');
-      } else if (visibleFlights[0]) {
-        scrollToCard(0, 'auto');
-      }
-    }, 100);
+      const middleIndex = Math.floor(visibleFlights.length / 2);
+      scrollToCard(middleIndex, 'auto');
+    }, 50);
 
     return () => clearTimeout(timer);
-  }, [activeFilter]); // ← intencionalmente solo el filtro
+  }, [activeFilter, visibleFlights]);
 
   return (
-    <section className="relative w-full bg-secondary pb-96 overflow-visible">
+    <section className="relative w-full bg-secondary pb-32 overflow-hidden">
+      {/* Background Layer */}
       <div className="absolute inset-0 z-0">
         <CloudinaryImage
           publicId="v1769270546/flightexp_kisynt"
           alt="Sky Background"
           fill
           priority
-          className="object-cover"
+          className="object-cover opacity-80"
         />
       </div>
 
       <div className="relative mx-auto max-w-[1440px] px-6 z-10">
-        <header className="pt-24 text-center mb-16">
-          <h4 className="text-secondary mb-6">CHOOSE YOUR ASCENT</h4>
-          <h2 className="text-secondary">
+        <header className="pt-24 text-center mb-12">
+          <h4 className="text-secondary-foreground font-semibold tracking-widest mb-4 uppercase">CHOOSE YOUR ASCENT</h4>
+          <h2 className="text-4xl md:text-6xl font-bold text-secondary-foreground leading-tight">
             Flight Experiences <br /> Designed for adventure
           </h2>
         </header>
 
+        {/* Filter Toggle */}
         <div className="flex justify-center mb-16">
-          <div className="w-full max-w-[512px] h-[72px] bg-background rounded-full flex p-2 shadow-lg">
+          <div className="w-full max-w-[512px] h-[64px] bg-white/90 backdrop-blur-sm rounded-full flex p-1.5 shadow-xl border border-white/20">
             {(['shared', 'private', 'vip'] as FlightCategory[]).map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveFilter(cat)}
                 className={cn(
-                  'flex-1 rounded-full font-bold text-sm transition',
+                  'flex-1 rounded-full font-bold text-sm uppercase transition-all duration-300',
                   activeFilter === cat
-                    ? 'bg-secondary text-background'
-                    : 'text-secondary'
+                    ? 'bg-secondary text-secondary-foreground shadow-md'
+                    : 'text-secondary-foreground/60 hover:text-secondary-foreground'
                 )}
               >
                 {cat}
@@ -147,6 +151,7 @@ export function FlightExperienceSection() {
           </div>
         </div>
 
+        {/* Carousel Container */}
         <div
           ref={scrollContainerRef}
           onMouseDown={handleMouseDown}
@@ -154,40 +159,53 @@ export function FlightExperienceSection() {
           onMouseLeave={stopDragging}
           onMouseMove={handleMouseMove}
           className={cn(
-            'w-full overflow-x-scroll snap-x snap-mandatory mb-32 select-none',
+            'w-full overflow-x-auto snap-x snap-mandatory no-scrollbar select-none pb-20',
             isDragging ? 'cursor-grabbing' : 'cursor-grab'
           )}
-          style={{ scrollbarWidth: 'none' }}
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          <div className="flex gap-8 w-max">
+          <div className="flex gap-6 md:gap-12 px-[10vw] md:px-[30vw] w-max">
             {visibleFlights.map((flight, index) => {
               const isActive = activeId === flight.id;
 
               return (
                 <div
                   key={flight.id}
-                  className="snap-center flex-shrink-0"
-                  onClick={() => !isDragging && scrollToCard(index)}
+                  className="snap-center flex-shrink-0 flex flex-col items-center"
+                  style={{ width: 'clamp(300px, 60vw, 600px)' }}
                 >
-                  <div className="relative w-[320px] md:w-[600px] h-[220px] md:h-[420px] rounded-card overflow-hidden">
+                  <div 
+                    onClick={() => !isDragging && scrollToCard(index)}
+                    className={cn(
+                      "relative w-full aspect-[16/10] rounded-[2rem] overflow-hidden transition-transform duration-500 shadow-2xl cursor-pointer",
+                      isActive ? "scale-105" : "scale-90 opacity-60 grayscale-[0.5]"
+                    )}
+                  >
                     <CloudinaryImage
                       publicId={flight.cloudinaryId}
                       alt={flight.title}
                       fill
                       className="object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 p-6 flex flex-col text-white">
-                      <h4 className="mb-2 uppercase">{activeFilter} flight</h4>
-                      <h3 className="mb-auto">{flight.title}</h3>
-                      <strong>From ${flight.price} MXN</strong>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end text-white">
+                      <span className="text-xs font-bold tracking-widest uppercase mb-2 opacity-80">{activeFilter} flight</span>
+                      <h3 className="text-2xl md:text-3xl font-bold mb-2">{flight.title}</h3>
+                      <p className="text-lg font-medium">From ${flight.price} MXN</p>
                     </div>
                   </div>
 
-                  {isActive && (
-                    <p className="mt-6 text-center text-foreground max-w-md mx-auto">
+                  {/* Info Section - Only visible if active */}
+                  <div className={cn(
+                    "mt-10 text-center transition-all duration-500 max-w-lg",
+                    isActive ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none h-0"
+                  )}>
+                    <p className="text-lg text-secondary-foreground/90 leading-relaxed font-medium">
                       {descriptions[activeFilter]}
                     </p>
-                  )}
+                    <button className="mt-8 px-10 py-4 bg-secondary text-secondary-foreground rounded-full font-bold hover:scale-105 transition-transform shadow-lg">
+                      BOOK NOW
+                    </button>
+                  </div>
                 </div>
               );
             })}
