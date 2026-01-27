@@ -11,7 +11,7 @@ const buttonVariants = cva(
         primary: "bg-primary text-secondary shadow hover:brightness-85",
         secondary: "bg-secondary text-white shadow-sm hover:opacity-90",
         outline: "bg-background text-secondary shadow-sm hover:bg-muted font-bold",
-        ghost: "hover:bg-muted text-background",
+        ghost: "text-secondary hover:bg-muted",
         whatsapp: "bg-[#25D366] text-white hover:bg-[#25D366]/90 shadow-md",
       },
         size: {

@@ -24,7 +24,7 @@ const REVIEWS_DATA = [
     location: 'New Zealand',
     quote: 'Out of all the adventures we did, this was the best',
     text: "No hidden costs (very unusual). Please do it if you are in Mexico City, you won't regret it.",
-    avatarId: "v1769505304/Ellipse_8_reoc5x", // Cambiar por el ID real si es diferente
+    avatarId: "v1769505304/Ellipse_8_reoc5x",
     offset: "",
     align: "lg:justify-end"
   },
@@ -59,7 +59,7 @@ function StarRating({ width = 120, height = 18, className = "" }) {
 function ReviewCard({ review }: { review: typeof REVIEWS_DATA[number] }) {
   return (
     <article
-      className="rounded-[22px] p-[31px] flex flex-col bg-background text-secondary shadow-sm transition-transform hover:scale-[1.01] w-full max-w-[537px] h-[356px]"
+      className="rounded-card p-[31px] flex flex-col bg-background text-secondary shadow-sm transition-transform hover:scale-[1.01] w-full max-w-[537px] min-h-[356px]"
     >
       <div className="flex flex-col h-full">
         {/* Header */}
@@ -73,9 +73,9 @@ function ReviewCard({ review }: { review: typeof REVIEWS_DATA[number] }) {
                 className="object-cover"
               />
             </div>
-            <div className="flex flex-col text-secondary">
-              <span className="font-poppins font-medium text-[16px] tracking-tight">{review.name}</span>
-              <span className="font-poppins font-medium text-[16px] opacity-50">{review.location}</span>
+            <div className="flex flex-col">
+              <span className="font-poppins font-medium text-base tracking-tight">{review.name}</span>
+              <span className="font-poppins font-medium text-base opacity-50">{review.location}</span>
             </div>
           </div>
           <StarRating width={162} height={24} className="mt-2" />
@@ -84,11 +84,13 @@ function ReviewCard({ review }: { review: typeof REVIEWS_DATA[number] }) {
         <div className="w-full border-t border-secondary/20 mb-6" />
 
         {/* Content */}
-        <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[187px_1fr] gap-6 mt-auto text-secondary">
-          <h3 className="font-libre-baskerville italic text-[24px] leading-tight tracking-tight">
+        <div className="grid grid-cols-1 sm:grid-cols-[187px_1fr] gap-6 mt-auto">
+          {/* h3 ya tiene Libre Baskerville e Italic en tu CSS */}
+          <h3 className="!text-secondary !drop-shadow-none">
             “{review.quote}”
           </h3>
-          <p className="font-inter font-medium text-[16px] tracking-tight leading-snug">
+          {/* p ya tiene Inter y clamp en tu CSS */}
+          <p className="!text-secondary !drop-shadow-none opacity-90">
             {review.text}
           </p>
         </div>
@@ -116,11 +118,13 @@ export default function HomeReviewsSection() {
 
       <div className="relative z-10 w-full max-w-[1102px] px-4 flex flex-col items-center">
         {/* Header */}
-        <header className="flex flex-col items-center gap-3 mb-12 text-center text-secondary">
-          <h4 className="font-inter font-bold tracking-[0.2em] uppercase text-sm">
+        <header className="flex flex-col items-center gap-3 mb-12 text-center">
+          {/* h4 usa Inter Bold Uppercase según tu CSS */}
+          <h4 className="!text-secondary">
             {reviews('readRealReviews')}
           </h4>
-          <h2 className="font-poppins font-semibold text-[clamp(2.5rem,6vw,64px)] leading-[1.1] tracking-tighter max-w-[916px]">
+          {/* h2 usa Poppins Semibold y Clamp según tu CSS */}
+          <h2 className="max-w-[916px]">
             {reviews('dontJustTakeOurWord')}
           </h2>
         </header>
@@ -129,7 +133,7 @@ export default function HomeReviewsSection() {
         <div className="flex flex-wrap justify-center gap-12 mb-20 items-center">
           {PLATFORMS.map((name) => (
             <div key={name} className="flex flex-col items-center gap-3 text-secondary">
-              <span className="font-inter font-bold text-[18px]">{name}</span>
+              <span className="font-inter font-bold text-lg">{name}</span>
               <StarRating />
             </div>
           ))}

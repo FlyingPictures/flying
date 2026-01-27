@@ -18,9 +18,10 @@ interface HeroBackgroundProps {
   className?: string;
 }
 
-// 1. Contenedor Principal
+// 1. Contenedor Principal: 95% del viewport en mobile para asomar el sig. componente
 export function HeroContainer({ children, className, height = 'default' }: HeroProps) {
   const heightVariants: Record<string, string> = {
+    // 95svh asegura que el 5% del siguiente componente sea visible en móviles
     default: 'h-[95svh] lg:h-screen',
     full: 'h-screen',
     short: 'h-[60vh] md:h-[70vh]'
@@ -29,7 +30,9 @@ export function HeroContainer({ children, className, height = 'default' }: HeroP
   return (
     <section 
       className={cn(
-        'relative w-full flex flex-col overflow-hidden', 
+        'relative w-full flex flex-col overflow-hidden',
+        // Margen negativo para pegarse al top real ignorando el espacio del Navbar (7.5rem según tu config)
+        '-mt-[7.5rem] lg:mt-0', 
         heightVariants[height] || height, 
         className
       )}
@@ -39,7 +42,7 @@ export function HeroContainer({ children, className, height = 'default' }: HeroP
   );
 }
 
-// 2. Fondo (Cloudinary)
+// 2. Fondo
 export function HeroBackground({ publicId, cloudinaryId, overlay = false, children, className }: HeroBackgroundProps) {
   const activeId = publicId || cloudinaryId;
   return (
@@ -61,11 +64,11 @@ export function HeroBackground({ publicId, cloudinaryId, overlay = false, childr
   );
 }
 
-// 3. Contenido (Maneja alineación)
+// 3. Contenido
 export function HeroContent({ children, className, verticalAlign = 'bottom', align = 'center' }: HeroProps) {
   const verticalStyles = {
     center: 'justify-center',
-    bottom: 'justify-end pb-12',
+    bottom: 'justify-end pb-16', // Un poco más de padding abajo por el 95% height
     top: 'justify-start pt-12'
   };
 
@@ -78,13 +81,14 @@ export function HeroContent({ children, className, verticalAlign = 'bottom', ali
   return (
     <div className={cn(
       'relative z-10 w-full h-full flex flex-col px-6 lg:px-8',
-      verticalStyles[verticalAlign as keyof typeof verticalStyles] || verticalStyles.bottom,
+      // En mobile, compensamos el -mt con un pt para que el texto no quede bajo la Navbar
+      'justify-start pt-[8.5rem] lg:pt-0', 
+      'lg:' + (verticalStyles[verticalAlign as keyof typeof verticalStyles] || verticalStyles.bottom),
       horizontalStyles[align as keyof typeof horizontalStyles] || horizontalStyles.center,
       className
     )}>
-      {/* Contenedor interno para asegurar que los elementos sigan la alineación del padre */}
       <div className={cn(
-        "w-full max-w-[1200px] flex flex-col gap-8 lg:gap-4",
+        "w-full max-w-[1200px] flex flex-col gap-6 lg:gap-4",
         align === 'center' ? 'items-center' : align === 'right' ? 'items-end' : 'items-start'
       )}>
         {children}
@@ -93,7 +97,7 @@ export function HeroContent({ children, className, verticalAlign = 'bottom', ali
   );
 }
 
-// 4. Sub-componentes tipados
+// 4. Sub-componentes
 export function HeroTitle({ children, className }: { children: ReactNode; className?: string }) {
   return <h1 className={cn("w-full max-w-[916px] block", className)}>{children}</h1>;
 }
