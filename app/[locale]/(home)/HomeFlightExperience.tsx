@@ -18,6 +18,7 @@ interface Flight {
 export function FlightExperienceSection() {
   const [activeFilter, setActiveFilter] = useState<FlightCategory>('shared');
   const [activeId, setActiveId] = useState<number | null>(null);
+
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const [isDragging, setIsDragging] = useState(false);
@@ -62,6 +63,22 @@ export function FlightExperienceSection() {
     [activeFilter, allFlights]
   );
 
+  const scrollToCard = (index: number, behavior: ScrollBehavior = 'smooth') => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const cards = container.querySelectorAll<HTMLElement>('.snap-center');
+    const card = cards[index];
+    if (!card) return;
+
+    container.scrollTo({
+      left: card.offsetLeft - container.offsetWidth / 2 + card.offsetWidth / 2,
+      behavior,
+    });
+
+    setActiveId(visibleFlights[index]?.id ?? null);
+  };
+
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!scrollContainerRef.current) return;
     setIsDragging(true);
@@ -76,28 +93,20 @@ export function FlightExperienceSection() {
     scrollContainerRef.current.scrollLeft = scrollLeft - (x - startX) * 1.5;
   };
 
-  const scrollToCard = (index: number, behavior: ScrollBehavior = 'smooth') => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    const cards = container.querySelectorAll<HTMLElement>('.snap-center');
-    const card = cards[index];
-    if (!card) return;
-
-    container.scrollTo({
-      left: card.offsetLeft - container.offsetWidth / 2 + card.offsetWidth / 2,
-      behavior,
-    });
-  };
+  const stopDragging = () => setIsDragging(false);
 
   useEffect(() => {
+    // centra la card del medio al cambiar filtro
     const timer = setTimeout(() => {
-      if (visibleFlights[1]) {
+      if (visibleFlights.length > 1) {
         scrollToCard(1, 'auto');
-        setActiveId(visibleFlights[1].id);
+      } else if (visibleFlights[0]) {
+        scrollToCard(0, 'auto');
       }
     }, 100);
+
     return () => clearTimeout(timer);
-  }, [activeFilter, visibleFlights]);
+  }, [activeFilter]); // ← intencionalmente solo el filtro
 
   return (
     <section className="relative w-full bg-secondary pb-96 overflow-visible">
@@ -141,8 +150,8 @@ export function FlightExperienceSection() {
         <div
           ref={scrollContainerRef}
           onMouseDown={handleMouseDown}
-          onMouseUp={() => setIsDragging(false)}
-          onMouseLeave={() => setIsDragging(false)}
+          onMouseUp={stopDragging}
+          onMouseLeave={stopDragging}
           onMouseMove={handleMouseMove}
           className={cn(
             'w-full overflow-x-scroll snap-x snap-mandatory mb-32 select-none',
