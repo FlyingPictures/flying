@@ -4,7 +4,6 @@ import { useSectionTranslations } from '@/hooks/use-section-translations';
 import { CloudinaryImage } from '@/components/ui/CloudinaryImage';
 import { cn } from '@/lib/utils';
 
-// --- CONSTANTS ---
 const STARS_ID = "v1769505467/Group_64_xrfcje";
 
 const REVIEWS_DATA = [
@@ -15,8 +14,9 @@ const REVIEWS_DATA = [
     quote: 'I checked their permits',
     text: 'Their gear is Cameron from Bristol, and unlike most companies, they have all licenses up-to-date. Do not compromise your safety to save a few dollars. Go with the best.',
     avatarId: "v1769505304/Ellipse_8_reoc5x",
-    offset: "lg:translate-y-[189px]",
-    align: "lg:justify-start"
+    // Esta va a la izquierda y centrada verticalmente en su bloque
+    offset: "lg:translate-y-[120px]", 
+    align: "justify-start"
   },
   {
     id: 2,
@@ -25,8 +25,9 @@ const REVIEWS_DATA = [
     quote: 'Out of all the adventures we did, this was the best',
     text: "No hidden costs (very unusual). Please do it if you are in Mexico City, you won't regret it.",
     avatarId: "v1769505304/Ellipse_8_reoc5x",
-    offset: "",
-    align: "lg:justify-end"
+    // Primera de la derecha, más arriba
+    offset: "lg:-translate-y-[40px]",
+    align: "justify-end"
   },
   {
     id: 3,
@@ -35,126 +36,82 @@ const REVIEWS_DATA = [
     quote: 'Everything was smooth',
     text: 'The reception was warm (coffee and heaters for the cold morning!), and the pilot totally nailed the beautiful views.',
     avatarId: "v1769505304/Ellipse_8_reoc5x",
-    offset: "lg:col-start-2 lg:translate-y-[13px]",
-    align: "lg:justify-end"
+    // Segunda de la derecha, más abajo
+    offset: "lg:translate-y-[60px]", 
+    align: "justify-end"
   },
 ] as const;
 
-const PLATFORMS = ['Google', 'Tripadvisor', 'Facebook'];
-
-// --- REUSABLE COMPONENTS ---
-
-function StarRating({ width = 120, height = 18, className = "" }) {
-  return (
-    <CloudinaryImage
-      publicId={STARS_ID}
-      alt="Rating stars"
-      width={width}
-      height={height}
-      className={className}
-    />
-  );
-}
-
 function ReviewCard({ review }: { review: typeof REVIEWS_DATA[number] }) {
   return (
-    <article
-      className="rounded-card p-[31px] flex flex-col bg-background text-secondary shadow-sm transition-transform hover:scale-[1.01] w-full max-w-[537px] min-h-[356px]"
-    >
-      <div className="flex flex-col h-full">
-        {/* Header */}
-        <div className="flex items-start justify-between mb-5">
-          <div className="flex items-center gap-[14px]">
-            <div className="relative w-[93px] h-[93px] rounded-full overflow-hidden flex-shrink-0">
-              <CloudinaryImage
-                publicId={review.avatarId}
-                alt={review.name}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-poppins font-medium text-base tracking-tight">{review.name}</span>
-              <span className="font-poppins font-medium text-base opacity-50">{review.location}</span>
-            </div>
+    <article className="rounded-[22px] flex flex-col bg-[#F7F7F7] shadow-sm w-full max-w-[537px] lg:h-[356px] p-[clamp(1.5rem,4vw,2rem)] transition-transform hover:scale-[1.01]">
+      {/* Header: Avatar + Stars */}
+      <div className="flex items-center justify-between mb-[31px]">
+        <div className="flex items-center gap-[14px]">
+          <div className="relative w-[93px] h-[93px] rounded-full overflow-hidden flex-shrink-0">
+            <CloudinaryImage publicId={review.avatarId} alt={review.name} fill className="object-cover" />
           </div>
-          <StarRating width={162} height={24} className="mt-2" />
+          <div className="flex flex-col text-secondary">
+            <span className="font-poppins font-medium text-[16px] leading-[24px] tracking-[-0.03em]">{review.name}</span>
+            <span className="font-poppins font-medium text-[16px] leading-[24px] tracking-[-0.03em] opacity-50">{review.location}</span>
+          </div>
         </div>
+        <CloudinaryImage publicId={STARS_ID} alt="Stars" width={162} height={24} className="h-auto object-contain" />
+      </div>
 
-        <div className="w-full border-t border-secondary/20 mb-6" />
+      <div className="w-full border-t border-secondary/20 mb-[24px]" />
 
-        {/* Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-[187px_1fr] gap-6 mt-auto">
-          {/* h3 ya tiene Libre Baskerville e Italic en tu CSS */}
-          <h3 className="!text-secondary !drop-shadow-none">
-            “{review.quote}”
-          </h3>
-          {/* p ya tiene Inter y clamp en tu CSS */}
-          <p className="!text-secondary !drop-shadow-none opacity-90">
-            {review.text}
-          </p>
-        </div>
+      {/* Content: Quote + Body */}
+      <div className="grid grid-cols-1 sm:grid-cols-[187px_1fr] gap-[25px] items-start">
+        <h3 className="text-secondary font-serif italic font-normal text-[clamp(1.25rem,2vw,1.5rem)] leading-[123.4%] tracking-[-0.03em]">
+          “{review.quote}”
+        </h3>
+        <p className="text-secondary font-poppins font-medium text-[16px] leading-[24px] tracking-[-0.03em]">
+          {review.text}
+        </p>
       </div>
     </article>
   );
 }
 
-// --- MAIN SECTION ---
 export default function HomeReviewsSection() {
   const { reviews } = useSectionTranslations();
 
   return (
-    <section className="relative w-full overflow-hidden flex flex-col items-center py-24 min-h-[1300px]">
-      {/* Background */}
-      <div className="absolute inset-0 -z-10">
-        <CloudinaryImage
-          publicId="v1769270544/backgroundreviews_uptzt8"
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-        />
+    <section className="relative w-full flex flex-col items-center py-[100px] min-h-[1400px] overflow-hidden">
+      {/* BG Image */}
+      <div className="absolute inset-0 -z-20">
+        <CloudinaryImage publicId="v1769270544/backgroundreviews_uptzt8" alt="BG" fill className="object-cover" priority />
       </div>
 
       <div className="relative z-10 w-full max-w-[1102px] px-4 flex flex-col items-center">
-        {/* Header */}
-        <header className="flex flex-col items-center gap-3 mb-12 text-center">
-          {/* h4 usa Inter Bold Uppercase según tu CSS */}
-          <h4 className="!text-secondary">
-            {reviews('readRealReviews')}
-          </h4>
-          {/* h2 usa Poppins Semibold y Clamp según tu CSS */}
-          <h2 className="max-w-[916px]">
-            {reviews('dontJustTakeOurWord')}
-          </h2>
+        <header className="text-center mb-24">
+          <h4 className="text-secondary font-bold tracking-[0.2em] uppercase text-sm mb-4">{reviews('readRealReviews')}</h4>
+          <h2 className="text-secondary font-poppins font-bold text-[clamp(2rem,5vw,3.5rem)] leading-[1.1]">{reviews('dontJustTakeOurWord')}</h2>
         </header>
 
-        {/* Platforms */}
-        <div className="flex flex-wrap justify-center gap-12 mb-20 items-center">
-          {PLATFORMS.map((name) => (
-            <div key={name} className="flex flex-col items-center gap-3 text-secondary">
-              <span className="font-inter font-bold text-lg">{name}</span>
-              <StarRating />
-            </div>
-          ))}
-        </div>
+        {/* Reviews Grid: 1 Left, 2 Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[24px] gap-y-12 w-full">
+          {/* Columna Izquierda: Javier */}
+          <div className={cn("flex flex-col", REVIEWS_DATA[0].align, REVIEWS_DATA[0].offset)}>
+            <ReviewCard review={REVIEWS_DATA[0]} />
+          </div>
 
-        {/* Reviews grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 gap-x-6 w-full">
-          {REVIEWS_DATA.map((review) => (
-            <div 
-              key={review.id} 
-              className={cn("flex justify-center", review.align, review.offset)}
-            >
-              <ReviewCard review={review} />
+          {/* Columna Derecha: Mike y Robert */}
+          <div className="flex flex-col">
+            <div className={cn("flex", REVIEWS_DATA[1].align, REVIEWS_DATA[1].offset)}>
+              <ReviewCard review={REVIEWS_DATA[1]} />
             </div>
-          ))}
+            <div className={cn("flex", REVIEWS_DATA[2].align, REVIEWS_DATA[2].offset)}>
+              <ReviewCard review={REVIEWS_DATA[2]} />
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Overlays */}
-      <div className="absolute top-0 inset-x-0 h-[356px] bg-gradient-to-b from-white/20 to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 inset-x-0 h-[356px] bg-gradient-to-t from-[#ECECEC]/50 to-transparent pointer-events-none" />
+      {/* Efectos de desvanecimiento (Rectangle 56, 59, 57, 58) */}
+      <div className="absolute top-0 inset-x-0 h-[400px] bg-gradient-to-b from-white/40 via-white/10 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 inset-x-0 h-[400px] bg-gradient-to-t from-[#ECECEC]/60 via-[#ECECEC]/20 to-transparent pointer-events-none" />
     </section>
   );
 }
