@@ -19,9 +19,9 @@ export async function PlanHero() {
   const t = await getTranslations("planYourVisit.hero");
 
   return (
-    <HeroContainer height="default">
+    <HeroContainer>
       <HeroBackground publicId={PLAN_HERO_IMAGE}>
-        <HeroContent verticalAlign="center">
+        <HeroContent>
           <HeroTitle className={SPACING.TITLE_TO_SUBTITLE}>
             {t("title")}
           </HeroTitle>

@@ -18,9 +18,9 @@ export async function SafetyHero() {
   const t = await getTranslations("safetyHeritage.hero");
 
   return (
-    <HeroContainer height="default">
-      <HeroBackground cloudinaryId={IMAGES.hero.safety}>
-        <HeroContent verticalAlign="center">
+    <HeroContainer>
+      <HeroBackground publicId={IMAGES.hero.safety}>
+        <HeroContent>
           <HeroTitle className={SPACING.TITLE_TO_SUBTITLE}>
             {t("title")}
           </HeroTitle>
