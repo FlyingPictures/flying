@@ -1,0 +1,585 @@
+{
+  "nav": {
+    "planYourVisit": "Planea tu visita",
+    "flightExperiences": "Vuelos",
+    "experiencesTitle": "Experiencias de Vuelo",
+    "safetyHeritage": "Seguridad y Legado",
+    "contactSupport": "Contacto y Soporte",
+    "language": "Idioma",
+    "bookFlight": "Reservar Vuelo",
+    "languageLabel": "Idioma",
+    "talkExpert": "Habla con un experto",
+    "shared": "Vuelo Compartido",
+    "private": "Vuelo Privado",
+    "vip": "VIP & Tours",
+    "proposals": "Propuestas",
+    "groups": "Grupos"
+  },
+  "banner": {
+    "company": "UNA COMPAÑÍA DE AVIACIÓN - LLÁMANOS"
+  },
+  "experiences": {
+    "balloon": "Globo Aerostático",
+    "helicopter": "Tours en Helicóptero",
+    "private": "Vuelos Privados"
+  },
+  "safety": {
+    "standards": "Estándares de Seguridad",
+    "history": "Nuestra Historia",
+    "certifications": "Certificaciones"
+  },
+  "plan": {
+    "locations": "Ubicaciones",
+    "schedule": "Horarios",
+    "pricing": "Precios"
+  },
+  "herosection": {
+    "h1": "Vuela sobre las Pirámides",
+    "h3": "Un viaje inolvidable te espera",
+    "paragraph": "Vive la magia de Teotihuacán desde el cielo — donde las maravillas antiguas se encuentran con la aventura moderna.",
+    "ctaPrimary": "Reserva tu Vuelo",
+    "poweredBy": "Socio oficial de Cameron Balloons",
+    "ctaSecondary": "Ver Video",
+    "logoLabel": "Destacado en"
+  },
+  "imagegridsection": {
+    "planYourVisit": "Planea tu Visita",
+    "experience": "Experiencia",
+    "gallery": "Galería",
+    "contact": "Contacto",
+    "bookNow": "Reservar Ahora",
+    "language": "Idioma"
+  },
+  "flightOptions": {
+    "label": "ELIGE TU ASCENSO",
+    "h2": "Experiencias de Vuelo diseñadas para la aventura",
+    "viewDetails": "Ver detalles del vuelo",
+    "description": "Viajeros solos, amigos y parejas. Vuela en una canasta compartida con compartimentos que le da a cada uno su propio rincón del cielo. Agrega extras con opciones de transporte y desayuno.",
+    "fromPrice": "Desde"
+  },
+  "reviews": {
+    "readRealReviews": "LEE RESEÑAS REALES",
+    "dontJustTakeOurWord": "No solo tomes nuestra palabra",
+    "readMoreReviews": "Leer Más Reseñas",
+    "outOf5Stars": "de 5 estrellas"
+  },
+  "weather": {
+    "liveMonitoring": "MONITOREO EN VIVO",
+    "heading": "No adivinamos el clima. Lo monitoreamos y lo entendemos.",
+    "description": "Nuestras decisiones se basan en datos en tiempo real, pronósticos y probabilidad. El clima es nuestro copiloto — y a veces, puede ser temperamental.",
+    "safetyPromise": {
+      "title": "La Promesa de Seguridad",
+      "description": "Si el clima no es adecuado, no volamos. Preferimos mantenerte en tierra que arriesgarte en el aire.",
+      "cta": "Ver nuestros Protocolos de Seguridad"
+    },
+    "viewPromise": {
+      "title": "La Promesa de la Vista",
+      "description": "Volamos para presenciar el despertar del valle. A veces nos regalan un amanecer dorado; otras veces, una niebla mística envuelve las pirámides en silencio. Ambos espectáculos los decide la naturaleza. Te prometemos el vuelo de tu vida, cualquiera que sea el telón de fondo que el cielo elija para tu tiempo con nosotros.",
+      "cta": "Ver nuestra Política del Clima"
+    },
+    "station": "ESTACIÓN",
+    "status": "ESTADO",
+    "active": "ACTIVO"
+  },
+  "tradition": {
+    "title": "Nuestro Compromiso de Tradición y Seguridad"
+  },
+  "footer": {
+    "description": "Una compañía de aviación galardonada. El principal proveedor de vuelos en globo aerostático en Teotihuacán. Operando orgullosamente Cameron Balloons UK desde 1992.",
+    "termsConditions": "Términos y Condiciones",
+    "privacyPolicy": "Política de Privacidad",
+    "cancellations": "Política de Cancelación"
+  },
+  "legal": {
+    "privacyTitle": "Política de Privacidad",
+    "privacyDescription": "Cómo protegemos tus datos personales y tu privacidad",
+    "termsTitle": "Términos y Condiciones",
+    "termsDescription": "Condiciones de uso de nuestros servicios de vuelos en globo",
+    "cancellationTitle": "Política de Cancelación",
+    "cancellationDescription": "Información sobre cancelaciones, cambios y reembolsos",
+    "lastUpdated": "Última actualización",
+    "contactTitle": "Contacto",
+    "contactText": "Para cualquier pregunta sobre estas políticas, contáctanos en",
+    "emailPrivacy": "privacy@flyingpicturesmexico.com",
+    "emailTerms": "info@flyingpicturesmexico.com",
+    "emailCancellation": "support@flyingpicturesmexico.com",
+    "phone": "+52 (55) 8025 1057",
+    "schedule": "Lunes a Domingo, 6:00 AM - 8:00 PM (hora de México)",
+    "pricingTitle": "Precios y Reembolsos",
+    "contactPhone": "Teléfono:",
+    "contactSchedule": "Horario de atención:",
+
+    "privacy": {
+      "introTitle": "1. Introducción",
+      "introText": "En Flying Pictures México, nos comprometemos a proteger tu privacidad. Esta Política de Privacidad describe cómo recopilamos, usamos, divulgamos y protegemos tu información cuando visitas nuestro sitio web y utilizas nuestros servicios de vuelos en globo aerostático.",
+      "dataTitle": "2. Datos que Recopilamos",
+      "dataIntro": "Podemos recopilar los siguientes tipos de información:",
+      "personalInfo": "Información personal: Nombre, correo electrónico, número de teléfono, dirección y datos de pago cuando realizas una reserva.",
+      "identificationInfo": "Información de identificación: Pasaporte, INE o identificación oficial para verificación de identidad.",
+      "healthInfo": "Información de salud: Peso, condiciones médicas relevantes y restricciones físicas para garantizar tu seguridad durante el vuelo.",
+      "technicalInfo": "Información técnica: Dirección IP, tipo de navegador, sistema operativo y datos de uso del sitio web.",
+      "photosVideos": "Fotos y videos: Imágenes tomadas durante tu experiencia de vuelo (con tu consentimiento).",
+      "usageTitle": "3. Cómo Usamos Tu Información",
+      "usageIntro": "Utilizamos tu información para los siguientes fines:",
+      "useProcess": "Procesar y gestionar tus reservas de vuelo",
+      "useCommunicate": "Comunicarte sobre confirmaciones, recordatorios e información relevante",
+      "useSafety": "Garantizar tu seguridad durante la experiencia de vuelo",
+      "useImprove": "Mejorar nuestros servicios y la experiencia del usuario",
+      "useLegal": "Cumplir con obligaciones legales y regulatorias",
+      "useMarketing": "Enviar comunicaciones promocionales (con tu consentimiento)",
+      "usePayment": "Procesar pagos y prevenir fraudes",
+      "protectionTitle": "4. Protección de Datos",
+      "protectionText": "Implementamos medidas de seguridad técnicas, administrativas y físicas para proteger tu información personal contra acceso no autorizado, pérdida, alteración o divulgación. Esto incluye encriptación de datos, controles de acceso restringido y protocolos de seguridad estándar de la industria de aviación.",
+      "cookiesTitle": "5. Cookies y Tecnologías Similares",
+      "cookiesText": "Nuestro sitio web utiliza cookies y tecnologías similares para mejorar tu experiencia, analizar el tráfico del sitio y personalizar el contenido. Puedes controlar las cookies a través de la configuración de tu navegador.",
+      "sharingTitle": "6. Compartir Información con Terceros",
+      "sharingIntro": "No vendemos ni alquilamos tu información personal. Podemos compartir tus datos con:",
+      "sharingProviders": "Proveedores de servicios: Procesadores de pago, servicios de envío de comunicaciones y proveedores de infraestructura.",
+      "sharingAuthorities": "Autoridades regulatorias: Cuando sea requerido por ley, como autoridades de aviación civil o fuerzas de seguridad.",
+      "sharingPartners": "Socios de negocios: Hoteles, restaurantes y servicios de transporte que formen parte de tu experiencia (con tu consentimiento).",
+      "rightsTitle": "7. Tus Derechos",
+      "rightsIntro": "Tienes los siguientes derechos respecto a tu información personal:",
+      "rightAccess": "Acceder a tus datos personales",
+      "rightRectify": "Rectificar información inexacta",
+      "rightDelete": "Solicitar la eliminación de tus datos",
+      "rightObject": "Objeter o restringir el procesamiento",
+      "rightPortability": "Solicitar portabilidad de datos",
+      "rightWithdraw": "Retirar tu consentimiento en cualquier momento",
+      "retentionTitle": "8. Retención de Datos",
+      "retentionText": "Conservamos tu información personal durante el tiempo necesario para cumplir con los fines descritos en esta política, a menos que la ley exija o permita un período de retención más largo. Los datos de reservas se conservan por motivos de seguridad y cumplimiento legal.",
+      "minorsTitle": "9. Menores de Edad",
+      "minorsText": "Nuestros servicios no están dirigidos a menores de edad. No recopilamos intencionalmente información personal de menores. Si eres padre o tutor y crees que tu hijo nos ha proporcionado información personal, contáctanos para eliminarla.",
+      "changesTitle": "10. Cambios a Esta Política",
+      "changesText": "Podemos actualizar esta Política de Privacidad periódicamente. Te notificaremos sobre cambios significativos publicando la nueva política en esta página y actualizando la fecha de última modificación.",
+      "contactTitle": "11. Contacto",
+      "contactEmail": "Contáctanos en:",
+      "contactPhone": "Teléfono de atención:",
+      "contactSchedule": "Horario:"
+    },
+    "terms": {
+      "introTitle": "1. Introducción y Aceptación",
+      "introText": "Bienvenido a Flying Pictures México. Estos Términos y Condiciones rigen el uso de nuestros servicios de vuelos en globo aerostático y la navegación de nuestro sitio web. Al realizar una reserva, participar en un vuelo o utilizar nuestro sitio web, aceptas estos términos en su totalidad. Si no estás de acuerdo con estos términos, por favor no utilices nuestros servicios.",
+      "servicesTitle": "2. Servicios de Vuelo",
+      "servicesIntro": "Flying Pictures México ofrece experiencias de vuelo en globo aerostático sobre las ruinas de Teotihuacán. Nuestros servicios incluyen:",
+      "serviceShared": "Vuelos compartidos en globo aerostático",
+      "servicePrivate": "Vuelos privados para grupos exclusivos",
+      "serviceVip": "Experiencias VIP y tours personalizados",
+      "serviceExtras": "Servicios adicionales como transporte y desayuno",
+      "bookingTitle": "3. Reservas y Confirmación",
+      "bookingIntro": "Para reservar un vuelo, debes:",
+      "booking1": "Proporcionar información personal veraz y actualizada, incluyendo nombre, datos de contacto y documentación de identificación válida.",
+      "booking2": "Proporcionar información de salud precisa, incluyendo peso, condiciones médicas y cualquier limitación física.",
+      "booking3": "Realizar el pago completo o el depósito requerido según el tipo de reserva.",
+      "booking4": "Confirmar tu reserva dentro del plazo indicado al momento de la compra.",
+      "bookingNote": "La confirmación de tu reserva está sujeta a disponibilidad y condiciones climáticas favorables.",
+      "pricingTitle": "4. Precios y Pagos",
+      "pricingIntro": "Los precios de nuestros vuelos se muestran en pesos mexicanos (MXN) e incluyen:",
+      "priceInclude1": "Vuelo en globo aerostático certificado",
+      "priceInclude2": "Seguro de pasajeros",
+      "priceInclude3": "Certificado de vuelo",
+      "priceInclude4": "Champagne o bebidas no alcohólicas (según experiencia)",
+      "priceNote": "Los precios no incluyen transporte desde/hacia tu hotel, propinas, ni servicios adicionales no especificados.",
+      "requirementsTitle": "5. Requisitos del Cliente",
+      "requirementsIntro": "Para participar en nuestros vuelos, debes cumplir con los siguientes requisitos:",
+      "reqAge": "Edad: Mínimo 12 años para volar. Los menores de 18 años deben volar acompañados de un padre o tutor legal.",
+      "reqWeight": "Peso: El peso total de pasajeros debe estar dentro de los límites operativos del globo. Podría aplicarse un cargo adicional para pasajeros que requieran asiento adicional.",
+      "reqHealth": "Salud: No padecer condiciones médicas graves que impidan participar en la actividad. Embarazadas de más de 20 semanas no pueden volar.",
+      "reqDocs": "Documentación: Identificación oficial con fotografía válida (pasaporte, INE o licencia).",
+      "safetyTitle": "6. Política de Seguridad",
+      "safetyText": "La seguridad es nuestra máxima prioridad. Todos nuestros pilotos están certificados por las autoridades de aviación civil mexicanas y tienen amplia experiencia en vuelos comerciales. Los globos son inspeccionados regularmente y cumplen con todas las normativas de seguridad aplicables. El piloto a cargo tiene la autoridad final sobre todas las decisiones relacionadas con la seguridad del vuelo, incluyendo la decisión de cancelar o posponer un vuelo si las condiciones no son seguras.",
+      "weatherTitle": "7. Condiciones Climáticas",
+      "weatherText": "Los vuelos en globo aerostático dependen directamente de las condiciones climáticas. Volamos solo cuando los vientos y condiciones meteorológicas son seguros. Si las condiciones no son adecuadas, el vuelo será reprogramado o reembolsado íntegramente. No realizamos vuelos cuando la visibilidad es reducida, cuando hay vientos superiores a los límites seguros, o cuando hay probabilidad de tormentas eléctricas.",
+      "responsibilitiesTitle": "8. Responsabilidades del Cliente",
+      "responsibilitiesIntro": "Al participar en nuestros vuelos, aceptas:",
+      "resp1": "Seguir todas las instrucciones de seguridad proporcionadas",
+      "resp2": "Mantener un comportamiento seguro y respetuoso en todo momento",
+      "resp3": "No estar bajo los efectos de alcohol o sustancias controladas",
+      "resp4": "Informar cualquier condición de salud relevante antes del vuelo",
+      "resp5": "Responder por cualquier daño causado por negligencia propia",
+      "resp6": "Llegar puntualmente al lugar de encuentro indicado",
+      "liabilityTitle": "9. Limitaciones de Responsabilidad",
+      "liabilityText": "Flying Pictures México opera bajo las regulaciones de aviación civil aplicables. Nuestra responsabilidad está limitada a los términos de nuestro seguro de responsabilidad civil. No seremos responsables por retrasos, cancelaciones o pérdidas derivadas de circunstancias fuera de nuestro control razonable, incluyendo pero no limitado a condiciones climáticas adversas, desastres naturales, huelgas, pandemias o actos de fuerza mayor.",
+      "ipTitle": "10. Propiedad Intelectual",
+      "ipText": "Todo el contenido de este sitio web, incluyendo texto, imágenes, logotipos, marcas y diseño, es propiedad de Flying Pictures México o tiene licencia para su uso. Queda prohibida la reproducción, distribución o uso no autorizado de este contenido sin nuestro consentimiento previo por escrito.",
+      "mediaTitle": "11. Fotografías y Videos",
+      "mediaText": "Durante los vuelos, podemos tomar fotografías y videos para fines promocionales. Al volar con nosotros, otorgas permiso para el uso de tu imagen en materiales promocionales, a menos que indiques lo contrario al momento de la reserva o antes del inicio del vuelo.",
+      "modificationsTitle": "12. Modificaciones",
+      "modificationsText": "Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación en nuestro sitio web. Es tu responsabilidad revisar periódicamente estos términos.",
+      "lawTitle": "13. Ley Aplicable",
+      "lawText": "Estos términos se rigen por las leyes de los Estados Unidos Mexicanos. Cualquier disputa será resuelta en los tribunales competentes del Estado de México.",
+      "contactTitle": "14. Contacto",
+      "contactEmail": "Contáctanos en:"
+    },
+    "cancellation": {
+      "introTitle": "1. Introducción",
+      "introText": "Esta Política de Cancelación describe los términos y condiciones aplicables a las cancelaciones, cambios y reembolsos de reservas de vuelos en globo aerostático con Flying Pictures México. Al realizar una reserva, aceptas los términos aquí descritos.",
+      "customerTitle": "2. Cancelaciones por el Cliente",
+      "customerIntro": "Si necesitas cancelar tu reserva, las siguientes condiciones aplican:",
+      "refund72": "72+ horas de anticipación: Reembolso completo del 100%",
+      "refund48": "24-72 horas de anticipación: Reembolso del 50% o cambio de fecha sin cargo",
+      "refund24": "Menos de 24 horas: Sin reembolso. Solo cambio de fecha sujeto a disponibilidad.",
+      "customerNote": "Todas las cancelaciones deben solicitarse por escrito a través de nuestro correo electrónico. El tiempo de procesamiento de reembolsos es de 5-10 días hábiles después de la aprobación.",
+      "noshowTitle": "3. No Presentación (No-Show)",
+      "noshowText": "Si no te presentas en el lugar y hora indicados para tu vuelo, no tendrás derecho a reembolso ni a cambio de fecha. La política de no-show aplica también si llegas tarde y el globo ya ha despegado.",
+      "changesTitle": "4. Cambios de Fecha",
+      "changesIntro": "Si necesitas cambiar la fecha de tu vuelo:",
+      "change72": "72+ horas antes: Cambio gratuito, sujeto a disponibilidad de espacios.",
+      "change48": "24-72 horas antes: Cambio gratuito una vez, sujeto a disponibilidad. Cambios adicionales pueden tener un cargo del 25% del valor de la reserva.",
+      "change24": "Menos de 24 horas: Cambio sujeto a disponibilidad con cargo del 50% del valor de la reserva.",
+      "changesNote": "Los cambios de fecha deben solicitarse con al menos 4 horas de anticipación a la hora programada del vuelo.",
+      "weatherTitle": "5. Cancelaciones por Condiciones Climáticas",
+      "weatherIntro": "Si necesitamos cancelar tu vuelo debido a condiciones climáticas inseguras, tienes las siguientes opciones:",
+      "weatherRefund": "Reembolso completo: 100% de tu dinero será reembolsado sin deducciones.",
+      "weatherReschedule": "Cambio de fecha gratuito: Reprograma para la fecha de tu elección sin cargo adicional.",
+      "weatherCredit": "Crédito para futuro: Crédito válido por 12 meses para usar en cualquier experiencia de nuestra oferta.",
+      "weatherNote": "La decisión de cancelar por clima es tomada exclusivamente por nuestro piloto certificado basándose en las regulaciones de aviación y estándares de seguridad.",
+      "healthTitle": "6. Cancelaciones por Motivos de Salud",
+      "healthIntro": "Si no puedes volar por razones de salud:",
+      "healthWithCert": "Con certificado médico: Reembolso completo o cambio de fecha sin cargo.",
+      "healthWithoutCert": "Sin certificado médico: Aplica la política estándar de cancelaciones según el tiempo de anticipación.",
+      "healthNote": "El certificado médico debe ser expedido por un profesional médico licenciado y debe indicar que no puedes participar en actividades de aviación.",
+      "processTitle": "7. Proceso de Reembolso",
+      "processIntro": "Para solicitar un reembolso:",
+      "process1": "Envía tu solicitud a refunds@flyingpicturesmexico.com",
+      "process2": "Incluye tu número de reserva y motivo de la cancelación",
+      "process3": "Adjunta documentación de soporte si aplica",
+      "process4": "Espera confirmación de recepción (24-48 horas)",
+      "process5": "El procesamiento toma 5-10 días hábiles",
+      "process6": "El reembolso se hará al método de pago original",
+      "groupsTitle": "8. Reservas Grupales",
+      "groupsText": "Para reservas de grupo (8 o más personas), aplican políticas específicas. Por favor contacta directamente a nuestro equipo de grupos para conocer los términos aplicables, ya que pueden existir depósitos no reembolsables y políticas diferenciadas.",
+      "insuranceTitle": "9. Seguro de Viaje",
+      "insuranceText": "Recomendamos adquirir un seguro de viaje que cubra cancelación de viajes. Flying Pictures México ofrece la opción de agregar seguro de cancelación al momento de la reserva por un costo adicional. Consulta los términos y condiciones específicos del seguro en el momento de la compra.",
+      "exceptionsTitle": "10. Excepciones",
+      "exceptionsText": "Flying Pictures México se reserva el derecho de evaluar casos especiales y excepcionales que no estén cubiertos por esta política. Cada caso será evaluado individualmente por nuestro equipo de atención al cliente.",
+      "contactTitle": "11. Contacto",
+      "contactEmail": "Contáctanos en:",
+      "contactPhone": "Teléfono de atención:",
+      "contactSchedule": "Horario:"
+    }
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "Lo sentimos, la página que buscas no existe o ha sido movida.",
+    "backHome": "Volver al inicio"
+  },
+  "contact": {
+    "heroTitle": "Habla con la Torre",
+    "heroSubtitle": "Somos gente de mañanas. ¿Cómo podemos ayudarte?",
+    "heroDescription": "Ya sea que tengas una pregunta logística compleja o simplemente quieras saber si hace frío allá arriba, nuestro equipo de conserjería está disponible. Sin bots, solo humanos que conocen el cielo.",
+    "personal": "Personal",
+    "business": "Negocio",
+    "sectionTitle": "Consultas Generales y Reservaciones",
+    "forTravelers": "Para viajeros, parejas y familias.",
+    "findGloboport": "Encuentra el Globoport.",
+    "address": "Carretera a las Pirámides, Teotihuacán, Edo. Mex. Estamos ubicados a 5 minutos de la zona arqueológica.",
+    "openMaps": "Abrir en Google Maps",
+    "openWaze": "Abrir en Waze",
+    "faqTitle": "Preguntas Frecuentes",
+    "lookingForPrices": "¿Buscas precios?",
+    "worriedAboutWeather": "¿Preocupado por el clima?",
+    "whatToWear": "¿Qué usar?",
+    "getSupport": "OBTENER SOPORTE",
+    "weRespond": "Típicamente respondemos en menos de 5 minutos",
+    "online": "En línea",
+    "schedule": "8:00 AM - 08:00 PM CST",
+    "chatConcierge": "Chatea con Conserje",
+    "availabilityInfo": "Disponibilidad, solicitudes dietéticas especiales, coordinación de propuestas y verificación del clima."
+  },
+  "planYourVisit": {
+    "hero": {
+      "title": "Prepárate para el Despegue",
+      "subtitle": "Todo lo que necesitas saber antes de que suene la alarma",
+      "description": "Sabemos que despertar a las 4:30 AM requiere fuerza de voluntad. Aquí está el manual operativo para asegurar que tu viaje al sitio de lanzamiento sea suave, seguro y sin estrés."
+    },
+    "sunriseRitual": {
+      "label": "EL RITUAL DEL AMANECER",
+      "title": "¿Por qué tan temprano?",
+      "description": "Un globo aerostático es la única aeronave que flota dentro del viento en lugar de cortarlo. Para hacerlo de manera segura, necesitamos que la atmósfera esté perfectamente estable. Este fenómeno, conocido como 'inversión', solo sucede en las primeras horas del día. Una vez que el sol calienta la tierra, las corrientes térmicas comienzan y se vuelve inseguro volar globos. No volamos al amanecer por romanticismo; volamos al amanecer por la física."
+    },
+    "gettingHere": {
+      "label": "LLEGANDO AQUÍ",
+      "title": "Todos los caminos llevan a las Pirámides",
+      "shuttle": {
+        "title": "La elección sin estrés",
+        "pickupTime": "Hora de recogida: 04:30 AM y 05:00 AM",
+        "perks": "Las ventajas: AC, cinturones de seguridad y una siesta en el camino de regreso.",
+        "note": "(Confirmado por WhatsApp la noche anterior).",
+        "openMaps": "Abrir en Google Maps"
+      },
+      "selfDrive": {
+        "title": "Conduce tú mismo",
+        "description": "Si tienes tu propio vehículo, el viaje dura aproximadamente 45-60 minutos desde el centro de CDMX.",
+        "parking": "Estacionamiento: Ofrecemos estacionamiento seguro y cerrado en el lugar sin costo adicional.",
+        "openMaps": "Abrir en Google Maps",
+        "openWaze": "Abrir en Waze"
+      }
+    },
+    "weatherPolicy": {
+      "label": "POLÍTICA DEL CLIMA",
+      "title": "Justicia primero: Nuestra política de cancelación",
+      "ifCancel": "Si Nosotros Cancelamos (Mal Clima):",
+      "ifCancelDescription": "Obtienes un reembolso del 100% o un reprogramación gratuita para la próxima fecha disponible.",
+      "48hours": "48+ horas antes",
+      "48hoursRefund": "Reembolso completo.",
+      "24_48hours": "24-48 horas",
+      "24_48Refund": "50% de reembolso.",
+      "24hours": "24 horas",
+      "24Refund": "No reembolsable",
+      "note": "Somos la única compañía con una regla estricta de 'No Volar' si el viento es complicado."
+    },
+    "essentialPrep": {
+      "label": "PREPARACIÓN ESENCIAL",
+      "title": "Vístete para dos climas",
+      "onionStrategy": {
+        "title": "La estrategia de la cebolla",
+        "description": "Es fresco a las 6:00 AM, pero cálido después del aterrizaje. Usa capas."
+      },
+      "footwear": {
+        "title": "Calzado",
+        "description": "Usa zapatos cómodos y cerrados (tenis o botas)."
+      },
+      "luggage": {
+        "title": "Equipaje",
+        "description": "Por favor trae solo mochilas pequeñas. Las maletas grandes pueden almacenarse en recepción."
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "aboutFlight": "Sobre el vuelo",
+      "safetyLimits": "Seguridad y límites",
+      "bookingExtra": "Reserva y extras",
+      "questions": {
+        "afraidHeights": "Le tengo miedo a las alturas. ¿Me marearé?",
+        "afraidHeightsAnswer": "Sorprendentemente, no. El vértigo generalmente viene de una conexión con el suelo. El movimiento es tan estable que podrías equilibrar una moneda en su borde.",
+        "restrooms": "¿Hay baños?",
+        "childrenFly": "¿Pueden volar niños?",
+        "pregnantFly": "¿Pueden volar mujeres embarazadas?",
+        "weightLimit": "¿Hay límite de peso?",
+        "bringCamera": "¿Puedo traer una cámara?",
+        "breakfast": "¿Cómo es el desayuno?"
+      }
+    }
+  },
+  "flightExperiences": {
+    "pageTitle": "Experiencias de Vuelo en Globo Aerostático en Teotihuacán",
+    "pageDescription": "Vuela sobre las Pirámides de Teotihuacán en un globo aerostático. Elige entre vuelos compartidos, privados, VIP y más.",
+    "hero": {
+      "title": "Vuela sobre las Pirámides",
+      "subtitle": "La aventura definitiva espera",
+      "description": "Experimenta la magia de Teotihuacán desde el cielo. El amanecer más espectacular de México te espera."
+    },
+    "trustBadges": {
+      "title": "Nuestra Promesa",
+      "badges": [
+        {
+          "icon": "award",
+          "title": "Premio Internacional",
+          "description": "Mejor Experiencia de Globo 2024"
+        },
+        {
+          "icon": "shield",
+          "title": "Seguridad Certificada",
+          "description": "Pilotos certificados internacionalmente"
+        },
+        {
+          "icon": "heart",
+          "title": "15,000+ Viajeros",
+          "description": "Historias exitosas en 5 años"
+        },
+        {
+          "icon": "clock",
+          "title": "Garantía de Amanecer",
+          "description": "Vuelos al amanecer garantizados"
+        }
+      ]
+    },
+    "filterTitle": "Filtrar por tipo de experiencia",
+    "all": "Todas las experiencias",
+    "shared": "Vuelos Compartidos",
+    "private": "Vuelos Privados",
+    "vip": "VIP y Tours",
+    "proposals": "Propuestas Románticas",
+    "featuredLabel": "Más Popular",
+    "fromPrice": "Desde",
+    "duration": "Duración",
+    "minutes": "minutos",
+    "perPerson": "por persona",
+    "viewDetails": "Ver detalles",
+    "whyChoose": {
+      "title": "¿Por qué volar con Flying Pictures?",
+      "reasons": [
+        {
+          "title": "Cameron Balloons UK",
+          "description": "Equipamiento de clase mundial, mantenido meticulosamente."
+        },
+        {
+          "title": "Pilotos Certificados",
+          "description": "Capacitación internacional y miles de horas de vuelo."
+        },
+        {
+          "title": "Garantía Climática",
+          "description": "Si el clima no coopera, te devolvemos el 100%."
+        },
+        {
+          "title": "Desayuno Incluido",
+          "description": "Buffet completo después del aterrizaje."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para despegar?",
+      "description": "Reserva tu lugar en el próximo amanecer. Cupos limitados.",
+      "button": "Reservar Ahora",
+      "whatsapp": "Contactar por WhatsApp"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "question": "¿Qué incluye el vuelo?",
+          "answer": "El vuelo de 60 min, certificado, desayuno buffet, transporte y fotos."
+        },
+        {
+          "question": "¿A qué hora es el vuelo?",
+          "answer": "Los vuelos salen al amanecer (aprox. 5:30-6:00 AM)."
+        },
+        {
+          "question": "¿Es seguro volar en globo?",
+          "answer": "Sí, operamos con equipamiento Cameron Balloons UK y pilotos certificados."
+        },
+        {
+          "question": "¿Puedo llevar mi cámara?",
+          "answer": "¡Claro! Recomendamos traer tu cámara o teléfono."
+        },
+        {
+          "question": "¿Qué pasa si hay mal clima?",
+          "answer": "Ofrecemos reembolso completo o reprogramación sin costo."
+        }
+      ]
+    }
+  },
+  "product": {
+    "hero": {
+      "experience": "EXPERIENCIA DE VUELO",
+      "duration": "Duración",
+      "participants": "Participantes",
+      "minAge": "Edad mínima",
+      "difficulty": "Dificultad",
+      "easy": "Fácil",
+      "moderate": "Moderada",
+      "instantConfirmation": "Confirmación instantánea"
+    },
+    "gallery": {
+      "viewGallery": "Ver galería completa",
+      "photos": "fotos del vuelo"
+    },
+    "itinerary": {
+      "title": "Itinerario del Vuelo",
+      "subtitle": "Lo que puedes esperar",
+      "timeline": [
+        {
+          "time": "04:30 - 05:00",
+          "title": "Recogida en Hotel",
+          "description": "Te recogemos en tu hotel en la zona de CDMX o Teotihuacán."
+        },
+        {
+          "time": "05:15 - 05:45",
+          "title": "Briefing de Vuelo",
+          "description": "Nuestro equipo te recibe en el Globoport para los protocolos de seguridad."
+        },
+        {
+          "time": "05:45 - 06:15",
+          "title": "Inflación del Globo",
+          "description": "Observa cómo el globo cobra vida con aire caliente."
+        },
+        {
+          "time": "06:15 - 07:15",
+          "title": "El Vuelo",
+          "description": "Flota suavemente sobre las pirámides con los primeros rayos de sol."
+        },
+        {
+          "time": "07:15 - 07:45",
+          "title": "Aterrizaje y Celebración",
+          "description": "Brindis con champagne y entrega de certificados."
+        },
+        {
+          "time": "07:45 - 09:00",
+          "title": "Desayuno Buffet",
+          "description": "Desayuno completo con comida típica mexicana y café de olla."
+        }
+      ]
+    },
+    "inclusions": {
+      "title": "Qué Incluye",
+      "included": [
+        "Vuelo en globo (45-75 min)",
+        "Certificado personalizado",
+        "Desayuno buffet completo",
+        "Transporte incluido",
+        "Brindis con champagne",
+        "Seguro de viaje",
+        "Piloto certificado"
+      ],
+      "notIncluded": [
+        "Propinas (opcionales)",
+        "Transporte desde zonas lejanas"
+      ]
+    },
+    "reviews": {
+      "rating": "Calificación",
+      "basedOn": "basado en",
+      "reviews": "reseñas",
+      "excellent": "Excelente",
+      "good": "Bueno",
+      "average": "Regular",
+      "poor": "Malo",
+      "showAll": "Ver todas las reseñas"
+    },
+    "pricing": {
+      "title": "Reserva tu Vuelo",
+      "from": "Desde",
+      "perPerson": "por persona",
+      "selectDate": "Selecciona tu fecha",
+      "availability": "Disponibilidad",
+      "available": "Disponible",
+      "limited": "Pocos lugares",
+      "soldOut": "Agotado",
+      "bookNow": "Reservar Ahora",
+      "whatsapp": "Consultar por WhatsApp",
+      "groups": "Para grupos de 8+",
+      "contactUs": "Contáctanos para precios especiales",
+      "guarantee": {
+        "title": "Nuestra Garantía",
+        "weather": "Si el clima no permite volar, te devolvemos el 100%",
+        "cancellation": "Cancelación gratuita hasta 48 horas antes",
+        "bestPrice": "Mejor precio garantizado"
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "question": "¿Qué pasa si hay mal clima?",
+          "answer": "Ofrecemos reembolso completo o reprogramación gratuita."
+        },
+        {
+          "question": "¿Puedo cancelar mi reserva?",
+          "answer": "Sí, hasta 48 horas antes para reembolso completo."
+        },
+        {
+          "question": "¿Hay restricciones de peso?",
+          "answer": "El peso máximo por persona es de 120 kg por seguridad."
+        },
+        {
+          "question": "¿A qué edad vuelan los niños?",
+          "answer": "Deben tener al menos 6 años para volar."
+        },
+        {
+          "question": "¿Qué debo llevar?",
+          "answer": "Ropa en capas, zapatos cerrados y cámara."
+        }
+      ]
+    }
+  }
+}

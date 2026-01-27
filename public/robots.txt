@@ -1,0 +1,22 @@
+# robots.txt para Flying Pictures México
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Bloquear acceso a rutas administrativas o sensibles (si existen)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+
+# Permitir acceso a recursos públicos
+Allow: /images/
+Allow: /favicon.ico
+Allow: /favicon.svg
+
+# Sitemap
+Sitemap: https://www.flyingpicturesmexico.com/sitemap.xml
+
+# Crawl-delay (opcional, ajustar según necesidades)
+# Crawl-delay: 1
