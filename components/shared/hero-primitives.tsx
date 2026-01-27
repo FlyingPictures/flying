@@ -2,23 +2,22 @@ import { ReactNode } from 'react';
 import { CloudinaryImage } from '@/components/ui/CloudinaryImage';
 import { cn } from '@/lib/utils';
 
-// 1. Actualizamos la interfaz para aceptar height
 interface HeroProps {
   children: ReactNode;
   className?: string;
-  height?: 'default' | 'full' | 'short'; // Agregamos la prop opcional
+  height?: 'default' | 'full' | 'short' | string;
+  verticalAlign?: 'center' | 'bottom' | 'top' | string; // Agregado para el error de plan-hero
 }
 
 interface HeroBackgroundProps {
   publicId: string;
   overlay?: boolean;
   children?: ReactNode;
+  className?: string;
 }
 
-// 2. Implementamos la lógica de height en el contenedor
 export function HeroContainer({ children, className, height = 'default' }: HeroProps) {
-  // Mapeo de alturas para tener control total
-  const heightVariants = {
+  const heightVariants: Record<string, string> = {
     default: 'h-[95svh] lg:h-screen',
     full: 'h-screen',
     short: 'h-[60vh] md:h-[70vh]'
@@ -28,7 +27,7 @@ export function HeroContainer({ children, className, height = 'default' }: HeroP
     <section 
       className={cn(
         'relative w-full flex flex-col overflow-hidden', 
-        heightVariants[height] || heightVariants.default, // Usa la variante o el default
+        heightVariants[height] || height, 
         className
       )}
     >
@@ -37,10 +36,10 @@ export function HeroContainer({ children, className, height = 'default' }: HeroP
   );
 }
 
-export function HeroBackground({ publicId, overlay = false, children }: HeroBackgroundProps) {
+export function HeroBackground({ publicId, overlay = false, children, className }: HeroBackgroundProps) {
   return (
     <>
-      <div className="absolute inset-0 -z-10">
+      <div className={cn("absolute inset-0 -z-10", className)}>
         <CloudinaryImage 
           publicId={publicId} 
           alt="Hero BG" 
@@ -55,10 +54,19 @@ export function HeroBackground({ publicId, overlay = false, children }: HeroBack
   );
 }
 
-// ... El resto de tus componentes (HeroContent, HeroTitle, etc.) se mantienen igual
-export function HeroContent({ children, className }: Omit<HeroProps, 'height'>) {
+export function HeroContent({ children, className, verticalAlign = 'bottom' }: HeroProps) {
+  const alignVariants: Record<string, string> = {
+    center: 'justify-center',
+    bottom: 'justify-end pb-12',
+    top: 'justify-start pt-12'
+  };
+
   return (
-    <div className={cn('relative z-10 w-full h-full flex flex-col items-center text-center justify-end pb-12 px-6 lg:px-8', className)}>
+    <div className={cn(
+      'relative z-10 w-full h-full flex flex-col items-center text-center px-6 lg:px-8',
+      alignVariants[verticalAlign] || alignVariants.bottom,
+      className
+    )}>
       <div className="w-full max-w-[1200px] flex flex-col items-center gap-8 lg:gap-4">
         {children}
       </div>
@@ -71,7 +79,7 @@ export function HeroTitle({ children, className }: { children: ReactNode; classN
 }
 
 export function HeroSubtitle({ children, className }: { children: ReactNode; className?: string }) {
-  return <em className={cn("w-full max-w-[916px]", className)}>{children}</em>;
+  return <em className={cn("w-full max-w-[916px] not-italic", className)}>{children}</em>;
 }
 
 export function HeroDescription({ children, className }: { children: ReactNode; className?: string }) {
