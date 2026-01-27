@@ -2,15 +2,18 @@ import { ReactNode } from 'react';
 import { CloudinaryImage } from '@/components/ui/CloudinaryImage';
 import { cn } from '@/lib/utils';
 
+// 1. Interfaz unificada para soportar todas las props enviadas desde las páginas
 interface HeroProps {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   height?: 'default' | 'full' | 'short' | string;
-  verticalAlign?: 'center' | 'bottom' | 'top' | string; // Agregado para el error de plan-hero
+  verticalAlign?: 'center' | 'bottom' | 'top' | string;
+  align?: 'left' | 'center' | 'right' | string; // Añadido para soportar product-hero
 }
 
 interface HeroBackgroundProps {
-  publicId: string;
+  publicId?: string;
+  cloudinaryId?: string; // Añadido para soportar la discrepancia en product-hero
   overlay?: boolean;
   children?: ReactNode;
   className?: string;
@@ -36,17 +39,22 @@ export function HeroContainer({ children, className, height = 'default' }: HeroP
   );
 }
 
-export function HeroBackground({ publicId, overlay = false, children, className }: HeroBackgroundProps) {
+export function HeroBackground({ publicId, cloudinaryId, overlay = false, children, className }: HeroBackgroundProps) {
+  // Soporta ambos nombres de propiedad para evitar errores de compilación
+  const activeId = publicId || cloudinaryId;
+
   return (
     <>
       <div className={cn("absolute inset-0 -z-10", className)}>
-        <CloudinaryImage 
-          publicId={publicId} 
-          alt="Hero BG" 
-          fill 
-          priority 
-          className="object-cover" 
-        />
+        {activeId && (
+          <CloudinaryImage 
+            publicId={activeId} 
+            alt="Hero BG" 
+            fill 
+            priority 
+            className="object-cover" 
+          />
+        )}
         {overlay && <div className="absolute inset-0 bg-black/40" />}
       </div>
       {children}
@@ -54,20 +62,27 @@ export function HeroBackground({ publicId, overlay = false, children, className 
   );
 }
 
-export function HeroContent({ children, className, verticalAlign = 'bottom' }: HeroProps) {
-  const alignVariants: Record<string, string> = {
+export function HeroContent({ children, className, verticalAlign = 'bottom', align = 'center' }: HeroProps) {
+  const verticalStyles = {
     center: 'justify-center',
     bottom: 'justify-end pb-12',
     top: 'justify-start pt-12'
   };
 
+  const horizontalStyles = {
+    center: 'items-center text-center',
+    left: 'items-start text-left',
+    right: 'items-end text-right'
+  };
+
   return (
     <div className={cn(
-      'relative z-10 w-full h-full flex flex-col items-center text-center px-6 lg:px-8',
-      alignVariants[verticalAlign] || alignVariants.bottom,
+      'relative z-10 w-full h-full flex flex-col px-6 lg:px-8',
+      verticalStyles[verticalAlign as keyof typeof verticalStyles] || verticalStyles.bottom,
+      horizontalStyles[align as keyof typeof horizontalStyles] || horizontalStyles.center,
       className
     )}>
-      <div className="w-full max-w-[1200px] flex flex-col items-center gap-8 lg:gap-4">
+      <div className="w-full max-w-[1200px] flex flex-col items-inherit gap-8 lg:gap-4">
         {children}
       </div>
     </div>
