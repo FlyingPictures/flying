@@ -7,6 +7,12 @@ interface HeroProps {
   className?: string;
 }
 
+interface HeroBackgroundProps {
+  publicId: string;
+  overlay?: boolean;
+  children?: ReactNode;
+}
+
 export function HeroContainer({ children, className }: HeroProps) {
   return (
     <section className={cn('relative w-full h-[95svh] lg:h-screen flex flex-col overflow-hidden', className)}>
@@ -15,12 +21,15 @@ export function HeroContainer({ children, className }: HeroProps) {
   );
 }
 
-export function HeroBackground({ publicId, overlay = false }: { publicId: string; overlay?: boolean }) {
+export function HeroBackground({ publicId, overlay = false, children }: HeroBackgroundProps) {
   return (
-    <div className="absolute inset-0 -z-10">
-      <CloudinaryImage publicId={publicId} alt="Hero BG" fill priority className="object-cover" />
-      {overlay && <div className="absolute inset-0 bg-black/40" />}
-    </div>
+    <>
+      <div className="absolute inset-0 -z-10">
+        <CloudinaryImage publicId={publicId} alt="Hero BG" fill priority className="object-cover" />
+        {overlay && <div className="absolute inset-0 bg-black/40" />}
+      </div>
+      {children}
+    </>
   );
 }
 
@@ -34,16 +43,16 @@ export function HeroContent({ children, className }: HeroProps) {
   );
 }
 
-export function HeroTitle({ children }: { children: ReactNode }) {
-  return <h1 className="w-full max-w-[916px] block">{children}</h1>;
+export function HeroTitle({ children, className }: { children: ReactNode; className?: string }) {
+  return <h1 className={cn("w-full max-w-[916px] block", className)}>{children}</h1>;
 }
 
-export function HeroSubtitle({ children }: { children: ReactNode }) {
-  return <em className="w-full max-w-[916px]">{children}</em>;
+export function HeroSubtitle({ children, className }: { children: ReactNode; className?: string }) {
+  return <em className={cn("w-full max-w-[916px]", className)}>{children}</em>;
 }
 
-export function HeroDescription({ children }: { children: ReactNode }) {
-  return <p className="w-full max-w-[604px]">{children}</p>;
+export function HeroDescription({ children, className }: { children: ReactNode; className?: string }) {
+  return <p className={cn("w-full max-w-[604px]", className)}>{children}</p>;
 }
 
 export function HeroGallery({ logos }: { logos: ReadonlyArray<{ publicId: string; alt: string }> }) {

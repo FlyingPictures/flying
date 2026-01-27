@@ -9,6 +9,7 @@ import {
   HeroTitle,
   HeroDescription,
 } from "@/components/shared/hero-primitives";
+import { IMAGES } from '@/lib/cloudinary';
 
 interface FlightHeroProps {
   title: string;
@@ -16,8 +17,6 @@ interface FlightHeroProps {
   description: string;
   locale: string;
 }
-
-const FLIGHT_HERO_IMAGE = 'v1769106750/flightexp_hero_rw8fkj';
 
 const SPACING = {
   BADGE_TO_TITLE: 'mb-6',
@@ -96,9 +95,9 @@ export function FlightHero({
   locale,
 }: FlightHeroProps) {
   return (
-    <HeroContainer height="tall">
-      <HeroBackground publicId={FLIGHT_HERO_IMAGE}>
-        <HeroContent verticalAlign="center">
+    <HeroContainer>
+      <HeroBackground publicId={IMAGES.hero.flight}>
+        <HeroContent>
           <CategoryBadge text={subtitle} />
 
           <HeroTitle className={SPACING.TITLE_TO_DESCRIPTION}>

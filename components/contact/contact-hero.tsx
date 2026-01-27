@@ -7,8 +7,7 @@ import {
   HeroSubtitle, 
   HeroDescription 
 } from "@/components/shared/hero-primitives";
-
-const CONTACT_HERO_IMAGE = 'v1769106748/contact_hero_hb2kwa';
+import { IMAGES } from '@/lib/cloudinary';
 
 const SPACING = {
   TITLE_TO_SUBTITLE: 'mb-4 sm:mb-5 md:mb-6',
@@ -19,9 +18,9 @@ export async function ContactHero() {
   const t = await getTranslations("contact");
 
   return (
-    <HeroContainer height="default">
-      <HeroBackground publicId={CONTACT_HERO_IMAGE}>
-        <HeroContent verticalAlign="center">
+    <HeroContainer>
+      <HeroBackground publicId={IMAGES.hero.contact}>
+        <HeroContent>
           <HeroTitle className={SPACING.TITLE_TO_SUBTITLE}>
             {t("heroTitle")}
           </HeroTitle>

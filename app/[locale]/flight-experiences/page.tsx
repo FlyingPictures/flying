@@ -1,3 +1,6 @@
+'use client';
+
+import * as React from 'react';
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 
@@ -63,6 +66,7 @@ export default async function FlightExperiencesPage({ params }: Props) {
   const experiences = [
     {
       slug: "amanecer-privilegiado",
+      imageId: "amanecer-privilegiado", // Propiedad añadida
       title: "Amanecer Privilegiado",
       subtitle: "Vuelo Compartido",
       description: "La experiencia clásica. Vuela en una canasta compartida con hasta 11 pasajeros. Disfruta del amanecer sobre las pirámides en compañía de otros aventureros.",
@@ -77,6 +81,7 @@ export default async function FlightExperiencesPage({ params }: Props) {
     },
     {
       slug: "vuelo-privado-exclusivo",
+      imageId: "vuelo-privado-exclusivo", // Propiedad añadida
       title: "Vuelo Privado Exclusivo",
       subtitle: "Vuelo Privado",
       description: "Canasta privada para tu grupo. Elige a quién llevar y vive la experiencia íntima sobre Teotihuacán. Perfecto para familias y grupos de amigos.",
@@ -90,6 +95,7 @@ export default async function FlightExperiencesPage({ params }: Props) {
     },
     {
       slug: "amanecer-romantico",
+      imageId: "amanecer-romantico", // Propiedad añadida
       title: "Amanecer Romántico",
       subtitle: "Propuestas",
       description: "La propuesta perfecta. Crea un momento mágico con decoración especial, fotografía profesional y champagne para celebrar.",
@@ -103,6 +109,7 @@ export default async function FlightExperiencesPage({ params }: Props) {
     },
     {
       slug: "tour-vip-piramedes",
+      imageId: "tour-vip-piramedes", // Propiedad añadida
       title: "Tour VIP Pirámides",
       subtitle: "VIP & Tours",
       description: "Experiencia completa: vuelo en globo + tour privado por las pirámides + breakfast gourmet. Vive Teotihuacán como nunca antes.",
@@ -116,6 +123,7 @@ export default async function FlightExperiencesPage({ params }: Props) {
     },
     {
       slug: "vuelo-al-amanecer",
+      imageId: "vuelo-al-amanecer", // Propiedad añadida
       title: "Vuelo Amanecer Clásico",
       subtitle: "Vuelo Compartido",
       description: "La aventura auténtica. Despierta antes del amanecer y experimenta el espectáculo de colores mientras Teotihuacán despierta bajo ti.",
@@ -129,6 +137,7 @@ export default async function FlightExperiencesPage({ params }: Props) {
     },
     {
       slug: "experiencia-grupos-corporativos",
+      imageId: "experiencia-grupos-corporativos", // Propiedad añadida
       title: "Experiencia Corporativa",
       subtitle: "Grupos",
       description: "Team building activity. Organiza una experiencia única para tu empresa o grupo grande. Múltiples globos simultáneamente para crear recuerdos memorables.",
