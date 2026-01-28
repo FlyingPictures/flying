@@ -1,87 +1,113 @@
-import { ReactNode } from 'react';
-import { CloudinaryImage } from '@/components/ui/CloudinaryImage';
-import { cn } from '@/lib/utils';
+"use client";
 
-interface HeroBaseProps {
-  children?: ReactNode;
-  className?: string;
+import { Clock, Users, Calendar, Star, LucideIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { 
+  HeroContainer, 
+  HeroContent, 
+  HeroTitle 
+} from "@/components/shared/hero-primitives";
+import { IMAGES } from '@/lib/cloudinary';
+
+interface ProductHeroProps {
+  title: string;
+  subtitle: string;
+  duration: string;
+  participants: string;
+  minAge: string;
+  rating: number;
+  reviewCount: number;
+  locale: string;
 }
 
-interface BackgroundProps extends HeroBaseProps {
-  publicId: string;
-  overlay?: boolean;
-}
-
-// 1. Contenedor principal relativo
-export function HeroContainer({ children, className }: HeroBaseProps) {
+/**
+ * Badge de categoría estilizado
+ */
+function CategoryBadge({ text }: { text: string }) {
   return (
-    <section className={cn('relative w-full h-[95vh] lg:h-screen overflow-hidden', className)}>
-      {children}
-    </section>
+    <span className="inline-block font-inter text-sm font-semibold text-primary uppercase tracking-[0.15em] mb-4">
+      {text}
+    </span>
   );
 }
 
-// 2. COMPONENTE FALTANTE: HeroBackground
-export function HeroBackground({ publicId, overlay = false, className }: BackgroundProps) {
+/**
+ * Ítems de metadatos (Duración, pax, etc.)
+ */
+function MetaItem({ 
+  icon: Icon, 
+  text, 
+  highlight = false 
+}: { 
+  icon: LucideIcon
+  text: string
+  highlight?: boolean 
+}) {
   return (
-    <div className={cn("absolute inset-0 -z-10", className)}>
-      <CloudinaryImage 
-        publicId={publicId} 
-        alt="Hero Background" 
-        fill 
-        priority 
-        className="object-cover object-top" 
-      />
-      {overlay && <div className="absolute inset-0 bg-black/40" />} 
+    <div className={cn("flex items-center gap-2", highlight ? "text-white" : "text-white/80")}>
+      <Icon className={cn("w-5 h-5", highlight && "fill-primary text-primary")} />
+      <span className={cn("font-inter text-sm sm:text-base", highlight && "font-semibold")}>
+        {text}
+      </span>
     </div>
   );
 }
 
-export function HeroContent({ children, className }: HeroBaseProps) {
+/**
+ * Componente Principal ProductHero
+ */
+export function ProductHero({
+  title,
+  subtitle,
+  duration,
+  participants,
+  minAge,
+  rating,
+  reviewCount,
+  locale,
+}: ProductHeroProps) {
   return (
-    <div className={cn(
-      'absolute inset-0 flex flex-col items-center text-center justify-end p-6',
-      className
-    )}>
-      <div className="w-full max-w-[1024px] flex flex-col items-center gap-6">
-        {children}
-      </div>
-    </div>
-  );
-}
+    // Se pasa el publicId aquí para que coincida con la estructura de tus primitivas
+    <HeroContainer publicId={IMAGES.hero.product}>
+      
+      <HeroContent className="items-start text-left justify-center px-4 md:px-8">
+        <div className="flex flex-col items-start w-full gap-6">
+          
+          <CategoryBadge text={subtitle} />
 
-const textStyles = "w-full max-w-[916px] shrink-0";
+          <HeroTitle>
+            <span className="text-white drop-shadow-lg text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              {title}
+            </span>
+          </HeroTitle>
 
-export const HeroTitle = ({ children, className }: HeroBaseProps) => (
-  <h1 className={cn(textStyles, "text-balance", className)}>{children}</h1>
-);
+          {/* Grid de Metadatos */}
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+            <MetaItem icon={Clock} text={duration} />
+            <MetaItem icon={Users} text={participants} />
+            <MetaItem icon={Calendar} text={minAge} />
+            <MetaItem 
+              icon={Star} 
+              text={`${rating} (${reviewCount} ${locale === "es" ? "reseñas" : "reviews"})`}
+              highlight 
+            />
+          </div>
 
-export const HeroSubtitle = ({ children, className }: HeroBaseProps) => (
-  <h3 className={cn(textStyles, "text-balance", className)}>{children}</h3>
-);
-
-export const HeroDescription = ({ children, className }: HeroBaseProps) => (
-  <p className={cn(textStyles, "text-pretty", className)}>{children} </p>
-);
-
-// ... (HeroGallery se mantiene igual)
-export function HeroGallery({ logos }: { logos: ReadonlyArray<{ publicId: string; alt: string }> }) {
-  if (!logos.length) return null;
-  return (
-    <div className={cn(
-      "w-full mt-4 pb-4 flex flex-row items-center gap-x-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory justify-start lg:justify-center lg:flex-wrap"
-    )}>
-      {logos.map((logo) => (
-        <div key={logo.publicId} className="flex-none snap-center">
-          <CloudinaryImage
-            publicId={logo.publicId}
-            alt={logo.alt}
-            width={120}
-            height={48}
-            className="w-auto h-[clamp(6rem,6vw,12rem)] object-contain brightness-80 opacity-80 transition-all duration-300 hover:opacity-100 hover:brightness-90"
-          />
+          {/* Botón de Acción Principal (CTA) */}
+          <a
+            href="#booking"
+            className={cn(
+              "inline-flex items-center justify-center gap-2 px-8 py-4",
+              "bg-primary text-black font-inter font-bold rounded-full",
+              "hover:bg-primary/90 active:scale-95 transition-all duration-200",
+              "shadow-xl"
+            )}
+          >
+            {locale === "es" ? "Reservar Ahora" : "Book Now"}
+          </a>
+          
         </div>
-      ))}
-    </div>
+      </HeroContent>
+    </HeroContainer>
   );
 }
