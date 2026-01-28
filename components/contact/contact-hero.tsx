@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { 
   HeroContainer, 
-  HeroBackground, 
   HeroContent, 
   HeroTitle, 
   HeroSubtitle, 
@@ -18,22 +17,20 @@ export async function ContactHero() {
   const t = await getTranslations("contact");
 
   return (
-    <HeroContainer>
-      <HeroBackground publicId={IMAGES.hero.contact}>
-        <HeroContent>
-          <HeroTitle className={SPACING.TITLE_TO_SUBTITLE}>
-            {t("heroTitle")}
-          </HeroTitle>
-          
-          <HeroSubtitle className={SPACING.SUBTITLE_TO_DESCRIPTION}>
-            {t("heroSubtitle")}
-          </HeroSubtitle>
-          
-          <HeroDescription>
-            {t("heroDescription")}
-          </HeroDescription>
-        </HeroContent>
-      </HeroBackground>
+    <HeroContainer publicId={IMAGES.hero.contact}>
+      <HeroContent>
+        <HeroTitle className={SPACING.TITLE_TO_SUBTITLE}>
+          {t("heroTitle")}
+        </HeroTitle>
+        
+        <HeroSubtitle className={SPACING.SUBTITLE_TO_DESCRIPTION}>
+          {t("heroSubtitle")}
+        </HeroSubtitle>
+        
+        <HeroDescription>
+          {t("heroDescription")}
+        </HeroDescription>
+      </HeroContent>
     </HeroContainer>
   );
 }

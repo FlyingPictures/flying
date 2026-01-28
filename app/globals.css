@@ -50,7 +50,7 @@
   --border: oklch(0.92 0.004 286.32);
   --input: oklch(0.92 0.004 286.32);
   --ring: oklch(0.705 0.015 286.067);
-  --radius: 0.625rem;
+  --radius: 1rem;
   --surface: oklch(1 0 0);
 }
 
@@ -75,68 +75,54 @@
     overflow-x: hidden;
   }
 
-  /* TEXTOS RESPONSIVOS CON CLAMP - LO QUE YA TENÍAS */
   h1 {
     font-family: var(--font-poppins), sans-serif !important;
     font-weight: 700 !important;
-    font-size: clamp(2.25rem, 8vw, 4rem) !important;
-    line-height: 1.1 !important;
+    font-size: clamp(2rem, 3vw, 4rem) !important;
+    line-height: 1.234 !important;
+    letter-spacing: -0.03em !important;
     color: var(--background) !important;
     filter: drop-shadow(0px 4px 4px color-mix(in oklch, var(--foreground), transparent 75%)) !important;
     margin: 0 !important;
-  }
-
-  em {
-    font-family: var(--font-libre-baskerville), serif;
-    font-weight: 400;
-    font-size: clamp(1.25rem, 4vw, 2rem);
-    line-height: 1.2;
-    font-style: italic;
-    color: var(--background);
-    filter: drop-shadow(0px 4px 4px color-mix(in oklch, var(--foreground), transparent 75%));
-    display: block;
-  }
-
-  p {
-    font-family: var(--font-inter), sans-serif;
-    font-size: clamp(0.875rem, 2vw, 1.125rem);
-    line-height: 1.6;
-    color: var(--background);
-    filter: drop-shadow(0px 4px 4px color-mix(in oklch, var(--foreground), transparent 75%));
-  }
-
-  strong {
-    font-family: var(--font-inter), system-ui, sans-serif;
-    font-weight: 700;
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    line-height: 1.5;
-    color: var(--background);
-  }
-
-  /* NUEVA JERARQUÍA AGREGADA (DRY) */
-  h2 {
-    font-family: var(--font-poppins), system-ui, sans-serif;
-    font-weight: 500;
-    font-size: clamp(2.25rem, 8vw, 4rem);
-    line-height: 1.1;
-    letter-spacing: -0.2rem;
-    color: var(--secondary); /* Para títulos fuera de tarjetas */
+    text-align: center;
   }
 
   h3 {
-    font-family: var(--font-libre-baskerville), serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    line-height: 1.2;
-    color: var(--background); /* Blanco por defecto para las tarjetas */
-    filter: drop-shadow(0px 4px 4px color-mix(in oklch, var(--foreground), transparent 75%));
+    font-family: var(--font-libre-baskerville), serif !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+    font-size: clamp(1rem, 2vw, 2.5rem) !important;
+    line-height: 1.234 !important;
+    letter-spacing: -0.03em !important;
+    color: var(--background) !important;
+    filter: drop-shadow(0px 4px 4px color-mix(in oklch, var(--foreground), transparent 75%)) !important;
+    display: block;
+    text-align: center;
   }
 
+  p {
+    font-family: var(--font-inter), sans-serif !important;
+    font-size: clamp(0.5rem, 1.5vw, 1.25rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    color: var(--background) !important;
+    filter: drop-shadow(0px 4px 4px color-mix(in oklch, var(--foreground), transparent 75%)) !important;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: var(--font-poppins), system-ui, sans-serif;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.2rem;
+    color: var(--secondary);
+  }
+  
   h4 {
     font-family: var(--font-inter), sans-serif;
     font-weight: 700;
-    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    font-size: clamp(0.5rem, 1.5vw, 1rem);
     text-transform: uppercase;
     color: var(--background); /* Blanco por defecto */
   }

@@ -4,7 +4,6 @@ import { Play, ArrowDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   HeroContainer,
-  HeroBackground,
   HeroContent,
   HeroTitle,
   HeroDescription,
@@ -95,24 +94,22 @@ export function FlightHero({
   locale,
 }: FlightHeroProps) {
   return (
-    <HeroContainer>
-      <HeroBackground publicId={IMAGES.hero.flight}>
-        <HeroContent>
-          <CategoryBadge text={subtitle} />
+    <HeroContainer publicId={IMAGES.hero.flight}>
+      <HeroContent>
+        <CategoryBadge text={subtitle} />
 
-          <HeroTitle className={SPACING.TITLE_TO_DESCRIPTION}>
-            {title}
-          </HeroTitle>
+        <HeroTitle className={SPACING.TITLE_TO_DESCRIPTION}>
+          {title}
+        </HeroTitle>
 
-          <HeroDescription>
-            {description}
-          </HeroDescription>
+        <HeroDescription>
+          {description}
+        </HeroDescription>
 
-          <CTAButtons locale={locale} />
+        <CTAButtons locale={locale} />
 
-          <ScrollIndicator />
-        </HeroContent>
-      </HeroBackground>
+        <ScrollIndicator />
+      </HeroContent>
     </HeroContainer>
   );
 }

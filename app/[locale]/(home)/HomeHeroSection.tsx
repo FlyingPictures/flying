@@ -3,8 +3,8 @@
 import { CloudinaryImage } from '@/components/ui/CloudinaryImage';
 import { Button } from '@/components/ui/button';
 import { 
-  HeroContainer, HeroBackground, HeroContent, 
-  HeroTitle, HeroSubtitle, HeroDescription, HeroGallery 
+  HeroContainer, HeroContent, HeroTitle, 
+  HeroSubtitle, HeroDescription, HeroGallery 
 } from '@/components/shared/hero-primitives';
 
 const BRAND_LOGOS = [
@@ -18,10 +18,9 @@ const BRAND_LOGOS = [
 
 export function HomeHeroSection() {
   return (
-    <HeroContainer>
-      <HeroBackground publicId="v1769270545/hero1_rszxmn" overlay />
-      
+    <HeroContainer publicId="v1769270545/hero1_rszxmn" overlay>
       <HeroContent>
+        {/* Estrellas */}
         <CloudinaryImage
           publicId="v1769270546/5_stars_xbtijo"
           alt="5 Stars"
@@ -35,34 +34,30 @@ export function HomeHeroSection() {
         </HeroTitle>
 
         <HeroSubtitle>
-          British precision. Mexican heart. <br/>
-          The morning view of a lifetime.
+          British precision. Mexican heart.
         </HeroSubtitle>
 
         <HeroDescription>
-          We’ve spent many decades proving that the best adventures <br/> 
-          are the ones designed with engineering rigour. <br/>
           Welcome to the safest balloon ride in Mexico.
         </HeroDescription>
 
-        <div className="flex flex-col sm:flex-row gap-4 mt-2 items-center justify-center">
-          <Button variant="outline"size="sm" className="bg-white text-black hover:bg-white/90 px-8">
+        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+          <Button variant="outline" size="sm" className="bg-white text-black px-8">
             Check Flight Availability
           </Button>
-          <Button variant="ghost" size="sm" className="hidden sm:inline-flex text-white hover:bg-white/10">
+          <Button variant="ghost" size="sm" className="text-white">
             Taking off at first light
           </Button>
         </div>
 
+        {/* Cameron Branding */}
         <div className="flex items-center gap-4 mt-4">
           <CloudinaryImage 
             publicId="v1769096588/b5884911c3141d5efecb262d7371f5c738f8aff1_o9yrql" 
             alt="Cameron Logo" 
-            width={70} 
-            height={30} 
-            className="w-16 object-contain" 
+            width={70} height={30} className="w-16 object-contain" 
           />
-          <em className="text-[0.75rem]">
+          <em className="text-[0.75rem] text-white/90 leading-tight not-italic text-left">
             Powered by Cameron Balloons UK <br/>
             & a lifetime of safe landings.
           </em>
