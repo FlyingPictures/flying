@@ -1,4 +1,4 @@
-import { CloudinaryImage } from '@/components/ui/CloudinaryImage';
+import { CloudinaryImage } from '@/components/CloudinaryImage';
 import { cn } from '@/lib/utils';
 
 interface FlightCardProps {

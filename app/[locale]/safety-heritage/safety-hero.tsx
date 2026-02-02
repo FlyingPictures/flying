@@ -5,20 +5,19 @@ import {
   HeroTitle, 
   HeroSubtitle, 
   HeroDescription 
-} from "@/components/shared/hero-primitives";
-
-const PLAN_HERO_IMAGE = 'v1769106749/plan_hero_drpbt9';
+} from "@/components/hero-primitives";
+import { IMAGES } from '@/lib/cloudinary';
 
 const SPACING = {
   TITLE_TO_SUBTITLE: 'mb-4 sm:mb-5 md:mb-6',
   SUBTITLE_TO_DESCRIPTION: 'mb-4 sm:mb-5 md:mb-6',
 } as const;
 
-export async function PlanHero() {
-  const t = await getTranslations("planYourVisit.hero");
+export async function SafetyHero() {
+  const t = await getTranslations("safetyHeritage.hero");
 
   return (
-    <HeroContainer publicId={PLAN_HERO_IMAGE}>
+    <HeroContainer publicId={IMAGES.hero.safety}>
       <HeroContent>
         <HeroTitle className={SPACING.TITLE_TO_SUBTITLE}>
           {t("title")}

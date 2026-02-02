@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 
 @theme {
+
   --font-inter: var(--font-inter);
   --font-poppins: var(--font-poppins);
   --font-libre-baskerville: var(--font-libre-baskerville);
@@ -23,7 +24,7 @@
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-surface: var(--surface);
-  
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: 1.125rem;
@@ -34,14 +35,14 @@
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.785 0.1541 69.83);    
-  --secondary: oklch(0.2864 0.0496 218.94); 
-  
+  --primary: oklch(0.785 0.1541 69.83);
+  --secondary: oklch(0.2864 0.0496 218.94);
+
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.2864 0.0496 218.94);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
-  
+
   --muted: oklch(0.8452 0 0);
   --muted-foreground: oklch(0.55 0.01 286);
   --accent: oklch(0.967 0.001 286.375);
@@ -50,20 +51,23 @@
   --border: oklch(0.92 0.004 286.32);
   --input: oklch(0.92 0.004 286.32);
   --ring: oklch(0.705 0.015 286.067);
-  --radius: 1rem;
+  --radius: 1.25rem;
   --surface: oklch(1 0 0);
 }
 
 @layer base {
   * {
-    -ms-overflow-style: none; 
-    scrollbar-width: none;     
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-  *::-webkit-scrollbar { display: none; }
+
+  *::-webkit-scrollbar {
+    display: none;
+  }
 
   html {
-    border-color: var(--color-border);
     overflow-x: hidden;
+    border-color: var(--border);
   }
 
   body {
@@ -71,59 +75,106 @@
     color: var(--foreground);
     font-family: var(--font-inter), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
-    overflow-y: auto;
     overflow-x: hidden;
   }
 
-  h1 {
-    font-family: var(--font-poppins), sans-serif !important;
-    font-weight: 700 !important;
-    font-size: clamp(2rem, 3vw, 4rem) !important;
-    line-height: 1.234 !important;
-    letter-spacing: -0.03em !important;
-    color: var(--background) !important;
-    filter: drop-shadow(0px 4px 4px color-mix(in oklch, var(--foreground), transparent 75%)) !important;
-    margin: 0 !important;
+  .hero {
     text-align: center;
+    color: var(--surface);
+    filter: drop-shadow(
+      0px 4px 4px
+        color-mix(in oklch, var(--foreground), transparent 75%)
+    );
+    margin: 0;
   }
 
-  h3 {
-    font-family: var(--font-libre-baskerville), serif !important;
-    font-style: italic !important;
-    font-weight: 400 !important;
-    font-size: clamp(1rem, 2vw, 2.5rem) !important;
-    line-height: 1.234 !important;
-    letter-spacing: -0.03em !important;
-    color: var(--background) !important;
-    filter: drop-shadow(0px 4px 4px color-mix(in oklch, var(--foreground), transparent 75%)) !important;
-    display: block;
-    text-align: center;
+  .title.hero {
+    font-family: var(--font-poppins), sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    line-height: 1.234;
+    letter-spacing: -0.03em;
+    max-width: 57.25rem;
+    margin-inline: auto;
   }
 
-  p {
-    font-family: var(--font-inter), sans-serif !important;
-    font-size: clamp(0.5rem, 1.5vw, 1.25rem) !important;
-    font-weight: 500 !important;
-    line-height: 1.2 !important;
-    color: var(--background) !important;
-    filter: drop-shadow(0px 4px 4px color-mix(in oklch, var(--foreground), transparent 75%)) !important;
-    text-align: center;
+  .decorative.hero,
+  .powered.hero {
+    font-family: var(--font-libre-baskerville), serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.03em;
   }
+
+  .decorative.hero {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    line-height: 1.234;
+    max-width: 57.25rem;
+    margin-inline: auto;
+  }
+
+  .paragraph.hero {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.875rem, 2.5vw, 1.25rem);
+    line-height: 1.2;
+    max-width: 37.75rem;
+    margin-inline: auto;
+  }
+
+  .powered.hero {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1.3125;
+  }
+}
 
   h2 {
-    font-family: var(--font-poppins), system-ui, sans-serif;
+    font-family: var(--font-poppins), sans-serif;
     font-weight: 500;
-    font-size: clamp(1.5rem, 3vw, 4rem);
+    font-size: clamp(2.25rem, 8vw, 4rem);
     line-height: 1.1;
     letter-spacing: -0.2rem;
     color: var(--secondary);
   }
-  
+
   h4 {
     font-family: var(--font-inter), sans-serif;
     font-weight: 700;
     font-size: clamp(0.5rem, 1.5vw, 1rem);
     text-transform: uppercase;
-    color: var(--background); /* Blanco por defecto */
+    color: var(--surface);
   }
-}
+
+
+  .text-card-title {
+    font-family: var(--font-libre-baskerville), serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    font-size: clamp(1.75rem, 2.5vw, 2rem);
+  }
+
+  .text-card-body-lg {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+  }
+
+  .text-card-body-md {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.875rem, 1.3vw, 1.125rem);
+  }
+
+  .text-card-link {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+    font-size: clamp(0.938rem, 1.5vw, 1.25rem);
+  }
+
+  .text-card-link:hover {
+    opacity: 0.8;
+  }
+

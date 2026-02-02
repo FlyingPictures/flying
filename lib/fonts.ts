@@ -1,25 +1,29 @@
 import { Inter, Poppins, Libre_Baskerville } from "next/font/google"
 
-const inter = Inter({
+export const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "700"],
   variable: "--font-inter",
 })
 
-const poppins = Poppins({
+export const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
-  weight: ["700", "500"],
+  weight: ["500", "700"],
   variable: "--font-poppins",
 })
 
-const libreBaskerville = Libre_Baskerville({
+export const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400"],
-  style: ["italic"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
   variable: "--font-libre-baskerville",
 })
 
-export const fontVariables = `${inter.variable} ${poppins.variable} ${libreBaskerville.variable}`
+export const fontVariables = `
+  ${inter.variable}
+  ${poppins.variable}
+  ${libreBaskerville.variable}
+`

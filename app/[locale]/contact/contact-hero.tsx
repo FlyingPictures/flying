@@ -5,7 +5,7 @@ import {
   HeroTitle, 
   HeroSubtitle, 
   HeroDescription 
-} from "@/components/shared/hero-primitives";
+} from "@/components/hero-primitives";
 import { IMAGES } from '@/lib/cloudinary';
 
 const SPACING = {
@@ -13,22 +13,22 @@ const SPACING = {
   SUBTITLE_TO_DESCRIPTION: 'mb-4 sm:mb-5 md:mb-6',
 } as const;
 
-export async function SafetyHero() {
-  const t = await getTranslations("safetyHeritage.hero");
+export async function ContactHero() {
+  const t = await getTranslations("contact");
 
   return (
-    <HeroContainer publicId={IMAGES.hero.safety}>
+    <HeroContainer publicId={IMAGES.hero.contact}>
       <HeroContent>
         <HeroTitle className={SPACING.TITLE_TO_SUBTITLE}>
-          {t("title")}
+          {t("heroTitle")}
         </HeroTitle>
         
         <HeroSubtitle className={SPACING.SUBTITLE_TO_DESCRIPTION}>
-          {t("subtitle")}
+          {t("heroSubtitle")}
         </HeroSubtitle>
         
         <HeroDescription>
-          {t("description")}
+          {t("heroDescription")}
         </HeroDescription>
       </HeroContent>
     </HeroContainer>

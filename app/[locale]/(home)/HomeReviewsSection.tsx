@@ -1,7 +1,7 @@
 'use client';
 
 import { useSectionTranslations } from '@/hooks/use-section-translations';
-import { CloudinaryImage } from '@/components/ui/CloudinaryImage';
+import { CloudinaryImage } from '@/components/CloudinaryImage';
 import { cn } from '@/lib/utils';
 
 const STARS_ID = "v1769505467/Group_64_xrfcje";

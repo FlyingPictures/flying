@@ -1,12 +1,12 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { ProductHero } from "@/components/product/product-hero";
-import { ProductGallery } from "@/components/product/product-gallery";
-import { ProductItinerary } from "@/components/product/product-itinerary";
-import { ProductInclusions } from "@/components/product/product-inclusions";
-import { ProductPricing } from "@/components/product/product-pricing";
-import { ProductFAQ } from "@/components/product/product-faq";
+import { ProductHero } from "@/app/[locale]/product/product-hero";
+import { ProductGallery } from "@/app/[locale]/product/product-gallery";
+import { ProductItinerary } from "@/app/[locale]/product/product-itinerary";
+import { ProductInclusions } from "@/app/[locale]/product/product-inclusions";
+import { ProductPricing } from "@/app/[locale]/product/product-pricing";
+import { ProductFAQ } from "@/app/[locale]/product/product-faq";
 
 interface ProductData {
   title: string;

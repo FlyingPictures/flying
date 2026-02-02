@@ -6,7 +6,7 @@ import {
   HeroContainer, 
   HeroContent, 
   HeroTitle 
-} from "@/components/shared/hero-primitives";
+} from "@/components/hero-primitives";
 import { IMAGES } from '@/lib/cloudinary';
 
 interface ProductHeroProps {

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { CloudinaryImage } from '@/components/ui/CloudinaryImage';
+import { CloudinaryImage } from '@/components/CloudinaryImage';
 
 interface ImageGridSectionProps {
   translations: {

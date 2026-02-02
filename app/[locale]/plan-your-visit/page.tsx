@@ -3,12 +3,12 @@ import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
-import { PlanHero } from "@/components/plan-your-visit/plan-hero";
-import { PlanSunrise } from "@/components/plan-your-visit/plan-sunrise";
-import { PlanGettingHere } from "@/components/plan-your-visit/plan-getting-here";
-import { PlanWeatherPolicy } from "@/components/plan-your-visit/plan-weather-policy";
-import { PlanEssentialPrep } from "@/components/plan-your-visit/plan-essential-prep";
-import { PlanFAQ } from "@/components/plan-your-visit/plan-faq";
+import { PlanHero } from "@/app/[locale]/plan-your-visit/plan-hero";
+import { PlanSunrise } from "@/app/[locale]/plan-your-visit/plan-sunrise";
+import { PlanGettingHere } from "@/app/[locale]/plan-your-visit/plan-getting-here";
+import { PlanWeatherPolicy } from "@/app/[locale]/plan-your-visit/plan-weather-policy";
+import { PlanEssentialPrep } from "@/app/[locale]/plan-your-visit/plan-essential-prep";
+import { PlanFAQ } from "@/app/[locale]/plan-your-visit/plan-faq";
 
 type Props = {
   params: Promise<{ locale: string }>;

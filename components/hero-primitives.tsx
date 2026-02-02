@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { CloudinaryImage } from '@/components/ui/CloudinaryImage';
+import { CloudinaryImage } from '@/components/CloudinaryImage';
 import { cn } from '@/lib/utils';
 
 interface HeroBaseProps {
@@ -14,8 +14,13 @@ interface ContainerProps extends HeroBaseProps {
 
 export function HeroContainer({ children, className, publicId, overlay = false }: ContainerProps) {
   return (
-    <section className={cn('w-full h-[95vh] lg:h-screen overflow-hidden', className)}>
-      <div >
+    <section className={cn(
+      'w-full overflow-hidden relative',
+      'pt-[4.5rem] h-[95vh]',
+      'lg:pt-0 lg:h-screen',
+      className
+    )}>
+      <div className="absolute inset-0">
         <CloudinaryImage 
           publicId={publicId} 
           alt="Hero Background" 
@@ -23,6 +28,7 @@ export function HeroContainer({ children, className, publicId, overlay = false }
           priority 
           className="object-cover object-top" 
         />
+        {overlay && <div className="absolute inset-0 bg-black/30" />}
       </div>
       {children}
     </section>
@@ -32,10 +38,10 @@ export function HeroContainer({ children, className, publicId, overlay = false }
 export function HeroContent({ children, className }: HeroBaseProps) {
   return (
     <div className={cn(
-      'absolute inset-0 flex flex-col items-center text-center justify-end',
+      'absolute inset-0 flex flex-col items-center text-center justify-end p-2',
       className
     )}>
-      <div className="w-full max-w-[1024px] flex flex-col items-center gap-6">
+      <div className="w-full max-w-[1024px] flex flex-col items-center justify-end gap-2 sm:gap-4">
         {children}
       </div>
     </div>
@@ -61,10 +67,10 @@ export function HeroGallery({ logos }: { logos: ReadonlyArray<{ publicId: string
 
   return (
     <div className={cn(
-      "w-full mt-4 pb-4", // Añadido un pequeño padding abajo para que el scroll no corte sombras
+      "w-full mt-2 pb-4",
       "flex flex-row items-center gap-x-8",
       "overflow-x-auto scrollbar-hide snap-x snap-mandatory",
-      "justify-start lg:justify-center lg:flex-wrap"
+      "justify-center lg:justify-center lg:flex-wrap"
     )}>
       {logos.map((logo) => (
         <div 
@@ -77,8 +83,8 @@ export function HeroGallery({ logos }: { logos: ReadonlyArray<{ publicId: string
             width={120}
             height={48}
             className={cn(
-              "w-auto h-[clamp(6rem,6vw,12rem)] object-contain",
-              "brightness-80 opacity-80 transition-all duration-300 hover:opacity-100 hover:brightness-90"
+              "w-auto h-[clamp(3rem,6vw,12rem)] object-contain",
+              "brightness-90 opacity-80 transition-all duration-300 hover:opacity-100 hover:brightness-90"
             )}
           />
         </div>

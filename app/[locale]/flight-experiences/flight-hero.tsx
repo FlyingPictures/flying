@@ -7,7 +7,7 @@ import {
   HeroContent,
   HeroTitle,
   HeroDescription,
-} from "@/components/shared/hero-primitives";
+} from "@/components/hero-primitives";
 import { IMAGES } from '@/lib/cloudinary';
 
 interface FlightHeroProps {

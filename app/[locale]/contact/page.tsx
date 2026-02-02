@@ -3,12 +3,12 @@ import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
-import { ContactHero } from "@/components/contact/contact-hero";
-import { ContactToggle } from "@/components/contact/contact-toggle";
-import { ContactInfo } from "@/components/contact/contact-info";
-import { ContactLocation } from "@/components/contact/contact-location";
-import { FAQSection } from "@/components/sections/faq-section";
-import { ContactCTA } from "@/components/contact/contact-cta";
+import { ContactHero } from "@/app/[locale]/contact/contact-hero";
+import { ContactToggle } from "@/app/[locale]/contact/contact-toggle";
+import { ContactInfo } from "@/app/[locale]/contact/contact-info";
+import { ContactLocation } from "@/app/[locale]/contact/contact-location";
+import { FAQSection } from "@/components/faq-section";
+import { ContactCTA } from "@/app/[locale]/contact/contact-cta";
 
 type Props = {
   params: Promise<{ locale: string }>;

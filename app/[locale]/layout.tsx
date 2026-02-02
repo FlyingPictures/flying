@@ -7,16 +7,18 @@ import { fontVariables } from "@/lib/fonts"
 import { Footer } from "@/components/layout/footer"
 import Navbar from "@/components/layout/navbar"
 import { GoogleAnalytics } from "@/components/analytics/google-analytics"
-import { 
-  StructuredData, 
-  getOrganizationSchema, 
-  getWebSiteSchema 
+import {
+  StructuredData,
+  getOrganizationSchema,
+  getWebSiteSchema,
 } from "@/lib/structured-data"
 import { cloudinaryUrl } from "@/lib/cloudinary"
 
 const SITE_CONFIG = {
   name: "Flying Pictures México",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.flyingpicturesmexico.com",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://www.flyingpicturesmexico.com",
   description: {
     es: "Experimenta Teotihuacán desde el cielo con vuelos en globo aerostático. Vive una aventura inolvidable sobre las pirámides.",
     en: "Experience Teotihuacán from the sky with hot air balloon flights. Live an unforgettable adventure over the pyramids.",
@@ -34,27 +36,23 @@ type Props = {
   params: Promise<{ locale: string }>
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: Props): Promise<Metadata> {
   const { locale } = await params
-  const lang = (locale === "es" || locale === "en") ? locale : "en"
-  const description = SITE_CONFIG.description[lang]
-  const keywords = SITE_CONFIG.keywords[lang]
+  const lang = locale === "es" || locale === "en" ? locale : "en"
 
   return {
     metadataBase: new URL(SITE_CONFIG.url),
-
     title: {
       default: SITE_CONFIG.name,
       template: `%s | ${SITE_CONFIG.name}`,
     },
-
-    description,
-    keywords,
-
+    description: SITE_CONFIG.description[lang],
+    keywords: SITE_CONFIG.keywords[lang],
     authors: [{ name: SITE_CONFIG.name }],
     creator: SITE_CONFIG.name,
     publisher: SITE_CONFIG.name,
-
     icons: {
       icon: [
         { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -63,9 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ],
       apple: "/apple-touch-icon.png",
     },
-
     manifest: "/site.webmanifest",
-
     alternates: {
       canonical: `${SITE_CONFIG.url}/${locale}`,
       languages: {
@@ -74,14 +70,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         "x-default": `${SITE_CONFIG.url}/en`,
       },
     },
-
     openGraph: {
       type: "website",
       locale: lang,
       url: `${SITE_CONFIG.url}/${locale}`,
       siteName: SITE_CONFIG.name,
       title: SITE_CONFIG.name,
-      description,
+      description: SITE_CONFIG.description[lang],
       images: [
         {
           url: SITE_CONFIG.ogImage,
@@ -91,15 +86,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
       ],
     },
-
     twitter: {
       card: "summary_large_image",
       title: SITE_CONFIG.name,
-      description,
+      description: SITE_CONFIG.description[lang],
       images: [SITE_CONFIG.ogImage],
       creator: SITE_CONFIG.twitter,
     },
-
     robots: {
       index: true,
       follow: true,
@@ -111,17 +104,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         "max-snippet": -1,
       },
     },
-
     verification: {
       google: process.env.GOOGLE_VERIFICATION_CODE || "",
     },
   }
 }
 
-export default async function LocaleLayout({ children, params }: Props) {
+export default async function LocaleLayout({
+  children,
+  params,
+}: Props) {
   const { locale } = await params
-
   const messages = await getMessages()
+
   const tFooter = await getTranslations({
     locale,
     namespace: "footer",
@@ -138,26 +133,25 @@ export default async function LocaleLayout({ children, params }: Props) {
   const websiteSchema = getWebSiteSchema(locale as Locale)
 
   return (
-    <html 
-      lang={locale} 
+    <html
+      lang={locale}
       className={fontVariables}
       suppressHydrationWarning
     >
       <head>
-        <link 
-          rel="preconnect" 
-          href="https://fonts.gstatic.com" 
-          crossOrigin="anonymous" 
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
         />
-        
         <meta name="theme-color" content="#000000" />
         <meta name="color-scheme" content="light dark" />
       </head>
 
-      <body className="flex min-h-screen flex-col bg-background font-sans text-foreground antialiased">
+      <body className="flex min-h-screen flex-col bg-background text-foreground antialiased">
         <StructuredData data={organizationSchema} />
         <StructuredData data={websiteSchema} />
-        
+
         <GoogleAnalytics />
 
         <NextIntlClientProvider messages={messages} locale={locale}>

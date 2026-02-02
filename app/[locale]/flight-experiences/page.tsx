@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { FlightHero } from "@/components/flight-experiences/flight-hero";
-import { TrustBadges } from "@/components/flight-experiences/trust-badges";
-import { FlightCard } from "@/components/flight-experiences/flight-card";
-import { FlightFAQ } from "@/components/flight-experiences/flight-faq";
-import { StickyCTA } from "@/components/flight-experiences/sticky-cta";
+import { FlightHero } from "@/app/[locale]/flight-experiences/flight-hero";
+import { TrustBadges } from "@/app/[locale]/flight-experiences/trust-badges";
+import { FlightCard } from "@/app/[locale]/flight-experiences/flight-card";
+import { FlightFAQ } from "@/app/[locale]/flight-experiences/flight-faq";
+import { StickyCTA } from "@/app/[locale]/flight-experiences/sticky-cta";
 
 type Props = { params: Promise<{ locale: string }> };
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.flyingpicturesmexico.com";

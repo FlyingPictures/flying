@@ -2,13 +2,10 @@
   "nav": {
     "planYourVisit": "Planea tu visita",
     "flightExperiences": "Vuelos",
-    "experiencesTitle": "Experiencias de Vuelo",
     "safetyHeritage": "Seguridad y Legado",
     "contactSupport": "Contacto y Soporte",
     "language": "Idioma",
     "bookFlight": "Reservar Vuelo",
-    "languageLabel": "Idioma",
-    "talkExpert": "Habla con un experto",
     "shared": "Vuelo Compartido",
     "private": "Vuelo Privado",
     "vip": "VIP & Tours",
@@ -41,6 +38,41 @@
     "poweredBy": "Socio oficial de Cameron Balloons",
     "ctaSecondary": "Ver Video",
     "logoLabel": "Destacado en"
+  },  
+  "FlightExperience": {
+    "subtitle": "ELIGE TU ASCENSO",
+    "title": "Experiencias de Vuelo\nDiseñadas para la aventura",
+    "tabs": {
+      "shared": "compartido",
+      "private": "privado",
+      "vip": "vip y tours"
+    },
+    "flightBadge": "VUELO {type}",
+    "from": "Desde ${price} MXN",
+    "ctaBook": "Reservar Vuelo",
+    "ctaDetails": "Ver detalles del vuelo",
+    "descriptions": {
+      "shared": "Viajeros solos, amigos y parejas. Vuele en una canastilla compartida\nque le da a cada uno su propio rincón del cielo.\nAñada extras con transporte y desayuno.",
+      "private": "Experiencia exclusiva para su grupo.\nDisfrute del cielo en total privacidad con servicio personalizado\ny amenidades premium.",
+      "vip": "La máxima experiencia de lujo.\nEl viaje en globo más refinado con servicio de champán\ny desayuno gourmet."
+    },
+    "awardSection": {
+      "title": "COMPAÑÍA DE AVIACIÓN\nGalardonada",
+      "description": "Descubra el vuelo en globo más confiable y refinado de México: una fusión perfecta de precisión británica y calidez mexicana."
+    },
+    "cards": {
+      "tradition": {
+        "title": "Más que un viaje, una tradición.",
+        "description": "Mientras asciende con la primera luz, el valle se despliega debajo: la Pirámide del Sol, la Calzada de los Muertos y kilómetros de horizonte dorado. Cada momento se siente cuidadosamente orquestado: tranquilo, elegante y absolutamente inolvidable.",
+        "button": "Explorar Colección de Vuelos",
+        "award_label": "Most Trusted Aviation Provider 2024"
+      },
+      "safety": {
+        "title": "Seguridad que se puede ver.",
+        "description": "Nuestros pilotos senior, todos certificados por la Agencia Federal de Aviación Civil de México, le guían con la confianza de muchos años dedicados a volar globos. Cada vuelo incluye seguro total, un brindis tradicional después del aterrizaje y la alegría de ver despertar la mañana.",
+        "button": "Conoce nuestra flota"
+      }
+    }    
   },
   "imagegridsection": {
     "planYourVisit": "Planea tu Visita",
@@ -247,11 +279,11 @@
       "process5": "El procesamiento toma 5-10 días hábiles",
       "process6": "El reembolso se hará al método de pago original",
       "groupsTitle": "8. Reservas Grupales",
-      "groupsText": "Para reservas de grupo (8 o más personas), aplican políticas específicas. Por favor contacta directamente a nuestro equipo de grupos para conocer los términos aplicables, ya que pueden existir depósitos no reembolsables y políticas diferenciadas.",
+      "groupsText": "Para reservas de grupo (8 o más personas), aplican políticas específicas. Por favor contacta directamente a nuestro equipo de grupos para conocer los términos aplicables.",
       "insuranceTitle": "9. Seguro de Viaje",
-      "insuranceText": "Recomendamos adquirir un seguro de viaje que cubra cancelación de viajes. Flying Pictures México ofrece la opción de agregar seguro de cancelación al momento de la reserva por un costo adicional. Consulta los términos y condiciones específicos del seguro en el momento de la compra.",
+      "insuranceText": "Recomendamos adquirir un seguro de viaje que cubra cancelación de viajes. Flying Pictures México ofrece la opción de agregar seguro de cancelación al momento de la reserva por un costo adicional.",
       "exceptionsTitle": "10. Excepciones",
-      "exceptionsText": "Flying Pictures México se reserva el derecho de evaluar casos especiales y excepcionales que no estén cubiertos por esta política. Cada caso será evaluado individualmente por nuestro equipo de atención al cliente.",
+      "exceptionsText": "Flying Pictures México se reserva el derecho de evaluar casos especiales y excepcionales que no estén cubiertos por esta política.",
       "contactTitle": "11. Contacto",
       "contactEmail": "Contáctanos en:",
       "contactPhone": "Teléfono de atención:",
