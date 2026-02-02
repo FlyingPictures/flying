@@ -1,61 +1,12 @@
 "use client";
 
-import { Clock, Users, Calendar, Star, LucideIcon } from "lucide-react";
+import { Clock, Users, Calendar, Star } from "lucide-react";
+import { CloudinaryImage } from "@/components/CloudinaryImage";
+import { IMAGES } from "@/lib/cloudinary";
 import { cn } from "@/lib/utils";
-import { 
-  HeroContainer, 
-  HeroContent, 
-  HeroTitle 
-} from "@/components/hero-primitives";
-import { IMAGES } from '@/lib/cloudinary';
 
-interface ProductHeroProps {
-  title: string;
-  subtitle: string;
-  duration: string;
-  participants: string;
-  minAge: string;
-  rating: number;
-  reviewCount: number;
-  locale: string;
-}
+const NAV_OFFSET = "calc(var(--navbar-height, 4.5rem) + 2rem)";
 
-/**
- * Badge de categoría estilizado
- */
-function CategoryBadge({ text }: { text: string }) {
-  return (
-    <span className="inline-block font-inter text-sm font-semibold text-primary uppercase tracking-[0.15em] mb-4">
-      {text}
-    </span>
-  );
-}
-
-/**
- * Ítems de metadatos (Duración, pax, etc.)
- */
-function MetaItem({ 
-  icon: Icon, 
-  text, 
-  highlight = false 
-}: { 
-  icon: LucideIcon
-  text: string
-  highlight?: boolean 
-}) {
-  return (
-    <div className={cn("flex items-center gap-2", highlight ? "text-white" : "text-white/80")}>
-      <Icon className={cn("w-5 h-5", highlight && "fill-primary text-primary")} />
-      <span className={cn("font-inter text-sm sm:text-base", highlight && "font-semibold")}>
-        {text}
-      </span>
-    </div>
-  );
-}
-
-/**
- * Componente Principal ProductHero
- */
 export function ProductHero({
   title,
   subtitle,
@@ -65,49 +16,63 @@ export function ProductHero({
   rating,
   reviewCount,
   locale,
-}: ProductHeroProps) {
+}: any) {
   return (
-    // Se pasa el publicId aquí para que coincida con la estructura de tus primitivas
-    <HeroContainer publicId={IMAGES.hero.product}>
-      
-      <HeroContent className="items-start text-left justify-center px-4 md:px-8">
-        <div className="flex flex-col items-start w-full gap-6">
-          
-          <CategoryBadge text={subtitle} />
+    <section className="relative h-[80vh] overflow-hidden pt-[4.5rem] lg:pt-0">
+      <div className="absolute inset-0 -z-10">
+        <CloudinaryImage
+          publicId={IMAGES.hero.product}
+          alt={title}
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
 
-          <HeroTitle>
-            <span className="text-white drop-shadow-lg text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              {title}
-            </span>
-          </HeroTitle>
+      <div className="absolute inset-0 flex items-center px-4 md:px-12">
+        <div
+          className="max-w-4xl text-left"
+          style={{ paddingTop: NAV_OFFSET }}
+        >
+          <span className="text-primary uppercase tracking-[0.15em] mb-4 block">
+            {subtitle}
+          </span>
 
-          {/* Grid de Metadatos */}
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-            <MetaItem icon={Clock} text={duration} />
-            <MetaItem icon={Users} text={participants} />
-            <MetaItem icon={Calendar} text={minAge} />
-            <MetaItem 
-              icon={Star} 
-              text={`${rating} (${reviewCount} ${locale === "es" ? "reseñas" : "reviews"})`}
-              highlight 
+          <h1 className="text-white text-4xl md:text-6xl font-bold mb-6">
+            {title}
+          </h1>
+
+          <div className="flex flex-wrap gap-6 text-white/80 mb-8">
+            <Meta icon={Clock} text={duration} />
+            <Meta icon={Users} text={participants} />
+            <Meta icon={Calendar} text={minAge} />
+            <Meta
+              icon={Star}
+              text={`${rating} (${reviewCount} ${
+                locale === "es" ? "reseñas" : "reviews"
+              })`}
+              highlight
             />
           </div>
 
-          {/* Botón de Acción Principal (CTA) */}
           <a
             href="#booking"
-            className={cn(
-              "inline-flex items-center justify-center gap-2 px-8 py-4",
-              "bg-primary text-black font-inter font-bold rounded-full",
-              "hover:bg-primary/90 active:scale-95 transition-all duration-200",
-              "shadow-xl"
-            )}
+            className="inline-flex px-8 py-4 bg-primary text-black font-bold rounded-full"
           >
             {locale === "es" ? "Reservar Ahora" : "Book Now"}
           </a>
-          
         </div>
-      </HeroContent>
-    </HeroContainer>
+      </div>
+    </section>
+  );
+}
+
+function Meta({ icon: Icon, text, highlight = false }: any) {
+  return (
+    <div className={cn("flex items-center gap-2", highlight && "text-white")}>
+      <Icon className={cn("w-5 h-5", highlight && "text-primary")} />
+      <span className={highlight ? "font-semibold" : ""}>{text}</span>
+    </div>
   );
 }
