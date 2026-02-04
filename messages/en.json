@@ -39,6 +39,8 @@
     "ctaSecondary": "Taking of at first light"
   },
   "FlightExperience": {
+    "bookFlight": "Book Flight",
+    "flightDetails": "View Flight Details",
     "subtitle": "CHOOSE YOUR ASCENT",
     "title": "Flight Experiences\nDesigned for adventure",
     "tabs": {
@@ -57,7 +59,7 @@
     },
     "awardSection": {
       "title": "Award-winning\nAVIATION COMPANY",
-      "description": "Discover the most trusted and refined hot air balloon flight in Mexico — a seamless fusion of British precision and Mexican warmth."
+      "description": "Discover the most trusted and refined hot air balloon flight in Mexico — a seamless fusion of British precision and Mexican warmth. For over two decades, Flying Pictures Mexico has set the standard for safe, cinematic flights over the ancient pyramids of Teotihuacán."
     },
     "cards": {
       "tradition": {

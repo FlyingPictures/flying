@@ -1,238 +1,410 @@
-'use client';
+'use client'
 
-import * as React from "react";
-import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
-import { useTranslations } from 'next-intl';
-import { CloudinaryImage } from '@/components/CloudinaryImage';
-import { cn } from '@/lib/utils';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { CardTradition } from "@/components/ui/card";
+import * as React from 'react'
+import { useState, useRef, useEffect, useMemo } from 'react'
+import { useTranslations } from 'next-intl'
+import { CloudinaryImage } from '@/components/CloudinaryImage'
+import { cn } from '@/lib/utils'
+import { Button } from '@/components/ui/button'
+import { CardTradition } from '@/components/ui/card'
 
-const ALL_FLIGHTS = [
-  { id: 1, cat: "shared", title: "The Classic Journey", price: "2,599", cloudinaryId: "v1769270545/toggle1_pydq5z" },
-  { id: 2, cat: "shared", title: "The Classic Journey", price: "2,800", cloudinaryId: "v1769270545/toggle2_dasi0j" },
-  { id: 3, cat: "shared", title: "Group Adventure", price: "2,400", cloudinaryId: "v1769270544/toggle3_fd1suy" },
-  { id: 4, cat: "private", title: "Private Escape", price: "5,999", cloudinaryId: "v1769270545/toggle1_pydq5z" },
-  { id: 5, cat: "private", title: "Exclusive Journey", price: "6,500", cloudinaryId: "v1769270545/toggle2_dasi0j" },
-  { id: 6, cat: "private", title: "Intimate Adventure", price: "5,799", cloudinaryId: "v1769270544/toggle3_fd1suy" },
-  { id: 7, cat: "vip", title: "Luxury Experience", price: "9,999", cloudinaryId: "v1769270545/toggle1_pydq5z" },
-  { id: 8, cat: "vip", title: "Premium Sunrise", price: "10,500", cloudinaryId: "v1769270545/toggle2_dasi0j" },
-  { id: 9, cat: "vip", title: "Elite Journey", price: "9,799", cloudinaryId: "v1769270544/toggle3_fd1suy" },
-];
+type TabKey = 'shared' | 'private' | 'vip'
 
-const CARD_CONFIGS = [
-  {
-    id: 'tradition',
-    titleKey: 'cards.tradition.title',
-    imgId: "v1769270545/twocards_1_oijkmu",
-    btnKey: 'cards.tradition.button',
-    descKey: 'cards.tradition.description',
-    badge: true,
-  },
-  {
-    id: 'safety',
-    titleKey: 'cards.safety.title',
-    imgId: "v1769270544/Rectangle_40_1_x4el6d",
-    btnKey: 'cards.safety.button',
-    descKey: 'cards.safety.description',
-    dark: true,
-  },
-];
+interface Flight {
+  id: number
+  cat: TabKey
+  title: string
+  price: string
+  cloudinaryId: string
+  desc: string
+}
+
+interface CardConfig {
+  id: string
+  titleKey: string
+  imgId: string
+  btnKey: string
+  descKey: string
+}
+
+const ALL_FLIGHTS: Flight[] = [
+  { id: 1, cat: 'shared', title: 'The Classic Journey', price: '2,599', cloudinaryId: 'v1769270545/toggle1_pydq5z', desc: 'Solo travellers, friends, & couples. Fly in a shared compartmented basket that gives everyone their own corner of the sky. Add extras with transport options and breakfast.' },
+  { id: 2, cat: 'private', title: 'Private Escape', price: '5,999', cloudinaryId: 'v1769270545/toggle2_dasi0j', desc: 'Perfect for couples or small groups seeking intimacy. Enjoy the entire basket for yourselves with premium catering and private transfers included.' },
+  { id: 3, cat: 'vip', title: 'Luxury Experience', price: '9,999', cloudinaryId: 'v1769270544/toggle3_fd1suy', desc: 'The ultimate sky-high luxury. Dedicated concierge, champagne breakfast on landing, and the most exclusive views in a custom-tailored flight path.' },
+]
+
+const CARD_CONFIGS: CardConfig[] = [
+  { id: 'tradition', titleKey: 'cards.tradition.title', imgId: 'v1769270545/twocards_1_oijkmu', btnKey: 'cards.tradition.button', descKey: 'cards.tradition.description' },
+  { id: 'safety', titleKey: 'cards.safety.title', imgId: 'v1769270544/Rectangle_40_1_x4el6d', btnKey: 'cards.safety.button', descKey: 'cards.safety.description' },
+]
 
 export function FlightExperienceSection() {
-  const t = useTranslations('FlightExperience');
-  const [activeFilter, setActiveFilter] = useState('shared');
-  const [activeId, setActiveId] = useState<number | null>(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations('FlightExperience')
+  const [activeFilter, setActiveFilter] = useState<TabKey>('shared')
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const pillRef = useRef<HTMLDivElement>(null)
+  const [indicatorStyle, setIndicatorStyle] = useState<{ left: number; width: number }>({ left: 0, width: 0 })
 
-  const visibleFlights = useMemo(() => 
-    ALL_FLIGHTS.filter(f => f.cat === activeFilter), 
-    [activeFilter]
-  );
-
-  const visibleFlightsRef = useRef(visibleFlights);
-  useEffect(() => { visibleFlightsRef.current = visibleFlights; }, [visibleFlights]);
-
-  const scrollToCard = useCallback((index: number, behavior: ScrollBehavior = 'smooth') => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    const cards = container.querySelectorAll('.snap-center');
-    const targetCard = cards[index] as HTMLElement;
-    if (targetCard) {
-      const scrollPos = targetCard.offsetLeft - (container.offsetWidth / 2) + (targetCard.offsetWidth / 2);
-      container.scrollTo({ left: scrollPos, behavior });
-      setActiveId(visibleFlightsRef.current[index]?.id ?? null);
+  const scrollToCard = (index: number) => {
+    const container = scrollRef.current
+    if (!container) return
+    const cards = container.querySelectorAll<HTMLElement>('[data-slide]')
+    const target = cards[index]
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
     }
-  }, []);
+  }
+
+  // Scroll inicial para centrar tarjeta shared al cargar
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      scrollToCard(0)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
 
   useEffect(() => {
-    if (visibleFlights.length > 0) {
-      const timer = setTimeout(() => scrollToCard(1, 'auto'), 50);
-      return () => clearTimeout(timer);
+    const container = scrollRef.current
+    if (!container) return
+    const handleScrollSync = () => {
+      const containerCenter = container.scrollLeft + container.offsetWidth / 2
+      const cards = container.querySelectorAll<HTMLElement>('[data-slide]')
+      let closestIndex = 0
+      let minDistance = Infinity
+      cards.forEach((card, index) => {
+        const cardCenter = card.offsetLeft + card.offsetWidth / 2
+        const distance = Math.abs(containerCenter - cardCenter)
+        if (distance < minDistance) {
+          minDistance = distance
+          closestIndex = index
+        }
+      })
+      const newFilter = ALL_FLIGHTS[closestIndex].cat
+      if (activeFilter !== newFilter) setActiveFilter(newFilter)
     }
-  }, [activeFilter, scrollToCard]);
+    container.addEventListener('scroll', handleScrollSync, { passive: true })
+    return () => container.removeEventListener('scroll', handleScrollSync)
+  }, [activeFilter])
+
+  useEffect(() => {
+    const update = () => {
+      const container = pillRef.current
+      if (!container) return
+      const buttons = Array.from(container.querySelectorAll<HTMLButtonElement>('button'))
+      const index = (['shared', 'private', 'vip'] as TabKey[]).indexOf(activeFilter)
+      const target = buttons[index]
+      if (target) {
+        setIndicatorStyle({ left: target.offsetLeft, width: target.offsetWidth })
+      }
+    }
+
+    update()
+    const container = pillRef.current
+    let ro: ResizeObserver | null = null
+    if (container && (window as any).ResizeObserver) {
+      ro = new ResizeObserver(update)
+      ro.observe(container)
+      Array.from(container.querySelectorAll('button')).forEach(btn => ro!.observe(btn as Element))
+    }
+    window.addEventListener('resize', update)
+    return () => {
+      if (ro) ro.disconnect()
+      window.removeEventListener('resize', update)
+    }
+  }, [activeFilter])
+
+  const activeData = useMemo(() => ALL_FLIGHTS.find(f => f.cat === activeFilter) || ALL_FLIGHTS[0], [activeFilter])
+
+  // Dragging support for desktop with smooth inertia and grab effect
+  const [isDragging, setIsDragging] = useState(false)
+  const isDraggingRef = useRef(false)
+  const startXRef = useRef(0)
+  const startScrollRef = useRef(0)
+  const movedRef = useRef(false)
+  const velocityRef = useRef(0) // px per ms
+  const lastXRef = useRef(0)
+  const lastTimeRef = useRef(0)
+  const rafRef = useRef<number | null>(null)
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (e.button !== 0) return
+    const el = scrollRef.current
+    if (!el) return
+    isDraggingRef.current = true
+    setIsDragging(true)
+    movedRef.current = false
+    const rect = el.getBoundingClientRect()
+    startXRef.current = e.clientX - rect.left
+    startScrollRef.current = el.scrollLeft
+    lastXRef.current = e.clientX
+    lastTimeRef.current = performance.now()
+    velocityRef.current = 0
+    if (rafRef.current) {
+      cancelAnimationFrame(rafRef.current)
+      rafRef.current = null
+    }
+    // prevent text selection while dragging
+    document.body.style.userSelect = 'none'
+  }
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDraggingRef.current) return
+    const el = scrollRef.current
+    if (!el) return
+    const rect = el.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const walk = x - startXRef.current
+    if (Math.abs(walk) > 3) movedRef.current = true
+
+    // velocity in px / ms
+    const now = performance.now()
+    const dx = e.clientX - lastXRef.current
+    const dt = Math.max(1, now - lastTimeRef.current)
+    velocityRef.current = dx / dt
+
+    lastXRef.current = e.clientX
+    lastTimeRef.current = now
+
+    el.scrollLeft = startScrollRef.current - walk
+  }
+
+  const snapToClosestCard = () => {
+    const el = scrollRef.current
+    if (!el) return
+    const containerCenter = el.scrollLeft + el.offsetWidth / 2
+    const cards = el.querySelectorAll<HTMLElement>('[data-slide]')
+    let closestIndex = 0
+    let minDistance = Infinity
+    cards.forEach((card, index) => {
+      const cardCenter = card.offsetLeft + card.offsetWidth / 2
+      const distance = Math.abs(containerCenter - cardCenter)
+      if (distance < minDistance) {
+        minDistance = distance
+        closestIndex = index
+      }
+    })
+    const target = cards[closestIndex]
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+    }
+  }
+
+  const startMomentum = () => {
+    const el = scrollRef.current
+    if (!el) return
+    let v = velocityRef.current // px per ms
+    const step = () => {
+      // decay per frame
+      v *= 0.94
+      // apply approximately per 16ms frame
+      el.scrollLeft -= v * 16
+      if (Math.abs(v) > 0.02) {
+        rafRef.current = requestAnimationFrame(step)
+      } else {
+        rafRef.current = null
+        snapToClosestCard()
+      }
+    }
+    rafRef.current = requestAnimationFrame(step)
+  }
+
+  const endDrag = () => {
+    if (isDraggingRef.current) {
+      isDraggingRef.current = false
+      setIsDragging(false)
+      // restore selection
+      document.body.style.userSelect = ''
+      // start momentum if velocity present
+      if (Math.abs(velocityRef.current) > 0.02) {
+        startMomentum()
+      } else {
+        snapToClosestCard()
+      }
+    }
+  }
+
+  useEffect(() => {
+    const onUp = () => {
+      if (isDraggingRef.current) {
+        endDrag()
+      }
+    }
+    window.addEventListener('mouseup', onUp)
+    return () => window.removeEventListener('mouseup', onUp)
+  }, [])
 
   return (
-    <section className="relative w-full bg-secondary pb-[450px] md:pb-96 overflow-hidden">
-      <div className="absolute inset-0 z-0">
+    <section className="relative w-full overflow-hidden lg:overflow-visible" style={{ height: 'clamp(2300px, 250vw, 2440px)' }}>
+      <div className="absolute inset-0">
         <CloudinaryImage publicId="v1769270546/flightexp_kisynt" alt="Sky" fill priority className="object-cover" />
       </div>
 
-      <div className="relative mx-auto max-w-[1440px] px-6 z-10">
-        <header className="pt-24 text-center mb-12 md:mb-16">
-          <h4 className="text-secondary tracking-[0.2em] font-bold uppercase text-xs md:text-sm">
+      <div className="relative mx-auto max-w-[1440px]">
+        <header
+          className="text-center px-6"
+          style={{
+            paddingTop: 'clamp(55px, 8vw, 78px)',
+            marginBottom: 'clamp(25px, 4vw, 33px)',
+          }}
+        >
+          <h4 className="text-foreground uppercase font-bold mb-3">
             {t('subtitle')}
           </h4>
-          <h2 className="text-secondary whitespace-pre-line leading-[1.1] mt-4">
+          <h2 className="text-foreground whitespace-pre-line max-w-[916px] mx-auto">
             {t('title')}
           </h2>
         </header>
 
-        <Tabs value={activeFilter} onValueChange={setActiveFilter} className="w-full">
-          <div className="flex justify-center mb-12 md:mb-16">
-            <TabsList className="h-[52px] md:h-[72px] bg-background p-1.5 md:p-2 shadow-xl rounded-full w-full max-w-[345px] md:max-w-[514px] border-none">
-              {['shared', 'private', 'vip'].map((tab) => (
-                <TabsTrigger 
-                  key={tab} 
-                  value={tab} 
-                  className="flex-1 h-full rounded-full text-xs md:text-sm font-medium
-                    data-[state=active]:bg-secondary data-[state=active]:text-background 
-                    data-[state=inactive]:text-secondary data-[state=inactive]:bg-transparent"
-                >
-                  {t(`tabs.${tab}`)}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-          </div>
-
-          <TabsContent value={activeFilter} className="m-0 outline-none p-0 w-full">
-            <div 
-              ref={scrollContainerRef}
-              className="w-full overflow-x-auto snap-x snap-mandatory no-scrollbar flex gap-4"
-              style={{ 
-                paddingLeft: 'calc(50vw - 160px)', 
-                paddingRight: 'calc(50vw - 160px)',
-                scrollBehavior: 'smooth',
-                WebkitOverflowScrolling: 'touch'
+        {/* SELECTOR (PILL) - Responsive fix */}
+        <div className="flex justify-center mb-16 px-6">
+          <div 
+            ref={pillRef}
+            className="relative bg-surface rounded-full flex items-center"
+            style={{ 
+              padding: 'clamp(9px, 1.2vw, 12px)',
+              width: 'clamp(300px, 45vw, 514px)',
+              height: 'clamp(52px, 6vw, 72px)',
+              gap: '4px'
+            }}
+          >
+            <div
+              className="absolute bg-secondary rounded-full transition-all duration-100 ease-out z-0"
+              style={{
+                height: 'clamp(36px, 4vw, 50px)',
+                width: indicatorStyle.width ? `${indicatorStyle.width}px` : undefined,
+                left: indicatorStyle.left ? `${indicatorStyle.left}px` : '0px',
+                top: '50%',
+                transform: 'translateY(-50%)',
               }}
-            >
-              {visibleFlights.map((flight, index) => (
-                <div 
-                  key={flight.id} 
-                  className="snap-center flex-shrink-0 cursor-pointer w-[300px] md:w-[698px]" 
-                  onClick={() => scrollToCard(index)}
-                >
-                  <div className={cn(
-                    "relative w-full overflow-hidden transition-all duration-500 shadow-2xl rounded-[1.25rem] h-[200px] md:h-[437px]",
-                    activeId === flight.id ? "opacity-100 scale-100" : "opacity-60 scale-95"
-                  )}>
-                    <CloudinaryImage publicId={flight.cloudinaryId} alt={flight.title} fill className="object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/70 p-4 md:p-8 flex flex-col items-center justify-between text-white text-center">
-                      <h4 className="tracking-widest text-[8px] md:text-sm font-semibold uppercase">
-                         {t('flightBadge', { type: t(`tabs.${activeFilter}`) })}
-                      </h4>
-                      <h3 className="text-white text-sm md:text-4xl font-semibold">{flight.title}</h3>
-                      <div className="flex flex-col sm:flex-row items-center gap-3 w-full justify-center">
-                        <strong className="text-sm md:text-2xl">{t('from', { price: flight.price })}</strong>
-                        <Button variant="primary" size="sm" className="px-6 md:px-8 h-7 md:h-10 text-[10px] md:text-sm font-bold">
-                          {t('ctaBook')}
-                        </Button>
-                      </div>
+            />
+            {(['shared', 'private', 'vip'] as TabKey[]).map((tab) => (
+              <button
+                key={tab}
+                onClick={() => { setActiveFilter(tab); scrollToCard(ALL_FLIGHTS.findIndex(f => f.cat === tab)) }}
+                className={cn(
+                  'relative z-10 font-bold transition-colors duration-100 flex items-center justify-center flex-1 min-w-0',
+                  'text-[clamp(12px,1.2vw,14px)]',
+                  'h-[clamp(36px, 4vw, 50px)]',
+                  activeFilter === tab ? 'text-background' : 'text-secondary'
+                )}
+              >
+                {t(`tabs.${tab}`)}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* CARDS CONTAINER */}
+        <div className="flex flex-col items-center">
+          <div
+            ref={scrollRef}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={endDrag}
+            onMouseLeave={endDrag}
+            onClickCapture={(e) => { if (movedRef.current) { e.stopPropagation(); e.preventDefault(); movedRef.current = false } }}
+            className="flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar gap-6 pb-12"
+            style={{
+              paddingLeft: 'calc(50vw - 172.5px)',
+              paddingRight: 'calc(50vw - 172.5px)',
+            }}
+          >
+            {ALL_FLIGHTS.map((flight, index) => (
+              <div key={flight.id} data-slide data-index={index} className="snap-center shrink-0 w-[345px] md:w-[clamp(400px,48vw,698px)] select-none flex flex-col h-[clamp(354px,40vw,580px)]">
+                {/* TOP: IMAGE (fixed clamp height, desktop 437, mobile 232) */}
+                <div className="relative h-[clamp(232px,30vw,437px)] rounded-[var(--radius)] overflow-hidden shadow-lg">
+                  <CloudinaryImage publicId={flight.cloudinaryId} alt={flight.title} fill className="object-cover" />
+
+                  <div className="absolute inset-0 p-6 flex flex-col text-white">
+                    <div className="text-center">
+                      <h4 className="uppercase text-xs font-bold">{t(`tabs.${flight.cat}`)}</h4>
+                      <h3 className="font-libre-baskerville text-[clamp(20px,2vw,24px)]">{flight.title}</h3>
+                    </div>
+                    <div className="mt-auto flex justify-center items-center gap-4">
+                      <strong className="text-[clamp(14px,1.8vw,20px)]">{t('from', { price: flight.price })}</strong>
+                      <Button variant="primary" size="sm" >
+                        {t("bookFlight")}
+                      </Button>
                     </div>
                   </div>
-
-                  {/* RESTAURADO: Texto de descripción y detalles debajo de la card activa */}
-                  <div className={cn(
-                    "mt-4 md:mt-8 text-center transition-all duration-700",
-                    activeId === flight.id ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                  )}>
-                    <p className="whitespace-pre-line mb-3 md:mb-4 text-sm md:text-base text-secondary">
-                      {t(`descriptions.${activeFilter}`)}
-                    </p>
-                    <button className="text-foreground font-bold text-sm md:text-xl underline underline-offset-4 decoration-foreground hover:opacity-80 transition-opacity">
-                      {t('ctaDetails')}
-                    </button>
-                  </div>
                 </div>
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
 
-        {/* Award Section */}
-        <div className="text-center mb-32 pt-16">
-          <img src="https://res.cloudinary.com/dkmjguzvx/image/upload/v1769270546/certificate_tde9fm.png" alt="Aviation Awards" className="mx-auto w-[150px] md:w-[235px] mb-12" />
-          <div className="max-w-[858px] mx-auto mb-8 px-4">
-            <h1 className="text-background whitespace-pre-line leading-tight">
-              {t('awardSection.title').split('\n')[0]}
-            </h1>
-            <h3 className="text-background whitespace-pre-line font-libre-baskerville italic">
-              {t('awardSection.title').split('\n').slice(1).join('\n')}
+                {/* BOTTOM: INFO (fixed clamp height, desktop ~143, mobile ~122) */}
+                <div className="h-[clamp(122px,10vw,143px)] flex flex-col items-center px-6 py-0">
+                  <div className="flex-1 flex items-center justify-center w-full py-[clamp(12px,2vw,16px)]">
+                    <p className="text-center text-popover-foreground font-medium max-w-[649px] text-[clamp(14px,1.4vw,18px)] leading-relaxed">
+                      {flight.desc}
+                    </p>
+                  </div>
+
+                  <button className="font-bold underline text-popover-foreground decoration-foreground text-[clamp(15px,1.5vw,20px)]">
+                    {t("flightDetails")}
+                  </button>
+                </div>
+
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* AWARDS SECTION */}
+        <div
+          className="text-center px-6"
+          style={{
+            marginTop: 'clamp(98px, 10vw, 149px)',
+            marginBottom: 'clamp(299px, 25vw, 449px)',
+          }}
+        >
+          <img
+            src="https://res.cloudinary.com/dkmjguzvx/image/upload/v1769270546/certificate_tde9fm.png"
+            alt="Awards"
+            className="mx-auto w-[150px] md:w-[235px] mb-12"
+          />
+
+          <div className="max-w-[858px] mx-auto mb-8">
+            <h2
+              className="text-background"
+              style={{ fontSize: 'clamp(36px, 5vw, 64px)' }}
+            >
+              Award-winning
+            </h2>
+            <h3
+              className="text-background font-libre-baskerville font-normal"
+              style={{ fontSize: 'clamp(36px, 5vw, 64px)' }}
+            >
+              {t('awardSection.title').replace('Award-winning', '')}
             </h3>
           </div>
-          <p className="mx-auto text-white max-w-[608px] px-6">
+
+          <p className="mx-auto text-white max-w-[clamp(309px,70vw,608px)]">
             {t('awardSection.description')}
           </p>
         </div>
       </div>
 
-      {/* --- BOTTOM CARDS GRID --- */}
-      <div className="absolute bottom-0 left-0 w-full px-6 translate-y-1/2 z-40 pb-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch max-w-[345px] lg:max-w-[1231px] mx-auto">
-          {CARD_CONFIGS.map((config) => {
-            // USAR CARD TRADITION DE UI/CARD
-            if (config.id === 'tradition') {
-              return (
-                <CardTradition
-                  key={config.id}
-                  imageId={config.imgId}
-                  title={t(config.titleKey)}
-                  description={t(config.descKey)}
-                  badge={
-                    <CloudinaryImage 
-                      publicId="awward_nvceuz" 
-                      alt="Award Winning Logo" 
-                      fill 
-                      className="object-contain" 
-                    />
-                  }
-                >
-                  <Button variant="secondary" size="xs">
-                    {t(config.btnKey)}
-                  </Button>
-                </CardTradition>
-              );
-            }
-
-            // MANTENER LOGICA PARA SAFETY (DARK)
-            return (
-              <div key={config.id} className="relative border-none overflow-hidden shadow-2xl flex flex-col w-full h-[503px] lg:h-[650px] rounded-[1.25rem] bg-[#06191d]">
-                <div className="relative w-full h-[40%] lg:h-[45%] flex-shrink-0 opacity-60">
-                  <CloudinaryImage publicId={config.imgId} alt={t(config.titleKey)} fill className="object-cover" />
-                </div>
-                <div className="flex flex-col flex-1 justify-between p-6 lg:p-10 gap-4">
-                  <div>
-                    <h3 className="text-xl lg:text-3xl italic font-libre-baskerville mb-3 leading-tight text-white">
-                      {t(config.titleKey)}
-                    </h3>
-                    <p className="text-sm lg:text-lg leading-relaxed text-slate-300 line-clamp-4">
-                      {t(config.descKey)}
-                    </p>
-                  </div>
-                  <div className="pt-4 border-t border-white/10">
-                    <Button variant="outline" size="sm" className="rounded-full px-8 font-bold text-white border-white/20">
-                      {t(config.btnKey)}
-                    </Button>
-                  </div>
-                </div>
+      {/* CARDS INFERIORES */}
+      <div className="relative w-full px-6 pb-8 lg:absolute lg:bottom-0 lg:left-0 lg:translate-y-1/2 lg:pb-0 lg:z-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-[1231px] mx-auto">
+          {CARD_CONFIGS.map((config: CardConfig) => (
+            <div key={config.id} className="relative overflow-hidden flex flex-col rounded-[var(--radius)] bg-surface h-[clamp(503px,45vw,650px)]">
+              <div className="relative h-[45%]">
+                <CloudinaryImage publicId={config.imgId} alt={t(config.titleKey)} fill className="object-cover" />
               </div>
-            );
-          })}
+              <div className="flex flex-col justify-between p-10 h-full text-foreground">
+                <div>
+                  <h3 className="font-libre-baskerville italic mb-3">{t(config.titleKey)}</h3>
+                  <p className="mb-6">{t(config.descKey)}</p>
+                </div>
+                {config.id === 'tradition' ? (
+                  <Button variant="secondary" size="xs" className="w-fit">{t(config.btnKey)}</Button>
+                ) : (
+                  <Button variant="outline" size="sm" className="w-fit">{t(config.btnKey)}</Button>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-
-      <div className="block md:hidden w-full h-[2140px] pointer-events-none" />
     </section>
-  );
+  )
 }

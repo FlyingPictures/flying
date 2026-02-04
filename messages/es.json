@@ -40,6 +40,8 @@
     "logoLabel": "Destacado en"
   },  
   "FlightExperience": {
+    "bookFlight": "Reservar Vuelo",
+    "flightDetails": "Detalles del Vuelo",
     "subtitle": "ELIGE TU ASCENSO",
     "title": "Experiencias de Vuelo\nDiseñadas para la aventura",
     "tabs": {
