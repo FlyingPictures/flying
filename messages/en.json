@@ -62,12 +62,18 @@
       "description": "Discover the most trusted and refined hot air balloon flight in Mexico — a seamless fusion of British precision and Mexican warmth. For over two decades, Flying Pictures Mexico has set the standard for safe, cinematic flights over the ancient pyramids of Teotihuacán."
     },
     "cards": {
-      "tradition": {
-        "title": "More Than a Ride, a Tradition.",
-        "description": "As you rise with the first light, the valley unfolds below: the Pyramid of the Sun, the Avenue of the Dead, and miles of golden horizon. Each moment feels carefully orchestrated — calm, elegant, and utterly unforgettable.",
-        "button": "Explore Flights",
-        "award_label": "Most Trusted Aviation Provider 2024"
-      },
+    "tradition": {
+      "title": "More Than a Ride, a Tradition.",
+      "description": "As you rise with the first light, the valley unfolds below: the Pyramid of the Sun, the Avenue of the Dead, and miles of golden horizon. Each moment feels carefully orchestrated — calm, elegant, and utterly unforgettable.",
+      "button": "Explore Flight Collection",
+      "award_label": "Most Trusted Aviation Provider 2024"
+    },
+    "other": {
+      "title": "Tu otro título",
+      "description": "Tu otra descripción",
+      "button": "Explore Flights"
+    },
+
       "safety": {
         "title": "Safety You Can See.",
         "description": "Our senior pilots, all certified by Mexico's Civil Aviation Authority and fully trained to guide you to national standards, guide you with the confidence of many years dedicated flying balloons. Every flight includes full insurance, a traditional toast after landing, and the quiet joy of watching the morning awaken.",

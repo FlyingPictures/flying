@@ -33,21 +33,30 @@ function CardContent({ className, ...props }: React.ComponentProps<"div">) {
 
 export function CardTradition({ imageId, title, description, badge, children }: any) {
   return (
-    <div className="relative w-full lg:w-[clamp(450px,42vw,608px)] h-[503px] lg:h-[clamp(650px,55vw,797px)] flex flex-col bg-transparent">
-      <div className="relative w-full h-[207px] lg:h-[clamp(300px,30vw,444px)] rounded-t-card overflow-hidden">
+    <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col bg-transparent">
+      
+      {/* IMAGEN FLEXIBLE */}
+      <div className="relative w-full flex-1 rounded-t-card overflow-hidden">
         <CloudinaryImage 
           publicId={imageId} 
           alt={title} 
           fill 
-          className="object-cover"
+          className="object-cover object-top"
         />
       </div>
 
-      <div className="relative w-full h-[296px] lg:h-[clamp(300px,25vw,353px)] bg-card rounded-b-card p-6 lg:p-[clamp(24px,2.7vw,40px)_clamp(24px,2.7vw,40px)_clamp(26px,2.9vw,42px)_clamp(24px,2.7vw,40px)] flex flex-col gap-4">
-        <h3 className="text-secondary">{title}</h3>
-        <p className="text-secondary">{description}</p>
+      {/* CONTENIDO */}
+      <div className="relative w-full flex-shrink-0 bg-card rounded-b-card p-6 lg:p-[clamp(24px,2.7vw,40px)] flex flex-col gap-4 border-0 shadow-none">
+        
+        <h3 className="text-card-title text-secondary">
+          {title}
+        </h3>
 
-        <div className="flex items-center justify-between mt-auto">
+        <p className="text-card-body text-secondary">
+          {description}
+        </p>
+
+        <div className="flex items-center justify-between gap-3 flex-wrap mt-auto">
           <div className="flex-shrink-0">
             {children}
           </div>
@@ -57,6 +66,40 @@ export function CardTradition({ imageId, title, description, badge, children }: 
               {badge}
             </div>
           )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function CardImage({ imageId, title, description, children }: any) {
+  return (
+    <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col bg-transparent overflow-hidden rounded-card">
+      
+      {/* IMAGEN DE FONDO COMPLETA */}
+      <CloudinaryImage 
+        publicId={imageId} 
+        alt={title} 
+        fill 
+        className="object-cover object-top"
+      />
+      
+      {/* OVERLAY PARA LEGIBILIDAD */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent z-0" />
+
+      {/* CONTENIDO */}
+      <div className="relative z-10 w-full h-full p-6 lg:p-[clamp(24px,2.7vw,40px)] flex flex-col justify-end gap-4">
+        
+        <h3 className="text-card-title text-white">
+          {title}
+        </h3>
+
+        <p className="text-card-body text-white/90">
+          {description}
+        </p>
+
+        <div className="flex-shrink-0">
+          {children}
         </div>
       </div>
     </div>
