@@ -152,7 +152,7 @@ export default async function HomePage({ params }: Props) {
       <main className="w-full">
         <FlightExperienceSection />
         <WhyFlightWhitUs />
-        <LiveMonitoringSection translations={liveMonitoringData} />
+        <LiveMonitoringSection />
         <HomeReviewsSection />
       </main>
     </>
