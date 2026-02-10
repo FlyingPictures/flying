@@ -2,7 +2,7 @@
 
 import { Play, ArrowDown } from "lucide-react";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
-import { IMAGES } from "@/lib/cloudinary";
+import { IMAGES } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 const TEXT_WRAP = "whitespace-pre-line";
@@ -26,7 +26,7 @@ export function FlightHero({
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <CloudinaryImage
-          publicId={IMAGES.hero.flight}
+          publicId={IMAGES.flightHero.background}
           alt="Flight Hero"
           fill
           priority

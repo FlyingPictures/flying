@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
-import { IMAGES } from "@/lib/cloudinary";
+import { IMAGES } from "@/lib/images";
 
 const TEXT_WRAP = "whitespace-pre-line";
 const NAV_OFFSET = "calc(var(--navbar-height, 4.5rem) + 2rem)";
@@ -13,7 +13,7 @@ export async function ContactHero() {
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <CloudinaryImage
-          publicId={IMAGES.hero.contact}
+          publicId={IMAGES.contactHero.background}
           alt="Contact Hero"
           fill
           priority

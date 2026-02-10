@@ -2,7 +2,7 @@
 
 import { Clock, Users, Calendar, Star } from "lucide-react";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
-import { IMAGES } from "@/lib/cloudinary";
+import { IMAGES } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 const NAV_OFFSET = "calc(var(--navbar-height, 4.5rem) + 2rem)";
@@ -21,8 +21,7 @@ export function ProductHero({
     <section className="relative h-[80vh] overflow-hidden pt-[4.5rem] lg:pt-0">
       <div className="absolute inset-0 -z-10">
         <CloudinaryImage
-          publicId={IMAGES.hero.product}
-          alt={title}
+          publicId={IMAGES.productHero.background}          alt={title}
           fill
           priority
           className="object-cover"

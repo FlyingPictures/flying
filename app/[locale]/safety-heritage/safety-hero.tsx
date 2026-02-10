@@ -1,5 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
+import { IMAGES } from "@/lib/images";
+
 
 const PLAN_HERO_IMAGE = "v1769106749/plan_hero_drpbt9";
 const TEXT_WRAP = "whitespace-pre-line";
@@ -12,7 +14,8 @@ export async function PlanHero() {
     <section className="relative h-[75vh] overflow-hidden pt-[4.5rem] lg:pt-0">
       <div className="absolute inset-0 -z-10">
         <CloudinaryImage
-          publicId={PLAN_HERO_IMAGE}
+          publicId={IMAGES.safetyHeritage.background}
+
           alt="Plan Your Visit"
           fill
           priority

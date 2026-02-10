@@ -6,6 +6,26 @@ export const IMAGES = {
     cameronLogo: "v1769096588/b5884911c3141d5efecb262d7371f5c738f8aff1_o9yrql",
   },
 
+  contactHero: {
+    background: "v1769270545/hero1_rszxmn", // o tu imagen de contacto
+  },
+
+  flightHero: {
+  background: "v1769270545/hero_flight_1_rykq8c",
+},
+
+productHero: {
+  background: "v1769270545/hero_product_1_rykq8c",
+},
+
+planHero: {
+  background: "v1769106749/plan_hero_drpbt9",
+},
+
+safetyHeritage: {
+  background: "v1769106749/plan_hero_drpbt9",
+},
+
   brandLogos: [
     { publicId: "v1769092252/bbclogo150150_kqylht", alt: "BBC" },
     { publicId: "v1769694287/columbialogo_birqjy", alt: "Columbia" },
