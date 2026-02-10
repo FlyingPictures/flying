@@ -1,0 +1,89 @@
+{
+    "planYourVisit": {
+  "hero": {
+    "title": "Prepárate para el despegue",
+    "subtitle": "Todo lo que necesitas saber antes de que suene la alarma",
+    "description": "Sabemos que despertar a las 4:30 AM requiere fuerza de voluntad. Aquí tienes el manual operativo para que tu llegada al sitio de despegue sea fluida, segura y sin estrés."
+  },
+
+  "sunriseRitual": {
+    "label": "EL RITUAL DEL AMANECER",
+    "title": "¿Por qué tan temprano?",
+    "description": "Un globo aerostático es la única aeronave que flota con el viento en lugar de atravesarlo. Para hacerlo de forma segura, necesitamos una atmósfera perfectamente estable. Este fenómeno, conocido como “inversión térmica”, solo ocurre en las primeras horas del día. No volamos al amanecer por romanticismo; volamos al amanecer por física."
+  },
+
+  "gettingHere": {
+    "label": "CÓMO LLEGAR",
+    "title": "Todos los caminos llevan a las pirámides",
+
+    "shuttle": {
+      "title": "La opción sin estrés",
+      "pickupTime": "Horario de recogida: 04:30 AM y 05:00 AM",
+      "perks": "Beneficios: aire acondicionado, cinturones de seguridad y una siesta de regreso.",
+      "note": "(Confirmado por WhatsApp la noche anterior).",
+      "openMaps": "Abrir en Google Maps"
+    },
+
+    "selfDrive": {
+      "title": "Llegar por cuenta propia",
+      "description": "Si cuentas con vehículo propio, el trayecto desde el centro de CDMX toma aproximadamente 45–60 minutos.",
+      "parking": "Estacionamiento: ofrecemos estacionamiento seguro y cerrado en el sitio, sin costo adicional.",
+      "openMaps": "Abrir en Google Maps",
+      "openWaze": "Abrir en Waze"
+    }
+  },
+
+  "weatherPolicy": {
+    "label": "POLÍTICA CLIMÁTICA",
+    "title": "La equidad primero: nuestra política de cancelación",
+    "ifCancel": "Si cancelamos nosotros (mal clima):",
+    "ifCancelDescription": "Recibes un reembolso del 100% o una reprogramación gratuita en la siguiente fecha disponible.",
+    "48hours": "48+ horas antes",
+    "48hoursRefund": "Reembolso completo.",
+    "24_48hours": "24–48 horas",
+    "24_48Refund": "50% de reembolso.",
+    "24hours": "Menos de 24 horas",
+    "24Refund": "No reembolsable",
+    "note": "Somos la única empresa con una política estricta de “No volar” cuando el viento no es seguro."
+  },
+
+  "essentialPrep": {
+    "label": "PREPARACIÓN ESENCIAL",
+    "title": "Vístete para dos climas",
+
+    "onionStrategy": {
+      "title": "La estrategia de la cebolla",
+      "description": "A las 6:00 AM hace fresco, pero después del aterrizaje el clima es cálido. Usa ropa en capas."
+    },
+
+    "footwear": {
+      "title": "Calzado",
+      "description": "Utiliza zapatos cómodos y cerrados (tenis o botas)."
+    },
+
+    "luggage": {
+      "title": "Equipaje",
+      "description": "Lleva únicamente mochilas pequeñas. Las maletas grandes pueden guardarse de forma segura en nuestra recepción."
+    }
+  },
+
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "aboutFlight": "Sobre el vuelo",
+    "safetyLimits": "Seguridad y límites",
+    "bookingExtra": "Reservaciones y extras",
+
+    "questions": {
+      "afraidHeights": "Tengo miedo a las alturas. ¿Me marearé?",
+      "afraidHeightsAnswer": "Sorprendentemente, no. El vértigo suele venir de la conexión visual con el suelo. El movimiento es tan estable que podrías equilibrar una moneda de canto.",
+      "restrooms": "¿Hay baños disponibles?",
+      "childrenFly": "¿Pueden volar los niños?",
+      "pregnantFly": "¿Pueden volar mujeres embarazadas?",
+      "weightLimit": "¿Existe un límite de peso?",
+      "bringCamera": "¿Puedo llevar cámara?",
+      "breakfast": "¿Cómo es el desayuno?"
+    }
+  }
+}
+
+}

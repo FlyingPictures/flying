@@ -6,7 +6,7 @@ interface LogoProps {
 
 export function Logo({
   width = 76,
-  height = 96,
+  height = 85,
   className = "",
 }: LogoProps) {
   return (

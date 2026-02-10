@@ -1,117 +1,162 @@
 'use client';
 
-import { useSectionTranslations } from '@/hooks/use-section-translations';
+import { useTranslations } from 'next-intl';
 import { CloudinaryImage } from '@/components/CloudinaryImage';
-import { cn } from '@/lib/utils';
+import { IMAGES } from '@/lib/images';
 
-const STARS_ID = "v1769505467/Group_64_xrfcje";
+interface Review {
+  id: number;
+  name: string;
+  location: string;
+  quote: string;
+  text: string;
+  avatarIndex: number;
+}
 
-const REVIEWS_DATA = [
-  {
-    id: 1,
-    name: 'Javier S.',
-    location: 'Local Guide',
-    quote: 'I checked their permits',
-    text: 'Their gear is Cameron from Bristol, and unlike most companies, they have all licenses up-to-date. Do not compromise your safety to save a few dollars. Go with the best.',
-    avatarId: "v1769505304/Ellipse_8_reoc5x",
-    // Esta va a la izquierda y centrada verticalmente en su bloque
-    offset: "lg:translate-y-[120px]", 
-    align: "justify-start"
-  },
-  {
-    id: 2,
-    name: 'Mike B.',
-    location: 'New Zealand',
-    quote: 'Out of all the adventures we did, this was the best',
-    text: "No hidden costs (very unusual). Please do it if you are in Mexico City, you won't regret it.",
-    avatarId: "v1769505304/Ellipse_8_reoc5x",
-    // Primera de la derecha, más arriba
-    offset: "lg:-translate-y-[40px]",
-    align: "justify-end"
-  },
-  {
-    id: 3,
-    name: 'Robert C.',
-    location: 'Singapore',
-    quote: 'Everything was smooth',
-    text: 'The reception was warm (coffee and heaters for the cold morning!), and the pilot totally nailed the beautiful views.',
-    avatarId: "v1769505304/Ellipse_8_reoc5x",
-    // Segunda de la derecha, más abajo
-    offset: "lg:translate-y-[60px]", 
-    align: "justify-end"
-  },
-] as const;
+// Constants
+const CARD_STYLES = {
+  width: 'clamp(345px, 40vw, 537px)',
+  height: 'clamp(280px, 28vw, 356px)',
+  borderRadius: '22px',
+};
 
-function ReviewCard({ review }: { review: typeof REVIEWS_DATA[number] }) {
+const AVATAR_SIZES = {
+  mobile: { w: 'w-[32px]', h: 'h-[32px]' },
+  desktop: { w: 'lg:w-[72px]', h: 'lg:h-[72px]' },
+};
+
+const GHOST_CARD_GRADIENTS = {
+  top: 'linear-gradient(180deg, rgba(255,255,255,0) 75.32%, #ECECEC 100%)',
+  bottom: 'linear-gradient(180deg, #ECECEC 0%, rgba(255,255,255,0) 24.68%)',
+};
+
+const PLATFORMS_IMAGE_SIZES = { width: 1200, height: 160 };
+
+export default function HomeReviewsSection() {
+  const t = useTranslations('reviews');
+  const reviewsData: Review[] = t.raw('items') || [];
+
   return (
-    <article className="rounded-[22px] flex flex-col bg-[#F7F7F7] shadow-sm w-full max-w-[537px] lg:h-[356px] p-[clamp(1.5rem,4vw,2rem)] transition-transform hover:scale-[1.01]">
-      {/* Header: Avatar + Stars */}
-      <div className="flex items-center justify-between mb-[31px]">
-        <div className="flex items-center gap-[14px]">
-          <div className="relative w-[93px] h-[93px] rounded-full overflow-hidden flex-shrink-0">
-            <CloudinaryImage publicId={review.avatarId} alt={review.name} fill className="object-cover" />
-          </div>
-          <div className="flex flex-col text-secondary">
-            <span className="font-poppins font-medium text-[16px] leading-[24px] tracking-[-0.03em]">{review.name}</span>
-            <span className="font-poppins font-medium text-[16px] leading-[24px] tracking-[-0.03em] opacity-50">{review.location}</span>
-          </div>
-        </div>
-        <CloudinaryImage publicId={STARS_ID} alt="Stars" width={162} height={24} className="h-auto object-contain" />
+    <section className="relative w-full overflow-hidden" style={{ height: '1386px' }}>
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 -z-20">
+        <CloudinaryImage
+          publicId={IMAGES.homeReviews.background}
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
       </div>
 
-      <div className="w-full border-t border-secondary/20 mb-[24px]" />
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 pt-[100px] h-full">
+        {/* HEADER */}
+        <header className="text-center">
+          <h4 className="text-secondary">{t('readRealReviews')}</h4>
+          <h2 className="text-secondary">{t('dontJustTakeOurWord')}</h2>
+        </header>
 
-      {/* Content: Quote + Body */}
-      <div className="grid grid-cols-1 sm:grid-cols-[187px_1fr] gap-[25px] items-start">
-        <h3 className="text-secondary font-serif italic font-normal text-[clamp(1.25rem,2vw,1.5rem)] leading-[123.4%] tracking-[-0.03em]">
-          “{review.quote}”
+        {/* LOGOS */}
+        <div className="flex justify-center mt-8 lg:mt-4 mb-20 lg:mb-12">
+          <div className="max-w-[450px] w-[clamp(365px,40vw,450px)]">
+            <CloudinaryImage
+              publicId={IMAGES.homeReviews.platforms}
+              alt="Google TripAdvisor Facebook reviews"
+              {...PLATFORMS_IMAGE_SIZES}
+              className="w-full h-auto object-cover"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* DESKTOP CARDS */}
+        <div className="hidden lg:grid grid-cols-2 gap-[24px] overflow-hidden justify-center" style={{ height: '1018px' }}>
+          <DesktopColumn leftAlign>
+            <GhostCard position="top" />
+            {reviewsData[0] && <ReviewCard review={reviewsData[0]} />}
+            <GhostCard position="bottom" />
+          </DesktopColumn>
+
+          <DesktopColumn>
+            <GhostCard position="top" />
+            {reviewsData[1] && <ReviewCard review={reviewsData[1]} />}
+            {reviewsData[2] && <ReviewCard review={reviewsData[2]} />}
+            <GhostCard position="bottom" />
+          </DesktopColumn>
+        </div>
+
+        {/* MOBILE */}
+        <div className="lg:hidden flex flex-col items-center justify-end gap-6 pb-8 h-[900px]">
+          {reviewsData.slice(0, 3).map((review) => (
+            <ReviewCard key={review.id} review={review} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function DesktopColumn({ children, leftAlign }: { children: React.ReactNode; leftAlign?: boolean }) {
+  return (
+    <div className={`flex flex-col gap-[24px] w-full ${leftAlign ? 'items-end' : 'justify-center'} ${!leftAlign ? '-translate-y-[120px]' : ''}`}>
+      {children}
+    </div>
+  );
+}
+
+function ReviewCard({ review }: { review: Review }) {
+  const StarRating = () => <div className="text-yellow-400 text-[clamp(18px,2vw,26px)]">★★★★★</div>;
+
+  return (
+    <article className="bg-card p-6 flex flex-col" style={CARD_STYLES}>
+      {/* HEADER */}
+      <div className="flex items-center justify-between gap-4 mb-4">
+        <div className="flex items-center gap-3">
+          <div className={`relative ${AVATAR_SIZES.mobile.w} ${AVATAR_SIZES.mobile.h} ${AVATAR_SIZES.desktop.w} ${AVATAR_SIZES.desktop.h} rounded-full overflow-hidden`}>
+            <CloudinaryImage
+              publicId={IMAGES.homeReviews.avatars[review.avatarIndex]}
+              alt={review.name}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <p className="text-secondary">{review.name}</p>
+            <p className="text-secondary">{review.location}</p>
+          </div>
+        </div>
+        <div className="hidden lg:block">
+          <StarRating />
+        </div>
+      </div>
+
+      <div className="border-t border-secondary/20 mb-6" />
+
+      {/* CONTENT */}
+      <div className="flex flex-col lg:grid lg:grid-cols-[40%_60%] lg:gap-4">
+        <h3 className="font-libre-baskerville italic text-[clamp(20px,2.5vw,24px)] mb-2 lg:mb-0 leading-tight">
+          "{review.quote}"
         </h3>
-        <p className="text-secondary font-poppins font-medium text-[16px] leading-[24px] tracking-[-0.03em]">
+        <p className="font-poppins text-[clamp(14px,0.5vw,16px)] leading-tight">
           {review.text}
         </p>
+      </div>
+
+      {/* STARS MOBILE */}
+      <div className="lg:hidden mt-auto self-start">
+        <StarRating />
       </div>
     </article>
   );
 }
 
-export default function HomeReviewsSection() {
-  const { reviews } = useSectionTranslations();
-
+function GhostCard({ position }: { position: 'top' | 'bottom' }) {
   return (
-    <section className="relative w-full flex flex-col items-center py-[100px] min-h-[1400px] overflow-hidden">
-      {/* BG Image */}
-      <div className="absolute inset-0 -z-20">
-        <CloudinaryImage publicId="v1769270544/backgroundreviews_uptzt8" alt="BG" fill className="object-cover" priority />
-      </div>
-
-      <div className="relative z-10 w-full max-w-[1102px] px-4 flex flex-col items-center">
-        <header className="text-center mb-24">
-          <h4 className="text-secondary font-bold tracking-[0.2em] uppercase text-sm mb-4">{reviews('readRealReviews')}</h4>
-          <h2 className="text-secondary font-poppins font-bold text-[clamp(2rem,5vw,3.5rem)] leading-[1.1]">{reviews('dontJustTakeOurWord')}</h2>
-        </header>
-
-        {/* Reviews Grid: 1 Left, 2 Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[24px] gap-y-12 w-full">
-          {/* Columna Izquierda: Javier */}
-          <div className={cn("flex flex-col", REVIEWS_DATA[0].align, REVIEWS_DATA[0].offset)}>
-            <ReviewCard review={REVIEWS_DATA[0]} />
-          </div>
-
-          {/* Columna Derecha: Mike y Robert */}
-          <div className="flex flex-col">
-            <div className={cn("flex", REVIEWS_DATA[1].align, REVIEWS_DATA[1].offset)}>
-              <ReviewCard review={REVIEWS_DATA[1]} />
-            </div>
-            <div className={cn("flex", REVIEWS_DATA[2].align, REVIEWS_DATA[2].offset)}>
-              <ReviewCard review={REVIEWS_DATA[2]} />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Efectos de desvanecimiento (Rectangle 56, 59, 57, 58) */}
-      <div className="absolute top-0 inset-x-0 h-[400px] bg-gradient-to-b from-white/40 via-white/10 to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 inset-x-0 h-[400px] bg-gradient-to-t from-[#ECECEC]/60 via-[#ECECEC]/20 to-transparent pointer-events-none" />
-    </section>
+    <div
+      style={{
+        ...CARD_STYLES,
+        background: GHOST_CARD_GRADIENTS[position],
+      }}
+    />
   );
 }

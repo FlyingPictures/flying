@@ -1,93 +1,113 @@
-import Link from "next/link"
+'use client'
 
-interface CardProps {
-  title: string
-  paragraph: string
-  linkText: string
-  backgroundImage: string
-  className?: string
-  isDark?: boolean
-}
+import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { CloudinaryImage } from '@/components/CloudinaryImage'
+import { IMAGES } from '@/lib/images'
 
-// Sub-componente para evitar repetir la estructura de las tarjetas (DRY)
-const MonitoringCard = ({ title, paragraph, linkText, backgroundImage, className, isDark = true }: CardProps) => (
-  <div 
-    className={`relative overflow-hidden rounded-[22px] flex flex-col justify-end p-10 transition-transform duration-300 hover:scale-[1.01] ${className}`}
-    style={{ 
-      backgroundImage: isDark 
-        ? `linear-gradient(180deg, rgba(0, 0, 0, 0) 8.39%, rgba(0, 0, 0, 0.5) 50.36%), url('${backgroundImage}')`
-        : `url('${backgroundImage}')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}
-  >
-    <div className={`relative z-10 ${isDark ? 'text-white' : 'text-[#03303B]'}`}>
-      <h3 className="mb-4 font-serif text-[32px] italic leading-[123.4%] tracking-[-0.03em] font-normal">
-        {title}
-      </h3>
-      <p className={`mb-12 font-sans font-medium text-[18px] leading-[22px] ${isDark ? 'opacity-90' : ''}`}>
-        {paragraph}
-      </p>
-      <Link href="#" className="font-bold text-[20px] leading-[24px] underline underline-offset-8 decoration-2 hover:opacity-70 transition-opacity">
-        {linkText}
-      </Link>
-    </div>
-  </div>
-)
+export function LiveMonitoringSection() {
+  const t = useTranslations('weather')
 
-interface LiveMonitoringSectionProps {
-  translations: {
-    badge: string
-    h2: string
-    paragraph: string
-    cards: Array<{
-      title: string
-      paragraph: string
-      link: string
-    }>
-  }
-}
-
-export function LiveMonitoringSection({ translations }: LiveMonitoringSectionProps) {
   return (
-    <section 
-      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat py-24"
-      style={{ backgroundImage: `url('https://res.cloudinary.com/dkmjguzvx/image/upload/v1769270544/Rectangle_63_x9khlt.webp')` }}
-    >
-      <div className="mx-auto w-full max-w-[1268px] px-4 md:px-8 flex flex-col items-center">
-        
-        {/* Badge sustituido por HTML simple + Tailwind */}
-        <div className="mb-10 inline-flex items-center rounded-full bg-white/10 px-6 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md">
+    <section className="relative w-full py-24 border-0 outline-none ring-0 shadow-none overflow-hidden">
+      <CloudinaryImage
+        publicId={IMAGES.liveMonitoring.background}
+        alt="Live Monitoring Background"
+        fill
+        className="absolute inset-0 object-cover -z-10"
+        priority
+      />
+
+      <div
+        className="mx-auto relative flex w-full flex-col items-center px-4 md:px-8"
+        style={{ maxWidth: 'clamp(345px, 100%, 1268px)', paddingTop: '84px' }}
+      >
+        <div
+          className="text-background absolute top-0 left-1/2 -translate-x-1/2 inline-flex items-center justify-center rounded-full px-6 py-2 backdrop-blur-md"
+          style={{
+            backgroundColor: 'rgba(217, 217, 217, 0.37)',
+          }}
+        >
           <span className="mr-2 h-2 w-2 animate-pulse rounded-full bg-green-500" />
-          {translations.badge}
+          <h4>{t('liveMonitoring')}</h4>
         </div>
 
-        <div className="mb-20 max-w-[1054px] text-center">
-          <h2 className="mb-6 font-sans text-[clamp(2.5rem,6vw,5.5rem)] font-bold tracking-tight text-white leading-[1.1]">
-            {translations.h2}
+        <div
+          className="flex flex-col items-center text-center"
+          style={{ width: 'clamp(355px, 100%, 962px)' }}
+        >
+          <h2 className="mb-6 font-sans text-[clamp(2.5rem,6vw,5.5rem)] font-bold leading-[1.1] tracking-tight text-white">
+            {t('heading')}
           </h2>
-          <p className="mx-auto max-w-3xl text-lg text-gray-300 md:text-xl font-medium leading-relaxed">
-            {translations.paragraph}
+          <p className="text-lg font-medium leading-relaxed text-gray-300 md:text-xl">
+            {t('description')}
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6 w-full max-w-[1054px]">
-          <MonitoringCard 
-            title={translations.cards[0].title}
-            paragraph={translations.cards[0].paragraph}
-            linkText={translations.cards[0].link}
-            backgroundImage="https://res.cloudinary.com/dkmjguzvx/image/upload/v1769270543/livemonitoring_ujhljj.webp"
-            className="w-full md:w-[365px] h-[437px]"
-          />
+        <div className="mt-20 flex w-full flex-col items-center gap-6 lg:flex-row lg:justify-center">
+          <div
+            className="relative flex h-[437px] w-full max-w-[365px] flex-col justify-end overflow-hidden px-8 py-10"
+            style={{ borderRadius: 'var(--radius)' }}
+          >
+            <CloudinaryImage
+              publicId={IMAGES.liveMonitoring.card1}
+              alt={t('safetyPromise.title')}
+              fill
+              className="absolute inset-0 object-cover"
+              priority
+            />
 
-          <MonitoringCard 
-            title={translations.cards[1].title}
-            paragraph={translations.cards[1].paragraph}
-            linkText={translations.cards[1].link}
-            backgroundImage="https://res.cloudinary.com/dkmjguzvx/image/upload/v1769270544/theviewpromise_d2prqk.webp"
-            className="w-full md:w-[647px] h-[437px] bg-[#D9C374]"
-            isDark={false}
-          />
+
+            <div className="relative text-[color:var(--color-background)]">
+              <h3 className="text-card-title">
+                {t('safetyPromise.title')}
+              </h3>
+
+              <p className="text-card-body py-4">
+                {t('safetyPromise.description')}
+              </p>
+
+              <Link href="#" className="text-card-link">
+                {t('safetyPromise.cta')}
+              </Link>
+            </div>
+          </div>
+
+          <div
+            className="card-2 relative flex h-[444px] w-[clamp(345px,100%,365px)] max-w-full flex-col justify-end overflow-hidden px-8 py-10 "
+            style={{ borderRadius: 'var(--radius)' }}
+          >
+            <CloudinaryImage
+              publicId={IMAGES.liveMonitoring.card2}
+              alt={t('viewPromise.title')}
+              fill
+              className="absolute inset-0 object-cover "
+              priority
+            />
+
+            <div className="relative text-[color:var(--color-secondary)]">
+              <h3 className="text-card-title">
+                {t('viewPromise.title')}
+              </h3>
+
+              <p className="text-card-body py-4">
+                {t('viewPromise.description')}
+              </p>
+
+              <Link href="#" className="text-card-link">
+                {t('viewPromise.cta')}
+              </Link>
+            </div>
+
+            <style jsx>{`
+              @media (min-width: 1024px) {
+                .card-2 {
+                  width: 647px;
+                  height: 437px;
+                }
+              }
+            `}</style>
+          </div>
         </div>
       </div>
     </section>

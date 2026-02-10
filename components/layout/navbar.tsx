@@ -9,7 +9,6 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
 import {
   EqualsIcon,
   XIcon,
-  WhatsappLogoIcon,
   HeadsetIcon,
   GlobeSimpleIcon,
 } from "@phosphor-icons/react"
@@ -41,6 +40,7 @@ const NavLink = ({
   onClick?: () => void
 }) => {
   const t = useTranslations("nav")
+
   return (
     <Link
       href={href}
@@ -67,6 +67,7 @@ const ExperienceLink = ({
   className?: string
 }) => {
   const t = useTranslations("nav")
+
   return (
     <Link
       href={href}
@@ -83,6 +84,7 @@ const ExperienceLink = ({
 
 const BookButton = ({ className }: { className?: string }) => {
   const t = useTranslations("nav")
+
   return (
     <Button
       variant="primary"
@@ -98,14 +100,9 @@ const LanguageSwitcher = ({ className }: { className?: string }) => {
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
+  const t = useTranslations("nav")
 
-  const { nextLocale, label } = useMemo(
-    () => ({
-      nextLocale: locale === "en" ? "es" : "en",
-      label: locale === "en" ? "Language" : "Idioma",
-    }),
-    [locale]
-  )
+  const nextLocale = locale === "en" ? "es" : "en"
 
   return (
     <button
@@ -115,7 +112,8 @@ const LanguageSwitcher = ({ className }: { className?: string }) => {
         className
       )}
     >
-      <GlobeSimpleIcon size={20} weight="bold" /> {label}
+      <GlobeSimpleIcon size={20} weight="bold" />
+      {t("language")}
     </button>
   )
 }
@@ -209,7 +207,7 @@ export default function Navbar() {
                       onCloseAutoFocus={(e) => e.preventDefault()}
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
-                      className="bg-white rounded-lg shadow-xl p-2 z-[60] min-w-[200px] border-none outline-none animate-in fade-in slide-in-from-top-1 duration-200"
+                      className="bg-white rounded-lg shadow-xl p-2 z-[60] min-w-[200px]"
                     >
                       {EXPERIENCES.map((exp) => (
                         <DropdownMenu.Item
@@ -217,7 +215,7 @@ export default function Navbar() {
                           asChild
                           onSelect={() => setIsMenuOpen(false)}
                         >
-                          <div className="outline-none">
+                          <div>
                             <ExperienceLink
                               id={exp.id}
                               href={exp.href}
@@ -276,29 +274,26 @@ export default function Navbar() {
             >
               <SheetPrimitive.Trigger asChild>
                 <button className="p-1 outline-none">
-                  <EqualsIcon
-                    size={32}
-                    weight="bold"
-                    className="text-secondary"
-                  />
+                  <EqualsIcon size={32} weight="bold" />
                 </button>
               </SheetPrimitive.Trigger>
 
               <SheetPrimitive.Portal>
-                <SheetPrimitive.Content className="fixed inset-y-0 right-0 z-[60] w-full bg-surface flex flex-col shadow-xl animate-in slide-in-from-right duration-300 outline-none border-none">
+                <SheetPrimitive.Content className="fixed inset-y-0 right-0 z-[60] w-full bg-surface flex flex-col shadow-xl">
+                  {/* ✅ AGREGADO: DialogTitle para accesibilidad */}
                   <SheetPrimitive.Title className="sr-only">
-                    Menú
+                    {t("flightExperiences")}
                   </SheetPrimitive.Title>
 
-                  <div className="h-[6rem] flex items-center justify-between px-6 border-b border-secondary/10">
+                  <div className="h-[6rem] flex items-center justify-between px-6 border-b">
                     <BookButton />
-                    <SheetPrimitive.Close className="bg-secondary text-white rounded-full size-10 flex items-center justify-center outline-none">
+                    <SheetPrimitive.Close className="rounded-full size-10 flex items-center justify-center">
                       <XIcon size={24} weight="bold" />
                     </SheetPrimitive.Close>
                   </div>
 
                   <div className="flex flex-col flex-1 px-10 py-10 gap-5 overflow-y-auto">
-                    <h2 className="font-inter font-bold text-secondary text-[1.5rem] tracking-tight">
+                    <h2 className="font-inter font-bold text-[1.5rem]">
                       {t("flightExperiences")}
                     </h2>
 
@@ -314,7 +309,7 @@ export default function Navbar() {
                       ))}
                     </div>
 
-                    <div className="flex flex-col gap-6 mt-4 border-t border-secondary/10 pt-8">
+                    <div className="flex flex-col gap-6 mt-4 border-t pt-8">
                       <NavLink
                         id="safetyHeritage"
                         href="/safety-heritage"
@@ -332,7 +327,7 @@ export default function Navbar() {
                     <div className="mt-auto pb-8 flex flex-col gap-6">
                       <Link
                         href="/contact"
-                        className="font-inter font-bold text-secondary flex items-center gap-2 text-[1rem] tracking-tight"
+                        className="font-inter font-bold flex items-center gap-2"
                         onClick={() => setIsSheetOpen(false)}
                       >
                         <HeadsetIcon size={24} weight="bold" />

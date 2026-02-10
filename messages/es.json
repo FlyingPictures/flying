@@ -59,7 +59,8 @@
       "vip": "La máxima experiencia de lujo.\nEl viaje en globo más refinado con servicio de champán\ny desayuno gourmet."
     },
     "awardSection": {
-      "title": "COMPAÑÍA DE AVIACIÓN\nGalardonada",
+      "title": "Compañia galardonada",
+      "subtitle": "INTERNACIONALMENTE",
       "description": "Descubra el vuelo en globo más confiable y refinado de México: una fusión perfecta de precisión británica y calidez mexicana."
     },
     "cards": {
@@ -440,28 +441,33 @@
     "duration": "Duración",
     "minutes": "minutos",
     "perPerson": "por persona",
-    "viewDetails": "Ver detalles",
+    "viewDetails": "Ver detalles"
+  },
     "whyChoose": {
-      "title": "¿Por qué volar con Flying Pictures?",
-      "reasons": [
-        {
-          "title": "Cameron Balloons UK",
-          "description": "Equipamiento de clase mundial, mantenido meticulosamente."
-        },
-        {
-          "title": "Pilotos Certificados",
-          "description": "Capacitación internacional y miles de horas de vuelo."
-        },
-        {
-          "title": "Garantía Climática",
-          "description": "Si el clima no coopera, te devolvemos el 100%."
-        },
-        {
-          "title": "Desayuno Incluido",
-          "description": "Buffet completo después del aterrizaje."
-        }
-      ]
-    },
+    "title": "Why fly with us?",
+    "takeAway": "THE 30 SECOND TAKEAWAY",
+    "await": "Whether you’re celebrating love, exploring history, or simply chasing beauty, this is more than a balloon ride it’s a tradition of excellence that’s been perfected for over 30 years.",
+
+    "reasons": [
+      {
+        "title": "The Best Equipment Available.",
+        "description": "We fly exclusively with Cameron Balloons UK, the world’s most trusted hot air balloons."
+      },
+      {
+        "title": "Fewer Balloons, Better Views",
+        "description": "We limit our daily flights to ensure calm operations."
+      },
+      {
+        "title": "A British Mind, a Mexican Heart.",
+        "description": "Founded by Sean and Diana Byrne, Flying Pictures blends precision engineering with genuine hospitality."
+      },
+      {
+        "title": "Breakfast Included",
+        "description": "Full buffet after landing."
+      }
+    ]
+  },
+
     "cta": {
       "title": "¿Listo para despegar?",
       "description": "Reserva tu lugar en el próximo amanecer. Cupos limitados.",
@@ -492,8 +498,8 @@
           "answer": "Ofrecemos reembolso completo o reprogramación sin costo."
         }
       ]
-    }
-  },
+    },
+  
   "product": {
     "hero": {
       "experience": "EXPERIENCIA DE VUELO",

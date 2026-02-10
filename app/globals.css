@@ -130,10 +130,10 @@
 
   h2 {
   font-family: var(--font-poppins), sans-serif;
-  font-weight: 500;
-  font-size: clamp(2.25rem, 5.5vw, 4rem); /* 36px → 64px */
-  line-height: clamp(1.22, 1.3vw, 1.3);   /* mobile → desktop */
-  letter-spacing: -0.03em;
+  font-weight: 600;
+  font-size: clamp(2.25rem, 5.5vw, 4rem); 
+  line-height: clamp(1.22, 1.3vw, 1.3);  
+  letter-spacing: -0.05em;
   text-align: center;
   }
 
@@ -147,7 +147,7 @@
   p {
     font-family: var(--font-inter), sans-serif;
     font-weight: 500;
-    font-size: clamp(14px, 2.5vw, 18px);
+    font-size: clamp(14px, 1.5vw, 18px);
     line-height: clamp(22px, 1.3vw, 20px);
   }
 

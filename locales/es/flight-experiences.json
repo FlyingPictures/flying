@@ -1,0 +1,215 @@
+{
+    "flightExperiences": {
+  "pageTitle": "Experiencias en globo aerostático en Teotihuacán",
+  "experiencesList": "Lista de experiencias",
+  "pageDescription": "Vuela sobre las Pirámides de Teotihuacán en un globo aerostático. Elige entre vuelos compartidos, privados, experiencias VIP y más.",
+  "hero": {
+    "title": "Vuela sobre las pirámides",
+    "subtitle": "La aventura definitiva te espera",
+    "description": "Vive la magia de Teotihuacán desde el cielo. El amanecer más espectacular de México te espera."
+  },
+
+  "trustBadges": {
+    "title": "Nuestra promesa",
+    "badges": [
+      {
+        "icon": "award",
+        "title": "Premio internacional",
+        "description": "Mejor experiencia en globo 2024"
+      },
+      {
+        "icon": "shield",
+        "title": "Seguridad certificada",
+        "description": "Pilotos certificados internacionalmente"
+      },
+      {
+        "icon": "heart",
+        "title": "Más de 15,000 viajeros",
+        "description": "Historias de éxito en 5 años"
+      },
+      {
+        "icon": "clock",
+        "title": "Amanecer garantizado",
+        "description": "Vuelos al amanecer garantizados"
+      }
+    ]
+  },
+
+  "filterTitle": "Filtrar por tipo de experiencia",
+  "all": "Todas las experiencias",
+  "shared": "Vuelos compartidos",
+  "private": "Vuelos privados",
+  "vip": "VIP y tours",
+  "proposals": "Propuestas románticas",
+  "featuredLabel": "Más popular",
+  "fromPrice": "Desde",
+  "duration": "Duración",
+  "minutes": "minutos",
+  "perPerson": "por persona",
+  "viewDetails": "Ver detalles"
+},
+
+"cta": {
+  "title": "¿Listo para despegar?",
+  "description": "Reserva tu lugar para el próximo amanecer. Cupos limitados.",
+  "button": "Reservar ahora",
+  "whatsapp": "Contactar por WhatsApp"
+},
+
+"faq": {
+  "title": "Preguntas frecuentes",
+  "items": [
+    {
+      "question": "¿Qué incluye el vuelo?",
+      "answer": "Vuelo de 60 minutos, certificado, desayuno buffet, transporte y fotografías."
+    },
+    {
+      "question": "¿A qué hora es el vuelo?",
+      "answer": "Los vuelos salen al amanecer (aprox. 5:30–6:00 AM)."
+    },
+    {
+      "question": "¿Es seguro volar en globo?",
+      "answer": "Sí. Operamos con equipo Cameron Balloons UK y pilotos certificados."
+    },
+    {
+      "question": "¿Puedo llevar mi cámara?",
+      "answer": "¡Por supuesto! Recomendamos traer tu cámara o teléfono."
+    },
+    {
+      "question": "¿Qué pasa si hay mal clima?",
+      "answer": "Ofrecemos reembolso completo o reprogramación sin costo."
+    }
+  ]
+},
+
+"product": {
+  "hero": {
+    "experience": "EXPERIENCIA DE VUELO",
+    "duration": "Duración",
+    "participants": "Participantes",
+    "minAge": "Edad mínima",
+    "difficulty": "Dificultad",
+    "easy": "Fácil",
+    "moderate": "Moderada",
+    "instantConfirmation": "Confirmación inmediata"
+  },
+
+  "gallery": {
+    "viewGallery": "Ver galería completa",
+    "photos": "fotos del vuelo"
+  },
+
+  "itinerary": {
+    "title": "Itinerario del vuelo",
+    "subtitle": "Qué esperar",
+    "timeline": [
+      {
+        "time": "04:30 - 05:00",
+        "title": "Recogida en hotel",
+        "description": "Te recogemos en tu hotel en CDMX o en la zona de Teotihuacán."
+      },
+      {
+        "time": "05:15 - 05:45",
+        "title": "Briefing de vuelo",
+        "description": "Nuestro equipo te recibe en el Globoport para las indicaciones de seguridad."
+      },
+      {
+        "time": "05:45 - 06:15",
+        "title": "Inflado del globo",
+        "description": "Observa cómo el globo cobra vida con aire caliente."
+      },
+      {
+        "time": "06:15 - 07:15",
+        "title": "El vuelo",
+        "description": "Flota suavemente sobre las pirámides mientras los primeros rayos del sol pintan el cielo."
+      },
+      {
+        "time": "07:15 - 07:45",
+        "title": "Aterrizaje y celebración",
+        "description": "Brindis con champagne y entrega de certificado de vuelo."
+      },
+      {
+        "time": "07:45 - 09:00",
+        "title": "Desayuno buffet",
+        "description": "Desayuno buffet completo con comida típica mexicana y café de la región."
+      }
+    ]
+  },
+
+  "inclusions": {
+    "title": "Qué incluye",
+    "included": [
+      "Vuelo en globo aerostático (45–75 minutos)",
+      "Certificado de vuelo personalizado",
+      "Desayuno buffet completo",
+      "Transporte desde/hacia tu hotel",
+      "Champagne o bebidas de bienvenida",
+      "Seguro de viaje completo",
+      "Piloto certificado internacionalmente"
+    ],
+    "notIncluded": [
+      "Propinas (opcionales)",
+      "Transporte desde zonas lejanas"
+    ]
+  },
+
+  "reviews": {
+    "rating": "Calificación",
+    "basedOn": "basado en",
+    "reviews": "reseñas",
+    "excellent": "Excelente",
+    "good": "Bueno",
+    "average": "Regular",
+    "poor": "Deficiente",
+    "showAll": "Ver todas las reseñas"
+  },
+
+  "pricing": {
+    "title": "Reserva tu vuelo",
+    "from": "Desde",
+    "perPerson": "por persona",
+    "selectDate": "Selecciona tu fecha",
+    "availability": "Disponibilidad",
+    "available": "Disponible",
+    "limited": "Cupos limitados",
+    "soldOut": "Agotado",
+    "bookNow": "Reservar ahora",
+    "whatsapp": "Consultar por WhatsApp",
+    "groups": "Para grupos de 8 o más",
+    "contactUs": "Contáctanos para precios especiales",
+    "guarantee": {
+      "title": "Nuestra garantía",
+      "weather": "Si el clima no permite volar, reembolsamos el 100%",
+      "cancellation": "Cancelación gratuita hasta 48 horas antes",
+      "bestPrice": "Mejor precio garantizado"
+    }
+  },
+
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Qué pasa si hay mal clima el día de mi vuelo?",
+        "answer": "Ofrecemos reembolso completo o reprogramación sin costo. No volamos con viento fuerte o lluvia."
+      },
+      {
+        "question": "¿Puedo cancelar mi reservación?",
+        "answer": "Sí, puedes cancelar hasta 48 horas antes para un reembolso completo."
+      },
+      {
+        "question": "¿Hay restricciones de peso?",
+        "answer": "Sí. Por seguridad, el peso máximo por persona es de 120 kg."
+      },
+      {
+        "question": "¿Desde qué edad pueden volar los niños?",
+        "answer": "Los niños deben tener al menos 6 años para volar."
+      },
+      {
+        "question": "¿Qué debo llevar?",
+        "answer": "Ropa en capas, zapatos cerrados, lentes de sol y una cámara."
+      }
+    ]
+  }
+}
+
+}

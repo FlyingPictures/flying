@@ -1,0 +1,164 @@
+{
+  "herosection": {
+    "h1": "El vuelo original en globo sobre \n Teotihuacán.",
+    "h3": "Precisión británica. Corazón mexicano. \n La vista de tu vida al amanecer.",
+    "paragraph": "Durante décadas hemos demostrado que las mejores aventuras \n se diseñan con rigor ingenieril. \n Bienvenido al vuelo en globo más seguro de México.",
+    "ctaPrimary": "Consultar disponibilidad",
+    "poweredBy": "Impulsado por Cameron Balloons UK \n y una vida de aterrizajes seguros.",
+    "ctaSecondary": "Despegue al amanecer"
+  },
+
+  "FlightExperience": {
+    "bookFlight": "Reservar vuelo",
+    "flightDetails": "Ver detalles del vuelo",
+    "subtitle": "ELIGE TU EXPERIENCIA",
+    "title": "Experiencias de vuelo\nDiseñadas para la aventura",
+
+    "tabs": {
+      "shared": "Compartido",
+      "private": "Privado",
+      "vip": "VIP y tours"
+    },
+
+    "titles": {
+      "shared": "El viaje clásico",
+      "private": "Escapada privada",
+      "vip": "Experiencia de lujo"
+    },
+
+    "flightBadge": "VUELO {type}",
+    "from": "Desde ${price} MXN",
+
+    "prices": {
+      "shared": "2,599",
+      "private": "5,999",
+      "vip": "9,999"
+    },
+
+    "descriptions": {
+      "shared": "Viajeros solos, amigos y parejas. Vuela en una canastilla compartida\ncon compartimentos que brindan a cada pasajero su propio espacio.\nAgrega transportación y desayuno como extras.",
+      "private": "Una experiencia exclusiva para tu grupo.\nDisfruta el cielo con total privacidad, servicio personalizado\ny amenidades premium.",
+      "vip": "La máxima experiencia de lujo.\nEl mejor vuelo en globo aerostático con servicio de champagne\ny desayuno gourmet."
+    },
+
+    "awardSection": {
+      "title": "Reconocida y premiada",
+      "subtitle": "COMPAÑÍA DE AVIACIÓN",
+      "description": "Descubre el vuelo en globo aerostático más confiable y refinado de México: una fusión perfecta entre la precisión británica y la calidez mexicana. Durante más de dos décadas, Flying Pictures México ha establecido el estándar de vuelos seguros y cinematográficos sobre las pirámides de Teotihuacán."
+    },
+
+    "cards": {
+      "tradition": {
+        "title": "Más que un paseo, una tradición.",
+        "description": "Al elevarte con la primera luz del día, el valle se revela ante ti: la Pirámide del Sol, la Calzada de los Muertos y kilómetros de horizonte dorado. Cada instante se siente cuidadosamente orquestado: sereno, elegante e inolvidable.",
+        "button": "Explorar colección de vuelos",
+        "award_label": "Proveedor de aviación más confiable 2024"
+      },
+
+      "other": {
+        "title": "Tu otro título",
+        "description": "Tu otra descripción",
+        "button": "Explorar vuelos"
+      },
+
+      "safety": {
+        "title": "Seguridad que se nota.",
+        "description": "Nuestros pilotos senior, certificados por la Agencia Federal de Aviación Civil y formados bajo estándares nacionales, te guían con la experiencia de muchos años dedicados al vuelo en globo. Cada vuelo incluye seguro completo, un brindis tradicional al aterrizar y el placer silencioso de ver despertar la mañana.",
+        "button": "Conoce nuestra flota"
+      }
+    }
+  },
+
+  "whyChoose": {
+  "title": "¿Por qué volar con nosotros?",
+  "takeAway": "EL RESUMEN EN 30 SEGUNDOS",
+  "await": "Ya sea que estés celebrando el amor, explorando la historia o simplemente persiguiendo la belleza, esto es mucho más que un vuelo en globo: es una tradición de excelencia perfeccionada durante más de 30 años.",
+  "reasons": [
+    {
+      "title": "El mejor equipo disponible",
+      "description": "Volamos exclusivamente con Cameron Balloons UK, los globos aerostáticos más confiables del mundo, diseñados para máximo rendimiento, seguridad y elegancia."
+    },
+    {
+      "title": "Menos globos, mejores vistas",
+      "description": "Limitamos nuestros vuelos diarios para garantizar operaciones tranquilas, grupos pequeños y vistas despejadas sobre las pirámides de Teotihuacán."
+    },
+    {
+      "title": "Mente británica, corazón mexicano",
+      "description": "Fundada por Sean y Diana Byrne, Flying Pictures combina ingeniería de precisión con hospitalidad auténtica — cada detalle está cuidadosamente diseñado."
+    }
+  ]
+},
+
+  "imagegridsection": {
+    "planYourVisit": "Planifica tu visita",
+    "experience": "Experiencia",
+    "gallery": "Galería",
+    "contact": "Contacto",
+    "bookNow": "Reservar ahora",
+    "language": "Idioma"
+  },
+
+  "reviews": {
+    "readRealReviews": "LEE RESEÑAS REALES",
+    "dontJustTakeOurWord": "No solo tomes nuestra palabra",
+    "readMoreReviews": "Leer más reseñas",
+    "outOf5Stars": "de 5 estrellas",
+    "items": [
+      {
+        "id": 1,
+        "name": "Javier S.",
+        "location": "Guía local",
+        "quote": "Revisé sus permisos",
+        "text": "Su equipo es Cameron de Bristol y, a diferencia de muchas compañías, tienen todas las licencias al día. No comprometas tu seguridad por ahorrar unos dólares. Ve con los mejores.",
+        "avatarIndex": 0
+      },
+      {
+        "id": 2,
+        "name": "Mike B.",
+        "location": "Nueva Zelanda",
+        "quote": "De todas las aventuras que hicimos, esta fue la mejor",
+        "text": "Sin costos ocultos (algo muy poco común). Hazlo si estás en la Ciudad de México, no te arrepentirás.",
+        "avatarIndex": 1
+      },
+      {
+        "id": 3,
+        "name": "Robert C.",
+        "location": "Singapur",
+        "quote": "Todo fue muy fluido",
+        "text": "La recepción fue muy cálida (¡café y calentadores para la mañana fría!), y el piloto logró vistas espectaculares.",
+        "avatarIndex": 2
+      }
+    ]
+  },
+
+  "weather": {
+    "liveMonitoring": "MONITOREO EN VIVO",
+    "heading": "No adivinamos el clima. Lo monitoreamos y lo entendemos.",
+    "description": "Nuestras decisiones se basan en datos en tiempo real, pronósticos y probabilidades. El clima es nuestro copiloto… y a veces puede ser impredecible.",
+
+    "safetyPromise": {
+      "title": "La promesa de seguridad",
+      "description": "Si las condiciones no son adecuadas, no volamos. Preferimos mantenerte en tierra antes que ponerte en riesgo en el aire.",
+      "cta": "Ver nuestros protocolos de seguridad"
+    },
+
+    "viewPromise": {
+      "title": "La promesa de la vista",
+      "description": "Volamos para presenciar el despertar del valle. A veces somos testigos de un amanecer dorado; otras, una neblina mística envuelve las pirámides en silencio. Ambos espectáculos los decide la naturaleza.",
+      "cta": "Ver política meteorológica"
+    },
+
+    "station": "ESTACIÓN",
+    "status": "ESTADO",
+    "active": "ACTIVO",
+    "windSpeed": "Velocidad del viento",
+    "visibility": "Visibilidad",
+    "temperature": "Temperatura",
+    "pressure": "Presión"
+  },
+
+  "tradition": {
+    "title": "Nuestra tradición y compromiso con la seguridad"
+  }
+}
+

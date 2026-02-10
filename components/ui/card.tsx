@@ -26,16 +26,10 @@ function CardContent({ className, ...props }: React.ComponentProps<"div">) {
   return <div className={cn("px-6 py-4", className)} {...props} />;
 }
 
-/**
- * 🎴 VARIANTES EXPORTABLES
- * Cada una con sus dimensiones fijas de Figma y slots para props.
- */
-
 export function CardTradition({ imageId, title, description, badge, children }: any) {
   return (
     <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col bg-transparent">
       
-      {/* IMAGEN FLEXIBLE */}
       <div className="relative w-full flex-1 rounded-t-card overflow-hidden">
         <CloudinaryImage 
           publicId={imageId} 
@@ -45,7 +39,6 @@ export function CardTradition({ imageId, title, description, badge, children }: 
         />
       </div>
 
-      {/* CONTENIDO */}
       <div className="relative w-full flex-shrink-0 bg-card rounded-b-card p-6 lg:p-[clamp(24px,2.7vw,40px)] flex flex-col gap-4 border-0 shadow-none">
         
         <h3 className="text-card-title text-secondary">
@@ -76,7 +69,6 @@ export function CardImage({ imageId, title, description, children }: any) {
   return (
     <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col bg-transparent overflow-hidden rounded-card">
       
-      {/* IMAGEN DE FONDO COMPLETA */}
       <CloudinaryImage 
         publicId={imageId} 
         alt={title} 
@@ -84,10 +76,8 @@ export function CardImage({ imageId, title, description, children }: any) {
         className="object-cover object-top"
       />
       
-      {/* OVERLAY PARA LEGIBILIDAD */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent z-0" />
 
-      {/* CONTENIDO */}
       <div className="relative z-10 w-full h-full p-6 lg:p-[clamp(24px,2.7vw,40px)] flex flex-col justify-end gap-4">
         
         <h3 className="text-card-title text-white">
@@ -106,11 +96,10 @@ export function CardImage({ imageId, title, description, children }: any) {
   );
 }
 
-// 2. Safety Full Overlay (452px)
 export function CardSafetyOverlay({ imageId, title, description, children }: any) {
   return (
     <Card className="h-[452px] border-none shadow-none">
-      <CloudinaryImage publicId={imageId} alt={title} fill className="rounded-card" />
+      <CloudinaryImage publicId={imageId} alt={title} fill className="rounded-card object-cover" />
       <div className="absolute inset-0 p-10 flex flex-col justify-end gap-4 bg-black/10">
         <h3 className="text-white text-[28px] font-libre-baskerville italic leading-tight">{title}</h3>
         <p className="text-white text-sm font-inter font-medium">{description}</p>
@@ -120,7 +109,6 @@ export function CardSafetyOverlay({ imageId, title, description, children }: any
   );
 }
 
-// 5. Review / Testimonial (281px)
 export function CardTestimonial({ name, role, quote, review }: any) {
   return (
     <Card className="h-[281px] bg-card p-6 border border-border shadow-sm">
@@ -148,7 +136,7 @@ export function CardFleet({ imageId, model, plate, description, capacity, missio
   return (
     <Card className="h-[675px] bg-transparent border-none">
       <div className="w-full h-[437px] rounded-card overflow-hidden relative">
-        <CloudinaryImage publicId={imageId} alt={model} fill />
+        <CloudinaryImage publicId={imageId} alt={model} fill className="object-cover" />
         <div className="absolute bottom-8 left-8">
           <h3 className="text-white text-2xl font-libre-baskerville italic leading-none">{model}</h3>
           <span className="text-white font-inter text-base opacity-90 tracking-widest uppercase">{plate}</span>
@@ -180,7 +168,7 @@ export function CardContact({ title, subtitle, info, email, phone, imageId }: an
         <p className="text-secondary text-[12px] font-bold uppercase tracking-[0.2em] mt-2">{subtitle}</p>
       </div>
       <div className="bg-card rounded-[24px] overflow-hidden h-[327px] border border-border flex flex-col shadow-sm">
-        <div className="h-[150px] relative"><CloudinaryImage publicId={imageId} alt="Contact" fill /></div>
+        <div className="h-[150px] relative"><CloudinaryImage publicId={imageId} alt="Contact" fill className="object-cover" /></div>
         <div className="p-5 flex flex-col gap-4">
           <p className="text-secondary text-[15px] font-medium leading-snug">{info}</p>
           <div className="flex flex-col gap-2 text-secondary text-[11px] font-bold font-inter uppercase tracking-wider">
@@ -198,7 +186,7 @@ export function CardOnion({ imageId, title, description }: any) {
   return (
     <Card className="h-[321px] bg-transparent border-none gap-4">
       <div className="w-full h-[192px] rounded-card overflow-hidden relative">
-        <CloudinaryImage publicId={imageId} alt={title} fill />
+        <CloudinaryImage publicId={imageId} alt={title} fill className="object-cover" />
         <div className="absolute bottom-4 left-6">
           <h3 className="text-white text-[20px] font-libre-baskerville italic">{title}</h3>
         </div>

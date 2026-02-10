@@ -1,0 +1,25 @@
+{
+  "contact": {
+    "heroTitle": "Talk to the Tower",
+    "heroSubtitle": "We are morning people. How can we help?",
+    "heroDescription": "Whether you have a complex logistical question or just want to know if it's cold up there, our concierge team is standing by. No bots, just humans who know the sky.",
+    "personal": "Personal",
+    "business": "Business",
+    "sectionTitle": "General Inquiries & Booking",
+    "forTravelers": "For travelers, couples, and families.",
+    "findGloboport": "Find the Globoport.",
+    "address": "Carretera a las Pirámides, Teotihuacán, Edo. Mex. We are located 5 minutes from the archaeological zone.",
+    "openMaps": "Open in Google Maps",
+    "openWaze": "Open in Waze",
+    "faqTitle": "Frequently asked questions",
+    "lookingForPrices": "Looking for prices?",
+    "worriedAboutWeather": "Worried about weather?",
+    "whatToWear": "What to wear?",
+    "getSupport": "GET SUPPORT",
+    "weRespond": "We typically respond in under 5 minutes",
+    "online": "Online",
+    "schedule": "8:00 AM - 08:00 PM CST",
+    "chatConcierge": "Chat with Concierge",
+    "availabilityInfo": "Availability, special dietary requests, proposal coordination, and weather checks."
+    }
+}

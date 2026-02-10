@@ -3,31 +3,43 @@ import type { Metadata } from "next";
 
 import { HomeHeroSection } from "@/app/[locale]/(home)/HomeHeroSection";
 import { FlightExperienceSection } from "@/app/[locale]/(home)/HomeFlightExperience";
-import HomeReviewsSection from "@/app/[locale]/(home)/HomeReviewsSection";
 import { WhyFlightWhitUs } from "@/app/[locale]/(home)/WhyFlightWhitUs";
 import { LiveMonitoringSection } from "@/app/[locale]/(home)/LiveMonitoringSection";
+import HomeReviewsSection from "@/app/[locale]/(home)/HomeReviewsSection";
+
+/* =========================
+   CONFIG
+========================= */
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  "https://www.flyingpicturesmexico.com";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://www.flyingpicturesmexico.com";
-
 /* =========================
-   METADATA
+   METADATA (SEO + LLM)
 ========================= */
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "herosection" });
 
-  const title = `${t("h1")} | Flying Pictures México`;
-  const description = t("paragraph");
+  const tHero = await getTranslations({
+    locale,
+    namespace: "herosection",
+  });
+
+  const title = `${tHero("h1")} | Flying Pictures México`;
+  const description = tHero("paragraph");
 
   return {
     title,
     description,
+
+    metadataBase: new URL(SITE_URL),
+
     alternates: {
       canonical: `${SITE_URL}/${locale}`,
       languages: {
@@ -35,6 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         en: `${SITE_URL}/en`,
       },
     },
+
     openGraph: {
       type: "website",
       locale,
@@ -51,12 +64,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
       ],
     },
+
     twitter: {
       card: "summary_large_image",
       title,
       description,
       images: [`${SITE_URL}/images/og/home-${locale}.jpg`],
     },
+
     robots: {
       index: true,
       follow: true,
@@ -64,6 +79,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+/* =========================
+   STATIC LOCALES
+========================= */
 export async function generateStaticParams() {
   return [{ locale: "es" }, { locale: "en" }];
 }
@@ -74,13 +92,12 @@ export async function generateStaticParams() {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
 
-  const tWeather = await getTranslations({ locale, namespace: "weather" });
-  const tWhy = await getTranslations({
+  /* ---------- Live Monitoring (Server data) ---------- */
+  const tWeather = await getTranslations({
     locale,
-    namespace: "flightExperiences.whyChoose",
+    namespace: "weather",
   });
 
-  /* ---------- Live Monitoring (CORREGIDO) ---------- */
   const liveMonitoringData = {
     badge: tWeather("liveMonitoring"),
     h2: tWeather("heading"),
@@ -99,35 +116,20 @@ export default async function HomePage({ params }: Props) {
     ],
   };
 
-  /* ---------- Why Fly With Us ---------- */
-  const whyFlyData = {
-    h2: tWhy("title"),
-    paragraph: "",
-    cards: [
-      {
-        title: tWhy("reasons.0.title"),
-        paragraph: tWhy("reasons.0.description"),
-      },
-      {
-        title: tWhy("reasons.1.title"),
-        paragraph: tWhy("reasons.1.description"),
-      },
-      {
-        title: tWhy("reasons.2.title"),
-        paragraph: tWhy("reasons.2.description"),
-      },
-    ],
-  };
-
-  /* ---------- Structured Data ---------- */
+  /* ---------- Structured Data (SEO / LLMs) ---------- */
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
     name: "Flying Pictures México",
-    description:
-      "Premier hot air balloon flight experience over Teotihuacán Pyramids.",
     url: SITE_URL,
+    description:
+      "Premier hot air balloon flight experience over the Teotihuacán Pyramids, combining British aviation standards with Mexican hospitality.",
     telephone: "+525580251057",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "MX",
+      addressRegion: "Estado de México",
+    },
     sameAs: [
       "https://www.facebook.com/flyingpicturesmexico",
       "https://www.instagram.com/flyingpicturesmexico",
@@ -149,7 +151,7 @@ export default async function HomePage({ params }: Props) {
 
       <main className="w-full">
         <FlightExperienceSection />
-        <WhyFlightWhitUs translations={whyFlyData} />
+        <WhyFlightWhitUs />
         <LiveMonitoringSection translations={liveMonitoringData} />
         <HomeReviewsSection />
       </main>

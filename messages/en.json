@@ -43,36 +43,54 @@
     "flightDetails": "View Flight Details",
     "subtitle": "CHOOSE YOUR ASCENT",
     "title": "Flight Experiences\nDesigned for adventure",
+
     "tabs": {
       "shared": "Shared",
       "private": "Private",
       "vip": "Vip & Tours"
     },
+    "titles": {
+      "shared": "The Classic Journey",
+      "private": "Private Escape",
+      "vip": "Luxury Experience"
+      },
+
     "flightBadge": "{type} FLIGHT",
     "from": "From ${price} MXN",
     "ctaBook": "Book Flight",
     "ctaDetails": "View flight details",
+
+    "prices": {
+      "shared": "2,599",
+      "private": "5,999",
+      "vip": "9,999"
+    },
+
     "descriptions": {
       "shared": "Solo travellers, friends, & couples. Fly in a shared compartmented basket\nthat gives everyone their own corner of the sky.\nAdd extras with transport options and breakfast.",
       "private": "Exclusive experience for your group.\nEnjoy the sky in complete privacy with personalized service\nand premium amenities.",
       "vip": "Ultimate luxury experience.\nThe finest hot air balloon journey with champagne service\nand gourmet breakfast."
     },
+
     "awardSection": {
-      "title": "Award-winning\nAVIATION COMPANY",
+      "title": "Award-winning",
+      "subtitle": "AVIATION COMPANY",
       "description": "Discover the most trusted and refined hot air balloon flight in Mexico — a seamless fusion of British precision and Mexican warmth. For over two decades, Flying Pictures Mexico has set the standard for safe, cinematic flights over the ancient pyramids of Teotihuacán."
     },
+
     "cards": {
-    "tradition": {
-      "title": "More Than a Ride, a Tradition.",
-      "description": "As you rise with the first light, the valley unfolds below: the Pyramid of the Sun, the Avenue of the Dead, and miles of golden horizon. Each moment feels carefully orchestrated — calm, elegant, and utterly unforgettable.",
-      "button": "Explore Flight Collection",
-      "award_label": "Most Trusted Aviation Provider 2024"
-    },
-    "other": {
-      "title": "Tu otro título",
-      "description": "Tu otra descripción",
-      "button": "Explore Flights"
-    },
+      "tradition": {
+        "title": "More Than a Ride, a Tradition.",
+        "description": "As you rise with the first light, the valley unfolds below: the Pyramid of the Sun, the Avenue of the Dead, and miles of golden horizon. Each moment feels carefully orchestrated — calm, elegant, and utterly unforgettable.",
+        "button": "Explore Flight Collection",
+        "award_label": "Most Trusted Aviation Provider 2024"
+      },
+
+      "other": {
+        "title": "Tu otro título",
+        "description": "Tu otra descripción",
+        "button": "Explore Flights"
+      },
 
       "safety": {
         "title": "Safety You Can See.",
@@ -448,28 +466,30 @@
     "duration": "Duration",
     "minutes": "minutes",
     "perPerson": "per person",
-    "viewDetails": "View details",
-    "whyChoose": {
-      "title": "Why fly with Flying Pictures?",
-      "reasons": [
-        {
-          "title": "The Best Equipment Available.",
-          "description": "We fly exclusively with Cameron Balloons UK, the world’s most trusted hot air balloons, crafted for performance, safety, and beauty."
-        },
-        {
-          "title": "Fewer Balloons, Better Views",
-          "description": "We limit our daily flights to ensure calm operations, smaller groups, and clear horizons over Teotihuacán’s pyramids."
-        },
-        {
-          "title": "A British Mind, a Mexican Heart.  ",
-          "description": "Founded by Sean and Diana Byrne, Flying Pictures blends precision engineering with genuine hospitality — every detail, designed with care."
-        },
-        {
-          "title": "Breakfast Included",
-          "description": "Full buffet after landing."
-        }
-      ]
-    },
+    "viewDetails": "View details"
+  },
+  
+  "whyChoose": {
+    "title": "Why fly with us?",
+    "takeAway": "THE 30 SECOND TAKEAWAY",
+    "await": "Whether you’re celebrating love, exploring history, or simply chasing beauty, this is more than a balloon ride it’s a tradition of excellence that’s been perfected for over 30 years.",
+    "reasons": [
+      {
+        "title": "The Best Equipment Available.",
+        "description": "We fly exclusively with Cameron Balloons UK, the world’s most trusted hot air balloons, crafted for performance, safety, and beauty."
+      },
+      {
+        "title": "Fewer Balloons, Better Views",
+        "description": "We limit our daily flights to ensure calm operations, smaller groups, and clear horizons over Teotihuacán’s pyramids."
+      },
+      {
+        "title": "A British Mind, a Mexican Heart.",
+        "description": "Founded by Sean and Diana Byrne, Flying Pictures blends precision engineering with genuine hospitality — every detail, designed with care."
+      }
+    ]
+  },
+
+
     "cta": {
       "title": "Ready to take off?",
       "description": "Reserve your spot for the next sunrise. Limited spots available.",
@@ -500,8 +520,10 @@
           "answer": "We offer a full refund or free reschedule."
         }
       ]
-    }
-  },
+    },
+
+
+
   "product": {
     "hero": {
       "experience": "FLIGHT EXPERIENCE",

@@ -45,8 +45,8 @@ export function Footer({ translations }: FooterProps) {
   return (
     <footer className="bg-secondary text-background relative pt-0 pb-16 px-4 md:px-10 lg:px-20 transition-all duration-300">
       <div className="flex justify-start">
-        <Link href="/" className="inline-block ">
-          <Logo className="w-[6.188rem] h-[7.813rem] origin-top" />
+        <Link href="/" className="inline-block">
+          <Logo className="w-[5rem] h-[6.25rem] origin-top" />
         </Link>
       </div>
 
@@ -62,8 +62,7 @@ export function Footer({ translations }: FooterProps) {
             {[1, 2].map((i) => (
               <div 
                 key={i} 
-                className="size-12 bg-background/20 rounded-md hover:bg-background/40 transition-colors cursor-pointer" 
-                aria-hidden="true"
+                className="size-12 bg-background/20 rounded-[6px] hover:bg-background/40 transition-colors cursor-pointer"                aria-hidden="true"
               />
             ))}
           </div>

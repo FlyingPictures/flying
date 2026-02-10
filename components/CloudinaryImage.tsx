@@ -1,4 +1,3 @@
-// components/ui/CloudinaryImage.tsx
 import Image from 'next/image';
 import { cloudinaryUrl } from '@/lib/cloudinary';
 
@@ -17,17 +16,15 @@ interface CloudinaryImageProps {
 export function CloudinaryImage({
   publicId,
   alt,
-  width = 1200,
+  width = 2200,
   height,
   className,
   priority = false,
   fill = false,
-  sizes,
+  sizes = '100vw',
   objectFit = 'cover',
 }: CloudinaryImageProps) {
-  if (!publicId) {
-    return null;
-  }
+  if (!publicId) return null;
 
   const src = cloudinaryUrl(publicId, width);
 
@@ -37,10 +34,10 @@ export function CloudinaryImage({
         src={src}
         alt={alt}
         fill
-        className={className}
         priority={priority}
-        sizes={sizes || '100vw'}
-        style={{ objectFit }}
+        sizes={sizes}
+        className={className}
+        style={{ objectFit, border: 'none', boxShadow: 'none' }}
       />
     );
   }
@@ -51,9 +48,10 @@ export function CloudinaryImage({
       alt={alt}
       width={width}
       height={height || Math.round(width * 0.67)}
-      className={className}
       priority={priority}
       sizes={sizes}
+      className={className}
+      style={{ border: 'none', boxShadow: 'none' }}
     />
   );
 }
