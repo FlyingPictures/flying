@@ -6,7 +6,7 @@ export function cloudinaryUrl(publicId: string, width?: number): string {
 
   const transforms = [
     'f_auto',
-    'q_auto',
+    'q_auto:best',
     width && `w_${width}`,
     'c_fill,g_auto',
   ]

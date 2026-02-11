@@ -24,22 +24,7 @@ const ALL_FLIGHTS = [
   { id: 3, cat: 'vip', image: IMAGES.flightExperience.flights.vip },
 ] as const
 
-const CARD_CONFIGS = [
-  {
-    id: 'tradition',
-    titleKey: 'cards.tradition.title',
-    imgId: IMAGES.flightExperience.bottomCards.tradition,
-    btnKey: 'cards.tradition.button',
-    descKey: 'cards.tradition.description',
-  },
-  {
-    id: 'safety',
-    titleKey: 'cards.safety.title',
-    imgId: IMAGES.flightExperience.bottomCards.safety,
-    btnKey: 'cards.safety.button',
-    descKey: 'cards.safety.description',
-  },
-] as const
+
 
 const findClosestCardIndex = (container: HTMLElement): number => {
   const containerCenter = container.scrollLeft + container.offsetWidth / 2
@@ -80,7 +65,7 @@ export function FlightExperienceSection() {
     raf: null as number | null,
   })
 
-  /* ---------------- Tabs indicator ---------------- */
+  /* =============== TABS INDICATOR =============== */
 
   useEffect(() => {
     const update = () => {
@@ -104,7 +89,7 @@ export function FlightExperienceSection() {
     return () => window.removeEventListener('resize', update)
   }, [activeFilter])
 
-  /* ---------------- Carousel logic ---------------- */
+  /* =============== CAROUSEL LOGIC =============== */
 
   const scrollToCard = useCallback((index: number, smooth = true) => {
     const container = scrollRef.current
@@ -118,9 +103,11 @@ export function FlightExperienceSection() {
     const containerCenter = container.offsetWidth / 2
     const targetScroll = cardCenter - containerCenter
 
-    smooth
-      ? container.scrollTo({ left: targetScroll, behavior: 'smooth' })
-      : (container.scrollLeft = targetScroll)
+    if (smooth) {
+      container.scrollTo({ left: targetScroll, behavior: 'smooth' })
+    } else {
+      container.scrollLeft = targetScroll
+    }
   }, [])
 
   const snapToClosestCard = useCallback(() => {
@@ -233,54 +220,9 @@ export function FlightExperienceSection() {
     }
   }
 
-  /* ---------------- Bottom cards (DRY) ---------------- */
 
-  const renderBottomCard = (config: (typeof CARD_CONFIGS)[number]) => {
-    const buttonText = t(config.btnKey)
 
-    if (config.id === 'tradition') {
-      const words = buttonText.split(' ')
-      const mobileText = words.slice(0, 2).join(' ')
-      const desktopText = words.slice(0, 3).join(' ')
-
-      return (
-        <CardTradition
-          key={config.id}
-          imageId={config.imgId}
-          title={t(config.titleKey)}
-          description={t(config.descKey)}
-          badge={
-            <CloudinaryImage
-              publicId={IMAGES.flightExperience.awards.badge}
-              alt={t('cards.tradition.award_label')}
-              fill
-              className="object-cover"
-            />
-          }
-        >
-          <Button variant="secondary" size="xs" className="w-fit">
-            <span className="lg:hidden">{mobileText}</span>
-            <span className="hidden lg:inline">{desktopText}</span>
-          </Button>
-        </CardTradition>
-      )
-    }
-
-    return (
-      <CardImage
-        key={config.id}
-        imageId={config.imgId}
-        title={t(config.titleKey)}
-        description={t(config.descKey)}
-      >
-        <Button variant="outline" size="sm" className="w-fit">
-          {buttonText}
-        </Button>
-      </CardImage>
-    )
-  }
-
-  /* ---------------- JSX ---------------- */
+  /* =============== JSX =============== */
 
   return (
     <section
@@ -391,7 +333,7 @@ export function FlightExperienceSection() {
                     fill
                     className="object-cover"
                   />
-                    <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 via-transparent to-secondary/75 opacity-50" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 via-transparent to-secondary/75 opacity-50" />
 
                   <div className="absolute inset-0 p-6 flex flex-col text-white">
                     <div className="text-center">
@@ -468,67 +410,105 @@ export function FlightExperienceSection() {
         </div>
       </div>
 
-      {/* BOTTOM CARDS (anchored) */}
+      {/* BOTTOM CARDS */}
       <div className="relative w-full px-6 pb-8 lg:absolute lg:bottom-0 lg:left-0 lg:translate-y-1/2 lg:pb-0 lg:z-20 -mt-40 lg:mt-0 z-20">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-6 max-w-[1231px] mx-auto">
-          {CARD_CONFIGS.map(renderBottomCard)}
+          {/* TRADITION CARD */}
+          <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col">
+            <div className="relative h-[207px] lg:h-[clamp(207px,30vw,444px)] rounded-t-card overflow-hidden">
+              <CloudinaryImage
+                publicId={IMAGES.flightExperience.bottomCards.tradition}
+                alt={t('cards.tradition.title')}
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+              <div
+              className="flex flex-col
+                bg-card rounded-b-card
+                h-[296px]
+                lg:flex-1 lg:h-auto
+                p-[clamp(16px,4vw,24px)]
+                lg:p-[clamp(24px,2.7vw,40px)]
+              "
+            >
+              <h3 className="text-card-title text-secondary">
+                {t('cards.tradition.title')}
+              </h3>
+              <div className="flex-1 flex items-center">
+                <p className="text-card-body text-secondary">
+                  {t('cards.tradition.description')}
+                </p>
+              </div>
+              <div className="flex items-end justify-between gap-[clamp(12px,2vw,24px)]">
+                <Button variant="secondary" size="xs" className="w-fit">
+                  <span className="lg:hidden">
+                    {t('cards.tradition.button').split(' ').slice(0, 2).join(' ')}
+                  </span>
+                  <span className="hidden lg:inline">
+                    {t('cards.tradition.button').split(' ').slice(0, 3).join(' ')}
+                  </span>
+                </Button>
+
+                <div className="relative w-[clamp(142px,20vw,283px)] aspect-[283/72]">
+                  <CloudinaryImage
+                    publicId={IMAGES.flightExperience.awards.badge}
+                    alt={t('cards.tradition.award_label')}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          {/* SAFETY CARD */}
+        <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col overflow-hidden rounded-card">
+
+          <CloudinaryImage
+            publicId={IMAGES.flightExperience.bottomCards.safety}
+            alt={t('cards.safety.title')}
+            fill
+            className="object-cover object-top"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent z-0" />
+
+          <div
+            className="
+              relative z-10
+              w-full
+              h-[296px]
+              lg:h-[clamp(296px,22vw,353px)]
+              mt-auto
+              p-[clamp(16px,4vw,24px)]
+              lg:p-[clamp(24px,2.7vw,40px)]
+              flex flex-col
+            "
+          >
+
+            <h3 className="text-card-title text-white">
+              {t('cards.safety.title')}
+            </h3>
+
+            <div className="flex-1 flex items-center">
+              <p className="text-card-body text-white/90">
+                {t('cards.safety.description')}
+              </p>
+            </div>
+
+            <div>
+              <Button variant="outline" size="sm" className="w-fit">
+                {t('cards.safety.button')}
+              </Button>
+            </div>
+
+          </div>
+        </div>
+
         </div>
       </div>
     </section>
-  )
-}
-
-/* =========================
-   Cards (acopladas, intactas)
-   ========================= */
-
-function CardTradition({ imageId, title, description, badge, children }: any) {
-  return (
-    <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col bg-transparent">
-      <div className="relative w-full flex-1 rounded-t-card overflow-hidden">
-        <CloudinaryImage
-          publicId={imageId}
-          alt={title}
-          fill
-          className="object-cover object-top"
-        />
-      </div>
-
-      <div className="relative w-full flex-shrink-0 bg-card rounded-b-card p-6 lg:p-[clamp(24px,2.7vw,40px)] flex flex-col gap-4 border-0 shadow-none">
-        <h3 className="text-card-title text-secondary">{title}</h3>
-        <p className="text-card-body text-secondary">{description}</p>
-
-        <div className="flex items-center justify-between gap-3 flex-wrap mt-auto">
-          <div className="flex-shrink-0">{children}</div>
-
-          {badge && (
-            <div className="relative w-[clamp(110px,10vw,142px)] aspect-[142/36]">
-              {badge}
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function CardImage({ imageId, title, description, children }: any) {
-  return (
-    <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col bg-transparent overflow-hidden rounded-card">
-      <CloudinaryImage
-        publicId={imageId}
-        alt={title}
-        fill
-        className="object-cover object-top"
-      />
-
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent z-0" />
-
-      <div className="relative z-10 w-full h-full p-6 lg:p-[clamp(24px,2.7vw,40px)] flex flex-col justify-end gap-4">
-        <h3 className="text-card-title text-white">{title}</h3>
-        <p className="text-card-body text-white/90">{description}</p>
-        <div className="flex-shrink-0">{children}</div>
-      </div>
-    </div>
   )
 }

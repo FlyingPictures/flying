@@ -64,7 +64,7 @@ export function WhyFlightWhitUs() {
       <div className="content-wrapper">
         <div className="flex flex-col lg:flex-row w-full items-start">
           <div className="hidden lg:block w-full lg:w-1/2">
-            <h2 className="text-background text-left">{t("title")}</h2>
+            <h2 className="text-background !text-left">{t("title")}</h2>
           </div>
 
           <div className="w-full lg:w-1/2 flex flex-col gap-3">

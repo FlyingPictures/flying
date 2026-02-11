@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { useState, useMemo, useEffect, useRef } from "react"
 import { Link, usePathname, useRouter } from "@/i18n/routing"
