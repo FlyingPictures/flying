@@ -1,27 +1,27 @@
 {
   "nav": {
-    "planYourVisit": "Plan your visit",
-    "flightExperiences": "Flight Experiences",
-    "safetyHeritage": "Safety & Heritage",
-    "contactSupport": "Contact & Support",
-    "language": "Language",
-    "bookFlight": "Book Flight",
-    "shared": "Shared Flight",
-    "private": "Private Flight",
-    "vip": "VIP & Tours",
-    "proposals": "Proposals",
-    "groups": "Groups",
+    "planYourVisit": "Planifica tu visita",
+    "flightExperiences": "Experiencias de vuelo",
+    "safetyHeritage": "Seguridad y tradición",
+    "contactSupport": "Contacto y soporte",
+    "language": "Idioma",
+    "bookFlight": "Reservar vuelo",
+    "shared": "Vuelo compartido",
+    "private": "Vuelo privado",
+    "vip": "VIP y tours",
+    "proposals": "Propuestas",
+    "groups": "Grupos",
     "talkExpert": "Habla con un experto"
   },
 
   "banner": {
-    "company": "AN AVIATION COMPANY - CALL US"
+    "company": "UNA EMPRESA DE AVIACIÓN - LLÁMANOS"
   },
 
   "footer": {
-    "description": "An award-winning Aviation Company. The premier provider of hot air balloon flights in TeotihuacÃ¡n. Proudly operating Cameron Balloons UK since 1992.",
-    "termsConditions": "Terms & Conditions",
-    "privacyPolicy": "Privacy Policy",
-    "cancellations": "Cancellation Policy"
+    "description": "Una empresa de aviación galardonada. El principal proveedor de vuelos en globo aerostático en Teotihuacán. Operando orgullosamente con Cameron Balloons UK desde 1992.",
+    "termsConditions": "Términos y condiciones",
+    "privacyPolicy": "Política de privacidad",
+    "cancellations": "Política de cancelación"
   }
 }

@@ -331,14 +331,22 @@ export function FlightExperienceSection() {
                 key={flight.id}
                 data-slide
                 data-index={index}
-                className="shrink-0 w-[345px] md:w-[clamp(400px,48vw,698px)] select-none flex flex-col min-h-[clamp(354px,40vw,580px)]"
-              >
+                className="
+                  shrink-0
+                  w-[85vw]
+                  sm:w-[345px]
+                  md:w-[clamp(400px,48vw,698px)]
+                  select-none
+                  flex
+                  flex-col
+                  min-h-[clamp(354px,40vw,580px)]
+                ">
                 <div className="relative h-[clamp(232px,30vw,437px)] rounded-[var(--radius)] overflow-hidden">
                   <CloudinaryImage
                     publicId={flight.image}
                     alt={t(`tabs.${flight.cat}`)}
                     fill
-                    className="object-cover"
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 via-transparent to-secondary/75 opacity-50" />
 
@@ -360,7 +368,7 @@ export function FlightExperienceSection() {
                           price: t(`prices.${flight.cat}`),
                         })}
                       </strong>
-                      <Button variant="primary" size="sm">
+                      <Button variant="primary" size="xs">
                         {t('bookFlight')}
                       </Button>
                     </div>
@@ -418,7 +426,7 @@ export function FlightExperienceSection() {
       </div>
 
       {/* BOTTOM CARDS */}
-      <div className="relative w-full px-6 pb-8 lg:absolute lg:bottom-0 lg:left-0 lg:translate-y-1/2 lg:pb-0 lg:z-20 -mt-40 lg:mt-0 z-20">
+      <div className="relative w-full px-6 pb-8 lg:absolute lg:bottom-0 lg:left-0 lg:translate-y-1/2 lg:pb-0 lg:z-20 -mt-20 lg:mt-0 z-20">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-6 max-w-[1231px] mx-auto">
           {/* TRADITION CARD */}
           <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col rounded-[var(--radius)] overflow-hidden">

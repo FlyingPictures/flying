@@ -14,7 +14,7 @@ import {
   WhatsappLogoIcon,
 } from "@phosphor-icons/react"
 import { useScrollDirection } from "@/hooks/use-scroll-direction"
-import { useTranslations, useLocale } from "next-intl"
+import { useLocale, useTranslations } from 'next-intl'
 import { cn } from "@/lib/utils"
 
 const CONTACT = {
@@ -129,6 +129,7 @@ const LanguageSwitcher = ({ className }: { className?: string }) => {
 /* ================= MAIN COMPONENT ================= */
 
 export default function Navbar() {
+  
   const t = useTranslations("nav")
   const bannerT = useTranslations("banner")
 
@@ -307,11 +308,11 @@ export default function Navbar() {
                   </div>
 
                   <div className="flex flex-col flex-1 px-10 py-10 gap-5 overflow-y-auto">
-                    <h2 className="font-inter font-bold text-[1.5rem]">
+                    <h2 className="font-inter font-bold text-[1.5rem] self-start">
                       {t("flightExperiences")}
                     </h2>
 
-                    <div className="flex flex-col gap-4 ml-1">
+                    <div className="flex flex-col gap-4">
                       {EXPERIENCES.map((exp) => (
                         <ExperienceLink
                           key={exp.id}
@@ -323,7 +324,7 @@ export default function Navbar() {
                       ))}
                     </div>
 
-                    <div className="flex flex-col gap-6 mt-4 border-t pt-8">
+                    <div className="flex flex-col gap-6 mt-8">
                       <NavLink
                         id="safetyHeritage"
                         href="/safety-heritage"
