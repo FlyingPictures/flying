@@ -8,7 +8,7 @@ export function cloudinaryUrl(publicId: string, width?: number): string {
     'f_auto',
     'q_auto:best',
     width && `w_${width}`,
-    'c_fill,g_auto',
+    width && 'c_fill,g_auto',
   ]
     .filter(Boolean)
     .join(',');

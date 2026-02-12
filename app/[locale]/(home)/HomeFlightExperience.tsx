@@ -226,18 +226,25 @@ export function FlightExperienceSection() {
 
   return (
     <section
-      className="relative w-full overflow-visible"
+      className="
+        relative 
+        w-full 
+        overflow-visible 
+        lg:bg-none
+        bg-[linear-gradient(to_bottom,theme(colors.background)_0%,theme(colors.background)_20%,#758C9C_60%,#7e899b_100%)]
+      "
       style={{ height: 'clamp(2300px, 250vw, 2440px)' }}
-    >
-      <div className="absolute inset-0">
-        <CloudinaryImage
-          publicId={IMAGES.flightExperience.background}
-          alt="Sky"
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
+      >
+        <div className="absolute top-0 left-0 w-full h-[1556px] lg:inset-0 lg:h-full">
+          <CloudinaryImage
+            publicId={IMAGES.flightExperience.background}
+            alt="Sky"
+            fill
+            priority
+            sizes="100vw"
+            className="object-contain object-bottom lg:object-cover lg:object-center"
+          />
+        </div>
 
       <div className="relative mx-auto">
         {/* HEADER */}
@@ -248,7 +255,7 @@ export function FlightExperienceSection() {
             marginBottom: 'clamp(25px, 4vw, 33px)',
           }}
         >
-          <h4 className="text-foreground uppercase font-bold mb-3">
+          <h4 className="text-foreground  mb-3">
             {t('subtitle')}
           </h4>
           <h2 className="text-foreground whitespace-pre-line max-w-[916px] mx-auto">
@@ -414,8 +421,9 @@ export function FlightExperienceSection() {
       <div className="relative w-full px-6 pb-8 lg:absolute lg:bottom-0 lg:left-0 lg:translate-y-1/2 lg:pb-0 lg:z-20 -mt-40 lg:mt-0 z-20">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-6 max-w-[1231px] mx-auto">
           {/* TRADITION CARD */}
-          <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col">
-            <div className="relative h-[207px] lg:h-[clamp(207px,30vw,444px)] rounded-t-card overflow-hidden">
+          <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col rounded-[var(--radius)] overflow-hidden">
+  
+            <div className="relative h-[207px] lg:h-[clamp(207px,30vw,444px)]">
               <CloudinaryImage
                 publicId={IMAGES.flightExperience.bottomCards.tradition}
                 alt={t('cards.tradition.title')}
@@ -423,9 +431,11 @@ export function FlightExperienceSection() {
                 className="object-cover object-top"
               />
             </div>
-              <div
-              className="flex flex-col
-                bg-card rounded-b-card
+
+            <div
+              className="
+                flex flex-col
+                bg-card
                 h-[296px]
                 lg:flex-1 lg:h-auto
                 p-[clamp(16px,4vw,24px)]
@@ -435,13 +445,15 @@ export function FlightExperienceSection() {
               <h3 className="text-card-title text-secondary">
                 {t('cards.tradition.title')}
               </h3>
+
               <div className="flex-1 flex items-center">
                 <p className="text-card-body text-secondary">
                   {t('cards.tradition.description')}
                 </p>
               </div>
+
               <div className="flex items-end justify-between gap-[clamp(12px,2vw,24px)]">
-                <Button variant="secondary" size="xs" className="w-fit">
+                <Button variant="secondary" size="md" className="w-fit">
                   <span className="lg:hidden">
                     {t('cards.tradition.button').split(' ').slice(0, 2).join(' ')}
                   </span>
@@ -459,12 +471,12 @@ export function FlightExperienceSection() {
                   />
                 </div>
               </div>
+
             </div>
           </div>
 
-
           {/* SAFETY CARD */}
-        <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col overflow-hidden rounded-card">
+            <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col overflow-hidden rounded-[var(--radius)]">
 
           <CloudinaryImage
             publicId={IMAGES.flightExperience.bottomCards.safety}
@@ -499,7 +511,7 @@ export function FlightExperienceSection() {
             </div>
 
             <div>
-              <Button variant="outline" size="sm" className="w-fit">
+              <Button variant="outline" size="md" className="w-fit">
                 {t('cards.safety.button')}
               </Button>
             </div>

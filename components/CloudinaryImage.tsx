@@ -26,7 +26,7 @@ export function CloudinaryImage({
 }: CloudinaryImageProps) {
   if (!publicId) return null;
 
-  const src = cloudinaryUrl(publicId, width);
+  const src = cloudinaryUrl(publicId, fill ? undefined : width);
 
   if (fill) {
     return (

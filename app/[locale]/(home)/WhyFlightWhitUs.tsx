@@ -51,15 +51,14 @@ export function WhyFlightWhitUs() {
         }
       `}</style>
 
-      <div className="absolute inset-0 w-full h-full">
-        <CloudinaryImage
+      <CloudinaryImage
           publicId={IMAGES.whyChoose.background}
           alt=""
           fill
-          className="object-cover object-center"
+          className="object-cover object-fill lg:object-cover object-[center_top]"
+          
           priority
         />
-      </div>
 
       <div className="content-wrapper">
         <div className="flex flex-col lg:flex-row w-full items-start">
