@@ -453,7 +453,7 @@ export function FlightExperienceSection() {
               </div>
 
               <div className="flex items-end justify-between gap-[clamp(12px,2vw,24px)]">
-                <Button variant="secondary" size="md" className="w-fit">
+                <Button variant="secondary" size="sm" className="w-fit">
                   <span className="lg:hidden">
                     {t('cards.tradition.button').split(' ').slice(0, 2).join(' ')}
                   </span>
@@ -511,7 +511,7 @@ export function FlightExperienceSection() {
             </div>
 
             <div>
-              <Button variant="outline" size="md" className="w-fit">
+              <Button variant="outline" size="sm" className="w-fit">
                 {t('cards.safety.button')}
               </Button>
             </div>

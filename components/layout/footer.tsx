@@ -105,7 +105,7 @@ export function Footer({ translations }: FooterProps) {
             <span>•</span>
             <div className="group cursor-default">
               Development by{" "}
-              <span className="text-[#ED1C24] font-bold transition-colors duration-300 group-hover:text-background">
+              <span className="font-bold transition-colors duration-300 group-hover:text-background">
                 Team 3
               </span>
             </div>

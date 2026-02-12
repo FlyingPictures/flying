@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo, useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Link, usePathname, useRouter } from "@/i18n/routing"
 import { Logo } from "@/components/logo"
 import { Button } from "@/components/ui/button"
@@ -11,6 +11,7 @@ import {
   XIcon,
   HeadsetIcon,
   GlobeSimpleIcon,
+  WhatsappLogoIcon,
 } from "@phosphor-icons/react"
 import { useScrollDirection } from "@/hooks/use-scroll-direction"
 import { useTranslations, useLocale } from "next-intl"
@@ -27,6 +28,13 @@ const EXPERIENCES = [
   { id: "proposals", href: "/private-flight" },
   { id: "groups", href: "/private-flight" },
 ] as const
+
+const SCROLL_THRESHOLDS = {
+  HIDE: 50,
+  FLOATING_BAR: 100,
+} as const
+
+/* ================= SUB COMPONENTS ================= */
 
 const NavLink = ({
   id,
@@ -118,19 +126,32 @@ const LanguageSwitcher = ({ className }: { className?: string }) => {
   )
 }
 
+/* ================= MAIN COMPONENT ================= */
+
 export default function Navbar() {
   const t = useTranslations("nav")
   const bannerT = useTranslations("banner")
 
   const { scrollDirection, scrollY } = useScrollDirection()
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSheetOpen, setIsSheetOpen] = useState(false)
 
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
+  const isScrollingDown = scrollDirection === "down"
+
   const isHeaderVisible = scrollY < 50 || scrollDirection === "up"
+
   const isHeaderHidden =
-    scrollY > 50 && scrollDirection === "down" && !isSheetOpen
+    scrollY > SCROLL_THRESHOLDS.HIDE &&
+    isScrollingDown &&
+    !isSheetOpen
+
+  const showFloatingBar =
+    scrollY > SCROLL_THRESHOLDS.FLOATING_BAR &&
+    isScrollingDown &&
+    !isSheetOpen
 
   const handleMouseEnter = () => {
     if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current)
@@ -154,7 +175,7 @@ export default function Navbar() {
 
   return (
     <>
-      {/* DESKTOP */}
+      {/* ================= DESKTOP ================= */}
       <header
         className={cn(
           "hidden lg:flex flex-col items-center z-50 fixed top-0 w-full transition-transform duration-500",
@@ -180,10 +201,7 @@ export default function Navbar() {
               <Logo className="w-full h-full" />
             </Link>
 
-            <div
-              className="flex flex-1 items-center"
-              style={{ gap: "clamp(0.25rem, 2vw, 2rem)" }}
-            >
+            <div className="flex flex-1 items-center gap-8">
               <div
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -233,10 +251,7 @@ export default function Navbar() {
               <NavLink id="planYourVisit" href="/plan-your-visit" />
             </div>
 
-            <div
-              className="flex flex-1 items-center justify-end"
-              style={{ gap: "clamp(0.25rem, 2vw, 2rem)" }}
-            >
+            <div className="flex flex-1 items-center justify-end gap-8">
               <NavLink id="contactSupport" href="/contact" />
               <LanguageSwitcher />
               <BookButton />
@@ -245,15 +260,15 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* MOBILE */}
+      {/* ================= MOBILE ================= */}
       <header
         className={cn(
           "lg:hidden fixed top-0 inset-x-0 z-50 transition-transform duration-500",
           isHeaderHidden && "-translate-y-[8rem]"
         )}
       >
-        <div className="bg-destructive text-background font-bold text-center h-8 flex items-center justify-center text-[0.7rem] uppercase">
-          {CONTACT.DISPLAY}
+        <div className="bg-destructive text-background font-bold text-center h-8 flex items-center justify-center text-[0.7rem] uppercase px-4">
+          {bannerT("company")} {CONTACT.DISPLAY}
         </div>
 
         <nav className="relative h-[4.5rem] bg-surface px-6 flex items-center justify-between shadow-md">
@@ -280,7 +295,6 @@ export default function Navbar() {
 
               <SheetPrimitive.Portal>
                 <SheetPrimitive.Content className="fixed inset-y-0 right-0 z-[60] w-full bg-surface flex flex-col shadow-xl">
-                  {/* ✅ AGREGADO: DialogTitle para accesibilidad */}
                   <SheetPrimitive.Title className="sr-only">
                     {t("flightExperiences")}
                   </SheetPrimitive.Title>
@@ -343,6 +357,27 @@ export default function Navbar() {
           </div>
         </nav>
       </header>
+
+      {/* ================= FLOATING BAR ================= */}
+      <div
+        className={cn(
+          "lg:hidden fixed bottom-6 inset-x-0 z-40 flex justify-center px-4 transition-all duration-500",
+          showFloatingBar
+            ? "translate-y-0 opacity-100"
+            : "translate-y-20 opacity-0 pointer-events-none"
+        )}
+        aria-hidden={!showFloatingBar}
+      >
+        <div className="w-full max-w-[26rem] bg-surface rounded-card p-3 flex items-center gap-3 shadow-xl">
+          <Button variant="primary" size="floating" className="flex-1">
+            <span>{t("bookFlight")}</span>
+          </Button>
+
+          <Button variant="secondary" size="floating" className="flex-1">
+            <span className="flex items-center gap-2">{t("talkExpert")} <WhatsappLogoIcon size={20}  /></span>
+          </Button>
+        </div>
+      </div>
     </>
   )
 }

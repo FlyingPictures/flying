@@ -19,7 +19,7 @@ export function HomeHeroSection() {
       </div>
 
       <div className="absolute inset-0 flex items-end justify-center px-[clamp(0.75rem,5vw,1.5rem)] text-center">
-        <div className="w-full max-w-[1024px] flex flex-col items-center gap-2 sm:gap-6 " style={{ paddingTop: NAV_OFFSET, maxHeight: `calc(100vh - ${NAV_OFFSET})` }}>
+        <div className="w-full max-w-[1024px] flex flex-col items-center gap-4 sm:gap-6 " style={{ paddingTop: NAV_OFFSET, maxHeight: `calc(100vh - ${NAV_OFFSET})` }}>
           <CloudinaryImage publicId={IMAGES.homeHero.stars} alt="5 Stars" className="w-40 h-auto object-contain mb-2" />
 
           <h1 className={`title hero ${TEXT_WRAP}`}>{t("h1")}</h1>
@@ -38,7 +38,7 @@ export function HomeHeroSection() {
             <h5 className={`powered hero ${TEXT_WRAP}`}>{t("poweredBy")}</h5>
           </div>
 
-          <div className="w-full mt-3 flex items-center justify-center gap-x-[clamp(0.5rem,3vw,0.75rem)] sm:overflow-x-auto sm:snap-x sm:snap-mandatory lg:flex-wrap mb-8">
+          <div className="w-full mt-3 flex items-center justify-center gap-x-[clamp(0.5rem,3vw,0.75rem)] sm:overflow-x-auto sm:snap-x sm:snap-mandatory lg:flex-wrap mb-10">
             {IMAGES.brandLogos.map((logo) => (
               <div key={logo.publicId} className="flex-none sm:snap-center">
                 <CloudinaryImage publicId={logo.publicId} alt={logo.alt}  className="h-[clamp(3.5rem,16vw,5rem)] sm:h-[clamp(4.5rem,10vw,6.5rem)] lg:h-[clamp(6rem,8vw,9.375rem)] w-auto object-contain opacity-80 transition-opacity hover:opacity-100" />
