@@ -1,5 +1,7 @@
-import { getRequestConfig } from 'next-intl/server';
-import { routing } from './routing';
+import { getRequestConfig } from "next-intl/server";
+import { routing } from "./routing";
+import fs from "fs";
+import path from "path";
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;
@@ -8,14 +10,20 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale;
   }
 
-  const commonMessages = (await import(`../locales/${locale}/common.json`)).default;
-  const homeMessages = (await import(`../locales/${locale}/home.json`)).default;
+  const localePath = path.join(process.cwd(), "locales", locale);
+  const files = fs.readdirSync(localePath);
+
+  const messages = {};
+
+  for (const file of files) {
+    if (file.endsWith(".json")) {
+      const content = (await import(`../locales/${locale}/${file}`)).default;
+      Object.assign(messages, content);
+    }
+  }
 
   return {
     locale,
-    messages: {
-      ...commonMessages,
-      ...homeMessages
-    }
+    messages
   };
 });

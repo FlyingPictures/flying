@@ -52,7 +52,7 @@ export function WhyFlightWhitUs() {
       `}</style>
 
       <CloudinaryImage
-          publicId={IMAGES.whyChoose.background}
+          publicId={IMAGES.home.whyChoose.background}
           alt=""
           fill
           className="object-cover object-fill lg:object-cover object-[center_top]"
@@ -94,7 +94,7 @@ export function WhyFlightWhitUs() {
                 style={{ height: "437px", border: "none", boxShadow: "none" }}
               >
                 <CloudinaryImage
-                  publicId={IMAGES.whyChoose.cards[index]}
+                  publicId={IMAGES.home.whyChoose.cards[index]}
                   alt={reason.title}
                   fill
                   className="object-cover"
@@ -108,7 +108,7 @@ export function WhyFlightWhitUs() {
                   {index === 0 && (
                     <div className="relative mb-[14px] w-[66px] h-[28px]">
                       <CloudinaryImage
-                        publicId={IMAGES.whyChoose.cameronLogo}
+                        publicId={IMAGES.home.whyChoose.cameronLogo}
                         alt="Cameron Balloons UK"
                         fill
                         className="object-contain"

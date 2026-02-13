@@ -96,7 +96,7 @@ const BookButton = ({ className }: { className?: string }) => {
   return (
     <Button
       variant="primary"
-      size="sm"
+      size="md"
       className={cn("px-8 font-bold", className)}
     >
       {t("bookFlight")}
@@ -214,9 +214,12 @@ export default function Navbar() {
                   modal={false}
                 >
                   <DropdownMenu.Trigger asChild>
-                    <button className="font-inter font-bold text-secondary tracking-tight outline-none hover:opacity-70 py-4">
+                    <Link
+                      href="/flight-experiences"
+                      className="font-inter font-bold text-secondary tracking-tight outline-none hover:opacity-70 py-4"
+                    >
                       {t("flightExperiences")}
-                    </button>
+                    </Link>
                   </DropdownMenu.Trigger>
 
                   <DropdownMenu.Portal>
@@ -296,11 +299,22 @@ export default function Navbar() {
 
               <SheetPrimitive.Portal>
                 <SheetPrimitive.Content className="fixed inset-y-0 right-0 z-[60] w-full bg-surface flex flex-col shadow-xl">
-                  <SheetPrimitive.Title className="sr-only">
-                    {t("flightExperiences")}
+                  <SheetPrimitive.Title>
+                    <Link href="/flight-experiences" className="sr-only">
+                      {t("flightExperiences")}
+                    </Link>
                   </SheetPrimitive.Title>
 
-                  <div className="h-[6rem] flex items-center justify-between px-6 border-b">
+                  <div className="
+                    relative h-[10rem] flex items-center justify-between px-6
+                    before:absolute
+                    before:bottom-0
+                    before:left-1/2
+                    before:-translate-x-1/2
+                    before:w-[90%]
+                    before:border-b
+                    before:content-['']
+                  ">
                     <BookButton />
                     <SheetPrimitive.Close className="rounded-full size-10 flex items-center justify-center">
                       <XIcon size={24} weight="bold" />

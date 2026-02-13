@@ -1,48 +1,125 @@
-import { CloudinaryImage } from '@/components/CloudinaryImage';
-import { cn } from '@/lib/utils';
+"use client";
 
-interface FlightCardProps {
-  imageId: string;
-  title: string;
-  description: string;
-  price?: string;
-  duration?: string;
-  className?: string;
+import { CloudinaryImage } from "@/components/CloudinaryImage";
+import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
+import { IMAGES } from "@/lib/images";
+
+type FlightId =
+  | "classic"
+  | "journey"
+  | "transport"
+  | "open"
+  | "proposal"
+  | "anniversary"
+  | "birthday"
+  | "vip"
+  | "corporate";
+
+const FLIGHTS: FlightId[] = [
+  "classic",
+  "journey",
+  "transport",
+  "open",
+  "proposal",
+  "anniversary",
+  "birthday",
+  "vip",
+  "corporate",
+];
+
+export function FlightCardsSection() {
+  const t = useTranslations("flightExperiences.cards");
+
+  return (
+    <section className="py-15 mb-20">
+      {/* HEADER GENERAL */}
+      <header className="text-center max-w-[1024px] mx-auto mb-12 lg:mb-24 px-6">
+        <h4 className="text-foreground mb-4">{t("subtitle")}</h4>
+        <h2 className="text-foreground whitespace-pre-line mb-4">
+          {t("title")}
+        </h2>
+        <p className="text-foreground lg:whitespace-pre-line">
+          {t("description")}
+        </p>
+      </header>
+
+      {/* GRID */}
+      <div className="max-w-[1440px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 lg:gap-12 gap-6 justify-items-center lg:justify-items-stretch">
+        {FLIGHTS.map((flightId, idx) => (
+          <div
+            key={flightId}
+            className={idx % 2 === 0 ? "flex lg:justify-end" : "flex lg:justify-start"}
+          >
+            <FlightCard id={flightId} />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
 
-export function FlightCard({
-  imageId,
-  title,
-  description,
-  price,
-  duration,
-  className,
-}: FlightCardProps) {
+/* ============================= */
+/* CARD */
+/* ============================= */
+
+function FlightCard({ id }: { id: FlightId }) {
+  const t = useTranslations("flightExperiences.cards");
+
+  const imageSrc =
+  IMAGES.flightExperiences.flights[
+    id as keyof typeof IMAGES.flightExperiences.flights
+  ];
+
   return (
-    <article className={cn('group relative overflow-hidden rounded-xl', className)}>
-      <div className="relative aspect-video overflow-hidden">
+    <div className="w-full max-w-[600px] bg-white overflow-hidden flex flex-col">
+      {/* IMAGE + OVERLAY CONTENT */}
+      <div className="relative w-full h-[373px] md:h-[437px] overflow-hidden rounded-[var(--radius)]">
         <CloudinaryImage
-          publicId={imageId}
-          alt={title}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          publicId={imageSrc}
+          alt={id}
+          width={600}
+          height={437}
+          className="w-full h-full object-cover"
         />
-      </div>
 
-      <div className="p-6">
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-secondary opacity-40" />
 
-        <div className="flex items-center justify-between">
-          {duration && (
-            <span className="text-sm text-gray-500">{duration}</span>
-          )}
-          {price && (
-            <span className="text-lg font-semibold text-primary">{price}</span>
-          )}
+        <div className="absolute inset-0 flex flex-col items-center justify-between text-center p-10 text-background">
+          <h3 className="font-libre-baskerville text-[clamp(22px,2vw,28px)] whitespace-pre-line">
+            {t(`titles.${id}`)}
+          </h3>
+
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-[clamp(14px,1.5vw,18px)] font-medium lg:px-14">
+              {t(`subtitles.${id}`)}
+            </p>
+            <div className="flex items-center gap-4">
+              <strong className="text-[clamp(16px,1.8vw,22px)]">
+                {t(`prices.${id}`)}
+              </strong>
+              <Button variant="primary" size="sm">
+                {t(`books.${id}`)}
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
-    </article>
+
+      {/* CONTENT BELOW IMAGE */}
+      <div className="flex flex-col pt-6 gap-6">
+        <p>{t(`descriptions.${id}`)}</p>
+
+        <p className="text-[clamp(14px,1.5vw,18px)] text-[#03303BB3] font-medium">
+          {t(`includes.${id}`)}
+        </p>
+
+        <div className="flex items-center gap-2 text-[#03303BB3] text-[clamp(14px,1.5vw,18px)] font-medium">
+          <span className="text-3xl">★</span>
+          <span>{t(`ratings.${id}`)}</span>
+        </div>
+      </div>
+    </div>
   );
 }

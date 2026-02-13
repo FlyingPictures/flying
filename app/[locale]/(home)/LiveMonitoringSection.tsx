@@ -11,7 +11,7 @@ export function LiveMonitoringSection() {
   return (
     <section className="relative w-full py-24 border-0 outline-none ring-0 shadow-none overflow-hidden">
       <CloudinaryImage
-        publicId={IMAGES.liveMonitoring.background}
+        publicId={IMAGES.home.liveMonitoring.background}
         alt="Live Monitoring Background"
         fill
         className="absolute inset-0 object-cover -z-10"
@@ -50,7 +50,7 @@ export function LiveMonitoringSection() {
             style={{ borderRadius: 'var(--radius)' }}
           >
             <CloudinaryImage
-              publicId={IMAGES.liveMonitoring.card1}
+              publicId={IMAGES.home.liveMonitoring.card1}
               alt={t('safetyPromise.title')}
               fill
               className="absolute inset-0 object-cover"
@@ -78,7 +78,7 @@ export function LiveMonitoringSection() {
             style={{ borderRadius: 'var(--radius)' }}
           >
             <CloudinaryImage
-              publicId={IMAGES.liveMonitoring.card2}
+              publicId={IMAGES.home.liveMonitoring.card2}
               alt={t('viewPromise.title')}
               fill
               className="absolute inset-0 object-cover "

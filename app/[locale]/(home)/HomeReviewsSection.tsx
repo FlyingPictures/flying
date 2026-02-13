@@ -100,7 +100,7 @@ function Background() {
   return (
     <div className="absolute inset-0 -z-20">
       <CloudinaryImage
-        publicId={IMAGES.homeReviews.background}
+        publicId={IMAGES.home.reviews.background}
         alt=""
         fill
         className="object-cover"
@@ -126,7 +126,7 @@ function Platforms() {
         {PLATFORM_KEYS.map((key) => (
           <div key={key} className="flex items-center justify-center h-full">
             <CloudinaryImage
-              publicId={IMAGES.homeReviews.platforms[key]}
+              publicId={IMAGES.home.reviews.platforms[key]}
               alt={`${key} 5 star reviews`}
               className="h-full w-auto object-contain"
               priority={key === 'google'}
@@ -164,7 +164,7 @@ function ReviewCard({ review }: { review: Review }) {
         <div className="flex items-center gap-3">
           <div className={AVATAR_CLASSES}>
             <CloudinaryImage
-              publicId={IMAGES.homeReviews.avatars[review.avatarIndex]}
+              publicId={IMAGES.home.reviews.avatars[review.avatarIndex]}
               alt={review.name}
               fill
               className="object-cover"

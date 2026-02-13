@@ -19,9 +19,9 @@ type TabKey = 'shared' | 'private' | 'vip'
 const TABS: TabKey[] = ['shared', 'private', 'vip']
 
 const ALL_FLIGHTS = [
-  { id: 1, cat: 'shared', image: IMAGES.flightExperience.flights.shared },
-  { id: 2, cat: 'private', image: IMAGES.flightExperience.flights.private },
-  { id: 3, cat: 'vip', image: IMAGES.flightExperience.flights.vip },
+  { id: 1, cat: 'shared', image: IMAGES.home.flightExperience.flights.shared },
+  { id: 2, cat: 'private', image: IMAGES.home.flightExperience.flights.private },
+  { id: 3, cat: 'vip', image: IMAGES.home.flightExperience.flights.vip },
 ] as const
 
 
@@ -237,7 +237,7 @@ export function FlightExperienceSection() {
       >
         <div className="absolute top-0 left-0 w-full h-[1556px] lg:inset-0 lg:h-full">
           <CloudinaryImage
-            publicId={IMAGES.flightExperience.background}
+            publicId={IMAGES.home.flightExperience.background}
             alt="Sky"
             fill
             priority
@@ -352,7 +352,7 @@ export function FlightExperienceSection() {
 
                   <div className="absolute inset-0 p-6 flex flex-col text-white">
                     <div className="text-center">
-                      <h4 className="uppercase text-xs font-bold">
+                      <h4>
                         {t('flightBadge', {
                           type: t(`tabs.${flight.cat}`),
                         })}
@@ -398,7 +398,7 @@ export function FlightExperienceSection() {
           }}
         >
           <CloudinaryImage
-            publicId={IMAGES.flightExperience.awards.certificate}
+            publicId={IMAGES.home.flightExperience.awards.certificate}
             alt="Awards"
             width={235}
             className="mx-auto w-[150px] md:w-[235px] mb-[clamp(16px,8vw,108px)]"
@@ -433,7 +433,7 @@ export function FlightExperienceSection() {
   
             <div className="relative h-[207px] lg:h-[clamp(207px,30vw,444px)]">
               <CloudinaryImage
-                publicId={IMAGES.flightExperience.bottomCards.tradition}
+                publicId={IMAGES.home.flightExperience.bottomCards.tradition}
                 alt={t('cards.tradition.title')}
                 fill
                 className="object-cover object-top"
@@ -472,7 +472,7 @@ export function FlightExperienceSection() {
 
                 <div className="relative w-[clamp(142px,20vw,283px)] aspect-[283/72]">
                   <CloudinaryImage
-                    publicId={IMAGES.flightExperience.awards.badge}
+                    publicId={IMAGES.home.flightExperience.awards.badge}
                     alt={t('cards.tradition.award_label')}
                     fill
                     className="object-contain"
@@ -487,7 +487,7 @@ export function FlightExperienceSection() {
             <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col overflow-hidden rounded-[var(--radius)]">
 
           <CloudinaryImage
-            publicId={IMAGES.flightExperience.bottomCards.safety}
+            publicId={IMAGES.home.flightExperience.bottomCards.safety}
             alt={t('cards.safety.title')}
             fill
             className="object-cover object-top"

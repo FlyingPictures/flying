@@ -1,1 +1,9 @@
-﻿
+{
+    "product": {
+    "hero": {
+      "title": "Talk to the Tower",
+      "subtitle": "We are morning people. How can we help?",
+      "description": "Whether you have a complex logistical question or just want to know if it's cold up there, our concierge team is standing by. No bots, just humans who know the sky."
+    }
+}
+}

@@ -1,80 +1,73 @@
 "use client";
 
-import { Play, ArrowDown } from "lucide-react";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
+import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 import { IMAGES } from "@/lib/images";
-import { cn } from "@/lib/utils";
+import { WhatsappLogoIcon } from "@phosphor-icons/react";
 
 const TEXT_WRAP = "whitespace-pre-line";
 const NAV_OFFSET = "calc(var(--navbar-height, 4.5rem) + 2rem)";
 
-interface FlightHeroProps {
-  title: string;
-  subtitle: string;
-  description: string;
-  locale: string;
-}
+export function FlightHero() {
+  const t = useTranslations("flightExperiences.hero");
 
-export function FlightHero({
-  title,
-  subtitle,
-  description,
-  locale,
-}: FlightHeroProps) {
   return (
-    <section className="relative h-screen overflow-hidden pt-[4.5rem] lg:pt-0">
-      {/* Background */}
-      <div className="absolute inset-0 -z-10">
+    <section className="relative h-[95vh] lg:h-screen overflow-hidden pt-[4.5rem] lg:pt-0">
+      <div className="absolute inset-0 -z-10 flex justify-center">
         <CloudinaryImage
-          publicId={IMAGES.flightHero.background}
-          alt="Flight Hero"
+          publicId={IMAGES.flightExperiences.hero.background}
+          alt="Hero Background"
           fill
           priority
-          className="object-cover"
+          className="h-full w-auto object-contain object-top"
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/10" />
       </div>
 
-      {/* Content */}
-      <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
+      <div className="absolute inset-0 flex items-end justify-center px-[clamp(0.75rem,5vw,1.5rem)] text-center">
         <div
-          className="max-w-4xl flex flex-col items-center"
-          style={{ paddingTop: NAV_OFFSET }}
+          className="w-full max-w-[1024px] flex flex-col items-center gap-4 sm:gap-6"
+          style={{
+            paddingTop: NAV_OFFSET,
+            maxHeight: `calc(100vh - ${NAV_OFFSET})`
+          }}
         >
-          <span className="text-primary uppercase tracking-[0.2em] mb-6">
-            {subtitle}
-          </span>
-
-          <h1 className={`title hero ${TEXT_WRAP} mb-6`}>
-            {title}
+          <h1 className={`title hero ${TEXT_WRAP}`}>
+            {t("pageTitle")}
           </h1>
 
+          <h3 className={`decorative hero ${TEXT_WRAP}`}>
+            {t("experiencesList")}
+          </h3>
+
           <p className={`paragraph hero ${TEXT_WRAP}`}>
-            {description}
+            {t("pageDescription")}
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-10">
-            <a
-              href="#experiences"
-              className="px-8 py-4 bg-primary text-secondary font-bold rounded-full"
-            >
-              {locale === "es" ? "Ver Experiencias" : "View Experiences"}
-            </a>
+          <div className="flex flex-col sm:flex-row gap-4 mt-2">
+            <Button variant="outline" size="sm" className="px-10">
+              {t("ctaFlightPrimary")}
+            </Button>
+          </div>
 
-            <button className="flex items-center gap-3 px-8 py-4 bg-white/10 text-white rounded-full backdrop-blur">
-              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-white/20">
-                <Play className="w-4 h-4 fill-white" />
-              </span>
-              {locale === "es" ? "Ver Video" : "Watch Video"}
-            </button>
+          <div className="mt-4">
+          <Button variant="ghost"size="md" className="flex items-center gap-2 text-background">
+            <WhatsappLogoIcon size={24} weight="regular" />
+            {t("talkFlight")}
+          </Button>
+        </div>
+
+          <div className="w-full mt-6 mb-30 flex justify-center mt-20">
+            <CloudinaryImage
+              publicId="trustbadges1_2x_1_1_pq9pzn"
+              alt="Award Badge"
+              width={542}
+              height={200}
+              className="w-[257px] lg:w-[542px] h-auto"
+            />
           </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown className="w-6 h-6 text-white/60" />
       </div>
     </section>
   );
