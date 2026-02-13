@@ -76,5 +76,32 @@ export const IMAGES = {
       vip: "v1770985332/Rectangle_37_8_xkxdci",
       corporate: "v1770985333/Rectangle_37_9_vw580e"
     }
-  }
+  },
+
+  contact: {
+    background: "v1770746469/Rectangle_44_1_cuhoex",
+    cameronLogo: "cameronlogo_hve9ws",
+  },
+
+  product: {
+    hero: {
+      background: "v1770746469/Rectangle_44_1_cuhoex",
+      cameronLogo: "cameronlogo_hve9ws",
+    },
+  },
+  
+  plan: {
+    hero: {
+      background: "v1770746469/Rectangle_44_1_cuhoex",  
+      cameronLogo: "cameronlogo_hve9ws",
+    },
+  },
+
+  safety: {
+    hero: {
+      background: "v1770746469/Rectangle_44_1_cuhoex",
+      cameronLogo: "cameronlogo_hve9ws",
+    },
+  },
+
 } as const;
