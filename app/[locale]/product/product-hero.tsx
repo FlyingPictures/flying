@@ -21,7 +21,7 @@ export function ProductHero({
     <section className="relative h-[80vh] overflow-hidden pt-[4.5rem] lg:pt-0">
       <div className="absolute inset-0 -z-10">
         <CloudinaryImage
-          publicId={IMAGES.productHero.background}          alt={title}
+          publicId={IMAGES.product.hero.background}          alt={title}
           fill
           priority
           className="object-cover"

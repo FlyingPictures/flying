@@ -13,7 +13,7 @@ export async function PlanHero() {
     <section className="relative h-[75vh] overflow-hidden pt-[4.5rem] lg:pt-0">
       <div className="absolute inset-0 -z-10">
         <CloudinaryImage
-          publicId={IMAGES.planHero.background}
+          publicId={IMAGES.plan.hero.background}
           alt="Plan Your Visit"
           fill
           priority

@@ -13,7 +13,7 @@ export async function ContactHero() {
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <CloudinaryImage
-          publicId={IMAGES.contactHero.background}
+          publicId={IMAGES.contact.hero.background}
           alt="Contact Hero"
           fill
           priority

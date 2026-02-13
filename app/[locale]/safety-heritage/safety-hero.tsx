@@ -14,9 +14,9 @@ export async function PlanHero() {
     <section className="relative h-[75vh] overflow-hidden pt-[4.5rem] lg:pt-0">
       <div className="absolute inset-0 -z-10">
         <CloudinaryImage
-          publicId={IMAGES.safetyHeritage.background}
+          publicId={IMAGES.safety.hero.background}
 
-          alt="Plan Your Visit"
+          alt="Safety Heritage"
           fill
           priority
           className="object-cover"

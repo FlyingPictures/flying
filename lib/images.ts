@@ -79,8 +79,10 @@ export const IMAGES = {
   },
 
   contact: {
-    background: "v1770746469/Rectangle_44_1_cuhoex",
-    cameronLogo: "cameronlogo_hve9ws",
+    hero: {
+      background: "v1770746469/Rectangle_44_1_cuhoex",
+      cameronLogo: "cameronlogo_hve9ws",
+    },  
   },
 
   product: {
