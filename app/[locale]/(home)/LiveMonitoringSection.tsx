@@ -50,7 +50,7 @@ export function LiveMonitoringSection() {
             className="relative flex h-[437px] w-full max-w-[365px] flex-col justify-end overflow-hidden px-8 py-10"
             style={{ borderRadius: 'var(--radius)' }}
           >
-            <CloudinaryImage
+           <CloudinaryImage
               publicId={IMAGES.home.liveMonitoring.card1}
               alt={t('safetyPromise.title')}
               fill

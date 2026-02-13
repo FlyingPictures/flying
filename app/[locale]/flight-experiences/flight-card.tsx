@@ -78,10 +78,10 @@ function FlightCard({ id }: { id: FlightId }) {
         <CloudinaryImage
           publicId={imageSrc}
           alt={id}
-          width={600}
-          height={437}
+          fill
+          sizes="(max-width: 640px) 85vw, (max-width: 768px) 345px, (max-width: 1024px) 48vw, 600px"
           className="w-full h-full object-cover"
-        />
+/>
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-secondary opacity-40" />

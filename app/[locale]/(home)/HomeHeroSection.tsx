@@ -30,8 +30,8 @@ export function HomeHeroSection() {
           <CloudinaryImage
             publicId={IMAGES.home.hero.stars}
             alt="5 Stars"
-            width={160}
-            height={40}
+            width={640}
+            height={160}
             className="w-40 h-auto object-contain mb-2"
           />
 
@@ -50,16 +50,16 @@ export function HomeHeroSection() {
             <CloudinaryImage
               publicId={IMAGES.home.hero.cameronLogo}
               alt="Cameron Logo"
-              width={78}
-              height={33}
+              width={300}
+              height={150}
               className="w-20 h-auto object-contain"
             />
             <h5 className={`powered hero ${TEXT_WRAP}`}>{t("poweredBy")}</h5>
           </div>
 
-          <div className="w-full mt-3 flex items-center justify-center overflow-x-auto gap-x-[clamp(0.5rem,3vw,0.75rem)] snap-x snap-mandatory mb-10">
+          <div className="w-full mt-3 flex items-center justify-center overflow-x-auto gap-x-[clamp(0.5rem,3vw,0.75rem)] snap-x snap-mandatory mb-10 lg:overflow-visible lg:flex-wrap lg:overflow-x-visible">
             {IMAGES.home.brandLogos.map((logo) => (
-              <div key={logo.publicId} className="flex-shrink-0 snap-center">
+              <div key={logo.publicId} className="flex-shrink-0 snap-center lg:flex-shrink">
                 <CloudinaryImage
                   publicId={logo.publicId}
                   alt={logo.alt}

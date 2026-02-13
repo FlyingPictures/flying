@@ -128,7 +128,9 @@ function Platforms() {
             <CloudinaryImage
               publicId={IMAGES.home.reviews.platforms[key]}
               alt={`${key} 5 star reviews`}
-              width={120}
+              width={500}
+              height={150}
+              className="h-full w-auto object-contain"
               priority={key === 'google'}
             />
           </div>

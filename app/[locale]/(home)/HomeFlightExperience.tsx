@@ -392,7 +392,8 @@ export function FlightExperienceSection() {
           <CloudinaryImage
             publicId={IMAGES.home.flightExperience.awards.certificate}
             alt="Awards"
-            width={235}
+            width={700}
+            height={700}
             className="mx-auto w-[150px] md:w-[235px] mb-[clamp(16px,8vw,108px)]"
           />
 
@@ -497,17 +498,16 @@ export function FlightExperienceSection() {
                 p-[clamp(16px,4vw,24px)]
                 lg:p-[clamp(24px,2.7vw,40px)]
                 flex flex-col
+                justify-between
               "
             >
-              <h3 className="text-card-title text-white">
+              <h3 className="text-card-title text-background">
                 {t('cards.safety.title')}
               </h3>
 
-              <div className="flex-1 flex items-center">
-                <p className="text-card-body text-white/90">
-                  {t('cards.safety.description')}
-                </p>
-              </div>
+              <p className="text-card-body text-white/90">
+                {t('cards.safety.description')}
+              </p>
 
               <div>
                 <Button variant="outline" size="sm" className="w-fit">

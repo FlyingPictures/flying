@@ -62,8 +62,8 @@ export function FlightHero() {
             <CloudinaryImage
               publicId="trustbadges1_2x_1_1_pq9pzn"
               alt="Award Badge"
-              width={542}
-              height={200}
+              width={2000}
+              height={800}
               className="w-[257px] lg:w-[542px] h-auto"
             />
           </div>

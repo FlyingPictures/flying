@@ -111,7 +111,8 @@ export function WhyFlightWhitUs() {
                       <CloudinaryImage
                         publicId={IMAGES.home.whyChoose.cameronLogo}
                         alt="Cameron Balloons UK"
-                        width={66}
+                        width={300}
+                        height={150}
                         className="object-contain"
                       />
                     </div>
