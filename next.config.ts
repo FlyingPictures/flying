@@ -22,6 +22,18 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60,
   },
 
+  // Rewrites para servir manifest desde la raíz
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: '/:locale/site.webmanifest',
+          destination: '/site.webmanifest',
+        },
+      ],
+    };
+  },
+
   // Headers de seguridad
   async headers() {
     return [

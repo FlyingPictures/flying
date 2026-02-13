@@ -24,8 +24,6 @@ const ALL_FLIGHTS = [
   { id: 3, cat: 'vip', image: IMAGES.home.flightExperience.flights.vip },
 ] as const
 
-
-
 const findClosestCardIndex = (container: HTMLElement): number => {
   const containerCenter = container.scrollLeft + container.offsetWidth / 2
   const cards = container.querySelectorAll<HTMLElement>('[data-slide]')
@@ -65,8 +63,6 @@ export function FlightExperienceSection() {
     raf: null as number | null,
   })
 
-  /* =============== TABS INDICATOR =============== */
-
   useEffect(() => {
     const update = () => {
       const container = pillRef.current
@@ -88,8 +84,6 @@ export function FlightExperienceSection() {
     window.addEventListener('resize', update)
     return () => window.removeEventListener('resize', update)
   }, [activeFilter])
-
-  /* =============== CAROUSEL LOGIC =============== */
 
   const scrollToCard = useCallback((index: number, smooth = true) => {
     const container = scrollRef.current
@@ -220,10 +214,6 @@ export function FlightExperienceSection() {
     }
   }
 
-
-
-  /* =============== JSX =============== */
-
   return (
     <section
       className="
@@ -234,17 +224,17 @@ export function FlightExperienceSection() {
         bg-[linear-gradient(to_bottom,theme(colors.background)_0%,theme(colors.background)_20%,#758C9C_60%,#7e899b_100%)]
       "
       style={{ height: 'clamp(2300px, 250vw, 2440px)' }}
-      >
-        <div className="absolute top-0 left-0 w-full h-[1556px] lg:inset-0 lg:h-full">
-          <CloudinaryImage
-            publicId={IMAGES.home.flightExperience.background}
-            alt="Sky"
-            fill
-            priority
-            sizes="100vw"
-            className="object-contain object-bottom lg:object-cover lg:object-center"
-          />
-        </div>
+    >
+      <div className="absolute top-0 left-0 w-full h-[1556px] lg:inset-0 lg:h-full">
+        <CloudinaryImage
+          publicId={IMAGES.home.flightExperience.background}
+          alt="Sky"
+          fill
+          priority
+          sizes="100vw"
+          className="object-contain object-bottom lg:object-cover lg:object-center"
+        />
+      </div>
 
       <div className="relative mx-auto">
         {/* HEADER */}
@@ -255,7 +245,7 @@ export function FlightExperienceSection() {
             marginBottom: 'clamp(25px, 4vw, 33px)',
           }}
         >
-          <h4 className="text-foreground  mb-3">
+          <h4 className="text-foreground mb-3">
             {t('subtitle')}
           </h4>
           <h2 className="text-foreground whitespace-pre-line max-w-[916px] mx-auto">
@@ -340,12 +330,14 @@ export function FlightExperienceSection() {
                   flex
                   flex-col
                   min-h-[clamp(354px,40vw,580px)]
-                ">
+                "
+              >
                 <div className="relative h-[clamp(232px,30vw,437px)] rounded-[var(--radius)] overflow-hidden">
                   <CloudinaryImage
                     publicId={flight.image}
                     alt={t(`tabs.${flight.cat}`)}
                     fill
+                    sizes="(max-width: 640px) 85vw, (max-width: 768px) 345px, (max-width: 1024px) 48vw, 698px"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 via-transparent to-secondary/75 opacity-50" />
@@ -430,12 +422,12 @@ export function FlightExperienceSection() {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-6 max-w-[1231px] mx-auto">
           {/* TRADITION CARD */}
           <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col rounded-[var(--radius)] overflow-hidden">
-  
             <div className="relative h-[207px] lg:h-[clamp(207px,30vw,444px)]">
               <CloudinaryImage
                 publicId={IMAGES.home.flightExperience.bottomCards.tradition}
                 alt={t('cards.tradition.title')}
                 fill
+                sizes="(max-width: 768px) 100vw, 608px"
                 className="object-cover object-top"
               />
             </div>
@@ -475,58 +467,55 @@ export function FlightExperienceSection() {
                     publicId={IMAGES.home.flightExperience.awards.badge}
                     alt={t('cards.tradition.award_label')}
                     fill
+                    sizes="(max-width: 768px) 30vw, 283px"
                     className="object-contain"
                   />
                 </div>
               </div>
-
             </div>
           </div>
 
           {/* SAFETY CARD */}
-            <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col overflow-hidden rounded-[var(--radius)]">
+          <div className="relative w-full max-w-[608px] h-[503px] lg:h-[clamp(503px,55vw,797px)] flex flex-col overflow-hidden rounded-[var(--radius)]">
+            <CloudinaryImage
+              publicId={IMAGES.home.flightExperience.bottomCards.safety}
+              alt={t('cards.safety.title')}
+              fill
+              sizes="(max-width: 768px) 100vw, 608px"
+              className="object-cover object-top"
+            />
 
-          <CloudinaryImage
-            publicId={IMAGES.home.flightExperience.bottomCards.safety}
-            alt={t('cards.safety.title')}
-            fill
-            className="object-cover object-top"
-          />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent z-0" />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent z-0" />
+            <div
+              className="
+                relative z-10
+                w-full
+                h-[296px]
+                lg:h-[clamp(296px,22vw,353px)]
+                mt-auto
+                p-[clamp(16px,4vw,24px)]
+                lg:p-[clamp(24px,2.7vw,40px)]
+                flex flex-col
+              "
+            >
+              <h3 className="text-card-title text-white">
+                {t('cards.safety.title')}
+              </h3>
 
-          <div
-            className="
-              relative z-10
-              w-full
-              h-[296px]
-              lg:h-[clamp(296px,22vw,353px)]
-              mt-auto
-              p-[clamp(16px,4vw,24px)]
-              lg:p-[clamp(24px,2.7vw,40px)]
-              flex flex-col
-            "
-          >
+              <div className="flex-1 flex items-center">
+                <p className="text-card-body text-white/90">
+                  {t('cards.safety.description')}
+                </p>
+              </div>
 
-            <h3 className="text-card-title text-white">
-              {t('cards.safety.title')}
-            </h3>
-
-            <div className="flex-1 flex items-center">
-              <p className="text-card-body text-white/90">
-                {t('cards.safety.description')}
-              </p>
+              <div>
+                <Button variant="outline" size="sm" className="w-fit">
+                  {t('cards.safety.button')}
+                </Button>
+              </div>
             </div>
-
-            <div>
-              <Button variant="outline" size="sm" className="w-fit">
-                {t('cards.safety.button')}
-              </Button>
-            </div>
-
           </div>
-        </div>
-
         </div>
       </div>
     </section>

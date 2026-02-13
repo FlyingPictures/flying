@@ -82,7 +82,6 @@ export default function HomeReviewsSection() {
 
         {/* MOBILE */}
         <div className="lg:hidden flex flex-col items-center gap-6 mt-36 pb-8 h-[900px]">
-
           {reviewsData.slice(0, 3).map((review) => (
             <ReviewCard key={review.id} review={review} />
           ))}
@@ -103,6 +102,7 @@ function Background() {
         publicId={IMAGES.home.reviews.background}
         alt=""
         fill
+        sizes="100vw"
         className="object-cover"
         priority
       />
@@ -128,7 +128,7 @@ function Platforms() {
             <CloudinaryImage
               publicId={IMAGES.home.reviews.platforms[key]}
               alt={`${key} 5 star reviews`}
-              className="h-full w-auto object-contain"
+              width={120}
               priority={key === 'google'}
             />
           </div>
@@ -167,6 +167,7 @@ function ReviewCard({ review }: { review: Review }) {
               publicId={IMAGES.home.reviews.avatars[review.avatarIndex]}
               alt={review.name}
               fill
+              sizes="(max-width: 1024px) 32px, 72px"
               className="object-cover"
             />
           </div>

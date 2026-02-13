@@ -148,7 +148,10 @@ export default async function LocaleLayout({
         <meta name="color-scheme" content="light dark" />
       </head>
 
-      <body className="flex min-h-screen flex-col bg-background text-foreground antialiased">
+      <body 
+        className="flex min-h-screen flex-col bg-background text-foreground antialiased"
+        suppressHydrationWarning
+      >
         <StructuredData data={organizationSchema} />
         <StructuredData data={websiteSchema} />
 

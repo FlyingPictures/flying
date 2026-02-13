@@ -14,6 +14,7 @@ export function LiveMonitoringSection() {
         publicId={IMAGES.home.liveMonitoring.background}
         alt="Live Monitoring Background"
         fill
+        sizes="100vw"
         className="absolute inset-0 object-cover -z-10"
         priority
       />
@@ -53,10 +54,10 @@ export function LiveMonitoringSection() {
               publicId={IMAGES.home.liveMonitoring.card1}
               alt={t('safetyPromise.title')}
               fill
+              sizes="(max-width: 768px) 100vw, 365px"
               className="absolute inset-0 object-cover"
               priority
             />
-
 
             <div className="relative text-[color:var(--color-background)]">
               <h3 className="text-card-title">
@@ -74,14 +75,15 @@ export function LiveMonitoringSection() {
           </div>
 
           <div
-            className="card-2 relative flex h-[444px] w-[clamp(345px,100%,365px)] max-w-full flex-col justify-end overflow-hidden px-8 py-10 "
+            className="card-2 relative flex h-[444px] w-[clamp(345px,100%,365px)] max-w-full flex-col justify-end overflow-hidden px-8 py-10"
             style={{ borderRadius: 'var(--radius)' }}
           >
             <CloudinaryImage
               publicId={IMAGES.home.liveMonitoring.card2}
               alt={t('viewPromise.title')}
               fill
-              className="absolute inset-0 object-cover "
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 365px, 647px"
+              className="absolute inset-0 object-cover"
               priority
             />
 

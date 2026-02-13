@@ -21,7 +21,7 @@ export function CloudinaryImage({
   className,
   priority = false,
   fill = false,
-  sizes = '100vw',
+  sizes,
   objectFit = 'cover',
 }: CloudinaryImageProps) {
   if (!publicId) return null;
@@ -37,7 +37,9 @@ export function CloudinaryImage({
         priority={priority}
         sizes={sizes}
         className={className}
-        style={{ objectFit, border: 'none', boxShadow: 'none' }}
+        style={{ 
+          objectFit,
+        }}
       />
     );
   }
@@ -49,9 +51,7 @@ export function CloudinaryImage({
       width={width}
       height={height || Math.round(width * 0.67)}
       priority={priority}
-      sizes={sizes}
       className={className}
-      style={{ border: 'none', boxShadow: 'none' }}
     />
   );
 }
