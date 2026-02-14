@@ -6,6 +6,7 @@ import { Locale } from "@/i18n/config"
 import { fontVariables } from "@/lib/fonts"
 import { Footer } from "@/components/layout/footer"
 import Navbar from "@/components/layout/navbar"
+import { FloatingBar } from "@/components/layout/floating-bar"
 import { GoogleAnalytics } from "@/components/analytics/google-analytics"
 import {
   StructuredData,
@@ -161,6 +162,7 @@ export default async function LocaleLayout({
           <Navbar />
           <main className="flex-grow">{children}</main>
           <Footer translations={footerTranslations} />
+          <FloatingBar />
         </NextIntlClientProvider>
       </body>
     </html>

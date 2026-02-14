@@ -63,8 +63,8 @@ export function HomeHeroSection() {
                 <CloudinaryImage
                   publicId={logo.publicId}
                   alt={logo.alt}
-                  width={150}
-                  height={150}
+                  width={600}
+                  height={600}
                   className="w-[clamp(5rem,16vw,9.375rem)] sm:w-[clamp(6.5rem,10vw,9.375rem)] lg:w-[clamp(6rem,8vw,9.375rem)] h-auto object-contain opacity-80 transition-opacity hover:opacity-100"
                 />
               </div>

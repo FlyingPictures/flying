@@ -3,7 +3,7 @@
     "hero": {
       "title": "Talk to the Tower",
       "subtitle": "We are morning people. How can we help?",
-      "description": "Whether you have a complex logistical question or just want to know if it's cold up there, our concierge team is standing by. No bots, just humans who know the sky."
+      "description": "Whether you have a complex logistical question or just want to know if it’s cold up there, our concierge team is standing by. No bots, just humans who know the sky."
     },
 
     "tabs": {
@@ -14,26 +14,34 @@
     "info": {
       "sectionTitle": "General Inquiries & Booking",
       "forTravelers": "For travelers, couples, and families.",
-      "findGloboport": "Find the Globoport.",
-      "address": "Carretera a las Pirámides, Teotihuacán, Edo. Mex. We are located 5 minutes from the archaeological zone.",
-      "openMaps": "Open in Google Maps",
-      "openWaze": "Open in Waze"
+      "corporateLabel": "Corporate & Media",
+      "corporateTitle": "Flying\nfor Business?",
+      "corporateDescription": "We speak fluent \"Compliance.\" If you need invoices (Factura Fiscal), insurance policies for your legal team, or logistics for large groups (20-100+), please use the dedicated channel below so we can route you to our Operations Director.",
+      "companyName": "Company Name",
+      "groupSize": "Group Size",
+      "eventDate": "Date of Event",
+      "requireInvoice": "I require a formal invoice",
+      "cta": "Request Corporate Quote",
+      "availabilityText": "Availability, special dietary requests, proposal coordination, and weather checks.",
+      "email": "fly@flyingpictures.mx",
+      "emailLabel": "Email: ",
+      "phone": "Phone: ",
+      "phoneNumber": "(+52) 55 1234 5678"
     },
 
-    "faq": {
-      "title": "Frequently asked questions",
-      "lookingForPrices": "Looking for prices?",
-      "worriedAboutWeather": "Worried about weather?",
-      "whatToWear": "What to wear?"
-    },
-
-    "support": {
-      "title": "GET SUPPORT",
-      "responseTime": "We typically respond in under 5 minutes",
-      "status": "Online",
-      "schedule": "8:00 AM - 08:00 PM CST",
-      "chatButton": "Chat with Concierge",
-      "availabilityInfo": "Availability, special dietary requests, proposal coordination, and weather checks."
+    "locationFaq": {
+      "title": "Find the Globoport.",
+      "content": "Carretera a las Pirámides, Teotihuacán, Edo. Mex.\nWe are located 5 minutes from the archaeological zone.",
+      "button-google": "Open in Google Maps",
+      "button-waze": "Open in Waze",
+      "subtittleFaq": "GET SUPPORT",
+      "tittleFaq": "Frequently asked\nquestions",
+      "ask1": "Looking for prices?",
+      "ask1-answer": "Our prices vary depending on season and availability.\nWe recommend booking in advance.\nContact us for group rates.",
+      "ask2": "Worried about weather?",
+      "ask2-answer": "Flights are weather dependent for safety.\nWe monitor conditions daily.\nYou will be notified if rescheduling is required.",
+      "ask3": "What to wear?",
+      "ask3-answer": "Wear comfortable clothing.\nClosed shoes are required.\nBring a light jacket in early mornings."
     }
   }
 }

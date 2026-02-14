@@ -21,7 +21,7 @@ const buttonVariants = cva(
           lg: "h-[3.2rem] px-8 rounded-full",
           xl: "h-20 px-10 rounded-2xl",
           icon: "size-10 rounded-full",
-          floating: "h-12 flex-1 px-3 rounded-full text-[clamp(0.9rem,2.5vw,0.9rem)] tracking-tight leading-none gap-1.5",
+          floating: "h-10 flex-1 px-0 rounded-full text-[0.8rem] font-bold tracking-tight leading-none gap-1.5",
         },
     },
     defaultVariants: {

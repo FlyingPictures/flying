@@ -1,46 +1,47 @@
-import { getTranslations } from "next-intl/server";
+"use client";
+
 import { CloudinaryImage } from "@/components/CloudinaryImage";
+import { useTranslations } from "next-intl";
 import { IMAGES } from "@/lib/images";
 
 const TEXT_WRAP = "whitespace-pre-line";
 const NAV_OFFSET = "calc(var(--navbar-height, 4.5rem) + 2rem)";
 
-export async function ContactHero() {
-  const t = await getTranslations("contact");
+export function ContactHero() {
+  const t = useTranslations("contact.hero");
 
   return (
-    <section className="relative h-[70vh] lg:h-[80vh] overflow-hidden pt-[4.5rem] lg:pt-0">
-      {/* Background */}
+    <section className="relative h-[95vh] lg:h-screen overflow-hidden pt-[4.5rem]">
       <div className="absolute inset-0 -z-10">
         <CloudinaryImage
           publicId={IMAGES.contact.hero.background}
-          alt="Contact Hero"
+          alt="Hero Background"
           fill
           priority
-          className="object-cover object-center"
+          sizes="100vw"
+          className="h-full w-auto object-contain object-top"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/10" />
       </div>
 
-      {/* Content */}
-      <div className="absolute inset-0 flex items-end justify-center px-4 text-center">
+      <div className="absolute inset-0 flex items-end justify-center text-center pb-40">
         <div
-          className="w-full max-w-3xl flex flex-col items-center"
+          className="w-full max-w-[1200px] flex flex-col items-center gap-4 sm:gap-8 px-6"
           style={{
             paddingTop: NAV_OFFSET,
-            maxHeight: `calc(100vh - ${NAV_OFFSET})`,
+            maxHeight: `calc(100vh - ${NAV_OFFSET})`
           }}
         >
-          <h1 className={`title hero ${TEXT_WRAP} mb-4`}>
-            {t("heroTitle")}
+          <h1 className={`title hero ${TEXT_WRAP}`}>
+            {t("title")}
           </h1>
 
-          <h3 className={`decorative hero ${TEXT_WRAP} mb-4`}>
-            {t("heroSubtitle")}
+          <h3 className={`decorative hero ${TEXT_WRAP}`}>
+            {t("subtitle")}
           </h3>
 
           <p className={`paragraph hero ${TEXT_WRAP}`}>
-            {t("heroDescription")}
+            {t("description")}
           </p>
         </div>
       </div>

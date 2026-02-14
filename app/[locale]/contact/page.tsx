@@ -4,11 +4,8 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
 import { ContactHero } from "@/app/[locale]/contact/contact-hero";
-import { ContactToggle } from "@/app/[locale]/contact/contact-toggle";
 import { ContactInfo } from "@/app/[locale]/contact/contact-info";
-import { ContactLocation } from "@/app/[locale]/contact/contact-location";
-import { FAQSection } from "@/components/faq-section";
-import { ContactCTA } from "@/app/[locale]/contact/contact-cta";
+import { LocationAndFAQ } from "@/app/[locale]/contact/contact-location";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -18,11 +15,11 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.flyingpictures
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "contact" });
+  const t = await getTranslations({ locale, namespace: "contact.hero" });
 
   return {
-    title: t("heroTitle"),
-    description: t("heroDescription"),
+    title: t("title"),
+    description: t("subtitle"),
     alternates: {
       canonical: `${SITE_URL}/${locale}/contact`,
       languages: {
@@ -44,11 +41,8 @@ export default async function ContactPage({ params }: Props) {
   return (
     <main className="min-h-screen">
       <ContactHero />
-      <ContactToggle />
       <ContactInfo />
-      <ContactLocation />
-      <FAQSection />
-      <ContactCTA />
+      <LocationAndFAQ />
     </main>
   );
 }

@@ -11,148 +11,63 @@ import {
   XIcon,
   HeadsetIcon,
   GlobeSimpleIcon,
-  WhatsappLogoIcon,
 } from "@phosphor-icons/react"
 import { useScrollDirection } from "@/hooks/use-scroll-direction"
 import { useLocale, useTranslations } from 'next-intl'
 import { cn } from "@/lib/utils"
 
-const CONTACT = {
-  PHONE: "+525558025-1057",
-  DISPLAY: "(+52) 55 8025-1057",
-} as const
-
+const CONTACT = { PHONE: "+525558025-1057", DISPLAY: "(+52) 55 8025-1057" } as const
 const EXPERIENCES = [
   { id: "shared", href: "/shared-flight" },
   { id: "private", href: "/private-flight" },
-  { id: "proposals", href: "/private-flight" },
-  { id: "groups", href: "/private-flight" },
+  { id: "proposals", href: "/proposals" },
+  { id: "groups", href: "/groups" },
 ] as const
 
-const SCROLL_THRESHOLDS = {
-  HIDE: 50,
-  FLOATING_BAR: 100,
-} as const
-
-/* ================= SUB COMPONENTS ================= */
-
-const NavLink = ({
-  id,
-  href,
-  className,
-  onClick,
-}: {
-  id: string
-  href: string
-  className?: string
-  onClick?: () => void
-}) => {
+const NavLink = ({ id, href, className = "", onClick }: { id: string; href: string; className?: string; onClick?: () => void }) => {
   const t = useTranslations("nav")
-
-  return (
-    <Link
-      href={href}
-      onClick={onClick}
-      className={cn(
-        "font-inter font-bold text-secondary tracking-tight transition-opacity hover:opacity-70 outline-none",
-        className
-      )}
-    >
-      {t(id)}
-    </Link>
-  )
+  return <Link href={href} onClick={onClick} className={cn("font-inter font-bold text-secondary tracking-tight transition-opacity hover:opacity-70 outline-none", className)}>{t(id)}</Link>
 }
 
-const ExperienceLink = ({
-  id,
-  href,
-  onClick,
-  className,
-}: {
-  id: string
-  href: string
-  onClick?: () => void
-  className?: string
-}) => {
+const BookButton = ({ size = "md", variant = "primary", className = "" }: { size?: "md" | "floating"; variant?: "primary" | "secondary"; className?: string }) => {
   const t = useTranslations("nav")
-
-  return (
-    <Link
-      href={href}
-      onClick={onClick}
-      className={cn(
-        "font-poppins font-medium text-secondary hover:opacity-70 transition-opacity outline-none",
-        className
-      )}
-    >
-      {t(id)}
-    </Link>
-  )
+  return <Button variant={variant} size={size} className={cn("px-8 font-bold", className)}>{t("bookFlight")}</Button>
 }
 
-const BookButton = ({ className }: { className?: string }) => {
-  const t = useTranslations("nav")
-
-  return (
-    <Button
-      variant="primary"
-      size="md"
-      className={cn("px-8 font-bold", className)}
-    >
-      {t("bookFlight")}
-    </Button>
-  )
-}
-
-const LanguageSwitcher = ({ className }: { className?: string }) => {
+const LanguageSwitcher = ({ className = "" }: { className?: string }) => {
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
   const t = useTranslations("nav")
-
-  const nextLocale = locale === "en" ? "es" : "en"
-
   return (
-    <button
-      onClick={() => router.replace(pathname, { locale: nextLocale })}
-      className={cn(
-        "font-inter font-bold text-secondary flex items-center gap-2 hover:opacity-70 transition-opacity outline-none",
-        className
-      )}
-    >
+    <button onClick={() => router.replace(pathname, { locale: locale === "en" ? "es" : "en" })} className={cn("font-inter font-bold text-secondary flex items-center gap-2 hover:opacity-70 transition-opacity outline-none", className)}>
       <GlobeSimpleIcon size={20} weight="bold" />
       {t("language")}
     </button>
   )
 }
 
-/* ================= MAIN COMPONENT ================= */
+const HeaderBanner = () => {
+  const bannerT = useTranslations("banner")
+  return (
+    <div className="w-full bg-destructive text-background font-bold h-12 flex items-center justify-center px-4 overflow-hidden">
+      <a href={`tel:${CONTACT.PHONE}`} className="uppercase whitespace-nowrap text-[0.7rem] lg:text-[clamp(0.65rem,2.5vw,0.875rem)]">
+        {bannerT("company")} {CONTACT.DISPLAY}
+      </a>
+    </div>
+  )
+}
 
 export default function Navbar() {
-  
   const t = useTranslations("nav")
-  const bannerT = useTranslations("banner")
-
   const { scrollDirection, scrollY } = useScrollDirection()
-
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSheetOpen, setIsSheetOpen] = useState(false)
-
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const isScrollingDown = scrollDirection === "down"
-
-  const isHeaderVisible = scrollY < 50 || scrollDirection === "up"
-
-  const isHeaderHidden =
-    scrollY > SCROLL_THRESHOLDS.HIDE &&
-    isScrollingDown &&
-    !isSheetOpen
-
-  const showFloatingBar =
-    scrollY > SCROLL_THRESHOLDS.FLOATING_BAR &&
-    isScrollingDown &&
-    !isSheetOpen
+  const isHeaderVisible = scrollY < 50 || !isScrollingDown
+  const isHeaderHidden = scrollY > 50 && isScrollingDown && !isSheetOpen
 
   const handleMouseEnter = () => {
     if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current)
@@ -160,97 +75,42 @@ export default function Navbar() {
   }
 
   const handleMouseLeave = () => {
-    closeTimeoutRef.current = setTimeout(() => {
-      setIsMenuOpen(false)
-    }, 150)
+    closeTimeoutRef.current = setTimeout(() => setIsMenuOpen(false), 500)
   }
 
   useEffect(() => {
-    if (scrollDirection === "down" && isMenuOpen) {
-      setIsMenuOpen(false)
-    }
+    if (isScrollingDown && isMenuOpen) setIsMenuOpen(false)
     return () => {
       if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current)
     }
-  }, [scrollDirection, isMenuOpen])
+  }, [isScrollingDown, isMenuOpen])
 
   return (
     <>
-      {/* ================= DESKTOP ================= */}
-      <header
-        className={cn(
-          "hidden lg:flex flex-col items-center z-50 fixed top-0 w-full transition-transform duration-500",
-          !isHeaderVisible && "-translate-y-[11rem]"
-        )}
-      >
-        <div className="w-full bg-destructive text-background font-bold h-12 flex items-center justify-center px-4 overflow-hidden">
-          <a
-            href={`tel:${CONTACT.PHONE}`}
-            className="uppercase whitespace-nowrap"
-            style={{ fontSize: "clamp(0.65rem, 2.5vw, 0.875rem)" }}
-          >
-            {bannerT("company")} {CONTACT.DISPLAY}
-          </a>
-        </div>
-
+      {/* DESKTOP */}
+      <header className={cn("hidden lg:flex flex-col items-center z-50 fixed top-0 w-full transition-transform duration-500", !isHeaderVisible && "-translate-y-[11rem]")}>
+        <HeaderBanner />
         <div className="w-[95%] max-w-[92rem] mt-4">
           <nav className="relative bg-background h-[5.125rem] rounded-2xl shadow-2xl flex items-center justify-between px-8">
-            <Link
-              href="/"
-              className="absolute left-1/2 -translate-x-1/2 top-0 z-20 w-[4.75rem] h-24"
-            >
-              <Logo className="w-full h-full" />
-            </Link>
-
+            <Link href="/" className="absolute left-1/2 -translate-x-1/2 top-0 z-20 w-[4.75rem] h-24"><Logo className="w-full h-full" /></Link>
+            
             <div className="flex flex-1 items-center gap-8">
-              <div
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                className="h-full flex items-center"
-              >
-                <DropdownMenu.Root
-                  open={isMenuOpen}
-                  onOpenChange={setIsMenuOpen}
-                  modal={false}
-                >
+              <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="h-full flex items-center">
+                <DropdownMenu.Root open={isMenuOpen} onOpenChange={setIsMenuOpen} modal={false}>
                   <DropdownMenu.Trigger asChild>
-                    <Link
-                      href="/flight-experiences"
-                      className="font-inter font-bold text-secondary tracking-tight outline-none hover:opacity-70 py-4"
-                    >
-                      {t("flightExperiences")}
-                    </Link>
+                    <Link href="/flight-experiences" className="font-inter font-bold text-secondary tracking-tight outline-none hover:opacity-70 py-4">{t("flightExperiences")}</Link>
                   </DropdownMenu.Trigger>
-
                   <DropdownMenu.Portal>
-                    <DropdownMenu.Content
-                      align="start"
-                      sideOffset={18}
-                      onCloseAutoFocus={(e) => e.preventDefault()}
-                      onMouseEnter={handleMouseEnter}
-                      onMouseLeave={handleMouseLeave}
-                      className="bg-white rounded-lg shadow-xl p-2 z-[60] min-w-[200px]"
-                    >
+                    <DropdownMenu.Content align="center" alignOffset={-120} sideOffset={18} onCloseAutoFocus={(e) => e.preventDefault()} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="bg-white rounded-lg shadow-xl p-2 z-[60] min-w-[200px]">
                       {EXPERIENCES.map((exp) => (
-                        <DropdownMenu.Item
-                          key={exp.id}
-                          asChild
-                          onSelect={() => setIsMenuOpen(false)}
-                        >
-                          <div>
-                            <ExperienceLink
-                              id={exp.id}
-                              href={exp.href}
-                              className="block px-4 py-2 text-[0.95rem] hover:bg-secondary/5 rounded-md"
-                            />
-                          </div>
+                        <DropdownMenu.Item key={exp.id} asChild onSelect={() => setIsMenuOpen(false)}>
+                          <div><NavLink id={exp.id} href={exp.href} className="block px-4 py-2 text-[0.95rem] hover:bg-secondary/5 rounded-md font-poppins font-medium" /></div>
                         </DropdownMenu.Item>
                       ))}
                     </DropdownMenu.Content>
                   </DropdownMenu.Portal>
                 </DropdownMenu.Root>
               </div>
-
               <NavLink id="safetyHeritage" href="/safety-heritage" />
               <NavLink id="planYourVisit" href="/plan-your-visit" />
             </div>
@@ -264,105 +124,35 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* ================= MOBILE ================= */}
-      <header
-        className={cn(
-          "lg:hidden fixed top-0 inset-x-0 z-50 transition-transform duration-500",
-          isHeaderHidden && "-translate-y-[8rem]"
-        )}
-      >
-        <div className="bg-destructive text-background font-bold text-center h-8 flex items-center justify-center text-[0.7rem] uppercase px-4">
-          {bannerT("company")} {CONTACT.DISPLAY}
-        </div>
-
+      {/* MOBILE */}
+      <header className={cn("lg:hidden fixed top-0 inset-x-0 z-50 transition-transform duration-500", isHeaderHidden && "-translate-y-[8rem]")}>
+        <HeaderBanner />
         <nav className="relative h-[4.5rem] bg-surface px-6 flex items-center justify-between shadow-md">
-          <Link
-            href="/"
-            onClick={() => setIsSheetOpen(false)}
-            className="absolute top-0 left-6 z-10"
-          >
-            <Logo className="w-[3.875rem] h-[4.875rem]" />
-          </Link>
-
+          <Link href="/" onClick={() => setIsSheetOpen(false)} className="absolute top-0 left-6 z-10"><Logo className="w-[3.875rem] h-[4.875rem]" /></Link>
           <div className="flex items-center gap-3 ml-auto">
             <BookButton />
-
-            <SheetPrimitive.Root
-              open={isSheetOpen}
-              onOpenChange={setIsSheetOpen}
-            >
-              <SheetPrimitive.Trigger asChild>
-                <button className="p-1 outline-none">
-                  <EqualsIcon size={32} weight="bold" />
-                </button>
-              </SheetPrimitive.Trigger>
-
+            <SheetPrimitive.Root open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+              <SheetPrimitive.Trigger asChild><button className="p-1 outline-none"><EqualsIcon size={32} weight="bold" /></button></SheetPrimitive.Trigger>
               <SheetPrimitive.Portal>
                 <SheetPrimitive.Content className="fixed inset-y-0 right-0 z-[60] w-full bg-surface flex flex-col shadow-xl">
-                  <SheetPrimitive.Title>
-                    <Link href="/flight-experiences" className="sr-only">
-                      {t("flightExperiences")}
-                    </Link>
-                  </SheetPrimitive.Title>
-
-                  <div className="
-                    relative h-[10rem] flex items-center justify-between px-6
-                    before:absolute
-                    before:bottom-0
-                    before:left-1/2
-                    before:-translate-x-1/2
-                    before:w-[90%]
-                    before:border-b
-                    before:content-['']
-                  ">
+                  <SheetPrimitive.Title className="sr-only">{t("flightExperiences")}</SheetPrimitive.Title>
+                  <div className="relative h-[10rem] flex items-center justify-between px-6 before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[90%] before:border-b before:content-['']">
                     <BookButton />
-                    <SheetPrimitive.Close className="rounded-full size-10 flex items-center justify-center">
-                      <XIcon size={24} weight="bold" />
-                    </SheetPrimitive.Close>
+                    <SheetPrimitive.Close className="rounded-full size-10 flex items-center justify-center"><XIcon size={24} weight="bold" /></SheetPrimitive.Close>
                   </div>
-
                   <div className="flex flex-col flex-1 px-10 py-10 gap-5 overflow-y-auto">
-                    <h2 className="font-inter font-bold text-[1.5rem] self-start">
-                      {t("flightExperiences")}
-                    </h2>
-
+                    <NavLink id="flightExperiences" href="/flight-experiences" className="text-[1.5rem]" onClick={() => setIsSheetOpen(false)} />
                     <div className="flex flex-col gap-4">
                       {EXPERIENCES.map((exp) => (
-                        <ExperienceLink
-                          key={exp.id}
-                          id={exp.id}
-                          href={exp.href}
-                          className="text-[1.15rem]"
-                          onClick={() => setIsSheetOpen(false)}
-                        />
+                        <NavLink key={exp.id} id={exp.id} href={exp.href} className="text-[1.15rem]" onClick={() => setIsSheetOpen(false)} />
                       ))}
                     </div>
-
                     <div className="flex flex-col gap-6 mt-8">
-                      <NavLink
-                        id="safetyHeritage"
-                        href="/safety-heritage"
-                        className="text-[1.5rem]"
-                        onClick={() => setIsSheetOpen(false)}
-                      />
-                      <NavLink
-                        id="planYourVisit"
-                        href="/plan-your-visit"
-                        className="text-[1.5rem]"
-                        onClick={() => setIsSheetOpen(false)}
-                      />
+                      <NavLink id="safetyHeritage" href="/safety-heritage" className="text-[1.5rem]" onClick={() => setIsSheetOpen(false)} />
+                      <NavLink id="planYourVisit" href="/plan-your-visit" className="text-[1.5rem]" onClick={() => setIsSheetOpen(false)} />
                     </div>
-
                     <div className="mt-auto pb-8 flex flex-col gap-6">
-                      <Link
-                        href="/contact"
-                        className="font-inter font-bold flex items-center gap-2"
-                        onClick={() => setIsSheetOpen(false)}
-                      >
-                        <HeadsetIcon size={24} weight="bold" />
-                        {t("contactSupport")}
-                      </Link>
-
+                      <Link href="/contact" className="font-inter font-bold flex items-center gap-2" onClick={() => setIsSheetOpen(false)}><HeadsetIcon size={24} weight="bold" />{t("contactSupport")}</Link>
                       <LanguageSwitcher />
                     </div>
                   </div>
@@ -372,27 +162,6 @@ export default function Navbar() {
           </div>
         </nav>
       </header>
-
-      {/* ================= FLOATING BAR ================= */}
-      <div
-        className={cn(
-          "lg:hidden fixed bottom-6 inset-x-0 z-40 flex justify-center px-4 transition-all duration-500",
-          showFloatingBar
-            ? "translate-y-0 opacity-100"
-            : "translate-y-20 opacity-0 pointer-events-none"
-        )}
-        aria-hidden={!showFloatingBar}
-      >
-        <div className="w-full max-w-[26rem] bg-surface rounded-card p-3 flex items-center gap-3 shadow-xl">
-          <Button variant="primary" size="floating" className="flex-1">
-            <span>{t("bookFlight")}</span>
-          </Button>
-
-          <Button variant="secondary" size="floating" className="flex-1">
-            <span className="flex items-center gap-2">{t("talkExpert")} <WhatsappLogoIcon size={20}  /></span>
-          </Button>
-        </div>
-      </div>
     </>
   )
 }

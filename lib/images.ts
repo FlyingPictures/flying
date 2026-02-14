@@ -80,8 +80,8 @@ export const IMAGES = {
 
   contact: {
     hero: {
-      background: "v1770746469/Rectangle_44_1_cuhoex",
-      cameronLogo: "cameronlogo_hve9ws",
+      background: "v1771040063/Rectangle_33_2_wn4nfc",
+      booking: "v1771040063/Rectangle_39_2_fqsef8",
     },  
   },
 

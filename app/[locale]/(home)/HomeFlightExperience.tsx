@@ -367,12 +367,12 @@ export function FlightExperienceSection() {
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center px-2 py-4 h-[clamp(140px,12vw,170px)]">
-                  <p className="flex-1 text-center text-popover-foreground max-w-[649px] text-[clamp(14px,1.4vw,18px)] leading-relaxed whitespace-pre-line">
+                <div className="flex flex-col items-center px-2 py-4">
+                  <p className="text-center text-popover-foreground max-w-[649px] text-[clamp(14px,1.4vw,18px)] leading-relaxed whitespace-pre-line">
                     {t(`descriptions.${flight.cat}`)}
                   </p>
 
-                  <button className="font-bold underline text-popover-foreground decoration-foreground text-[clamp(15px,1.5vw,20px)]">
+                  <button className="font-bold underline text-popover-foreground decoration-foreground text-[clamp(15px,1.5vw,20px)] mt-2">
                     {t('flightDetails')}
                   </button>
                 </div>
