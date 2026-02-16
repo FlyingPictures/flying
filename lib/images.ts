@@ -94,9 +94,25 @@ export const IMAGES = {
   
   plan: {
     hero: {
-      background: "v1770746469/Rectangle_44_1_cuhoex",  
-      cameronLogo: "cameronlogo_hve9ws",
+      background: "v1771173037/Rectangle_33_3_vuzq4o",  
     },
+    sunrise: {
+      banner: "v1771183101/Rectangle_39_3_tb3pon",
+    },
+    gettingHere: {
+      shuttle: "v1771173037/Rectangle_45_1_1_cqxhvc",
+      selfDrive: "v1771173036/Rectangle_45_2_ziopij",
+    },
+    weatherPolicy: {
+      cancelation: "v1771173036/Rectangle_110_wcyjww",
+    },
+    dressTo:{
+      cards: [
+          "v1771173036/Rectangle_41_1_1_zak6mv",
+          "v1771173036/Group_45_elmmvt",
+          "v1771173037/Rectangle_43_1_1_mumuyh",
+        ],
+    }
   },
 
   safety: {

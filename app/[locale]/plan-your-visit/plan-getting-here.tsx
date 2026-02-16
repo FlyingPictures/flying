@@ -1,134 +1,97 @@
-"use client";
+import { CloudinaryImage } from "@/components/CloudinaryImage";
+import { getTranslations } from "next-intl/server";
+import { IMAGES } from "@/lib/images";
+import { Button } from "@/components/ui/button";
 
-import { useState } from "react";
-import { useTranslations } from "next-intl";
-import { MapPin, Clock, Car, Users } from "lucide-react";
-import { cn } from "@/lib/utils";
-
-export function PlanGettingHere() {
-  const [activeTab, setActiveTab] = useState<"shuttle" | "selfDrive">("shuttle");
-  const t = useTranslations("planYourVisit.gettingHere");
-  const tShuttle = useTranslations("planYourVisit.gettingHere.shuttle");
-  const tDrive = useTranslations("planYourVisit.gettingHere.selfDrive");
+export async function PlanGettingHere() {
+  const t = await getTranslations("planYourVisit.gettingHere");
 
   return (
-    <section className="container mx-auto px-4 py-16">
-      <div className="max-w-4xl mx-auto text-center mb-12">
-        <span className="font-inter font-bold text-sm tracking-wider text-[#03303B] uppercase mb-4 block">
-          {t("label")}
-        </span>
-        <h2 className="font-poppins font-semibold text-3xl md:text-5xl text-[#03303B]">
-          {t("title")}
-        </h2>
-      </div>
-
-      <div className="flex justify-center mb-12">
-        <div className="inline-flex bg-white rounded-full shadow-md p-1">
-          <button
-            onClick={() => setActiveTab("shuttle")}
-            className={cn(
-              "px-8 py-3 rounded-full font-inter font-bold text-sm transition-all duration-300",
-              activeTab === "shuttle"
-                ? "bg-[#03303B] text-white shadow-md"
-                : "text-[#03303B] hover:bg-gray-100"
-            )}
-          >
-            {tShuttle("title")}
-          </button>
-          <button
-            onClick={() => setActiveTab("selfDrive")}
-            className={cn(
-              "px-8 py-3 rounded-full font-inter font-bold text-sm transition-all duration-300",
-              activeTab === "selfDrive"
-                ? "bg-[#03303B] text-white shadow-md"
-                : "text-[#03303B] hover:bg-gray-100"
-            )}
-          >
-            {tDrive("title")}
-          </button>
+    <section className="w-full py-12 lg:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 text-center">
+          <h4 className="h4">{t("label")}</h4>
+          <h2 className="h2 whitespace-pre-line">{t("title")}</h2>
         </div>
-      </div>
 
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {activeTab === "shuttle" ? (
-            <>
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gray-200">
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#7B95AB] to-[#03303B]">
-                  <span className="text-white text-lg">Imagen del transporte</span>
-                </div>
+        <div className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:justify-start lg:items-stretch">
+
+          {/* Shuttle */}
+          <div className="flex flex-col rounded-[var(--radius)] overflow-hidden lg:justify-self-end w-full max-w-[clamp(345px,90vw,582px)]">
+            <div className="relative w-full h-[clamp(300px,45vw,432px)] flex flex-col justify-end rounded-[var(--radius)] overflow-hidden">
+              <CloudinaryImage
+                publicId={IMAGES.plan.gettingHere.shuttle}
+                alt={t("shuttle.cardTitle")}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/20" />
+              <div className="relative z-10 p-6 sm:p-8 text-white">
+                <h3 className="text-card-title mb-2">{t("shuttle.cardTitle")}</h3>
+                <p>{t("shuttle.cardBody")}</p>
               </div>
-              <div className="space-y-6">
-                <h3 className="font-libre-baskerville italic text-2xl text-[#03303B]">
-                  {tShuttle("title")}
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <Clock className="w-5 h-5 text-[#03303B]" />
-                    <p className="font-inter font-bold text-[#03303B]">
-                      {tShuttle("pickupTime")}
-                    </p>
-                  </div>
-                  <p className="font-inter text-[#03303B]">
-                    {tShuttle("perks")}
-                  </p>
-                  <p className="font-inter text-sm text-[#03303B] italic">
-                    {tShuttle("note")}
-                  </p>
-                </div>
-                <a
-                  href="https://maps.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#03303B] text-white font-inter font-bold text-sm rounded-full hover:bg-[#03303B]/90 transition-colors"
+            </div>
+
+            <div className="p-6 sm:p-8 space-y-3 text-sm text-gray-600">
+              <div className="flex gap-2">
+                <svg className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="whitespace-pre-line">{t("shuttle.pickupTime")}\n{t("shuttle.pickupNote")}</span>
+              </div>
+              <div className="flex gap-2">
+                <svg className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span>{t("shuttle.perks")}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Self Drive */}
+          <div className="flex flex-col rounded-[var(--radius)] overflow-hidden lg:justify-self-start w-full max-w-[clamp(345px,90vw,582px)]">
+            <div className="relative w-full h-[clamp(300px,45vw,432px)] flex flex-col justify-end rounded-[var(--radius)] overflow-hidden">
+              <CloudinaryImage
+                publicId={IMAGES.plan.gettingHere.selfDrive}
+                alt={t("selfDrive.cardTitle")}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/20" />
+              <div className="relative z-10 p-6 sm:p-8 text-white">
+                <h3 className="text-card-title mb-2">{t("selfDrive.cardTitle")}</h3>
+                <p>{t("selfDrive.cardBody")}</p>
+              </div>
+            </div>
+
+            <div className="p-6 sm:p-8 space-y-3 text-sm text-gray-600">
+              <div className="flex gap-2">
+                <svg className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                </svg>
+                <span>{t("selfDrive.parking")}</span>
+              </div>
+
+              <div className="flex gap-3">
+                <Button
+                  asChild
+                  className="w-[clamp(40%,45%,50%)] h-[clamp(2rem,2.5vw,2.5rem)] text-[clamp(0.65rem,1vw,0.75rem)] rounded-full flex items-center justify-center bg-secondary hover:bg-secondary/90 text-white"
                 >
-                  <MapPin className="w-4 h-4" />
-                  {tShuttle("openMaps")}
-                </a>
+                  <a href="https://maps.google.com">{t("selfDrive.openMaps")}</a>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="w-[clamp(40%,45%,50%)] h-[clamp(2rem,2.5vw,2.5rem)] text-[clamp(0.65rem,1vw,0.75rem)] rounded-full flex items-center justify-center border-2 border-secondary text-secondary hover:bg-secondary/10"
+                >
+                  <a href="https://waze.com">{t("selfDrive.openWaze")}</a>
+                </Button>
               </div>
-            </>
-          ) : (
-            <>
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gray-200">
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#7B95AB] to-[#03303B]">
-                  <span className="text-white text-lg">Imagen de estacionamiento</span>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <h3 className="font-libre-baskerville italic text-2xl text-[#03303B]">
-                  {tDrive("title")}
-                </h3>
-                <p className="font-inter text-[#03303B]">
-                  {tDrive("description")}
-                </p>
-                <div className="flex items-start gap-3">
-                  <Car className="w-5 h-5 text-[#03303B] mt-1" />
-                  <p className="font-inter font-bold text-[#03303B]">
-                    {tDrive("parking")}
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-4">
-                  <a
-                    href="https://maps.google.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#03303B] text-white font-inter font-bold text-sm rounded-full hover:bg-[#03303B]/90 transition-colors"
-                  >
-                    <MapPin className="w-4 h-4" />
-                    {tDrive("openMaps")}
-                  </a>
-                  <a
-                    href="https://waze.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#03303B] text-[#03303B] font-inter font-bold text-sm rounded-full hover:bg-gray-100 transition-colors"
-                  >
-                    {tDrive("openWaze")}
-                  </a>
-                </div>
-              </div>
-            </>
-          )}
+
+              <p className="text-xs text-gray-500 text-center">{t("selfDrive.disclaimer")}</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

@@ -7,9 +7,7 @@ import { PlanHero } from "@/app/[locale]/plan-your-visit/plan-hero";
 import { PlanSunrise } from "@/app/[locale]/plan-your-visit/plan-sunrise";
 import { PlanGettingHere } from "@/app/[locale]/plan-your-visit/plan-getting-here";
 import { PlanWeatherPolicy } from "@/app/[locale]/plan-your-visit/plan-weather-policy";
-import { PlanEssentialPrep } from "@/app/[locale]/plan-your-visit/plan-essential-prep";
-import { PlanFAQ } from "@/app/[locale]/plan-your-visit/plan-faq";
-
+import { PlanFaq } from "@/app/[locale]/plan-your-visit/plan-faq";
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -38,6 +36,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+function PlanYourVisitPageContent() {
+  return (
+    <main className="min-h-screen">
+      <PlanHero />
+      <PlanSunrise />
+      <PlanGettingHere />
+      <PlanWeatherPolicy />
+      <PlanFaq />
+    </main>
+  );
+}
+
 export default async function PlanYourVisitPage({ params }: Props) {
   const { locale } = await params;
 
@@ -45,14 +55,5 @@ export default async function PlanYourVisitPage({ params }: Props) {
     notFound();
   }
 
-  return (
-    <main className="min-h-screen">
-      <PlanHero />
-      <PlanSunrise />
-      <PlanGettingHere />
-      <PlanWeatherPolicy />
-      <PlanEssentialPrep />
-      <PlanFAQ />
-    </main>
-  );
+  return <PlanYourVisitPageContent />;
 }

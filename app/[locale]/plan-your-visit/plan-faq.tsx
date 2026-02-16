@@ -1,97 +1,85 @@
-"use client";
+import { CloudinaryImage } from "@/components/CloudinaryImage";
+import { IMAGES } from "@/lib/images";
+import { getTranslations } from "next-intl/server";
 
-import { useState } from "react";
-import { useTranslations } from "next-intl";
-import { Plus, Minus } from "lucide-react";
-import { cn } from "@/lib/utils";
+export async function PlanFaq() {
+  const t = await getTranslations("planYourVisit.dressTo");
+  const tFaq = await getTranslations("planYourVisit.faq");
 
-const faqCategories = [
-  {
-    id: "aboutFlight",
-    labelKey: "aboutFlight",
-    questions: ["afraidHeights", "restrooms"],
-  },
-  {
-    id: "safetyLimits",
-    labelKey: "safetyLimits",
-    questions: ["childrenFly", "pregnantFly", "weightLimit"],
-  },
-  {
-    id: "bookingExtra",
-    labelKey: "bookingExtra",
-    questions: ["bringCamera", "breakfast"],
-  },
-];
+  const dress = ["onionStrategy", "footwear", "luggage"];
 
-export function PlanFAQ() {
-  const [openQuestions, setOpenQuestions] = useState<Set<string>>(new Set());
-  const t = useTranslations("planYourVisit.faq.questions");
-  const tSection = useTranslations("planYourVisit.faq");
-
-  const toggleQuestion = (questionId: string) => {
-    setOpenQuestions((prev) => {
-      const updatedSet = new Set(prev);
-      if (updatedSet.has(questionId)) {
-        updatedSet.delete(questionId);
-      } else {
-        updatedSet.add(questionId);
-      }
-      return updatedSet;
-    });
-  };
+  const faq = [
+    { cat: "aboutFlight", items: ["afraidHeights", "restrooms"] },
+    { cat: "safetyLimits", items: ["childrenFly", "pregnantFly", "weightLimit"] },
+    { cat: "bookingExtra", items: ["bringCamera", "breakfast"] },
+  ];
 
   return (
-    <section className="container mx-auto px-4 py-16">
-      <div className="max-w-4xl mx-auto text-center mb-12">
-        <h2 className="font-poppins font-semibold text-3xl md:text-5xl text-white">
-          {tSection("title")}
-        </h2>
+    <section className="w-full min-h-[2400px] px-4 py-[clamp(4rem,8vw,8rem)] flex flex-col items-center" style={{ background: "linear-gradient(180deg, rgba(123,149,171,0) 0%, #7B95AB 11.17%, #9497AD 23.19%, #000000 44.67%)" }}>
+
+      {/* HEADER */}
+      <div className="flex flex-col items-center text-center gap-4 mb-[clamp(3rem,6vw,6rem)] max-w-[800px]">
+        <h4>{t("label")}</h4>
+        <h2 className="whitespace-pre-line leading-tight">{t("title")}</h2>
       </div>
 
-      <div className="max-w-4xl mx-auto space-y-8">
-        {faqCategories.map((category) => (
-          <div key={category.id} className="space-y-4">
-            <h3 className="font-libre-baskerville italic text-2xl text-white">
-              {tSection(category.labelKey)}
-            </h3>
-            <div className="space-y-3">
-              {category.questions.map((questionId) => {
-                const isOpen = openQuestions.has(questionId);
-                return (
-                  <div
-                    key={questionId}
-                    className={cn(
-                      "border border-white/50 rounded-xl overflow-hidden transition-all duration-300",
-                      isOpen && "bg-white/10"
-                    )}
-                  >
-                    <button
-                      onClick={() => toggleQuestion(questionId)}
-                      className="w-full px-6 py-4 flex items-center justify-between text-left"
-                    >
-                      <span className="font-inter font-bold text-lg text-white">
-                        {t(questionId)}
-                      </span>
-                      {isOpen ? (
-                        <Minus className="w-5 h-5 text-white" />
-                      ) : (
-                        <Plus className="w-5 h-5 text-white" />
-                      )}
-                    </button>
-                    {isOpen && questionId === "afraidHeights" && (
-                      <div className="px-6 pb-4">
-                        <p className="font-inter text-white/90">
-                          {t("afraidHeightsAnswer")}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
+      {/* CARDS */}
+      <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-8 md:gap-10 w-full max-w-[1200px] mb-[clamp(4rem,10vw,10rem)]">
+        {dress.map((key, i) => (
+          <div key={key} className="flex flex-col items-center md:items-start w-full max-w-[368px]">
+            <div className="relative w-full aspect-[345/192] md:aspect-[365/437] overflow-hidden">
+              <CloudinaryImage publicId={IMAGES.plan.dressTo.cards[i]} alt={t(`items.${key}.title`)} fill className="object-cover rounded-[var(--radius)]" />
+            </div>
+            <div className="flex flex-col gap-4 mt-6 text-center md:text-left">
+              <h3 className="text-background not-italic">{t(`items.${key}.title`)}</h3>
+              <p className="text-background/80 text-sm leading-relaxed">{t(`items.${key}.description`)}</p>
             </div>
           </div>
         ))}
       </div>
+
+      {/* FAQ TITLE */}
+      <h2 className="text-background text-center mb-[clamp(2.5rem,6vw,5rem)]">
+        {tFaq("title")}
+      </h2>
+
+      {/* FAQ */}
+      <div className="flex flex-col gap-16 w-full max-w-[900px]">
+        {faq.map((section) => (
+          <div key={section.cat} className="flex flex-col gap-6">
+            <h3 className="text-background text-center md:text-left">
+              {tFaq(`categories.${section.cat}`)}
+            </h3>
+
+            <div className="flex flex-col gap-4">
+              {section.items.map((item, i) => (
+                <details
+                  key={item}
+                  open={section.cat === "aboutFlight" && i === 0}
+                  className="group rounded-[var(--radius)] border-2 border-background bg-transparent px-6 py-4 overflow-hidden transition-all duration-300"
+                >
+                  <summary className="flex justify-between items-center cursor-pointer list-none">
+                    <span className="text-background text-base md:text-xl font-bold">
+                      {tFaq(`items.${item}.question`)}
+                    </span>
+                    <span className="text-background text-2xl">
+                      <span className="group-open:hidden">+</span>
+                      <span className="hidden group-open:inline">−</span>
+                    </span>
+                  </summary>
+
+                  {tFaq(`items.${item}.answer`) && (
+                    <p className="mt-4 text-background/70">
+                      {tFaq(`items.${item}.answer`)}
+                    </p>
+                  )}
+                </details>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
     </section>
   );
 }

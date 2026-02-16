@@ -1,23 +1,34 @@
+import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { getTranslations } from "next-intl/server";
+import { IMAGES } from "@/lib/images";
+
 
 export async function PlanSunrise() {
   const t = await getTranslations("planYourVisit.sunriseRitual");
 
   return (
-    <section className="container mx-auto px-4 py-16">
-      <div className="max-w-4xl mx-auto text-center">
-        <span className="font-inter font-bold text-sm tracking-wider text-[#03303B] uppercase mb-4 block">
-          {t("label")}
-        </span>
-        <h2 className="font-poppins font-semibold text-3xl md:text-5xl text-[#03303B] mb-8">
-          {t("title")}
-        </h2>
-        <div className="aspect-video rounded-2xl overflow-hidden mb-8 bg-gray-200">
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#7B95AB] to-[#03303B]">
-            <span className="text-white text-lg">Imagen del amanecer</span>
-          </div>
+    <section className="w-full bg-gradient-to-b from-background to-[#DCD2AF] to-80%">
+      <div className="flex flex-col items-center justify-center gap-8 px-4 py-30">
+        <div className="mb-6 block text-center">
+            <h4>
+              {t("label")}
+            </h4>
+            
+            <h2 >
+              {t("title")}
+            </h2>
         </div>
-        <p className="font-inter font-medium text-lg text-[#03303B] leading-relaxed max-w-3xl mx-auto">
+
+        <div className="relative rounded-[var(--radius)] overflow-hidden mb-6 sm:mb-8 w-full sm:w-[clamp(345px,90vw,1065px)] aspect-[1065/357]">
+          <CloudinaryImage 
+            publicId={IMAGES.plan.sunrise.banner} 
+            alt="Imagen del amanecer" 
+            fill
+            className="object-cover object-top"
+          />
+        </div>
+
+        <p className="leading-relaxed max-w-3xl text-center">
           {t("description")}
         </p>
       </div>

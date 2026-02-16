@@ -1,8 +1,6 @@
-"use client";
-
 import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { Button } from "@/components/ui/button";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { IMAGES } from "@/lib/images";
 
 type FlightId =
@@ -28,8 +26,8 @@ const FLIGHTS: FlightId[] = [
   "corporate",
 ];
 
-export function FlightCardsSection() {
-  const t = useTranslations("flightExperiences.cards");
+export async function FlightCardsSection() {
+  const t = await getTranslations("flightExperiences.cards");
 
   return (
     <section className="py-15 mb-20">
@@ -51,7 +49,7 @@ export function FlightCardsSection() {
             key={flightId}
             className={idx % 2 === 0 ? "flex lg:justify-end" : "flex lg:justify-start"}
           >
-            <FlightCard id={flightId} />
+            <FlightCard id={flightId} t={t} />
           </div>
         ))}
       </div>
@@ -63,13 +61,17 @@ export function FlightCardsSection() {
 /* CARD */
 /* ============================= */
 
-function FlightCard({ id }: { id: FlightId }) {
-  const t = useTranslations("flightExperiences.cards");
-
+function FlightCard({
+  id,
+  t,
+}: {
+  id: FlightId;
+  t: Awaited<ReturnType<typeof getTranslations>>;
+}) {
   const imageSrc =
-  IMAGES.flightExperiences.flights[
-    id as keyof typeof IMAGES.flightExperiences.flights
-  ];
+    IMAGES.flightExperiences.flights[
+      id as keyof typeof IMAGES.flightExperiences.flights
+    ];
 
   return (
     <div className="w-full max-w-[600px] bg-white overflow-hidden flex flex-col">
@@ -81,9 +83,8 @@ function FlightCard({ id }: { id: FlightId }) {
           fill
           sizes="(max-width: 640px) 85vw, (max-width: 768px) 345px, (max-width: 1024px) 48vw, 600px"
           className="w-full h-full object-cover"
-/>
+        />
 
-        {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-secondary opacity-40" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-between text-center p-10 text-background">

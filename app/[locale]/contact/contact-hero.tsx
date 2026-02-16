@@ -1,14 +1,12 @@
-"use client";
-
 import { CloudinaryImage } from "@/components/CloudinaryImage";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { IMAGES } from "@/lib/images";
 
 const TEXT_WRAP = "whitespace-pre-line";
 const NAV_OFFSET = "calc(var(--navbar-height, 4.5rem) + 2rem)";
 
-export function ContactHero() {
-  const t = useTranslations("contact.hero");
+export async function ContactHero() {
+  const t = await getTranslations("contact.hero");
 
   return (
     <section className="relative h-[95vh] lg:h-screen overflow-hidden pt-[4.5rem]">

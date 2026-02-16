@@ -1,0 +1,123 @@
+{
+  "planYourVisit": {
+    "hero": {
+      "title": "Prepare for Takeoff",
+      "subtitle": "Everything you need to know before the alarm clock rings",
+      "description": "We know waking up at 4:30 AM requires willpower. Here is the operational manual to ensure your journey to the launch site is smooth, safe, and stress-free."
+    },
+
+    "sunriseRitual": {
+      "label": "THE SUNRISE RITUAL",
+      "title": "Why so early?",
+      "description": "A hot air balloon is the only aircraft that floats within the wind rather than cutting through it. To do this safely, we need the atmosphere to be perfectly stable. This phenomenon, known as \"inversion,\" only happens in the first hours of the day. Once the sun heats the earth, thermal currents begin, and it becomes unsafe to fly balloons. We don't fly at dawn for the romance (though that’s a bonus); we fly at dawn for the physics."
+    },
+
+    "gettingHere": {
+      "label": "GETTING HERE",
+      "title": "All Roads Lead to\n the Pyramids",
+      "shuttle": {
+        "cardTitle": "The Stress-Free Choice",
+        "cardBody": "If you booked a package with transport, our van picks you up directly from your hotel or Airbnb in designated zones (Reforma, Polanco, Centro, Roma/Condesa).",
+        "pickupTime": "Pick-up Time: 04:30 AM and 05:00 AM",
+        "pickupNote": "(Confirmed via WhatsApp the night before).",
+        "perks": "The Perks: AC, seatbelts, and a nap on the way back.",
+        "openMaps": "Open in Google Maps"
+      },
+      "selfDrive": {
+        "cardTitle": "Self Drive",
+        "cardBody": "If you have your own vehicle, the drive takes about 45-60 minutes from central CDMX (traffic is non-existent at this hour).",
+        "parking": "Parking: We offer secure, enclosed parking on-site at no extra cost. Your car is safe while you are in the clouds.",
+        "openMaps": "Open in Google Maps",
+        "openWaze": "Open in Waze",
+        "disclaimer": "Do not guess. Use this Waze/Google Maps link directly to our Globoport."
+      }
+    },
+
+    "weatherPolicy": {
+      "label": "WEATHER POLICY",
+      "title": "Fairness First: Our\n Cancellation Policy.",
+      "description": "We are the only company with a strict \"No Fly\" rule if the wind is tricky. We don't take risks. But we also don't take your money if we can't deliver.",
+
+      "companyCancellation": {
+        "title": "If We Cancel (Bad Weather):",
+        "description": "You get a 100% Refund or a free reschedule for the next available date. No hidden fees, no arguments."
+      },
+
+      "customerCancellation": {
+        "48plus": {
+          "label": "48+ hours before",
+          "description": "Full Refund."
+        },
+        "24to48": {
+          "label": "24 hours",
+          "description": "Non-refundable (The logistics and perishable breakfast are already in motion)"
+        },
+        "24less": {
+          "label": "24-48 hours",
+          "description": "50% Refund."
+        }
+      }
+    },
+
+    "dressTo": {
+      "label": "ESSENTIAL PREP",
+      "title": "Dress for Two Climates",
+
+      "items": {
+        "onionStrategy": {
+          "title": "The Onion Strategy",
+          "description": "It is crisp (and sometimes cold) at 6:00 AM, but by the time we land and have breakfast, the Mexican sun is warm. Wear layers. A jacket you can remove is your best friend."
+        },
+        "footwear": {
+          "title": "Footwear",
+          "description": "We launch from fields, not runways. Wear comfortable, closed-toe shoes (sneakers or boots)."
+        },
+        "luggage": {
+          "title": "Luggage",
+          "description": "Please bring only small backpacks. Large suitcases can be stored securely at our reception, but they cannot fly in the basket due to weight and space."
+        }
+      }
+    },
+
+    "faq": {
+      "title": "Frequently asked questions",
+
+      "categories": {
+        "aboutFlight": "About the flight",
+        "safetyLimits": "Safety & Limits",
+        "bookingExtra": "Booking & Extra"
+      },
+
+      "items": {
+        "afraidHeights": {
+          "question": "I am afraid of heights. Will I get dizzy?",
+          "answer": "Surprisingly, no. Vertigo usually comes from a connection to the ground. In a balloon, you are detached. The motion is so stable you could balance a coin on its edge. Most nervous flyers are smiling within 2 minutes."
+        },
+        "restrooms": {
+          "question": "Are there restrooms?",
+          "answer": "Surprisingly, no. Vertigo usually comes from a connection to the ground. In a balloon, you are detached. The motion is so stable you could balance a coin on its edge. Most nervous flyers are smiling within 2 minutes."
+        },
+        "childrenFly": {
+          "question": "Can children fly?",
+          "answer": "Surprisingly, no. Vertigo usually comes from a connection to the ground. In a balloon, you are detached. The motion is so stable you could balance a coin on its edge. Most nervous flyers are smiling within 2 minutes."
+        },
+        "pregnantFly": {
+          "question": "Can pregnant women fly?",
+          "answer": "Surprisingly, no. Vertigo usually comes from a connection to the ground. In a balloon, you are detached. The motion is so stable you could balance a coin on its edge. Most nervous flyers are smiling within 2 minutes."
+        },
+        "weightLimit": {
+          "question": "Is there a weight limit?",
+          "answer": "Surprisingly, no. Vertigo usually comes from a connection to the ground. In a balloon, you are detached. The motion is so stable you could balance a coin on its edge. Most nervous flyers are smiling within 2 minutes."
+        },
+        "bringCamera": {
+          "question": "Can I bring a camera?",
+          "answer": "Yes, you are welcome to bring a camera. We recommend a camera with a wide-angle lens to capture the beautiful views."
+        },
+        "breakfast": {
+          "question": "What is the breakfast like?",
+          "answer": "We serve a traditional Mexican breakfast with fresh fruit, coffee, and a light meal."
+        }
+      }
+    }
+  }
+}

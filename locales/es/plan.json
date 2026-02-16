@@ -1,0 +1,123 @@
+{
+  "planYourVisit": {
+    "hero": {
+      "title": "Prepárate para el Despegue",
+      "subtitle": "Todo lo que necesitas saber antes de que suene la alarma",
+      "description": "Sabemos que despertar a las 4:30 AM requiere fuerza de voluntad. Aquí está el manual operativo para garantizar que tu viaje al sitio de lanzamiento sea suave, seguro y sin estrés."
+    },
+
+    "sunriseRitual": {
+      "label": "EL RITUAL DEL AMANECER",
+      "title": "¿Por qué tan temprano?",
+      "description": "Un globo aerostático es la única aeronave que flota dentro del viento en lugar de atravesarlo. Para hacer esto de forma segura, necesitamos que la atmósfera sea perfectamente estable. Este fenómeno, conocido como \"inversión térmica\", solo ocurre en las primeras horas del día. Una vez que el sol calienta la tierra, comienzan las corrientes térmicas y se vuelve inseguro volar en globo. No volamos al amanecer por el romance (aunque ese es un bonificador); volamos al amanecer por la física."
+    },
+
+    "gettingHere": {
+      "label": "CÓMO LLEGAR",
+      "title": "Todos los Caminos Llevan\n a las Pirámides",
+      "shuttle": {
+        "cardTitle": "La Opción Sin Estrés",
+        "cardBody": "Si reservaste un paquete con transporte, nuestra camioneta te recoge directamente desde tu hotel o Airbnb en zonas designadas (Reforma, Polanco, Centro, Roma/Condesa).",
+        "pickupTime": "Hora de recogida: 04:30 AM y 05:00 AM",
+        "pickupNote": "(Confirmado vía WhatsApp la noche anterior).",
+        "perks": "Los Beneficios: aire acondicionado, cinturones de seguridad y una siesta en el regreso.",
+        "openMaps": "Abrir en Google Maps"
+      },
+      "selfDrive": {
+        "cardTitle": "Manejo Propio",
+        "cardBody": "Si tienes tu propio vehículo, el viaje toma aproximadamente 45-60 minutos desde el centro de CDMX (no hay tráfico a esta hora).",
+        "parking": "Estacionamiento: Ofrecemos estacionamiento seguro y cerrado en el sitio sin costo adicional. Tu automóvil estará seguro mientras estés en las nubes.",
+        "openMaps": "Abrir en Google Maps",
+        "openWaze": "Abrir en Waze",
+        "disclaimer": "No adivines. Usa este enlace de Waze/Google Maps directamente a nuestro Globoport."
+      }
+    },
+
+    "weatherPolicy": {
+      "label": "POLÍTICA CLIMÁTICA",
+      "title": "Justicia Primero: Nuestra\n Política de Cancelación.",
+      "description": "Somos la única compañía con una regla estricta de \"No Vuelo\" si el viento es traidor. No tomamos riesgos. Pero tampoco tomamos tu dinero si no podemos entregar.",
+
+      "companyCancellation": {
+        "title": "Si Cancelamos (Mal Tiempo):",
+        "description": "Obtienes un Reembolso del 100% o una reprogramación gratuita para la próxima fecha disponible. Sin cargos ocultos, sin discusiones."
+      },
+
+      "customerCancellation": {
+        "48plus": {
+          "label": "48+ horas antes",
+          "description": "Reembolso Completo."
+        },
+        "24to48": {
+          "label": "24 horas",
+          "description": "No reembolsable (La logística y el desayuno perecedero ya están en movimiento)"
+        },
+        "24less": {
+          "label": "24-48 horas",
+          "description": "Reembolso del 50%."
+        }
+      }
+    },
+
+    "dressTo": {
+      "label": "PREPARACIÓN ESENCIAL",
+      "title": "Vístete para Dos Climas",
+
+      "items": {
+        "onionStrategy": {
+          "title": "La Estrategia de la Cebolla",
+          "description": "Hace frío (y a veces es muy frío) a las 6:00 AM, pero para cuando aterrizamos y desayunamos, el sol mexicano es cálido. Viste en capas. Una chaqueta que puedas quitarte es tu mejor amiga."
+        },
+        "footwear": {
+          "title": "Calzado",
+          "description": "Despegamos desde campos, no desde pistas. Usa zapatos cómodos y cerrados (tenis o botas)."
+        },
+        "luggage": {
+          "title": "Equipaje",
+          "description": "Por favor, trae solo mochilas pequeñas. Las maletas grandes pueden guardarse de forma segura en nuestra recepción, pero no pueden volar en la canasta debido al peso y el espacio."
+        }
+      }
+    },
+
+    "faq": {
+      "title": "Preguntas frecuentes",
+
+      "categories": {
+        "aboutFlight": "Acerca del vuelo",
+        "safetyLimits": "Seguridad y Límites",
+        "bookingExtra": "Reserva y Extras"
+      },
+
+      "items": {
+        "afraidHeights": {
+          "question": "Tengo miedo a las alturas. ¿Me marearé?",
+          "answer": "Sorprendentemente, no. El vértigo generalmente proviene de una conexión con el suelo. En un globo, estás desconectado. El movimiento es tan estable que podrías equilibrar una moneda en su borde. La mayoría de los voladores nerviosos están sonriendo dentro de 2 minutos."
+        },
+        "restrooms": {
+          "question": "¿Hay baños?",
+          "answer": "Sorprendentemente, no. El vértigo generalmente proviene de una conexión con el suelo. En un globo, estás desconectado. El movimiento es tan estable que podrías equilibrar una moneda en su borde. La mayoría de los voladores nerviosos están sonriendo dentro de 2 minutos."
+        },
+        "childrenFly": {
+          "question": "¿Pueden volar los niños?",
+          "answer": "Sorprendentemente, no. El vértigo generalmente proviene de una conexión con el suelo. En un globo, estás desconectado. El movimiento es tan estable que podrías equilibrar una moneda en su borde. La mayoría de los voladores nerviosos están sonriendo dentro de 2 minutos."
+        },
+        "pregnantFly": {
+          "question": "¿Pueden volar las mujeres embarazadas?",
+          "answer": "Sorprendentemente, no. El vértigo generalmente proviene de una conexión con el suelo. En un globo, estás desconectado. El movimiento es tan estable que podrías equilibrar una moneda en su borde. La mayoría de los voladores nerviosos están sonriendo dentro de 2 minutos."
+        },
+        "weightLimit": {
+          "question": "¿Hay un límite de peso?",
+          "answer": "Sorprendentemente, no. El vértigo generalmente proviene de una conexión con el suelo. En un globo, estás desconectado. El movimiento es tan estable que podrías equilibrar una moneda en su borde. La mayoría de los voladores nerviosos están sonriendo dentro de 2 minutos."
+        },
+        "bringCamera": {
+          "question": "¿Puedo traer una cámara?",
+          "answer": "Sí, eres bienvenido a traer una cámara. Recomendamos una cámara con lente gran angular para capturar las hermosas vistas."
+        },
+        "breakfast": {
+          "question": "¿Cómo es el desayuno?",
+          "answer": "Servimos un desayuno mexicano tradicional con fruta fresca, café y una comida ligera."
+        }
+      }
+    }
+  }
+}

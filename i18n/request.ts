@@ -16,7 +16,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     ...(await import(`../locales/${locale}/home.json`)).default,
     ...(await import(`../locales/${locale}/legal.json`)).default,
     ...(await import(`../locales/${locale}/not-found.json`)).default,
-    ...(await import(`../locales/${locale}/plan-your-visit.json`)).default,
+    ...(await import(`../locales/${locale}/plan.json`)).default,
     ...(await import(`../locales/${locale}/product.json`)).default,
     ...(await import(`../locales/${locale}/safety-heritage.json`)).default,
   };
