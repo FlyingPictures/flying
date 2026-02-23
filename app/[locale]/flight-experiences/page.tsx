@@ -64,11 +64,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function FlightExperiencesPage() {
+export default function FlightExperiencesPage() {
   return (
     <main className="w-full">
       <FlightHero />
       <FlightCardsSection />
     </main>
-  )
+  );
 }

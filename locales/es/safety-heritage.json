@@ -1,9 +1,173 @@
 {
-    "safety": {
+  "safety": {
     "hero": {
-      "title": "Talk to the Tower",
-      "subtitle": "We are morning people. How can we help?",
-      "description": "Whether you have a complex logistical question or just want to know if it's cold up there, our concierge team is standing by. No bots, just humans who know the sky."
+      "title": "La gravedad es opcional.\nLa seguridad no.",
+      "subtitle": "La ingeniería de la tranquilidad.",
+      "description": "En una industria a menudo impulsada por agencias sin flota propia y precios bajos compitiendo en una carrera hacia el fondo, a nosotros nos impulsan las listas de verificación, los valores y la pasión. Flying Pictures México se basa en una filosofía simple: la emoción pertenece a la vista, no al riesgo.\n\nDescubre por qué somos la única verdadera Compañía de Aviación del valle."
+    },
+    "legacy": {
+      "subtitle": "EL LEGADO",
+      "title": "La confianza de los gigantes.",
+      "description": "Durante 10 años consecutivos, si mirabas hacia arriba y veías el icónico globo de Telcel flotando sobre México, estabas viendo a Flying Pictures en acción. Las grandes corporaciones no confían sus activos de marca a la suerte; confían en la disciplina operativa.\nOperamos el globo más visible del país con un historial de seguridad perfecto durante una década.\n\n¡Incluso logramos aterrizar cuidadosamente el famoso gigante en un barco en el mar! Una misión cumplida gracias a nuestro equipo de pilotos y operadores experimentados.\nHoy, aplicamos esos mismos estándares de aviación corporativa a tu vuelo matutino."
+    },
+    "finest": {
+      "subtitle": "Fabricados en Bristol,\nVolados en Teotihuacán.",
+      "title": "Las mejores aeronaves\ndel mundo.",
+      "description": "Tratamos a nuestros globos como miembros de la familia. Volamos exclusivamente Cameron Balloons. Con sede en Bristol, Reino Unido, Cameron es para el aerostatismo lo que Rolls-Royce es para los motores.\n\nSon los líderes mundiales en tecnología más ligera que el aire, poseyendo récords por volar alrededor del mundo y dentro de la estratosfera.",
+      "cards": {
+        "1": {
+          "title": "Tela Hyperlast™",
+          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+        },
+        "2": {
+          "title": "Hyperlast™",
+          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+        },
+        "3": {
+          "title": "Hyperlast™ 2",
+          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+        },
+        "4": {
+          "title": "Tela Hyperlast™",
+          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+        }
+      }
+    },
+    "footer": {
+      "title": "Ya viste las especificaciones.\nAhora mira la vista.",
+      "description": "Es aburrido leer sobre seguridad, pero es\nmaravilloso volar con ella.",
+      "button": "Reserva con confianza"
+    },
+    "tale": {
+      "subtitle": "DE REINO UNIDO A MÉXICO",
+      "title": "Una historia de dos países.",
+      "description": "No creemos que \"un solo tamaño sirva para todos\". Una propuesta requiere privacidad; un viaje familiar requiere logística. Elige el ascenso diseñado para tu historia.",
+      "cards": {
+        "1": {
+          "flag": "gb",
+          "title": "1978 (UK):",
+          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+        },
+        "2": {
+          "flag": "mx",
+          "title": "1978 (MX):",
+          "description": "Flying Pictures nace en México, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+        },
+        "3": {
+          "flag": "gb",
+          "title": "1978 (UK):",
+          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+        },
+        "4": {
+          "flag": "gb",
+          "title": "1978 (UK):",
+          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+        },
+        "5": {
+          "flag": "gb",
+          "title": "1978 (UK):",
+          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+        }
+      }
+    },
+    "safety": {
+      "subtitle": "PROTOCOLOS DE SEGURIDAD Y TORRE DE CONTROL",
+      "title": "El muro invisible de la seguridad.",
+      "description": "¿Cómo logramos un historial de seguridad que abarca 30 años? Diciendo \"No\" cuando otros dicen \"Tal vez\".",
+      "cards": {
+        "1": {
+          "title": "La regla de la \"Bandera Roja\"",
+          "description": "Si las condiciones son marginales, nos quedamos en tierra. Preferimos reembolsar un boleto que arriesgar a un pasajero."
+        },
+        "2": {
+          "title": "Inspecciones Diarias",
+          "description": "Cada componente, desde los quemadores hasta los mosquetones, se somete a una rigurosa revisión antes de cada inflado."
+        },
+        "3": {
+          "title": "Torre de Control Privada",
+          "description": "Somos la única empresa en el valle que opera su propia estación interna de monitoreo meteorológico. Rastreamos la velocidad y dirección del viento en tiempo real."
+        },
+        "4": {
+          "title": "Solvencia Verificada",
+          "description": "Operamos con un seguro de responsabilidad civil integral que excede los requisitos legales."
+        }
+      }
+    },
+    "mastery": {
+      "subtitle": "CONOCE A LOS CAPITANES",
+      "title": "La maestría no tiene atajos.",
+      "description": "En la aviación, el respeto se gana en horas, no en años. Ya sean veteranos con décadas en el aire o estrellas ascendentes del deporte, cada piloto de Flying Pictures cumple con el \"Estándar Sean\".",
+      "cards": {
+        "1": {
+          "name": "Autoridad Certificada",
+          "description": "Cada piloto posee una licencia comercial emitida por la AFAC (Agencia Federal de Aviación Civil). No empleamos aficionados."
+        },
+        "2": {
+          "name": "Más de 2,000 Horas",
+          "description": "La experiencia promedio en nuestra cabina supera con creces el requisito de la industria."
+        },
+        "3": {
+          "name": "El Modelo de Mentoría",
+          "description": "Nuestros pilotos más jóvenes no solo son contratados; son mentoreados. Vuelan bajo la estricta supervisión de nuestros fundadores, asegurando que la cultura de seguridad permanezca intacta."
+        }
+      },
+      "captains": {
+        "1": {
+          "name": "CEO Sean Byrne",
+          "description": "40+ Años. El Fundador."
+        },
+        "2": {
+          "name": "Cap. Sean Byrne",
+          "description": "40+ Años. El Fundador."
+        },
+        "3": {
+          "name": "Cap. Sean Byrne",
+          "description": "40+ Años. El Fundador."
+        }
+      }
+    },
+    "meetGiants": {
+      "title": "Conoce a los Gigantes Amables",
+      "description": "Tratamos a nuestros globos como miembros de la familia. Cada uno tiene un nombre, una historia y una personalidad propia.",
+      "subtitle": "LOS BUQUES INSIGNIA",
+      "description2": "Diseñados para la estabilidad, el confort y el Viaje Clásico.",
+      "subtitle2": "LOS INTERCEPTORES VIP",
+      "description3": "Diseñados para la agilidad, la intimidad y Ascensos Privados.",
+      "cards": {
+        "1": {
+          "name": "Cameron A-315 (Los pesos pesados)",
+          "subname": "XB-PCA / XB-SGN",
+          "description": "Piense en ellos como los \"transatlánticos\" del cielo. Con una capacidad de elevación de 800 kg, estos enormes envolventes ofrecen la experiencia de vuelo más suave y estable. Están equipados con nuestras exclusivas canastillas compartimentadas, asegurando que cada pasajero tenga su propia \"esquina\" para fotografía.",
+          "capacity": "Capacidad: 12 Pasajeros + Piloto",
+          "mission": "Misión: El Vuelo Clásico Compartido"
+        },
+        "2": {
+          "name": "Cameron Z-120 (El Corredor)",
+          "subname": "XB-OWK",
+          "description": "El \"Roadster\". La Serie Z presenta una forma ligeramente más aerodinámica, lo que permite ascensos más rápidos y un manejo ágil. Es pequeño, rápido e increíblemente íntimo.",
+          "capacity": "Capacidad: 2-3 Pasajeros (Exclusivo)",
+          "mission": "Misión: Propuestas y Vuelos Privados de Pareja."
+        },
+        "3": {
+          "name": "Cameron Z-160",
+          "subname": "XB-USY",
+          "description": "El equilibrio perfecto entre potencia y privacidad. Lo suficientemente grande para una cita doble o una familia pequeña, pero lo suficientemente pequeño para sentirse como su propio balcón privado sobre las pirámides.",
+          "capacity": "Capacidad: 4 Pasajeros (Familia / Cita Doble)",
+          "mission": "Misión: Aniversarios y Familias Pequeñas."
+        }
+      },
+      "banner": {
+        "title": "EL ESCUADRÓN LEGADO",
+        "subtitle": "Las embarcaciones versátiles que completan nuestra capacidad.",
+        "cardtitle": "Varias Series de Cameron",
+        "cardsubtitle": "Flota Verificada",
+        "carddescription": "Pasión",
+        "cardsubdescription": "Fiel a su nombre, esta aeronave suele ser solicitada para nuestros hitos más románticos. Ha sido testigo de cientos de momentos de \"Sí, acepto\" sobre la Pirámide del Sol.",
+        "carddescription2": "Cóndor",
+        "cardsubdescription2": "Nombrado en honor al soberano de los cielos andinos, este globo es un incansable trabajador del valle, combinando potencia de elevación con la majestuosidad del vuelo.",
+        "carddescription3": "Mercurio & Rubicón",
+        "cardsubdescription3": "La flota de apoyo ágil, lista para desplegarse en eventos especiales y logística de filmación."
+      }
     }
-}
+  }
 }

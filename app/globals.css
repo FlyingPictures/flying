@@ -139,7 +139,7 @@
   }
 
   h3 {
-    font-family: var(--font-libre-baskerville), serif;
+    font-family: var(--font-libre-baskerville), system-ui, "Apple Color Emoji", "Segoe UI Emoji", serif;
     font-weight: 400;
     letter-spacing: -0.03em;
     font-size: clamp(1.25rem, 3vw, 2rem);
@@ -162,7 +162,7 @@
 
 
   .text-card-title {
-    font-family: var(--font-libre-baskerville), serif;
+    font-family: var(--font-libre-baskerville), system-ui, "Apple Color Emoji", "Segoe UI Emoji", serif;
     font-style: italic;
     font-weight: 400;
     letter-spacing: -0.03em;

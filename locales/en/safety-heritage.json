@@ -1,9 +1,174 @@
 {
     "safety": {
         "hero": {
-        "title": "Talk to the Tower",
-        "subtitle": "We are morning people. How can we help?",
-        "description": "Whether you have a complex logistical question or just want to know if it's cold up there, our concierge team is standing by. No bots, just humans who know the sky."
+            "title": "Gravity is optional.\n Safety is not.",
+            "subtitle": "The Engineering of Peace of Mind.",
+            "description": "In an industry often driven by agencies without their own fleet and cheap prices competing in a race to the bottom, we are driven by checklists, values and passion. Flying Pictures Mexico is built on a simple philosophy: The thrill belongs in the view, not in the risk. \n\nDiscover why we are the valley's only true Aviation Company."
+        },
+        "legacy": {
+            "subtitle": "THE LEGACY",
+            "title": "Trusted by Giants.",
+            "description": "For 10 consecutive years, if you looked up and saw the iconic Telcel Balloon floating over Mexico, you were looking at Flying Pictures in action. Major corporations don't trust their brand assets to luck; they trust operational discipline. \nWe operated the most visible balloon in the country with a perfect safety record for a decade. \n\nOnce we carefully managed to land the famous giant on a ship on the sea! A mission accomplished thanks to our team of seasoned pilots and operators.\nToday, we apply those same corporate aviation standards to your morning flight."
+        },
+        "finest": {
+            "subtitle": "Built in Bristol, \nFlown in Teotihuacán.",
+            "title": "The World's \nFinest Aircraft.",
+            "description": "We treat our balloons like members of the family. We fly exclusively Cameron Balloons. Based in Bristol, UK, Cameron is to ballooning what Rolls-Royce is to engines. \n\n They are the world leaders in lighter-than-air technology, holding records for flying around the world and into the stratosphere.",
+            "cards": {
+                "1": {
+                    "title": "Hyperlast™ Fabric",
+                    "description": "Flying Pictures is born in the United Kingdom, pioneering aerial cinematography for the BBC and Hollywood."
+                },
+                "2": {
+                    "title": "Hyperlast™ ",
+                    "description": "Flying Pictures is born in the United Kingdom, pioneering aerial cinematography for the BBC and Hollywood."
+                },
+                "3": {
+                    "title": "Hyperlast™ 2",
+                    "description": "Flying Pictures is born in the United Kingdom, pioneering aerial cinematography for the BBC and Hollywood."
+                },
+                "4": {
+                    "title": "Hyperlast™ Fabric",
+                    "description": "Flying Pictures is born in the United Kingdom, pioneering aerial cinematography for the BBC and Hollywood."
+                }
+            }
+        }, 
+        "footer": {
+            "title": "You’ve seen the specs.\nNow see the view.",
+            "description": "Safety is boring to read about, but it’s\nwonderful to fly with.",
+            "button": "Book with Confidence"
+        },
+
+        "tale": {
+            "subtitle": " FROM UK TO MX",
+            "title": "Tale of Two Countries.",
+            "description": "We don’t believe in \"one size fits all.\" A proposal requires privacy; a family trip requires logistics. Choose the ascent designed for your story.",
+            "cards": {
+                "1": {
+                    "flag": "gb",
+                    "title": "1978 (UK):",
+                    "description": "Flying Pictures is born in the United Kingdom, pioneering aerial cinematography for the BBC and Hollywood."
+                },
+                "2": {
+                    "flag": "mx",
+                    "title": "1978 (MX):",
+                    "description": "Flying Pictures is born in Mexico, pioneering aerial cinematography for the BBC and Hollywood."
+                },
+                "3": {
+                    "flag": "gb",
+                    "title": "1978 (UK):",
+                    "description": "Flying Pictures is born in the United Kingdom, pioneering aerial cinematography for the BBC and Hollywood."
+                },
+                "4": {
+                    "flag": "gb",
+                    "title": "1978 (UK):",
+                    "description": "Flying Pictures is born in the United Kingdom, pioneering aerial cinematography for the BBC and Hollywood."
+                },
+                "5": {
+                    "flag": "gb",
+                    "title": "1978 (UK):",
+                    "description": "Flying Pictures is born in the United Kingdom, pioneering aerial cinematography for the BBC and Hollywood."
+                }
+            }
+        },
+        "safety": {
+            "subtitle": "SAFETY PROTOCOLS & CONTROL TOWER",
+            "title": "The Invisible Wall of Safety.",
+            "description": "How do we achieve a safety record that spans 30 years? By\n saying \"No\" when others say \"Maybe.\"",
+            "cards": {
+                "1": {
+                    "title": "The \"Red Flag\" Rule",
+                    "description": "If conditions are marginal, we stay grounded. We prefer to refund a ticket than risk a passenger."
+                },
+                "2": {
+                    "title": "Daily Inspections",
+                    "description": "If conditions are marginal, we stay grounded. We prefer to refund a ticket than risk a passenger."
+                },
+                "3": {
+                    "title": "Private Control Tower",
+                    "description": "We are the only company in the valley operating its own internal weather monitoring station. We track wind velocity and direction in real-time."
+                },
+                "4": {
+                    "title": "Verified Solvency",
+                    "description": "We operate with comprehensive liability insurance that exceeds legal requirements"
+                }
+             }
+        },
+        "mastery": {
+            "subtitle": "MEET THE CAPTAINS",
+            "title": "Mastery Has No Shortcut.",
+            "description": "In aviation, respect is earned in hours, not years. Whether they are veterans with decades in the air or rising stars of the sport, every Flying Pictures pilot meets the \"Sean Standard.\"",
+            "cards": {
+                "1": {
+                    "name": "Certified Authority",
+                    "description": "Every pilot holds a commercial license issued by the AFAC (Agencia Federal de Aviación Civil). We don't employ hobbyists."
+                },
+                "2": {
+                    "name": "2,000+ Hours",
+                    "description": "The average experience in our cockpit far exceeds the industry requirement."
+                },
+                "3": {
+                    "name": "The Mentorship Model",
+                    "description": "Our younger pilots are not just hired; they are mentored. They fly under the strict supervision of our founders, ensuring the safety culture remains unbroken."
+                }
+            },
+            "captains": {
+                    "1": {
+                        "name": "CEO Sean Byrne ",
+                        "description": "40+ Years. The Founder."
+                    },
+                    "2": {
+                        "name": "Capt. Sean Byrne ",
+                        "description": "40+ Years. The Founder."
+                    },
+                    "3": {
+                        "name": "Capt. Sean Byrne ",
+                        "description": "40+ Years. The Founder."
+                    }
+             }
+        },
+        "meetGiants": {
+            "title": "Meet Gentle Giants",
+            "description": "We treat our balloons like members of the family. Each one has a name, a history, and a distinct personality.",
+            "subtitle": "THE FLAGSHIPS",
+            "description2": "Designed for stability, comfort, and the Classic Journey.",
+            "subtitle2": "THE VIP INTERCEPTORS",
+            "description3": "Designed for agility, intimacy, and Private Ascents.",
+            "cards": {
+                "1": {
+                    "name": "Cameron A-315 (The Heavy Lifters)",
+                    "subname": "XB-PCA / XB-SGN",
+                    "description": "Think of them as the \"Ocean Liners\" of the sky. With a lift capacity of 800kg, these massive envelopes offer the smoothest, most stable flight experience. They are equipped with our signature compartmented baskets, ensuring every guest has their own \"corner\" for photography.",
+                    "capacity": "Capacity: 12 Passengers + Pilot",
+                    "mission": "Mission: The Classic Shared Flight"
+                },
+                "2": {
+                    "name": "Cameron Z-120 (The Racer)",
+                    "subname": "XB-OWK",
+                    "description": "The \"Roadster\". The Z-Series features a slightly more aerodynamic shape, allowing for quicker climbs and responsive handling. It is small, fast, and incredibly intimate.",
+                    "capacity": "Capacity: 2-3 Passengers (Exclusive)",
+                    "mission": "MMission: Proposals & Private Couple Flights."
+                },
+                 "3": {
+                    "name": "Cameron Z-160",
+                    "subname": "XB-USY",
+                    "description": "The perfect balance between power and privacy. Large enough for a double date or a small family, but small enough to feel like your own private balcony over the pyramids.",
+                    "capacity": "Capacity: 4 Passengers (Family/Double Date)",
+                    "mission": "Mission: Anniversaries & Small Families."
+                 }
+             },
+            "banner": {
+                "title": "THE LEGACY SQUADRON",
+                "subtitle": "The versatile vessels that round out our capability.",
+                "cardtitle": "Various Cameron Series",
+                "cardsubtitle": "Verified Fleet",
+                "carddescription": "Pasión",
+                "cardsubdescription": "True to its name, this aircraft is often requested for our most romantic milestones. It has witnessed hundreds of \"Yes, I will\" moments above the Sun Pyramid.",
+                "carddescription2": "Cóndor",
+                "cardsubdescription2": "Named after the ruler of the Andean skies, this vessel is a workhorse of the valley, combining lift power with the majesty of flight.",
+                "carddescription3": "Mercurio & Rubicón",
+                "cardsubdescription3": "The agile support fleet, ready to deploy for special events and film logistics."
+            }
         }
-}
+    }
 }

@@ -117,8 +117,40 @@ export const IMAGES = {
 
   safety: {
     hero: {
-      background: "v1770746469/Rectangle_44_1_cuhoex",
-      cameronLogo: "cameronlogo_hve9ws",
+      background: "v1771636973/Rectangle_33_1_ltf6qb",
+    },
+    legacy: {
+      background: "v1771636973/Rectangle_36_1_jk4r63",
+    },
+    finest: {
+      cards: ["v1771636972/Rectangle_123_1_x3ehkj",
+              "v1771636972/Rectangle_123_1_x3ehkj",
+              "v1771636972/Rectangle_123_1_x3ehkj",
+              "v1771636972/Rectangle_123_1_x3ehkj",
+          ],
+        },
+    meetGiants: {
+      banner: "v1771636972/Rectangle_41_3_ptng3e",
+      cards: [
+          "v1771636972/Rectangle_41_7_ukxg3h",
+          "v1771636972/Rectangle_41_6_qcbkkl", 
+          "v1771636972/Rectangle_41_2_fyibpj",
+      ],
+    },
+    mastery: { 
+      background: "v1771636973/Rectangle_39_1_xdhqj7",
+    },
+    safety: {
+      background: "v1771636972/Rectangle_40_lkwnum",
+    },
+    tale: {
+      cards: [
+          "v1771636972/Rectangle_41_4_p6etxl",
+          "v1771636973/Rectangle_41_5_1_q9jkki",
+          "v1771636972/Rectangle_41_6_qcbkkl",
+          "v1771636972/Rectangle_41_4_p6etxl",
+          "v1771636973/Rectangle_41_5_1_q9jkki",
+        ],
     },
   },
 

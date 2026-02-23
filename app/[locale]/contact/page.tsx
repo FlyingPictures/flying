@@ -1,28 +1,36 @@
-import type { Metadata } from "next"
-import { getTranslations } from "next-intl/server"
-import { routing } from "@/i18n/routing"
-import { notFound } from "next/navigation"
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 
-import { ContactHero } from "@/app/[locale]/contact/contact-hero"
-import { ContactInfo } from "@/app/[locale]/contact/contact-info"
-import { LocationAndFAQ } from "@/app/[locale]/contact/contact-location"
+import { ContactHero } from "@/app/[locale]/contact/contact-hero";
+import { ContactInfo } from "@/app/[locale]/contact/contact-info";
+import { LocationAndFAQ } from "@/app/[locale]/contact/contact-location";
+
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "https://www.flyingpicturesmexico.com";
+
+type Locale = (typeof routing.locales)[number];
 
 type Props = {
-  params: Promise<{ locale: string }>
-}
+  params: { locale: string };
+};
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.flyingpicturesmexico.com"
+export async function generateMetadata({
+  params,
+}: Props): Promise<Metadata> {
+  const { locale } = params;
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params
-  const t = await getTranslations({ locale, namespace: "contact.hero" })
+  const t = await getTranslations({
+    locale,
+    namespace: "contact.hero",
+  });
 
-  const title = t("title")
-  const description = t("subtitle")
-  const url = `${SITE_URL}/${locale}/contact`
+  const title = t("title");
+  const description = t("subtitle");
+  const url = `${SITE_URL}/${locale}/contact`;
 
   return {
-    metadataBase: new URL(SITE_URL),
     title,
     description,
     robots: { index: true, follow: true },
@@ -47,21 +55,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
     },
-  }
+  };
 }
 
-export default async function ContactPage({ params }: Props) {
-  const { locale } = await params
-
-  if (!routing.locales.includes(locale as any)) {
-    notFound()
-  }
-
+export default function ContactPage() {
   return (
     <main className="min-h-screen">
       <ContactHero />
       <ContactInfo />
       <LocationAndFAQ />
     </main>
-  )
+  );
 }

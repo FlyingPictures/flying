@@ -1,26 +1,37 @@
-import { getTranslations } from "next-intl/server"
-import type { Metadata } from "next"
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-import { HomeHeroSection } from "@/app/[locale]/(home)/HomeHeroSection"
-import { FlightExperienceSection } from "@/app/[locale]/(home)/HomeFlightExperience"
-import { WhyFlightWhitUs } from "@/app/[locale]/(home)/WhyFlightWhitUs"
-import { LiveMonitoringSection } from "@/app/[locale]/(home)/LiveMonitoringSection"
-import HomeReviewsSection from "@/app/[locale]/(home)/HomeReviewsSection"
+import { HomeHeroSection } from "@/app/[locale]/(home)/HomeHeroSection";
+import { FlightExperienceSection } from "@/app/[locale]/(home)/HomeFlightExperience";
+import { WhyFlightWhitUs } from "@/app/[locale]/(home)/WhyFlightWhitUs";
+import { LiveMonitoringSection } from "@/app/[locale]/(home)/LiveMonitoringSection";
+import HomeReviewsSection from "@/app/[locale]/(home)/HomeReviewsSection";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.flyingpicturesmexico.com"
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  "https://www.flyingpicturesmexico.com";
 
 type Props = {
-  params: Promise<{ locale: string }>
+  params: { locale: string };
+};
+
+export async function generateStaticParams() {
+  return [{ locale: "es" }, { locale: "en" }];
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params
+export async function generateMetadata({
+  params,
+}: Props): Promise<Metadata> {
+  const { locale } = params;
 
-  const tHero = await getTranslations({ locale, namespace: "herosection" })
+  const tHero = await getTranslations({
+    locale,
+    namespace: "herosection",
+  });
 
-  const title = `${tHero("h1")} | Flying Pictures México`
-  const description = tHero("paragraph")
-  const url = `${SITE_URL}/${locale}`
+  const title = `${tHero("h1")} | Flying Pictures México`;
+  const description = tHero("paragraph");
+  const url = `${SITE_URL}/${locale}`;
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -60,35 +71,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       images: [`${SITE_URL}/images/og/home-${locale}.jpg`],
     },
-  }
-}
-
-export async function generateStaticParams() {
-  return [{ locale: "es" }, { locale: "en" }]
+  };
 }
 
 export default async function HomePage({ params }: Props) {
-  const { locale } = await params
+  const { locale } = params;
 
-  const tWeather = await getTranslations({ locale, namespace: "weather" })
-
-  const liveMonitoringData = {
-    badge: tWeather("liveMonitoring"),
-    h2: tWeather("heading"),
-    paragraph: tWeather("description"),
-    cards: [
-      {
-        title: tWeather("safetyPromise.title"),
-        paragraph: tWeather("safetyPromise.description"),
-        link: tWeather("safetyPromise.cta"),
-      },
-      {
-        title: tWeather("viewPromise.title"),
-        paragraph: tWeather("viewPromise.description"),
-        link: tWeather("viewPromise.cta"),
-      },
-    ],
-  }
+  const tWeather = await getTranslations({
+    locale,
+    namespace: "weather",
+  });
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -96,7 +88,8 @@ export default async function HomePage({ params }: Props) {
     "@id": `${SITE_URL}/#travelagency`,
     name: "Flying Pictures México",
     url: SITE_URL,
-    description: "Premier hot air balloon flight experience over the Teotihuacán Pyramids, combining British aviation standards with Mexican hospitality.",
+    description:
+      "Premier hot air balloon flight experience over the Teotihuacán Pyramids, combining British aviation standards with Mexican hospitality.",
     telephone: "+525580251057",
     areaServed: {
       "@type": "Place",
@@ -113,11 +106,16 @@ export default async function HomePage({ params }: Props) {
       "https://wa.me/525580251057",
     ],
     priceRange: "$$$",
-  }
+  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
 
       <HomeHeroSection />
 
@@ -128,5 +126,5 @@ export default async function HomePage({ params }: Props) {
         <HomeReviewsSection />
       </main>
     </>
-  )
+  );
 }
