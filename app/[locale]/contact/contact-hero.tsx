@@ -10,7 +10,7 @@ export async function ContactHero() {
 
   return (
     <section className="relative h-[95vh] lg:h-screen overflow-hidden pt-[4.5rem]">
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0">
         <CloudinaryImage
           publicId={IMAGES.contact.hero.background}
           alt="Hero Background"

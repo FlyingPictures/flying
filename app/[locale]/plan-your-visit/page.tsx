@@ -15,30 +15,23 @@ const SITE_URL =
 type Locale = (typeof routing.locales)[number];
 
 type Props = {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 };
 
 export async function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({
-  params,
-}: Props): Promise<Metadata> {
-  const { locale } = params;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
 
-  const t = await getTranslations({
-    locale,
-    namespace: "nav",
-  });
+  const t = await getTranslations({ locale, namespace: "nav" });
 
   const title = t("planYourVisit");
-
   const description =
     locale === "es"
       ? "Todo lo que necesitas saber antes de tu vuelo en globo aerostático en Teotihuacán."
       : "Everything you need to know before your hot air balloon flight in Teotihuacán.";
-
   const url = `${SITE_URL}/${locale}/plan-your-visit`;
 
   return {
@@ -59,14 +52,7 @@ export async function generateMetadata({
       title,
       description,
       siteName: "Flying Pictures México",
-      images: [
-        {
-          url: `${SITE_URL}/images/og/plan-your-visit-${locale}.jpg`,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
+      images: [{ url: `${SITE_URL}/images/og/plan-your-visit-${locale}.jpg`, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: "summary_large_image",

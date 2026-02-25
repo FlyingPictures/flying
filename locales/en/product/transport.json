@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "The Classic Journey",
+    "subtitle": "Shared Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
+  },
+  "rating": {
+    "score": 4.9,
+    "reviewsCount": "230 evaluaciones"
+  },
+  "description": {
+    "title": "Experience the Magic of Shared Flight",
+    "paragraph": "Join a select group of fellow adventurers for a morning where strangers become friends. Unlike standard \"open\" baskets where guests are crowded together, Flying Pictures uses Cameron Balloons Compartmented Baskets. What does this mean for you? Even in a shared flight, you have your own protected corner of the sky. No fighting for a view, just shared awe."
+  },
+
+  "itinerary": {
+    "title": "What you'll do",
+    "steps": [
+      {
+        "title": "5:00 AM - Arrive & Caheck-in",
+        "description": "You’ll arrive at Flying Pictures Reception and we will recieve you to help you check-in and loremipsum."
+      },
+      {
+        "title": "Welcome & Coffee Break",
+        "description": "After you complete your check-in we will welcome you with our coffee station with hot beverages and traditional cookies."
+      },
+      {
+        "title": "The Inflation Spectacle",
+        "description": "Walk to the launch field to watch the \"Giants\" come to life. Seeing the massive balloons rise with the roar of the burners is the first act of the show."
+      },
+      {
+        "title": "The Ascent",
+        "description": "Lift off gently into the dawn. For approx. 45-60 minutes, float silently over the Valley of Teotihuacán, watching the sun reveal the pyramids from above."
+      },
+      {
+        "title": "The 1783 Toast",
+        "description": "Upon landing, we celebrate with a traditional sparkling wine toast. A ritual dating back to the first aviators to thank the wind gods for a safe return."
+      }
+    ]
+  },
+  
+  "pricing": {
+      "adults": 2799,
+      "kids": 2299
+    }
+}
+
+ 

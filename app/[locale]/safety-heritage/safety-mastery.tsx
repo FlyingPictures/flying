@@ -27,10 +27,12 @@ export async function SafetyMastery() {
 
   return (
     <section className="relative w-full min-h-230 flex flex-col items-center justify-start overflow-hidden pt-[clamp(60px,7vw,120px)] pb-[clamp(40px,5vw,80px)] px-4">
-      <CloudinaryImage publicId={IMAGES.safety.mastery.background} alt="" fill className="object-cover object-center -z-10" />
-      <div className="absolute inset-0 -z-10" />
 
-      <div className="flex flex-col items-center text-center gap-6 max-w-230 w-full mb-[clamp(32px,5vw,80px)]">
+      <div className="absolute inset-0">
+        <CloudinaryImage publicId={IMAGES.safety.mastery.background} alt="" fill className="object-cover object-center" />
+      </div>
+
+      <div className="flex flex-col items-center text-center gap-6 max-w-230 w-full mb-[clamp(32px,5vw,80px)] relative">
         <div className="flex flex-col items-center gap-[clamp(4px,0.5vw,12px)]">
           <h4>{t('subtitle')}</h4>
           <h2 className="whitespace-pre-line">{t('title')}</h2>
@@ -38,7 +40,7 @@ export async function SafetyMastery() {
         <p className="max-w-155">{t('description')}</p>
       </div>
 
-      <div className="flex flex-col md:flex-row items-stretch gap-4 max-w-325 w-full mb-[clamp(32px,5vw,80px)]">
+      <div className="flex flex-col md:flex-row items-stretch gap-4 max-w-325 w-full mb-[clamp(32px,5vw,80px)] relative">
         {Object.entries(cards).map(([key, card]) => (
           <div key={key} className="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-2.5 bg-background rounded-(--radius) p-4 md:p-[28px_16px_16px] flex-1">
             <div className="shrink-0 w-[clamp(44px,3.75vw,54px)] h-[clamp(44px,3.75vw,54px)] flex items-center justify-center">
@@ -52,7 +54,7 @@ export async function SafetyMastery() {
         ))}
       </div>
 
-      <div className="flex flex-row flex-wrap justify-center gap-[clamp(16px,2.78vw,40px)]">
+      <div className="flex flex-row flex-wrap justify-center gap-[clamp(16px,2.78vw,40px)] relative">
         {Object.entries(captains).map(([key, captain]) => (
           <div key={key} className="flex flex-col md:flex-row items-start md:items-center gap-3 w-25 md:w-auto">
             <div className="w-16 h-16 rounded-full bg-background shrink-0" />

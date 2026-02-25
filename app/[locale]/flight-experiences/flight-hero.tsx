@@ -12,7 +12,7 @@ export async function FlightHero() {
 
   return (
     <section className="relative h-[95vh] lg:h-screen overflow-hidden pt-[4.5rem] lg:pt-0">
-      <div className="absolute inset-0 -z-10 flex justify-center">
+      <div className="absolute inset-0 flex justify-center">
         <CloudinaryImage
           publicId={IMAGES.flightExperiences.hero.background}
           alt="Hero Background"

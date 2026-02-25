@@ -1,9 +1,91 @@
 {
     "product": {
-    "hero": {
-      "title": "Talk to the Tower",
-      "subtitle": "We are morning people. How can we help?",
-      "description": "Whether you have a complex logistical question or just want to know if it's cold up there, our concierge team is standing by. No bots, just humans who know the sky."
-    }
-}
+      "included": {
+        "title": "What’s Included",
+        "included1": "40-60 min Flight",
+        "description1": "You’ll arrive at Flying Pictures.",
+        "included2": "Welcome Coffee Break",
+        "description2": "Enjoy hot coffee and cookies before flight.",
+        "included3": "Flight Certificate",
+        "description3": "Personalized proof of your adventure.",
+        "included4": "Traditional Toast",
+        "description4": "Sparkling wine celebration upon landing.",
+        "included5": "Full Insurance",
+        "description5": "Full coverage from start to finish.",
+        "included6": "Experienced Pilots",
+        "description6": "Certified experts with global standards."
+       },
+
+       "recommended": {
+        "title": "Recommended Extras",
+        "round": "Round-Trip Transport",
+        "rounddesc": "Pickup from CDMX at 05:00 AM. (Shared or Private).",
+        "breakfast": "Breakfast Buffet",
+        "breakdesc": "Traditional Mexican meal at Gran Teocalli Restaurant",
+        "medial": "Media Package",
+        "mediadesc": "Professional photos and video of your flight."
+       }, 
+
+       "reviews": {
+        "title": "Reviews",
+        "score": "4.96",
+        "subtitle": "230 evaluaciones",
+        "testimonials": [
+          {
+            "name1": "Robert C",
+            "city1": "Singapore",
+            "resume1": "“Everything was smooth”",
+            "review1": "The reception was warm (coffee and heaters for the cold morning!), and the pilot totally nailed the beautiful views."
+          },
+          {
+            "name2": "Michael T.",
+            "city2": "Los Angeles, USA",
+            "resume2": "“Everything was smooth”",
+            "review2": "I had a last-minute change in my travel plans, and the team handled it seamlessly. I couldn't be happier with the service I received."
+          },
+          {
+            "name3": "Sarah L.",
+            "city3": "Chicago, USA",
+            "resume3": "“Everything was smooth”",
+            "review3": "The personalized recommendations were spot on! I found a great deal on a flight that I wouldn't have found on my own."
+          },
+          {
+            "name4": "David M.",
+            "city4": "Miami, USA",
+            "resume4": "“Everything was smooth”",
+            "review4": "The personalized recommendations were spot on! I found a great deal on a flight that I wouldn't have found on my own."
+          }
+        ]
+       },
+
+       "meet": {
+        "title": "Where we’ll meet",
+        "subtitle": "5:00 AM - Arrive & Caheck-in",
+        "description": "You’ll arrive at Flying Pictures Reception and we will recieve you to help you check-in and loremipsum",
+        "title2": "Things to Know",
+        "thinks": [
+          {
+            "tittle1": "Passenger requieremnts",
+            "subtittle1": "You’ll arrive at Flying Pictures.e"
+          },
+          {
+            "tittle2": "Activity Level",
+            "subtittle2": "You’ll arrive at Flying Pictures."
+          },
+          {
+            "tittle3": "What to bring",
+            "subtittle3": "You’ll arrive at Flying Pictures."
+          },
+          {
+            "tittle4": "Cancelation policy",
+            "subtittle4": "You’ll arrive at Flying Pictures."
+          }
+        ]
+       },
+
+      "footer": {
+        "title": "Flight Experiences Safely Designed",
+        "description": "This is the quintessential ballooning experience. Join a select group of fellow adventurers for a morning where strangers become friends. "
+       }
+  }
 }

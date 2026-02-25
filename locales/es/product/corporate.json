@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "title": "El Viaje Clásico",
+    "subtitle": "Canasta Compartida | 45-60 Minutos | 🇬🇧 Estándares de Seguridad Británicos"
+  },
+  "rating": {
+    "score": 4.9,
+    "reviewsCount": "230 evaluaciones"
+  },
+  "description": {
+    "title": "Vive la magia del vuelo compartido",
+    "paragraph": "Únete a un grupo selecto de aventureros para una mañana en la que los desconocidos se vuelven amigos. A diferencia de las canastas \"abiertas\" estándar donde los pasajeros van apretados, Flying Pictures utiliza canastas compartimentadas Cameron Balloons. ¿Qué significa esto para ti? Incluso en un vuelo compartido, tienes tu propio rincón del cielo. Sin pelear por la vista, solo asombro compartido."
+  },
+
+  "itinerary": {
+    "title": "Qué harás",
+    "steps": [
+      {
+        "title": "5:00 AM - Llegada y registro",
+        "description": "Llegarás a la recepción de Flying Pictures y te recibiremos para ayudarte con el registro."
+      },
+      {
+        "title": "Bienvenida y café",
+        "description": "Después de completar tu registro, te recibiremos en nuestra estación de café con bebidas calientes y galletas tradicionales."
+      },
+      {
+        "title": "El espectáculo del inflado",
+        "description": "Camina hasta el campo de lanzamiento para ver a los \"Gigantes\" cobrar vida. Ver los enormes globos elevarse con el rugido de los quemadores es el primer acto del show."
+      },
+      {
+        "title": "El ascenso",
+        "description": "Despega suavemente hacia el amanecer. Durante aprox. 45-60 minutos, flota en silencio sobre el Valle de Teotihuacán mientras el sol revela las pirámides desde lo alto."
+      },
+      {
+        "title": "El brindis de 1783",
+        "description": "Al aterrizar, celebramos con un brindis tradicional de vino espumoso. Un ritual que se remonta a los primeros aviadores para agradecer a los dioses del viento por un regreso seguro."
+      }
+    ]
+  },
+
+  "pricing": {
+    "adults": 2799,
+    "kids": 2299
+  }
+}

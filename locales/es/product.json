@@ -1,9 +1,91 @@
 {
     "product": {
-    "hero": {
-      "title": "Talk to the Tower",
-      "subtitle": "We are morning people. How can we help?",
-      "description": "Whether you have a complex logistical question or just want to know if it's cold up there, our concierge team is standing by. No bots, just humans who know the sky."
+      "included": {
+        "title": "Qué incluye",
+        "included1": "Vuelo de 40-60 min",
+        "description1": "Llegarás a Flying Pictures.",
+        "included2": "Café de bienvenida",
+        "description2": "Disfruta café caliente y galletas antes del vuelo.",
+        "included3": "Certificado de vuelo",
+        "description3": "Constancia personalizada de tu aventura.",
+        "included4": "Brindis tradicional",
+        "description4": "Celebración con vino espumoso al aterrizar.",
+        "included5": "Seguro completo",
+        "description5": "Cobertura total de inicio a fin.",
+        "included6": "Pilotos experimentados",
+        "description6": "Expertos certificados con estándares internacionales."
+      },
+
+      "recommended": {
+        "title": "Extras recomendados",
+        "round": "Transporte de ida y vuelta",
+        "rounddesc": "Recogida desde CDMX a las 05:00 AM. (Compartido o privado).",
+        "breakfast": "Buffet de desayuno",
+        "breakdesc": "Comida tradicional mexicana en el Restaurante Gran Teocalli.",
+        "medial": "Paquete de medios",
+        "mediadesc": "Fotos y video profesional de tu vuelo."
+      },
+
+      "reviews": {
+        "title": "Reseñas",
+        "score": "4.96",
+        "subtitle": "230 evaluaciones",
+        "testimonials": [
+          {
+            "name1": "Robert C",
+            "city1": "Singapur",
+            "resume1": "“Todo fue perfecto”",
+            "review1": "La recepción fue muy cálida (¡café y calentadores para el frío de la mañana!), y el piloto logró unas vistas increíbles."
+          },
+          {
+            "name2": "Michael T.",
+            "city2": "Los Ángeles, EE. UU.",
+            "resume2": "“Todo fue perfecto”",
+            "review2": "Tuve un cambio de último momento en mis planes de viaje y el equipo lo resolvió sin problemas. No pude estar más contento con el servicio."
+          },
+          {
+            "name3": "Sarah L.",
+            "city3": "Chicago, EE. UU.",
+            "resume3": "“Todo fue perfecto”",
+            "review3": "Las recomendaciones personalizadas fueron exactamente lo que necesitaba. Encontré una gran oferta que no hubiera hallado por mi cuenta."
+          },
+          {
+            "name4": "David M.",
+            "city4": "Miami, EE. UU.",
+            "resume4": "“Todo fue perfecto”",
+            "review4": "Las recomendaciones personalizadas fueron exactamente lo que necesitaba. Encontré una gran oferta que no hubiera hallado por mi cuenta."
+          }
+        ]
+      },
+
+      "meet": {
+        "title": "Dónde nos encontraremos",
+        "subtitle": "5:00 AM - Llegada y registro",
+        "description": "Llegarás a la recepción de Flying Pictures y te recibiremos para ayudarte con el registro.",
+        "title2": "Cosas que debes saber",
+        "thinks": [
+          {
+            "tittle1": "Requisitos para pasajeros",
+            "subtittle1": "Llegarás a Flying Pictures."
+          },
+          {
+            "tittle2": "Nivel de actividad",
+            "subtittle2": "Llegarás a Flying Pictures."
+          },
+          {
+            "tittle3": "Qué traer",
+            "subtittle3": "Llegarás a Flying Pictures."
+          },
+          {
+            "tittle4": "Política de cancelación",
+            "subtittle4": "Llegarás a Flying Pictures."
+          }
+        ]
+      },
+
+      "footer": {
+        "title": "Experiencias de vuelo diseñadas con seguridad",
+        "description": "Esta es la experiencia de globo por excelencia. Únete a un grupo selecto de aventureros para una mañana en la que los desconocidos se vuelven amigos."
+      }
     }
-}
 }

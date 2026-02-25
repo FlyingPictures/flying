@@ -12,22 +12,17 @@ const SITE_URL =
   "https://www.flyingpicturesmexico.com";
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateStaticParams() {
   return [{ locale: "es" }, { locale: "en" }];
 }
 
-export async function generateMetadata({
-  params,
-}: Props): Promise<Metadata> {
-  const { locale } = params;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
 
-  const tHero = await getTranslations({
-    locale,
-    namespace: "herosection",
-  });
+  const tHero = await getTranslations({ locale, namespace: "herosection" });
 
   const title = `${tHero("h1")} | Flying Pictures México`;
   const description = tHero("paragraph");
@@ -38,7 +33,6 @@ export async function generateMetadata({
     title,
     description,
     robots: { index: true, follow: true },
-
     alternates: {
       canonical: url,
       languages: {
@@ -47,7 +41,6 @@ export async function generateMetadata({
         "x-default": `${SITE_URL}/en`,
       },
     },
-
     openGraph: {
       type: "website",
       locale,
@@ -55,16 +48,8 @@ export async function generateMetadata({
       siteName: "Flying Pictures México",
       title,
       description,
-      images: [
-        {
-          url: `${SITE_URL}/images/og/home-${locale}.jpg`,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
+      images: [{ url: `${SITE_URL}/images/og/home-${locale}.jpg`, width: 1200, height: 630, alt: title }],
     },
-
     twitter: {
       card: "summary_large_image",
       title,
@@ -75,12 +60,7 @@ export async function generateMetadata({
 }
 
 export default async function HomePage({ params }: Props) {
-  const { locale } = params;
-
-  const tWeather = await getTranslations({
-    locale,
-    namespace: "weather",
-  });
+  const { locale } = await params;
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -91,15 +71,8 @@ export default async function HomePage({ params }: Props) {
     description:
       "Premier hot air balloon flight experience over the Teotihuacán Pyramids, combining British aviation standards with Mexican hospitality.",
     telephone: "+525580251057",
-    areaServed: {
-      "@type": "Place",
-      name: "Teotihuacán, México",
-    },
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "MX",
-      addressRegion: "Estado de México",
-    },
+    areaServed: { "@type": "Place", name: "Teotihuacán, México" },
+    address: { "@type": "PostalAddress", addressCountry: "MX", addressRegion: "Estado de México" },
     sameAs: [
       "https://www.facebook.com/flyingpicturesmexico",
       "https://www.instagram.com/flyingpicturesmexico",
@@ -112,13 +85,9 @@ export default async function HomePage({ params }: Props) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-
       <HomeHeroSection />
-
       <main className="w-full">
         <FlightExperienceSection />
         <WhyFlightWhitUs />

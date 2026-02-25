@@ -32,7 +32,7 @@ export default async function HomeReviewsSection() {
   return (
     <section className="relative w-full overflow-hidden" style={{ height: '1386px' }}>
       <Background />
-      <div className="relative z-10 mx-auto px-4 pt-[100px] h-full">
+      <div className="relative mx-auto px-4 pt-[100px] h-full">
         <Header t={t} />
         <Platforms />
         <div className="hidden lg:grid grid-cols-2 gap-[24px] overflow-hidden justify-center relative lg:-top-24" style={{ height: '1018px' }}>
@@ -58,14 +58,13 @@ export default async function HomeReviewsSection() {
 
 function Background() {
   return (
-    <div className="absolute inset-0 -z-20">
+    <div className="absolute inset-0">
       <CloudinaryImage publicId={IMAGES.home.reviews.background} alt="" fill sizes="100vw" className="object-cover" priority />
     </div>
   );
 }
 
-function Header({ t }: { t: any }) {
-  return (
+function Header({ t }: { t: Awaited<ReturnType<typeof getTranslations>> }) {  return (
     <header className="text-center">
       <h4 className="text-secondary">{t('readRealReviews')}</h4>
       <h2 className="text-secondary">{t('dontJustTakeOurWord')}</h2>
@@ -111,7 +110,7 @@ function ReviewCard({ review }: { review: Review }) {
       <div className="border-t border-secondary/20 mb-6" />
 
       <div className="flex flex-col lg:grid lg:grid-cols-[40%_60%] lg:gap-4">
-        <h3 className="font-libre-baskerville italic text-[clamp(20px,2.5vw,24px)] mb-2 lg:mb-0 leading-tight">"{review.quote}"</h3>
+        <h3 className="font-libre-baskerville italic text-[clamp(20px,2.5vw,24px)] mb-2 lg:mb-0 leading-tight">&ldquo;{review.quote}&rdquo;</h3>
         <p className="font-poppins text-[clamp(14px,0.5vw,16px)] leading-tight">{review.text}</p>
       </div>
 

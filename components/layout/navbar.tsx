@@ -79,11 +79,17 @@ export default function Navbar() {
   }
 
   useEffect(() => {
-    if (isScrollingDown && isMenuOpen) setIsMenuOpen(false)
+  if (isScrollingDown && isMenuOpen) {
+    const id = setTimeout(() => setIsMenuOpen(false), 0)
     return () => {
+      clearTimeout(id)
       if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current)
     }
-  }, [isScrollingDown, isMenuOpen])
+  }
+  return () => {
+    if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current)
+  }
+}, [isScrollingDown, isMenuOpen])
 
   return (
     <>

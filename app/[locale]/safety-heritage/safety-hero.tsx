@@ -10,7 +10,7 @@ export async function SafetyHero() {
 
   return (
     <section className="relative h-[95vh] lg:h-screen overflow-hidden pt-18">
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0">
         <CloudinaryImage publicId={IMAGES.safety.hero.background} alt="Hero Background" fill priority sizes="100vw" className="h-full w-auto object-contain object-top" />
         <div className="absolute inset-0 bg-black/10" />
       </div>

@@ -13,18 +13,13 @@ const SITE_URL =
 type Locale = (typeof routing.locales)[number];
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: Locale }>;
 };
 
-export async function generateMetadata({
-  params,
-}: Props): Promise<Metadata> {
-  const { locale } = params;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
 
-  const t = await getTranslations({
-    locale,
-    namespace: "contact.hero",
-  });
+  const t = await getTranslations({ locale, namespace: "contact.hero" });
 
   const title = t("title");
   const description = t("subtitle");

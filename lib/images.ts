@@ -1,10 +1,9 @@
-// config/images.ts
 export const IMAGES = {
   home: {
     hero: {
-      background: "hero1_rszxmn",
-      stars: "5_stars_xbtijo",
-      cameronLogo: "b5884911c3141d5efecb262d7371f5c738f8aff1_o9yrql",
+      background: "v1770659861/hero1_rszxmn",
+      stars: "v1770742828/5_stars_xbtijo",
+      cameronLogo: "v1769270546/cameronlogo_hve9ws",
     },
     brandLogos: [
       { publicId: "bbclogo150150_kqylht", alt: "BBC" },
@@ -85,13 +84,6 @@ export const IMAGES = {
     },  
   },
 
-  product: {
-    hero: {
-      background: "v1770746469/Rectangle_44_1_cuhoex",
-      cameronLogo: "cameronlogo_hve9ws",
-    },
-  },
-  
   plan: {
     hero: {
       background: "v1771173037/Rectangle_33_3_vuzq4o",  
@@ -153,5 +145,129 @@ export const IMAGES = {
         ],
     },
   },
+  product: {
+    footer: {
+      Logo: "v1771956786/sello_flying_1_l7dniq",
+    },
+
+    gallery: {
+      classic: [
+        "v1770985333/Rectangle_37_1_wzbwjr",
+        "v1770932405/flightHero_tqysvs",
+        "v1771636972/Rectangle_41_6_qcbkkl",
+        "v1771636972/Rectangle_41_5_1_q9jkki",
+        "v1771173037/Rectangle_33_3_vuzq4o",
+        "v1771636973/Rectangle_33_1_ltf6qb",
+        "v1771636973/Rectangle_36_1_jk4r63",
+        "v1771636972/Rectangle_41_4_p6etxl",
+        "v1771636972/Rectangle_41_6_qcbkkl",
+        "v1771636972/Rectangle_123_1_x3ehkj"
+      ],
+
+      journey: [
+        "v1770985333/Rectangle_37_2_vkbxog",
+        "v1771636972/Rectangle_41_6_qcbkkl",
+        "v1770932405/flightHero_tqysvs",
+        "v1771173037/Rectangle_33_3_vuzq4o",
+        "v1771636973/Rectangle_39_1_xdhqj7",
+        "v1771636972/Rectangle_41_5_1_q9jkki",
+        "v1771636972/Rectangle_41_3_ptng3e",
+        "v1771636972/Rectangle_41_7_ukxg3h",
+        "v1771636973/Rectangle_41_5_1_q9jkki",
+        "v1771636972/Rectangle_41_2_fyibpj"
+      ],
+
+      proposal: [
+        "v1770985334/Rectangle_37_5_vswg5d",
+        "v1771636972/Rectangle_41_6_qcbkkl",
+        "v1770932405/flightHero_tqysvs",
+        "v1771173037/Rectangle_33_3_vuzq4o",
+        "v1771636973/Rectangle_36_1_jk4r63",
+        "v1771636972/Rectangle_41_5_1_q9jkki",
+        "v1771636972/Rectangle_41_4_p6etxl",
+        "v1771636972/Rectangle_41_6_qcbkkl",
+        "v1771636973/Rectangle_41_5_1_q9jkki",
+        "v1771636972/Rectangle_41_2_fyibpj"
+      ],
+
+      vip: [
+        "v1770985332/Rectangle_37_8_xkxdci",
+        "v1770932405/flightHero_tqysvs",
+        "v1771636972/Rectangle_41_6_qcbkkl",
+        "v1771173037/Rectangle_33_3_vuzq4o",
+        "v1771636973/Rectangle_39_1_xdhqj7",
+        "v1771636972/Rectangle_41_3_ptng3e",
+        "v1771636972/Rectangle_41_7_ukxg3h",
+        "v1771636973/Rectangle_41_5_1_q9jkki",
+        "v1771636972/Rectangle_41_4_p6etxl",
+        "v1771636972/Rectangle_41_6_qcbkkl"
+      ],
+
+      transport: [
+        "v1770985332/Rectangle_37_3_qspece",
+        "v1771636972/Rectangle_41_6_qcbkkl",
+        "v1770932405/flightHero_tqysvs",
+        "v1771636972/Rectangle_41_5_1_q9jkki",
+        "v1771173037/Rectangle_33_3_vuzq4o",
+        "v1771636973/Rectangle_33_1_ltf6qb",
+        "v1771636972/Rectangle_41_3_ptng3e",
+        "v1771636972/Rectangle_41_6_qcbkkl",
+        "v1771636973/Rectangle_41_5_1_q9jkki",
+        "v1771636972/Rectangle_41_4_p6etxl"
+      ],
+
+      open: [
+        "v1770985333/Rectangle_37_4_gdprri",
+        "v1771636972/Rectangle_41_6_qcbkkl",
+        "v1770932405/flightHero_tqysvs",
+        "v1771636972/Rectangle_41_5_1_q9jkki",
+        "v1771173037/Rectangle_33_3_vuzq4o",
+        "v1771636973/Rectangle_36_1_jk4r63",
+        "v1771636972/Rectangle_41_2_fyibpj",
+        "v1771636972/Rectangle_41_7_ukxg3h",
+        "v1771636973/Rectangle_41_5_1_q9jkki",
+        "v1771636972/Rectangle_41_4_p6etxl"
+      ],
+
+      anniversary: [
+        "v1770985333/Rectangle_37_6_mtrsye",
+        "v1771636972/Rectangle_41_6_qcbkkl",
+        "v1770932405/flightHero_tqysvs",
+        "v1771173037/Rectangle_33_3_vuzq4o",
+        "v1771636973/Rectangle_39_1_xdhqj7",
+        "v1771636972/Rectangle_41_5_1_q9jkki",
+        "v1771636972/Rectangle_41_3_ptng3e",
+        "v1771636972/Rectangle_41_7_ukxg3h",
+        "v1771636973/Rectangle_41_5_1_q9jkki",
+        "v1771636972/Rectangle_41_2_fyibpj"
+      ],
+
+      birthday: [
+        "v1770985333/Rectangle_37_7_lozhvd",
+        "v1771636972/Rectangle_41_6_qcbkkl",
+        "v1770932405/flightHero_tqysvs",
+        "v1771636972/Rectangle_41_5_1_q9jkki",
+        "v1771173037/Rectangle_33_3_vuzq4o",
+        "v1771636973/Rectangle_36_1_jk4r63",
+        "v1771636972/Rectangle_41_4_p6etxl",
+        "v1771636972/Rectangle_41_6_qcbkkl",
+        "v1771636973/Rectangle_41_5_1_q9jkki",
+        "v1771636972/Rectangle_41_2_fyibpj"
+      ],
+
+      corporate: [
+        "v1770985333/Rectangle_37_9_vw580e",
+        "v1771636972/Rectangle_41_6_qcbkkl",
+        "v1770932405/flightHero_tqysvs",
+        "v1771636972/Rectangle_41_5_1_q9jkki",
+        "v1771173037/Rectangle_33_3_vuzq4o",
+        "v1771636973/Rectangle_39_1_xdhqj7",
+        "v1771636972/Rectangle_41_3_ptng3e",
+        "v1771636972/Rectangle_41_7_ukxg3h",
+        "v1771636973/Rectangle_41_5_1_q9jkki",
+        "v1771636972/Rectangle_41_2_fyibpj"
+      ]
+    }
+  }
 
 } as const;

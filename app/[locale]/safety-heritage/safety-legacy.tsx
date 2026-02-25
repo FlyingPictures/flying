@@ -8,7 +8,7 @@ export async function SafetyLegacy() {
   return (
     <section className="relative w-full h-263 lg:h-375 overflow-hidden">
       
-      <CloudinaryImage publicId={IMAGES.safety.legacy.background} alt="Safety Legacy Background" fill sizes="100vw" className="absolute inset-0 -z-10 object-cover" priority />
+      <CloudinaryImage publicId={IMAGES.safety.legacy.background} alt="Safety Legacy Background" fill sizes="100vw" className="absolute inset-0 object-cover" priority />
 
       <div className="relative h-full w-full flex justify-center">
   

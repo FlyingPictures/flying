@@ -168,9 +168,9 @@ export function FlightExperienceSection() {
 
         <div className="flex justify-center mb-[clamp(24px,7vw,106px)] px-6">
           <div ref={pillRef} className="relative bg-surface rounded-full flex items-center" style={{ padding: 'clamp(9px,1.2vw,12px)', width: 'clamp(300px,45vw,514px)', height: 'clamp(52px,6vw,72px)', gap: '4px' }}>
-            <div className="absolute bg-secondary rounded-full transition-all duration-100 ease-out z-0" style={{ height: 'clamp(36px,4vw,50px)', width: indicatorStyle.width, left: indicatorStyle.left, top: '50%', transform: 'translateY(-50%)' }} />
+            <div className="absolute bg-secondary rounded-full transition-all duration-100 ease-out" style={{ height: 'clamp(36px,4vw,50px)', width: indicatorStyle.width, left: indicatorStyle.left, top: '50%', transform: 'translateY(-50%)' }} />
             {TABS.map(tab => (
-              <button key={tab} onClick={() => { setActiveFilter(tab); scrollToCard(ALL_FLIGHTS.findIndex(f => f.cat === tab), true) }} className={cn('relative z-10 font-bold transition-colors duration-100 flex items-center justify-center flex-1 min-w-0 text-[clamp(12px,1.2vw,14px)] h-[clamp(36px,4vw,50px)]', activeFilter === tab ? 'text-background' : 'text-secondary')}>
+              <button key={tab} onClick={() => { setActiveFilter(tab); scrollToCard(ALL_FLIGHTS.findIndex(f => f.cat === tab), true) }} className={cn('relative font-bold transition-colors duration-100 flex items-center justify-center flex-1 min-w-0 text-[clamp(12px,1.2vw,14px)] h-[clamp(36px,4vw,50px)]', activeFilter === tab ? 'text-background' : 'text-secondary')}>
                 {t(`tabs.${tab}`)}
               </button>
             ))}
