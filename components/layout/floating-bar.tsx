@@ -151,15 +151,15 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
   const Content = (
     <>
       <div className="flex-1 flex flex-col gap-1">
-        <div className="font-inter text-md">
+        <div className="font-inter text-sm">
           <span className="font-bold">{pricing?.adults}</span> {pricing?.priceAdults}
         </div>
-        <div className="font-inter text-md">
+        <div className="font-inter text-sm">
           <span className="font-bold">{pricing?.kids}</span> {pricing?.priceKids}
         </div>
       </div>
 
-      <Button variant="primary" size="md">
+      <Button variant="primary" size="sm">
         See Dates
       </Button>
 
