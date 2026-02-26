@@ -1,60 +1,47 @@
-import { IMAGES } from "@/lib/images"
-import { redirect } from "next/navigation"
+import { IMAGES } from "@/lib/images";
+import { redirect } from "next/navigation";
 
-export type ProductSlug = keyof typeof IMAGES.product.gallery
+export type ProductSlug = keyof typeof IMAGES.product.gallery;
 
 export const PRODUCTS = Object.keys(
   IMAGES.product.gallery
-) as ProductSlug[]
+) as ProductSlug[];
 
 export default function ProductIndexPage({
-  params
+  params,
 }: {
-  params: { locale: string }
+  params: { locale: string };
 }) {
-  redirect(`/${params.locale}/product/classic`)
+  redirect(`/${params.locale}/product/classic`);
+}
+
+export interface ItineraryStep {
+  time?: string;
+  title: string;
+  description: string;
 }
 
 export interface ProductTranslation {
   hero: {
-    title: string
-    subtitle: string
-  }
+    title: string;
+    subtitle: string;
+  };
   rating: {
-    score: number
-    reviewsCount: number
-  }
+    score: number;
+    reviewsCount: string;
+  };
   description: {
-    paragraphs: string[]
-  }
+    title: string;
+    paragraph: string;
+  };
   itinerary: {
-    title: string
-    steps: {
-      time?: string
-      title: string
-      description: string
-    }[]
-  }
+    title: string;
+    steps: ItineraryStep[];
+  };
   pricing: {
-    adults: {
-      label: string
-      price: number
-      currency: string
-    }
-    children: {
-      label: string
-      price: number
-      currency: string
-    }
-  }
-  cta: {
-    seeDates: string
-  }
-  included: { title: string }
-  meet: { title: string }
-  reviews: { title: string }
-  footer: {
-    title: string
-    button: string
-  }
+  adults: string
+  kids: string
+  priceAdults: string
+  priceKids: string
+  };
 }

@@ -63,10 +63,11 @@
         "subtitle": "5:00 AM - Arrive & Caheck-in",
         "description": "You’ll arrive at Flying Pictures Reception and we will recieve you to help you check-in and loremipsum",
         "title2": "Things to Know",
+        "button": "Get Directions",
         "thinks": [
           {
             "tittle1": "Passenger requieremnts",
-            "subtittle1": "You’ll arrive at Flying Pictures.e"
+            "subtittle1": "You’ll arrive at Flying Pictures."
           },
           {
             "tittle2": "Activity Level",

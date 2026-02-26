@@ -99,17 +99,20 @@
   },
 
   "reviews": {
+    "tittle": "Reseñas",
     "readRealReviews": "LEE RESEÑAS REALES",
-    "dontJustTakeOurWord": "No solo tomes nuestra palabra",
+    "dontJustTakeOurWord": "No solo nos creas a nosotros",
     "readMoreReviews": "Leer más reseñas",
     "outOf5Stars": "de 5 estrellas",
+    "averageRating": "4.96",
+    "totalReviews": "230 reseñas",
     "items": [
       {
         "id": 1,
         "name": "Javier S.",
         "location": "Guía local",
         "quote": "Revisé sus permisos",
-        "text": "Su equipo es Cameron de Bristol y, a diferencia de muchas compañías, tienen todas las licencias al día. No comprometas tu seguridad por ahorrar unos dólares. Ve con los mejores.",
+        "text": "Su equipo es de Cameron de Bristol, y a diferencia de la mayoría de las empresas, tienen todas las licencias al día. No comprometas tu seguridad para ahorrar unos dólares. Ve con los mejores.",
         "avatarIndex": 0
       },
       {
@@ -117,7 +120,7 @@
         "name": "Mike B.",
         "location": "Nueva Zelanda",
         "quote": "De todas las aventuras que hicimos, esta fue la mejor",
-        "text": "Sin costos ocultos (algo muy poco común). Hazlo si estás en la Ciudad de México, no te arrepentirás.",
+        "text": "Sin costos ocultos (muy inusual). Hazlo si estás en Ciudad de México, no te vas a arrepentir.",
         "avatarIndex": 1
       },
       {
@@ -125,8 +128,16 @@
         "name": "Robert C.",
         "location": "Singapur",
         "quote": "Todo fue muy fluido",
-        "text": "La recepción fue muy cálida (¡café y calentadores para la mañana fría!), y el piloto logró vistas espectaculares.",
+        "text": "La recepción fue cálida (¡café y calefactores para la fría mañana!), y el piloto logró unas vistas espectaculares.",
         "avatarIndex": 2
+      },
+      {
+        "id": 4,
+        "name": "Emily R.",
+        "location": "Estados Unidos",
+        "quote": "Una experiencia mágica",
+        "text": "El vuelo fue tranquilo y las vistas fueron impresionantes. El equipo fue muy profesional y nos hizo sentir seguros durante toda la experiencia.",
+        "avatarIndex": 3
       }
     ]
   },

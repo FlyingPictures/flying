@@ -1,45 +1,45 @@
 {
   "hero": {
-    "title": "El Viaje Clásico",
-    "subtitle": "Canasta Compartida | 45-60 Minutos | 🇬🇧 Estándares de Seguridad Británicos"
+    "title": "El Vuelo Abierto",
+    "subtitle": "Canasta Abierta | 45-60 Minutos | 🇬🇧 Estándares de Seguridad Británicos"
   },
   "rating": {
-    "score": 4.9,
-    "reviewsCount": "230 evaluaciones"
+    "score": 4.8,
+    "reviewsCount": "156 evaluaciones"
   },
   "description": {
-    "title": "Vive la magia del vuelo compartido",
-    "paragraph": "Únete a un grupo selecto de aventureros para una mañana en la que los desconocidos se vuelven amigos. A diferencia de las canastas \"abiertas\" estándar donde los pasajeros van apretados, Flying Pictures utiliza canastas compartimentadas Cameron Balloons. ¿Qué significa esto para ti? Incluso en un vuelo compartido, tienes tu propio rincón del cielo. Sin pelear por la vista, solo asombro compartido."
+    "title": "Comparte el Cielo con Otros Aventureros",
+    "paragraph": "El Vuelo Abierto es la introducción perfecta al vuelo en globo. Únete a un grupo diverso de aventureros de todo el mundo para un vuelo al amanecer sobre el Valle de Teotihuacán. Una canasta abierta significa que compartes la maravilla con nuevas personas — y cuando aterricen, ya no serán desconocidos. Las mejores historias comienzan con un salto de fe a las 5 AM."
   },
-
   "itinerary": {
     "title": "Qué harás",
     "steps": [
       {
-        "title": "5:00 AM - Llegada y registro",
-        "description": "Llegarás a la recepción de Flying Pictures y te recibiremos para ayudarte con el registro."
+        "title": "5:00 AM - Llegada y Check-in",
+        "description": "Llegarás a la Recepción de Flying Pictures y te recibiremos para ayudarte con el check-in."
       },
       {
-        "title": "Bienvenida y café",
-        "description": "Después de completar tu registro, te recibiremos en nuestra estación de café con bebidas calientes y galletas tradicionales."
+        "title": "Bienvenida y Café",
+        "description": "Después de completar tu check-in te recibiremos con nuestra estación de café con bebidas calientes y galletas tradicionales."
       },
       {
-        "title": "El espectáculo del inflado",
-        "description": "Camina hasta el campo de lanzamiento para ver a los \"Gigantes\" cobrar vida. Ver los enormes globos elevarse con el rugido de los quemadores es el primer acto del show."
+        "title": "El Espectáculo de Inflado",
+        "description": "Camina al campo de lanzamiento para ver a los \"Gigantes\" cobrar vida. Ver los enormes globos elevarse con el rugido de los quemadores es el primer acto del espectáculo."
       },
       {
-        "title": "El ascenso",
-        "description": "Despega suavemente hacia el amanecer. Durante aprox. 45-60 minutos, flota en silencio sobre el Valle de Teotihuacán mientras el sol revela las pirámides desde lo alto."
+        "title": "El Ascenso",
+        "description": "Despega suavemente hacia el amanecer. Durante aprox. 45-60 minutos, flota en silencio sobre el Valle de Teotihuacán, viendo cómo el sol revela las pirámides desde arriba."
       },
       {
-        "title": "El brindis de 1783",
-        "description": "Al aterrizar, celebramos con un brindis tradicional de vino espumoso. Un ritual que se remonta a los primeros aviadores para agradecer a los dioses del viento por un regreso seguro."
+        "title": "El Brindis de 1783",
+        "description": "Al aterrizar, celebramos con un tradicional brindis de vino espumoso. Un ritual que se remonta a los primeros aviadores para agradecer a los dioses del viento un regreso seguro."
       }
     ]
   },
-
   "pricing": {
-    "adults": 2799,
-    "kids": 2299
+    "adults": "Adultos",
+    "kids": "Niños (4-12)",
+    "priceAdults": "2,199 MXN",
+    "priceKids": "1,799 MXN"
   }
 }

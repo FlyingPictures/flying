@@ -151,6 +151,13 @@ export const IMAGES = {
     },
 
     gallery: {
+      "itinerary": [
+        "v1771957286/Rectangle_95_q6zuu9",
+        "v1771957286/Rectangle_95_2_igqjpj",  
+        "v1771957286/Rectangle_95_1_r4guqo",
+        "v1771957286/Rectangle_95_3_1_km1j7h",
+        "v1771957286/Rectangle_95_4_hzsd3x",
+      ],
       classic: [
         "v1770985333/Rectangle_37_1_wzbwjr",
         "v1770932405/flightHero_tqysvs",

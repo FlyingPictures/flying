@@ -6,7 +6,7 @@ import { routing } from "@/i18n/routing";
 import { fontVariables } from "@/lib/fonts";
 import { Footer } from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
-import { FloatingBar } from "@/components/layout/floating-bar";
+import { FloatingBar, PricingProvider } from "@/components/layout/floating-bar";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import {
   StructuredData,
@@ -108,12 +108,14 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
       <GoogleAnalytics />
 
       <NextIntlClientProvider messages={messages} locale={locale}>
-        <div className={`${fontVariables} flex min-h-screen flex-col bg-background text-foreground antialiased`}>
-          <Navbar />
-          <main className="flex-grow">{children}</main>
-          <Footer translations={footerTranslations} />
-          <FloatingBar />
-        </div>
+        <PricingProvider>
+          <div className={`${fontVariables} flex min-h-screen flex-col bg-background text-foreground antialiased`}>
+            <Navbar />
+            <main className="flex-grow">{children}</main>
+            <Footer translations={footerTranslations} />
+            <FloatingBar />
+          </div>
+        </PricingProvider>
       </NextIntlClientProvider>
     </>
   );

@@ -2,7 +2,11 @@ import { notFound } from "next/navigation";
 import { cache } from "react";
 
 import ProductMain from "./ProductMain";
+import Meet from "./Meet";
 import ProductFooter from "./Footer";
+import Reviews from "./Reviews";
+import RecommendedExtras from "./Recommended";
+import Included from "./Included";
 
 import {
   PRODUCTS,
@@ -10,9 +14,6 @@ import {
   ProductTranslation,
 } from "@/types/product";
 
-/* ===============================
-   TYPES (Next 16)
-================================= */
 interface PageProps {
   params: Promise<{
     locale: string;
@@ -20,9 +21,6 @@ interface PageProps {
   }>;
 }
 
-/* ===============================
-   STATIC PARAMS
-================================= */
 export function generateStaticParams() {
   const locales = ["en", "es"];
 
@@ -36,16 +34,10 @@ export function generateStaticParams() {
 
 export const revalidate = 3600;
 
-/* ===============================
-   TYPE GUARD
-================================= */
 function isValidProduct(slug: string): slug is ProductSlug {
   return PRODUCTS.includes(slug as ProductSlug);
 }
 
-/* ===============================
-   DATA LOADER (cached)
-================================= */
 const getProductData = cache(
   async (
     locale: string,
@@ -63,29 +55,26 @@ const getProductData = cache(
   }
 );
 
-/* ===============================
-   PAGE
-================================= */
 export default async function Page({ params }: PageProps) {
   const { locale, slug } = await params;
 
-  // 1️⃣ Validar slug
   if (!isValidProduct(slug)) {
     notFound();
   }
 
-  // 2️⃣ Obtener data
   const data = await getProductData(locale, slug);
 
-  // 3️⃣ Validar data
   if (!data) {
     notFound();
   }
 
   return (
-    <main className="flex flex-col gap-24">
+    <main className="flex flex-col gap-12">
       <ProductMain slug={slug} data={data} />
-      
+      <Included />
+      <RecommendedExtras />
+      <Reviews />
+      <Meet />
       <ProductFooter />
     </main>
   );

@@ -5,19 +5,18 @@
   },
   "rating": {
     "score": 4.9,
-    "reviewsCount": "230 evaluaciones"
+    "reviewsCount": "230 reviews"
   },
   "description": {
     "title": "Experience the Magic of Shared Flight",
     "paragraph": "Join a select group of fellow adventurers for a morning where strangers become friends. Unlike standard \"open\" baskets where guests are crowded together, Flying Pictures uses Cameron Balloons Compartmented Baskets. What does this mean for you? Even in a shared flight, you have your own protected corner of the sky. No fighting for a view, just shared awe."
   },
-
   "itinerary": {
     "title": "What you'll do",
     "steps": [
       {
-        "title": "5:00 AM - Arrive & Caheck-in",
-        "description": "You’ll arrive at Flying Pictures Reception and we will recieve you to help you check-in and loremipsum."
+        "title": "5:00 AM - Arrive & Check-in",
+        "description": "You'll arrive at Flying Pictures Reception and we will receive you to help you check-in and loremipsum."
       },
       {
         "title": "Welcome & Coffee Break",
@@ -37,11 +36,10 @@
       }
     ]
   },
-  
-  "pricing": {
-      "adults": 2799,
-      "kids": 2299
-    }
+   "pricing": {
+    "adults": "Adults",
+    "kids": "kids (4-12)",
+    "priceAdults": "2,799 MXN",
+    "priceKids": "2,299 MXN"
+  }
 }
-
- 

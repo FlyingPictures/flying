@@ -1,23 +1,22 @@
 {
   "hero": {
-    "title": "The Classic Journey",
-    "subtitle": "Shared Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
+    "title": "The VIP Experience",
+    "subtitle": "Private Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
   },
   "rating": {
-    "score": 4.9,
-    "reviewsCount": "230 evaluaciones"
+    "score": 5.0,
+    "reviewsCount": "184 reviews"
   },
   "description": {
-    "title": "Experience the Magic of Shared Flight",
-    "paragraph": "Join a select group of fellow adventurers for a morning where strangers become friends. Unlike standard \"open\" baskets where guests are crowded together, Flying Pictures uses Cameron Balloons Compartmented Baskets. What does this mean for you? Even in a shared flight, you have your own protected corner of the sky. No fighting for a view, just shared awe."
+    "title": "Your Sky, Your Rules",
+    "paragraph": "This is ballooning at its finest. Your private basket means no strangers, no compromises — just you and yours floating above the Valley of Teotihuacán at dawn. Flying Pictures' Cameron Balloons Compartmented Baskets give every guest their own corner of the sky, but in the VIP experience, the entire sky is yours. Champagne, silence, and pyramids below."
   },
-
   "itinerary": {
     "title": "What you'll do",
     "steps": [
       {
-        "title": "5:00 AM - Arrive & Caheck-in",
-        "description": "You’ll arrive at Flying Pictures Reception and we will recieve you to help you check-in and loremipsum."
+        "title": "5:00 AM - Arrive & Check-in",
+        "description": "You'll arrive at Flying Pictures Reception and we will receive you to help you check-in and loremipsum."
       },
       {
         "title": "Welcome & Coffee Break",
@@ -37,11 +36,10 @@
       }
     ]
   },
-  
-  "pricing": {
-      "adults": 2799,
-      "kids": 2299
-    }
+   "pricing": {
+    "adults": "Adults",
+    "kids": "kids (4-12)",  
+    "priceAdults": "4,299 MXN",
+    "priceKids": "3,499 MXN"
+  }
 }
-
- 

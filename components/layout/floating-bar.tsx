@@ -1,11 +1,16 @@
 "use client"
 
+import { createContext, useContext, useState } from "react"
 import { usePathname } from "@/i18n/routing"
 import { useScrollDirection } from "@/hooks/use-scroll-direction"
 import { useTranslations } from "next-intl"
 import { WhatsappLogoIcon } from "@phosphor-icons/react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+
+/* ===================================== */
+/* CONSTANTS */
+/* ===================================== */
 
 const CONTACT = {
   PHONE: "+525558025-1057",
@@ -30,6 +35,40 @@ const getOnlineStatus = () => {
     ? "Online"
     : "Offline"
 }
+
+/* ===================================== */
+/* PRICING CONTEXT */
+/* ===================================== */
+
+interface PricingData {
+  adults: string
+  kids: string
+  priceAdults: string
+  priceKids: string
+}
+
+interface PricingContextValue extends PricingData {
+  setPricing: (p: PricingData) => void
+}
+
+const PricingContext = createContext<PricingContextValue | null>(null)
+
+export const PricingProvider = ({ children }: { children: React.ReactNode }) => {
+  const [pricing, setPricing] = useState<PricingData>({
+    adults: "",
+    kids: "",
+    priceAdults: "",
+    priceKids: "",
+  })
+
+  return (
+    <PricingContext.Provider value={{ ...pricing, setPricing }}>
+      {children}
+    </PricingContext.Provider>
+  )
+}
+
+export const usePricing = () => useContext(PricingContext)
 
 /* ===================================== */
 /* REUSABLE WRAPPER */
@@ -107,18 +146,20 @@ const FloatingBar1 = ({ show }: { show: boolean }) => {
 /* ===================================== */
 
 const FloatingBar2 = ({ show }: { show: boolean }) => {
+  const pricing = usePricing()
+
   const Content = (
     <>
-      <div className="flex-1">
-        <p className="font-inter font-bold text-[12px]">
-          Adultos: $2,399 MXN
-        </p>
-        <p className="font-inter font-bold text-[12px]">
-          Niños (4-12): $1,999 MXN
-        </p>
+      <div className="flex-1 flex flex-col gap-1">
+        <div className="font-inter text-md">
+          <span className="font-bold">{pricing?.adults}</span> {pricing?.priceAdults}
+        </div>
+        <div className="font-inter text-md">
+          <span className="font-bold">{pricing?.kids}</span> {pricing?.priceKids}
+        </div>
       </div>
 
-      <Button variant="primary" size="floating">
+      <Button variant="primary" size="md">
         See Dates
       </Button>
 
@@ -128,7 +169,7 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
         rel="noopener noreferrer"
       >
         <Button variant="ghost" size="floating" className="rounded-full">
-          <WhatsappLogoIcon size={20} weight="bold" />
+          <WhatsappLogoIcon size={35} weight="bold" />
         </Button>
       </a>
     </>
@@ -146,11 +187,11 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
 
       {/* Desktop */}
       <FloatingWrapper
-            show={show}
-            className="bottom-40 right-20 hidden lg:flex w-[26rem]"
-            >
-            <FloatingCard>{Content}</FloatingCard>
-        </FloatingWrapper>
+        show={show}
+        className="bottom-40 right-20 hidden lg:flex w-[26rem]"
+      >
+        <FloatingCard>{Content}</FloatingCard>
+      </FloatingWrapper>
     </>
   )
 }
@@ -167,21 +208,20 @@ const FloatingBar3 = ({ show }: { show: boolean }) => {
     <>
       <div className="flex-1">
         <div className="flex items-center gap-1">
-            <div
+          <div
             className={cn(
-                "w-3 h-3 rounded-full flex-shrink-0",
-                isOnline ? "bg-green-500" : "bg-red-500"
+              "w-3 h-3 rounded-full flex-shrink-0",
+              isOnline ? "bg-green-500" : "bg-red-500"
             )}
-            />
-            <p className="font-inter font-extra-bold !text-[1rem] ml-1.5 ">
+          />
+          <p className="font-inter font-extra-bold !text-[1rem] ml-1.5">
             {status}
-            </p>
+          </p>
         </div>
-
-            <p className="font-inter font-black !text-[0.7rem] letter-spacing-[-0.03em] truncate-none">
-                8:00 AM - 08:00 PM CST
-            </p>
-        </div>
+        <p className="font-inter font-black !text-[0.7rem] letter-spacing-[-0.03em] truncate-none">
+          8:00 AM - 08:00 PM CST
+        </p>
+      </div>
 
       <Button variant="primary" size="floating">
         Chat with Concierge
@@ -210,12 +250,12 @@ const FloatingBar3 = ({ show }: { show: boolean }) => {
       </FloatingWrapper>
 
       {/* Desktop */}
-        <FloatingWrapper
-            show={true}
-            className="bottom-20 right-20 hidden lg:flex w-[26rem]"
-          >
-            <FloatingCard>{Content}</FloatingCard>
-        </FloatingWrapper>
+      <FloatingWrapper
+        show={true}
+        className="bottom-20 right-20 hidden lg:flex w-[26rem]"
+      >
+        <FloatingCard>{Content}</FloatingCard>
+      </FloatingWrapper>
     </>
   )
 }
@@ -228,8 +268,7 @@ export const FloatingBar = () => {
   const pathname = usePathname()
   const { scrollDirection, scrollY } = useScrollDirection()
 
-  const showFloatingBar =
-    scrollY > 50 && scrollDirection === "down"
+  const showFloatingBar = scrollY > 50 && scrollDirection === "down"
 
   const isProduct = pathname.includes("/product")
   const isContact = pathname.includes("/contact")

@@ -1,23 +1,22 @@
 {
   "hero": {
-    "title": "The Classic Journey",
-    "subtitle": "Shared Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
+    "title": "The Transport Package",
+    "subtitle": "Round-Trip from CDMX | Shared or Private | 🇬🇧 British Safety Standards"
   },
   "rating": {
-    "score": 4.9,
-    "reviewsCount": "230 evaluaciones"
+    "score": 4.7,
+    "reviewsCount": "201 reviews"
   },
   "description": {
-    "title": "Experience the Magic of Shared Flight",
-    "paragraph": "Join a select group of fellow adventurers for a morning where strangers become friends. Unlike standard \"open\" baskets where guests are crowded together, Flying Pictures uses Cameron Balloons Compartmented Baskets. What does this mean for you? Even in a shared flight, you have your own protected corner of the sky. No fighting for a view, just shared awe."
+    "title": "Stress-Free from Door to Sky",
+    "paragraph": "Forget the 5 AM drive. Our transport package picks you up directly from Mexico City and delivers you to the launch field — relaxed, on time, and ready to fly. Choose shared or private transfer and let us handle the logistics while you watch the sun rise from the window. Your adventure starts the moment you step into the van."
   },
-
   "itinerary": {
     "title": "What you'll do",
     "steps": [
       {
-        "title": "5:00 AM - Arrive & Caheck-in",
-        "description": "You’ll arrive at Flying Pictures Reception and we will recieve you to help you check-in and loremipsum."
+        "title": "5:00 AM - Arrive & Check-in",
+        "description": "You'll arrive at Flying Pictures Reception and we will receive you to help you check-in and loremipsum."
       },
       {
         "title": "Welcome & Coffee Break",
@@ -37,11 +36,10 @@
       }
     ]
   },
-  
-  "pricing": {
-      "adults": 2799,
-      "kids": 2299
-    }
+   "pricing": {
+    "adults": "Adults",
+    "kids": "kids (4-12)",
+    "priceAdults": "3,099 MXN",
+    "priceKids": "2,499 MXN"
+  }
 }
-
- 

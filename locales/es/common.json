@@ -1,27 +1,33 @@
 {
   "nav": {
-    "planYourVisit": "Planifica tu visita",
-    "flightExperiences": "Experiencias de vuelo",
-    "safetyHeritage": "Seguridad y tradición",
-    "contactSupport": "Contacto y soporte",
-    "language": "Idioma",
-    "bookFlight": "Reservar vuelo",
-    "shared": "Vuelo compartido",
-    "private": "Vuelo privado",
-    "vip": "VIP y tours",
+    "shared": "Vuelo Compartido",
+    "private": "Vuelo Privado",
     "proposals": "Propuestas",
     "groups": "Grupos",
-    "talkExpert": "Habla con un experto"
+    "planYourVisit": "Planea tu visita",
+    "flightExperiences": "Experiencias de Vuelo",
+    "safetyHeritage": "Seguridad y Herencia",
+    "contactSupport": "Contacto y Soporte",
+    "language": "Idioma",
+    "bookFlight": "Reservar Vuelo",
+    "talkExpert": "Habla con un experto",
+    "classic": "Viaje Clásico",
+    "journey": "El Viaje",
+    "vip": "Experiencia VIP",
+    "proposal": "Vuelo de Propuesta",
+    "anniversary": "Vuelo de Aniversario",
+    "birthday": "Vuelo de Cumpleaños",
+    "corporate": "Experiencia Corporativa",
+    "open": "Vuelo Abierto",
+    "transport": "Paquete con Transporte"
   },
-
   "banner": {
-    "company": "UNA EMPRESA DE AVIACIÓN - LLÁMANOS"
+    "company": "UNA COMPAÑÍA DE AVIACIÓN - LLÁMANOS"
   },
-
   "footer": {
-    "description": "Una empresa de aviación galardonada. El principal proveedor de vuelos en globo aerostático en Teotihuacán. Operando orgullosamente con Cameron Balloons UK desde 1992.",
-    "termsConditions": "Términos y condiciones",
-    "privacyPolicy": "Política de privacidad",
-    "cancellations": "Política de cancelación"
+    "description": "Una compañía de aviación galardonada. El proveedor líder de vuelos en globo aerostático en Teotihuacán. Operando orgullosamente Cameron Balloons UK desde 1992.",
+    "termsConditions": "Términos y Condiciones",
+    "privacyPolicy": "Política de Privacidad",
+    "cancellations": "Política de Cancelación"
   }
 }

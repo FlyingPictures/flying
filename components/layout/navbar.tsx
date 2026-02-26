@@ -17,11 +17,17 @@ import { useLocale, useTranslations } from 'next-intl'
 import { cn } from "@/lib/utils"
 
 const CONTACT = { PHONE: "+525558025-1057", DISPLAY: "(+52) 55 8025-1057" } as const
+
 const EXPERIENCES = [
-  { id: "shared", href: "/shared-flight" },
-  { id: "private", href: "/private-flight" },
-  { id: "proposals", href: "/proposals" },
-  { id: "groups", href: "/groups" },
+  { id: "classic",     href: "/product/classic" },
+  { id: "journey",     href: "/product/journey" },
+  { id: "vip",         href: "/product/vip" },
+  { id: "proposal",    href: "/product/proposal" },
+  { id: "anniversary", href: "/product/anniversary" },
+  { id: "birthday",    href: "/product/birthday" },
+  { id: "corporate",   href: "/product/corporate" },
+  { id: "open",        href: "/product/open" },
+  { id: "transport",   href: "/product/transport" },
 ] as const
 
 const NavLink = ({ id, href, className = "", onClick }: { id: string; href: string; className?: string; onClick?: () => void }) => {
@@ -79,22 +85,21 @@ export default function Navbar() {
   }
 
   useEffect(() => {
-  if (isScrollingDown && isMenuOpen) {
-    const id = setTimeout(() => setIsMenuOpen(false), 0)
+    if (isScrollingDown && isMenuOpen) {
+      const id = setTimeout(() => setIsMenuOpen(false), 0)
+      return () => {
+        clearTimeout(id)
+        if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current)
+      }
+    }
     return () => {
-      clearTimeout(id)
       if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current)
     }
-  }
-  return () => {
-    if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current)
-  }
-}, [isScrollingDown, isMenuOpen])
+  }, [isScrollingDown, isMenuOpen])
 
   return (
     <>
-      {/* DESKTOP */}
-      <header className={cn("hidden lg:flex flex-col items-center z-50 fixed top-0 w-full transition-transform duration-500", !isHeaderVisible && "-translate-y-[11rem]")}>
+      <header className={cn("hidden lg:flex flex-col items-center z-50 fixed top-0 w-full transition-transform duration-500", !isHeaderVisible && "-translate-y-44")}>
         <HeaderBanner />
         <div className="w-[95%] max-w-[92rem] mt-4">
           <nav className="relative bg-background h-[5.125rem] rounded-2xl shadow-2xl flex items-center justify-between px-8">
@@ -130,7 +135,6 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* MOBILE */}
       <header className={cn("lg:hidden fixed top-0 inset-x-0 z-50 transition-transform duration-500", isHeaderHidden && "-translate-y-[8rem]")}>
         <HeaderBanner />
         <nav className="relative h-[4.5rem] bg-surface px-6 flex items-center justify-between shadow-md">

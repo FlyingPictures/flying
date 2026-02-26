@@ -1,23 +1,22 @@
 {
   "hero": {
-    "title": "The Classic Journey",
-    "subtitle": "Shared Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
+    "title": "The Anniversary Flight",
+    "subtitle": "Private Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
   },
   "rating": {
     "score": 4.9,
-    "reviewsCount": "230 evaluaciones"
+    "reviewsCount": "98 reviews"
   },
   "description": {
-    "title": "Experience the Magic of Shared Flight",
-    "paragraph": "Join a select group of fellow adventurers for a morning where strangers become friends. Unlike standard \"open\" baskets where guests are crowded together, Flying Pictures uses Cameron Balloons Compartmented Baskets. What does this mean for you? Even in a shared flight, you have your own protected corner of the sky. No fighting for a view, just shared awe."
+    "title": "Celebrate Your Story Above the Clouds",
+    "paragraph": "Some moments deserve more than a dinner reservation. Float above the ancient pyramids of Teotihuacán at sunrise with the person who means everything. A private basket, a sparkling toast at 2,000 meters, and a view that no restaurant can match. Flying Pictures turns your anniversary into a story you'll tell for the rest of your lives."
   },
-
   "itinerary": {
     "title": "What you'll do",
     "steps": [
       {
-        "title": "5:00 AM - Arrive & Caheck-in",
-        "description": "You’ll arrive at Flying Pictures Reception and we will recieve you to help you check-in and loremipsum."
+        "title": "5:00 AM - Arrive & Check-in",
+        "description": "You'll arrive at Flying Pictures Reception and we will receive you to help you check-in and loremipsum."
       },
       {
         "title": "Welcome & Coffee Break",
@@ -37,11 +36,10 @@
       }
     ]
   },
-  
-  "pricing": {
-      "adults": 2799,
-      "kids": 2299
+    "pricing": {
+      "adults": "Adults",
+      "kids": "kids (4-12)",
+      "priceAdults": "3,499 MXN",
+      "priceKids": "2,899 MXN"
     }
 }
-
- 

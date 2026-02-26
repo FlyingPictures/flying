@@ -99,10 +99,13 @@
   },
 
   "reviews": {
+    "tittle": "Reviews",
     "readRealReviews": "READ REAL REVIEWS",
     "dontJustTakeOurWord": "Don't just take our word for it",
     "readMoreReviews": "Read More Reviews",
     "outOf5Stars": "out of 5 stars",
+    "averageRating": "4.96",
+    "totalReviews": "230 reviews",
     "items": [
       {
         "id": 1,
@@ -127,6 +130,14 @@
         "quote": "Everything was smooth",
         "text": "The reception was warm (coffee and heaters for the cold morning!), and the pilot totally nailed the beautiful views.",
         "avatarIndex": 2
+      },
+      {
+        "id": 4,
+        "name": "Emily R.",
+        "location": "United States",
+        "quote": "A magical experience",
+        "text": "The flight was smooth, and the views were breathtaking. The team was professional and made us feel safe throughout the entire experience.",
+        "avatarIndex": 3
       }
     ]
   },

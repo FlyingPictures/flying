@@ -1,25 +1,31 @@
 {
-"nav": {
+  "nav": {
+    "shared": "Shared Flight",
+    "private": "Private Flight",
+    "proposals": "Proposals",
+    "groups": "Groups",
     "planYourVisit": "Plan your visit",
     "flightExperiences": "Flight Experiences",
     "safetyHeritage": "Safety & Heritage",
     "contactSupport": "Contact & Support",
     "language": "Language",
     "bookFlight": "Book Flight",
-    "shared": "Shared Flight",
-    "private": "Private Flight",
-    "vip": "VIP & Tours",
-    "proposals": "Proposals",
-    "groups": "Groups",
-    "talkExpert": "Talk to an expert"
+    "talkExpert": "Talk to an expert",
+    "classic": "Classic Journey",
+    "journey": "The Journey",
+    "vip": "VIP Experience",
+    "proposal": "Proposal Flight",
+    "anniversary": "Anniversary Flight",
+    "birthday": "Birthday Flight",
+    "corporate": "Corporate Experience",
+    "open": "Open Flight",
+    "transport": "Transport Package"
   },
-
   "banner": {
     "company": "AN AVIATION COMPANY - CALL US"
   },
-
   "footer": {
-    "description": "An award-winning Aviation Company. The premier provider of hot air balloon flights in TeotihuacÃ¡n. Proudly operating Cameron Balloons UK since 1992.",
+    "description": "An award-winning Aviation Company. The premier provider of hot air balloon flights in Teotihuacán. Proudly operating Cameron Balloons UK since 1992.",
     "termsConditions": "Terms & Conditions",
     "privacyPolicy": "Privacy Policy",
     "cancellations": "Cancellation Policy"

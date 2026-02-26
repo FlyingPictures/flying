@@ -1,23 +1,22 @@
 {
   "hero": {
-    "title": "The Classic Journey",
-    "subtitle": "Shared Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
+    "title": "The Open Flight",
+    "subtitle": "Open Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
   },
   "rating": {
-    "score": 4.9,
-    "reviewsCount": "230 evaluaciones"
+    "score": 4.8,
+    "reviewsCount": "156 reviews"
   },
   "description": {
-    "title": "Experience the Magic of Shared Flight",
-    "paragraph": "Join a select group of fellow adventurers for a morning where strangers become friends. Unlike standard \"open\" baskets where guests are crowded together, Flying Pictures uses Cameron Balloons Compartmented Baskets. What does this mean for you? Even in a shared flight, you have your own protected corner of the sky. No fighting for a view, just shared awe."
+    "title": "Share the Sky with Fellow Adventurers",
+    "paragraph": "The Open Flight is the perfect introduction to hot air ballooning. Join a diverse group of adventurers from around the world for a sunrise flight over the Valley of Teotihuacán. An open basket means you share the wonder with new faces — and by the time you land, they won't feel like strangers anymore. The best stories start with a leap of faith at 5 AM."
   },
-
   "itinerary": {
     "title": "What you'll do",
     "steps": [
       {
-        "title": "5:00 AM - Arrive & Caheck-in",
-        "description": "You’ll arrive at Flying Pictures Reception and we will recieve you to help you check-in and loremipsum."
+        "title": "5:00 AM - Arrive & Check-in",
+        "description": "You'll arrive at Flying Pictures Reception and we will receive you to help you check-in and loremipsum."
       },
       {
         "title": "Welcome & Coffee Break",
@@ -37,11 +36,10 @@
       }
     ]
   },
-  
-  "pricing": {
-      "adults": 2799,
-      "kids": 2299
-    }
+   "pricing": {
+    "adults": "Adults",
+    "kids": "kids (4-12)",
+    "priceAdults": "2,199 MXN",
+    "priceKids": "1,799 MXN"
+  }
 }
-
- 
