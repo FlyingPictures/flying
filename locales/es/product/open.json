@@ -37,6 +37,7 @@
     ]
   },
   "pricing": {
+    "dates": "Ver Fechas",
     "adults": "Adultos",
     "kids": "Niños (4-12)",
     "priceAdults": "2,199 MXN",

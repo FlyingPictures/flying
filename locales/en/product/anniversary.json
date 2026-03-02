@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "The Anniversary Flight",
+    "title": "The Anniversary",
     "subtitle": "Private Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
   },
   "rating": {
@@ -37,9 +37,10 @@
     ]
   },
     "pricing": {
+      "dates": "See Dates",
       "adults": "Adults",
       "kids": "kids (4-12)",
-      "priceAdults": "3,499 MXN",
+      "priceAdults": "9,499 MXN",
       "priceKids": "2,899 MXN"
     }
 }

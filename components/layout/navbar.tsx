@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useRef } from "react"
 import { Link, usePathname, useRouter } from "@/i18n/routing"
-import { Logo } from "@/components/logo"
+import { CloudinaryImage } from "@/components/CloudinaryImage"
+import { IMAGES } from "@/lib/images"
 import { Button } from "@/components/ui/button"
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
@@ -103,8 +104,19 @@ export default function Navbar() {
         <HeaderBanner />
         <div className="w-[95%] max-w-[92rem] mt-4">
           <nav className="relative bg-background h-[5.125rem] rounded-2xl shadow-2xl flex items-center justify-between px-8">
-            <Link href="/" className="absolute left-1/2 -translate-x-1/2 top-0 z-20 w-[4.75rem] h-24"><Logo className="w-full h-full" /></Link>
-            
+            <Link
+              href="/"
+              className="absolute left-1/2 -translate-x-1/2 top-0 z-20 w-[4.75rem] h-24"
+            >
+              <CloudinaryImage
+                publicId={IMAGES.home.Navbar.logo}
+                alt="Logo"
+                width={200}
+                height={200}
+                className="w-full h-full object-contain"
+              />
+            </Link>
+
             <div className="flex flex-1 items-center gap-8">
               <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="h-full flex items-center">
                 <DropdownMenu.Root open={isMenuOpen} onOpenChange={setIsMenuOpen} modal={false}>
@@ -138,15 +150,27 @@ export default function Navbar() {
       <header className={cn("lg:hidden fixed top-0 inset-x-0 z-50 transition-transform duration-500", isHeaderHidden && "-translate-y-[8rem]")}>
         <HeaderBanner />
         <nav className="relative h-[4.5rem] bg-surface px-6 flex items-center justify-between shadow-md">
-          <Link href="/" onClick={() => setIsSheetOpen(false)} className="absolute top-0 left-6 z-10"><Logo className="w-[3.875rem] h-[4.875rem]" /></Link>
+          <Link
+            href="/"
+            onClick={() => setIsSheetOpen(false)}
+            className="absolute top-0 left-6 z-10 w-[3.875rem] h-[4.875rem]"
+          >
+            <CloudinaryImage
+              publicId={IMAGES.home.Navbar.logo}
+              alt="Logo"
+              width={200}
+              height={200}
+              className="w-full h-full object-contain"
+            />
+          </Link>
           <div className="flex items-center gap-3 ml-auto">
             <BookButton />
             <SheetPrimitive.Root open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetPrimitive.Trigger asChild><button className="p-1 outline-none"><EqualsIcon size={32} weight="bold" /></button></SheetPrimitive.Trigger>
               <SheetPrimitive.Portal>
-                <SheetPrimitive.Content className="fixed inset-y-0 right-0 z-[60] w-full bg-surface flex flex-col shadow-xl">
+                <SheetPrimitive.Content className="fixed inset-y-0 right-0 z-60 w-full bg-surface flex flex-col shadow-xl">
                   <SheetPrimitive.Title className="sr-only">{t("flightExperiences")}</SheetPrimitive.Title>
-                  <div className="relative h-[10rem] flex items-center justify-between px-6 before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[90%] before:border-b before:content-['']">
+                  <div className="relative h-40 flex items-center justify-between px-6 before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[90%] before:border-b before:content-['']">
                     <BookButton />
                     <SheetPrimitive.Close className="rounded-full size-10 flex items-center justify-center"><XIcon size={24} weight="bold" /></SheetPrimitive.Close>
                   </div>

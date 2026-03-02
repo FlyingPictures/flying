@@ -43,5 +43,6 @@ export interface ProductTranslation {
   kids: string
   priceAdults: string
   priceKids: string
+  dates: string
   };
 }

@@ -35,8 +35,8 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
       kids: data.pricing.kids,
       priceAdults: data.pricing.priceAdults,
       priceKids: data.pricing.priceKids,
+      dates: data.pricing.dates,
     });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
 
   const prev = useCallback(
@@ -127,7 +127,6 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
         </div>
       </div>
 
-      {/* Fullscreen carousel */}
       {carouselIndex !== null && (
         <div className="fixed inset-0 z-50 bg-background flex flex-col">
           <div className="flex items-center justify-between px-6 py-4">
@@ -139,12 +138,20 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
             </button>
           </div>
 
-          <div className="flex-1 flex items-center justify-center relative px-16">
-            <button onClick={prev} className="absolute left-4 text-secondary/80 hover:text-secondary/90 transition-colors">
+          <div className="flex-1 flex items-center justify-center relative px-4 lg:px-16">
+            <button onClick={prev} className="hidden lg:block absolute left-4 text-secondary/80 hover:text-secondary/90 transition-colors">
               <ChevronLeft size={40} />
             </button>
 
-            <div className="relative w-full max-w-3xl h-full max-h-[80vh] rounded-(--radius) overflow-hidden">
+            <div
+              className="relative w-full max-w-3xl h-full max-h-[80vh] rounded-(--radius) overflow-hidden mx-4 lg:mx-auto"
+              onTouchStart={(e) => e.currentTarget.dataset.touchX = String(e.touches[0].clientX)}
+              onTouchEnd={(e) => {
+                const startX = Number(e.currentTarget.dataset.touchX)
+                const diff = startX - e.changedTouches[0].clientX
+                if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
+              }}
+            >
               <Image
                 src={cloudinaryUrl(images[carouselIndex], 1200)}
                 alt={`Photo ${carouselIndex + 1}`}
@@ -154,7 +161,7 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
               />
             </div>
 
-            <button onClick={next} className="absolute right-4 text-secondary/80 hover:text-secondary/90 transition-colors">
+            <button onClick={next} className="hidden lg:block absolute right-4 text-secondary/80 hover:text-secondary/90 transition-colors">
               <ChevronRight size={40} />
             </button>
           </div>

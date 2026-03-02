@@ -36,6 +36,18 @@ const getOnlineStatus = () => {
     : "Offline"
 }
 
+const BOOKING_URLS: Record<string, string> = {
+  classic: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/Dz8p",
+  journey: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/E7Ro",
+  transport: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/lwxwj",
+  open: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/Exzbg",
+  proposal: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/YxVm",
+  anniversary: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/Yx28",
+  birthday: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/B8xN",
+  vip: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/Exzbg",
+  corporate: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/lwxwj",
+}
+
 /* ===================================== */
 /* PRICING CONTEXT */
 /* ===================================== */
@@ -45,6 +57,7 @@ interface PricingData {
   kids: string
   priceAdults: string
   priceKids: string
+  dates?: string
 }
 
 interface PricingContextValue extends PricingData {
@@ -55,6 +68,7 @@ const PricingContext = createContext<PricingContextValue | null>(null)
 
 export const PricingProvider = ({ children }: { children: React.ReactNode }) => {
   const [pricing, setPricing] = useState<PricingData>({
+    dates: "",
     adults: "",
     kids: "",
     priceAdults: "",
@@ -101,7 +115,7 @@ const FloatingWrapper = ({
 /* ===================================== */
 
 const FloatingCard = ({ children }: { children: React.ReactNode }) => (
-  <div className="w-full max-w-[26rem] bg-surface rounded-card p-3 flex items-center gap-3 shadow-xl">
+  <div className="w-full max-w-104 bg-background rounded-(--radius) p-3 flex items-center gap-3 shadow-xl">
     {children}
   </div>
 )
@@ -147,27 +161,32 @@ const FloatingBar1 = ({ show }: { show: boolean }) => {
 
 const FloatingBar2 = ({ show }: { show: boolean }) => {
   const pricing = usePricing()
+  const pathname = usePathname()
+
+  const slug = pathname.split("/").pop() ?? ""
+  const bookingUrl = BOOKING_URLS[slug] ?? "#"
 
   const Content = (
     <>
-      <div className="flex-1 flex flex-col gap-1">
-        <div className="font-inter text-sm">
+      <div className="flex-1 flex flex-col text-sm lg:text-lg min-w-0">
+        <div className="whitespace-nowrap">
           <span className="font-bold">{pricing?.adults}</span> {pricing?.priceAdults}
         </div>
-        <div className="font-inter text-sm">
+        <div className="whitespace-nowrap">
           <span className="font-bold">{pricing?.kids}</span> {pricing?.priceKids}
         </div>
       </div>
 
-      <Button variant="primary" size="sm">
-        See Dates
+      <Button
+        variant="primary"
+        size="xs"
+        className="whitespace-nowrap shrink-0"
+        onClick={() => window.open(bookingUrl, "_blank")}
+      >
+        {pricing?.dates}
       </Button>
 
-      <a
-        href={CONTACT.WHATSAPP}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={CONTACT.WHATSAPP} target="_blank" rel="noopener noreferrer">
         <Button variant="ghost" size="floating" className="rounded-full">
           <WhatsappLogoIcon size={35} weight="bold" />
         </Button>
@@ -175,20 +194,18 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
     </>
   )
 
-  return (
+    return (
     <>
-      {/* Mobile */}
       <FloatingWrapper
         show={show}
-        className="bottom-6 inset-x-0 flex justify-center px-4 lg:hidden"
+        className="bottom-6 inset-x-0 flex justify-center px-2 md:hidden"
       >
         <FloatingCard>{Content}</FloatingCard>
       </FloatingWrapper>
 
-      {/* Desktop */}
       <FloatingWrapper
         show={show}
-        className="bottom-40 right-20 hidden lg:flex w-[26rem]"
+        className="bottom-40 right-20 hidden md:flex w-104"
       >
         <FloatingCard>{Content}</FloatingCard>
       </FloatingWrapper>
@@ -210,17 +227,17 @@ const FloatingBar3 = ({ show }: { show: boolean }) => {
         <div className="flex items-center gap-1">
           <div
             className={cn(
-              "w-3 h-3 rounded-full flex-shrink-0",
+              "w-3 h-3 rounded-full shrink-0",
               isOnline ? "bg-green-500" : "bg-red-500"
             )}
           />
-          <p className="font-inter font-extra-bold !text-[1rem] ml-1.5">
+          <span className="font-bold lg:text-lg text-sm">
             {status}
-          </p>
+          </span>
         </div>
-        <p className="font-inter font-black !text-[0.7rem] letter-spacing-[-0.03em] truncate-none">
+        <span className="lg:text-md text-xs ">
           8:00 AM - 08:00 PM CST
-        </p>
+        </span>
       </div>
 
       <Button variant="primary" size="floating">
@@ -239,20 +256,18 @@ const FloatingBar3 = ({ show }: { show: boolean }) => {
     </>
   )
 
-  return (
+   return (
     <>
-      {/* Mobile */}
       <FloatingWrapper
         show={show}
-        className="bottom-6 inset-x-0 flex justify-center px-4 lg:hidden"
+        className="bottom-6 inset-x-0 flex justify-center px-2 md:hidden"
       >
         <FloatingCard>{Content}</FloatingCard>
       </FloatingWrapper>
 
-      {/* Desktop */}
       <FloatingWrapper
-        show={true}
-        className="bottom-20 right-20 hidden lg:flex w-[26rem]"
+        show={show}
+        className="bottom-40 right-20 hidden md:flex w-104"
       >
         <FloatingCard>{Content}</FloatingCard>
       </FloatingWrapper>

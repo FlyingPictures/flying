@@ -4,6 +4,8 @@ const CLOUD_NAME =
 export function cloudinaryUrl(publicId: string, width?: number): string {
   if (!publicId) return '';
 
+  const cleanId = publicId.replace(/^v\d+\//, '');
+
   const transforms = [
     'f_auto',
     'q_auto:best',
@@ -13,5 +15,5 @@ export function cloudinaryUrl(publicId: string, width?: number): string {
     .filter(Boolean)
     .join(',');
 
-  return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/${transforms}/${publicId}`;
+  return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/${transforms}/${cleanId}`;
 }
