@@ -46,16 +46,20 @@ export async function SafetyMeetGiants() {
 
         <MobileLabel title={t('subtitle')} desc={t('description2')} />
 
-        <div className="flex flex-col md:flex-row gap-x-[clamp(16px,4.72vw,68px)] gap-y-10 md:gap-y-0 w-full max-w-[1231px]">
+        <div className="flex flex-col md:flex-row gap-x-[clamp(16px,4.72vw,68px)] gap-y-8 md:gap-y-0 w-full max-w-[1231px]">
           <BalloonCard image={images[0]} card={cards['1']} />
           <MobileLabel title={t('subtitle2')} desc={t('description3')} />
           <BalloonCard image={images[1]} card={cards['2']} />
-          <BalloonCard image={images[2]} card={cards['3']} />
+          <BalloonCard
+  image={images[2]}
+  card={cards['3']}
+  className="mt-12 md:mt-0"
+/>
         </div>
       </div>
 
       {/* LEGACY BANNER */}
-      <div className="flex flex-col gap-6 max-w-[1220px] w-full mx-auto pb-[clamp(40px,5vw,80px)]">
+      <div className="flex flex-col gap-16 md:gap-6 max-w-305 w-full mx-auto pb-[clamp(40px,5vw,80px)] mt-8 md:mt-0">
         <div className="flex flex-col gap-2 text-center lg:text-left">
           <h4 className="text-background">{banner.title}</h4>
           <span className={`${DECORATIVE} text-xl leading-[30px] text-background`}>{banner.subtitle}</span>
@@ -94,21 +98,51 @@ function MobileLabel({ title, desc }: { title: string; desc: string }) {
   )
 }
 
-function BalloonCard({ image, card }: { image: string; card: { name: string; subname: string; description: string; capacity: string; mission: string } }) {
+function BalloonCard({
+  image,
+  card,
+  className = "",
+}: {
+  image: string
+  card: {
+    name: string
+    subname: string
+    description: string
+    capacity: string
+    mission: string
+  }
+  className?: string
+}) {
   return (
-    <div className="flex flex-col gap-6 w-full md:flex-1">
+    <div className={`flex flex-col gap-6 w-full md:flex-1 ${className}`}>
       <div className="relative w-full h-[437px] rounded-[22px] overflow-hidden shrink-0">
         <CloudinaryImage publicId={image} alt={card.name} fill className="object-cover object-center" />
-        <div className="absolute inset-0 flex flex-col justify-end p-[clamp(1rem,2.22vw,2rem)] gap-2" style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.65) 100%)' }}>
-          <span className={`font-['Libre_Baskerville'] italic tracking-[-0.03em] text-2xl text-background`}>{card.name}</span>
-          <span className="text-background text-sm font-medium">{card.subname}</span>
+        <div
+          className="absolute inset-0 flex flex-col justify-end p-[clamp(1rem,2.22vw,2rem)] gap-2"
+          style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.65) 100%)' }}
+        >
+          <span className={`font-['Libre_Baskerville'] italic tracking-[-0.03em] text-2xl text-background`}>
+            {card.name}
+          </span>
+          <span className="text-background text-sm font-medium">
+            {card.subname}
+          </span>
         </div>
       </div>
-      <span className="text-background text-sm leading-5">{card.description}</span>
+
+      <span className="text-background text-sm leading-5">
+        {card.description}
+      </span>
+
       <div className="flex flex-col gap-3 text-background text-sm leading-5">
-        {[{ icon: <PersonIcon />, text: card.capacity }, { icon: <TargetIcon />, text: card.mission }].map(({ icon, text }, i) => (
-          <div key={i} className="flex items-center gap-3">{icon}<span>{text}</span></div>
-        ))}
+        {[{ icon: <PersonIcon />, text: card.capacity }, { icon: <TargetIcon />, text: card.mission }].map(
+          ({ icon, text }, i) => (
+            <div key={i} className="flex items-center gap-3">
+              {icon}
+              <span>{text}</span>
+            </div>
+          )
+        )}
       </div>
     </div>
   )

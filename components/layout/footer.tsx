@@ -90,8 +90,8 @@ export async function Footer({ translations }: FooterProps) {
 
         <div className="hidden md:block md:col-span-1" />
         <div className="col-span-2 md:col-span-2">
-          <p className={TITLE_CLASSES}>Legal</p>
-          <nav className="flex flex-col">
+          <span className={TITLE_CLASSES}>Legal</span>
+          <nav className="flex flex-col mt-8">
             <Link href="/legal/terms" className={LINK_CLASSES}>
               {translations.termsConditions}
             </Link>

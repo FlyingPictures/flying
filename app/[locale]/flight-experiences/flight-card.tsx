@@ -123,7 +123,7 @@ function FlightCard({
         </span>
 
         <div className="flex items-center gap-2 text-muted-foreground text-md font-medium">
-          <span className="text-2xl">★</span>
+          <span className="text-xl">★</span>
           <span>{t(`ratings.${id}`)}</span>
         </div>
       </div>

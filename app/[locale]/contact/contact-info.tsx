@@ -21,21 +21,21 @@ export function ContactInfo() {
   const phoneNumber = t("phoneNumber").replace(/\D/g, "")
 
   const handleSubmit = () => {
-    if (!company || !groupSize || !date || !invoice) return
+    if (!company || !groupSize || !date) return
 
     const message = `
-Corporate Inquiry
+      Corporate Inquiry
 
-Company Name: ${company}
-Group Size: ${groupSize}
-Date of Event: ${date}
-Requires Invoice: ${invoice ? "Yes" : "No"}
-`
+      Company Name: ${company}
+      Group Size: ${groupSize}
+      Date of Event: ${date}
+      ${invoice ? "Requires Invoice: Yes" : ""}
+      `
     const encoded = encodeURIComponent(message)
     window.open(`https://wa.me/${phoneNumber}?text=${encoded}`, "_blank")
   }
 
-  const isDisabled = !company || !groupSize || !date || !invoice
+  const isDisabled = !company || !groupSize || !date
 
   return (
     <section className="relative w-full lg:h-265 py-12 overflow-hidden">
