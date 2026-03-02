@@ -24,7 +24,7 @@ export const IMAGES = {
     flightExperience: {
       background: "flightexp_kisynt",
       flights: {
-        shared: "pydq5z",
+        shared: "toggle1_pydq5z",
         private: "toggle2_dasi0j",
         vip: "toggle3_fd1suy",
       },
