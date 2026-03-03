@@ -8,8 +8,6 @@ import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { IMAGES } from '@/lib/images'
 
-// ─── Types & Constants ────────────────────────────────────────────────────────
-
 type TabKey = 'shared' | 'private' | 'vip'
 
 const TABS: TabKey[] = ['shared', 'private', 'vip']
@@ -19,9 +17,6 @@ const ALL_FLIGHTS = [
   { id: 2, cat: 'private' as TabKey, image: IMAGES.home.flightExperience.flights.private },
   { id: 3, cat: 'vip' as TabKey, image: IMAGES.home.flightExperience.flights.vip },
 ]
-
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-
 const getClosestCardIndex = (container: HTMLElement): number => {
   const containerCenter = container.scrollLeft + container.offsetWidth / 2
   const cards = container.querySelectorAll<HTMLElement>('[data-slide]')
@@ -54,8 +49,6 @@ const scrollToIndex = (container: HTMLElement, index: number, smooth = true) => 
   })
 }
 
-// ─── Hook: Pill Indicator ─────────────────────────────────────────────────────
-
 function usePillIndicator(activeFilter: TabKey) {
   const pillRef = useRef<HTMLDivElement | null>(null)
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 })
@@ -76,8 +69,6 @@ function usePillIndicator(activeFilter: TabKey) {
 
   return { pillRef, indicatorStyle }
 }
-
-// ─── Hook: Mouse Drag ─────────────────────────────────────────────────────────
 
 function useMouseDrag(
   scrollRef: React.RefObject<HTMLDivElement | null>,
@@ -109,7 +100,6 @@ function useMouseDrag(
     if (!drag.current.active) return
     drag.current.active = false
     const el = scrollRef.current
-    // Reactivar scroll-snap al soltar
     if (el) el.style.scrollSnapType = 'x mandatory'
     document.body.style.userSelect = ''
     document.body.style.cursor = ''
@@ -132,26 +122,20 @@ function useMouseDrag(
   return { onMouseDown, onMouseMove, onMouseUp, onClickCapture }
 }
 
-// ─── Component ────────────────────────────────────────────────────────────────
-
 export function FlightExperienceSection() {
   const t = useTranslations('FlightExperience')
   const [activeFilter, setActiveFilter] = useState<TabKey>('private')
   const scrollRef = useRef<HTMLDivElement>(null)
   const { pillRef, indicatorStyle } = usePillIndicator(activeFilter)
 
-  // ── FIX: flag para silenciar el scroll listener durante scrolls programáticos
   const isProgrammaticScroll = useRef(false)
 
-  // Initial scroll: center on 'private' (index 1) without animation
   useLayoutEffect(() => {
     const container = scrollRef.current
     if (!container) return
     scrollToIndex(container, 1, false)
   }, [])
 
-  // Sync active tab only when scroll fully settles
-  // Uses native 'scrollend' where available, falls back to debounce (150ms)
   useEffect(() => {
     const container = scrollRef.current
     if (!container) return
@@ -172,7 +156,7 @@ export function FlightExperienceSection() {
       let timeout: ReturnType<typeof setTimeout>
       const handleScroll = () => {
         clearTimeout(timeout)
-        timeout = setTimeout(syncPill, 150)
+        timeout = setTimeout(syncPill)
       }
       container.addEventListener('scroll', handleScroll, { passive: true })
       return () => {
@@ -181,8 +165,6 @@ export function FlightExperienceSection() {
       }
     }
   }, [])
-
-  // Snap to closest card after mouse drag ends
   const snapToClosest = useCallback(() => {
     const container = scrollRef.current
     if (!container) return
@@ -191,8 +173,6 @@ export function FlightExperienceSection() {
 
   const dragHandlers = useMouseDrag(scrollRef, snapToClosest)
 
-  // Tab click → scroll to corresponding card
-  // Flag is reset by syncPill once scrollend (or debounce) fires
   const handleTabClick = useCallback((tab: TabKey) => {
     const container = scrollRef.current
     if (!container) return
@@ -206,7 +186,6 @@ export function FlightExperienceSection() {
       className="relative w-full overflow-visible lg:bg-none bg-[linear-gradient(to_bottom,theme(colors.background)_0%,theme(colors.background)_20%,#758C9C_60%,#7e899b_100%)]"
       style={{ height: 'clamp(2300px,250vw,2440px)' }}
     >
-      {/* Background image */}
       <div className="absolute top-0 left-0 w-full h-389 lg:inset-0 lg:h-full">
         <CloudinaryImage
           publicId={IMAGES.home.flightExperience.background}
@@ -220,7 +199,6 @@ export function FlightExperienceSection() {
 
       <div className="relative mx-auto">
 
-        {/* Header */}
         <header
           className="text-center px-6"
           style={{ paddingTop: 'clamp(55px,8vw,78px)', marginBottom: 'clamp(25px,4vw,33px)' }}
@@ -229,7 +207,6 @@ export function FlightExperienceSection() {
           <h2 className="text-foreground whitespace-pre-line max-w-229 mx-auto">{t('title')}</h2>
         </header>
 
-        {/* Tab pill selector */}
         <div className="flex justify-center mb-[clamp(24px,7vw,106px)] px-6">
           <div
             ref={pillRef}
@@ -241,7 +218,6 @@ export function FlightExperienceSection() {
               gap: '4px',
             }}
           >
-            {/* Sliding pill indicator */}
             <div
               className="absolute bg-secondary rounded-full transition-all duration-100 ease-out"
               style={{
@@ -269,7 +245,6 @@ export function FlightExperienceSection() {
           </div>
         </div>
 
-        {/* Carousel — CSS scroll-snap (mobile touch) + mouse drag (desktop) */}
         <div className="flex flex-col items-center">
           <div
             ref={scrollRef}
@@ -290,7 +265,6 @@ export function FlightExperienceSection() {
                 className="shrink-0 w-[85vw] sm:w-86 md:w-[clamp(400px,48vw,698px)] select-none flex flex-col min-h-[clamp(354px,40vw,580px)]"
                 style={{ scrollSnapAlign: 'center' }}
               >
-                {/* Card image */}
                 <div className="relative h-[clamp(232px,30vw,437px)] rounded-(--radius) overflow-hidden">
                   <CloudinaryImage
                     publicId={flight.image}
@@ -316,7 +290,6 @@ export function FlightExperienceSection() {
                   </div>
                 </div>
 
-                {/* Card description */}
                 <div className="flex flex-col items-center px-2 py-4">
                   <p className="text-center text-popover-foreground max-w-166.25 text-[clamp(14px,1.4vw,18px)] leading-relaxed whitespace-pre-line">
                     {t(`descriptions.${flight.cat}`)}
@@ -330,7 +303,6 @@ export function FlightExperienceSection() {
           </div>
         </div>
 
-        {/* Award section */}
         <div
           className="text-center px-6"
           style={{
@@ -362,11 +334,9 @@ export function FlightExperienceSection() {
         </div>
       </div>
 
-      {/* Bottom cards */}
       <div className="relative w-full px-6 pb-8 lg:absolute lg:bottom-0 lg:left-0 lg:translate-y-1/2 lg:pb-0 lg:z-20 -mt-20 lg:mt-0 z-20">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-6 max-w-308 mx-auto">
 
-          {/* Tradition card */}
           <article className="relative w-full max-w-152 h-126 lg:h-[clamp(503px,55vw,797px)] flex flex-col rounded-(--radius) overflow-hidden bg-card">
             <div className="relative h-52 lg:h-[clamp(207px,30vw,444px)]">
               <CloudinaryImage
@@ -400,7 +370,6 @@ export function FlightExperienceSection() {
             </div>
           </article>
 
-          {/* Safety card */}
           <article className="relative w-full max-w-152 h-126 lg:h-[clamp(503px,55vw,797px)] flex flex-col overflow-hidden rounded-(--radius)">
             <CloudinaryImage
               publicId={IMAGES.home.flightExperience.bottomCards.safety}
