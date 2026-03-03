@@ -140,6 +140,9 @@ export function FlightExperienceSection() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const { pillRef, indicatorStyle } = usePillIndicator(activeFilter)
 
+  // ── FIX: flag para silenciar el scroll listener durante scrolls programáticos
+  const isProgrammaticScroll = useRef(false)
+
   // Initial scroll: center on 'private' (index 1) without animation
   useLayoutEffect(() => {
     const container = scrollRef.current
@@ -153,6 +156,9 @@ export function FlightExperienceSection() {
     if (!container) return
 
     const handleScroll = () => {
+      // ── FIX: ignorar eventos de scroll disparados por código
+      if (isProgrammaticScroll.current) return
+
       const index = getClosestCardIndex(container)
       const newCat = ALL_FLIGHTS[index].cat
       setActiveFilter(prev => (prev !== newCat ? newCat : prev))
@@ -176,7 +182,12 @@ export function FlightExperienceSection() {
     const container = scrollRef.current
     if (!container) return
     setActiveFilter(tab)
+    // ── FIX: activar flag antes del scroll y desactivarlo tras la animación
+    isProgrammaticScroll.current = true
     scrollToIndex(container, ALL_FLIGHTS.findIndex(f => f.cat === tab))
+    setTimeout(() => {
+      isProgrammaticScroll.current = false
+    }, 400)
   }, [])
 
   return (
