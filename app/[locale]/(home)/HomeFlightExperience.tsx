@@ -150,21 +150,37 @@ export function FlightExperienceSection() {
     scrollToIndex(container, 1, false)
   }, [])
 
-  // Sync active tab only when scroll settles (debounced — ignores intermediate cards)
+  // Sync active tab only when scroll fully settles
+  // Uses native 'scrollend' where available, falls back to debounce (150ms)
   useEffect(() => {
-  const container = scrollRef.current
-  if (!container) return
+    const container = scrollRef.current
+    if (!container) return
 
-  const handleScroll = () => {
-    if (isProgrammaticScroll.current) return
-    const index = getClosestCardIndex(container)
-    const newCat = ALL_FLIGHTS[index].cat
-    setActiveFilter(prev => (prev !== newCat ? newCat : prev))
-  }
+    const syncPill = () => {
+      isProgrammaticScroll.current = false
+      const index = getClosestCardIndex(container)
+      const newCat = ALL_FLIGHTS[index].cat
+      setActiveFilter(prev => (prev !== newCat ? newCat : prev))
+    }
 
-  container.addEventListener('scroll', handleScroll, { passive: true })
-  return () => container.removeEventListener('scroll', handleScroll)
-}, [])
+    const supportsScrollEnd = 'onscrollend' in window
+
+    if (supportsScrollEnd) {
+      container.addEventListener('scrollend', syncPill, { passive: true })
+      return () => container.removeEventListener('scrollend', syncPill)
+    } else {
+      let timeout: ReturnType<typeof setTimeout>
+      const handleScroll = () => {
+        clearTimeout(timeout)
+        timeout = setTimeout(syncPill, 150)
+      }
+      container.addEventListener('scroll', handleScroll, { passive: true })
+      return () => {
+        container.removeEventListener('scroll', handleScroll)
+        clearTimeout(timeout)
+      }
+    }
+  }, [])
 
   // Snap to closest card after mouse drag ends
   const snapToClosest = useCallback(() => {
@@ -176,16 +192,13 @@ export function FlightExperienceSection() {
   const dragHandlers = useMouseDrag(scrollRef, snapToClosest)
 
   // Tab click → scroll to corresponding card
+  // Flag is reset by syncPill once scrollend (or debounce) fires
   const handleTabClick = useCallback((tab: TabKey) => {
     const container = scrollRef.current
     if (!container) return
     setActiveFilter(tab)
-    // ── FIX: activar flag antes del scroll y desactivarlo tras la animación
     isProgrammaticScroll.current = true
     scrollToIndex(container, ALL_FLIGHTS.findIndex(f => f.cat === tab))
-    setTimeout(() => {
-      isProgrammaticScroll.current = false
-    }, 400)
   }, [])
 
   return (
