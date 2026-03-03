@@ -150,22 +150,28 @@ export function FlightExperienceSection() {
     scrollToIndex(container, 1, false)
   }, [])
 
-  // Sync active tab when scroll settles
+  // Sync active tab only when scroll settles (debounced — ignores intermediate cards)
   useEffect(() => {
     const container = scrollRef.current
     if (!container) return
 
-    const handleScroll = () => {
-      // ── FIX: ignorar eventos de scroll disparados por código
-      if (isProgrammaticScroll.current) return
+    let timeout: ReturnType<typeof setTimeout>
 
-      const index = getClosestCardIndex(container)
-      const newCat = ALL_FLIGHTS[index].cat
-      setActiveFilter(prev => (prev !== newCat ? newCat : prev))
+    const handleScroll = () => {
+      if (isProgrammaticScroll.current) return
+      clearTimeout(timeout)
+      timeout = setTimeout(() => {
+        const index = getClosestCardIndex(container)
+        const newCat = ALL_FLIGHTS[index].cat
+        setActiveFilter(prev => (prev !== newCat ? newCat : prev))
+      }, 150)
     }
 
     container.addEventListener('scroll', handleScroll, { passive: true })
-    return () => container.removeEventListener('scroll', handleScroll)
+    return () => {
+      container.removeEventListener('scroll', handleScroll)
+      clearTimeout(timeout)
+    }
   }, [])
 
   // Snap to closest card after mouse drag ends
