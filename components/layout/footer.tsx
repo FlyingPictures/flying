@@ -50,7 +50,7 @@ export async function Footer({ translations }: FooterProps) {
         <Link href="/" className="inline-block">
           <div className="w-[clamp(62px,6vw,87px)]">
             <CloudinaryImage
-              publicId={IMAGES.home.Navbar.logo}
+              publicId={IMAGES.home.navbar.logo}
               alt="Logo"
               width={200}
               height={200}
@@ -110,6 +110,16 @@ export async function Footer({ translations }: FooterProps) {
       <div className="flex flex-col md:flex-row justify-between items-start gap-6 font-inter text-[1rem] text-background/70">
         <div className="flex flex-col gap-1">
           <p>© {new Date().getFullYear()} Flying Pictures México. All rights Reserved</p>
+          <div className="flex flex-wrap items-center gap-x-4 opacity-80 text-[0.875rem]">
+            <span>Design by Late Cosmico</span>
+            <span>•</span>
+            <div className="group cursor-default">
+              Development by{" "}
+              <span className="font-bold transition-colors duration-300 group-hover:text-background">
+                Team 3
+              </span>
+            </div>
+          </div>
         </div>
 
         <div className="text-left md:text-right flex flex-col items-start md:items-end text-[0.875rem]">

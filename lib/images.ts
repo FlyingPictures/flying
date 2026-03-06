@@ -1,6 +1,6 @@
 export const IMAGES = {
   home: {
-    Navbar:{
+    navbar:{
       logo: "logo_fsv096",
     },
     hero: {
@@ -72,7 +72,7 @@ export const IMAGES = {
       anniversary: "Rectangle_37_6_mtrsye",
       birthday: "Rectangle_37_7_lozhvd",
       vip: "Rectangle_37_8_xkxdci",
-      corporate: "Rectangle_37_9_vw580e"
+      corporate: "Rectangle_37_9_vw580e",
     }
   },
 
@@ -118,13 +118,16 @@ export const IMAGES = {
         "Rectangle_41_5_1_q9jkki",
         "Rectangle_41_6_qcbkkl",
         "Rectangle_41_4_p6etxl",
-        "Rectangle_41_5_1_q9jkki",
+        "Rectangle_41_5_1_q9jkki"
       ],
     },
   },
 
   product: {
-    footer: { Logo: "sello_flying_1_l7dniq" },
+    footer: { 
+      logo: 
+      "sello_flying_1_l7dniq" 
+    },
     gallery: {
       itinerary: [
         "Rectangle_95_q6zuu9",
@@ -241,6 +244,21 @@ export const IMAGES = {
         "Rectangle_41_5_1_q9jkki",
         "Rectangle_41_2_fyibpj"
       ]
-    }
-  }
+    },
+
+  included: [
+    "time-svgrepo-com_1_1_gqc8wb",
+    "coffee-svgrepo-com_1_auw4bq",
+    "certificado-Icons-flying-website_1_jhc3ht",
+    "brindis-Icons-flying-website_1_fddfxh",
+    "safe-Icons-flying-website_1_jchgm1",
+    "experiencia-pilotos-Icons-flying-website_1_xsbqfh"
+  ],
+
+  recomended: [
+    "transporte-Icons-flying-website_1_obnomy",
+    "desayuno-Icons-flying-website_1_wsivvv",
+    "camara-Icons-flying-website_1_uxofpi"
+  ]
+}
 } as const;

@@ -1,158 +1,165 @@
 {
   "legal": {
-    "shared": {
-      "lastUpdated": "Last updated",
-      "contactTitle": "Contact",
-      "contactText": "For any questions regarding these policies, please contact us at",
-      "phone": "+52 (55) 8025 1057",
-      "schedule": "Monday to Sunday, 6:00 AM – 8:00 PM (Mexico City time)",
+    "lastUpdated": "Last updated",
+    "phone": "+52 (55) 8025 1057",
+    "schedule": "Monday to Sunday, 6:00 AM – 8:00 PM (Mexico City time)",
+    "emailCancellation": "support@flyingpicturesmexico.com",
+    "emailPrivacy": "privacy@flyingpicturesmexico.com",
+    "emailTerms": "info@flyingpicturesmexico.com",
+    "cancellationTitle": "Cancellation Policy",
+    "cancellationDescription": "Information about cancellations, changes, and refunds",
+    "privacyTitle": "Privacy Policy",
+    "privacyDescription": "How we protect your personal data and privacy",
+    "termsTitle": "Terms and Conditions",
+    "termsDescription": "Terms of use for our hot air balloon flight services",
+
+    "cancellation": {
+      "introTitle": "1. Introduction",
+      "introText": "This Cancellation Policy outlines the terms...",
+      "customerTitle": "2. Cancellations by the Customer",
+      "customerIntro": "If you need to cancel your reservation:",
+      "refund72": "72+ hours in advance: 100% full refund.",
+      "refund48": "24-72 hours in advance: 50% refund...",
+      "refund24": "Less than 24 hours in advance: No refund...",
+      "customerNote": "All cancellations must be requested in writing...",
+      "noshowTitle": "3. No Show",
+      "noshowText": "...",
+      "changesTitle": "4. Date Changes",
+      "changesIntro": "...",
+      "change72": "...",
+      "change48": "...",
+      "change24": "...",
+      "changesNote": "...",
+      "weatherTitle": "5. Weather",
+      "weatherIntro": "...",
+      "weatherRefund": "...",
+      "weatherReschedule": "...",
+      "weatherCredit": "...",
+      "weatherNote": "...",
+      "healthTitle": "6. Health",
+      "healthIntro": "...",
+      "healthWithCert": "...",
+      "healthWithoutCert": "...",
+      "healthNote": "...",
+      "processTitle": "7. Refund Process",
+      "processIntro": "...",
+      "process1": "...",
+      "process2": "...",
+      "process3": "...",
+      "process4": "...",
+      "process5": "...",
+      "process6": "...",
+      "groupsTitle": "8. Groups",
+      "groupsText": "...",
+      "insuranceTitle": "9. Insurance",
+      "insuranceText": "...",
+      "exceptionsTitle": "10. Exceptions",
+      "exceptionsText": "...",
+      "contactTitle": "11. Contact",
+      "contactEmail": "Email:",
       "contactPhone": "Phone:",
       "contactSchedule": "Business hours:"
     },
 
     "privacy": {
-      "meta": {
-        "title": "Privacy Policy",
-        "description": "How we protect your personal data and privacy",
-        "email": "privacy@flyingpicturesmexico.com"
-      },
-
-      "sections": {
-        "intro": {
-          "title": "1. Introduction",
-          "text": "At Flying Pictures México, we are committed to protecting your privacy..."
-        },
-        "data": {
-          "title": "2. Data We Collect",
-          "intro": "We may collect the following types of information:",
-          "items": {
-            "personalInfo": "Personal information: Name, email address...",
-            "identificationInfo": "Identification information: Passport, INE...",
-            "healthInfo": "Health information: Weight, relevant medical conditions...",
-            "technicalInfo": "Technical information: IP address...",
-            "photosVideos": "Photos and videos: Images taken during your flight..."
-          }
-        },
-        "usage": {
-          "title": "3. How We Use Your Information",
-          "intro": "We use your information for the following purposes:",
-          "items": {
-            "process": "To process and manage your flight reservations",
-            "communicate": "To communicate with you regarding confirmations...",
-            "safety": "To ensure your safety during the flight experience",
-            "improve": "To improve our services and user experience",
-            "legal": "To comply with legal and regulatory obligations",
-            "marketing": "To send promotional communications (with your consent)",
-            "payment": "To process payments and prevent fraud"
-          }
-        },
-        "protection": {
-          "title": "4. Data Protection",
-          "text": "We implement technical, administrative, and physical security measures..."
-        },
-        "cookies": {
-          "title": "5. Cookies and Similar Technologies",
-          "text": "Our website uses cookies and similar technologies..."
-        },
-        "sharing": {
-          "title": "6. Sharing Information with Third Parties",
-          "intro": "We do not sell or rent your personal information. We may share your data with:",
-          "items": {
-            "providers": "Service providers: Payment processors...",
-            "authorities": "Regulatory authorities...",
-            "partners": "Business partners..."
-          }
-        },
-        "rights": {
-          "title": "7. Your Rights",
-          "intro": "You have the following rights regarding your personal information:",
-          "items": {
-            "access": "Access your personal data",
-            "rectify": "Correct inaccurate information",
-            "delete": "Request deletion of your personal data",
-            "object": "Object to or restrict data processing",
-            "portability": "Request data portability",
-            "withdraw": "Withdraw your consent at any time"
-          }
-        },
-        "retention": {
-          "title": "8. Data Retention",
-          "text": "We retain your personal information only for as long as necessary..."
-        },
-        "minors": {
-          "title": "9. Minors",
-          "text": "Our services are not intended for minors..."
-        },
-        "changes": {
-          "title": "10. Changes to This Policy",
-          "text": "We may update this Privacy Policy periodically..."
-        },
-        "contact": {
-          "title": "11. Contact",
-          "emailLabel": "Contact us at:"
-        }
-      }
+      "introTitle": "1. Introduction",
+      "introText": "At Flying Pictures México, we are committed to protecting your privacy...",
+      "dataTitle": "2. Data We Collect",
+      "dataIntro": "We may collect the following types of information:",
+      "personalInfo": "Personal information: Name, email address...",
+      "identificationInfo": "Identification information: Passport, INE...",
+      "healthInfo": "Health information: Weight, relevant medical conditions...",
+      "technicalInfo": "Technical information: IP address...",
+      "photosVideos": "Photos and videos: Images taken during your flight...",
+      "usageTitle": "3. How We Use Your Information",
+      "usageIntro": "We use your information for the following purposes:",
+      "useProcess": "To process and manage your flight reservations",
+      "useCommunicate": "To communicate with you regarding confirmations...",
+      "useSafety": "To ensure your safety during the flight experience",
+      "useImprove": "To improve our services and user experience",
+      "useLegal": "To comply with legal and regulatory obligations",
+      "useMarketing": "To send promotional communications (with your consent)",
+      "usePayment": "To process payments and prevent fraud",
+      "protectionTitle": "4. Data Protection",
+      "protectionText": "We implement technical, administrative, and physical security measures...",
+      "cookiesTitle": "5. Cookies and Similar Technologies",
+      "cookiesText": "Our website uses cookies and similar technologies...",
+      "sharingTitle": "6. Sharing Information with Third Parties",
+      "sharingIntro": "We do not sell or rent your personal information. We may share your data with:",
+      "sharingProviders": "Service providers: Payment processors...",
+      "sharingAuthorities": "Regulatory authorities...",
+      "sharingPartners": "Business partners...",
+      "rightsTitle": "7. Your Rights",
+      "rightsIntro": "You have the following rights regarding your personal information:",
+      "rightAccess": "Access your personal data",
+      "rightRectify": "Correct inaccurate information",
+      "rightDelete": "Request deletion of your personal data",
+      "rightObject": "Object to or restrict data processing",
+      "rightPortability": "Request data portability",
+      "rightWithdraw": "Withdraw your consent at any time",
+      "retentionTitle": "8. Data Retention",
+      "retentionText": "We retain your personal information only for as long as necessary...",
+      "minorsTitle": "9. Minors",
+      "minorsText": "Our services are not intended for minors...",
+      "changesTitle": "10. Changes to This Policy",
+      "changesText": "We may update this Privacy Policy periodically...",
+      "contactTitle": "11. Contact",
+      "contactEmail": "Contact us at:"
     },
 
     "terms": {
-      "meta": {
-        "title": "Terms and Conditions",
-        "description": "Terms of use for our hot air balloon flight services",
-        "email": "info@flyingpicturesmexico.com"
-      },
-
-      "sections": {
-        "intro": {
-          "title": "1. Introduction and Acceptance",
-          "text": "Welcome to Flying Pictures México..."
-        },
-        "services": {
-          "title": "2. Flight Services",
-          "intro": "Flying Pictures México offers hot air balloon flight experiences...",
-          "items": {
-            "shared": "Shared hot air balloon flights",
-            "private": "Private flights for exclusive groups",
-            "vip": "VIP experiences and personalized tours",
-            "extras": "Additional services such as transportation and breakfast"
-          }
-        },
-        "booking": {
-          "title": "3. Reservations and Confirmation",
-          "intro": "To book a flight, you must:",
-          "items": {
-            "info": "Provide accurate and up-to-date personal information...",
-            "health": "Provide accurate health information...",
-            "payment": "Complete full payment...",
-            "confirm": "Confirm your reservation..."
-          },
-          "note": "Reservation confirmation is subject to availability..."
-        }
-      }
-    },
-
-    "cancellation": {
-      "meta": {
-        "title": "Cancellation Policy",
-        "description": "Information about cancellations, changes, and refunds",
-        "email": "support@flyingpicturesmexico.com"
-      },
-
-      "sections": {
-        "intro": {
-          "title": "1. Introduction",
-          "text": "This Cancellation Policy outlines the terms..."
-        },
-        "customer": {
-          "title": "2. Cancellations by the Customer",
-          "intro": "If you need to cancel your reservation:",
-          "items": {
-            "refund72": "72+ hours in advance: 100% full refund.",
-            "refund48": "24-72 hours in advance: 50% refund...",
-            "refund24": "Less than 24 hours in advance: No refund..."
-          },
-          "note": "All cancellations must be requested in writing..."
-        }
-      }
+      "introTitle": "1. Introduction and Acceptance",
+      "introText": "Welcome to Flying Pictures México...",
+      "servicesTitle": "2. Flight Services",
+      "servicesIntro": "Flying Pictures México offers hot air balloon flight experiences...",
+      "serviceShared": "Shared hot air balloon flights",
+      "servicePrivate": "Private flights for exclusive groups",
+      "serviceVip": "VIP experiences and personalized tours",
+      "serviceExtras": "Additional services such as transportation and breakfast",
+      "bookingTitle": "3. Reservations and Confirmation",
+      "bookingIntro": "To book a flight, you must:",
+      "booking1": "Provide accurate and up-to-date personal information...",
+      "booking2": "Provide accurate health information...",
+      "booking3": "Complete full payment...",
+      "booking4": "Confirm your reservation...",
+      "bookingNote": "Reservation confirmation is subject to availability...",
+      "pricingTitle": "4. Pricing",
+      "pricingIntro": "...",
+      "priceInclude1": "...",
+      "priceInclude2": "...",
+      "priceInclude3": "...",
+      "priceInclude4": "...",
+      "priceNote": "...",
+      "requirementsTitle": "5. Requirements",
+      "requirementsIntro": "...",
+      "reqAge": "...",
+      "reqWeight": "...",
+      "reqHealth": "...",
+      "reqDocs": "...",
+      "safetyTitle": "6. Safety",
+      "safetyText": "...",
+      "weatherTitle": "7. Weather",
+      "weatherText": "...",
+      "liabilityTitle": "8. Liability",
+      "liabilityText": "...",
+      "ipTitle": "9. Intellectual Property",
+      "ipText": "...",
+      "mediaTitle": "10. Media",
+      "mediaText": "...",
+      "modificationsTitle": "11. Modifications",
+      "modificationsText": "...",
+      "lawTitle": "12. Governing Law",
+      "lawText": "...",
+      "responsibilitiesTitle": "13. Responsibilities",
+      "responsibilitiesIntro": "...",
+      "resp1": "...",
+      "resp2": "...",
+      "resp3": "...",
+      "resp4": "...",
+      "resp5": "...",
+      "resp6": "...",
+      "contactTitle": "14. Contact",
+      "contactEmail": "Contact us at:"
     }
   }
 }

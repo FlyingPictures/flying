@@ -109,7 +109,7 @@ export default function Navbar() {
               className="absolute left-1/2 -translate-x-1/2 top-0 z-20 w-[4.75rem] h-24"
             >
               <CloudinaryImage
-                publicId={IMAGES.home.Navbar.logo}
+                publicId={IMAGES.home.navbar.logo}
                 alt="Logo"
                 width={200}
                 height={200}
@@ -156,7 +156,7 @@ export default function Navbar() {
             className="absolute top-0 left-6 z-10 w-[3.875rem] h-[4.875rem]"
           >
             <CloudinaryImage
-              publicId={IMAGES.home.Navbar.logo}
+              publicId={IMAGES.home.navbar.logo}
               alt="Logo"
               width={200}
               height={200}
