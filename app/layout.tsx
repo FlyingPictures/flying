@@ -3,18 +3,13 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ||
-      "https://www.flyingpicturesmexico.com"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.flyingpicturesmexico.com"
   ),
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );
