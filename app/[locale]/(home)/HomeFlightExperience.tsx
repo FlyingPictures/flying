@@ -314,9 +314,9 @@ export function FlightExperienceSection() {
               <CloudinaryImage
                 publicId={IMAGES.home.flightExperience.bottomCards.tradition}
                 alt={t('cards.tradition.title')}
-                fill
-                sizes="(max-width: 768px) 100vw, 608px"
-                className="object-cover object-top"
+                width={608}
+                height={444}
+                className="w-full h-full object-cover object-top"
               />
             </div>
             <div className="flex flex-col flex-1 p-[clamp(16px,4vw,24px)] lg:p-[clamp(24px,2.7vw,40px)] justify-between">
@@ -331,9 +331,9 @@ export function FlightExperienceSection() {
                   <CloudinaryImage
                     publicId={IMAGES.home.flightExperience.awards.badge}
                     alt={t('cards.tradition.award_label')}
-                    fill
-                    sizes="(max-width: 768px) 30vw, 283px"
-                    className="object-contain"
+                    width={283}
+                    height={72}
+                    className="w-full h-auto object-contain"
                   />
                 </div>
               </div>
