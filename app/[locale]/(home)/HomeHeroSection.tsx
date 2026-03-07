@@ -12,7 +12,7 @@ export async function HomeHeroSection() {
   return (
     <section className="relative h-[95vh] lg:h-screen overflow-hidden pt-18 lg:pt-0">
       <div className="absolute inset-0 flex justify-center">
-        <CloudinaryImage publicId={IMAGES.home.hero.background} alt="Hero Background" fill priority sizes="100vw" className="h-full w-auto object-contain object-top" />
+        <CloudinaryImage publicId={IMAGES.home.hero.background} alt="Hero Background" fill sizes="100vw" className="h-full w-auto object-contain object-top" priority />
         <div className="absolute inset-0 bg-black/10" />
       </div>
 
@@ -37,7 +37,7 @@ export async function HomeHeroSection() {
           <div className="w-full mt-3 flex items-center justify-center overflow-x-auto gap-x-[clamp(0.5rem,3vw,0.75rem)] snap-x snap-mandatory mb-10 lg:overflow-visible lg:flex-wrap lg:overflow-x-visible">
             {IMAGES.home.brandLogos.map((logo) => (
               <div key={logo.publicId} className="shrink-0 snap-center lg:shrink">
-                <CloudinaryImage publicId={logo.publicId} alt={logo.alt} width={600} height={600} className="w-[clamp(5rem,16vw,9.375rem)] sm:w-[clamp(6.5rem,10vw,9.375rem)] lg:w-[clamp(6rem,8vw,9.375rem)] h-auto object-contain opacity-80 transition-opacity hover:opacity-100" />
+                <CloudinaryImage publicId={logo.publicId} alt={logo.alt} width={150} height={150} className="w-[clamp(5rem,16vw,9.375rem)] sm:w-[clamp(6.5rem,10vw,9.375rem)] lg:w-[clamp(6rem,8vw,9.375rem)] h-auto object-contain opacity-80 transition-opacity hover:opacity-100" />
               </div>
             ))}
           </div>

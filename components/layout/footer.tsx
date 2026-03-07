@@ -25,10 +25,10 @@ export async function Footer({ translations }: FooterProps) {
     {
       title: t("flightExperiences"),
       links: [
-        { label: t("shared"), href: "/shared" },
-        { label: t("private"), href: "/private" },
-        { label: t("proposals"), href: "/proposals" },
-        { label: t("groups"), href: "/groups" },
+        { label: t("shared"), href: "/product/classic" },
+        { label: t("private"), href: "/product/journey" },
+        { label: t("proposals"), href: "/product/vip" },
+        { label: t("groups"), href: "/product/corporate" },
       ],
       className: "col-span-1 md:col-span-2",
     },
