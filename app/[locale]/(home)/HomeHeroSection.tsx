@@ -1,24 +1,45 @@
+import Image from "next/image";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { Button } from "@/components/ui/button";
 import { getTranslations } from "next-intl/server";
 import { IMAGES } from "@/lib/images";
+import { cloudinaryUrl } from "@/lib/cloudinary";
 
 const TEXT_WRAP = "whitespace-pre-line";
 const NAV_OFFSET = "calc(var(--navbar-height, 4.5rem) + 2rem)";
 
+const heroMobileUrl = `https://res.cloudinary.com/dkmjguzvx/image/upload/f_auto,q_auto:good,w_828,c_fill,g_auto,ar_16:9/hero1_rszxmn`;
+
 export async function HomeHeroSection() {
   const t = await getTranslations("herosection");
+  const heroDesktopUrl = cloudinaryUrl(IMAGES.home.hero.background, 1920);
 
   return (
     <section className="relative h-[95vh] lg:h-screen overflow-hidden pt-18 lg:pt-0">
+      <link rel="preload" as="image" href={heroMobileUrl} media="(max-width: 1023px)" fetchPriority="high" />
+      <link rel="preload" as="image" href={heroDesktopUrl} media="(min-width: 1024px)" fetchPriority="high" />
+
       <div className="absolute inset-0">
-        <CloudinaryImage
-          publicId={IMAGES.home.hero.background}
+        {/* Mobile — recortada 16:9, evita alargamiento */}
+        <Image
+          src={heroMobileUrl}
           alt="Hero Background"
           fill
-          sizes="100vw"
-          className="object-cover object-top"
           priority
+          fetchPriority="high"
+          sizes="100vw"
+          className="lg:hidden object-cover object-top"
+          unoptimized
+        />
+        {/* Desktop */}
+        <Image
+          src={heroDesktopUrl}
+          alt="Hero Background"
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          className="hidden lg:block object-cover object-top"
           unoptimized
         />
         <div className="absolute inset-0 bg-black/10" />

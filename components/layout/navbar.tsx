@@ -47,8 +47,12 @@ const LanguageSwitcher = ({ className = "" }: { className?: string }) => {
   const pathname = usePathname()
   const t = useTranslations("nav")
   return (
-    <button onClick={() => router.replace(pathname, { locale: locale === "en" ? "es" : "en" })} className={cn("font-inter font-bold text-secondary flex items-center gap-2 hover:opacity-70 transition-opacity outline-none", className)}>
-      <GlobeSimpleIcon size={20} weight="bold" />
+    <button
+      onClick={() => router.replace(pathname, { locale: locale === "en" ? "es" : "en" })}
+      aria-label={t("switchLanguage")}
+      className={cn("font-inter font-bold text-secondary flex items-center gap-2 hover:opacity-70 transition-opacity outline-none", className)}
+    >
+      <GlobeSimpleIcon size={20} weight="bold" aria-hidden="true" />
       {t("language")}
     </button>
   )
@@ -57,7 +61,7 @@ const LanguageSwitcher = ({ className = "" }: { className?: string }) => {
 const HeaderBanner = () => {
   const bannerT = useTranslations("banner")
   return (
-    <div className="w-full bg-destructive text-white font-bold h-12 flex items-center justify-center px-4 overflow-hidden">
+    <div className="w-full bg-destructive text-background font-bold h-12 flex items-center justify-center px-4 overflow-hidden">
       <a href={`tel:${CONTACT.PHONE}`} className="uppercase whitespace-nowrap text-[0.7rem] lg:text-[clamp(0.65rem,2.5vw,0.875rem)]">
         {bannerT("company")} {CONTACT.DISPLAY}
       </a>
@@ -102,15 +106,16 @@ export default function Navbar() {
     <>
       <header className={cn("hidden lg:flex flex-col items-center z-50 fixed top-0 w-full transition-transform duration-500", !isHeaderVisible && "-translate-y-44")}>
         <HeaderBanner />
-        <div className="w-[95%] max-w-[92rem] mt-4">
-          <nav className="relative bg-background h-[5.125rem] rounded-2xl shadow-2xl flex items-center justify-between px-8">
+        <div className="w-[95%] max-w-368 mt-4">
+          <nav className="relative bg-background h-21 rounded-2xl shadow-2xl flex items-center justify-between px-8">
             <Link
               href="/"
-              className="absolute left-1/2 -translate-x-1/2 top-0 z-20 w-[4.75rem] h-24"
+              aria-label="Flying Pictures México — Inicio"
+              className="absolute left-1/2 -translate-x-1/2 top-0 z-20 w-19 h-24"
             >
               <CloudinaryImage
                 publicId={IMAGES.home.navbar.logo}
-                alt="Logo"
+                alt=""
                 width={200}
                 height={200}
                 className="w-full h-full object-contain"
@@ -124,7 +129,7 @@ export default function Navbar() {
                     <Link href="/flight-experiences" className="font-inter font-bold text-secondary tracking-tight outline-none hover:opacity-70 py-4">{t("flightExperiences")}</Link>
                   </DropdownMenu.Trigger>
                   <DropdownMenu.Portal>
-                    <DropdownMenu.Content align="center" alignOffset={-120} sideOffset={18} onCloseAutoFocus={(e) => e.preventDefault()} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="bg-white rounded-lg shadow-xl p-2 z-[60] min-w-[200px]">
+                    <DropdownMenu.Content align="center" alignOffset={-120} sideOffset={18} onCloseAutoFocus={(e) => e.preventDefault()} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="bg-white rounded-lg shadow-xl p-2 z-60 min-w-50">
                       {EXPERIENCES.map((exp) => (
                         <DropdownMenu.Item key={exp.id} asChild onSelect={() => setIsMenuOpen(false)}>
                           <div><NavLink id={exp.id} href={exp.href} className="block px-4 py-2 text-[0.95rem] hover:bg-secondary/5 rounded-md font-poppins font-medium" /></div>
@@ -147,17 +152,18 @@ export default function Navbar() {
         </div>
       </header>
 
-      <header className={cn("lg:hidden fixed top-0 inset-x-0 z-50 transition-transform duration-500", isHeaderHidden && "-translate-y-[8rem]")}>
+      <header className={cn("lg:hidden fixed top-0 inset-x-0 z-50 transition-transform duration-500", isHeaderHidden && "-translate-y-32")}>
         <HeaderBanner />
-        <nav className="relative h-[4.5rem] bg-surface px-6 flex items-center justify-between shadow-md">
+        <nav className="relative h-18 bg-surface px-6 flex items-center justify-between shadow-md">
           <Link
             href="/"
+            aria-label="Flying Pictures México — Inicio"
             onClick={() => setIsSheetOpen(false)}
-            className="absolute top-0 left-6 z-10 w-[3.875rem] h-[4.875rem]"
+            className="absolute top-0 left-6 z-10 w-15.5 h-19.5"
           >
             <CloudinaryImage
               publicId={IMAGES.home.navbar.logo}
-              alt="Logo"
+              alt=""
               width={200}
               height={200}
               className="w-full h-full object-contain"
@@ -166,13 +172,19 @@ export default function Navbar() {
           <div className="flex items-center gap-3 ml-auto">
             <BookButton />
             <SheetPrimitive.Root open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-              <SheetPrimitive.Trigger asChild><button className="p-1 outline-none"><EqualsIcon size={32} weight="bold" /></button></SheetPrimitive.Trigger>
+              <SheetPrimitive.Trigger asChild>
+                <button className="p-1 outline-none" aria-label={t("openMenu")}>
+                  <EqualsIcon size={32} weight="bold" aria-hidden="true" />
+                </button>
+              </SheetPrimitive.Trigger>
               <SheetPrimitive.Portal>
                 <SheetPrimitive.Content className="fixed inset-y-0 right-0 z-60 w-full bg-surface flex flex-col shadow-xl">
                   <SheetPrimitive.Title className="sr-only">{t("flightExperiences")}</SheetPrimitive.Title>
                   <div className="relative h-40 flex items-center justify-between px-6 before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[90%] before:border-b before:content-['']">
                     <BookButton />
-                    <SheetPrimitive.Close className="rounded-full size-10 flex items-center justify-center"><XIcon size={24} weight="bold" /></SheetPrimitive.Close>
+                    <SheetPrimitive.Close aria-label={t("closeMenu")} className="rounded-full size-10 flex items-center justify-center">
+                      <XIcon size={24} weight="bold" aria-hidden="true" />
+                    </SheetPrimitive.Close>
                   </div>
                   <div className="flex flex-col flex-1 px-10 py-10 gap-5 overflow-y-auto">
                     <NavLink id="flightExperiences" href="/flight-experiences" className="text-[1.5rem]" onClick={() => setIsSheetOpen(false)} />
@@ -186,7 +198,10 @@ export default function Navbar() {
                       <NavLink id="planYourVisit" href="/plan-your-visit" className="text-[1.5rem]" onClick={() => setIsSheetOpen(false)} />
                     </div>
                     <div className="mt-auto pb-8 flex flex-col gap-6">
-                      <Link href="/contact" className="font-inter font-bold flex items-center gap-2" onClick={() => setIsSheetOpen(false)}><HeadsetIcon size={24} weight="bold" />{t("contactSupport")}</Link>
+                      <Link href="/contact" className="font-inter font-bold flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
+                        <HeadsetIcon size={24} weight="bold" aria-hidden="true" />
+                        {t("contactSupport")}
+                      </Link>
                       <LanguageSwitcher />
                     </div>
                   </div>

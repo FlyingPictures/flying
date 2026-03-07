@@ -1,5 +1,8 @@
 {
   "nav": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menú",
+    "switchLanguage": "Change Language",
     "shared": "Shared Flight",
     "private": "Private Flight",
     "proposals": "Proposals",
