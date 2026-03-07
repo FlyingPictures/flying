@@ -100,11 +100,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
   const organizationSchema = getOrganizationSchema(l);
   const websiteSchema = getWebSiteSchema(l);
-  const heroPreloadUrl = cloudinaryUrl(IMAGES.home.hero.background, 390)
 
   return (
     <>
-      <link rel="preload" as="image" href={heroPreloadUrl} fetchPriority="high" />
       <link rel="preconnect" href="https://res.cloudinary.com" />
       <link rel="dns-prefetch" href="https://res.cloudinary.com" />
 
