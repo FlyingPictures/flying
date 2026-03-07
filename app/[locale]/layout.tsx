@@ -74,7 +74,12 @@ export async function generateMetadata({
       creator: SITE_CONFIG.twitter,
     },
     alternates: {
-      languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])),
+      canonical: `/${locale}`,
+      languages: {
+        es: "/es",
+        en: "/en",
+        "x-default": "/en",
+      },
     },
   };
 }
@@ -112,7 +117,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
       <NextIntlClientProvider messages={messages} locale={locale}>
         <PricingProvider>
-          <div lang={locale} className={`${fontVariables} flex min-h-screen flex-col bg-background text-foreground antialiased`}>
+          <div className={`${fontVariables} flex min-h-screen flex-col bg-background text-foreground antialiased`}>
             <Navbar />
             <main className="grow">{children}</main>
             <Footer translations={footerTranslations} />

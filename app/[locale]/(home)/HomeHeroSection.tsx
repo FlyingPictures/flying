@@ -24,16 +24,14 @@ export async function HomeHeroSection() {
         fill
         priority
         fetchPriority="high"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1280px" 
         className="object-cover object-top"
-        unoptimized
       />
       <div className="absolute inset-0 bg-black/10" />
 
       <div className="absolute inset-0 flex items-end justify-center px-[clamp(0.75rem,5vw,1.5rem)] text-center pt-30 lg:pt-40">
         <div className="w-full max-w-5xl flex flex-col items-center gap-[clamp(0.5rem,1vw,1.5rem)]">
 
-          {/* altura fija → browser reserva espacio → sin CLS */}
           <div className="w-40 h-10 relative mb-2">
             <CloudinaryImage
               publicId={IMAGES.home.hero.stars}
@@ -46,7 +44,7 @@ export async function HomeHeroSection() {
           </div>
 
           <h1 className={`title hero ${TEXT_WRAP}`}>{t("h1")}</h1>
-          <h3 className={`decorative hero ${TEXT_WRAP}`}>{t("h3")}</h3>
+          <span className={`decorative hero ${TEXT_WRAP}`}>{t("h3")}</span>
           <p className={`paragraph hero ${TEXT_WRAP}`}>{t("paragraph")}</p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-2">

@@ -17,7 +17,7 @@ import { useScrollDirection } from "@/hooks/use-scroll-direction"
 import { useLocale, useTranslations } from 'next-intl'
 import { cn } from "@/lib/utils"
 
-const CONTACT = { PHONE: "+525558025-1057", DISPLAY: "(+52) 55 8025-1057" } as const
+const CONTACT = { PHONE: "+5255580251057", DISPLAY: "(+52) 55 8025-1057" } as const
 
 const EXPERIENCES = [
   { id: "classic",     href: "/product/classic" },
@@ -89,18 +89,23 @@ export default function Navbar() {
     closeTimeoutRef.current = setTimeout(() => setIsMenuOpen(false), 500)
   }
 
+  // SOLUCIÓN AL ERROR DE CASCADING RENDERS:
   useEffect(() => {
     if (isScrollingDown && isMenuOpen) {
-      const id = setTimeout(() => setIsMenuOpen(false), 0)
-      return () => {
-        clearTimeout(id)
-        if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current)
-      }
+      // Usamos requestAnimationFrame para que el cambio de estado ocurra
+      // justo antes del próximo repintado, evitando la "cascada" síncrona.
+      const frame = requestAnimationFrame(() => {
+        setIsMenuOpen(false);
+      });
+      return () => cancelAnimationFrame(frame);
     }
+  }, [isScrollingDown, isMenuOpen])
+
+  useEffect(() => {
     return () => {
       if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current)
     }
-  }, [isScrollingDown, isMenuOpen])
+  }, [])
 
   return (
     <>
@@ -115,9 +120,10 @@ export default function Navbar() {
             >
               <CloudinaryImage
                 publicId={IMAGES.home.navbar.logo}
-                alt=""
+                alt="Flying Pictures México Logo" 
                 width={200}
                 height={200}
+                priority
                 className="w-full h-full object-contain"
               />
             </Link>
@@ -163,9 +169,10 @@ export default function Navbar() {
           >
             <CloudinaryImage
               publicId={IMAGES.home.navbar.logo}
-              alt=""
+              alt="Flying Pictures México Logo"
               width={200}
               height={200}
+              priority
               className="w-full h-full object-contain"
             />
           </Link>
