@@ -9,12 +9,16 @@ const NAV_OFFSET = "calc(var(--navbar-height, 4.5rem) + 2rem)";
 
 export async function HomeHeroSection() {
   const t = await getTranslations("herosection");
-
   const heroPreloadUrl = cloudinaryUrl(IMAGES.home.hero.background);
 
   return (
     <>
-      <link rel="preload" as="image" href={heroPreloadUrl} fetchPriority="high" />
+      <link
+        rel="preload"
+        as="image"
+        href={heroPreloadUrl}
+        fetchPriority="high"
+      />
 
       <section className="relative h-[95vh] lg:h-screen overflow-hidden pt-18 lg:pt-0">
         <div className="absolute inset-0 flex justify-center">
@@ -25,6 +29,7 @@ export async function HomeHeroSection() {
             sizes="100vw"
             className="object-contain object-top"
             priority
+            unoptimized
           />
           <div className="absolute inset-0 bg-black/10" />
         </div>
