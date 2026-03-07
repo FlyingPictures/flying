@@ -7,45 +7,53 @@ import { cloudinaryUrl } from "@/lib/cloudinary";
 
 const TEXT_WRAP = "whitespace-pre-line";
 const NAV_OFFSET = "calc(var(--navbar-height, 4.5rem) + 2rem)";
-
-const heroMobileUrl = `https://res.cloudinary.com/dkmjguzvx/image/upload/f_auto,q_auto:good,w_828,c_fill,g_auto,ar_16:9/hero1_rszxmn`;
+const HERO_W = 828;
+const HERO_H = 466;
 
 export async function HomeHeroSection() {
   const t = await getTranslations("herosection");
-  const heroDesktopUrl = cloudinaryUrl(IMAGES.home.hero.background, 1920);
+
+  const heroMobileSrc = cloudinaryUrl(IMAGES.home.hero.background, HERO_W, {
+    height: HERO_H,
+    crop: "fill",
+    gravity: "auto",
+  });
+  const heroDesktopSrc = cloudinaryUrl(IMAGES.home.hero.background, 1920);
 
   return (
-    <section className="relative h-[95vh] lg:h-screen overflow-hidden pt-18 lg:pt-0">
-      <link rel="preload" as="image" href={heroMobileUrl} media="(max-width: 1023px)" fetchPriority="high" />
-      <link rel="preload" as="image" href={heroDesktopUrl} media="(min-width: 1024px)" fetchPriority="high" />
-
-      <div className="absolute inset-0">
-        {/* Mobile — recortada 16:9, evita alargamiento */}
+    <section className="relative overflow-hidden pt-18 lg:pt-0">
+      {/* Mobile: dimensiones explícitas → browser reserva espacio antes de descargar → sin stretch */}
+      <div className="relative w-full lg:hidden" style={{ aspectRatio: `${HERO_W}/${HERO_H}` }}>
         <Image
-          src={heroMobileUrl}
+          src={heroMobileSrc}
           alt="Hero Background"
-          fill
+          width={HERO_W}
+          height={HERO_H}
           priority
           fetchPriority="high"
-          sizes="100vw"
-          className="lg:hidden object-cover object-top"
-          unoptimized
-        />
-        {/* Desktop */}
-        <Image
-          src={heroDesktopUrl}
-          alt="Hero Background"
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          className="hidden lg:block object-cover object-top"
+          className="w-full h-full object-cover"
           unoptimized
         />
         <div className="absolute inset-0 bg-black/10" />
       </div>
 
-      <div className="absolute inset-0 flex items-end justify-center px-[clamp(0.75rem,5vw,1.5rem)] text-center">
+      {/* Desktop: fill normal con altura definida */}
+      <div className="hidden lg:block relative h-screen">
+        <Image
+          src={heroDesktopSrc}
+          alt="Hero Background"
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          className="object-cover object-top"
+          unoptimized
+        />
+        <div className="absolute inset-0 bg-black/10" />
+      </div>
+
+      {/* Contenido: fluye en mobile, se superpone en desktop */}
+      <div className="lg:absolute lg:inset-0 flex items-end justify-center px-[clamp(0.75rem,5vw,1.5rem)] text-center">
         <div
           className="w-full max-w-5xl flex flex-col items-center gap-[clamp(0.5rem,1vw,1.5rem)]"
           style={{ paddingTop: NAV_OFFSET, maxHeight: `calc(100vh - ${NAV_OFFSET})` }}
@@ -58,18 +66,15 @@ export async function HomeHeroSection() {
             className="w-40 h-auto object-contain mb-2"
             priority
           />
-
           <h1 className={`title hero ${TEXT_WRAP}`}>{t("h1")}</h1>
           <h3 className={`decorative hero ${TEXT_WRAP}`}>{t("h3")}</h3>
           <p className={`paragraph hero ${TEXT_WRAP}`}>{t("paragraph")}</p>
-
           <div className="flex flex-col sm:flex-row gap-4 mt-2">
             <Button variant="outline" size="sm">{t("ctaPrimary")}</Button>
             <Button variant="ghost" size="sm" className="hidden sm:inline-flex text-background">
               {t("ctaSecondary")}
             </Button>
           </div>
-
           <div className="flex items-center gap-4 mt-4">
             <CloudinaryImage
               publicId={IMAGES.home.hero.cameronLogo}
@@ -80,7 +85,6 @@ export async function HomeHeroSection() {
             />
             <span className={`powered hero ${TEXT_WRAP}`}>{t("poweredBy")}</span>
           </div>
-
           <div className="w-full mt-3 flex items-center justify-center overflow-x-auto gap-x-[clamp(0.5rem,3vw,0.75rem)] snap-x snap-mandatory mb-10 lg:overflow-visible lg:flex-wrap lg:overflow-x-visible">
             {IMAGES.home.brandLogos.map((logo) => (
               <div key={logo.publicId} className="shrink-0 snap-center lg:shrink">
