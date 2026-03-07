@@ -12,6 +12,7 @@ interface CloudinaryImageProps {
   sizes?: string;
   objectFit?: 'cover' | 'contain' | 'fill';
   unoptimized?: boolean;
+  urlWidth?: number;
 }
 
 export function CloudinaryImage({
@@ -25,10 +26,11 @@ export function CloudinaryImage({
   sizes,
   objectFit = 'cover',
   unoptimized = false,
+  urlWidth,
 }: CloudinaryImageProps) {
   if (!publicId) return null;
 
-  const src = cloudinaryUrl(publicId, fill ? undefined : width);
+  const src = cloudinaryUrl(publicId, fill ? urlWidth : width);
 
   if (fill) {
     return (

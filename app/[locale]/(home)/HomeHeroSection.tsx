@@ -30,6 +30,7 @@ export async function HomeHeroSection() {
             className="object-contain object-top"
             priority
             unoptimized
+            urlWidth={1280}
           />
           <div className="absolute inset-0 bg-black/10" />
         </div>
