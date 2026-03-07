@@ -4,7 +4,7 @@ const CLOUD_NAME =
 export function cloudinaryUrl(
   publicId: string,
   width?: number,
-  options?: { height?: number; crop?: string; gravity?: string }
+  options?: { height?: number; crop?: string; gravity?: string; quality?: string }
 ): string {
   if (!publicId) return '';
 
@@ -12,7 +12,7 @@ export function cloudinaryUrl(
 
   const transforms = [
     'f_auto',
-    'q_auto:good',
+    options?.quality ? `q_${options.quality}` : 'q_auto:eco',
     width && `w_${width}`,
     options?.height && `h_${options.height}`,
     options?.crop ? `c_${options.crop}` : width && 'c_limit',

@@ -1,27 +1,32 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import dynamic from "next/dynamic";
 
 import { HomeHeroSection } from "@/app/[locale]/(home)/HomeHeroSection";
-import { FlightExperienceSection } from "@/app/[locale]/(home)/HomeFlightExperience";
-import { WhyFlightWhitUs } from "@/app/[locale]/(home)/WhyFlightWhitUs";
-import { LiveMonitoringSection } from "@/app/[locale]/(home)/LiveMonitoringSection";
-import HomeReviewsSection from "@/app/[locale]/(home)/HomeReviewsSection";
+import { StructuredData } from "@/lib/structured-data";
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://www.flyingpicturesmexico.com";
+// Below fold — se cargan después del hero
+const FlightExperienceSection = dynamic(
+  () => import("@/app/[locale]/(home)/HomeFlightExperience").then(m => ({ default: m.FlightExperienceSection }))
+);
+const WhyFlightWhitUs = dynamic(
+  () => import("@/app/[locale]/(home)/WhyFlightWhitUs").then(m => ({ default: m.WhyFlightWhitUs }))
+);
+const LiveMonitoringSection = dynamic(
+  () => import("@/app/[locale]/(home)/LiveMonitoringSection").then(m => ({ default: m.LiveMonitoringSection }))
+);
+const HomeReviewsSection = dynamic(
+  () => import("@/app/[locale]/(home)/HomeReviewsSection")
+);
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.flyingpicturesmexico.mx";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-export async function generateStaticParams() {
-  return [{ locale: "es" }, { locale: "en" }];
-}
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-
   const tHero = await getTranslations({ locale, namespace: "herosection" });
 
   const title = `${tHero("h1")} | Flying Pictures México`;
@@ -60,7 +65,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function HomePage({ params }: Props) {
-  const { locale } = await params;
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -68,8 +72,7 @@ export default async function HomePage({ params }: Props) {
     "@id": `${SITE_URL}/#travelagency`,
     name: "Flying Pictures México",
     url: SITE_URL,
-    description:
-      "Premier hot air balloon flight experience over the Teotihuacán Pyramids, combining British aviation standards with Mexican hospitality.",
+    description: "Premier hot air balloon flight experience over the Teotihuacán Pyramids, combining British aviation standards with Mexican hospitality.",
     telephone: "+525580251057",
     areaServed: { "@type": "Place", name: "Teotihuacán, México" },
     address: { "@type": "PostalAddress", addressCountry: "MX", addressRegion: "Estado de México" },
@@ -83,17 +86,12 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+      <StructuredData data={structuredData} />
       <HomeHeroSection />
-      <main className="w-full">
-        <FlightExperienceSection />
-        <WhyFlightWhitUs />
-        <LiveMonitoringSection />
-        <HomeReviewsSection />
-      </main>
+      <FlightExperienceSection />
+      <WhyFlightWhitUs />
+      <LiveMonitoringSection />
+      <HomeReviewsSection />
     </>
   );
 }

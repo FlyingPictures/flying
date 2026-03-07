@@ -154,7 +154,7 @@ export default function Navbar() {
 
       <header className={cn("lg:hidden fixed top-0 inset-x-0 z-50 transition-transform duration-500", isHeaderHidden && "-translate-y-32")}>
         <HeaderBanner />
-        <nav className="relative h-18 bg-surface px-6 flex items-center justify-between shadow-md">
+        <nav className="relative h-18 bg-white px-6 flex items-center justify-between shadow-md">
           <Link
             href="/"
             aria-label="Flying Pictures México — Inicio"
@@ -178,7 +178,7 @@ export default function Navbar() {
                 </button>
               </SheetPrimitive.Trigger>
               <SheetPrimitive.Portal>
-                <SheetPrimitive.Content className="fixed inset-y-0 right-0 z-60 w-full bg-surface flex flex-col shadow-xl">
+                <SheetPrimitive.Content aria-describedby={undefined} className="fixed inset-y-0 right-0 z-60 w-full bg-surface flex flex-col shadow-xl">
                   <SheetPrimitive.Title className="sr-only">{t("flightExperiences")}</SheetPrimitive.Title>
                   <div className="relative h-40 flex items-center justify-between px-6 before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[90%] before:border-b before:content-['']">
                     <BookButton />

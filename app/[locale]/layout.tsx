@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-
 import { fontVariables } from "@/lib/fonts";
 import { Footer } from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
@@ -14,13 +13,11 @@ import {
   getWebSiteSchema,
 } from "@/lib/structured-data";
 import { cloudinaryUrl } from "@/lib/cloudinary";
-import { IMAGES } from "@/lib/images";
+import { Suspense } from "react";
 
 const SITE_CONFIG = {
   name: "Flying Pictures México",
-  url:
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://www.flyingpicturesmexico.mx",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.flyingpicturesmexico.mx",
   description: {
     es: "Experimenta Teotihuacán desde el cielo con vuelos en globo aerostático.",
     en: "Experience Teotihuacán from the sky with hot air balloon flights.",
@@ -77,9 +74,7 @@ export async function generateMetadata({
       creator: SITE_CONFIG.twitter,
     },
     alternates: {
-      languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `/${l}`])
-      ),
+      languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])),
     },
   };
 }
@@ -88,8 +83,10 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   const { locale } = await params;
   const l = locale as Locale;
 
-  const messages = await getMessages({ locale });
-  const tFooter = await getTranslations({ locale, namespace: "footer" });
+  const [messages, tFooter] = await Promise.all([
+    getMessages({ locale }),
+    getTranslations({ locale, namespace: "footer" }),
+  ]);
 
   const footerTranslations = {
     description: tFooter("description"),
@@ -108,11 +105,14 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
       <StructuredData data={organizationSchema} />
       <StructuredData data={websiteSchema} />
-      <GoogleAnalytics />
+
+      <Suspense fallback={null}>
+        <GoogleAnalytics />
+      </Suspense>
 
       <NextIntlClientProvider messages={messages} locale={locale}>
         <PricingProvider>
-          <div className={`${fontVariables} flex min-h-screen flex-col bg-background text-foreground antialiased`}>
+          <div lang={locale} className={`${fontVariables} flex min-h-screen flex-col bg-background text-foreground antialiased`}>
             <Navbar />
             <main className="grow">{children}</main>
             <Footer translations={footerTranslations} />

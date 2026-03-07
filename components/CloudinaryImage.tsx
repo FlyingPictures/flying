@@ -13,6 +13,7 @@ interface CloudinaryImageProps {
   objectFit?: 'cover' | 'contain' | 'fill';
   unoptimized?: boolean;
   urlWidth?: number;
+  quality?: string;
 }
 
 export function CloudinaryImage({
@@ -27,10 +28,15 @@ export function CloudinaryImage({
   objectFit = 'cover',
   unoptimized = false,
   urlWidth,
+  quality,
 }: CloudinaryImageProps) {
   if (!publicId) return null;
 
-  const src = cloudinaryUrl(publicId, fill ? urlWidth : width);
+  const src = cloudinaryUrl(
+    publicId,
+    fill ? urlWidth : width,
+    quality ? { quality } : undefined
+  );
 
   if (fill) {
     return (
@@ -39,7 +45,7 @@ export function CloudinaryImage({
         alt={alt}
         fill
         priority={priority}
-        sizes={sizes}
+        sizes={sizes ?? "100vw"}
         className={className}
         unoptimized={unoptimized}
         style={{ objectFit }}

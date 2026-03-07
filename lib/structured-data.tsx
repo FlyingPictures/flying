@@ -1,7 +1,7 @@
 import { Locale } from '@/i18n/config';
 
 interface StructuredDataProps {
-  data: Record<string, any>;
+  data: Record<string, unknown>;
 }
 
 export function StructuredData({ data }: StructuredDataProps) {
@@ -21,8 +21,8 @@ export function getOrganizationSchema(locale: Locale = 'en') {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Flying Pictures México',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.flyingpicturesmexico.com',
-    logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.flyingpicturesmexico.com'}/favicon.svg`,
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.flyingpicturesmexico.mx',
+    logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.flyingpicturesmexico.mx'}/favicon.svg`,
     description: isSpanish
       ? 'Empresa de aviación líder en vuelos en globo aerostático sobre Teotihuacán'
       : 'Leading aviation company for hot air balloon flights over Teotihuacán',

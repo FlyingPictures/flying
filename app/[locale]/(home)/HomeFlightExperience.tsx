@@ -200,8 +200,9 @@ export function FlightExperienceSection() {
               left: 0,
               top: '50%',
               transform: `translateY(-50%) translateX(${indicatorStyle.left}px)`,
-              transition: 'transform 80ms ease-out, width 80ms ease-out',
+              transition: 'transform 80ms ease-out',
               willChange: 'transform',
+              // width sin transition — cambia instantáneo, solo el movimiento anima
             }}
           />
           {TABS.map(tab => (
