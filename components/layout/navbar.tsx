@@ -57,7 +57,7 @@ const LanguageSwitcher = ({ className = "" }: { className?: string }) => {
 const HeaderBanner = () => {
   const bannerT = useTranslations("banner")
   return (
-    <div className="w-full bg-destructive text-background font-bold h-12 flex items-center justify-center px-4 overflow-hidden">
+    <div className="w-full bg-destructive text-white font-bold h-12 flex items-center justify-center px-4 overflow-hidden">
       <a href={`tel:${CONTACT.PHONE}`} className="uppercase whitespace-nowrap text-[0.7rem] lg:text-[clamp(0.65rem,2.5vw,0.875rem)]">
         {bannerT("company")} {CONTACT.DISPLAY}
       </a>
