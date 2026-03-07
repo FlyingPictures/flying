@@ -8,9 +8,9 @@ export function cloudinaryUrl(publicId: string, width?: number): string {
 
   const transforms = [
     'f_auto',
-    'q_auto:best',
+    'q_auto:good',
     width && `w_${width}`,
-    width && 'c_fill,g_auto',
+    width && 'c_limit',
   ]
     .filter(Boolean)
     .join(',');

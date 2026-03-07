@@ -14,12 +14,13 @@ import {
   getWebSiteSchema,
 } from "@/lib/structured-data";
 import { cloudinaryUrl } from "@/lib/cloudinary";
+import { IMAGES } from "@/lib/images";
 
 const SITE_CONFIG = {
   name: "Flying Pictures México",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://www.flyingpicturesmexico.com",
+    "https://www.flyingpicturesmexico.mx",
   description: {
     es: "Experimenta Teotihuacán desde el cielo con vuelos en globo aerostático.",
     en: "Experience Teotihuacán from the sky with hot air balloon flights.",
@@ -88,7 +89,6 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   const l = locale as Locale;
 
   const messages = await getMessages({ locale });
-
   const tFooter = await getTranslations({ locale, namespace: "footer" });
 
   const footerTranslations = {
@@ -100,9 +100,14 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
   const organizationSchema = getOrganizationSchema(l);
   const websiteSchema = getWebSiteSchema(l);
+  const heroPreloadUrl = cloudinaryUrl(IMAGES.home.hero.background, 1280)
 
   return (
     <>
+      <link rel="preload" as="image" href={heroPreloadUrl} fetchPriority="high" />
+      <link rel="preconnect" href="https://res.cloudinary.com" />
+      <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+
       <StructuredData data={organizationSchema} />
       <StructuredData data={websiteSchema} />
       <GoogleAnalytics />
@@ -111,7 +116,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
         <PricingProvider>
           <div className={`${fontVariables} flex min-h-screen flex-col bg-background text-foreground antialiased`}>
             <Navbar />
-            <main className="flex-grow">{children}</main>
+            <main className="grow">{children}</main>
             <Footer translations={footerTranslations} />
             <FloatingBar />
           </div>

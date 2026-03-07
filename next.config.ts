@@ -22,6 +22,57 @@ const nextConfig: NextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
+  async redirects() {
+    return [
+      // Rutas específicas que cambiaron de nombre — español
+      {
+        source: '/la-experiencia/:path*',
+        has: [{ type: 'host', value: 'flyingpictures.mx' }],
+        destination: 'https://www.flyingpicturesmexico.mx/es/flight-experiences/:path*',
+        permanent: true,
+      },
+      {
+        source: '/la-experiencia/:path*',
+        has: [{ type: 'host', value: 'www.flyingpictures.mx' }],
+        destination: 'https://www.flyingpicturesmexico.mx/es/flight-experiences/:path*',
+        permanent: true,
+      },
+      // Rutas específicas que cambiaron de nombre — inglés
+      {
+        source: '/en/la-experiencia/:path*',
+        has: [{ type: 'host', value: 'flyingpictures.mx' }],
+        destination: 'https://www.flyingpicturesmexico.mx/en/flight-experiences/:path*',
+        permanent: true,
+      },
+      {
+        source: '/en/la-experiencia/:path*',
+        has: [{ type: 'host', value: 'www.flyingpictures.mx' }],
+        destination: 'https://www.flyingpicturesmexico.mx/en/flight-experiences/:path*',
+        permanent: true,
+      },
+      // Redirect general — dominio viejo → dominio nuevo (preserva path)
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'flyingpictures.mx' }],
+        destination: 'https://www.flyingpicturesmexico.mx/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.flyingpictures.mx' }],
+        destination: 'https://www.flyingpicturesmexico.mx/:path*',
+        permanent: true,
+      },
+      // Canonicalización sin www → con www
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'flyingpicturesmexico.mx' }],
+        destination: 'https://www.flyingpicturesmexico.mx/:path*',
+        permanent: true,
+      },
+    ];
+  },
+
   async rewrites() {
     return {
       beforeFiles: [
@@ -49,10 +100,7 @@ const nextConfig: NextConfig = {
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-          {
-            key: 'Link',
-            value: '<https://res.cloudinary.com>; rel=preconnect',
-          },
+          { key: 'Link', value: '<https://res.cloudinary.com>; rel=preconnect' },
         ],
       },
     ];

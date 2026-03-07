@@ -4,14 +4,10 @@ import type { Metadata } from "next"
 import { FlightHero } from "./flight-hero"
 import { FlightCardsSection } from "./flight-card"
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.flyingpicturesmexico.com"
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.flyingpicturesmexico.mx"
 
 type Props = {
   params: Promise<{ locale: string }>
-}
-
-export async function generateStaticParams() {
-  return [{ locale: "es" }, { locale: "en" }]
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -28,7 +24,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     robots: { index: true, follow: true },
-
     alternates: {
       canonical: url,
       languages: {
@@ -37,7 +32,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         "x-default": `${SITE_URL}/en/flight-experiences`,
       },
     },
-
     openGraph: {
       type: "website",
       locale,
@@ -54,7 +48,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
       ],
     },
-
     twitter: {
       card: "summary_large_image",
       title,
@@ -70,5 +63,5 @@ export default function FlightExperiencesPage() {
       <FlightHero />
       <FlightCardsSection />
     </main>
-  );
+  )
 }
