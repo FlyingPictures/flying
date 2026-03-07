@@ -11,6 +11,7 @@ interface CloudinaryImageProps {
   fill?: boolean;
   sizes?: string;
   objectFit?: 'cover' | 'contain' | 'fill';
+  unoptimized?: boolean;
 }
 
 export function CloudinaryImage({
@@ -23,6 +24,7 @@ export function CloudinaryImage({
   fill = false,
   sizes,
   objectFit = 'cover',
+  unoptimized = false,
 }: CloudinaryImageProps) {
   if (!publicId) return null;
 
@@ -37,9 +39,8 @@ export function CloudinaryImage({
         priority={priority}
         sizes={sizes}
         className={className}
-        style={{ 
-          objectFit,
-        }}
+        unoptimized={unoptimized}
+        style={{ objectFit }}
       />
     );
   }
@@ -52,6 +53,7 @@ export function CloudinaryImage({
       height={height || Math.round(width * 0.67)}
       priority={priority}
       className={className}
+      unoptimized={unoptimized}
     />
   );
 }

@@ -1,3 +1,4 @@
+// FlightExperienceSection.tsx
 'use client'
 
 import * as React from 'react'
@@ -316,6 +317,7 @@ export function FlightExperienceSection() {
                 alt={t('cards.tradition.title')}
                 width={608}
                 height={444}
+                unoptimized
                 className="w-full h-full object-cover object-top"
               />
             </div>
@@ -333,6 +335,7 @@ export function FlightExperienceSection() {
                     alt={t('cards.tradition.award_label')}
                     width={283}
                     height={72}
+                    unoptimized
                     className="w-full h-auto object-contain"
                   />
                 </div>
