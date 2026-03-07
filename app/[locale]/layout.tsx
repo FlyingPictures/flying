@@ -100,7 +100,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
   const organizationSchema = getOrganizationSchema(l);
   const websiteSchema = getWebSiteSchema(l);
-  const heroPreloadUrl = cloudinaryUrl(IMAGES.home.hero.background, 1280)
+  const heroPreloadUrl = cloudinaryUrl(IMAGES.home.hero.background, 390)
 
   return (
     <>

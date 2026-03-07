@@ -26,11 +26,11 @@ export async function HomeHeroSection() {
             publicId={IMAGES.home.hero.background}
             alt="Hero Background"
             fill
-            sizes="100vw"
-            className="object-contain object-top"
+            sizes="(max-width: 768px) 100vw, 100vw"
+            className="object-cover object-top lg:object-contain"
             priority
             unoptimized
-            urlWidth={1280}
+            urlWidth={390}
           />
           <div className="absolute inset-0 bg-black/10" />
         </div>
