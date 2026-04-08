@@ -25,7 +25,7 @@ const Card = ({ publicId, reason, index, titleWidth }: CardProps) => (
         <h3 className="text-card-title text-left">{reason.title}</h3>
       </div>
     </div>
-    <p className="text-left mt-4">{reason.description}</p>
+    <p className="text-left mt-4 whitespace-pre-line">{reason.description}</p>
   </div>
 )
 

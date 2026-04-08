@@ -9,7 +9,7 @@ export async function PlanWeatherPolicy() {
   const t = await getTranslations("planYourVisit.weatherPolicy");
 
   return (
-    <section className="relative w-full h-[758px] md:h-[1031px]">
+    <section className="relative w-full min-h-[758px] md:min-h-[1031px]">
       <CloudinaryImage
         publicId={IMAGES.plan.weatherPolicy.cancelation}
         alt="Weather Policy Background"
@@ -17,19 +17,19 @@ export async function PlanWeatherPolicy() {
         className="object-cover"
       />
 
-      <div className="relative z-10 flex flex-col justify-between items-center h-full mx-auto px-4 py-[clamp(3rem,8vh,6rem)]">
+      <div className="relative z-10 flex flex-col justify-between items-center h-full mx-auto px-6 md:px-10 lg:px-16 py-[clamp(3rem,8vh,6rem)]">
         
         <div className="flex flex-col max-w-[800px] items-center text-center gap-4">
           <h4>{t("label")}</h4>
           <h2 className="mb-6 whitespace-pre-line leading-tight">
             {t("title")}
           </h2>
-          <p className="max-w-[400px] md:max-w-[600px]">
+          <p className="max-w-[400px] md:max-w-[600px] whitespace-pre-line mb-14">
             {t("description")}
           </p>
         </div>
 
-        <div className="w-full max-w-[345px] md:max-w-[600px] flex flex-col gap-6 items-start">
+        <div className="w-full max-w-[345px] md:max-w-[720px] lg:max-w-[900px] flex flex-col gap-6 items-start">
   
           <div className={`${BLOCK} w-full md:text-left`}>
             <h3 className="italic">{t("companyCancellation.title")}</h3>

@@ -1,20 +1,21 @@
 {
   "planYourVisit": {
     "hero": {
-      "title": "Prepare for Takeoff",
+      "title": "Your Journey to the Skies.",
       "subtitle": "Everything you need to know before the alarm clock rings",
-      "description": "We know waking up at 4:30 AM requires willpower. Here is the operational manual to ensure your journey to the launch site is smooth, safe, and stress-free."
+      "description": "The most sublime moments begin before the world awakes. To ensure your arrival at our private launch site is seamless and professional, we have provided this operational briefing. From transportation timing to meeting points, we manage the precision so you can enjoy the serenity."
     },
 
     "sunriseRitual": {
-      "label": "THE SUNRISE RITUAL",
-      "title": "Why so early?",
-      "description": "A hot air balloon is the only aircraft that floats within the wind rather than cutting through it. To do this safely, we need the atmosphere to be perfectly stable. This phenomenon, known as \"inversion,\" only happens in the first hours of the day. Once the sun heats the earth, thermal currents begin, and it becomes unsafe to fly balloons. We don't fly at dawn for the romance (though that’s a bonus); we fly at dawn for the physics."
+      "label": "The Science of Flight",
+      "title": "Why We Fly at Dawn.",
+      "description": "A hot air balloon is a precision aircraft that navigates within the air mass rather than resisting it. To achieve this with absolute safety, we require a stable atmosphere. This meteorological phenomenon thermal inversion occurs exclusively during the first light of day. As the sun warms the terrain, thermal currents create atmospheric turbulence, making flight conditions unsuitable for ballooning. We do not schedule our ascents at dawn merely for the aesthetic; we do so to uphold the highest standards of aeronautical safety and operational stability."
     },
 
     "gettingHere": {
-      "label": "GETTING HERE",
-      "title": "All Roads Lead to\n the Pyramids",
+      "label": "Arrival & Directions",
+      "title": "Your Gateway \n to the Valley.",
+      "description": "Located in the heart of the Teotihuacán Valley, our private launch site is easily accessible from Mexico City and surrounding areas. Precision in your arrival ensures excellence in your flight.",
       "shuttle": {
         "cardTitle": "The Stress-Free Choice",
         "cardBody": "If you booked a package with transport, our van picks you up directly from your hotel or Airbnb in designated zones (Reforma, Polanco, Centro, Roma/Condesa).",
@@ -35,8 +36,8 @@
 
     "weatherPolicy": {
       "label": "WEATHER POLICY",
-      "title": "Fairness First: Our\n Cancellation Policy.",
-      "description": "We are the only company with a strict \"No Fly\" rule if the wind is tricky. We don't take risks. But we also don't take your money if we can't deliver.",
+      "title": "Operational Integrity:\n Our Flight Guarantee.",
+      "description": "We maintain the most rigorous safety protocols in the industry. If meteorological conditions do not meet our exacting standards, we simply do not fly. Our commitment is to your safety above all else.\n \n Should a flight be cancelled due to weather, we offer seamless rescheduling or a full refund. We prioritise your peace of mind as much as your protection",
 
       "companyCancellation": {
         "title": "If We Cancel (Bad Weather):",

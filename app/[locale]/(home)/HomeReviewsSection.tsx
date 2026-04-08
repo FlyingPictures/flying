@@ -29,6 +29,7 @@ export default async function HomeReviewsSection() {
         <header className="text-center space-y-2">
           <h4 className="text-secondary font-poppins uppercase tracking-wider">{t('readRealReviews')}</h4>
           <h2 className="text-secondary font-libre-baskerville text-[clamp(32px,5vw,64px)] leading-tight">{t('dontJustTakeOurWord')}</h2>
+          <p className="text-secondary/90 font-poppins text-lg">{t('Subtittle')}</p>
         </header>
         <div className="max-w-112.5 w-[clamp(320px,80vw,450px)] mx-auto mt-8">
           <div className="flex items-center justify-center gap-[clamp(16px,4vw,40px)] h-[clamp(40px,6vw,60px)]">

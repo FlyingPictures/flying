@@ -12,11 +12,11 @@ export async function PlanGettingHere() {
         <div className="mb-12 text-center">
           <h4 className="h4">{t("label")}</h4>
           <h2 className="h2 whitespace-pre-line">{t("title")}</h2>
+          <p className="mt-4 text-gray-600">{t("description")}</p>
         </div>
 
         <div className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:justify-start lg:items-stretch">
 
-          {/* Shuttle */}
           <div className="flex flex-col rounded-[var(--radius)] overflow-hidden lg:justify-self-end w-full max-w-[clamp(345px,90vw,582px)]">
             <div className="relative w-full h-[clamp(300px,45vw,432px)] flex flex-col justify-end rounded-[var(--radius)] overflow-hidden">
               <CloudinaryImage

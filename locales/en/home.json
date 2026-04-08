@@ -2,9 +2,9 @@
   "herosection": {
     "h1": "The Original \n Teotihuacán Balloon Flight.",
     "h3": "British precision. Mexican heart. \n The morning view of a lifetime.",
-    "paragraph": "We’ve spent many decades proving that the best adventures \n are the ones designed with engineering rigour. \n Welcome to the safest balloon ride in Mexico.",
+    "paragraph": "Over decades, we have learned that the finest adventures \n are those shaped by meticulous attention to detail \n and an unwavering commitment to safety.",
     "ctaPrimary": "Check Flight Availability",
-    "poweredBy": "Powered by Cameron Balloons UK \n & a lifetime of safe landings.",
+    "poweredBy": "Welcome to the highest standard of certified \n aviation in the Teotihuacán Valley.",
     "ctaSecondary": "Taking of at first light"
   },
 
@@ -12,7 +12,7 @@
     "bookFlight": "Book Flight",
     "flightDetails": "View Flight Details",
     "subtitle": "CHOOSE YOUR ASCENT",
-    "title": "Flight Experiences\nDesigned for adventure",
+    "title": "Flight Experiences \n Designed for adventure",
 
     "tabs": {
       "shared": "Shared",
@@ -36,55 +36,55 @@
     },
 
     "descriptions": {
-      "shared": "Solo travellers, friends, & couples. Fly in a shared compartmented basket\nthat gives everyone their own corner of the sky.\nAdd extras with transport options and breakfast.",
-      "private": "Exclusive experience for your group.\nEnjoy the sky in complete privacy with personalized service\nand premium amenities.",
-      "vip": "Ultimate luxury experience.\nThe finest hot air balloon journey with champagne service\nand gourmet breakfast."
+      "shared": "Ideal for solo travellers, friends, couples and groups. Enjoy a compartmented basket design that guarantees every guest their own clear view of the valley. Upgrade your flight with private transport, breakfast, and other optional extras.",
+      "private": "Ideal for solo travellers, friends, couples and groups. Enjoy a compartmented basket design that guarantees every guest their own clear view of the valley. Upgrade your flight with private transport, breakfast, and other optional extras.",
+      "vip": "Ideal for solo travellers, friends, couples and groups. Enjoy a compartmented basket design that guarantees every guest their own clear view of the valley. Upgrade your flight with private transport, breakfast, and other optional extras."
     },
 
     "awardSection": {
       "title": "Award-winning",
       "subtitle": "AVIATION COMPANY",
-      "description": "Discover the most trusted and refined hot air balloon flight in Mexico — a seamless fusion of British precision and Mexican warmth. For over two decades, Flying Pictures Mexico has set the standard for safe, cinematic flights over the ancient pyramids of Teotihuacán."
+      "description": "Xperience the most trusted and distinguished hot air balloon operation in Mexico Where British attention to detail meets the vibrant spirit of Mexico. For more than twenty years, Flying Pictures Mexico has set the gold standard for safe, beautifully executed flights over the extraordinary Teotihuacán Valley."
     },
 
     "cards": {
       "tradition": {
-        "title": "More Than a Ride, a Tradition.",
-        "description": "As you rise with the first light, the valley unfolds below: the Pyramid of the Sun, the Avenue of the Dead, and miles of golden horizon. Each moment feels carefully orchestrated — calm, elegant, and utterly unforgettable.",
+        "title": "More Than a Flight A Tradition.",
+        "description": "As you rise with the first light, the valley reveals itself below the majestic contours of the ancient city and, if fortune favours you, miles of golden horizon. Each moment feels perfectly composed: calm, elegant, and quietly unforgettable.",
         "button": "Explore Flight Collection",
         "award_label": "Most Trusted Aviation Provider 2024"
       },
 
       "other": {
-        "title": "Tu otro título",
-        "description": "Tu otra descripción",
+        "title": "Safety Always Comes First.",
+        "description": "Our fully licensed pilots bring years often decades of experience to every ascent. With comprehensive passenger insurance included, a traditional celebratory toast upon landing, and the tranquil beauty of sunrise across the valley, each flight reflects a balance of professionalism and heritage.",
         "button": "Explore Flights"
       },
 
       "safety": {
-        "title": "Safety You Can See.",
-        "description": "Our senior pilots, all certified by Mexico's Civil Aviation Authority and fully trained to guide you to national standards, guide you with the confidence of many years dedicated flying balloons. Every flight includes full insurance, a traditional toast after landing, and the quiet joy of watching the morning awaken.",
+        "title": "Safety Always Comes First.",
+        "description": "Our fully licensed pilots bring years — often decades — of experience to every ascent. With comprehensive passenger insurance included, a traditional celebratory toast upon landing, and the tranquil beauty of sunrise across the valley, each flight reflects a balance of professionalism and heritage.",
         "button": "Meet our fleet"
       }
     }
   },
 
   "whyChoose": {
-    "title": "Why fly with us?",
+    "title": "WHY FLY WITH US",
     "takeAway": "THE 30 SECOND TAKEAWAY",
-    "await": "Whether you’re celebrating love, exploring history, or simply chasing beauty, this is more than a balloon ride it’s a tradition of excellence that’s been perfected for over 30 years.",
+    "await": "Whether marking a special occasion, discovering history, or realising a lifelong dream, your journey becomes part of a tradition of excellence one refined over four decades of international aviation leadership by our founders.",
     "reasons": [
       {
-        "title": "The Best Equipment Available.",
-        "description": "We fly exclusively with Cameron Balloons UK, the world’s most trusted hot air balloons, crafted for performance, safety, and beauty."
+        "title": "Unrivalled Equipment.",
+        "description": "We primarily fly Cameron Balloons of the United Kingdom, widely regarded as the benchmark in global balloon design and manufacture. Engineered for performance, safety, and enduring quality, they reflect the standards to which we hold every flight."
       },
       {
-        "title": "Fewer Balloons, Better Views",
-        "description": "We limit our daily flights to ensure calm operations, smaller groups, and clear horizons over Teotihuacán’s pyramids."
+        "title": "The One-Flight Rule.",
+        "description": "By restricting daily departures, we preserve a measured pace and a more considered passenger experience, ensuring exceptional flights above the Teotihuacán Valley and its timeless pyramids."
       },
       {
         "title": "A British Mind, a Mexican Heart.",
-        "description": "Founded by Sean and Diana Byrne, Flying Pictures blends precision engineering with genuine hospitality — every detail, designed with care."
+        "description": "Founded by Sean and Diana Byrne, Flying Pictures blends precision engineering with authentic hospitality where every operational detail is orchestrated with absolute care."
       }
     ]
   },
@@ -100,8 +100,9 @@
 
   "reviews": {
     "tittle": "Reviews",
-    "readRealReviews": "READ REAL REVIEWS",
-    "dontJustTakeOurWord": "Don't just take our word for it",
+    "readRealReviews": "Our Reputation:",
+    "dontJustTakeOurWord": "Do not simply take our word for it;",
+    "Subtittle":"Discover why discerning travellers and global icons trust our expertise.",
     "readMoreReviews": "Read More Reviews",
     "outOf5Stars": "out of 5 stars",
     "averageRating": "4.96",
@@ -144,8 +145,8 @@
 
   "weather": {
     "liveMonitoring": "LIVE MONITORING",
-    "heading": "We don't guess the weather. We monitor and understand it.",
-    "description": "Our decisions are based on real-time data, forecasts and probability. The weather is our co-pilot — and sometimes, he can be moody.",
+    "heading": "Weather Intelligence: We never leave safety to chance.",
+    "description": "Our flight decisions are guided by real-time meteorological data, advanced forecasting, and disciplined risk assessment. In aviation, the environment dictates the operation and we respect its parameters to ensure your absolute safety.",
 
     "safetyPromise": {
       "title": "The Safety Promise",
