@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { Button } from "@/components/ui/button";
 import { getTranslations } from "next-intl/server";
@@ -10,20 +9,28 @@ const TEXT_WRAP = "whitespace-pre-line";
 export async function HomeHeroSection() {
   const t = await getTranslations("herosection");
 
-  const heroSrc = cloudinaryUrl(IMAGES.home.hero.background);
-
   return (
     <section className="relative min-h-150 h-[95vh] lg:h-screen overflow-hidden">
-      <Image
-        src={heroSrc}
-        alt="Hero Background"
-        fill
-        priority
-        fetchPriority="high"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-        className="object-cover object-top"
-        unoptimized={true}
-      />
+      <picture>
+        <source
+          media="(max-width: 640px)"
+          srcSet={cloudinaryUrl(IMAGES.home.hero.background)}  // ← sin width, imagen original
+        />
+        <source
+          media="(max-width: 1024px)"
+          srcSet={cloudinaryUrl(IMAGES.home.hero.background)}
+        />
+        <source
+          media="(min-width: 1025px)"
+          srcSet={cloudinaryUrl(IMAGES.home.hero.background)}
+        />
+        <img
+          src={cloudinaryUrl(IMAGES.home.hero.background)}
+          alt="Hero Background"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+          fetchPriority="high"
+        />
+      </picture>
       <div className="absolute inset-0 bg-black/10" />
 
       <div className="absolute inset-0 flex items-end justify-center px-[clamp(0.75rem,5vw,1.5rem)] text-center pt-30 lg:pt-40">

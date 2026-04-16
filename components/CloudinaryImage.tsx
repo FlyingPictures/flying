@@ -11,7 +11,9 @@ interface CloudinaryImageProps {
   fill?: boolean;
   sizes?: string;
   objectFit?: 'cover' | 'contain' | 'fill';
-  unoptimized?: boolean;   // ← Agregar esta línea
+  urlWidth?: number;        // Ancho al que redimensionar en Cloudinary (solo para fill)
+  loading?: 'lazy' | 'eager'; // Carga diferida
+  quality?: number | string;   // Calidad (por defecto 95)
 }
 
 export function CloudinaryImage({
@@ -24,10 +26,20 @@ export function CloudinaryImage({
   fill = false,
   sizes,
   objectFit = 'cover',
-  unoptimized = true,      // ← valor por defecto
+  urlWidth,
+  loading,
+  quality = 95,
 }: CloudinaryImageProps) {
   if (!publicId) return null;
-  const src = cloudinaryUrl(publicId);
+
+  // Construir la URL con el ancho adecuado
+  let imageWidth: number | undefined;
+  if (fill && urlWidth) {
+    imageWidth = urlWidth;
+  } else if (!fill && width) {
+    imageWidth = width;
+  }
+  const src = cloudinaryUrl(publicId, imageWidth, quality);
 
   if (fill) {
     return (
@@ -36,9 +48,10 @@ export function CloudinaryImage({
         alt={alt}
         fill
         priority={priority}
-        sizes={sizes}
+        loading={loading}
+        sizes={sizes ?? "100vw"}
         className={className}
-        unoptimized={unoptimized}
+        unoptimized={true}
         style={{ objectFit }}
       />
     );
@@ -53,8 +66,9 @@ export function CloudinaryImage({
       width={width}
       height={height}
       priority={priority}
+      loading={loading}
       className={className}
-      unoptimized={unoptimized}
+      unoptimized={true}
     />
   );
 }
