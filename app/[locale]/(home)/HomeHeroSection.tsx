@@ -10,11 +10,7 @@ const TEXT_WRAP = "whitespace-pre-line";
 export async function HomeHeroSection() {
   const t = await getTranslations("herosection");
 
-  const heroSrc = cloudinaryUrl(IMAGES.home.hero.background, 1280, {
-    height: 720,
-    crop: "fill",
-    gravity: "auto",
-  });
+  const heroSrc = cloudinaryUrl(IMAGES.home.hero.background);
 
   return (
     <section className="relative min-h-150 h-[95vh] lg:h-screen overflow-hidden">
@@ -24,20 +20,20 @@ export async function HomeHeroSection() {
         fill
         priority
         fetchPriority="high"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1280px" 
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
         className="object-cover object-top"
+        unoptimized={true}
       />
       <div className="absolute inset-0 bg-black/10" />
 
       <div className="absolute inset-0 flex items-end justify-center px-[clamp(0.75rem,5vw,1.5rem)] text-center pt-30 lg:pt-40">
         <div className="w-full max-w-5xl flex flex-col items-center gap-[clamp(0.5rem,1vw,1.5rem)]">
 
-          <div className="w-40 h-10 relative mb-2">
+          <div className="relative mb-2" style={{ width: '162px', height: '47px' }}>
             <CloudinaryImage
               publicId={IMAGES.home.hero.stars}
               alt="5 Stars"
               fill
-              sizes="160px"
               className="object-contain"
               priority
             />
@@ -55,12 +51,11 @@ export async function HomeHeroSection() {
           </div>
 
           <div className="flex items-center gap-4 mt-4">
-            <div className="w-20 h-8.5 relative">
+            <div className="relative mb-2" style={{ width: '78px', height: '33px' }}>
               <CloudinaryImage
                 publicId={IMAGES.home.hero.cameronLogo}
                 alt="Cameron Logo"
                 fill
-                sizes="80px"
                 className="object-contain"
               />
             </div>

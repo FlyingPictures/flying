@@ -192,12 +192,12 @@ export const IMAGES = {
         "Rectangle_41_4_p6etxl"
       ],
       anniversary: [
-        "anniversary_01",
-        "anniversary_02",
-        "anniversary_03",
-        "anniversary_04",
-        "anniversary_05",
-        "anniversary_06"
+        "aniversary_01",
+        "aniversary_02",
+        "aniversary_03",
+        "aniversary_04",
+        "aniversary_05",
+        "aniversary_06"
       ],
       birthday: [
         "birthday_01",
@@ -207,7 +207,7 @@ export const IMAGES = {
         "birthday_05"
       ],
       corporate: [
-        "corporate_01",
+        "corporate_06",
         "corporate_02",
         "corporate_03",
         "corporate_04",

@@ -78,10 +78,11 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
                 className={`relative aspect-square overflow-hidden ${CORNERS[i]} cursor-pointer`}
               >
                 <Image
-                  src={cloudinaryUrl(img, 800)}
+                  src={cloudinaryUrl(img)}   // ← sin parámetros
                   alt={`Photo ${i + 1}`}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
+                  unoptimized={true}
                 />
               </button>
             ))}
@@ -112,10 +113,11 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
             <div key={i} className="flex items-start gap-6">
               <div className="shrink-0 w-15 h-15 lg:w-30 lg:h-30 rounded-2xl overflow-hidden relative">
                 <Image
-                  src={cloudinaryUrl(ITINERARY_IMAGES[i] ?? ITINERARY_IMAGES[0], 400)}
+                  src={cloudinaryUrl(ITINERARY_IMAGES[i] ?? ITINERARY_IMAGES[0])} // ← sin parámetros
                   alt={step.title}
                   fill
                   className="object-cover"
+                  unoptimized={true}   // ← añadido
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -153,11 +155,12 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
               }}
             >
               <Image
-                src={cloudinaryUrl(images[carouselIndex], 1200)}
+                src={cloudinaryUrl(images[carouselIndex])} // ← sin parámetros
                 alt={`Photo ${carouselIndex + 1}`}
                 fill
                 className="object-cover rounded-(--radius)"
                 priority
+                unoptimized={true}   // ← añadido
               />
             </div>
 

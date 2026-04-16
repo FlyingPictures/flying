@@ -19,7 +19,7 @@ export default async function ProductFooter() {
         }}
       >
         <Image
-          src={cloudinaryUrl("v1771956786/sello_flying_1_l7dniq", 240)}
+          src={cloudinaryUrl("v1771956786/sello_flying_1_l7dniq", )}
           alt="Flying Seal"
           width={120}
           height={120}

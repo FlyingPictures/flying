@@ -1,3 +1,4 @@
+// components/CloudinaryImage.tsx
 import Image from 'next/image';
 import { cloudinaryUrl } from '@/lib/cloudinary';
 
@@ -9,34 +10,23 @@ interface CloudinaryImageProps {
   className?: string;
   priority?: boolean;
   fill?: boolean;
-  sizes?: string;
+  sizes?: string;               // ← AGREGADO
   objectFit?: 'cover' | 'contain' | 'fill';
-  unoptimized?: boolean;
-  urlWidth?: number;
-  quality?: string;
 }
 
 export function CloudinaryImage({
   publicId,
   alt,
-  width = 2200,
+  width,
   height,
   className,
   priority = false,
   fill = false,
-  sizes,
+  sizes,                        // ← AGREGADO
   objectFit = 'cover',
-  unoptimized = false,
-  urlWidth,
-  quality,
 }: CloudinaryImageProps) {
   if (!publicId) return null;
-
-  const src = cloudinaryUrl(
-    publicId,
-    fill ? urlWidth : width,
-    quality ? { quality } : undefined
-  );
+  const src = cloudinaryUrl(publicId);
 
   if (fill) {
     return (
@@ -45,23 +35,25 @@ export function CloudinaryImage({
         alt={alt}
         fill
         priority={priority}
-        sizes={sizes ?? "100vw"}
+        sizes={sizes}            // ← PASADO
         className={className}
-        unoptimized={unoptimized}
+        unoptimized={true}
         style={{ objectFit }}
       />
     );
   }
+
+  if (!width || !height) return null;
 
   return (
     <Image
       src={src}
       alt={alt}
       width={width}
-      height={height || Math.round(width * 0.67)}
+      height={height}
       priority={priority}
       className={className}
-      unoptimized={unoptimized}
+      unoptimized={true}
     />
   );
 }

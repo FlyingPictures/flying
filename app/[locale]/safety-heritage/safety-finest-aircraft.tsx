@@ -52,10 +52,17 @@ export function SafetyFinest() {
       className="relative w-full overflow-hidden"
       style={{ background: 'linear-gradient(to bottom, var(--background) 0%, var(--background) 95%, #dae2e8 100%)' }}
     >
-      <div className="text-center px-6 pt-[clamp(55px,8vw,78px)]">
+      <div className="text-center px-6 pt-[clamp(55px,8vw,80px)]">
         <div className="flex justify-center mb-4">
           <div className="flex items-center gap-2">
-            <CloudinaryImage publicId={IMAGES.home.hero.cameronLogo} alt="Cameron Logo" width={80} height={32} />
+            <div className="relative" style={{ width: '80px', height: '34px' }}>
+              <CloudinaryImage
+                publicId={IMAGES.home.hero.cameronLogo}
+                alt="Cameron Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
             <h4 className="whitespace-pre-line text-left">{t('subtitle')}</h4>
           </div>
         </div>
