@@ -137,16 +137,12 @@ export const IMAGES = {
         "Rectangle_95_4_hzsd3x",
       ],
       classic: [
-        "Rectangle_37_1_wzbwjr",
-        "flightHero_tqysvs",
-        "Rectangle_41_6_qcbkkl",
-        "Rectangle_41_5_1_q9jkki",
-        "Rectangle_33_3_vuzq4o",
-        "Rectangle_33_1_ltf6qb",
-        "Rectangle_36_1_jk4r63",
-        "Rectangle_41_4_p6etxl",
-        "Rectangle_41_6_qcbkkl",
-        "Rectangle_123_1_x3ehkj"
+        "traditional_01",
+        "traditional_02",
+        "traditional_03",
+        "traditional_04",
+        "traditional_05",
+        "traditional_06"
       ],
       journey: [
         "Rectangle_37_2_vkbxog",
@@ -161,40 +157,27 @@ export const IMAGES = {
         "Rectangle_41_2_fyibpj"
       ],
       proposal: [
-        "Rectangle_37_5_vswg5d",
-        "Rectangle_41_6_qcbkkl",
-        "flightHero_tqysvs",
-        "Rectangle_33_3_vuzq4o",
-        "Rectangle_36_1_jk4r63",
-        "Rectangle_41_5_1_q9jkki",
-        "Rectangle_41_4_p6etxl",
-        "Rectangle_41_6_qcbkkl",
-        "Rectangle_41_5_1_q9jkki",
-        "Rectangle_41_2_fyibpj"
+        "proposal_01",
+        "proposal_02",
+        "proposal_03",
+        "proposal_04",
+        "proposal_05" 
       ],
       vip: [
-        "Rectangle_37_8_xkxdci",
-        "flightHero_tqysvs",
-        "Rectangle_41_6_qcbkkl",
-        "Rectangle_33_3_vuzq4o",
-        "Rectangle_39_1_xdhqj7",
-        "Rectangle_41_3_ptng3e",
-        "Rectangle_41_7_ukxg3h",
-        "Rectangle_41_5_1_q9jkki",
-        "Rectangle_41_4_p6etxl",
-        "Rectangle_41_6_qcbkkl"
+        "vip_01",
+        "vip_02",
+        "vip_03",
+        "vip_04",
+        "vip_05",
+        "vip_06"
       ],
       transport: [
-        "Rectangle_37_3_qspece",
-        "Rectangle_41_6_qcbkkl",
-        "flightHero_tqysvs",
-        "Rectangle_41_5_1_q9jkki",
-        "Rectangle_33_3_vuzq4o",
-        "Rectangle_33_1_ltf6qb",
-        "Rectangle_41_3_ptng3e",
-        "Rectangle_41_6_qcbkkl",
-        "Rectangle_41_5_1_q9jkki",
-        "Rectangle_41_4_p6etxl"
+        "transport_01",
+        "transport_02",
+        "transport_03",
+        "transport_04",
+        "transport_05",
+        "transport_06"
       ],
       open: [
         "Rectangle_37_4_gdprri",
@@ -209,40 +192,26 @@ export const IMAGES = {
         "Rectangle_41_4_p6etxl"
       ],
       anniversary: [
-        "Rectangle_37_6_mtrsye",
-        "Rectangle_41_6_qcbkkl",
-        "flightHero_tqysvs",
-        "Rectangle_33_3_vuzq4o",
-        "Rectangle_39_1_xdhqj7",
-        "Rectangle_41_5_1_q9jkki",
-        "Rectangle_41_3_ptng3e",
-        "Rectangle_41_7_ukxg3h",
-        "Rectangle_41_5_1_q9jkki",
-        "Rectangle_41_2_fyibpj"
+        "anniversary_01",
+        "anniversary_02",
+        "anniversary_03",
+        "anniversary_04",
+        "anniversary_05",
+        "anniversary_06"
       ],
       birthday: [
-        "Rectangle_37_7_lozhvd",
-        "Rectangle_41_6_qcbkkl",
-        "flightHero_tqysvs",
-        "Rectangle_41_5_1_q9jkki",
-        "Rectangle_33_3_vuzq4o",
-        "Rectangle_36_1_jk4r63",
-        "Rectangle_41_4_p6etxl",
-        "Rectangle_41_6_qcbkkl",
-        "Rectangle_41_5_1_q9jkki",
-        "Rectangle_41_2_fyibpj"
+        "birthday_01",
+        "birthday_02",
+        "birthday_03",
+        "birthday_04",
+        "birthday_05"
       ],
       corporate: [
-        "Rectangle_37_9_vw580e",
-        "Rectangle_41_6_qcbkkl",
-        "flightHero_tqysvs",
-        "Rectangle_41_5_1_q9jkki",
-        "Rectangle_33_3_vuzq4o",
-        "Rectangle_39_1_xdhqj7",
-        "Rectangle_41_3_ptng3e",
-        "Rectangle_41_7_ukxg3h",
-        "Rectangle_41_5_1_q9jkki",
-        "Rectangle_41_2_fyibpj"
+        "corporate_01",
+        "corporate_02",
+        "corporate_03",
+        "corporate_04",
+        "corporate_05"
       ]
     },
 
