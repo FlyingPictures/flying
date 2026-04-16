@@ -26,7 +26,7 @@ function ReviewCard({ review }: { review: Review }) {
 
       <div className="flex items-center gap-3 lg:hidden">
         <Image
-          src={cloudinaryUrl(avatars[review.avatarIndex], 200)}
+          src={cloudinaryUrl(avatars[review.avatarIndex])}
           alt={review.name}
           width={60}
           height={60}
@@ -41,7 +41,7 @@ function ReviewCard({ review }: { review: Review }) {
       <div className="hidden lg:flex justify-between items-center">
         <div className="flex gap-3 items-center">
           <Image
-            src={cloudinaryUrl(avatars[review.avatarIndex], 200)}
+            src={cloudinaryUrl(avatars[review.avatarIndex])}
             alt={review.name}
             width={60}
             height={60}
@@ -53,7 +53,7 @@ function ReviewCard({ review }: { review: Review }) {
           </div>
         </div>
         <Image
-          src={cloudinaryUrl(starsImg, 200)}
+          src={cloudinaryUrl(starsImg)}
           alt="stars"
           width={100}
           height={20}
@@ -72,7 +72,7 @@ function ReviewCard({ review }: { review: Review }) {
 
       <div className="mt-3 lg:hidden">
         <Image
-          src={cloudinaryUrl(starsImg, 200)}
+          src={cloudinaryUrl(starsImg)}
           alt="stars"
           width={100}
           height={20}
