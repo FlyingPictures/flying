@@ -27,7 +27,7 @@ const SITE_CONFIG = {
     en: ["hot air balloon", "Teotihuacán"],
   },
   twitter: "@flyingpicturesmx",
-  ogImage: cloudinaryUrl("v1769092256/home_hero_y2htjn", 1200),
+  ogImage: cloudinaryUrl("logo_fsv096"),
 };
 
 type Locale = (typeof routing.locales)[number];
