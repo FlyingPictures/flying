@@ -1,4 +1,3 @@
-// components/CloudinaryImage.tsx
 import Image from 'next/image';
 import { cloudinaryUrl } from '@/lib/cloudinary';
 
@@ -10,8 +9,9 @@ interface CloudinaryImageProps {
   className?: string;
   priority?: boolean;
   fill?: boolean;
-  sizes?: string;               // ← AGREGADO
+  sizes?: string;
   objectFit?: 'cover' | 'contain' | 'fill';
+  unoptimized?: boolean;   // ← Agregar esta línea
 }
 
 export function CloudinaryImage({
@@ -22,8 +22,9 @@ export function CloudinaryImage({
   className,
   priority = false,
   fill = false,
-  sizes,                        // ← AGREGADO
+  sizes,
   objectFit = 'cover',
+  unoptimized = true,      // ← valor por defecto
 }: CloudinaryImageProps) {
   if (!publicId) return null;
   const src = cloudinaryUrl(publicId);
@@ -35,9 +36,9 @@ export function CloudinaryImage({
         alt={alt}
         fill
         priority={priority}
-        sizes={sizes}            // ← PASADO
+        sizes={sizes}
         className={className}
-        unoptimized={true}
+        unoptimized={unoptimized}
         style={{ objectFit }}
       />
     );
@@ -53,7 +54,7 @@ export function CloudinaryImage({
       height={height}
       priority={priority}
       className={className}
-      unoptimized={true}
+      unoptimized={unoptimized}
     />
   );
 }
