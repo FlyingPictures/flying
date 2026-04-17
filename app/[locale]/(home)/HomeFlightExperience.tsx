@@ -287,8 +287,8 @@ export function FlightExperienceSection() {
         <CloudinaryImage
           publicId={IMAGES.home.flightExperience.awards.certificate}
           alt="Awards"
-          width={700}
-          height={700}
+          width={236}  
+          height={63}
           className="mx-auto w-37.5 md:w-59 mb-[clamp(16px,8vw,108px)]"
         />
         <div className="max-w-214.5 mx-auto mb-8">
@@ -333,10 +333,10 @@ export function FlightExperienceSection() {
                   <CloudinaryImage
                     publicId={IMAGES.home.flightExperience.awards.badge}
                     alt={t('cards.tradition.award_label')}
-                    width={283}
+                    width={283}  
                     height={72}
                     className="w-full h-auto object-contain"
-                  />
+/>
                 </div>
               </div>
             </div>
@@ -347,6 +347,7 @@ export function FlightExperienceSection() {
               publicId={IMAGES.home.flightExperience.bottomCards.safety}
               alt={t('cards.safety.title')}
               fill
+              urlWidth={800}
               sizes="(max-width: 768px) 100vw, 608px"
               className="object-cover object-top"
             />

@@ -14,7 +14,7 @@ export async function HomeHeroSection() {
       <picture>
         <source
           media="(max-width: 640px)"
-          srcSet={cloudinaryUrl(IMAGES.home.hero.background)}  // ← sin width, imagen original
+          srcSet={cloudinaryUrl(IMAGES.home.hero.background)} 
         />
         <source
           media="(max-width: 1024px)"
