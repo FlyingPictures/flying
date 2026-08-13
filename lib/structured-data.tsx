@@ -1,4 +1,11 @@
 import { Locale } from '@/i18n/config';
+import {
+  SITE_CONTACT,
+  SITE_LOGO_URL,
+  SITE_NAME,
+  SITE_SOCIALS,
+  SITE_URL,
+} from '@/lib/site-config';
 
 interface StructuredDataProps {
   data: Record<string, unknown>;
@@ -20,9 +27,9 @@ export function getOrganizationSchema(locale: Locale = 'en') {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Flying Pictures México',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.flyingpicturesmexico.mx',
-    logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.flyingpicturesmexico.mx'}/favicon.svg`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: SITE_LOGO_URL,
     description: isSpanish
       ? 'Empresa de aviación líder en vuelos en globo aerostático sobre Teotihuacán'
       : 'Leading aviation company for hot air balloon flights over Teotihuacán',
@@ -34,14 +41,11 @@ export function getOrganizationSchema(locale: Locale = 'en') {
     },
     contactPoint: {
       '@type': 'ContactPoint',
+      telephone: SITE_CONTACT.phone,
       contactType: 'Customer Service',
       availableLanguage: ['Spanish', 'English'],
     },
-    sameAs: [
-      // Agregar redes sociales aquí cuando estén disponibles
-      // 'https://www.facebook.com/flyingpicturesmexico',
-      // 'https://www.instagram.com/flyingpicturesmexico',
-    ],
+    sameAs: [...SITE_SOCIALS],
   };
 }
 
@@ -82,7 +86,7 @@ export function getServiceSchema(locale: Locale = 'en') {
     serviceType: isSpanish ? 'Vuelo en Globo Aerostático' : 'Hot Air Balloon Flight',
     provider: {
       '@type': 'Organization',
-      name: 'Flying Pictures México',
+      name: SITE_NAME,
     },
     areaServed: {
       '@type': 'Country',
@@ -90,7 +94,7 @@ export function getServiceSchema(locale: Locale = 'en') {
     },
     availableChannel: {
       '@type': 'ServiceChannel',
-      serviceUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.flyingpicturesmexico.com',
+      serviceUrl: SITE_URL,
     },
   };
 }
@@ -111,21 +115,11 @@ export function getBreadcrumbSchema(items: Array<{ name: string; url: string }>)
 
 // Schema.org WebSite
 export function getWebSiteSchema(locale: Locale = 'en') {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.flyingpicturesmexico.com';
-  
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Flying Pictures México',
-    url: baseUrl,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${baseUrl}/search?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
+    name: SITE_NAME,
+    url: SITE_URL,
     inLanguage: locale,
     alternateName: ['Flying Pictures', 'Vuelos en Globo Teotihuacán'],
   };

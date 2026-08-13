@@ -1,46 +1,39 @@
 {
   "hero": {
-    "title": "The Open Flight",
-    "subtitle": "Open Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
+    "subtitle": "Flexible Voucher | 6-Month Validity | Traditional Flight"
   },
   "rating": {
     "score": 4.8,
-    "reviewsCount": "156 reviews"
+    "reviewsCount": "225 Tripadvisor reviews"
   },
   "description": {
-    "title": "Share the Sky with Fellow Adventurers",
-    "paragraph": "The Open Flight is the perfect introduction to hot air ballooning. Join a diverse group of adventurers from around the world for a sunrise flight over the Valley of Teotihuacán. An open basket means you share the wonder with new faces — and by the time you land, they won't feel like strangers anymore. The best stories start with a leap of faith at 5 AM."
+    "title": "Give an unforgettable experience",
+    "paragraph": "The Gift Card lets you give a traditional balloon flight without choosing the date immediately. The voucher is transferable, becomes active one month after purchase, and can be used during the following six months, subject to availability."
   },
   "itinerary": {
-    "title": "What you'll do",
+    "title": "How it works",
     "steps": [
       {
-        "title": "5:00 AM - Arrive & Check-in",
-        "description": "You'll arrive at Flying Pictures Reception and we will receive you to help you check-in and loremipsum."
+        "title": "Purchase the gift card",
+        "description": "Buy the individual voucher and keep the purchase reference number."
       },
       {
-        "title": "Welcome & Coffee Break",
-        "description": "After you complete your check-in we will welcome you with our coffee station with hot beverages and traditional cookies."
+        "title": "Receive your voucher",
+        "description": "Give the card as a gift or keep it to use at a later date."
       },
       {
-        "title": "The Inflation Spectacle",
-        "description": "Walk to the launch field to watch the \"Giants\" come to life. Seeing the massive balloons rise with the roar of the burners is the first act of the show."
+        "title": "Activate your flight date",
+        "description": "Contact Flying Pictures with your reference number and reserve at least 48 hours in advance, subject to availability."
       },
       {
-        "title": "The Ascent",
-        "description": "Lift off gently into the dawn. For approx. 45-60 minutes, float silently over the Valley of Teotihuacán, watching the sun reveal the pyramids from above."
-      },
-      {
-        "title": "The 1783 Toast",
-        "description": "Upon landing, we celebrate with a traditional sparkling wine toast. A ritual dating back to the first aviators to thank the wind gods for a safe return."
+        "title": "Enjoy the traditional flight",
+        "description": "Experience the balloon flight with a toast, flight certificate, and breakfast included under the voucher conditions."
       }
     ]
   },
    "pricing": {
-    "dates": "See Dates",
-    "adults": "Adults",
-    "kids": "kids (4-12)",
-    "priceAdults": "2,199 MXN",
-    "priceKids": "1,799 MXN"
+    "dates": "Buy Voucher",
+    "adults": "Individual voucher",
+    "kids": ""
   }
 }

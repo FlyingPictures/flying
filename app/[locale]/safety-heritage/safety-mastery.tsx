@@ -23,7 +23,6 @@ const ICONS: Record<string, React.ReactNode> = {
 export async function SafetyMastery() {
   const t = await getTranslations('safety.mastery')
   const cards = t.raw('cards') as Record<string, { name: string; description: string }>
-  const captains = t.raw('captains') as Record<string, { name: string; description: string }>
 
   return (
     <section className="relative w-full min-h-230 flex flex-col items-center justify-start overflow-hidden pt-[clamp(60px,7vw,120px)] pb-[clamp(40px,5vw,80px)] px-4">
@@ -49,18 +48,6 @@ export async function SafetyMastery() {
             <div className="flex flex-col gap-1 text-left md:text-center">
               <h5 className="font-bold! text-xl">{card.name}</h5>
               <p className="text-sm!">{card.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="flex flex-row flex-wrap justify-center gap-[clamp(16px,2.78vw,40px)] relative">
-        {Object.entries(captains).map(([key, captain]) => (
-          <div key={key} className="flex flex-col md:flex-row items-start md:items-center gap-3 w-25 md:w-auto">
-            <div className="w-16 h-16 rounded-full bg-background shrink-0" />
-            <div className="flex flex-col">
-              <span className="font-bold text-xs leading-5 text-background">{captain.name}</span>
-              <span className="font-light text-xs leading-4 text-background">{captain.description}</span>
             </div>
           </div>
         ))}

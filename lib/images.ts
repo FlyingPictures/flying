@@ -48,13 +48,6 @@ export const IMAGES = {
     },
     reviews: {
       background: "backgroundreviews_uptzt8",
-      stars: "Group_64_xrfcje",
-      platforms: {
-        google: "icon-google-5-stars_1_jkkyci",
-        tripadvisor: "icon-tripadvisor-5-stars_1_kj3cku",
-        facebook: "icon-fb-5-stars_1_ph3b79",
-      },
-      avatars: ["Ellipse_8_reoc5x", "Ellipse_8_reoc5x", "Ellipse_8_reoc5x"],
     },
   },
 

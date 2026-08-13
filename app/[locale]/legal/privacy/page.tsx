@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { SITE_URL } from "@/lib/site-config";
 
 type Props = { params: Promise<{ locale: string }> };
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.flyingpicturesmexico.com";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -27,7 +27,7 @@ export default async function PrivacyPage({ params }: Props) {
       <header className="mb-12 border-b border-secondary/20 pb-8">
         <h1 className="mb-4">{t("privacyTitle")}</h1>
         <p className="text-muted-foreground text-lg mt-4">{t("privacyDescription")}</p>
-        <p className="text-muted-foreground text-sm mt-2">{t("lastUpdated")}: 17 de enero de 2026</p>
+        <p className="text-muted-foreground text-sm mt-2">{t("lastUpdated")}: {t("lastUpdatedDate")}</p>
       </header>
 
       <div className="space-y-12">

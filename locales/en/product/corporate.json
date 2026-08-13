@@ -1,11 +1,10 @@
 {
   "hero": {
-    "title": "The Corporate Experience",
     "subtitle": "Private Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
   },
   "rating": {
-    "score": 4.9,
-    "reviewsCount": "67 reviews"
+    "score": 4.8,
+    "reviewsCount": "225 Tripadvisor reviews"
   },
   "description": {
     "title": "Team Building Above the Ordinary",
@@ -16,7 +15,7 @@
     "steps": [
       {
         "title": "5:00 AM - Arrive & Check-in",
-        "description": "You'll arrive at Flying Pictures Reception and we will receive you to help you check-in and loremipsum."
+        "description": "You’ll arrive at Flying Pictures Reception, where our team will welcome you and help you complete check-in."
       },
       {
         "title": "Welcome & Coffee Break",
@@ -37,10 +36,8 @@
     ]
   },
    "pricing": {
-    "dates": "See Dates",
+    "dates": "Request a Quote",
     "adults": "Adults",
-    "kids": "kids (4-12)",
-    "priceAdults": "3,799 MXN",
-    "priceKids": "3,099 MXN"
+    "kids": "Kids (4-12)"
   }
 }

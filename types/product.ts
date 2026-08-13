@@ -1,19 +1,10 @@
-import { IMAGES } from "@/lib/images";
-import { redirect } from "next/navigation";
+import {
+  PRODUCT_SLUGS,
+  type ProductSlug,
+} from "@/lib/commercial-config";
 
-export type ProductSlug = keyof typeof IMAGES.product.gallery;
-
-export const PRODUCTS = Object.keys(
-  IMAGES.product.gallery
-) as ProductSlug[];
-
-export default function ProductIndexPage({
-  params,
-}: {
-  params: { locale: string };
-}) {
-  redirect(`/${params.locale}/product/classic`);
-}
+export type { ProductSlug };
+export const PRODUCTS = PRODUCT_SLUGS;
 
 export interface ItineraryStep {
   time?: string;
@@ -21,9 +12,19 @@ export interface ItineraryStep {
   description: string;
 }
 
+export interface PackageDetails {
+  included: string[];
+  notIncluded: string[];
+  recommendedExtras: string[];
+  notes: string[];
+  itinerary: {
+    title: string;
+    steps: ItineraryStep[];
+  };
+}
+
 export interface ProductTranslation {
   hero: {
-    title: string;
     subtitle: string;
   };
   rating: {
@@ -39,10 +40,9 @@ export interface ProductTranslation {
     steps: ItineraryStep[];
   };
   pricing: {
-  adults: string
-  kids: string
-  priceAdults: string
-  priceKids: string
-  dates: string
+    adults: string
+    kids: string
+    dates: string
   };
+  details?: PackageDetails;
 }

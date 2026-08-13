@@ -1,11 +1,10 @@
 {
   "hero": {
-    "title": "El Viaje Clásico",
-    "subtitle": "Canasta Compartida | 45-60 Minutos | 🇬🇧 Estándares de Seguridad Británicos"
+    "subtitle": "Canasta compartida | Vuelo aproximado de 40 minutos | 🇬🇧 Estándares de seguridad británicos"
   },
   "rating": {
-    "score": 4.9,
-    "reviewsCount": "230 evaluaciones"
+    "score": 4.8,
+    "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
     "title": "Vive la Magia del Vuelo Compartido",
@@ -15,12 +14,12 @@
     "title": "Qué harás",
     "steps": [
       {
-        "title": "5:00 AM - Llegada y Check-in",
-        "description": "Llegarás a la Recepción de Flying Pictures y te recibiremos para ayudarte con el check-in."
+        "title": "5:00 AM - Llegada y registro",
+        "description": "Llegarás a la recepción de Flying Pictures y te daremos la bienvenida para completar tu registro."
       },
       {
         "title": "Bienvenida y Café",
-        "description": "Después de completar tu check-in te recibiremos con nuestra estación de café con bebidas calientes y galletas tradicionales."
+        "description": "Después de tu registro te esperamos con nuestra estación de café, bebidas calientes y galletas tradicionales."
       },
       {
         "title": "El Espectáculo de Inflado",
@@ -39,8 +38,50 @@
   "pricing": {
     "dates": "Ver Fechas",
     "adults": "Adultos",
-    "kids": "Niños (4-12)",
-    "priceAdults": "2,799 MXN",
-    "priceKids": "2,299 MXN"
+    "kids": "Niños (4-12)"
+  },
+  "details": {
+    "included": [
+      "Vuelo compartido de aproximadamente 40 minutos sobre el Valle de Teotihuacán",
+      "Coffee break con galletas y bebidas tradicionales mexicanas",
+      "Brindis con vino espumoso u opción sin alcohol",
+      "Certificado de vuelo personalizado",
+      "Seguro de viajero"
+    ],
+    "notIncluded": [
+      "Transporte entre CDMX y Teotihuacán",
+      "Desayuno buffet",
+      "Acceso, traslado o guía en la zona arqueológica",
+      "Fotos y video del vuelo",
+      "Vuelo privado",
+      "Servicios de celebración como flores, lona o mariachis"
+    ],
+    "recommendedExtras": [
+      "Transporte redondo compartido desde $500 MXN por persona",
+      "Transporte privado por $2,000 MXN adicionales al servicio compartido",
+      "Convertir el vuelo a privado por $3,999 MXN",
+      "Desayuno buffet",
+      "Acceso y traslado a la zona arqueológica",
+      "Fotos y video durante el vuelo",
+      "Lona personalizada",
+      "Ramo de flores",
+      "Mariachis al aterrizaje — cuatro canciones",
+      "Guía bilingüe"
+    ],
+    "notes": [
+      "La experiencia se reserva como vuelo compartido; la privatización se contrata como extra.",
+      "La ruta y el horario del vuelo dependen de las condiciones meteorológicas y operativas del día."
+    ],
+    "itinerary": {
+      "title": "Qué harás",
+      "steps": [
+        { "time": "Antes del vuelo", "title": "Llegas al Globopuerto", "description": "Te recibimos para el registro con café caliente, galletas y bebidas tradicionales." },
+        { "time": "Preparación", "title": "Ves inflar tu globo", "description": "Acompañas la preparación de la aeronave y ves cómo el envolvente cobra forma." },
+        { "time": "Despegue", "title": "Comienza el ascenso", "description": "El piloto selecciona el momento y punto de despegue de acuerdo con las condiciones del día." },
+        { "time": "En el aire", "title": "Vuelas aproximadamente 40 minutos", "description": "Disfrutas las vistas del Valle de Teotihuacán desde una canasta compartimentada Cameron." },
+        { "time": "Al aterrizar", "title": "Participas en el brindis tradicional", "description": "Celebramos el aterrizaje con vino espumoso u opción sin alcohol." },
+        { "time": "Cierre", "title": "Recibes tu certificado", "description": "Te entregamos un certificado personalizado como recuerdo de la experiencia." }
+      ]
+    }
   }
 }

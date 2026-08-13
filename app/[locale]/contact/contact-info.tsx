@@ -6,6 +6,7 @@ import { IMAGES } from "@/lib/images"
 import { EnvelopeSimpleIcon, PhoneIcon } from "@phosphor-icons/react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import { SITE_CONTACT } from "@/lib/site-config"
 
 const inputClass =
   "w-full h-[48px] bg-transparent border-2 border-background rounded-[12px] px-5 text-background placeholder:text-background placeholder:opacity-100 font-bold outline-none focus:ring-2 focus:ring-background/40 transition"
@@ -18,21 +19,19 @@ export function ContactInfo() {
   const [date, setDate] = useState("")
   const [invoice, setInvoice] = useState(false)
 
-  const phoneNumber = t("phoneNumber").replace(/\D/g, "")
-
   const handleSubmit = () => {
     if (!company || !groupSize || !date) return
 
-    const message = `
-      Corporate Inquiry
-
-      Company Name: ${company}
-      Group Size: ${groupSize}
-      Date of Event: ${date}
-      ${invoice ? "Requires Invoice: Yes" : ""}
-      `
+    const message = [
+      t("corporateMessageTitle"),
+      "",
+      `${t("companyName")}: ${company}`,
+      `${t("groupSize")}: ${groupSize}`,
+      `${t("eventDate")}: ${date}`,
+      invoice ? `${t("requireInvoice")}: ${t("invoiceYes")}` : "",
+    ].filter(Boolean).join("\n")
     const encoded = encodeURIComponent(message)
-    window.open(`https://wa.me/${phoneNumber}?text=${encoded}`, "_blank")
+    window.open(`${SITE_CONTACT.whatsapp}?text=${encoded}`, "_blank")
   }
 
   const isDisabled = !company || !groupSize || !date
@@ -64,7 +63,7 @@ export function ContactInfo() {
             </div>
             <div className="w-[clamp(345px,48vw,591px)] h-[clamp(327px,48vw,548px)] bg-background rounded-(--radius) overflow-hidden shadow-lg flex flex-col">
               <div className="relative w-full h-[clamp(160px,26vw,325px)]">
-                <CloudinaryImage publicId={IMAGES.contact.hero.booking} alt="Booking" fill className="object-cover" />
+                <CloudinaryImage publicId={IMAGES.contact.hero.booking} alt={t("sectionTitle")} fill className="object-cover" />
               </div>
               <div className="text-md lg:text-xl h-[clamp(167px,48vw,223px)] px-5 lg:px-8 py-5 flex flex-col justify-between text-left">
                 <span className="font-bold">{t("availabilityText")}</span>
@@ -77,7 +76,7 @@ export function ContactInfo() {
                 <div className="flex items-center gap-3">
                   <PhoneIcon className="w-6 h-6 text-secondary" weight="bold" />
                   <span>
-                    <span className="font-bold">{t("phone")}</span> {t("phoneNumber")}
+                    <span className="font-bold">{t("phone")}</span> {SITE_CONTACT.display}
                   </span>
                 </div>
               </div>

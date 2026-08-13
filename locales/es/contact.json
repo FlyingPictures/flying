@@ -12,10 +12,10 @@
     },
 
     "info": {
-      "title": "Instant Answers",
-      "subtitle": "CUSTOMER SUPPORT",
-      "paragraph": "For the fastest response, use our direct WhatsApp Concierge. We manage bookings, weather updates, and last-minute requests in real-time.",
-      "guarantee": "We typically respond in under 5 minutes",
+      "title": "Respuestas directas",
+      "subtitle": "ATENCIÓN AL CLIENTE",
+      "paragraph": "Para recibir atención directa, utiliza nuestro servicio por WhatsApp. Te ayudamos con reservaciones, actualizaciones del clima y solicitudes de último minuto.",
+      "guarantee": "Respondemos lo antes posible dentro del horario de atención.",
       "sectionTitle": "Consultas Generales y Reservas",
       "forTravelers": "Para viajeros, parejas y familias.",
       "corporateLabel": "Corporativo y Medios",
@@ -26,11 +26,13 @@
       "eventDate": "Fecha del Evento",
       "requireInvoice": "Requiero una factura formal",
       "cta": "Solicitar Cotización Corporativa",
+      "corporateMessageTitle": "Solicitud corporativa",
+      "invoiceYes": "Sí",
       "availabilityText": "Disponibilidad, solicitudes dietéticas especiales, coordinación de propuestas y pronósticos del clima.",
       "email": "fly@flyingpictures.mx",
       "emailLabel": "Correo: ",
       "phone": "Teléfono: ",
-      "phoneNumber": "(+52) 55 1234 5678"
+      "phoneNumber": "(+52) 55 8025-1057"
     },
 
     "locationFaq": {
@@ -41,7 +43,7 @@
       "subtittleFaq": "OBTÉN SOPORTE",
       "tittleFaq": "Preguntas frecuentes",
       "ask1": "¿Buscas precios?",
-      "ask1-answer": "Nuestros precios varían según la temporada y disponibilidad.\nRecomendamos reservar con anticipación.\nContactanos para tarifas de grupo.",
+      "ask1-answer": "Visita Experiencias de vuelo para consultar precios y disponibilidad actuales. Contáctanos directamente para tarifas de grupos y empresas.",
       "ask2": "¿Preocupado por el clima?",
       "ask2-answer": "Los vuelos dependen del clima por seguridad.\nMonitoreamos las condiciones diariamente.\nSerás notificado si es necesario reprogramar.",
       "ask3": "¿Qué ponerse?",

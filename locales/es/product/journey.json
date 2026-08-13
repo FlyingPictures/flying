@@ -1,15 +1,14 @@
 {
   "hero": {
-    "title": "El Viaje Clásico",
-    "subtitle": "Canasta Compartida | 45-60 Minutos | 🇬🇧 Estándares de Seguridad Británicos"
+    "subtitle": "Transporte redondo | Vuelo aproximado de 40 minutos | Tour guiado y degustación"
   },
   "rating": {
-    "score": 4.9,
-    "reviewsCount": "230 evaluaciones"
+    "score": 4.8,
+    "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
     "title": "Vive la magia del vuelo compartido",
-    "paragraph": "Únete a un grupo selecto de aventureros para una mañana en la que los desconocidos se vuelven amigos. A diferencia de las canastas \"abiertas\" estándar donde los pasajeros van apretados, Flying Pictures utiliza canastas compartimentadas Cameron Balloons. ¿Qué significa esto para ti? Incluso en un vuelo compartido, tienes tu propio rincón del cielo. Sin pelear por la vista, solo asombro compartido."
+    "paragraph": "La experiencia más completa para descubrir Teotihuacán: transporte redondo, vuelo, desayuno, visita guiada a la zona arqueológica, taller de artesanías y degustación de tequila, mezcal y pulque. Incluye un kit de viajero para acompañarte durante el recorrido."
   },
 
   "itinerary": {
@@ -39,10 +38,58 @@
   },
 
   "pricing": {
-    "dates": "See Dates",
+    "dates": "Ver Fechas",
     "adults": "Adultos",
-    "kids": "Niños (4-12)",
-    "priceAdults": "2,799 MXN",
-    "priceKids": "2,299 MXN"
+    "kids": "Niños (4-12)"
+  },
+  "details": {
+    "included": [
+      "Transporte redondo compartido entre CDMX y Teotihuacán",
+      "Vuelo compartido de aproximadamente 40 minutos",
+      "Coffee break con galletas y bebidas tradicionales mexicanas",
+      "Brindis con vino espumoso u opción sin alcohol",
+      "Certificado de vuelo personalizado",
+      "Desayuno",
+      "Seguro de viajero",
+      "Visita a la zona arqueológica con guía certificado",
+      "Taller de artesanías locales",
+      "Degustación de tequila, mezcal y pulque",
+      "Kit viajero con sombrero, agua y souvenir"
+    ],
+    "notIncluded": [
+      "Vuelo y transporte privados",
+      "Fotos y video del vuelo",
+      "Ramo de flores, lona personalizada o mariachis",
+      "Servicios no especificados dentro del recorrido",
+      "Cargo de $110 MXN por persona para extranjeros no residentes"
+    ],
+    "recommendedExtras": [
+      "Transporte privado redondo entre CDMX y Teotihuacán",
+      "Convertir el grupo a privado por $5,999 MXN",
+      "Fotos y video durante el vuelo",
+      "Lona personalizada",
+      "Ramo de flores",
+      "Mariachis al aterrizaje — cuatro canciones"
+    ],
+    "notes": [
+      "La reservación requiere un mínimo de dos personas.",
+      "Los extranjeros no residentes pagan $110 MXN adicionales por persona al llegar.",
+      "El punto y horario de recogida en CDMX se confirman con la reservación."
+    ],
+    "itinerary": {
+      "title": "Qué harás",
+      "steps": [
+        { "time": "Salida", "title": "Te recogemos en CDMX", "description": "Viajas a Teotihuacán en transporte compartido coordinado por nuestro equipo." },
+        { "time": "Bienvenida", "title": "Recibes tu kit viajero", "description": "Te entregamos sombrero, agua y un souvenir para acompañar el recorrido." },
+        { "time": "Antes del vuelo", "title": "Disfrutas el coffee break", "description": "Te esperan café, galletas y bebidas tradicionales mexicanas." },
+        { "time": "Preparación", "title": "Ves inflar los globos", "description": "Conoces de cerca el proceso de preparación antes de abordar." },
+        { "time": "Despegue", "title": "Comienza el ascenso", "description": "El piloto selecciona el momento de despegue según las condiciones del día." },
+        { "time": "En el aire", "title": "Vuelas aproximadamente 40 minutos", "description": "Disfrutas las vistas del Valle de Teotihuacán desde una canasta Cameron." },
+        { "time": "Al aterrizar", "title": "Brindas y desayunas", "description": "Celebras el vuelo, desayunas y recibes tu certificado personalizado." },
+        { "time": "Cultura local", "title": "Visitas un taller de artesanías", "description": "Conoces técnicas y materiales tradicionales de la región." },
+        { "time": "Degustación", "title": "Pruebas bebidas tradicionales", "description": "Degustas tequila, mezcal y pulque como parte de la experiencia cultural." },
+        { "time": "Recorrido", "title": "Exploras las pirámides con guía", "description": "Un guía certificado acompaña tu visita por la zona arqueológica." }
+      ]
+    }
   }
 }

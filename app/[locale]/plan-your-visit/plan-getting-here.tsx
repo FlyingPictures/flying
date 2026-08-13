@@ -2,6 +2,7 @@ import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { getTranslations } from "next-intl/server";
 import { IMAGES } from "@/lib/images";
 import { Button } from "@/components/ui/button";
+import { SITE_LOCATION } from "@/lib/site-config";
 
 export async function PlanGettingHere() {
   const t = await getTranslations("planYourVisit.gettingHere");
@@ -77,14 +78,26 @@ export async function PlanGettingHere() {
                   asChild
                   className="w-[clamp(40%,45%,50%)] h-[clamp(2rem,2.5vw,2.5rem)] text-[clamp(0.65rem,1vw,0.75rem)] rounded-full flex items-center justify-center bg-secondary hover:bg-secondary/90 text-white"
                 >
-                  <a href="https://maps.google.com">{t("selfDrive.openMaps")}</a>
+                  <a
+                    href={SITE_LOCATION.googleMaps}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t("selfDrive.openMaps")}
+                  </a>
                 </Button>
                 <Button
                   asChild
                   variant="outline"
                   className="w-[clamp(40%,45%,50%)] h-[clamp(2rem,2.5vw,2.5rem)] text-[clamp(0.65rem,1vw,0.75rem)] rounded-full flex items-center justify-center border-2 border-secondary text-secondary hover:bg-secondary/10"
                 >
-                  <a href="https://waze.com">{t("selfDrive.openWaze")}</a>
+                  <a
+                    href={SITE_LOCATION.waze}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t("selfDrive.openWaze")}
+                  </a>
                 </Button>
               </div>
 

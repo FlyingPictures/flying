@@ -5,10 +5,8 @@ import { routing } from "@/i18n/routing";
 import { ContactHero } from "@/app/[locale]/contact/contact-hero";
 import { ContactInfo } from "@/app/[locale]/contact/contact-info";
 import { LocationAndFAQ } from "@/app/[locale]/contact/contact-location";
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://www.flyingpicturesmexico.com";
+import { cloudinaryOgUrl } from "@/lib/cloudinary";
+import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 
 type Locale = (typeof routing.locales)[number];
 
@@ -24,6 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = t("title");
   const description = t("subtitle");
   const url = `${SITE_URL}/${locale}/contact`;
+  const ogImage = cloudinaryOgUrl("Rectangle_33_2_wn4nfc");
 
   return {
     title,
@@ -43,12 +42,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       title,
       description,
-      siteName: "Flying Pictures Mexico",
+      siteName: SITE_NAME,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [ogImage],
     },
   };
 }

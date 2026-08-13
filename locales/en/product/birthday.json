@@ -1,22 +1,21 @@
 {
   "hero": {
-    "title": "The Birthday Flight",
-    "subtitle": "Private Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
+    "subtitle": "Celebration on a shared flight | Approximately 40 minutes | Breakfast included"
   },
   "rating": {
     "score": 4.8,
-    "reviewsCount": "112 reviews"
+    "reviewsCount": "225 Tripadvisor reviews"
   },
   "description": {
     "title": "The Gift That Touches the Sky",
-    "paragraph": "Forget the cake — give them the sunrise. A private balloon flight over Teotihuacán is the birthday gift nobody expects and nobody forgets. Watch the birthday person's face as the balloon rises above the pyramids and the world falls silent below. Flying Pictures makes sure every detail is perfect so you can focus on the moment."
+    "paragraph": "Celebrate with a shared flight, a Happy Birthday banner, a slice of cake, and the traditional birthday song for the guest of honour. The experience ends with a full breakfast at a local restaurant, with the option to upgrade the flight to private."
   },
   "itinerary": {
     "title": "What you'll do",
     "steps": [
       {
         "title": "5:00 AM - Arrive & Check-in",
-        "description": "You'll arrive at Flying Pictures Reception and we will receive you to help you check-in and loremipsum."
+        "description": "You’ll arrive at Flying Pictures Reception, where our team will welcome you and help you complete check-in."
       },
       {
         "title": "Welcome & Coffee Break",
@@ -39,8 +38,54 @@
   "pricing": {
     "dates": "See Dates",
     "adults": "Adults",
-    "kids": "kids (4-12)",
-    "priceAdults": "4,499 MXN",
-    "priceKids": "3,899 MXN"
+    "kids": "Kids (4-12)"
+  },
+  "details": {
+    "included": [
+      "Shared flight of approximately 40 minutes",
+      "Coffee break with cookies and traditional Mexican drinks",
+      "Sparkling-wine toast or a non-alcoholic option",
+      "Full breakfast",
+      "Personalised flight certificate",
+      "Traveller insurance",
+      "Customisable Happy Birthday banner",
+      "Slice of cake and the traditional birthday song for the guest of honour"
+    ],
+    "notIncluded": [
+      "Transport between Mexico City and Teotihuacán",
+      "Private flight",
+      "Admission or guide for the archaeological zone",
+      "French champagne — the included toast uses sparkling wine",
+      "Flight photos and video",
+      "Breakfast for companions who do not fly"
+    ],
+    "recommendedExtras": [
+      "Shared round-trip transport from $500 MXN per person",
+      "Upgrade the flight to private for $3,999 MXN",
+      "Breakfast for an additional companion",
+      "Champagne",
+      "Additional personalised banner",
+      "Bouquet of flowers",
+      "Photos and video during the flight",
+      "Mariachis upon landing — four songs",
+      "Admission and transport to the archaeological zone",
+      "Bilingual guide"
+    ],
+    "notes": [
+      "The flight is shared by default and can be upgraded to private as an extra.",
+      "Birthday elements are intended for one guest of honour per booking."
+    ],
+    "itinerary": {
+      "title": "What you'll do",
+      "steps": [
+        { "time": "Welcome", "title": "Start the celebration", "description": "Enjoy coffee, cookies, and traditional drinks before the flight." },
+        { "time": "Preparation", "title": "See the birthday banner", "description": "The team prepares the personalised Happy Birthday banner for the celebration." },
+        { "time": "Take-off", "title": "Begin the flight", "description": "The pilot starts the ascent when weather conditions are suitable." },
+        { "time": "In the air", "title": "Fly for approximately 40 minutes", "description": "See the Teotihuacán Valley from a completely new perspective." },
+        { "time": "After landing", "title": "Toast to another year", "description": "Celebrate with sparkling wine or a non-alcoholic option." },
+        { "time": "Celebration", "title": "Enjoy cake and the birthday song", "description": "The guest of honour receives a slice of cake and the traditional birthday song." },
+        { "time": "Closing", "title": "Enjoy breakfast", "description": "Finish with a full breakfast and your personalised flight certificate." }
+      ]
+    }
   }
 }

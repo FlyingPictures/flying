@@ -3,34 +3,38 @@
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
     "switchLanguage": "Cambiar idioma",
-    "shared": "Vuelo Compartido",
-    "private": "Vuelo Privado",
+    "chooseLanguage": "Selecciona tu idioma",
+    "shared": "Vuelo compartido",
+    "private": "Vuelo privado",
     "proposals": "Propuestas",
     "groups": "Grupos",
     "planYourVisit": "Planea tu visita",
-    "flightExperiences": "Experiencias de Vuelo",
-    "safetyHeritage": "Seguridad y Herencia",
-    "contactSupport": "Contacto y Soporte",
+    "flightExperiences": "Experiencias de vuelo",
+    "safetyHeritage": "Seguridad y legado",
+    "contactSupport": "Contacto y atención",
     "language": "Idioma",
-    "bookFlight": "Reservar Vuelo",
-    "talkExpert": "Habla con un experto",
-    "classic": "Viaje Clásico",
-    "journey": "El Viaje",
-    "vip": "Experiencia VIP",
-    "proposal": "Vuelo de Propuesta",
-    "anniversary": "Vuelo de Aniversario",
-    "birthday": "Vuelo de Cumpleaños",
-    "corporate": "Experiencia Corporativa",
-    "open": "Vuelo Abierto",
-    "transport": "Paquete con Transporte"
+    "bookFlight": "Reservar vuelo",
+    "talkExpert": "Habla con un especialista",
+    "corporateService": "Vuelos para grupos y empresas"
   },
   "banner": {
-    "company": "UNA COMPAÑÍA DE AVIACIÓN - LLÁMANOS"
+    "company": "UNA COMPAÑÍA DE AVIACIÓN · LLÁMANOS"
+  },
+  "concierge": {
+    "online": "En línea",
+    "offline": "Fuera de horario",
+  "hours": "6:00 a.m. - 8:00 p.m.",
+  "location": "Ciudad de México",
+    "cta": "Habla con nuestro equipo"
   },
   "footer": {
-    "description": "Una compañía de aviación galardonada. El proveedor líder de vuelos en globo aerostático en Teotihuacán. Operando orgullosamente Cameron Balloons UK desde 1992.",
-    "termsConditions": "Términos y Condiciones",
-    "privacyPolicy": "Política de Privacidad",
-    "cancellations": "Política de Cancelación"
+    "description": "Una compañía de aviación reconocida y premiada. El referente en vuelos en globo aerostático sobre Teotihuacán. Operamos con orgullo globos Cameron Balloons UK desde 1992.",
+    "companyTitle": "Empresa",
+    "legalTitle": "Legal",
+    "rights": "Todos los derechos reservados",
+    "authority": "Registro ante la Autoridad de Aviación Civil de México: 88291",
+    "termsConditions": "Términos y condiciones",
+    "privacyPolicy": "Política de privacidad",
+    "cancellations": "Política de cancelación"
   }
 }

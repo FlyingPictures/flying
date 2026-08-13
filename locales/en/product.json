@@ -1,9 +1,9 @@
 {
     "product": {
       "included": {
-        "title": "What’s Included",
+        "title": "What’s included",
         "included1": "40-60 min Flight",
-        "description1": "You’ll arrive at Flying Pictures.",
+        "description1": "Sunrise flight over the Teotihuacán Valley.",
         "included2": "Welcome Coffee Break",
         "description2": "Enjoy hot coffee and cookies before flight.",
         "included3": "Flight Certificate",
@@ -16,8 +16,28 @@
         "description6": "Certified experts with global standards."
        },
 
+       "packageDetails": {
+        "eyebrow": "Package information",
+        "title": "Everything clear before you book"
+       },
+
+       "itineraryControls": {
+        "eyebrow": "Your experience",
+        "showAll": "Show full itinerary",
+        "showSummary": "Show summary",
+        "steps": "steps"
+       },
+
+       "notIncluded": {
+        "title": "Not included"
+       },
+
+       "packageNotes": {
+        "title": "Important conditions"
+       },
+
        "recommended": {
-        "title": "Recommended Extras",
+        "title": "Recommended extras",
         "round": "Round-Trip Transport",
         "rounddesc": "Pickup from CDMX at 05:00 AM. (Shared or Private).",
         "breakfast": "Breakfast Buffet",
@@ -26,60 +46,30 @@
         "mediadesc": "Professional photos and video of your flight."
        }, 
 
-       "reviews": {
-        "title": "Reviews",
-        "score": "4.96",
-        "subtitle": "230 evaluaciones",
-        "testimonials": [
-          {
-            "name1": "Robert C",
-            "city1": "Singapore",
-            "resume1": "“Everything was smooth”",
-            "review1": "The reception was warm (coffee and heaters for the cold morning!), and the pilot totally nailed the beautiful views."
-          },
-          {
-            "name2": "Michael T.",
-            "city2": "Los Angeles, USA",
-            "resume2": "“Everything was smooth”",
-            "review2": "I had a last-minute change in my travel plans, and the team handled it seamlessly. I couldn't be happier with the service I received."
-          },
-          {
-            "name3": "Sarah L.",
-            "city3": "Chicago, USA",
-            "resume3": "“Everything was smooth”",
-            "review3": "The personalized recommendations were spot on! I found a great deal on a flight that I wouldn't have found on my own."
-          },
-          {
-            "name4": "David M.",
-            "city4": "Miami, USA",
-            "resume4": "“Everything was smooth”",
-            "review4": "The personalized recommendations were spot on! I found a great deal on a flight that I wouldn't have found on my own."
-          }
-        ]
-       },
-
        "meet": {
         "title": "Where we’ll meet",
-        "subtitle": "5:00 AM - Arrive & Caheck-in",
-        "description": "You’ll arrive at Flying Pictures Reception and we will recieve you to help you check-in and loremipsum",
-        "title2": "Things to Know",
+        "subtitle": "5:00 AM - Arrival & Check-in",
+        "description": "You’ll arrive at Flying Pictures Reception, where our team will welcome you and help you complete check-in.",
+        "title2": "Things to know",
         "button": "Get Directions",
+        "openGoogleMaps": "Open in Google Maps",
+        "openWaze": "Open in Waze",
         "thinks": [
           {
-            "tittle1": "Passenger requieremnts",
-            "subtittle1": "You’ll arrive at Flying Pictures."
+            "tittle1": "Passenger requirements",
+            "subtittle1": "We’ll ask for basic information such as weight, age, and relevant medical conditions so we can operate safely."
           },
           {
-            "tittle2": "Activity Level",
-            "subtittle2": "You’ll arrive at Flying Pictures."
+            "tittle2": "Activity level",
+            "subtittle2": "Light activity. You’ll need to stand during the flight and enter and exit the basket with assistance from our team."
           },
           {
             "tittle3": "What to bring",
-            "subtittle3": "You’ll arrive at Flying Pictures."
+            "subtittle3": "Comfortable clothing, closed-toe shoes, and a light jacket for the early morning."
           },
           {
-            "tittle4": "Cancelation policy",
-            "subtittle4": "You’ll arrive at Flying Pictures."
+            "tittle4": "Cancellation policy",
+            "subtittle4": "If weather conditions do not allow us to fly safely, we’ll help you reschedule according to our policy."
           }
         ]
        },

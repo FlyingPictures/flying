@@ -5,7 +5,7 @@
     "paragraph": "Over decades, we have learned that the finest adventures \n are those shaped by meticulous attention to detail \n and an unwavering commitment to safety.",
     "ctaPrimary": "Check Flight Availability",
     "poweredBy": "Welcome to the highest standard of certified \n aviation in the Teotihuacán Valley.",
-    "ctaSecondary": "Taking of at first light"
+    "ctaSecondary": "Taking off at first light"
   },
 
   "FlightExperience": {
@@ -20,20 +20,12 @@
       "vip": "Vip & Tours"
     },
 
-    "titles": {
-      "shared": "The Classic Journey",
-      "private": "Private Escape",
-      "vip": "Luxury Experience"
-    },
-
     "flightBadge": "{type} FLIGHT",
-    "from": "From ${price} MXN",
-
-    "prices": {
-      "shared": "2,599",
-      "private": "5,999",
-      "vip": "9,999"
-    },
+    "from": "From {price}",
+    "featured": "Featured",
+    "previousPackage": "Previous package",
+    "nextPackage": "Next package",
+    "packageCount": "{current} of {total}",
 
     "descriptions": {
       "shared": "Ideal for solo travellers, friends, couples and groups. Enjoy a compartmented basket design that guarantees every guest their own clear view of the valley. Upgrade your flight with private transport, breakfast, and other optional extras.",
@@ -44,12 +36,12 @@
     "awardSection": {
       "title": "Award-winning",
       "subtitle": "AVIATION COMPANY",
-      "description": "Xperience the most trusted and distinguished hot air balloon operation in Mexico Where British attention to detail meets the vibrant spirit of Mexico. For more than twenty years, Flying Pictures Mexico has set the gold standard for safe, beautifully executed flights over the extraordinary Teotihuacán Valley."
+      "description": "Experience one of Mexico’s most trusted and distinguished hot air balloon operations, where British attention to detail meets the vibrant spirit of Mexico. For more than twenty years, Flying Pictures México has set the gold standard for safe, beautifully executed flights over the extraordinary Teotihuacán Valley."
     },
 
     "cards": {
       "tradition": {
-        "title": "More Than a Flight A Tradition.",
+        "title": "More Than a Flight. A Tradition.",
         "description": "As you rise with the first light, the valley reveals itself below the majestic contours of the ancient city and, if fortune favours you, miles of golden horizon. Each moment feels perfectly composed: calm, elegant, and quietly unforgettable.",
         "button": "Explore Flight Collection",
         "award_label": "Most Trusted Aviation Provider 2024"
@@ -100,47 +92,19 @@
 
   "reviews": {
     "tittle": "Reviews",
-    "readRealReviews": "Our Reputation:",
-    "dontJustTakeOurWord": "Do not simply take our word for it;",
-    "Subtittle":"Discover why discerning travellers and global icons trust our expertise.",
-    "readMoreReviews": "Read More Reviews",
-    "outOf5Stars": "out of 5 stars",
-    "averageRating": "4.96",
-    "totalReviews": "230 reviews",
-    "items": [
-      {
-        "id": 1,
-        "name": "Javier S.",
-        "location": "Local Guide",
-        "quote": "I checked their permits",
-        "text": "Their gear is Cameron from Bristol, and unlike most companies, they have all licenses up-to-date. Do not compromise your safety to save a few dollars. Go with the best.",
-        "avatarIndex": 0
-      },
-      {
-        "id": 2,
-        "name": "Mike B.",
-        "location": "New Zealand",
-        "quote": "Out of all the adventures we did, this was the best",
-        "text": "No hidden costs (very unusual). Please do it if you are in Mexico City, you won't regret it.",
-        "avatarIndex": 1
-      },
-      {
-        "id": 3,
-        "name": "Robert C.",
-        "location": "Singapore",
-        "quote": "Everything was smooth",
-        "text": "The reception was warm (coffee and heaters for the cold morning!), and the pilot totally nailed the beautiful views.",
-        "avatarIndex": 2
-      },
-      {
-        "id": 4,
-        "name": "Emily R.",
-        "location": "United States",
-        "quote": "A magical experience",
-        "text": "The flight was smooth, and the views were breathtaking. The team was professional and made us feel safe throughout the entire experience.",
-        "avatarIndex": 3
-      }
-    ]
+    "homeReadRealReviews": "Our Reputation:",
+    "homeTitle": "Do not simply take our word for it;",
+    "homeSubtitle": "Discover why discerning travellers and global icons trust our expertise.",
+    "readRealReviews": "VERIFIED ON TRIPADVISOR",
+    "dontJustTakeOurWord": "Real stories from above the valley",
+    "Subtittle": "A curated selection of recent traveler reviews, linked directly to their original Tripadvisor posts.",
+    "readMoreReviews": "See all reviews on Tripadvisor",
+    "totalReviews": "{count} reviews",
+    "lastVerified": "Verified August 2026",
+    "previous": "Previous reviews",
+    "next": "Next reviews",
+    "travelerPhoto": "Traveler photo",
+    "readFullReview": "Read full review on Tripadvisor"
   },
 
   "weather": {
@@ -173,4 +137,3 @@
     "title": "Our Tradition and Safety Commitment"
   }
 }
-

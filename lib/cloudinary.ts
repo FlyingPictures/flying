@@ -9,3 +9,9 @@ export function cloudinaryUrl(publicId: string, width?: number, quality: number 
   const transformString = transforms.join(',');
   return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/${transformString}/${cleanId}`;
 }
+
+export function cloudinaryOgUrl(publicId: string): string {
+  if (!publicId) return '';
+  const cleanId = publicId.replace(/^v\d+\//, '');
+  return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/c_fill,g_auto,w_1200,h_630,q_auto,f_jpg/${cleanId}`;
+}

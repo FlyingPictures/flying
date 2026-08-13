@@ -11,7 +11,7 @@ export async function PlanHero() {
   return (
     <section className="relative h-[95vh] lg:h-screen overflow-hidden pt-[4.5rem]">
       <div className="absolute inset-0">
-        <CloudinaryImage publicId={IMAGES.plan.hero.background} alt="Hero Background" fill priority sizes="100vw" className="h-full w-auto object-contain object-top" />
+        <CloudinaryImage publicId={IMAGES.plan.hero.background} alt="" fill priority sizes="100vw" className="h-full w-auto object-contain object-top" />
         <div className="absolute inset-0 bg-black/10" />
       </div>
 

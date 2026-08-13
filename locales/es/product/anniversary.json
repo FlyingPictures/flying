@@ -1,26 +1,25 @@
 {
   "hero": {
-    "title": "El Vuelo de Aniversario",
-    "subtitle": "Canasta Privada | 45-60 Minutos | 🇬🇧 Estándares de Seguridad Británicos"
+    "subtitle": "Celebración en vuelo compartido | Vuelo aproximado de 40 minutos | Desayuno incluido"
   },
   "rating": {
-    "score": 4.9,
-    "reviewsCount": "98 evaluaciones"
+    "score": 4.8,
+    "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
     "title": "Celebra su Historia sobre las Nubes",
-    "paragraph": "Algunos momentos merecen más que una reserva en restaurante. Floten sobre las antiguas pirámides de Teotihuacán al amanecer junto a la persona que lo significa todo. Una canasta privada, un brindis espumoso a 2,000 metros y una vista que ningún restaurante puede igualar. Flying Pictures convierte su aniversario en una historia que contarán por el resto de sus vidas."
+    "paragraph": "Celebra su historia con un vuelo compartido sobre el Valle de Teotihuacán, una lona de Feliz Aniversario, brindis tradicional y desayuno completo. Si buscan mayor intimidad, pueden convertir la experiencia en un vuelo privado."
   },
   "itinerary": {
     "title": "Qué harás",
     "steps": [
       {
-        "title": "5:00 AM - Llegada y Check-in",
-        "description": "Llegarás a la Recepción de Flying Pictures y te recibiremos para ayudarte con el check-in."
+        "title": "5:00 AM - Llegada y registro",
+        "description": "Llegarás a la recepción de Flying Pictures y te daremos la bienvenida para completar tu registro."
       },
       {
         "title": "Bienvenida y Café",
-        "description": "Después de completar tu check-in te recibiremos con nuestra estación de café con bebidas calientes y galletas tradicionales."
+        "description": "Después de tu registro te esperamos con nuestra estación de café, bebidas calientes y galletas tradicionales."
       },
       {
         "title": "El Espectáculo de Inflado",
@@ -39,8 +38,51 @@
   "pricing": {
     "dates": "Ver Fechas",
     "adults": "Adultos",
-    "kids": "Niños (4-12)",
-    "priceAdults": "3,499 MXN",
-    "priceKids": "2,899 MXN"
+    "kids": "Niños (4-12)"
+  },
+  "details": {
+    "included": [
+      "Vuelo compartido de aproximadamente 40 minutos",
+      "Coffee break con galletas y bebidas tradicionales mexicanas",
+      "Brindis con vino espumoso u opción sin alcohol",
+      "Certificado de vuelo personalizado",
+      "Desayuno completo",
+      "Seguro de viajero",
+      "Lona de Feliz Aniversario"
+    ],
+    "notIncluded": [
+      "Transporte entre CDMX y Teotihuacán",
+      "Vuelo privado",
+      "Acceso o guía en la zona arqueológica",
+      "Champagne francés — el brindis incluido es con vino espumoso",
+      "Fotos y video del vuelo",
+      "Ramo de flores"
+    ],
+    "recommendedExtras": [
+      "Transporte redondo compartido desde $500 MXN por persona",
+      "Convertir el vuelo a privado por $3,999 MXN",
+      "Champagne",
+      "Lona personalizada adicional",
+      "Ramo de flores",
+      "Fotos y video durante el vuelo",
+      "Mariachis al aterrizaje — cuatro canciones",
+      "Acceso y traslado a la zona arqueológica",
+      "Guía bilingüe"
+    ],
+    "notes": [
+      "El vuelo es compartido por defecto; puede convertirse en privado como extra.",
+      "La ruta y el horario del vuelo dependen de las condiciones meteorológicas y operativas del día."
+    ],
+    "itinerary": {
+      "title": "Qué harás",
+      "steps": [
+        { "time": "Bienvenida", "title": "Llegan juntos al Globopuerto", "description": "Disfrutan coffee break y bebidas tradicionales mientras el equipo prepara el globo." },
+        { "time": "Preparación", "title": "Se despliega su lona", "description": "La lona de Feliz Aniversario acompaña la celebración antes del vuelo." },
+        { "time": "Despegue", "title": "Comienza el ascenso", "description": "El piloto inicia el vuelo cuando las condiciones son adecuadas." },
+        { "time": "En el aire", "title": "Vuelan aproximadamente 40 minutos", "description": "Comparten las vistas del Valle de Teotihuacán desde una canasta Cameron." },
+        { "time": "Al aterrizar", "title": "Brindan por su historia", "description": "Celebramos con vino espumoso u opción sin alcohol." },
+        { "time": "Cierre", "title": "Desayunan y reciben su certificado", "description": "Terminan con desayuno completo y un certificado personalizado de la experiencia." }
+      ]
+    }
   }
 }

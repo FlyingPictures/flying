@@ -3,59 +3,47 @@
       "included": {
         "title": "Qué incluye",
         "included1": "Vuelo de 40-60 min",
-        "description1": "Llegarás a Flying Pictures.",
+        "description1": "Vuelo al amanecer sobre el Valle de Teotihuacán.",
         "included2": "Café de bienvenida",
         "description2": "Disfruta café caliente y galletas antes del vuelo.",
         "included3": "Certificado de vuelo",
-        "description3": "Constancia personalizada de tu aventura.",
+        "description3": "Recuerdo personalizado de tu experiencia.",
         "included4": "Brindis tradicional",
         "description4": "Celebración con vino espumoso al aterrizar.",
         "included5": "Seguro completo",
         "description5": "Cobertura total de inicio a fin.",
         "included6": "Pilotos experimentados",
-        "description6": "Expertos certificados con estándares internacionales."
+        "description6": "Pilotos certificados bajo estándares internacionales."
+      },
+
+      "packageDetails": {
+        "eyebrow": "Información del paquete",
+        "title": "Todo claro antes de reservar"
+      },
+
+      "itineraryControls": {
+        "eyebrow": "Tu experiencia",
+        "showAll": "Ver itinerario completo",
+        "showSummary": "Ver versión resumida",
+        "steps": "pasos"
+      },
+
+      "notIncluded": {
+        "title": "No incluye"
+      },
+
+      "packageNotes": {
+        "title": "Condiciones importantes"
       },
 
       "recommended": {
         "title": "Extras recomendados",
         "round": "Transporte de ida y vuelta",
-        "rounddesc": "Recogida desde CDMX a las 05:00 AM. (Compartido o privado).",
+        "rounddesc": "Salida desde CDMX alrededor de las 5:00 AM, en modalidad compartida o privada.",
         "breakfast": "Buffet de desayuno",
         "breakdesc": "Comida tradicional mexicana en el Restaurante Gran Teocalli.",
-        "medial": "Paquete de medios",
+        "medial": "Paquete de foto y video",
         "mediadesc": "Fotos y video profesional de tu vuelo."
-      },
-
-      "reviews": {
-        "title": "Reseñas",
-        "score": "4.96",
-        "subtitle": "230 evaluaciones",
-        "testimonials": [
-          {
-            "name1": "Robert C",
-            "city1": "Singapur",
-            "resume1": "“Todo fue perfecto”",
-            "review1": "La recepción fue muy cálida (¡café y calentadores para el frío de la mañana!), y el piloto logró unas vistas increíbles."
-          },
-          {
-            "name2": "Michael T.",
-            "city2": "Los Ángeles, EE. UU.",
-            "resume2": "“Todo fue perfecto”",
-            "review2": "Tuve un cambio de último momento en mis planes de viaje y el equipo lo resolvió sin problemas. No pude estar más contento con el servicio."
-          },
-          {
-            "name3": "Sarah L.",
-            "city3": "Chicago, EE. UU.",
-            "resume3": "“Todo fue perfecto”",
-            "review3": "Las recomendaciones personalizadas fueron exactamente lo que necesitaba. Encontré una gran oferta que no hubiera hallado por mi cuenta."
-          },
-          {
-            "name4": "David M.",
-            "city4": "Miami, EE. UU.",
-            "resume4": "“Todo fue perfecto”",
-            "review4": "Las recomendaciones personalizadas fueron exactamente lo que necesitaba. Encontré una gran oferta que no hubiera hallado por mi cuenta."
-          }
-        ]
       },
 
       "meet": {
@@ -63,24 +51,26 @@
         "subtitle": "5:00 AM - Llegada y registro",
         "description": "Llegarás a la recepción de Flying Pictures y te recibiremos para ayudarte con el registro.",
         "title2": "Cosas que debes saber",
-        "button": "Direcciones",
+        "button": "Cómo llegar",
+        "openGoogleMaps": "Abrir en Google Maps",
+        "openWaze": "Abrir en Waze",
 
         "thinks": [
           {
             "tittle1": "Requisitos para pasajeros",
-            "subtittle1": "Llegarás a Flying Pictures."
+            "subtittle1": "Te pediremos datos básicos como peso, edad y condiciones médicas relevantes para operar con seguridad."
           },
           {
             "tittle2": "Nivel de actividad",
-            "subtittle2": "Llegarás a Flying Pictures."
+            "subtittle2": "Actividad ligera. Deberás permanecer de pie durante el vuelo y entrar/salir de la canastilla con apoyo del equipo."
           },
           {
             "tittle3": "Qué traer",
-            "subtittle3": "Llegarás a Flying Pictures."
+            "subtittle3": "Ropa cómoda, zapatos cerrados y una chamarra ligera para las primeras horas de la mañana."
           },
           {
             "tittle4": "Política de cancelación",
-            "subtittle4": "Llegarás a Flying Pictures."
+            "subtittle4": "Si el clima no permite volar con seguridad, te ayudaremos a reprogramar conforme a nuestra política."
           }
         ]
       },

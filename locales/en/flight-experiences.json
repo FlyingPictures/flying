@@ -7,48 +7,81 @@
       "experiencesList": "The horizon is waiting. \n How will you meet it?",
       "pageDescription": "There is a spectrum of ways to witness the valley, but only one standard of aviation excellence. Select the perfect journey for you.",
       "ctaFlightPrimary": "Choose your flight",
-      "talkFlight": "Or Talk with us on Whatsapp"
+      "talkFlight": "Or Talk with us on Whatsapp",
+      "imageAlt": "Hot air balloons above the Teotihuacán Valley",
+      "eyebrow": "Teotihuacán · Hot-air balloon flights",
+      "conversionTitleLead": "Experience the",
+      "conversionTitleAccent": "thrill of flying",
+      "conversionTitleTail": "above the Teotihuacán Valley.",
+      "conversionDescription": "Choose from shared flights, complete experiences, and private journeys operated to the safety standard of Flying Pictures México.",
+      "experiencesFrom": "Experiences from {price}",
+      "secureBooking": "Secure booking through Peek · Instant confirmation",
+      "ctaPrimary": "View flights & availability",
+      "ctaSecondary": "Talk to an expert",
+      "reviews": "{count} Tripadvisor reviews",
+      "certifiedTitle": "Certified pilots",
+      "certifiedDescription": "Professional aviation operation",
+      "insuredTitle": "Insurance included",
+      "insuredDescription": "Protection for every passenger",
+      "recommended": "Our recommendation",
+      "firstVisit": "First time in Teotihuacán?",
+      "recommendedTitle": "Flight + transport + archaeological site",
+      "recommendedImageAlt": "Traveler enjoying the Teotihuacán archaeological site",
+      "recommendedDescription": "Flight, round-trip transportation, and archaeological site access in one experience coordinated from start to finish.",
+      "viewRecommended": "View complete experience"
     },
 
     "cards": {
       "subtitle": "CURATED ASCENTS",
       "title": "Select \n Your Journey",
       "description": "We understand that excellence is personal. A marriage proposal demands absolute privacy; a family expedition requires precision logistics. Select the ascent engineered for your story.",
+      "fromPrice": "From {price}",
+      "priceOnRequest": "Custom quote",
+      "viewDetails": "View flight details",
+      "tripadvisorReviews": "{count} Tripadvisor reviews",
+      "browseByIntent": "Browse experiences by intent",
+      "idealFor": "Ideal for",
+      "keyIncludes": "The essentials",
+      "recommended": "Recommended experience",
 
-      "ratings": {
-        "classic": "4.85",
-        "journey": "4.92",
-        "transport": "4.98",
-        "open": "4.90",
-        "proposal": "4.97",
-        "anniversary": "4.95",
-        "birthday": "4.88",
-        "vip": "4.92",
-        "corporate": "4.99"
+      "intents": {
+        "complete": "Complete experience",
+        "shared": "Shared flight",
+        "celebration": "Celebrations",
+        "privateVip": "Private & VIP",
+        "gift": "Gift Card"
+      },
+
+      "categories": {
+        "complete": "Complete experience",
+        "shared": "Shared flight",
+        "celebration": "Celebration",
+        "private": "Private experience",
+        "vip": "VIP & tours"
+      },
+
+      "priceModels": {
+        "perPerson": "Price per adult",
+        "privateForTwo": "Private experience for two",
+        "voucher": "Gift card value"
+      },
+
+      "gift": {
+        "eyebrow": "Flying Gift Card",
+        "title": "Give them the sky.",
+        "value": "Experience value",
+        "details": "Explore the Gift Card"
       },
 
       "books": {
         "classic": "Book Flight",
         "journey": "Book Full Experience",
         "transport": "Book Full Experience",
-        "open": "Buy  Now",
+        "open": "Buy Now",
         "proposal": "Book Full Experience",
         "anniversary": "Book Full Experience",
         "birthday": "Book Full Experience",
-        "vip": "Book Full Experience",
-        "corporate": "Book Full Experience"
-      },
-
-      "titles": {
-        "classic": "The Classic Flight:\n Engineered for shared excellence.",
-        "journey": "The Classic Journey",
-        "transport": "Transport + Pyramids: \n Engineered for the Seamless Traveller.",
-        "open": "The Open Ticket\nBest Gift Ever.",
-        "proposal": "The Private Signature:\n The Ultimate Proposal.",
-        "birthday": "The Birthday Flight:\n A New Perspective.",
-        "anniversary": "The Celebration Pack:\n Elevate Your Milestone.",
-        "vip": "Vuelo VIP Inframundo:\n The Pinnacle of Private Aviation.",
-        "corporate": "Corporate Events\nFlying for Business?"
+        "vip": "Book Full Experience"
       },
 
       "subtitles": {
@@ -59,44 +92,29 @@
         "proposal": "Ideal for: Discerning couples seeking the definitive setting for life’s most significant question.",
         "birthday": "Ideal for: Those seeking to mark a new chapter with a fresh, sublime perspective.",
         "anniversary": "Ideal for: Couples and families marking a significant anniversary with a gesture of distinction.",
-        "vip": "Ideal for: International guests and private groups seeking an uncompromising standard of exclusivity.",
-        "corporate": "IFrom incentive trips to brand activations (like our work with Telcel). We offer fully insured, invoice-ready operations with logistical precision."
+        "vip": "Ideal for: International guests and private groups seeking an uncompromising standard of exclusivity."
       },
 
       "descriptions": {
         "classic": "The Experience: Join a select group of adventurers in our signature compartmented baskets. Unlike standard open designs, our Cameron Balloons fleet ensures that every guest enjoys a dedicated vantage point with ample personal space. It is the definitive balance of a social atmosphere and sophisticated comfort.",
         "journey": "The Experience: We designed this for the traveller with zero patience for logistics. We handle the round-trip transport, guide you through the pyramids, and immerse you in local traditions. Includes a survival kit (hat & water) so you just focus on the view.",
         "transport": "The Experience: Designed for those who demand excellence without compromise. We orchestrate your entire itinerary: from private door-to-door transport and a precision flight at the valley’s first light, to a buffet breakfast and direct access to the archaeological site. Seamless execution, from initial pickup to your final return.",
-        "open": "The Experience: Designed for the traveller who wants the full story without the logistical stress. We orchestrate the entire itinerary: from the door-to-door transport and the precision flight at morning first light, to your direct access to the pyramids. Seamless execution, from pickup to return.",
+        "open": "The Experience: Purchase a flexible flight voucher now and let the recipient choose their preferred date. It is an elegant way to give them a Teotihuacán sunrise without having to arrange every detail in advance.",
         "proposal": "The Experience: Excellence is not an accident; it is engineered. We ensure your moment is flawless, orchestrating the unveiling of your \"Will You Marry Me?\" banner with absolute precision while you enjoy total privacy in the sky. From gourmet details and fresh floral arrangements to professional photography, we manage the complexity so you can focus on the memory. You simply bring the ring; we provide the perfection",
         "birthday": "The Experience: Why celebrate on the ground when you can soar above it? Begin your personal year with the valley’s first light. We orchestrate every festive detail: from a personalised 'Happy Birthday' banner upon landing and a celebratory symbolic cake, to a traditional toast. A sophisticated start to your next journey, engineered for absolute safety",
         "anniversary": "The Experience: Traditional celebrations are predictable; the serenity of the Teotihuacán Valley is not. We curate a sophisticated atmosphere to honour your journey together. Your flight is followed by a gourmet buffet breakfast at 'El Jaguar' and a traditional toast. To ensure the memory lasts, we include a personalised banner and a digital photography package. A shared moment, engineered to perfection.",
-        "vip": "The Experience: Our most prestigious service, engineered for those who demand absolute discretion and precision. We orchestrate a seamless private journey: from your hotel door to the serene heights of the Teotihuacán Valley, followed by an exclusive brunch at the renowned Mayahuel. Enhance the adventure with chilled Champagne and a historian-led exploration of the archaeological site. Pure exclusivity, flawlessly delivered.",
-        "corporate": "The Experience: Why celebrate on the ground when you can float above it? Start your personal new year with a sunrise spectacle. We handle the festive details: a \"Happy Birthday\" banner upon landing, a celebratory slice of cake, and the warmth of a traditional Mexican morning."
+        "vip": "The Experience: Our most prestigious service, engineered for those who demand absolute discretion and precision. We orchestrate a seamless private journey: from your hotel door to the serene heights of the Teotihuacán Valley, followed by an exclusive brunch at the renowned Mayahuel. Enhance the adventure with chilled Champagne and a historian-led exploration of the archaeological site. Pure exclusivity, flawlessly delivered."
       },
 
       "includes": {
         "classic": "Includes: 45-60 min flight, Coffee Break, Sparkling Toast",
         "journey": "Includes: Round-trip Transport (CDMX), Flight, Breakfast, Pyramid Tour & Tickets, Traveler Gift.",
         "transport": "Includes: Round-trip Transport (CDMX), 40-min Flight, Welcome Coffee, Sparkling Toast, Breakfast Buffet, Pyramid Entrance Tickets, Certificate.",
-        "open": "Includes: Round-trip Transport (CDMX), 40-min Flight, Welcome Coffee, Sparkling Toast, Breakfast Buffet, Pyramid Entrance Tickets, Certificate.",
+        "open": "Includes: Flexible flight voucher, welcome coffee, sparkling toast, and flight certificate.",
         "proposal": "Includes: Private Flight, Surprise proposal Deployment, 24-Rose Bouquet, Photo & Video Package, Sparkling Toast, Breakfast.",
         "anniversary": "Includes: Flight, \"Happy Anniversary\" Banner, Welcome Coffee, Sparkling Toast, Breakfast Buffet, Flight Certificate, Insurance.",
         "birthday": "Includes: Flight, \"Happy Birthday\" Banner, Cake Slice, Welcome Coffee, Sparkling Toast, Breakfast Buffet, Flight Certificate.",
-        "vip": "Includes: Private Transport, Private Flight, Champagne, Waiter Service & Canapés, Private Cave & Pyramid Tour, Brunch, Photo/Video Package.",
-        "corporate": "Includes: Flight, \"Happy Birthday\" Banner, Cake Slice, Welcome Coffee, Sparkling Toast, Breakfast Buffet, Flight Certificate."
-      },
-
-      "prices": {
-        "classic": "From $2,599 MXN",
-        "journey": "From $2,599 MXN",
-        "transport": "From $3,250 MXN",
-        "open": "From $2,599 MXN",
-        "proposal": "From $11,500 MXN",
-        "anniversary": "From $3,950 MXN",
-        "birthday": "From $3,950 MXN",
-        "vip": "From $2,799 MXN",
-        "corporate": "From $3,950 MXN"
+        "vip": "Includes: Private Transport, Private Flight, Champagne, Waiter Service & Canapés, Private Cave & Pyramid Tour, Brunch, Photo/Video Package."
       }
     }
   }

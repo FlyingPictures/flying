@@ -9,7 +9,7 @@
     "sunriseRitual": {
       "label": "The Science of Flight",
       "title": "Why We Fly at Dawn.",
-      "description": "A hot air balloon is a precision aircraft that navigates within the air mass rather than resisting it. To achieve this with absolute safety, we require a stable atmosphere. This meteorological phenomenon thermal inversion occurs exclusively during the first light of day. As the sun warms the terrain, thermal currents create atmospheric turbulence, making flight conditions unsuitable for ballooning. We do not schedule our ascents at dawn merely for the aesthetic; we do so to uphold the highest standards of aeronautical safety and operational stability."
+      "description": "A hot air balloon is a precision aircraft that navigates within the air mass rather than resisting it. To achieve this safely, we require a stable atmosphere. The meteorological phenomenon known as thermal inversion occurs during the first light of day. As the sun warms the terrain, thermal currents can create atmospheric turbulence and make conditions unsuitable for ballooning. We schedule our ascents at dawn not only for the view, but to uphold the highest standards of aeronautical safety and operational stability."
     },
 
     "gettingHere": {
@@ -37,7 +37,7 @@
     "weatherPolicy": {
       "label": "WEATHER POLICY",
       "title": "Operational Integrity:\n Our Flight Guarantee.",
-      "description": "We maintain the most rigorous safety protocols in the industry. If meteorological conditions do not meet our exacting standards, we simply do not fly. Our commitment is to your safety above all else.\n \n Should a flight be cancelled due to weather, we offer seamless rescheduling or a full refund. We prioritise your peace of mind as much as your protection",
+      "description": "We maintain rigorous safety protocols. If meteorological conditions do not meet our standards, we simply do not fly. Our commitment is to your safety above all else.\n\nShould a flight be cancelled due to weather, we offer seamless rescheduling or a full refund. We prioritise your peace of mind as much as your protection.",
 
       "companyCancellation": {
         "title": "If We Cancel (Bad Weather):",
@@ -46,16 +46,16 @@
 
       "customerCancellation": {
         "48plus": {
-          "label": "48+ hours before",
+          "label": "72+ hours before",
           "description": "Full Refund."
         },
         "24to48": {
-          "label": "24 hours",
-          "description": "Non-refundable (The logistics and perishable breakfast are already in motion)"
+          "label": "24-72 hours before",
+          "description": "50% refund."
         },
         "24less": {
-          "label": "24-48 hours",
-          "description": "50% Refund."
+          "label": "Less than 24 hours before",
+          "description": "Non-refundable. Date changes are subject to availability."
         }
       }
     },
@@ -96,27 +96,27 @@
         },
         "restrooms": {
           "question": "Are there restrooms?",
-          "answer": "Surprisingly, no. Vertigo usually comes from a connection to the ground. In a balloon, you are detached. The motion is so stable you could balance a coin on its edge. Most nervous flyers are smiling within 2 minutes."
+          "answer": "Yes. Restrooms are available at our facilities before takeoff. There is no restroom on board during the flight, so we recommend using them before boarding."
         },
         "childrenFly": {
           "question": "Can children fly?",
-          "answer": "Surprisingly, no. Vertigo usually comes from a connection to the ground. In a balloon, you are detached. The motion is so stable you could balance a coin on its edge. Most nervous flyers are smiling within 2 minutes."
+          "answer": "Yes. Children ages 4 and older may fly when accompanied by an adult. Every child must have their own place in the basket."
         },
         "pregnantFly": {
           "question": "Can pregnant women fly?",
-          "answer": "Surprisingly, no. Vertigo usually comes from a connection to the ground. In a balloon, you are detached. The motion is so stable you could balance a coin on its edge. Most nervous flyers are smiling within 2 minutes."
+          "answer": "For safety reasons, pregnant guests cannot fly. Landings may involve impacts that are not recommended during pregnancy."
         },
         "weightLimit": {
           "question": "Is there a weight limit?",
-          "answer": "Surprisingly, no. Vertigo usually comes from a connection to the ground. In a balloon, you are detached. The motion is so stable you could balance a coin on its edge. Most nervous flyers are smiling within 2 minutes."
+          "answer": "The maximum weight per passenger is 120 kg (265 lb). If you have any questions, please contact us before booking so our team can help plan the flight safely."
         },
         "bringCamera": {
           "question": "Can I bring a camera?",
-          "answer": "Yes, you are welcome to bring a camera. We recommend a camera with a wide-angle lens to capture the beautiful views."
+          "answer": "Yes. Cameras are welcome, and a wide-angle lens works especially well for the views. Professional cameras must be secured with a strap."
         },
         "breakfast": {
           "question": "What is the breakfast like?",
-          "answer": "We serve a traditional Mexican breakfast with fresh fruit, coffee, and a light meal."
+          "answer": "Breakfast inclusions depend on the package you select. Check your experience details or contact us before booking if you have dietary restrictions."
         }
       }
     }

@@ -1,26 +1,25 @@
 {
   "hero": {
-    "title": "El Vuelo de Cumpleaños",
-    "subtitle": "Canasta Privada | 45-60 Minutos | 🇬🇧 Estándares de Seguridad Británicos"
+    "subtitle": "Celebración en vuelo compartido | Vuelo aproximado de 40 minutos | Desayuno incluido"
   },
   "rating": {
     "score": 4.8,
-    "reviewsCount": "112 evaluaciones"
+    "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
     "title": "El Regalo que Toca el Cielo",
-    "paragraph": "Olvida el pastel — regálale el amanecer. Un vuelo privado en globo sobre Teotihuacán es el regalo de cumpleaños que nadie espera y nadie olvida. Observa la cara del cumpleañero cuando el globo se eleva sobre las pirámides y el mundo queda en silencio debajo. Flying Pictures se asegura de que cada detalle sea perfecto para que puedas enfocarte en el momento."
+    "paragraph": "Celebra con un vuelo compartido, lona de Feliz Cumpleaños, rebanada de pastel y Las Mañanitas para la persona festejada. La experiencia termina con desayuno completo en un restaurante local, con opción de convertir el vuelo en privado."
   },
   "itinerary": {
     "title": "Qué harás",
     "steps": [
       {
-        "title": "5:00 AM - Llegada y Check-in",
-        "description": "Llegarás a la Recepción de Flying Pictures y te recibiremos para ayudarte con el check-in."
+        "title": "5:00 AM - Llegada y registro",
+        "description": "Llegarás a la recepción de Flying Pictures y te daremos la bienvenida para completar tu registro."
       },
       {
         "title": "Bienvenida y Café",
-        "description": "Después de completar tu check-in te recibiremos con nuestra estación de café con bebidas calientes y galletas tradicionales."
+        "description": "Después de tu registro te esperamos con nuestra estación de café, bebidas calientes y galletas tradicionales."
       },
       {
         "title": "El Espectáculo de Inflado",
@@ -39,8 +38,54 @@
   "pricing": {
     "dates": "Ver Fechas",
     "adults": "Adultos",
-    "kids": "Niños (4-12)",
-    "priceAdults": "3,299 MXN",
-    "priceKids": "2,699 MXN"
+    "kids": "Niños (4-12)"
+  },
+  "details": {
+    "included": [
+      "Vuelo compartido de aproximadamente 40 minutos",
+      "Coffee break con galletas y bebidas tradicionales mexicanas",
+      "Brindis con vino espumoso u opción sin alcohol",
+      "Desayuno completo",
+      "Certificado de vuelo personalizado",
+      "Seguro de viajero",
+      "Lona de Feliz Cumpleaños personalizable",
+      "Rebanada de pastel y Las Mañanitas para la persona festejada"
+    ],
+    "notIncluded": [
+      "Transporte entre CDMX y Teotihuacán",
+      "Vuelo privado",
+      "Acceso o guía en la zona arqueológica",
+      "Champagne francés — el brindis incluido es con vino espumoso",
+      "Fotos y video del vuelo",
+      "Desayuno para acompañantes que no vuelan"
+    ],
+    "recommendedExtras": [
+      "Transporte redondo compartido desde $500 MXN por persona",
+      "Convertir el vuelo a privado por $3,999 MXN",
+      "Desayuno para acompañante adicional",
+      "Champagne",
+      "Lona personalizada adicional",
+      "Ramo de flores",
+      "Fotos y video durante el vuelo",
+      "Mariachis al aterrizaje — cuatro canciones",
+      "Acceso y traslado a la zona arqueológica",
+      "Guía bilingüe"
+    ],
+    "notes": [
+      "El vuelo es compartido por defecto; puede convertirse en privado como extra.",
+      "Los elementos de cumpleaños están destinados a una persona festejada por reservación."
+    ],
+    "itinerary": {
+      "title": "Qué harás",
+      "steps": [
+        { "time": "Bienvenida", "title": "Empiezas el festejo", "description": "Te recibimos con coffee break, galletas y bebidas tradicionales antes de volar." },
+        { "time": "Preparación", "title": "Aparece la lona de cumpleaños", "description": "El equipo prepara la lona de Feliz Cumpleaños personalizada para la celebración." },
+        { "time": "Despegue", "title": "Comienza el vuelo", "description": "El piloto inicia el ascenso cuando las condiciones meteorológicas son adecuadas." },
+        { "time": "En el aire", "title": "Vuelas aproximadamente 40 minutos", "description": "Disfrutas el Valle de Teotihuacán desde una perspectiva completamente nueva." },
+        { "time": "Al aterrizar", "title": "Brindas por un nuevo año", "description": "Celebramos con vino espumoso u opción sin alcohol." },
+        { "time": "Celebración", "title": "Cantamos Las Mañanitas", "description": "La persona festejada recibe una rebanada de pastel y Las Mañanitas." },
+        { "time": "Cierre", "title": "Disfrutas el desayuno", "description": "Terminas la experiencia con desayuno completo y tu certificado personalizado." }
+      ]
+    }
   }
 }

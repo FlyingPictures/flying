@@ -1,23 +1,22 @@
 {
   "hero": {
-    "title": "The Classic Journey",
-    "subtitle": "Shared Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
+    "subtitle": "Round-trip transport | Approximately 40-minute flight | Guided tour and tasting"
   },
   "rating": {
-    "score": 4.9,
-    "reviewsCount": "230 valuations"
+    "score": 4.8,
+    "reviewsCount": "225 Tripadvisor reviews"
   },
   "description": {
     "title": "This is the quintessential ballooning experience. ",
-    "paragraph": "Join a select group of fellow adventurers for a morning where strangers become friends. Unlike standard \"open\" baskets where guests are crowded together, Flying Pictures uses Cameron Balloons Compartmented Baskets. What does this mean for you? Even in a shared flight, you have your own protected corner of the sky. No fighting for a view, just shared awe."
+    "paragraph": "The most complete way to discover Teotihuacán: round-trip transport, balloon flight, breakfast, a guided archaeological-zone visit, a craft workshop, and a tequila, mezcal, and pulque tasting. A traveller kit is also included for the day."
   },
 
   "itinerary": {
     "title": "What you'll do",
     "steps": [
       {
-        "title": "5:00 AM - Arrive & Caheck-in",
-        "description": "You’ll arrive at Flying Pictures Reception and we will recieve you to help you check-in and loremipsum."
+        "title": "5:00 AM - Arrival & Check-in",
+        "description": "You’ll arrive at Flying Pictures Reception, where our team will welcome you and help you complete check-in."
       },
       {
         "title": "Welcome & Coffee Break",
@@ -41,8 +40,56 @@
    "pricing": {
     "dates": "See Dates",
     "adults": "Adults",
-    "kids": "kids (4-12)",
-    "priceAdults": "2,799 MXN",
-    "priceKids": "2,299 MXN"
+    "kids": "Kids (4-12)"
+  },
+  "details": {
+    "included": [
+      "Shared round-trip transport between Mexico City and Teotihuacán",
+      "Shared flight of approximately 40 minutes",
+      "Coffee break with cookies and traditional Mexican drinks",
+      "Sparkling-wine toast or a non-alcoholic option",
+      "Personalised flight certificate",
+      "Breakfast",
+      "Traveller insurance",
+      "Archaeological-zone visit with a certified guide",
+      "Local craft workshop",
+      "Tequila, mezcal, and pulque tasting",
+      "Traveller kit with hat, water, and souvenir"
+    ],
+    "notIncluded": [
+      "Private flight and transport",
+      "Flight photos and video",
+      "Bouquet, personalised banner, or mariachis",
+      "Services not specified in the itinerary",
+      "$110 MXN per-person fee for non-resident foreign visitors"
+    ],
+    "recommendedExtras": [
+      "Private round-trip transport between Mexico City and Teotihuacán",
+      "Upgrade the group to private for $5,999 MXN",
+      "Photos and video during the flight",
+      "Personalised banner",
+      "Bouquet of flowers",
+      "Mariachis upon landing — four songs"
+    ],
+    "notes": [
+      "A minimum booking of two people is required.",
+      "Non-resident foreign visitors pay an additional $110 MXN per person upon arrival.",
+      "The Mexico City pickup point and time are confirmed with the booking."
+    ],
+    "itinerary": {
+      "title": "What you'll do",
+      "steps": [
+        { "time": "Departure", "title": "Meet us in Mexico City", "description": "Travel to Teotihuacán in shared transport coordinated by our team." },
+        { "time": "Welcome", "title": "Receive your traveller kit", "description": "Get a hat, water, and a souvenir for the day's experience." },
+        { "time": "Before the flight", "title": "Enjoy the coffee break", "description": "Coffee, cookies, and traditional Mexican drinks await you." },
+        { "time": "Preparation", "title": "Watch the balloons inflate", "description": "See the preparation process up close before boarding." },
+        { "time": "Take-off", "title": "Begin the ascent", "description": "The pilot selects the take-off time according to the day's conditions." },
+        { "time": "In the air", "title": "Fly for approximately 40 minutes", "description": "Enjoy views of the Teotihuacán Valley from a Cameron basket." },
+        { "time": "After landing", "title": "Toast and have breakfast", "description": "Celebrate the flight, have breakfast, and receive your personalised certificate." },
+        { "time": "Local culture", "title": "Visit a craft workshop", "description": "Learn about traditional materials and techniques from the region." },
+        { "time": "Tasting", "title": "Taste traditional drinks", "description": "Sample tequila, mezcal, and pulque as part of the cultural experience." },
+        { "time": "Tour", "title": "Explore the pyramids with a guide", "description": "A certified guide accompanies your visit through the archaeological zone." }
+      ]
+    }
   }
 }

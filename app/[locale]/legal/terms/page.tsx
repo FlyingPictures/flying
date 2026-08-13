@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { SITE_URL } from "@/lib/site-config";
 
 type Props = { params: Promise<{ locale: string }> };
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.flyingpicturesmexico.com";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -27,7 +27,7 @@ export default async function TermsPage({ params }: Props) {
       <header className="mb-12 border-b border-secondary/20 pb-8">
         <h1 className="mb-4">{t("termsTitle")}</h1>
         <p className="text-muted-foreground text-lg mt-4">{t("termsDescription")}</p>
-        <p className="text-muted-foreground text-sm mt-2">{t("lastUpdated")}: 17 de enero de 2026</p>
+        <p className="text-muted-foreground text-sm mt-2">{t("lastUpdated")}: {t("lastUpdatedDate")}</p>
       </header>
 
       <div className="space-y-12">
@@ -73,7 +73,7 @@ export default async function TermsPage({ params }: Props) {
           </ul>
         </section>
 
-        {(["safety", "weather", "liability", "ip", "media", "modifications", "law"] as const).map(key => (
+        {(["safety", "weather"] as const).map(key => (
           <section key={key}>
             <h2 className="text-2xl font-bold tracking-tight mb-4">{tp(`${key}Title`)}</h2>
             <p>{tp(`${key}Text`)}</p>
@@ -87,6 +87,13 @@ export default async function TermsPage({ params }: Props) {
             {(["resp1", "resp2", "resp3", "resp4", "resp5", "resp6"] as const).map(k => <li key={k}>{tp(k)}</li>)}
           </ul>
         </section>
+
+        {(["liability", "ip", "media", "modifications", "law"] as const).map(key => (
+          <section key={key}>
+            <h2 className="text-2xl font-bold tracking-tight mb-4">{tp(`${key}Title`)}</h2>
+            <p>{tp(`${key}Text`)}</p>
+          </section>
+        ))}
 
         <section>
           <h2 className="text-2xl font-bold tracking-tight mb-4">{tp("contactTitle")}</h2>

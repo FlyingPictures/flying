@@ -1,22 +1,21 @@
 {
   "hero": {
-    "title": "The Anniversary",
-    "subtitle": "Private Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
+    "subtitle": "Celebration on a shared flight | Approximately 40 minutes | Breakfast included"
   },
   "rating": {
-    "score": 4.9,
-    "reviewsCount": "98 reviews"
+    "score": 4.8,
+    "reviewsCount": "225 Tripadvisor reviews"
   },
   "description": {
     "title": "Celebrate Your Story Above the Clouds",
-    "paragraph": "Some moments deserve more than a dinner reservation. Float above the ancient pyramids of Teotihuacán at sunrise with the person who means everything. A private basket, a sparkling toast at 2,000 meters, and a view that no restaurant can match. Flying Pictures turns your anniversary into a story you'll tell for the rest of your lives."
+    "paragraph": "Celebrate your story with a shared flight over the Teotihuacán Valley, a Happy Anniversary banner, a traditional toast, and full breakfast. If you prefer greater intimacy, you can upgrade the experience to a private flight."
   },
   "itinerary": {
     "title": "What you'll do",
     "steps": [
       {
         "title": "5:00 AM - Arrive & Check-in",
-        "description": "You'll arrive at Flying Pictures Reception and we will receive you to help you check-in and loremipsum."
+        "description": "You’ll arrive at Flying Pictures Reception, where our team will welcome you and help you complete check-in."
       },
       {
         "title": "Welcome & Coffee Break",
@@ -39,8 +38,51 @@
     "pricing": {
       "dates": "See Dates",
       "adults": "Adults",
-      "kids": "kids (4-12)",
-      "priceAdults": "9,499 MXN",
-      "priceKids": "2,899 MXN"
+    "kids": "Kids (4-12)"
+  },
+  "details": {
+    "included": [
+      "Shared flight of approximately 40 minutes",
+      "Coffee break with cookies and traditional Mexican drinks",
+      "Sparkling-wine toast or a non-alcoholic option",
+      "Personalised flight certificate",
+      "Full breakfast",
+      "Traveller insurance",
+      "Happy Anniversary banner"
+    ],
+    "notIncluded": [
+      "Transport between Mexico City and Teotihuacán",
+      "Private flight",
+      "Admission or guide for the archaeological zone",
+      "French champagne — the included toast uses sparkling wine",
+      "Flight photos and video",
+      "Bouquet of flowers"
+    ],
+    "recommendedExtras": [
+      "Shared round-trip transport from $500 MXN per person",
+      "Upgrade the flight to private for $3,999 MXN",
+      "Champagne",
+      "Additional personalised banner",
+      "Bouquet of flowers",
+      "Photos and video during the flight",
+      "Mariachis upon landing — four songs",
+      "Admission and transport to the archaeological zone",
+      "Bilingual guide"
+    ],
+    "notes": [
+      "The flight is shared by default and can be upgraded to private as an extra.",
+      "The route and flight time depend on the day's weather and operating conditions."
+    ],
+    "itinerary": {
+      "title": "What you'll do",
+      "steps": [
+        { "time": "Welcome", "title": "Arrive together at the Globoport", "description": "Enjoy coffee and traditional drinks while the team prepares the balloon." },
+        { "time": "Preparation", "title": "See your banner displayed", "description": "The Happy Anniversary banner becomes part of the celebration before the flight." },
+        { "time": "Take-off", "title": "Begin the ascent", "description": "The pilot begins the flight when conditions are suitable." },
+        { "time": "In the air", "title": "Fly for approximately 40 minutes", "description": "Share views of the Teotihuacán Valley from a Cameron basket." },
+        { "time": "After landing", "title": "Toast to your story", "description": "Celebrate with sparkling wine or a non-alcoholic option." },
+        { "time": "Closing", "title": "Have breakfast and receive your certificate", "description": "Finish with a full breakfast and a personalised certificate of the experience." }
+      ]
     }
+  }
 }

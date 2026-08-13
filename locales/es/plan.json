@@ -17,7 +17,7 @@
       "shuttle": {
         "cardTitle": "La opción sin estrés",
         "cardBody": "Si reservaste un paquete con transporte, nuestra camioneta te recoge directamente en tu hotel o Airbnb en zonas designadas (Reforma, Polanco, Centro, Roma/Condesa).",
-        "pickupTime": "Hora de recogida: 04:30 AM y 05:00 AM",
+        "pickupTime": "Horario de salida: 04:30 AM y 05:00 AM",
         "pickupNote": "(Confirmado por WhatsApp la noche anterior).",
         "perks": "Ventajas: Aire acondicionado, cinturones de seguridad y la oportunidad de dormir una siesta en el regreso.",
         "openMaps": "Abrir en Google Maps"
@@ -41,11 +41,11 @@
       },
       "customerCancellation": {
         "48plus": {
-          "label": "Más de 48 horas antes",
+          "label": "Más de 72 horas antes",
           "description": "Reembolso completo."
         },
         "24to48": {
-          "label": "24-48 horas antes",
+          "label": "24-72 horas antes",
           "description": "Reembolso del 50%."
         },
         "24less": {
@@ -90,7 +90,7 @@
         },
         "childrenFly": {
           "question": "¿Pueden volar niños?",
-          "answer": "Sí, niños mayores de 5 años siempre que estén acompañados por un adulto. Por seguridad, los menores de 5 años no pueden volar. Cada niño debe ocupar su propio asiento en la canasta."
+          "answer": "Sí, niños de 4 años en adelante siempre que estén acompañados por un adulto. Cada niño debe ocupar su propio lugar en la canasta."
         },
         "pregnantFly": {
           "question": "¿Pueden volar mujeres embarazadas?",
@@ -106,7 +106,7 @@
         },
         "breakfast": {
           "question": "¿Cómo es el desayuno?",
-          "answer": "Servimos un desayuno tradicional mexicano con fruta fresca, café y un alimento ligero. Incluye pan, mermelada, y una bebida caliente. Si tienes restricciones alimenticias, indícalo al reservar."
+          "answer": "El desayuno incluido depende del paquete que elijas. Revisa los detalles de tu experiencia o contáctanos antes de reservar si tienes alguna restricción alimenticia."
         }
       }
     }

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.flyingpicturesmexico.com';
+import { SITE_URL } from '@/lib/site-config';
+import { PRODUCTS } from '@/types/product';
 
 // Rutas estáticas de la aplicación
 const staticRoutes = [
@@ -13,6 +13,7 @@ const staticRoutes = [
   '/legal/terms',
   '/legal/privacy',
   '/legal/cancellation',
+  ...PRODUCTS.map((slug) => `/product/${slug}`),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

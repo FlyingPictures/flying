@@ -9,14 +9,12 @@ import { SafetyMastery } from "./safety-mastery";
 import { SafetySafety } from "./safety-safety";
 import { SafetyTale } from "./safety-tale";
 import { SafetyFooter } from "./safety-footer";
+import { cloudinaryOgUrl } from "@/lib/cloudinary";
+import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://www.flyingpicturesmexico.com";
 
 export async function generateMetadata({
   params,
@@ -31,6 +29,7 @@ export async function generateMetadata({
       : "Our history, certifications and commitment to safety.";
 
   const url = `${SITE_URL}/${locale}/safety-heritage`;
+  const ogImage = cloudinaryOgUrl("Rectangle_33_1_ltf6qb");
 
   return {
     title,
@@ -49,12 +48,14 @@ export async function generateMetadata({
       url,
       title,
       description,
-      siteName: "Flying Pictures México",
+      siteName: SITE_NAME,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [ogImage],
     },
   };
 }

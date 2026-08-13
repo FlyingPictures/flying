@@ -1,9 +1,9 @@
 {
   "contact": {
     "hero": {
-      "title": "Contact Mission Control:\n We are at your service",
+      "title": "Contact Mission Control:\nWe are at your service.",
       "subtitle": "We are morning people. How can we help?",
-      "description": "Whether you require bespoke logistical arrangements or specific flight information, our dedicated concierge team is ready to assist. You will speak directly with our aviation experts never a machine who possess an intimate knowledge of the Teotihuacán Valley and our operations."
+      "description": "Whether you require bespoke logistical arrangements or specific flight information, our dedicated concierge team is ready to assist. You will speak directly with aviation experts—not a machine—who know the Teotihuacán Valley and our operation."
     },
 
     "tabs": {
@@ -15,7 +15,7 @@
       "title": "Instant Answers",
       "subtitle": "CUSTOMER SUPPORT",
       "paragraph": "For the fastest response, use our direct WhatsApp Concierge. We manage bookings, weather updates, and last-minute requests in real-time.",
-      "guarantee": "We typically respond in under 5 minutes",
+      "guarantee": "We respond as soon as possible during service hours.",
       "sectionTitle": "General Inquiries & Booking",
       "forTravelers": "For travelers, couples, and families.",
       "corporateLabel": "Corporate & Group Solutions",
@@ -26,11 +26,13 @@
       "eventDate": "Date of Event",
       "requireInvoice": "I require a formal invoice",
       "cta": "Request Corporate Quote",
+      "corporateMessageTitle": "Corporate inquiry",
+      "invoiceYes": "Yes",
       "availabilityText": "Availability, special dietary requests, proposal coordination, and weather checks.",
       "email": "fly@flyingpictures.mx",
       "emailLabel": "Email: ",
       "phone": "Phone: ",
-      "phoneNumber": "(+52) 55 1234 5678"
+      "phoneNumber": "(+52) 55 8025-1057"
     },
 
     "locationFaq": {
@@ -41,7 +43,7 @@
       "subtittleFaq": "GET SUPPORT",
       "tittleFaq": "Frequently asked\nquestions",
       "ask1": "Looking for prices?",
-      "ask1-answer": "Our prices vary depending on season and availability.\nWe recommend booking in advance.\nContact us for group rates.",
+      "ask1-answer": "Visit Flight Experiences to see current package prices and availability. Contact us directly for group and corporate rates.",
       "ask2": "Worried about weather?",
       "ask2-answer": "Flights are weather dependent for safety.\nWe monitor conditions daily.\nYou will be notified if rescheduling is required.",
       "ask3": "What to wear?",

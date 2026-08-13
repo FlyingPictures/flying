@@ -4,6 +4,14 @@ import dynamic from "next/dynamic";
 
 import { HomeHeroSection } from "@/app/[locale]/(home)/HomeHeroSection";
 import { StructuredData } from "@/lib/structured-data";
+import { cloudinaryOgUrl } from "@/lib/cloudinary";
+import {
+  SITE_CONTACT,
+  SITE_LOGO_URL,
+  SITE_NAME,
+  SITE_SOCIALS,
+  SITE_URL,
+} from "@/lib/site-config";
 
 // Componentes cargados dinámicamente para mejorar el LCP y reducir el JS inicial
 const FlightExperienceSection = dynamic(
@@ -20,8 +28,6 @@ const HomeReviewsSection = dynamic(
   () => import("@/app/[locale]/(home)/HomeReviewsSection")
 );
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.flyingpicturesmexico.mx";
-
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -30,14 +36,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const tHero = await getTranslations({ locale, namespace: "herosection" });
 
-  const title = `${tHero("h1")} | Flying Pictures México`;
+  const title = `${tHero("h1")} | ${SITE_NAME}`;
   const description = tHero("paragraph");
-  
-  // Limpieza de URL para evitar errores de canonical
-  const baseUrl = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL;
+  const ogImage = cloudinaryOgUrl("hero1_rszxmn");
 
   return {
-    metadataBase: new URL(baseUrl),
+    metadataBase: new URL(SITE_URL),
     title,
     description,
     robots: { 
@@ -62,43 +66,45 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       locale,
       url: `/${locale}`,
-      siteName: "Flying Pictures México",
+      siteName: SITE_NAME,
       title,
       description,
       images: [{ 
-        url: `/images/og/home-${locale}.jpg`, 
+        url: ogImage,
         width: 1200, 
         height: 630, 
         alt: title 
       }],
     },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+    },
   };
 }
 
-export default async function HomePage({ params }: Props) {
-  const { locale } = await params;
+export default function HomePage() {
+  const image = cloudinaryOgUrl("hero1_rszxmn");
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
     "@id": `${SITE_URL}/#travelagency`,
-    "name": "Flying Pictures México",
+    "name": SITE_NAME,
     "url": SITE_URL,
-    "logo": `${SITE_URL}/logo.png`, 
-    "image": `${SITE_URL}/images/og/home-${locale}.jpg`,
+    "logo": SITE_LOGO_URL,
+    "image": image,
     "description": "Premier hot air balloon flight experience over the Teotihuacán Pyramids.",
-    "telephone": "+525580251057",
+    "telephone": SITE_CONTACT.phone,
     "areaServed": { "@type": "Place", "name": "Teotihuacán, México" },
     "address": { 
       "@type": "PostalAddress", 
       "addressCountry": "MX", 
       "addressRegion": "Estado de México" 
     },
-    "sameAs": [
-      "https://www.facebook.com/flyingpicturesmexico",
-      "https://www.instagram.com/flyingpicturesmexico",
-      "https://wa.me/525580251057",
-    ],
+    "sameAs": [...SITE_SOCIALS, SITE_CONTACT.whatsapp],
     "priceRange": "$$$",
   };
 

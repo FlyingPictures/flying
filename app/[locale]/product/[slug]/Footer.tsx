@@ -27,7 +27,7 @@ export default async function ProductFooter() {
           priority
         />
 
-        <h3 className="font-inter text-xl md:text-2xl italic font-semibold leading-tight">
+        <h3 className="font-libre-baskerville text-xl md:text-2xl italic font-normal leading-tight">
           {t("title")}
         </h3>
 

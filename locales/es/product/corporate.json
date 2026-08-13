@@ -1,11 +1,10 @@
 {
   "hero": {
-    "title": "La Experiencia Corporativa",
     "subtitle": "Canasta Privada | 45-60 Minutos | 🇬🇧 Estándares de Seguridad Británicos"
   },
   "rating": {
-    "score": 4.9,
-    "reviewsCount": "67 evaluaciones"
+    "score": 4.8,
+    "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
     "title": "Team Building Fuera de lo Ordinario",
@@ -15,12 +14,12 @@
     "title": "Qué harás",
     "steps": [
       {
-        "title": "5:00 AM - Llegada y Check-in",
-        "description": "Llegarás a la Recepción de Flying Pictures y te recibiremos para ayudarte con el check-in."
+        "title": "5:00 AM - Llegada y registro",
+        "description": "Llegarás a la recepción de Flying Pictures y te daremos la bienvenida para completar tu registro."
       },
       {
         "title": "Bienvenida y Café",
-        "description": "Después de completar tu check-in te recibiremos con nuestra estación de café con bebidas calientes y galletas tradicionales."
+        "description": "Después de tu registro te esperamos con nuestra estación de café, bebidas calientes y galletas tradicionales."
       },
       {
         "title": "El Espectáculo de Inflado",
@@ -37,10 +36,8 @@
     ]
   },
   "pricing": {
-    "dates": "Ver Fechas",
+    "dates": "Solicitar cotización",
     "adults": "Adultos",
-    "kids": "Niños (4-12)",
-    "priceAdults": "3,799 MXN",
-    "priceKids": "3,099 MXN"
+    "kids": "Niños (4-12)"
   }
 }

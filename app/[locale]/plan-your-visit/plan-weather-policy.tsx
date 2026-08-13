@@ -12,7 +12,7 @@ export async function PlanWeatherPolicy() {
     <section className="relative w-full min-h-[758px] md:min-h-[1031px]">
       <CloudinaryImage
         publicId={IMAGES.plan.weatherPolicy.cancelation}
-        alt="Weather Policy Background"
+        alt=""
         fill
         className="object-cover"
       />
@@ -37,28 +37,15 @@ export async function PlanWeatherPolicy() {
             <div className={DIVIDER}></div>
           </div>
 
-          <div className="flex flex-row md:flex-col items-start w-full gap-4">
-            
-            <div className={`${BLOCK} w-1/2 md:w-full`}>
-              <h3 className="italic">{t("customerCancellation.48plus.label")}</h3>
-              <p>{t("customerCancellation.48plus.description")}</p>
+          {(["48plus", "24to48", "24less"] as const).map((key, index) => (
+            <div key={key} className="w-full">
+              <div className={`${BLOCK} w-full`}>
+                <h3 className="italic">{t(`customerCancellation.${key}.label`)}</h3>
+                <p>{t(`customerCancellation.${key}.description`)}</p>
+              </div>
+              {index < 2 && <div className={`${DIVIDER} mt-6`} />}
             </div>
-
-            <div className={`hidden md:block ${DIVIDER}`}></div>
-
-            <div className={`${BLOCK} w-1/2 md:w-full`}>
-              <h3 className="italic">{t("customerCancellation.24less.label")}</h3>
-              <p>{t("customerCancellation.24less.description")}</p>
-            </div>
-
-          </div>
-
-          <div className={DIVIDER}></div>
-
-          <div className={`${BLOCK} w-full`}>
-            <h3 className="italic">{t("customerCancellation.24to48.label")}</h3>
-            <p>{t("customerCancellation.24to48.description")}</p>
-          </div>
+          ))}
 
         </div>
       </div>

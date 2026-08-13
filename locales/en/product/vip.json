@@ -1,22 +1,21 @@
 {
   "hero": {
-    "title": "The VIP Experience",
-    "subtitle": "Private Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
+    "subtitle": "Private transport and flight | Approximately 40 minutes | Air-and-land tour"
   },
   "rating": {
-    "score": 5.0,
-    "reviewsCount": "184 reviews"
+    "score": 4.8,
+    "reviewsCount": "225 Tripadvisor reviews"
   },
   "description": {
     "title": "Your Sky, Your Rules",
-    "paragraph": "This is ballooning at its finest. Your private basket means no strangers, no compromises — just you and yours floating above the Valley of Teotihuacán at dawn. Flying Pictures' Cameron Balloons Compartmented Baskets give every guest their own corner of the sky, but in the VIP experience, the entire sky is yours. Champagne, silence, and pyramids below."
+    "paragraph": "The catalogue's most complete private experience: exclusive transport, a flight just for your group, French champagne with waiter service, ceremonial caves, brunch, and an archaeological-zone tour with a historian. Flight photos and video are already included."
   },
   "itinerary": {
     "title": "What you'll do",
     "steps": [
       {
         "title": "5:00 AM - Arrive & Check-in",
-        "description": "You'll arrive at Flying Pictures Reception and we will receive you to help you check-in and loremipsum."
+        "description": "You’ll arrive at Flying Pictures Reception, where our team will welcome you and help you complete check-in."
       },
       {
         "title": "Welcome & Coffee Break",
@@ -39,8 +38,51 @@
    "pricing": {
     "dates": "See Dates",
     "adults": "Adults",
-    "kids": "kids (4-12)",  
-    "priceAdults": "4,299 MXN",
-    "priceKids": "3,499 MXN"
+    "kids": "Kids (4-12)"
+  },
+  "details": {
+    "included": [
+      "Private round-trip transport between Mexico City and Teotihuacán with coordinated pickup",
+      "Private flight of approximately 40 minutes",
+      "Coffee break with cookies and traditional Mexican drinks",
+      "French-champagne toast — juice for children",
+      "Waiter service with canapés, guacamole, coffee, bread, and local fruit",
+      "Private guided ceremonial-cave tour of approximately 30 minutes",
+      "Traditional brunch at a local restaurant",
+      "Private archaeological-zone tour of approximately two and a half hours with a historian",
+      "Personalised flight certificate",
+      "Traveller insurance",
+      "Flight photos and video"
+    ],
+    "notIncluded": [
+      "Mariachis upon landing",
+      "Bouquet of flowers",
+      "Personalised banners",
+      "Accommodation",
+      "$110 MXN per-person fee for non-resident foreign visitors"
+    ],
+    "recommendedExtras": [
+      "Mariachis upon landing — four songs",
+      "Bouquet of flowers"
+    ],
+    "notes": [
+      "A minimum booking of four people is required.",
+      "An additional adult costs $3,999 MXN and the child price is $3,499 MXN.",
+      "Non-resident foreign visitors pay an additional $110 MXN per person upon arrival."
+    ],
+    "itinerary": {
+      "title": "What you'll do",
+      "steps": [
+        { "time": "Departure", "title": "Travel in private transport", "description": "An exclusive vehicle takes your group from Mexico City to Teotihuacán." },
+        { "time": "Welcome", "title": "Enjoy the coffee break", "description": "We welcome you with coffee, cookies, and traditional Mexican drinks." },
+        { "time": "Preparation", "title": "Board your private balloon", "description": "Only your group shares the basket during the flight." },
+        { "time": "In the air", "title": "Fly for approximately 40 minutes", "description": "The team captures photos and video while you enjoy views of the valley." },
+        { "time": "After landing", "title": "Enjoy champagne and canapés", "description": "A waiter serves the toast, guacamole, coffee, bread, and local fruit." },
+        { "time": "Underworld", "title": "Explore ceremonial caves", "description": "Take a private guided tour lasting approximately 30 minutes." },
+        { "time": "Brunch", "title": "Try a traditional brunch", "description": "Enjoy local dishes at a nearby restaurant." },
+        { "time": "History", "title": "Tour the pyramids with a historian", "description": "A specialist accompanies your group for approximately two and a half hours." },
+        { "time": "Closing", "title": "Receive your certificate, photos, and video", "description": "Finish with your personalised certificate and the media from your experience." }
+      ]
+    }
   }
 }

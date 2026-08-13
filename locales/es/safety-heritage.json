@@ -1,94 +1,94 @@
 {
   "safety": {
     "hero": {
-      "title": "La gravedad es opcional.\nLa seguridad no.",
-      "subtitle": "La ingeniería de la tranquilidad.",
-      "description": "En una industria a menudo impulsada por agencias sin flota propia y precios bajos compitiendo en una carrera hacia el fondo, a nosotros nos impulsan las listas de verificación, los valores y la pasión. Flying Pictures México se basa en una filosofía simple: la emoción pertenece a la vista, no al riesgo.\n\nDescubre por qué somos la única verdadera Compañía de Aviación del valle."
+      "title": "La seguridad es nuestra base.\nLa emoción viene después.",
+      "subtitle": "Ingeniería para volar con tranquilidad.",
+      "description": "En una industria llena de intermediarios sin aeronaves propias y ofertas que compiten solo por precio, nosotros operamos con listas de verificación rigurosas, valores innegociables y pasión técnica.\n\nFlying Pictures México parte de una idea muy simple: la emoción debe estar en la vista, nunca en el riesgo. Por eso somos una verdadera compañía de aviación en el Valle de Teotihuacán."
     },
     "legacy": {
       "subtitle": "EL LEGADO",
-      "title": "La confianza de los gigantes.",
-      "description": "Durante 10 años consecutivos, si mirabas hacia arriba y veías el icónico globo de Telcel flotando sobre México, estabas viendo a Flying Pictures en acción. Las grandes corporaciones no confían sus activos de marca a la suerte; confían en la disciplina operativa.\nOperamos el globo más visible del país con un historial de seguridad perfecto durante una década.\n\n¡Incluso logramos aterrizar cuidadosamente el famoso gigante en un barco en el mar! Una misión cumplida gracias a nuestro equipo de pilotos y operadores experimentados.\nHoy, aplicamos esos mismos estándares de aviación corporativa a tu vuelo matutino."
+      "title": "Disciplina corporativa.",
+      "description": "Durante diez años consecutivos, el icónico globo de Telcel, una de las aeronaves más reconocidas en el cielo mexicano, fue operado exclusivamente por Flying Pictures. Las grandes marcas no dejan su reputación al azar; confían en disciplina operativa y en historiales de seguridad comprobados.\n\nNuestra experiencia incluye misiones complejas, como aterrizar con precisión un globo comercial sobre una embarcación en el mar. Ese tipo de operación solo es posible con pilotos y técnicos experimentados.\n\nHoy aplicamos esos mismos estándares de aviación corporativa a tu vuelo al amanecer."
     },
     "finest": {
-      "subtitle": "Fabricados en Bristol,\nVolados en Teotihuacán.",
-      "title": "Las mejores aeronaves\ndel mundo.",
-      "description": "Tratamos a nuestros globos como miembros de la familia. Volamos exclusivamente Cameron Balloons. Con sede en Bristol, Reino Unido, Cameron es para el aerostatismo lo que Rolls-Royce es para los motores.\n\nSon los líderes mundiales en tecnología más ligera que el aire, poseyendo récords por volar alrededor del mundo y dentro de la estratosfera.",
+      "subtitle": "Fabricados en Bristol,\nvolados en Teotihuacán.",
+      "title": "Excelencia\nde ingeniería.",
+      "description": "Mantenemos nuestra flota bajo los más altos estándares internacionales de aviación. Flying Pictures opera exclusivamente con Cameron Balloons, fabricados en Reino Unido. Con sede en Bristol, Cameron es el referente mundial en tecnología más ligera que el aire: el Rolls-Royce de los cielos.\n\nSus aeronaves han marcado récords de circunnavegación global y vuelos estratosféricos. Al volar con nosotros, vuelas con una de las ingenierías más avanzadas y prestigiosas de la industria.",
       "cards": {
         "1": {
           "title": "Tela Hyperlast™",
-          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+          "description": "Material de alto desempeño diseñado para resistir calor, tensión y uso intensivo sin comprometer la seguridad del envolvente."
         },
         "2": {
-          "title": "Hyperlast™",
-          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+          "title": "Resistencia térmica",
+          "description": "Tecnología desarrollada por Cameron para prolongar la vida útil de la aeronave y mantener un comportamiento estable en vuelo."
         },
         "3": {
-          "title": "Hyperlast™ 2",
-          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+          "title": "Durabilidad operativa",
+          "description": "Una evolución de materiales pensada para mayor durabilidad, control térmico y operación confiable en condiciones exigentes."
         },
         "4": {
-          "title": "Tela Hyperlast™",
-          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+          "title": "Mantenimiento técnico",
+          "description": "Cada globo se inspecciona y mantiene con criterios técnicos que priorizan desempeño, trazabilidad y seguridad operacional."
         }
       }
     },
     "footer": {
-      "title": "Ya viste las especificaciones.\nAhora mira la vista.",
-      "description": "Es aburrido leer sobre seguridad, pero es\nmaravilloso volar con ella.",
+      "title": "Ya conoces la ingeniería.\nAhora mira la vista.",
+      "description": "Leer sobre seguridad puede ser técnico.\nVolar con ella se siente extraordinario.",
       "button": "Reserva con confianza"
     },
     "tale": {
       "subtitle": "DE REINO UNIDO A MÉXICO",
-      "title": "Una historia de dos países.",
-      "description": "No creemos que \"un solo tamaño sirva para todos\". Una propuesta requiere privacidad; un viaje familiar requiere logística. Elige el ascenso diseñado para tu historia.",
+      "title": "Una historia entre dos países.",
+      "description": "Flying Pictures une tradición británica, experiencia técnica y una operación mexicana construida para el Valle de Teotihuacán.",
       "cards": {
         "1": {
           "flag": "gb",
-          "title": "1978 (UK):",
-          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+          "title": "1978 (Reino Unido):",
+          "description": "Flying Pictures nace en Reino Unido, abriendo camino en cinematografía aérea para producciones de la BBC y Hollywood."
         },
         "2": {
           "flag": "mx",
-          "title": "1978 (MX):",
-          "description": "Flying Pictures nace en México, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+          "title": "México:",
+          "description": "La experiencia llega a México con una operación enfocada en vuelos sobre Teotihuacán, seguridad y servicio premium."
         },
         "3": {
           "flag": "gb",
-          "title": "1978 (UK):",
-          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+          "title": "Aviación corporativa:",
+          "description": "La operación de globos comerciales y de marca consolidó una cultura de precisión, mantenimiento y responsabilidad técnica."
         },
         "4": {
           "flag": "gb",
-          "title": "1978 (UK):",
-          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+          "title": "Teotihuacán:",
+          "description": "Nuestro equipo adapta esa experiencia internacional a las condiciones únicas del valle, el clima local y la operación al amanecer."
         },
         "5": {
           "flag": "gb",
-          "title": "1978 (UK):",
-          "description": "Flying Pictures nace en el Reino Unido, siendo pioneros en cinematografía aérea para la BBC y Hollywood."
+          "title": "Hoy:",
+          "description": "Cada vuelo combina tradición, tecnología Cameron y protocolos diseñados para que disfrutes el cielo con confianza."
         }
       }
     },
     "safety": {
       "subtitle": "PROTOCOLOS DE SEGURIDAD Y TORRE DE CONTROL",
       "title": "El muro invisible de la seguridad.",
-      "description": "¿Cómo logramos un historial de seguridad que abarca 30 años? Diciendo \"No\" cuando otros dicen \"Tal vez\".",
+      "description": "¿Cómo se construye un historial de seguridad de más de 30 años? Diciendo \"no\" cuando otros dicen \"tal vez\".",
       "cards": {
         "1": {
-          "title": "La regla de la \"Bandera Roja\"",
-          "description": "Si las condiciones son marginales, nos quedamos en tierra. Preferimos reembolsar un boleto que arriesgar a un pasajero."
+          "title": "La regla de la \"bandera roja\"",
+          "description": "Si las condiciones no son adecuadas, nos quedamos en tierra. Preferimos reagendar o reembolsar antes que comprometer la seguridad de un pasajero."
         },
         "2": {
-          "title": "Inspecciones Diarias",
+          "title": "Inspecciones diarias",
           "description": "Cada componente, desde los quemadores hasta los mosquetones, se somete a una rigurosa revisión antes de cada inflado."
         },
         "3": {
-          "title": "Torre de Control Privada",
-          "description": "Somos la única empresa en el valle que opera su propia estación interna de monitoreo meteorológico. Rastreamos la velocidad y dirección del viento en tiempo real."
+          "title": "Torre de control privada",
+          "description": "Operamos nuestra propia estación interna de monitoreo meteorológico. Revisamos velocidad y dirección del viento en tiempo real antes y durante la operación."
         },
         "4": {
-          "title": "Solvencia Verificada",
+          "title": "Solvencia verificada",
           "description": "Operamos con un seguro de responsabilidad civil integral que excede los requisitos legales."
         }
       }
@@ -96,77 +96,63 @@
     "mastery": {
       "subtitle": "CONOCE A LOS CAPITANES",
       "title": "La maestría no tiene atajos.",
-      "description": "En la aviación, el respeto se gana en horas, no en años. Ya sean veteranos con décadas en el aire o estrellas ascendentes del deporte, cada piloto de Flying Pictures cumple con el \"Estándar Sean\".",
+      "description": "En aviación, el respeto se gana en horas de vuelo, no solo en años. Desde pilotos veteranos hasta nuevas generaciones formadas dentro de nuestra cultura operativa, cada capitán de Flying Pictures cumple con el Estándar Sean.",
       "cards": {
         "1": {
-          "name": "Autoridad Certificada",
-          "description": "Cada piloto posee una licencia comercial emitida por la AFAC (Agencia Federal de Aviación Civil). No empleamos aficionados."
+          "name": "Autoridad certificada",
+          "description": "Cada piloto cuenta con licencia comercial emitida por la AFAC, la Agencia Federal de Aviación Civil. No ponemos tu vuelo en manos de aficionados."
         },
         "2": {
-          "name": "Más de 2,000 Horas",
-          "description": "La experiencia promedio en nuestra cabina supera con creces el requisito de la industria."
+          "name": "Más de 2,000 horas",
+          "description": "La experiencia promedio en nuestra cabina supera ampliamente los requisitos habituales de la industria."
         },
         "3": {
-          "name": "El Modelo de Mentoría",
-          "description": "Nuestros pilotos más jóvenes no solo son contratados; son mentoreados. Vuelan bajo la estricta supervisión de nuestros fundadores, asegurando que la cultura de seguridad permanezca intacta."
-        }
-      },
-      "captains": {
-        "1": {
-          "name": "CEO Sean Byrne",
-          "description": "40+ Años. El Fundador."
-        },
-        "2": {
-          "name": "Cap. Sean Byrne",
-          "description": "40+ Años. El Fundador."
-        },
-        "3": {
-          "name": "Cap. Sean Byrne",
-          "description": "40+ Años. El Fundador."
+          "name": "Modelo de mentoría",
+          "description": "Los pilotos más jóvenes no solo se integran al equipo: se forman bajo supervisión estricta para conservar intacta nuestra cultura de seguridad."
         }
       }
     },
     "meetGiants": {
-      "title": "Conoce a los Gigantes Amables",
+      "title": "Conoce a los gigantes amables",
       "description": "Tratamos a nuestros globos como miembros de la familia. Cada uno tiene un nombre, una historia y una personalidad propia.",
       "subtitle": "LOS BUQUES INSIGNIA",
-      "description2": "Diseñados para la estabilidad, el confort y el Viaje Clásico.",
-      "subtitle2": "LOS INTERCEPTORES VIP",
-      "description3": "Diseñados para la agilidad, la intimidad y Ascensos Privados.",
+      "description2": "Diseñados para estabilidad, comodidad y el vuelo Tradicional.",
+      "subtitle2": "LOS GLOBOS VIP",
+      "description3": "Diseñados para agilidad, intimidad y vuelos privados.",
       "cards": {
         "1": {
           "name": "Cameron A-315 (Los pesos pesados)",
           "subname": "XB-PCA / XB-SGN",
-          "description": "Piense en ellos como los \"transatlánticos\" del cielo. Con una capacidad de elevación de 800 kg, estos enormes envolventes ofrecen la experiencia de vuelo más suave y estable. Están equipados con nuestras exclusivas canastillas compartimentadas, asegurando que cada pasajero tenga su propia \"esquina\" para fotografía.",
-          "capacity": "Capacidad: 12 Pasajeros + Piloto",
-          "mission": "Misión: El Vuelo Clásico Compartido"
+          "description": "Piensa en ellos como los grandes transatlánticos del cielo. Con gran capacidad de elevación, estos envolventes ofrecen una experiencia estable, suave y cómoda. Están equipados con canastillas compartimentadas para que cada pasajero tenga su propio espacio para disfrutar y tomar fotografías.",
+          "capacity": "Capacidad: 12 pasajeros + piloto",
+          "mission": "Misión: Vuelo Clásico compartido"
         },
         "2": {
           "name": "Cameron Z-120 (El Corredor)",
           "subname": "XB-OWK",
-          "description": "El \"Roadster\". La Serie Z presenta una forma ligeramente más aerodinámica, lo que permite ascensos más rápidos y un manejo ágil. Es pequeño, rápido e increíblemente íntimo.",
-          "capacity": "Capacidad: 2-3 Pasajeros (Exclusivo)",
-          "mission": "Misión: Propuestas y Vuelos Privados de Pareja."
+          "description": "El roadster de la flota. La Serie Z tiene una forma más aerodinámica, permite ascensos ágiles y responde con gran precisión. Es pequeño, veloz e increíblemente íntimo.",
+          "capacity": "Capacidad: 2-3 pasajeros (exclusivo)",
+          "mission": "Misión: propuestas y vuelos privados en pareja."
         },
         "3": {
           "name": "Cameron Z-160",
           "subname": "XB-USY",
-          "description": "El equilibrio perfecto entre potencia y privacidad. Lo suficientemente grande para una cita doble o una familia pequeña, pero lo suficientemente pequeño para sentirse como su propio balcón privado sobre las pirámides.",
-          "capacity": "Capacidad: 4 Pasajeros (Familia / Cita Doble)",
-          "mission": "Misión: Aniversarios y Familias Pequeñas."
+          "description": "El equilibrio perfecto entre potencia y privacidad. Suficientemente amplio para una familia pequeña o dos parejas, pero íntimo para sentirse como un balcón privado sobre las pirámides.",
+          "capacity": "Capacidad: 4 pasajeros (familia o dos parejas)",
+          "mission": "Misión: aniversarios y familias pequeñas."
         }
       },
       "banner": {
         "title": "EL ESCUADRÓN LEGADO",
-        "subtitle": "Las embarcaciones versátiles que completan nuestra capacidad.",
-        "cardtitle": "Varias Series de Cameron",
-        "cardsubtitle": "Flota Verificada",
+        "subtitle": "Las aeronaves versátiles que completan nuestra capacidad operativa.",
+        "cardtitle": "Varias series Cameron",
+        "cardsubtitle": "Flota verificada",
         "carddescription": "Pasión",
-        "cardsubdescription": "Fiel a su nombre, esta aeronave suele ser solicitada para nuestros hitos más románticos. Ha sido testigo de cientos de momentos de \"Sí, acepto\" sobre la Pirámide del Sol.",
+        "cardsubdescription": "Fiel a su nombre, esta aeronave suele acompañar nuestros momentos más románticos. Ha sido testigo de cientos de \"sí, acepto\" sobre la Pirámide del Sol.",
         "carddescription2": "Cóndor",
-        "cardsubdescription2": "Nombrado en honor al soberano de los cielos andinos, este globo es un incansable trabajador del valle, combinando potencia de elevación con la majestuosidad del vuelo.",
+        "cardsubdescription2": "Nombrado en honor al soberano de los cielos andinos, este globo combina potencia de elevación con la majestuosidad de un vuelo sereno.",
         "carddescription3": "Mercurio & Rubicón",
-        "cardsubdescription3": "La flota de apoyo ágil, lista para desplegarse en eventos especiales y logística de filmación."
+        "cardsubdescription3": "Nuestra flota de apoyo ágil, lista para eventos especiales, operación privada y logística de filmación."
       }
     }
   }

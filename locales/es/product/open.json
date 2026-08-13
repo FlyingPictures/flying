@@ -1,46 +1,39 @@
 {
   "hero": {
-    "title": "El Vuelo Abierto",
-    "subtitle": "Canasta Abierta | 45-60 Minutos | 🇬🇧 Estándares de Seguridad Británicos"
+    "subtitle": "Voucher Flexible | Vigencia de 6 Meses | Vuelo Tradicional"
   },
   "rating": {
     "score": 4.8,
-    "reviewsCount": "156 evaluaciones"
+    "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
-    "title": "Comparte el Cielo con Otros Aventureros",
-    "paragraph": "El Vuelo Abierto es la introducción perfecta al vuelo en globo. Únete a un grupo diverso de aventureros de todo el mundo para un vuelo al amanecer sobre el Valle de Teotihuacán. Una canasta abierta significa que compartes la maravilla con nuevas personas — y cuando aterricen, ya no serán desconocidos. Las mejores historias comienzan con un salto de fe a las 5 AM."
+    "title": "Regala una experiencia única",
+    "paragraph": "La Tarjeta de Regalo permite obsequiar un vuelo tradicional sin elegir la fecha de inmediato. El voucher es transferible, se activa un mes después de la compra y puede utilizarse durante los seis meses siguientes, sujeto a disponibilidad."
   },
   "itinerary": {
-    "title": "Qué harás",
+    "title": "Cómo funciona",
     "steps": [
       {
-        "title": "5:00 AM - Llegada y Check-in",
-        "description": "Llegarás a la Recepción de Flying Pictures y te recibiremos para ayudarte con el check-in."
+        "title": "Compra tu tarjeta",
+        "description": "Adquiere el voucher individual y conserva el número de folio de la compra."
       },
       {
-        "title": "Bienvenida y Café",
-        "description": "Después de completar tu check-in te recibiremos con nuestra estación de café con bebidas calientes y galletas tradicionales."
+        "title": "Recibe tu voucher",
+        "description": "Entrega la tarjeta como regalo o consérvala para utilizarla más adelante."
       },
       {
-        "title": "El Espectáculo de Inflado",
-        "description": "Camina al campo de lanzamiento para ver a los \"Gigantes\" cobrar vida. Ver los enormes globos elevarse con el rugido de los quemadores es el primer acto del espectáculo."
+        "title": "Activa tu fecha",
+        "description": "Contacta a Flying Pictures con tu folio y reserva con al menos 48 horas de anticipación, sujeto a disponibilidad."
       },
       {
-        "title": "El Ascenso",
-        "description": "Despega suavemente hacia el amanecer. Durante aprox. 45-60 minutos, flota en silencio sobre el Valle de Teotihuacán, viendo cómo el sol revela las pirámides desde arriba."
-      },
-      {
-        "title": "El Brindis de 1783",
-        "description": "Al aterrizar, celebramos con un tradicional brindis de vino espumoso. Un ritual que se remonta a los primeros aviadores para agradecer a los dioses del viento un regreso seguro."
+        "title": "Vive el vuelo tradicional",
+        "description": "Disfruta el vuelo en globo con brindis, certificado y desayuno incluidos conforme a las condiciones del voucher."
       }
     ]
   },
   "pricing": {
-    "dates": "Ver Fechas",
-    "adults": "Adultos",
-    "kids": "Niños (4-12)",
-    "priceAdults": "2,199 MXN",
-    "priceKids": "1,799 MXN"
+    "dates": "Comprar voucher",
+    "adults": "Voucher individual",
+    "kids": ""
   }
 }

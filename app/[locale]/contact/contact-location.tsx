@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { getTranslations } from "next-intl/server"
+import { SITE_LOCATION } from "@/lib/site-config"
 
 function MapButtons({ t }: { t: (key: string) => string }) {
   return (
@@ -10,7 +11,7 @@ function MapButtons({ t }: { t: (key: string) => string }) {
         asChild
       >
         <a
-          href="https://www.google.com/maps/dir/?api=1&destination=19.6923323,-98.8244167"
+          href={SITE_LOCATION.googleMaps}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -18,7 +19,7 @@ function MapButtons({ t }: { t: (key: string) => string }) {
         </a>
       </Button>
       <a
-        href="https://waze.com/ul?ll=19.6923323,-98.8244167&navigate=yes"
+        href={SITE_LOCATION.waze}
         target="_blank"
         rel="noopener noreferrer"
         className="w-1/2 h-10 text-xs rounded-full border border-secondary bg-background text-secondary font-semibold flex items-center justify-center transition hover:bg-secondary hover:text-background"
@@ -52,7 +53,8 @@ export async function LocationAndFAQ() {
 
         <div className="w-full h-70 rounded-(--radius) overflow-hidden">
           <iframe
-            src="https://www.google.com/maps?q=19.6923323,-98.8244167&z=15&output=embed"
+            title={t("title")}
+            src={SITE_LOCATION.embed}
             width="100%"
             height="100%"
             loading="lazy"

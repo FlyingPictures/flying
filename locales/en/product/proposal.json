@@ -1,22 +1,21 @@
 {
   "hero": {
-    "title": "The Proposal Flight",
-    "subtitle": "Private Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
+    "subtitle": "Private flight for two | Approximately 40 minutes | Coordinated proposal"
   },
   "rating": {
-    "score": 5.0,
-    "reviewsCount": "74 reviews"
+    "score": 4.8,
+    "reviewsCount": "225 Tripadvisor reviews"
   },
   "description": {
     "title": "The Most Unforgettable Yes of Your Life",
-    "paragraph": "There is no better backdrop for a proposal than the ancient pyramids of Teotihuacán at sunrise, 2,000 meters above the world. Flying Pictures coordinates every detail in secret — from the moment of ascent to the sparkling toast after she says yes. Our crew knows exactly when to step back and let the magic happen. All you need to do is ask the question."
+    "paragraph": "A proposal coordinated from beginning to end: a private flight for two, a surprise banner with the big question, a bouquet of 24 roses, a toast, and full breakfast. Our team prepares every detail discreetly so you can focus on the moment."
   },
   "itinerary": {
     "title": "What you'll do",
     "steps": [
       {
         "title": "5:00 AM - Arrive & Check-in",
-        "description": "You'll arrive at Flying Pictures Reception and we will receive you to help you check-in and loremipsum."
+        "description": "You’ll arrive at Flying Pictures Reception, where our team will welcome you and help you complete check-in."
       },
       {
         "title": "Welcome & Coffee Break",
@@ -38,9 +37,53 @@
   },
    "pricing": {
     "dates": "See Dates",
-    "adults": "Adults",
-    "kids": "kids (4-12)",
-    "priceAdults": "3,999 MXN",
-    "priceKids": "0 MXN"
-   }
+    "adults": "2 adults (private flight)",
+    "kids": "Additional person"
+  },
+  "details": {
+    "included": [
+      "Private flight of approximately 40 minutes for two adults",
+      "Coffee break with cookies and a tasting of traditional Mexican drinks",
+      "Sparkling-wine toast or a non-alcoholic option",
+      "Personalised flight certificates",
+      "Full breakfast",
+      "Traveller insurance",
+      "Surprise banner reading Will you marry me?",
+      "Bouquet of 24 roses"
+    ],
+    "notIncluded": [
+      "Transport between Mexico City and Teotihuacán",
+      "French champagne — the included toast uses sparkling wine",
+      "Flight photos and video",
+      "Mariachis",
+      "Admission, transport, or guide for the archaeological zone",
+      "Additional services not specified"
+    ],
+    "recommendedExtras": [
+      "Shared or private round-trip transport",
+      "Champagne",
+      "Photos and video during the flight",
+      "Mariachis upon landing",
+      "Additional personalised banner",
+      "Admission and transport to the archaeological zone",
+      "Bilingual guide"
+    ],
+    "notes": [
+      "The base price of $11,500 MXN covers two adults on a private flight.",
+      "Each additional person costs $2,600 MXN.",
+      "Photos and video are treated as an extra until the commercial team confirms otherwise."
+    ],
+    "itinerary": {
+      "title": "What you'll do",
+      "steps": [
+        { "time": "Welcome", "title": "Arrive at the Globoport", "description": "We welcome you with coffee while the team keeps the surprise discreet." },
+        { "time": "Preparation", "title": "Your balloon, just for you", "description": "Board a private basket prepared for the occasion." },
+        { "time": "Take-off", "title": "Begin your private flight", "description": "The pilot takes off when weather conditions are suitable." },
+        { "time": "Special moment", "title": "See the big question", "description": "The team displays the surprise Will you marry me? banner." },
+        { "time": "After landing", "title": "Receive the bouquet and toast", "description": "We welcome you with 24 roses and a sparkling-wine toast." },
+        { "time": "Celebration", "title": "Enjoy breakfast", "description": "Continue the celebration with a full breakfast at a local restaurant." },
+        { "time": "Closing", "title": "Receive your certificates", "description": "Take home personalised certificates as a memento of the experience." }
+      ]
+    }
+  }
 }

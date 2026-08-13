@@ -1,26 +1,25 @@
 {
   "hero": {
-    "title": "La Experiencia VIP",
-    "subtitle": "Canasta Privada | 45-60 Minutos | 🇬🇧 Estándares de Seguridad Británicos"
+    "subtitle": "Transporte y vuelo privados | Aproximadamente 40 minutos | Tour por aire y tierra"
   },
   "rating": {
-    "score": 5.0,
-    "reviewsCount": "184 evaluaciones"
+    "score": 4.8,
+    "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
     "title": "Tu cielo, tus reglas",
-    "paragraph": "Esto es el vuelo en globo en su máxima expresión. Tu canasta privada significa sin desconocidos, sin compromisos — solo tú y los tuyos flotando sobre el Valle de Teotihuacán al amanecer. Las canastas compartimentadas Cameron Balloons de Flying Pictures dan a cada huésped su propio rincón del cielo, pero en la experiencia VIP, todo el cielo es tuyo. Champán, silencio y pirámides a tus pies."
+    "paragraph": "La experiencia más completa y privada del catálogo: transporte exclusivo, vuelo solo para tu grupo, champagne francés con servicio de mesero, cuevas ceremoniales, brunch y recorrido de la zona arqueológica con historiador. Fotos y video del vuelo ya están incluidos."
   },
   "itinerary": {
     "title": "Qué harás",
     "steps": [
       {
-        "title": "5:00 AM - Llegada y Check-in",
-        "description": "Llegarás a la Recepción de Flying Pictures y te recibiremos para ayudarte con el check-in."
+        "title": "5:00 AM - Llegada y registro",
+        "description": "Llegarás a la recepción de Flying Pictures y te daremos la bienvenida para completar tu registro."
       },
       {
         "title": "Bienvenida y Café",
-        "description": "Después de completar tu check-in te recibiremos con nuestra estación de café con bebidas calientes y galletas tradicionales."
+        "description": "Después de tu registro te esperamos con nuestra estación de café, bebidas calientes y galletas tradicionales."
       },
       {
         "title": "El Espectáculo de Inflado",
@@ -39,8 +38,51 @@
   "pricing": {
     "dates": "Ver Fechas",
     "adults": "Adultos",
-    "kids": "Niños (4-12)",
-    "priceAdults": "4,299 MXN",
-    "priceKids": "3,499 MXN"
+    "kids": "Niños (4-12)"
+  },
+  "details": {
+    "included": [
+      "Transporte privado redondo entre CDMX y Teotihuacán con recogida coordinada",
+      "Vuelo privado de aproximadamente 40 minutos",
+      "Coffee break con galletas y bebidas tradicionales mexicanas",
+      "Brindis con champagne francés — jugo para niños",
+      "Servicio de mesero con canapés, guacamole, café, pan y frutas típicas",
+      "Tour privado guiado por cuevas ceremoniales de aproximadamente 30 minutos",
+      "Brunch tradicional en un restaurante local",
+      "Tour privado de aproximadamente dos horas y media por la zona arqueológica con historiador",
+      "Certificado de vuelo personalizado",
+      "Seguro de viajero",
+      "Fotos y video del vuelo"
+    ],
+    "notIncluded": [
+      "Mariachis al aterrizaje",
+      "Ramo de flores",
+      "Lonas personalizadas",
+      "Hospedaje",
+      "Cargo de $110 MXN por persona para extranjeros no residentes"
+    ],
+    "recommendedExtras": [
+      "Mariachis al aterrizaje — cuatro canciones",
+      "Ramo de flores"
+    ],
+    "notes": [
+      "La reservación requiere un mínimo de cuatro personas.",
+      "El adulto adicional tiene un precio de $3,999 MXN y el precio infantil es de $3,499 MXN.",
+      "Los extranjeros no residentes pagan $110 MXN adicionales por persona al llegar."
+    ],
+    "itinerary": {
+      "title": "Qué harás",
+      "steps": [
+        { "time": "Salida", "title": "Te recogemos en transporte privado", "description": "Un vehículo exclusivo lleva a tu grupo de CDMX a Teotihuacán." },
+        { "time": "Bienvenida", "title": "Disfrutas el coffee break", "description": "Te recibimos con café, galletas y bebidas tradicionales mexicanas." },
+        { "time": "Preparación", "title": "Abordas tu globo privado", "description": "Solo tu grupo comparte la canasta durante el vuelo." },
+        { "time": "En el aire", "title": "Vuelas aproximadamente 40 minutos", "description": "El equipo registra fotos y video mientras disfrutas las vistas del valle." },
+        { "time": "Al aterrizar", "title": "Te reciben con champagne y canapés", "description": "Un mesero sirve el brindis, guacamole, café, pan y frutas típicas." },
+        { "time": "Inframundo", "title": "Exploras cuevas ceremoniales", "description": "Realizas un tour privado guiado de aproximadamente 30 minutos." },
+        { "time": "Brunch", "title": "Pruebas un brunch tradicional", "description": "Disfrutas alimentos típicos en un restaurante local." },
+        { "time": "Historia", "title": "Recorres las pirámides con historiador", "description": "Un especialista acompaña a tu grupo durante aproximadamente dos horas y media." },
+        { "time": "Cierre", "title": "Recibes certificado, fotos y video", "description": "Terminas con tu certificado personalizado y el material de la experiencia." }
+      ]
+    }
   }
 }

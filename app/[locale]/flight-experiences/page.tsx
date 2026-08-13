@@ -3,8 +3,8 @@ import type { Metadata } from "next"
 
 import { FlightHero } from "./flight-hero"
 import { FlightCardsSection } from "./flight-card"
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.flyingpicturesmexico.mx"
+import { cloudinaryOgUrl } from "@/lib/cloudinary"
+import { SITE_NAME, SITE_URL } from "@/lib/site-config"
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = t("title")
   const description = t("description")
   const url = `${SITE_URL}/${locale}/flight-experiences`
+  const ogImage = cloudinaryOgUrl("flightHero_tqysvs")
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -36,12 +37,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       locale,
       url,
-      siteName: "Flying Pictures México",
+      siteName: SITE_NAME,
       title,
       description,
       images: [
         {
-          url: `${SITE_URL}/images/og/flight-experiences-${locale}.jpg`,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: title,
@@ -52,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: [`${SITE_URL}/images/og/flight-experiences-${locale}.jpg`],
+      images: [ogImage],
     },
   }
 }

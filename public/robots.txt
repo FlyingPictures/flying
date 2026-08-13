@@ -16,7 +16,7 @@ Allow: /favicon.ico
 Allow: /favicon.svg
 
 # Sitemap
-Sitemap: https://www.flyingpicturesmexico.com/sitemap.xml
+Sitemap: https://www.flyingpicturesmexico.mx/sitemap.xml
 
 # Crawl-delay (opcional, ajustar según necesidades)
 # Crawl-delay: 1

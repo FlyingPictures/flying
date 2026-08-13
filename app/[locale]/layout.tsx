@@ -12,12 +12,13 @@ import {
   getOrganizationSchema,
   getWebSiteSchema,
 } from "@/lib/structured-data";
-import { cloudinaryUrl } from "@/lib/cloudinary";
+import { cloudinaryOgUrl } from "@/lib/cloudinary";
+import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { Suspense } from "react";
 
 const SITE_CONFIG = {
-  name: "Flying Pictures México",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.flyingpicturesmexico.mx",
+  name: SITE_NAME,
+  url: SITE_URL,
   description: {
     es: "Experimenta Teotihuacán desde el cielo con vuelos en globo aerostático.",
     en: "Experience Teotihuacán from the sky with hot air balloon flights.",
@@ -27,7 +28,7 @@ const SITE_CONFIG = {
     en: ["hot air balloon", "Teotihuacán"],
   },
   twitter: "@flyingpicturesmx",
-  ogImage: cloudinaryUrl("logo_fsv096"),
+  ogImage: cloudinaryOgUrl("hero1_rszxmn"),
 };
 
 type Locale = (typeof routing.locales)[number];
@@ -95,6 +96,10 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
   const footerTranslations = {
     description: tFooter("description"),
+    companyTitle: tFooter("companyTitle"),
+    legalTitle: tFooter("legalTitle"),
+    rights: tFooter("rights"),
+    authority: tFooter("authority"),
     termsConditions: tFooter("termsConditions"),
     privacyPolicy: tFooter("privacyPolicy"),
     cancellations: tFooter("cancellations"),

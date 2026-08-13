@@ -1,26 +1,25 @@
 {
   "hero": {
-    "title": "El Vuelo de Propuesta",
-    "subtitle": "Canasta Privada | 45-60 Minutos | 🇬🇧 Estándares de Seguridad Británicos"
+    "subtitle": "Vuelo privado para dos | Aproximadamente 40 minutos | Propuesta coordinada"
   },
   "rating": {
-    "score": 5.0,
-    "reviewsCount": "74 evaluaciones"
+    "score": 4.8,
+    "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
     "title": "El Sí Más Inolvidable de tu Vida",
-    "paragraph": "No existe mejor escenario para una propuesta que las antiguas pirámides de Teotihuacán al amanecer, a 2,000 metros sobre el mundo. Flying Pictures coordina cada detalle en secreto — desde el momento del ascenso hasta el brindis espumoso después de que ella diga sí. Nuestro equipo sabe exactamente cuándo retroceder y dejar que la magia suceda. Solo tienes que hacer la pregunta."
+    "paragraph": "Una propuesta coordinada de principio a fin: vuelo privado para dos, lona sorpresa con la gran pregunta, ramo de 24 rosas, brindis y desayuno completo. Nuestro equipo prepara cada detalle con discreción para que ustedes vivan el momento."
   },
   "itinerary": {
     "title": "Qué harás",
     "steps": [
       {
-        "title": "5:00 AM - Llegada y Check-in",
-        "description": "Llegarás a la Recepción de Flying Pictures y te recibiremos para ayudarte con el check-in."
+        "title": "5:00 AM - Llegada y registro",
+        "description": "Llegarás a la recepción de Flying Pictures y te daremos la bienvenida para completar tu registro."
       },
       {
         "title": "Bienvenida y Café",
-        "description": "Después de completar tu check-in te recibiremos con nuestra estación de café con bebidas calientes y galletas tradicionales."
+        "description": "Después de tu registro te esperamos con nuestra estación de café, bebidas calientes y galletas tradicionales."
       },
       {
         "title": "El Espectáculo de Inflado",
@@ -38,9 +37,53 @@
   },
   "pricing": {
     "dates": "Ver Fechas",
-    "adults": "Adultos",
-    "kids": "Niños (4-12)",
-    "priceAdults": "3,999 MXN",
-    "priceKids": "0 MXN"
+    "adults": "2 adultos (vuelo privado)",
+    "kids": "Persona adicional"
+  },
+  "details": {
+    "included": [
+      "Vuelo privado de aproximadamente 40 minutos para dos adultos",
+      "Coffee break con galletas y degustación de bebidas tradicionales mexicanas",
+      "Brindis con vino espumoso u opción sin alcohol",
+      "Certificados de vuelo personalizados",
+      "Desayuno completo",
+      "Seguro de viajero",
+      "Despliegue sorpresa de lona con la frase ¿Te quieres casar conmigo?",
+      "Ramo de 24 rosas"
+    ],
+    "notIncluded": [
+      "Transporte entre CDMX y Teotihuacán",
+      "Champagne francés — el brindis incluido es con vino espumoso",
+      "Fotos y video del vuelo",
+      "Mariachis",
+      "Acceso, traslado o guía en la zona arqueológica",
+      "Servicios adicionales no especificados"
+    ],
+    "recommendedExtras": [
+      "Transporte redondo compartido o privado",
+      "Champagne",
+      "Fotos y video durante el vuelo",
+      "Mariachis al aterrizaje",
+      "Lona personalizada adicional",
+      "Acceso y traslado a la zona arqueológica",
+      "Guía bilingüe"
+    ],
+    "notes": [
+      "El precio base de $11,500 MXN corresponde a dos adultos en vuelo privado.",
+      "Cada persona adicional tiene un costo de $2,600 MXN.",
+      "Fotos y video se consideran un extra hasta recibir confirmación comercial distinta."
+    ],
+    "itinerary": {
+      "title": "Qué harás",
+      "steps": [
+        { "time": "Bienvenida", "title": "Llegan al Globopuerto", "description": "Los recibimos con coffee break mientras el equipo mantiene la sorpresa." },
+        { "time": "Preparación", "title": "Su globo, solo para ustedes", "description": "Abordan una canasta privada preparada para la ocasión." },
+        { "time": "Despegue", "title": "Comienza el vuelo privado", "description": "El piloto despega cuando las condiciones meteorológicas son adecuadas." },
+        { "time": "Momento especial", "title": "Aparece la gran pregunta", "description": "El equipo despliega la lona sorpresa con la frase ¿Te quieres casar conmigo?" },
+        { "time": "Al aterrizar", "title": "Reciben el ramo y brindan", "description": "Los esperamos con 24 rosas y un brindis con vino espumoso." },
+        { "time": "Celebración", "title": "Disfrutan el desayuno", "description": "Continúan la celebración con desayuno completo en un restaurante local." },
+        { "time": "Cierre", "title": "Reciben sus certificados", "description": "Se llevan certificados personalizados como recuerdo de la experiencia." }
+      ]
+    }
   }
 }

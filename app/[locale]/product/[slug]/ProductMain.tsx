@@ -1,12 +1,22 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { cloudinaryUrl } from "@/lib/cloudinary";
 import { ProductTranslation } from "@/types/product";
 import { IMAGES } from "@/lib/images";
 import { usePricing } from "@/components/layout/floating-bar";
+import { Button } from "@/components/ui/button";
+import { SITE_CONTACT } from "@/lib/site-config";
+import {
+  BOOKING_URLS,
+  PRODUCT_PRICING,
+  formatMxn,
+  getProductName,
+  type ProductSlug,
+} from "@/lib/commercial-config";
 
 const CORNERS = [
   "rounded-tl-(--radius)",
@@ -15,10 +25,8 @@ const CORNERS = [
   "rounded-br-(--radius)",
 ];
 
-const ITINERARY_IMAGES = IMAGES.product.gallery.itinerary;
-
 interface ProductMainProps {
-  slug: string;
+  slug: ProductSlug;
   data: ProductTranslation;
 }
 
@@ -27,17 +35,23 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
     ...(IMAGES.product.gallery[slug as keyof typeof IMAGES.product.gallery] ?? []),
   ];
   const [carouselIndex, setCarouselIndex] = useState<number | null>(null);
+  const locale = useLocale();
   const pricing = usePricing();
+  const setPricing = pricing?.setPricing;
+  const productPricing = PRODUCT_PRICING[slug];
+  const reservationUrl = BOOKING_URLS[slug] ?? SITE_CONTACT.whatsapp;
 
   useEffect(() => {
-    pricing?.setPricing({
+    setPricing?.({
       adults: data.pricing.adults,
       kids: data.pricing.kids,
-      priceAdults: data.pricing.priceAdults,
-      priceKids: data.pricing.priceKids,
+      priceAdults: productPricing ? formatMxn(productPricing.primary) : "",
+      priceKids: productPricing?.secondary
+        ? formatMxn(productPricing.secondary)
+        : "",
       dates: data.pricing.dates,
     });
-  }, [slug]);
+  }, [data.pricing, productPricing, setPricing]);
 
   const prev = useCallback(
     () => setCarouselIndex((i) => (i === null ? 0 : (i - 1 + images.length) % images.length)),
@@ -65,7 +79,7 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
   }, [carouselIndex, prev, next, close]);
 
   return (
-    <section className="w-full px-4 md:px-10 lg:px-20 py-10 mt-25 lg:mt-35 flex flex-col gap-10">
+    <section className="mt-25 flex w-full flex-col gap-10 px-4 pb-0 pt-10 md:px-10 lg:mt-35 lg:px-20">
 
       <div className="flex flex-col gap-6 lg:grid lg:grid-cols-12 lg:gap-10">
 
@@ -75,11 +89,12 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
               <button
                 key={i}
                 onClick={() => setCarouselIndex(i)}
+                aria-label={`${locale === "es" ? "Abrir foto" : "Open photo"} ${i + 1}`}
                 className={`relative aspect-square overflow-hidden ${CORNERS[i]} cursor-pointer`}
               >
                 <Image
                   src={cloudinaryUrl(img)}   // ← sin parámetros
-                  alt={`Photo ${i + 1}`}
+                  alt={`${locale === "es" ? "Foto" : "Photo"} ${i + 1}`}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
                   unoptimized={true}
@@ -90,58 +105,67 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
         </div>
 
         <div className="lg:col-span-5 flex flex-col gap-8 lg:gap-12 text-center lg:text-center lg:self-center py-6 lg:py-0">
-          <h3>{data.hero.title}</h3>
+          <h1 className="product-title">{getProductName(slug, locale)}</h1>
           <p className="text-sm text-muted-foreground">{data.hero.subtitle}</p>
+          <div className="mx-auto flex w-full max-w-md flex-col items-center gap-4 rounded-(--radius) border border-border bg-card/50 p-4 sm:flex-row sm:justify-between">
+            {productPricing && (
+              <div className="flex flex-col text-left text-sm lg:text-base">
+                <span>
+                  <strong>{data.pricing.adults}</strong>{" "}
+                  {formatMxn(productPricing.primary)}
+                </span>
+                {productPricing.secondary && (
+                  <span>
+                    <strong>{data.pricing.kids}</strong>{" "}
+                    {formatMxn(productPricing.secondary)}
+                  </span>
+                )}
+              </div>
+            )}
+            <Button variant="primary" size="sm" className="shrink-0" asChild>
+              <a href={reservationUrl} target="_blank" rel="noopener noreferrer">
+                {data.pricing.dates}
+              </a>
+            </Button>
+          </div>
           <div className="flex flex-col gap-2">
             <h5 className="font-bold text-lg">{data.description.title}</h5>
-            <p className="text-sm leading-relaxed">{data.description.paragraph}</p>
+            <p className="product-body">{data.description.paragraph}</p>
           </div>
           <div className="text-md lg:text-xl flex items-center gap-2 justify-center text-muted-foreground">
             <span>★ {data.rating.score}</span>
             <span>{data.rating.reviewsCount}</span>
           </div>
-          <div className="w-full h-px bg-border lg:hidden" />
         </div>
 
-      </div>
-
-      <div className="flex flex-col gap-16 lg:w-1/2">
-        <h3 className="text-left lg:text-center">{data.itinerary.title}</h3>
-
-        <div className="flex flex-col gap-12">
-          {data.itinerary.steps.map((step, i) => (
-            <div key={i} className="flex items-start gap-6">
-              <div className="shrink-0 w-15 h-15 lg:w-30 lg:h-30 rounded-2xl overflow-hidden relative">
-                <Image
-                  src={cloudinaryUrl(ITINERARY_IMAGES[i] ?? ITINERARY_IMAGES[0])} // ← sin parámetros
-                  alt={step.title}
-                  fill
-                  className="object-cover"
-                  unoptimized={true}   // ← añadido
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <h5 className="font-bold leading-snug text-[clamp(10px,2vw,18px)]">{step.title}</h5>
-                <span className="leading-relaxed text-[clamp(10px,2vw,18px)]">{step.description}</span>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
 
       {carouselIndex !== null && (
-        <div className="fixed inset-0 z-50 bg-background flex flex-col">
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={locale === "es" ? "Galería de fotos" : "Photo gallery"}
+          className="fixed inset-0 z-60 bg-background flex flex-col"
+        >
           <div className="flex items-center justify-between px-6 py-4">
             <span className="font-bold text-secondary/90 text-xl">
-              {carouselIndex + 1} de {images.length}
+              {carouselIndex + 1} {locale === "es" ? "de" : "of"} {images.length}
             </span>
-            <button onClick={close} className="text-secondary hover:text-secondary/80 transition-colors">
+            <button
+              onClick={close}
+              aria-label={locale === "es" ? "Cerrar galería" : "Close gallery"}
+              className="text-secondary hover:text-secondary/80 transition-colors"
+            >
               <X size={40} />
             </button>
           </div>
 
           <div className="flex-1 flex items-center justify-center relative px-4 lg:px-16">
-            <button onClick={prev} className="hidden lg:block absolute left-4 text-secondary/80 hover:text-secondary/90 transition-colors">
+            <button
+              onClick={prev}
+              aria-label={locale === "es" ? "Foto anterior" : "Previous photo"}
+              className="hidden lg:block absolute left-4 text-secondary/80 hover:text-secondary/90 transition-colors"
+            >
               <ChevronLeft size={40} />
             </button>
 
@@ -151,12 +175,15 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
               onTouchEnd={(e) => {
                 const startX = Number(e.currentTarget.dataset.touchX)
                 const diff = startX - e.changedTouches[0].clientX
-                if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
+                if (Math.abs(diff) > 50) {
+                  if (diff > 0) next()
+                  else prev()
+                }
               }}
             >
               <Image
                 src={cloudinaryUrl(images[carouselIndex])} // ← sin parámetros
-                alt={`Photo ${carouselIndex + 1}`}
+                alt={`${locale === "es" ? "Foto" : "Photo"} ${carouselIndex + 1}`}
                 fill
                 className="object-cover rounded-(--radius)"
                 priority
@@ -164,7 +191,11 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
               />
             </div>
 
-            <button onClick={next} className="hidden lg:block absolute right-4 text-secondary/80 hover:text-secondary/90 transition-colors">
+            <button
+              onClick={next}
+              aria-label={locale === "es" ? "Foto siguiente" : "Next photo"}
+              className="hidden lg:block absolute right-4 text-secondary/80 hover:text-secondary/90 transition-colors"
+            >
               <ChevronRight size={40} />
             </button>
           </div>

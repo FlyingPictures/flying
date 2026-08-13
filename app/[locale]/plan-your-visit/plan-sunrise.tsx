@@ -22,7 +22,7 @@ export async function PlanSunrise() {
         <div className="relative rounded-[var(--radius)] overflow-hidden mb-6 sm:mb-8 w-full sm:w-[clamp(345px,90vw,1065px)] aspect-[1065/357]">
           <CloudinaryImage 
             publicId={IMAGES.plan.sunrise.banner} 
-            alt="Imagen del amanecer" 
+            alt={t("title")}
             fill
             className="object-cover object-top"
           />

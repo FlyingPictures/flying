@@ -3,6 +3,7 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menú",
     "switchLanguage": "Change Language",
+    "chooseLanguage": "Choose language",
     "shared": "Shared Flight",
     "private": "Private Flight",
     "proposals": "Proposals",
@@ -14,21 +15,24 @@
     "language": "Language",
     "bookFlight": "Book Flight",
     "talkExpert": "Talk to an expert",
-    "classic": "Classic Journey",
-    "journey": "The Journey",
-    "vip": "VIP Experience",
-    "proposal": "Proposal Flight",
-    "anniversary": "Anniversary Flight",
-    "birthday": "Birthday Flight",
-    "corporate": "Corporate Experience",
-    "open": "Open Flight",
-    "transport": "Transport Package"
+    "corporateService": "Group & Corporate Flights"
   },
   "banner": {
     "company": "AN AVIATION COMPANY - CALL US"
   },
+  "concierge": {
+    "online": "Online",
+    "offline": "Offline",
+  "hours": "6:00 AM - 8:00 PM",
+  "location": "Mexico City",
+    "cta": "Chat with Concierge"
+  },
   "footer": {
     "description": "An award-winning Aviation Company. The premier provider of hot air balloon flights in Teotihuacán. Proudly operating Cameron Balloons UK since 1992.",
+    "companyTitle": "Company",
+    "legalTitle": "Legal",
+    "rights": "All rights reserved",
+    "authority": "MX Civil Aviation Authority Reg: 88291",
     "termsConditions": "Terms & Conditions",
     "privacyPolicy": "Privacy Policy",
     "cancellations": "Cancellation Policy"

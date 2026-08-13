@@ -1,22 +1,21 @@
 {
   "hero": {
-    "title": "The Transport Package",
-    "subtitle": "Round-Trip from CDMX | Shared or Private | 🇬🇧 British Safety Standards"
+    "subtitle": "Shared round-trip transport from Mexico City | Approximately 40-minute flight | Pyramids"
   },
   "rating": {
-    "score": 4.7,
-    "reviewsCount": "201 reviews"
+    "score": 4.8,
+    "reviewsCount": "225 Tripadvisor reviews"
   },
   "description": {
     "title": "Stress-Free from Door to Sky",
-    "paragraph": "Forget the 5 AM drive. Our transport package picks you up directly from Mexico City and delivers you to the launch field — relaxed, on time, and ready to fly. Choose shared or private transfer and let us handle the logistics while you watch the sun rise from the window. Your adventure starts the moment you step into the van."
+    "paragraph": "An all-in-one experience with shared round-trip transport from Mexico City, a balloon flight, breakfast buffet, and up to two hours of independent access to the archaeological zone. We coordinate the logistics so you can focus on enjoying the day."
   },
   "itinerary": {
     "title": "What you'll do",
     "steps": [
       {
         "title": "5:00 AM - Arrive & Check-in",
-        "description": "You'll arrive at Flying Pictures Reception and we will receive you to help you check-in and loremipsum."
+        "description": "You’ll arrive at Flying Pictures Reception, where our team will welcome you and help you complete check-in."
       },
       {
         "title": "Welcome & Coffee Break",
@@ -39,8 +38,54 @@
    "pricing": {
     "dates": "See Dates",
     "adults": "Adults",
-    "kids": "kids (4-12)",
-    "priceAdults": "3,099 MXN",
-    "priceKids": "2,499 MXN"
+    "kids": "Kids (4-12)"
+  },
+  "details": {
+    "included": [
+      "Shared round-trip transport between Mexico City and Teotihuacán",
+      "Shared flight of approximately 40 minutes",
+      "Coffee break with cookies and traditional Mexican drinks",
+      "Sparkling-wine toast or a non-alcoholic option",
+      "Personalised flight certificate",
+      "Breakfast buffet",
+      "Independent admission to the archaeological zone for up to two hours",
+      "Traveller insurance"
+    ],
+    "notIncluded": [
+      "Private flight and transport",
+      "Guide inside the archaeological zone",
+      "Flight photos and video",
+      "Bilingual guide",
+      "Bouquet, personalised banner, or mariachis",
+      "Craft workshop or tasting",
+      "$110 MXN per-person fee for non-resident foreign visitors"
+    ],
+    "recommendedExtras": [
+      "Upgrade flight and transport to private for $4,999 MXN",
+      "Bilingual guide",
+      "Photos and video during the flight",
+      "Personalised banner",
+      "Bouquet of flowers",
+      "Mariachis upon landing — four songs"
+    ],
+    "notes": [
+      "Archaeological-zone access is independent and does not include a guide.",
+      "Non-resident foreign visitors pay an additional $110 MXN per person upon arrival.",
+      "The Mexico City pickup point and time are confirmed with the booking."
+    ],
+    "itinerary": {
+      "title": "What you'll do",
+      "steps": [
+        { "time": "Departure", "title": "Meet us in Mexico City", "description": "We collect you at the confirmed meeting point for the trip to Teotihuacán." },
+        { "time": "Transfer", "title": "Travel to the Globoport", "description": "Enjoy the journey while our team handles the logistics." },
+        { "time": "Welcome", "title": "Have a coffee break", "description": "Coffee, cookies, and traditional Mexican drinks await you upon arrival." },
+        { "time": "Preparation", "title": "Watch the balloons inflate", "description": "See the aircraft preparation up close before take-off." },
+        { "time": "Take-off", "title": "Begin the ascent", "description": "The pilot takes off when weather and operating conditions are suitable." },
+        { "time": "In the air", "title": "Fly for approximately 40 minutes", "description": "Take in views of the Teotihuacán Valley from the air." },
+        { "time": "After landing", "title": "Toast and enjoy the breakfast buffet", "description": "Celebrate the flight, receive your certificate, and have breakfast." },
+        { "time": "Independent visit", "title": "Explore the archaeological zone", "description": "Use up to two hours to explore independently with admission included." },
+        { "time": "Return", "title": "Travel back to Mexico City", "description": "Return to the agreed point after the visit." }
+      ]
+    }
   }
 }

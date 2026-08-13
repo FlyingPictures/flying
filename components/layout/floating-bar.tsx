@@ -1,52 +1,22 @@
 "use client"
 
 import { createContext, useContext, useState } from "react"
-import { usePathname } from "@/i18n/routing"
+import { Link, usePathname } from "@/i18n/routing"
 import { useScrollDirection } from "@/hooks/use-scroll-direction"
 import { useTranslations } from "next-intl"
 import { WhatsappLogoIcon } from "@phosphor-icons/react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { SITE_CONTACT } from "@/lib/site-config"
+import {
+  BOOKING_URLS,
+  isBusinessOpen,
+  isProductSlug,
+} from "@/lib/commercial-config"
 
 /* ===================================== */
 /* CONSTANTS */
 /* ===================================== */
-
-const CONTACT = {
-  PHONE: "+525558025-1057",
-  DISPLAY: "(+52) 55 8025-1057",
-  WHATSAPP: "https://wa.me/525558025-1057"
-} as const
-
-const BUSINESS_HOURS = {
-  START: 8,
-  END: 20,
-  TIMEZONE: "America/Mexico_City"
-} as const
-
-const getOnlineStatus = () => {
-  const now = new Date().toLocaleString("en-US", {
-    timeZone: BUSINESS_HOURS.TIMEZONE,
-    hour: "2-digit",
-    hour12: false
-  })
-  const hour = parseInt(now.split(":")[0])
-  return hour >= BUSINESS_HOURS.START && hour < BUSINESS_HOURS.END
-    ? "Online"
-    : "Offline"
-}
-
-const BOOKING_URLS: Record<string, string> = {
-  classic: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/Dz8p",
-  journey: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/E7Ro",
-  transport: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/lwxwj",
-  open: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/Exzbg",
-  proposal: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/YxVm",
-  anniversary: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/Yx28",
-  birthday: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/B8xN",
-  vip: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/Exzbg",
-  corporate: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/lwxwj",
-}
 
 /* ===================================== */
 /* PRICING CONTEXT */
@@ -114,8 +84,14 @@ const FloatingWrapper = ({
 /* REUSABLE CARD CONTAINER */
 /* ===================================== */
 
-const FloatingCard = ({ children }: { children: React.ReactNode }) => (
-  <div className="w-full max-w-104 bg-background rounded-(--radius) p-3 flex items-center gap-3 shadow-xl">
+const FloatingCard = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode
+  className?: string
+}) => (
+  <div className={cn("w-full max-w-104 bg-background rounded-(--radius) p-3 flex items-center gap-3 shadow-xl", className)}>
     {children}
   </div>
 )
@@ -133,23 +109,18 @@ const FloatingBar1 = ({ show }: { show: boolean }) => {
       className="bottom-6 inset-x-0 flex justify-center px-4 lg:hidden"
     >
       <FloatingCard>
-        <Button variant="primary" size="floating" className="flex-1">
-          {t("bookFlight")}
+        <Button asChild variant="primary" size="floating" className="flex-1">
+          <Link href="/flight-experiences">{t("bookFlight")}</Link>
         </Button>
 
-        <a
-          href={CONTACT.WHATSAPP}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1"
-        >
-          <Button variant="secondary" size="floating" className="w-full">
+        <Button asChild variant="secondary" size="floating" className="flex-1">
+          <a href={SITE_CONTACT.whatsapp} target="_blank" rel="noopener noreferrer">
             <span className="flex items-center gap-2">
               {t("talkExpert")}
               <WhatsappLogoIcon size={20} />
             </span>
-          </Button>
-        </a>
+          </a>
+        </Button>
       </FloatingCard>
     </FloatingWrapper>
   )
@@ -164,33 +135,39 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
   const pathname = usePathname()
 
   const slug = pathname.split("/").pop() ?? ""
-  const bookingUrl = BOOKING_URLS[slug] ?? "#"
+  const isCorporate = slug === "corporate"
+  const bookingUrl = isProductSlug(slug) ? BOOKING_URLS[slug] : undefined
+  const reservationUrl = bookingUrl ?? SITE_CONTACT.whatsapp
+  const hasPublishedPrice = Boolean(pricing?.priceAdults)
 
   const Content = (
     <>
-      <div className="flex-1 flex flex-col text-sm lg:text-lg min-w-0">
-        <div className="whitespace-nowrap">
-          <span className="font-bold">{pricing?.adults}</span> {pricing?.priceAdults}
+      {hasPublishedPrice && (
+        <div className="grid min-w-0 flex-1 grid-cols-[max-content_max-content] items-baseline gap-x-2 gap-y-0.5 text-[11px] leading-tight min-[360px]:text-xs md:flex-none md:text-base">
+          <div className="contents whitespace-nowrap">
+            <span className="font-bold">{pricing?.adults}</span>
+            <span>{pricing?.priceAdults}</span>
+          </div>
+          {pricing?.priceKids && (
+            <div className="contents whitespace-nowrap">
+              <span className="font-bold">{pricing.kids}</span>
+              <span>{pricing.priceKids}</span>
+            </div>
+          )}
         </div>
-        <div className="whitespace-nowrap">
-          <span className="font-bold">{pricing?.kids}</span> {pricing?.priceKids}
-        </div>
-      </div>
+      )}
 
-      <Button
-        variant="primary"
-        size="xs"
-        className="whitespace-nowrap shrink-0"
-        onClick={() => window.open(bookingUrl, "_blank")}
-      >
-        {pricing?.dates}
+      <Button variant="primary" size="xs" className="shrink-0 px-3 text-xs min-[360px]:px-4 md:px-6 md:text-sm" asChild>
+        <a href={reservationUrl} target="_blank" rel="noopener noreferrer">
+          {pricing?.dates}
+        </a>
       </Button>
 
-      <a href={CONTACT.WHATSAPP} target="_blank" rel="noopener noreferrer">
-        <Button variant="ghost" size="floating" className="rounded-full">
-          <WhatsappLogoIcon size={35} weight="bold" />
-        </Button>
-      </a>
+      <Button asChild variant="ghost" size="icon" className="shrink-0 rounded-full">
+        <a href={SITE_CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <WhatsappLogoIcon size={28} weight="bold" />
+        </a>
+      </Button>
     </>
   )
 
@@ -200,14 +177,24 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
         show={show}
         className="bottom-6 inset-x-0 flex justify-center px-2 md:hidden"
       >
-        <FloatingCard>{Content}</FloatingCard>
+        <FloatingCard
+          className={cn(
+            "max-w-[calc(100vw-1rem)] gap-2",
+            isCorporate && "max-w-80",
+          )}
+        >
+          {Content}
+        </FloatingCard>
       </FloatingWrapper>
 
       <FloatingWrapper
         show={show}
-        className="bottom-40 right-20 hidden md:flex w-104"
+        className={cn(
+          "bottom-40 right-20 hidden md:flex",
+          isCorporate ? "w-80" : "w-120",
+        )}
       >
-        <FloatingCard>{Content}</FloatingCard>
+        <FloatingCard className="max-w-none gap-4">{Content}</FloatingCard>
       </FloatingWrapper>
     </>
   )
@@ -218,12 +205,12 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
 /* ===================================== */
 
 const FloatingBar3 = ({ show }: { show: boolean }) => {
-  const status = getOnlineStatus()
-  const isOnline = status === "Online"
+  const t = useTranslations("concierge")
+  const isOnline = isBusinessOpen()
 
   const Content = (
     <>
-      <div className="flex-1">
+      <div className="flex min-w-0 flex-1 flex-col gap-0.5 pr-2">
         <div className="flex items-center gap-1">
           <div
             className={cn(
@@ -231,28 +218,25 @@ const FloatingBar3 = ({ show }: { show: boolean }) => {
               isOnline ? "bg-green-500" : "bg-red-500"
             )}
           />
-          <span className="font-bold lg:text-lg text-sm">
-            {status}
+          <span className="text-sm font-bold md:text-base">
+            {t(isOnline ? "online" : "offline")}
           </span>
         </div>
-        <span className="lg:text-md text-xs ">
-          8:00 AM - 08:00 PM CST
-        </span>
+        <span className="whitespace-nowrap text-xs leading-4 md:text-sm">{t("hours")}</span>
+        <span className="text-xs leading-4 md:text-sm">{t("location")}</span>
       </div>
 
-      <Button variant="primary" size="floating">
-        Chat with Concierge
-      </Button>
-
-      <a
-        href={CONTACT.WHATSAPP}
-        target="_blank"
-        rel="noopener noreferrer"
+      <Button
+        asChild
+        variant="primary"
+        size="floating"
+        className="min-w-40 px-4 md:flex-none md:min-w-52 md:px-6 md:text-sm"
       >
-        <Button variant="ghost" size="floating" className="rounded-full">
-          <WhatsappLogoIcon size={35} weight="regular" />
-        </Button>
-      </a>
+        <a href={SITE_CONTACT.whatsapp} target="_blank" rel="noopener noreferrer">
+          {t("cta")}
+          <WhatsappLogoIcon size={22} weight="bold" />
+        </a>
+      </Button>
     </>
   )
 
@@ -267,9 +251,9 @@ const FloatingBar3 = ({ show }: { show: boolean }) => {
 
       <FloatingWrapper
         show={show}
-        className="bottom-40 right-20 hidden md:flex w-104"
+        className="bottom-40 right-20 hidden w-128 md:flex"
       >
-        <FloatingCard>{Content}</FloatingCard>
+        <FloatingCard className="max-w-none gap-4 px-4 py-3.5">{Content}</FloatingCard>
       </FloatingWrapper>
     </>
   )
@@ -287,9 +271,11 @@ export const FloatingBar = () => {
 
   const isProduct = pathname.includes("/product")
   const isContact = pathname.includes("/contact")
+  const isFlightExperiences = pathname.includes("/flight-experiences")
 
   if (isProduct) return <FloatingBar2 show={showFloatingBar} />
   if (isContact) return <FloatingBar3 show={showFloatingBar} />
+  if (isFlightExperiences) return null
 
   return <FloatingBar1 show={showFloatingBar} />
 }

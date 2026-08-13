@@ -7,10 +7,8 @@ import { PlanSunrise } from "@/app/[locale]/plan-your-visit/plan-sunrise";
 import { PlanGettingHere } from "@/app/[locale]/plan-your-visit/plan-getting-here";
 import { PlanWeatherPolicy } from "@/app/[locale]/plan-your-visit/plan-weather-policy";
 import { PlanFaq } from "@/app/[locale]/plan-your-visit/plan-faq";
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://www.flyingpicturesmexico.com";
+import { cloudinaryOgUrl } from "@/lib/cloudinary";
+import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 
 type Locale = (typeof routing.locales)[number];
 
@@ -33,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? "Todo lo que necesitas saber antes de tu vuelo en globo aerostático en Teotihuacán."
       : "Everything you need to know before your hot air balloon flight in Teotihuacán.";
   const url = `${SITE_URL}/${locale}/plan-your-visit`;
+  const ogImage = cloudinaryOgUrl("Rectangle_33_3_vuzq4o");
 
   return {
     title,
@@ -51,14 +50,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       title,
       description,
-      siteName: "Flying Pictures México",
-      images: [{ url: `${SITE_URL}/images/og/plan-your-visit-${locale}.jpg`, width: 1200, height: 630, alt: title }],
+      siteName: SITE_NAME,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [`${SITE_URL}/images/og/plan-your-visit-${locale}.jpg`],
+      images: [ogImage],
     },
   };
 }
