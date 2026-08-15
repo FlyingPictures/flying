@@ -71,7 +71,15 @@ function persistPreferredLocale(nextLocale: keyof typeof LANGUAGE_NAMES) {
   window.localStorage.setItem("preferred-locale", nextLocale)
 }
 
-const LanguageSwitcher = ({ className = "", onSelect, mobileInline = false }: { className?: string; onSelect?: () => void; mobileInline?: boolean }) => {
+const LanguageSwitcher = ({
+  className = "",
+  onSelect,
+  mobileCompact = false,
+}: {
+  className?: string
+  onSelect?: () => void
+  mobileCompact?: boolean
+}) => {
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
@@ -89,27 +97,27 @@ const LanguageSwitcher = ({ className = "", onSelect, mobileInline = false }: { 
     onSelect?.()
   }
 
-  if (mobileInline) {
+  if (mobileCompact) {
     return (
-      <div className={cn("flex min-h-12 items-center justify-between gap-4", className)}>
-        <span className="flex items-center gap-3 font-inter font-bold text-secondary">
-          <GlobeSimpleIcon size={22} weight="bold" aria-hidden="true" />
-          {t("language")}
-        </span>
-        <div role="group" aria-label={t("switchLanguage")} className="flex rounded-full bg-secondary/6 p-1">
-          {(Object.entries(LANGUAGE_NAMES) as Array<[keyof typeof LANGUAGE_NAMES, string]>).map(([code]) => (
-            <button
-              key={code}
-              type="button"
-              aria-pressed={locale === code}
-              onClick={() => changeLanguage(code)}
-              className="min-h-11 min-w-12 rounded-full px-3 font-inter text-sm font-bold uppercase text-secondary outline-none transition-colors hover:bg-background focus-visible:ring-2 focus-visible:ring-primary data-[active=true]:bg-secondary data-[active=true]:text-background"
-              data-active={locale === code}
-            >
-              {code}
-            </button>
-          ))}
-        </div>
+      <div
+        role="group"
+        aria-label={t("switchLanguage")}
+        className={cn("flex h-12 items-center rounded-full border border-secondary/10 bg-secondary/6 p-0.5 pl-2.5", className)}
+      >
+        <GlobeSimpleIcon className="mr-1 shrink-0 text-secondary" size={18} weight="bold" aria-hidden="true" />
+        {(Object.entries(LANGUAGE_NAMES) as Array<[keyof typeof LANGUAGE_NAMES, string]>).map(([code]) => (
+          <button
+            key={code}
+            type="button"
+            aria-pressed={locale === code}
+            aria-label={LANGUAGE_NAMES[code]}
+            onClick={() => changeLanguage(code)}
+            className="grid h-11 min-w-11 place-items-center rounded-full px-2 font-inter text-xs font-bold uppercase text-secondary outline-none transition-colors hover:bg-background focus-visible:ring-2 focus-visible:ring-primary data-[active=true]:bg-secondary data-[active=true]:text-background"
+            data-active={locale === code}
+          >
+            {code}
+          </button>
+        ))}
       </div>
     )
   }
@@ -315,9 +323,12 @@ export default function Navbar() {
                         className="h-full w-full object-contain"
                       />
                     </Link>
-                    <SheetPrimitive.Close aria-label={t("closeMenu")} className="flex size-12 items-center justify-center rounded-full border border-secondary/15 text-secondary outline-none transition-colors hover:bg-secondary hover:text-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
-                      <XIcon size={24} weight="bold" aria-hidden="true" />
-                    </SheetPrimitive.Close>
+                    <div className="flex items-center gap-2">
+                      <LanguageSwitcher mobileCompact onSelect={() => setIsSheetOpen(false)} />
+                      <SheetPrimitive.Close aria-label={t("closeMenu")} className="flex size-12 items-center justify-center rounded-full border border-secondary/15 text-secondary outline-none transition-colors hover:bg-secondary hover:text-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
+                        <XIcon size={24} weight="bold" aria-hidden="true" />
+                      </SheetPrimitive.Close>
+                    </div>
                   </div>
 
                   <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-6 py-6">
@@ -365,7 +376,6 @@ export default function Navbar() {
                         <HeadsetIcon size={22} weight="bold" aria-hidden="true" />
                         {t("contactSupport")}
                       </Link>
-                      <LanguageSwitcher mobileInline />
                     </div>
                   </div>
 

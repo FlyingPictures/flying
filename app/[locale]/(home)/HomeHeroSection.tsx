@@ -69,7 +69,7 @@ export async function HomeHeroSection() {
                 className="object-contain"
               />
             </div>
-            <span className={`powered hero ${TEXT_WRAP}`}>{t("poweredBy")}</span>
+            <span className={`powered hero text-left ${TEXT_WRAP}`}>{t("poweredBy")}</span>
           </div>
         </div>
       </div>
