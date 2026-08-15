@@ -3,6 +3,7 @@ import { CloudinaryImage } from "@/components/CloudinaryImage"
 import { IMAGES } from "@/lib/images"
 import { getLocale, getTranslations } from "next-intl/server"
 import { PACKAGE_SLUGS, getProductName } from "@/lib/commercial-config"
+import { SITE_CONTACT } from "@/lib/site-config"
 
 interface FooterProps {
   translations: {
@@ -24,8 +25,9 @@ const LINK_CLASSES =
   "font-inter font-normal text-base lg:text-lg leading-7 text-background/70 hover:text-background transition-colors break-words"
 
 export async function Footer({ translations }: FooterProps) {
-  const [t, locale] = await Promise.all([
+  const [t, contactT, locale] = await Promise.all([
     getTranslations("nav"),
+    getTranslations("contact.info"),
     getLocale(),
   ])
 
@@ -106,6 +108,35 @@ export async function Footer({ translations }: FooterProps) {
             </Link>
           </nav>
         </div>
+        </div>
+
+        <div className="mt-10 grid gap-6 border-t border-background/25 pt-8 md:grid-cols-2">
+          <div>
+            <p className="mb-2 text-sm font-bold uppercase tracking-wide text-background/60">
+              {contactT("salesChannel")}
+            </p>
+            <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:gap-x-5">
+              <a className={LINK_CLASSES} href={`tel:${SITE_CONTACT.phone}`}>
+                {SITE_CONTACT.display}
+              </a>
+              <a className={LINK_CLASSES} href={`mailto:${SITE_CONTACT.email}`}>
+                {SITE_CONTACT.email}
+              </a>
+            </div>
+          </div>
+          <div>
+            <p className="mb-2 text-sm font-bold uppercase tracking-wide text-background/60">
+              {contactT("supportChannel")}
+            </p>
+            <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:gap-x-5">
+              <a className={LINK_CLASSES} href={SITE_CONTACT.whatsapp} target="_blank" rel="noopener noreferrer">
+                {SITE_CONTACT.whatsappDisplay}
+              </a>
+              <a className={LINK_CLASSES} href={`mailto:${SITE_CONTACT.whatsappEmail}`}>
+                {SITE_CONTACT.whatsappEmail}
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="w-full h-px bg-background/50 mt-10 mb-10" />

@@ -29,10 +29,8 @@
       "corporateMessageTitle": "Corporate inquiry",
       "invoiceYes": "Yes",
       "availabilityText": "Availability, special dietary requests, proposal coordination, and weather checks.",
-      "email": "fly@flyingpictures.mx",
-      "emailLabel": "Email: ",
-      "phone": "Phone: ",
-      "phoneNumber": "(+52) 55 8025-1057"
+      "salesChannel": "Sales & bookings",
+      "supportChannel": "WhatsApp support"
     },
 
     "locationFaq": {

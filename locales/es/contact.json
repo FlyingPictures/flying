@@ -29,10 +29,8 @@
       "corporateMessageTitle": "Solicitud corporativa",
       "invoiceYes": "Sí",
       "availabilityText": "Disponibilidad, solicitudes dietéticas especiales, coordinación de propuestas y consultas meteorológicas.",
-      "email": "fly@flyingpictures.mx",
-      "emailLabel": "Correo: ",
-      "phone": "Teléfono: ",
-      "phoneNumber": "(+52) 55 8025-1057"
+      "salesChannel": "Ventas y reservaciones",
+      "supportChannel": "Atención por WhatsApp"
     },
 
     "locationFaq": {

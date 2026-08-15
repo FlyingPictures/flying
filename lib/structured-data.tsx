@@ -39,12 +39,23 @@ export function getOrganizationSchema(locale: Locale = 'en') {
       addressRegion: 'Estado de México',
       addressLocality: 'Teotihuacán',
     },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: SITE_CONTACT.phone,
-      contactType: 'Customer Service',
-      availableLanguage: ['Spanish', 'English'],
-    },
+    email: SITE_CONTACT.email,
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: SITE_CONTACT.phone,
+        email: SITE_CONTACT.email,
+        contactType: 'Sales',
+        availableLanguage: ['Spanish', 'English'],
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: SITE_CONTACT.whatsappPhone,
+        email: SITE_CONTACT.whatsappEmail,
+        contactType: 'Customer Service',
+        availableLanguage: ['Spanish', 'English'],
+      },
+    ],
     sameAs: [...SITE_SOCIALS],
   };
 }

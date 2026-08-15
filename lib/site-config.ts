@@ -10,8 +10,11 @@ export const SITE_CONTACT = {
   phone: "+525580251057",
   phoneDigits: "525580251057",
   display: "(+52) 55 8025-1057",
+  email: "ventas@flyingpictures.mx",
+  whatsappPhone: "+525510484758",
   whatsapp: "https://wa.me/525510484758",
   whatsappDisplay: "(+52) 55 1048-4758",
+  whatsappEmail: "volamoscontigo@flyingpictures.mx",
 } as const;
 
 export const SITE_LOCATION = {

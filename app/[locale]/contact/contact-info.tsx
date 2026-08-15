@@ -61,23 +61,37 @@ export function ContactInfo() {
               <h2>{t("sectionTitle")}</h2>
               <h4 className="lg:order-first">{t("forTravelers")}</h4>
             </div>
-            <div className="w-[clamp(345px,48vw,591px)] h-[clamp(327px,48vw,548px)] bg-background rounded-(--radius) overflow-hidden shadow-lg flex flex-col">
+            <div className="w-[clamp(345px,48vw,591px)] min-h-[420px] lg:min-h-[580px] bg-background rounded-(--radius) overflow-hidden shadow-lg flex flex-col">
               <div className="relative w-full h-[clamp(160px,26vw,325px)]">
                 <CloudinaryImage publicId={IMAGES.contact.hero.booking} alt={t("sectionTitle")} fill className="object-cover" />
               </div>
-              <div className="text-md lg:text-xl h-[clamp(167px,48vw,223px)] px-5 lg:px-8 py-5 flex flex-col justify-between text-left">
+              <div className="text-md lg:text-lg flex-1 px-5 lg:px-8 py-5 flex flex-col justify-between gap-4 text-left">
                 <span className="font-bold">{t("availabilityText")}</span>
-                <div className="flex items-center gap-3">
-                  <EnvelopeSimpleIcon className="w-6 h-6 text-secondary" weight="bold" />
-                  <span>
-                    <span className="font-bold">{t("emailLabel")}</span> {t("email")}
-                  </span>
+                <div>
+                  <p className="mb-1 text-sm font-bold uppercase tracking-wide text-secondary/70">
+                    {t("salesChannel")}
+                  </p>
+                  <a className="flex items-center gap-3 hover:text-primary transition-colors" href={`mailto:${SITE_CONTACT.email}`}>
+                    <EnvelopeSimpleIcon className="w-6 h-6 shrink-0 text-secondary" weight="bold" />
+                    <span>{SITE_CONTACT.email}</span>
+                  </a>
+                  <a className="mt-1 flex items-center gap-3 hover:text-primary transition-colors" href={`tel:${SITE_CONTACT.phone}`}>
+                    <PhoneIcon className="w-6 h-6 shrink-0 text-secondary" weight="bold" />
+                    <span>{SITE_CONTACT.display}</span>
+                  </a>
                 </div>
-                <div className="flex items-center gap-3">
-                  <PhoneIcon className="w-6 h-6 text-secondary" weight="bold" />
-                  <span>
-                    <span className="font-bold">{t("phone")}</span> {SITE_CONTACT.display}
-                  </span>
+                <div>
+                  <p className="mb-1 text-sm font-bold uppercase tracking-wide text-secondary/70">
+                    {t("supportChannel")}
+                  </p>
+                  <a className="flex items-center gap-3 hover:text-primary transition-colors" href={`mailto:${SITE_CONTACT.whatsappEmail}`}>
+                    <EnvelopeSimpleIcon className="w-6 h-6 shrink-0 text-secondary" weight="bold" />
+                    <span>{SITE_CONTACT.whatsappEmail}</span>
+                  </a>
+                  <a className="mt-1 flex items-center gap-3 hover:text-primary transition-colors" href={SITE_CONTACT.whatsapp} target="_blank" rel="noopener noreferrer">
+                    <PhoneIcon className="w-6 h-6 shrink-0 text-secondary" weight="bold" />
+                    <span>{SITE_CONTACT.whatsappDisplay}</span>
+                  </a>
                 </div>
               </div>
             </div>
