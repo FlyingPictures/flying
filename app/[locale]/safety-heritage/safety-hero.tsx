@@ -3,20 +3,18 @@ import { getTranslations } from "next-intl/server";
 import { IMAGES } from "@/lib/images";
 
 const TEXT_WRAP = "whitespace-pre-line";
-const NAV_OFFSET = "calc(var(--navbar-height, 4.5rem) + 2rem)";
-
 export async function SafetyHero() {
   const t = await getTranslations("safety.hero");
 
   return (
-    <section className="relative h-[95vh] lg:h-screen overflow-hidden pt-18">
+    <section className="relative min-h-[95svh] overflow-hidden lg:h-screen">
       <div className="absolute inset-0">
         <CloudinaryImage publicId={IMAGES.safety.hero.background} alt="" fill priority sizes="100vw" className="h-full w-auto object-contain object-top" />
         <div className="absolute inset-0 bg-black/10" />
       </div>
 
-      <div className="absolute inset-0 flex items-end pb-40">
-        <div className="w-full flex flex-col gap-4 sm:gap-8 px-6" style={{ paddingTop: NAV_OFFSET, maxHeight: `calc(100vh - ${NAV_OFFSET})` }}>
+      <div className="relative z-10 flex min-h-[95svh] items-end pb-[clamp(2.5rem,12vh,10rem)] pt-36 lg:absolute lg:inset-0 lg:min-h-0 lg:pt-0">
+        <div className="flex w-full flex-col gap-4 px-6 sm:gap-8">
           <h1 className={`title hero ${TEXT_WRAP}`}>{t("title")}</h1>
           <h3 className={`decorative hero ${TEXT_WRAP}`}>{t("subtitle")}</h3>
           <p className={`paragraph hero ${TEXT_WRAP}`}>{t("description")}</p>

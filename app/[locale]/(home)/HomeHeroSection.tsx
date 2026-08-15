@@ -11,7 +11,7 @@ export async function HomeHeroSection() {
   const t = await getTranslations("herosection");
 
   return (
-    <section className="relative min-h-150 h-[95vh] lg:h-screen overflow-hidden">
+    <section className="relative min-h-[95svh] overflow-hidden lg:h-screen">
       <picture>
         <source
           media="(max-width: 640px)"
@@ -34,7 +34,7 @@ export async function HomeHeroSection() {
       </picture>
       <div className="absolute inset-0 bg-black/10" />
 
-      <div className="absolute inset-0 flex items-end justify-center px-[clamp(0.75rem,5vw,1.5rem)] pb-[clamp(2.5rem,8vh,5rem)] pt-30 text-center lg:pt-40">
+      <div className="relative z-10 flex min-h-[95svh] items-end justify-center px-[clamp(0.75rem,5vw,1.5rem)] pb-[clamp(2.5rem,8vh,5rem)] pt-36 text-center lg:absolute lg:inset-0 lg:min-h-0 lg:pt-40">
         <div className="w-full max-w-5xl flex flex-col items-center gap-[clamp(0.5rem,1vw,1.5rem)]">
 
           <div className="relative mb-2" style={{ width: '162px', height: '47px' }}>
