@@ -3,9 +3,9 @@
     "hero": {
       "title": "El horizonte te espera.",
       "description": "Hay muchas formas de contemplar el valle, pero solo una manera de volar con el estándar de excelencia que merece Teotihuacán. Elige la experiencia ideal para tu viaje.",
-      "pageTitle": "Nuestras experiencias de vuelo",
+      "pageTitle": "El horizonte te espera.",
       "experiencesList": "El horizonte te espera. \n ¿Cómo lo encontrarás?",
-      "pageDescription": "Hay muchas formas de vivir el valle, pero solo una experiencia diseñada para ti.",
+      "pageDescription": "Hay muchas formas de contemplar el valle, pero un solo estándar de excelencia en aviación. Elige la experiencia ideal para ti.",
       "ctaFlightPrimary": "Elige tu vuelo",
       "talkFlight": "O habla con nosotros por WhatsApp",
       "imageAlt": "Globos aerostáticos sobre el Valle de Teotihuacán",
@@ -17,7 +17,7 @@
       "experiencesFrom": "Experiencias desde {price}",
       "secureBooking": "Reserva segura mediante Peek · Confirmación inmediata",
       "ctaPrimary": "Ver vuelos y disponibilidad",
-      "ctaSecondary": "Hablar con un experto",
+      "ctaSecondary": "Habla con un especialista",
       "reviews": "{count} opiniones en Tripadvisor",
       "certifiedTitle": "Pilotos certificados",
       "certifiedDescription": "Operación aeronáutica profesional",
@@ -32,8 +32,8 @@
     },
 
     "cards": {
-      "subtitle": "EXPERIENCIAS SELECCIONADAS",
-      "title": "Elige\n Tu viaje",
+      "subtitle": "VUELOS SELECCIONADOS",
+      "title": "Elige\ntu viaje",
       "description": "No todas las experiencias se viven igual. Una propuesta necesita privacidad; un viaje familiar requiere logística impecable. Elige el vuelo diseñado para tu historia.",
       "fromPrice": "Desde {price}",
       "priceOnRequest": "Cotización personalizada",
@@ -70,7 +70,7 @@
         "eyebrow": "Tarjeta de regalo Flying",
         "title": "Regala el cielo.",
         "value": "Valor de la experiencia",
-        "details": "Conocer la Tarjeta de Regalo"
+        "details": "Conoce la tarjeta de regalo"
       },
 
       "books": {
@@ -88,7 +88,7 @@
         "classic": "Ideal para quienes viajan solos, parejas y grupos de amigos que quieren compartir una perspectiva extraordinaria.",
         "journey": "Ideal para quienes viajan solos, parejas y grupos de amigos que disfrutan descubrir juntos.",
         "transport": "Ideal para visitantes internacionales y viajeros que buscan una experiencia fluida, impecable y sin preocupaciones logísticas.",
-        "open": "Regala un recuerdo, no una cosa. Recibe al instante un pase de abordar digital y deja que esa persona elija cuándo vivir su amanecer: tendrá un año para reservar.",
+        "open": "Regala un recuerdo, no una cosa. Recibe al instante un pase de abordar digital y deja que esa persona elija la fecha de su vuelo. La tarjeta se activa un mes después de la compra y puede utilizarse durante los seis meses siguientes, sujeta a disponibilidad.",
         "proposal": "Ideal para parejas que buscan el escenario definitivo para hacer la pregunta más importante de su vida.",
         "anniversary": "Ideal para parejas y familias que quieren conmemorar un aniversario importante con un gesto excepcional.",
         "birthday": "Ideal para celebrar un nuevo capítulo con una perspectiva extraordinaria.",
@@ -96,25 +96,25 @@
       },
 
       "descriptions": {
-        "classic": "La experiencia: únete a un grupo pequeño de aventureros en nuestras canastillas compartimentadas. A diferencia de las canastillas abiertas tradicionales, este diseño le da a cada pasajero su propio espacio y una vista clara del valle.",
-        "journey": "La experiencia: nosotros coordinamos el transporte de ida y vuelta, el vuelo, el desayuno y la visita a las pirámides para que tú solo te concentres en disfrutar el amanecer.",
-        "transport": "La experiencia: pensada para quien quiere vivir Teotihuacán sin estrés logístico. Coordinamos el traslado, el vuelo al amanecer y el acceso a las pirámides con una ejecución cuidada de principio a fin.",
-        "open": "La experiencia: compra ahora un pase flexible y deja que la persona elija la fecha de su vuelo. Es una forma elegante de regalar Teotihuacán al amanecer sin definir todos los detalles por adelantado.",
-        "proposal": "La experiencia: solo tienes una oportunidad de hacerlo inolvidable. Coordinamos el momento de la propuesta, las flores, las cámaras y el ritmo de la experiencia para que tú solo hagas la pregunta.",
-        "anniversary": "La experiencia: una cena puede repetirse; una vista a 2,000 pies sobre Teotihuacán, no. Creamos una atmósfera privada y celebratoria para honrar su historia con un brindis y detalles pensados para la ocasión.",
-        "birthday": "La experiencia: celebra un nuevo año con un amanecer sobre las pirámides. Nosotros cuidamos los detalles festivos para que la mañana se sienta especial desde la llegada hasta el aterrizaje.",
-        "vip": "La experiencia: una inmersión privada en Teotihuacán, desde la puerta de tu hotel hasta el cielo. Eleva la aventura con champaña, servicio personalizado y una exploración guiada de la zona."
+        "classic": "La experiencia: únete a un grupo selecto de viajeros en nuestras canastillas compartimentadas. A diferencia de los diseños abiertos, nuestra flota Cameron Balloons ofrece a cada pasajero un punto de observación propio y amplio espacio personal. El equilibrio ideal entre una experiencia compartida y un vuelo cómodo y cuidado.",
+        "journey": "La experiencia: diseñada para quien no quiere ocuparse de la logística. Coordinamos el transporte redondo, te acompañamos por la zona arqueológica y te acercamos a las tradiciones locales. Incluye un kit de viajero —sombrero y agua— para que tú te concentres en disfrutar.",
+        "transport": "La experiencia: diseñada para quienes buscan excelencia sin complicaciones. Coordinamos todo el itinerario: transporte privado de puerta a puerta, vuelo con la primera luz del día, desayuno buffet y acceso directo a la zona arqueológica. Una ejecución impecable, desde que pasamos por ti hasta tu regreso.",
+        "open": "La experiencia: compra un pase flexible y deja que la persona elija la fecha de su vuelo. Una forma elegante de regalar una experiencia sobre Teotihuacán sin tener que definir cada detalle por adelantado.",
+        "proposal": "La experiencia: la excelencia se diseña. Coordinamos con precisión el despliegue de la lona «¿Quieres casarte conmigo?» mientras disfrutan de privacidad total en el cielo. Flores frescas, detalles gourmet y fotografía profesional: nosotros resolvemos la complejidad para que tú te concentres en el momento. Tú trae el anillo; nosotros cuidamos el resto.",
+        "anniversary": "La experiencia: las celebraciones tradicionales pueden repetirse; la serenidad del Valle de Teotihuacán, no. Creamos una atmósfera cuidada para honrar su historia juntos. Después del vuelo les espera un desayuno buffet en El Jaguar y el brindis tradicional, además de una lona personalizada y un paquete de fotografía digital para conservar el recuerdo.",
+        "birthday": "La experiencia: ¿por qué celebrar en tierra cuando puedes hacerlo desde el cielo? Comienza un nuevo año personal con la primera luz sobre el valle. Coordinamos cada detalle: una lona personalizada al aterrizar, pastel simbólico y el brindis tradicional. Una celebración cuidada bajo los estándares de seguridad de Flying Pictures.",
+        "vip": "La experiencia: nuestro servicio más exclusivo, creado para quienes exigen discreción y precisión absolutas. Coordinamos un viaje privado desde la puerta de tu hotel hasta el cielo del Valle de Teotihuacán, seguido de un brunch exclusivo en Mayahuel. Puedes complementar la experiencia con champaña fría y un recorrido por la zona arqueológica guiado por un historiador."
       },
 
       "includes": {
         "classic": "Incluye: vuelo de 45-60 min, café de bienvenida y brindis con vino espumoso.",
-        "journey": "Incluye: transporte redondo desde CDMX, vuelo, desayuno, tour de pirámides, entradas y detalle para viajero.",
+        "journey": "Incluye: transporte redondo desde CDMX, vuelo, desayuno, recorrido por las pirámides, entradas y detalle para el viajero.",
         "transport": "Incluye: transporte redondo desde CDMX, vuelo de 40 min, café de bienvenida, brindis con vino espumoso, desayuno buffet, entradas a las pirámides y certificado.",
         "open": "Incluye: pase flexible para vuelo, café de bienvenida, brindis con vino espumoso y certificado.",
         "proposal": "Incluye: vuelo privado, montaje sorpresa de propuesta, ramo de 24 rosas, paquete de foto y video, brindis con vino espumoso y desayuno.",
         "anniversary": "Incluye: vuelo, letrero de aniversario, café de bienvenida, brindis con vino espumoso, desayuno buffet, certificado de vuelo y seguro.",
         "birthday": "Incluye: vuelo, letrero de cumpleaños, rebanada de pastel, café de bienvenida, brindis con vino espumoso, desayuno buffet y certificado de vuelo.",
-        "vip": "Incluye: transporte privado, vuelo privado, champaña, servicio personalizado, canapés, tour privado de cuevas y pirámides, brunch y paquete de foto/video."
+        "vip": "Incluye: transporte privado, vuelo privado, champaña, servicio personalizado, canapés, recorrido privado por cuevas y pirámides, brunch y paquete de foto y video."
       }
     }
   }

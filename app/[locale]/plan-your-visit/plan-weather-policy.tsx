@@ -9,7 +9,7 @@ export async function PlanWeatherPolicy() {
   const t = await getTranslations("planYourVisit.weatherPolicy");
 
   return (
-    <section className="relative w-full min-h-[758px] md:min-h-[1031px]">
+    <section id="weather-policy" className="relative w-full min-h-[758px] scroll-mt-32 md:min-h-[1031px]">
       <CloudinaryImage
         publicId={IMAGES.plan.weatherPolicy.cancelation}
         alt=""

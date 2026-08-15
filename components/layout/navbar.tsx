@@ -31,14 +31,22 @@ const EXPERIENCES = PACKAGE_SLUGS.map((slug) => ({
   href: `/product/${slug}`,
 }))
 
+const MOBILE_FEATURED_EXPERIENCES = EXPERIENCES.filter(({ slug }) =>
+  (["classic", "transport", "journey", "vip"] as ProductSlug[]).includes(slug),
+)
+
 const NavLink = ({ id, href, className = "", onClick }: { id: string; href: string; className?: string; onClick?: () => void }) => {
   const t = useTranslations("nav")
-  return <Link href={href} onClick={onClick} className={cn("font-inter font-bold text-secondary tracking-tight transition-opacity hover:opacity-70 outline-none", className)}>{t(id)}</Link>
+  const pathname = usePathname()
+  const isActive = pathname === href || pathname.startsWith(`${href}/`)
+  return <Link href={href} aria-current={isActive ? "page" : undefined} onClick={onClick} className={cn("font-inter font-bold text-secondary tracking-tight transition-opacity hover:opacity-70 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2", className)}>{t(id)}</Link>
 }
 
 const ProductNavLink = ({ slug, href, className = "", onClick }: { slug: ProductSlug; href: string; className?: string; onClick?: () => void }) => {
   const locale = useLocale()
-  return <Link href={href} onClick={onClick} className={cn("font-inter font-bold text-secondary tracking-tight transition-opacity hover:opacity-70 outline-none", className)}>{getProductName(slug, locale)}</Link>
+  const pathname = usePathname()
+  const isActive = pathname === href
+  return <Link href={href} aria-current={isActive ? "page" : undefined} onClick={onClick} className={cn("font-inter font-bold text-secondary tracking-tight transition-opacity hover:opacity-70 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2", className)}>{getProductName(slug, locale)}</Link>
 }
 
 const BookButton = ({ size = "md", variant = "primary", className = "", onClick }: { size?: "md" | "floating"; variant?: "primary" | "secondary"; className?: string; onClick?: () => void }) => {
@@ -58,7 +66,12 @@ const LANGUAGE_NAMES = {
   en: "English",
 } as const
 
-const LanguageSwitcher = ({ className = "", onSelect }: { className?: string; onSelect?: () => void }) => {
+function persistPreferredLocale(nextLocale: keyof typeof LANGUAGE_NAMES) {
+  document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=31536000; samesite=lax`
+  window.localStorage.setItem("preferred-locale", nextLocale)
+}
+
+const LanguageSwitcher = ({ className = "", onSelect, mobileInline = false }: { className?: string; onSelect?: () => void; mobileInline?: boolean }) => {
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
@@ -68,13 +81,37 @@ const LanguageSwitcher = ({ className = "", onSelect }: { className?: string; on
   const changeLanguage = (nextLocale: string) => {
     if (nextLocale !== "en" && nextLocale !== "es") return
 
-    document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=31536000; samesite=lax`
-    window.localStorage.setItem("preferred-locale", nextLocale)
+    persistPreferredLocale(nextLocale)
 
     const query = searchParams.toString()
     const destination = query ? `${pathname}?${query}` : pathname
     router.replace(destination, { locale: nextLocale })
     onSelect?.()
+  }
+
+  if (mobileInline) {
+    return (
+      <div className={cn("flex min-h-12 items-center justify-between gap-4", className)}>
+        <span className="flex items-center gap-3 font-inter font-bold text-secondary">
+          <GlobeSimpleIcon size={22} weight="bold" aria-hidden="true" />
+          {t("language")}
+        </span>
+        <div role="group" aria-label={t("switchLanguage")} className="flex rounded-full bg-secondary/6 p-1">
+          {(Object.entries(LANGUAGE_NAMES) as Array<[keyof typeof LANGUAGE_NAMES, string]>).map(([code]) => (
+            <button
+              key={code}
+              type="button"
+              aria-pressed={locale === code}
+              onClick={() => changeLanguage(code)}
+              className="min-h-11 min-w-12 rounded-full px-3 font-inter text-sm font-bold uppercase text-secondary outline-none transition-colors hover:bg-background focus-visible:ring-2 focus-visible:ring-primary data-[active=true]:bg-secondary data-[active=true]:text-background"
+              data-active={locale === code}
+            >
+              {code}
+            </button>
+          ))}
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -260,34 +297,80 @@ export default function Navbar() {
                 </button>
               </SheetPrimitive.Trigger>
               <SheetPrimitive.Portal>
-                <SheetPrimitive.Content aria-describedby={undefined} className="fixed inset-y-0 right-0 z-60 w-full bg-surface flex flex-col shadow-xl">
-                  <SheetPrimitive.Title className="sr-only">{t("flightExperiences")}</SheetPrimitive.Title>
-                  <div className="relative h-40 flex items-center justify-between px-6 before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[90%] before:border-b before:content-['']">
-                    <BookButton onClick={() => setIsSheetOpen(false)} />
-                    <SheetPrimitive.Close aria-label={t("closeMenu")} className="rounded-full size-10 flex items-center justify-center">
+                <SheetPrimitive.Content aria-describedby={undefined} className="fixed inset-y-0 right-0 z-60 flex w-full flex-col bg-surface shadow-xl">
+                  <SheetPrimitive.Title className="sr-only">{t("menuTitle")}</SheetPrimitive.Title>
+
+                  <div className="flex h-24 shrink-0 items-center justify-between border-b border-secondary/10 px-5">
+                    <Link
+                      href="/"
+                      aria-label="Flying Pictures México — Inicio"
+                      onClick={() => setIsSheetOpen(false)}
+                      className="h-16 w-14 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                    >
+                      <CloudinaryImage
+                        publicId={IMAGES.home.navbar.logo}
+                        alt="Flying Pictures México Logo"
+                        width={112}
+                        height={128}
+                        className="h-full w-full object-contain"
+                      />
+                    </Link>
+                    <SheetPrimitive.Close aria-label={t("closeMenu")} className="flex size-12 items-center justify-center rounded-full border border-secondary/15 text-secondary outline-none transition-colors hover:bg-secondary hover:text-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
                       <XIcon size={24} weight="bold" aria-hidden="true" />
                     </SheetPrimitive.Close>
                   </div>
-                  <div className="flex flex-col flex-1 px-10 py-10 gap-5 overflow-y-auto">
-                    <NavLink id="flightExperiences" href="/flight-experiences" className="text-[1.5rem]" onClick={() => setIsSheetOpen(false)} />
-                    <div className="flex flex-col gap-4">
-                      {EXPERIENCES.map((exp) => (
-                        <ProductNavLink key={exp.slug} slug={exp.slug} href={exp.href} className="text-[1.15rem]" onClick={() => setIsSheetOpen(false)} />
-                      ))}
-                      <div className="my-1 h-px bg-secondary/10" />
-                      <NavLink id="corporateService" href="/product/corporate" className="text-[1.15rem]" onClick={() => setIsSheetOpen(false)} />
-                    </div>
-                    <div className="flex flex-col gap-6 mt-8">
-                      <NavLink id="safetyHeritage" href="/safety-heritage" className="text-[1.5rem]" onClick={() => setIsSheetOpen(false)} />
-                      <NavLink id="planYourVisit" href="/plan-your-visit" className="text-[1.5rem]" onClick={() => setIsSheetOpen(false)} />
-                    </div>
-                    <div className="mt-auto pb-8 flex flex-col gap-6">
-                      <Link href="/contact" className="font-inter font-bold flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
-                        <HeadsetIcon size={24} weight="bold" aria-hidden="true" />
+
+                  <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-6 py-6">
+                    <section aria-labelledby="mobile-flight-menu-title">
+                      <p id="mobile-flight-menu-title" className="mb-3 text-[0.7rem] font-bold uppercase tracking-[0.16em] text-secondary/55">
+                        {t("chooseFlight")}
+                      </p>
+                      <div className="overflow-hidden rounded-2xl border border-secondary/10 bg-background shadow-[0_12px_40px_rgba(3,48,59,0.06)]">
+                        {MOBILE_FEATURED_EXPERIENCES.map((exp, index) => (
+                          <ProductNavLink
+                            key={exp.slug}
+                            slug={exp.slug}
+                            href={exp.href}
+                            className={cn(
+                              "flex min-h-12 items-center px-4 py-3 text-[1rem] leading-snug hover:bg-secondary/5 hover:opacity-100 aria-[current=page]:bg-secondary aria-[current=page]:text-background",
+                              index > 0 && "border-t border-secondary/8",
+                            )}
+                            onClick={() => setIsSheetOpen(false)}
+                          />
+                        ))}
+                      </div>
+                      <Link
+                        href="/flight-experiences"
+                        onClick={() => setIsSheetOpen(false)}
+                        className="mt-3 flex min-h-12 items-center justify-between rounded-full bg-primary px-5 font-inter font-bold text-secondary outline-none transition hover:brightness-95 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                      >
+                        <span>{t("viewAllExperiences")}</span>
+                        <CaretDownIcon size={18} weight="bold" className="-rotate-90" aria-hidden="true" />
+                      </Link>
+                    </section>
+
+                    <nav aria-label={t("exploreFlying")} className="mt-7 border-t border-secondary/10 pt-4">
+                      <p className="mb-2 text-[0.7rem] font-bold uppercase tracking-[0.16em] text-secondary/55">
+                        {t("exploreFlying")}
+                      </p>
+                      <div className="flex flex-col">
+                        <NavLink id="safetyHeritage" href="/safety-heritage" className="flex min-h-12 items-center rounded-xl px-3 text-[1.05rem] hover:bg-secondary/5 hover:opacity-100 aria-[current=page]:bg-secondary aria-[current=page]:text-background" onClick={() => setIsSheetOpen(false)} />
+                        <NavLink id="planYourVisit" href="/plan-your-visit" className="flex min-h-12 items-center rounded-xl px-3 text-[1.05rem] hover:bg-secondary/5 hover:opacity-100 aria-[current=page]:bg-secondary aria-[current=page]:text-background" onClick={() => setIsSheetOpen(false)} />
+                        <NavLink id="corporateService" href="/product/corporate" className="flex min-h-12 items-center rounded-xl px-3 text-[1.05rem] hover:bg-secondary/5 hover:opacity-100 aria-[current=page]:bg-secondary aria-[current=page]:text-background" onClick={() => setIsSheetOpen(false)} />
+                      </div>
+                    </nav>
+
+                    <div className="mt-5 border-t border-secondary/10 pt-4">
+                      <Link href="/contact" className="flex min-h-12 items-center gap-3 rounded-xl px-3 font-inter font-bold text-secondary outline-none transition-colors hover:bg-secondary/5 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" onClick={() => setIsSheetOpen(false)}>
+                        <HeadsetIcon size={22} weight="bold" aria-hidden="true" />
                         {t("contactSupport")}
                       </Link>
-                      <LanguageSwitcher onSelect={() => setIsSheetOpen(false)} />
+                      <LanguageSwitcher mobileInline />
                     </div>
+                  </div>
+
+                  <div className="shrink-0 border-t border-secondary/10 bg-background px-5 pb-[max(1rem,env(safe-area-inset-bottom))] pt-4 shadow-[0_-12px_35px_rgba(3,48,59,0.08)]">
+                    <BookButton className="w-full" onClick={() => setIsSheetOpen(false)} />
                   </div>
                 </SheetPrimitive.Content>
               </SheetPrimitive.Portal>

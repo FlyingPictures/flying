@@ -20,6 +20,8 @@ Flying Pictures habla como una compañía de aviación con décadas de experienc
 - Usar **aeronave** al hablar del equipo desde una perspectiva técnica.
 - Usar **canastilla** de forma general y **canastilla compartimentada** para el diseño Cameron correspondiente.
 - Usar **registro** en lugar de *check-in*.
+- Usar **café de bienvenida** en lugar de *coffee break*.
+- Usar **champaña** y **recorrido guiado** en lugar de *champagne* y *tour* dentro del copy en español.
 - Usar **vuelo compartido**, **vuelo privado** y **experiencia completa** de forma consistente.
 - Usar **transporte redondo** cuando el servicio incluye ida y vuelta.
 - Usar **zona arqueológica de Teotihuacán** como denominación formal; evitar sustituirla sistemáticamente por “las pirámides”.
@@ -34,6 +36,7 @@ Flying Pictures habla como una compañía de aviación con décadas de experienc
 - Fórmulas genéricas como “una experiencia única e inolvidable” cuando no explican por qué.
 - Alternar sin intención entre canasta, canastilla, cesta y cabina.
 - Añadir lugares, servicios, duraciones o garantías que no estén respaldados por el contenido aprobado.
+- Prometer un amanecer despejado, una vista específica, una ruta determinada o visibilidad sobre las pirámides; todas dependen de las condiciones meteorológicas del día.
 
 ## Criterio de fidelidad
 

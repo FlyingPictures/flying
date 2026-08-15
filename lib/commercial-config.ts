@@ -30,17 +30,17 @@ export const PRODUCT_NAMES: Record<
   Record<CommercialLocale, string>
 > = {
   classic: { es: "Tradicional", en: "Traditional" },
-  journey: { es: "Vuelo de Viajero", en: "Traveler's Flight" },
+  journey: { es: "Experiencia Viajero", en: "Traveler's Flight" },
   transport: {
-    es: "+Transporte + Pirámides",
+    es: "Vuelo + transporte + pirámides",
     en: "+Transportation + Pyramids",
   },
-  open: { es: "Tarjeta de Regalo", en: "Gift Card" },
-  proposal: { es: "Compromiso", en: "Commitment" },
+  open: { es: "Tarjeta de regalo", en: "Gift Card" },
+  proposal: { es: "Propuesta de matrimonio", en: "Commitment" },
   anniversary: { es: "Aniversario", en: "Anniversary" },
   birthday: { es: "Cumpleaños", en: "Birthday" },
   vip: {
-    es: "Vuelo VIP — Vuelo, Inframundo y Pirámides",
+    es: "VIP — Vuelo, Inframundo y Pirámides",
     en: "VIP Flight — Flight, Underworld & Pyramids",
   },
   corporate: {

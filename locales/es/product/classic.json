@@ -1,14 +1,14 @@
 {
   "hero": {
-    "subtitle": "Canasta compartida | Vuelo aproximado de 40 minutos | 🇬🇧 Estándares de seguridad británicos"
+    "subtitle": "Canastilla compartida | Vuelo aproximado de 40 minutos | 🇬🇧 Estándares de seguridad británicos"
   },
   "rating": {
     "score": 4.8,
     "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
-    "title": "Vive la Magia del Vuelo Compartido",
-    "paragraph": "Únete a un selecto grupo de aventureros para una mañana donde los desconocidos se convierten en amigos. A diferencia de las canastas \"abiertas\" estándar donde los huéspedes van apretados, Flying Pictures usa las Canastas Compartimentadas Cameron Balloons. ¿Qué significa esto para ti? Incluso en un vuelo compartido, tienes tu propio rincón del cielo. Sin pelear por una vista, solo asombro compartido."
+    "title": "Vive la magia del vuelo compartido",
+    "paragraph": "Comparte la mañana con un grupo selecto de viajeros. A diferencia de las canastillas abiertas, donde todos ocupan un mismo espacio, Flying Pictures utiliza canastillas compartimentadas Cameron Balloons. Así, incluso en un vuelo compartido, cada pasajero cuenta con su propio espacio y un punto de observación despejado."
   },
   "itinerary": {
     "title": "Qué harás",
@@ -18,32 +18,32 @@
         "description": "Llegarás a la recepción de Flying Pictures y te daremos la bienvenida para completar tu registro."
       },
       {
-        "title": "Bienvenida y Café",
+        "title": "Bienvenida y café",
         "description": "Después de tu registro te esperamos con nuestra estación de café, bebidas calientes y galletas tradicionales."
       },
       {
-        "title": "El Espectáculo de Inflado",
+        "title": "El espectáculo del inflado",
         "description": "Camina al campo de lanzamiento para ver a los \"Gigantes\" cobrar vida. Ver los enormes globos elevarse con el rugido de los quemadores es el primer acto del espectáculo."
       },
       {
-        "title": "El Ascenso",
-        "description": "Despega suavemente hacia el amanecer. Durante aprox. 45-60 minutos, flota en silencio sobre el Valle de Teotihuacán, viendo cómo el sol revela las pirámides desde arriba."
+        "title": "El ascenso",
+        "description": "Despega suavemente con las primeras luces. Durante aproximadamente 45 a 60 minutos, flota en silencio sobre el Valle de Teotihuacán. El paisaje cambia con las condiciones de cada mañana."
       },
       {
-        "title": "El Brindis de 1783",
+        "title": "El brindis de 1783",
         "description": "Al aterrizar, celebramos con un tradicional brindis de vino espumoso. Un ritual que se remonta a los primeros aviadores para agradecer a los dioses del viento un regreso seguro."
       }
     ]
   },
   "pricing": {
-    "dates": "Ver Fechas",
+    "dates": "Ver fechas",
     "adults": "Adultos",
     "kids": "Niños (4-12)"
   },
   "details": {
     "included": [
       "Vuelo compartido de aproximadamente 40 minutos sobre el Valle de Teotihuacán",
-      "Coffee break con galletas y bebidas tradicionales mexicanas",
+      "Café de bienvenida con galletas y bebidas tradicionales mexicanas",
       "Brindis con vino espumoso u opción sin alcohol",
       "Certificado de vuelo personalizado",
       "Seguro de viajero"
@@ -69,8 +69,8 @@
       "Guía bilingüe"
     ],
     "notes": [
-      "La experiencia se reserva como vuelo compartido; la privatización se contrata como extra.",
-      "La ruta y el horario del vuelo dependen de las condiciones meteorológicas y operativas del día."
+      "La experiencia se reserva como vuelo compartido; el uso privado de la canastilla se contrata como extra.",
+      "La ruta y la duración del vuelo dependen de las condiciones meteorológicas y operativas del día."
     ],
     "itinerary": {
       "title": "Qué harás",
@@ -78,7 +78,7 @@
         { "time": "Antes del vuelo", "title": "Llegas al Globopuerto", "description": "Te recibimos para el registro con café caliente, galletas y bebidas tradicionales." },
         { "time": "Preparación", "title": "Ves inflar tu globo", "description": "Acompañas la preparación de la aeronave y ves cómo el envolvente cobra forma." },
         { "time": "Despegue", "title": "Comienza el ascenso", "description": "El piloto selecciona el momento y punto de despegue de acuerdo con las condiciones del día." },
-        { "time": "En el aire", "title": "Vuelas aproximadamente 40 minutos", "description": "Disfrutas las vistas del Valle de Teotihuacán desde una canasta compartimentada Cameron." },
+        { "time": "En el aire", "title": "Vuelas aproximadamente 40 minutos", "description": "Contemplas el Valle de Teotihuacán desde una canastilla compartimentada Cameron." },
         { "time": "Al aterrizar", "title": "Participas en el brindis tradicional", "description": "Celebramos el aterrizaje con vino espumoso u opción sin alcohol." },
         { "time": "Cierre", "title": "Recibes tu certificado", "description": "Te entregamos un certificado personalizado como recuerdo de la experiencia." }
       ]

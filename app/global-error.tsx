@@ -22,10 +22,10 @@ export default function GlobalError({
           <div className="max-w-md text-center">
             <h1 className="text-6xl font-bold mb-4">500</h1>
             <h2 className="text-2xl font-semibold mb-4">
-              Error crítico
+              Algo salió mal
             </h2>
             <p className="text-muted-foreground mb-8">
-              Ha ocurrido un error crítico en la aplicación. Por favor, recarga la página.
+              Ocurrió un error inesperado. Recarga la página para continuar.
             </p>
             <Button onClick={reset}>
               Recargar página

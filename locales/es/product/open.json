@@ -1,24 +1,24 @@
 {
   "hero": {
-    "subtitle": "Voucher Flexible | Vigencia de 6 Meses | Vuelo Tradicional"
+    "subtitle": "Tarjeta flexible | Vigencia de 6 meses | Vuelo Tradicional"
   },
   "rating": {
     "score": 4.8,
     "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
-    "title": "Regala una experiencia única",
-    "paragraph": "La Tarjeta de Regalo permite obsequiar un vuelo tradicional sin elegir la fecha de inmediato. El voucher es transferible, se activa un mes después de la compra y puede utilizarse durante los seis meses siguientes, sujeto a disponibilidad."
+    "title": "Regala una experiencia para recordar",
+    "paragraph": "La tarjeta de regalo te permite obsequiar un vuelo Tradicional sin elegir la fecha de inmediato. Es transferible, se activa un mes después de la compra y puede utilizarse durante los seis meses siguientes, sujeto a disponibilidad."
   },
   "itinerary": {
     "title": "Cómo funciona",
     "steps": [
       {
         "title": "Compra tu tarjeta",
-        "description": "Adquiere el voucher individual y conserva el número de folio de la compra."
+        "description": "Adquiere la tarjeta individual y conserva el número de folio de la compra."
       },
       {
-        "title": "Recibe tu voucher",
+        "title": "Recibe tu tarjeta",
         "description": "Entrega la tarjeta como regalo o consérvala para utilizarla más adelante."
       },
       {
@@ -27,13 +27,13 @@
       },
       {
         "title": "Vive el vuelo tradicional",
-        "description": "Disfruta el vuelo en globo con brindis, certificado y desayuno incluidos conforme a las condiciones del voucher."
+        "description": "Disfruta el vuelo en globo con brindis, certificado y desayuno incluidos conforme a las condiciones de la tarjeta."
       }
     ]
   },
   "pricing": {
-    "dates": "Comprar voucher",
-    "adults": "Voucher individual",
+    "dates": "Comprar tarjeta",
+    "adults": "Tarjeta individual",
     "kids": ""
   }
 }
