@@ -1,6 +1,6 @@
 {
   "hero": {
-    "subtitle": "Transporte y vuelo privados | Aproximadamente 40 minutos | Tour por aire y tierra"
+    "subtitle": "Transporte y vuelo privados | Aproximadamente 40 minutos | Recorrido por aire y tierra"
   },
   "rating": {
     "score": 4.8,
@@ -8,7 +8,7 @@
   },
   "description": {
     "title": "Tu cielo, tus reglas",
-    "paragraph": "La experiencia más completa y privada del catálogo: transporte exclusivo, vuelo solo para tu grupo, champagne francés con servicio de mesero, cuevas ceremoniales, brunch y recorrido de la zona arqueológica con historiador. Fotos y video del vuelo ya están incluidos."
+    "paragraph": "La experiencia más completa y privada del catálogo: transporte exclusivo, vuelo solo para tu grupo, champaña francesa con servicio de mesero, cuevas ceremoniales, brunch y recorrido de la zona arqueológica con historiador. Las fotos y el video del vuelo están incluidos."
   },
   "itinerary": {
     "title": "Qué harás",
@@ -18,38 +18,38 @@
         "description": "Llegarás a la recepción de Flying Pictures y te daremos la bienvenida para completar tu registro."
       },
       {
-        "title": "Bienvenida y Café",
+        "title": "Bienvenida y café",
         "description": "Después de tu registro te esperamos con nuestra estación de café, bebidas calientes y galletas tradicionales."
       },
       {
-        "title": "El Espectáculo de Inflado",
+        "title": "El espectáculo del inflado",
         "description": "Camina al campo de lanzamiento para ver a los \"Gigantes\" cobrar vida. Ver los enormes globos elevarse con el rugido de los quemadores es el primer acto del espectáculo."
       },
       {
-        "title": "El Ascenso",
-        "description": "Despega suavemente hacia el amanecer. Durante aprox. 45-60 minutos, flota en silencio sobre el Valle de Teotihuacán, viendo cómo el sol revela las pirámides desde arriba."
+        "title": "El ascenso",
+        "description": "Despega suavemente con las primeras luces. Durante aproximadamente 45 a 60 minutos, flota en silencio sobre el Valle de Teotihuacán. El paisaje cambia con las condiciones de cada mañana."
       },
       {
-        "title": "El Brindis de 1783",
+        "title": "El brindis de 1783",
         "description": "Al aterrizar, celebramos con un tradicional brindis de vino espumoso. Un ritual que se remonta a los primeros aviadores para agradecer a los dioses del viento un regreso seguro."
       }
     ]
   },
   "pricing": {
-    "dates": "Ver Fechas",
+    "dates": "Ver fechas",
     "adults": "Adultos",
     "kids": "Niños (4-12)"
   },
   "details": {
     "included": [
-      "Transporte privado redondo entre CDMX y Teotihuacán con recogida coordinada",
+      "Transporte privado redondo entre CDMX y Teotihuacán; coordinamos dónde pasar por ti",
       "Vuelo privado de aproximadamente 40 minutos",
-      "Coffee break con galletas y bebidas tradicionales mexicanas",
-      "Brindis con champagne francés — jugo para niños",
-      "Servicio de mesero con canapés, guacamole, café, pan y frutas típicas",
-      "Tour privado guiado por cuevas ceremoniales de aproximadamente 30 minutos",
+      "Café de bienvenida con galletas y bebidas tradicionales mexicanas",
+      "Brindis con champaña francesa — jugo para niños",
+      "Servicio de mesero con canapés, guacamole, café, pan y fruta local",
+      "Recorrido privado guiado por cuevas ceremoniales de aproximadamente 30 minutos",
       "Brunch tradicional en un restaurante local",
-      "Tour privado de aproximadamente dos horas y media por la zona arqueológica con historiador",
+      "Recorrido privado de aproximadamente dos horas y media por la zona arqueológica con historiador",
       "Certificado de vuelo personalizado",
       "Seguro de viajero",
       "Fotos y video del vuelo"
@@ -74,11 +74,11 @@
       "title": "Qué harás",
       "steps": [
         { "time": "Salida", "title": "Te recogemos en transporte privado", "description": "Un vehículo exclusivo lleva a tu grupo de CDMX a Teotihuacán." },
-        { "time": "Bienvenida", "title": "Disfrutas el coffee break", "description": "Te recibimos con café, galletas y bebidas tradicionales mexicanas." },
-        { "time": "Preparación", "title": "Abordas tu globo privado", "description": "Solo tu grupo comparte la canasta durante el vuelo." },
-        { "time": "En el aire", "title": "Vuelas aproximadamente 40 minutos", "description": "El equipo registra fotos y video mientras disfrutas las vistas del valle." },
-        { "time": "Al aterrizar", "title": "Te reciben con champagne y canapés", "description": "Un mesero sirve el brindis, guacamole, café, pan y frutas típicas." },
-        { "time": "Inframundo", "title": "Exploras cuevas ceremoniales", "description": "Realizas un tour privado guiado de aproximadamente 30 minutos." },
+        { "time": "Bienvenida", "title": "Disfrutas un café de bienvenida", "description": "Te recibimos con café, galletas y bebidas tradicionales mexicanas." },
+        { "time": "Preparación", "title": "Abordas tu globo privado", "description": "Solo tu grupo comparte la canastilla durante el vuelo." },
+        { "time": "En el aire", "title": "Vuelas aproximadamente 40 minutos", "description": "El equipo registra fotos y video mientras contemplas el valle." },
+        { "time": "Al aterrizar", "title": "Te reciben con champaña y canapés", "description": "Un mesero sirve el brindis, guacamole, café, pan y fruta local." },
+        { "time": "Inframundo", "title": "Exploras cuevas ceremoniales", "description": "Realizas un recorrido privado guiado de aproximadamente 30 minutos." },
         { "time": "Brunch", "title": "Pruebas un brunch tradicional", "description": "Disfrutas alimentos típicos en un restaurante local." },
         { "time": "Historia", "title": "Recorres las pirámides con historiador", "description": "Un especialista acompaña a tu grupo durante aproximadamente dos horas y media." },
         { "time": "Cierre", "title": "Recibes certificado, fotos y video", "description": "Terminas con tu certificado personalizado y el material de la experiencia." }

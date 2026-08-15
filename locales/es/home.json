@@ -17,7 +17,7 @@
     "tabs": {
       "shared": "Compartido",
       "private": "Privado",
-      "vip": "VIP y tours"
+      "vip": "VIP y recorridos"
     },
 
     "flightBadge": "VUELO {type}",
@@ -28,14 +28,14 @@
     "packageCount": "{current} de {total}",
 
     "descriptions": {
-      "shared": "Ideal para quienes viajan solos, parejas y grupos de amigos.\nVuela en una canastilla compartimentada, con espacio propio\ny vista despejada para cada pasajero.",
-      "private": "Una experiencia exclusiva para tu grupo.\nDisfruta el cielo con privacidad total, servicio personalizado\ny amenidades premium.",
+      "shared": "Ideal para quienes viajan solos, parejas y grupos de amigos.\nVuela en una canastilla compartimentada, con espacio propio\ny un campo visual amplio para cada pasajero.",
+      "private": "Una experiencia exclusiva para tu grupo.\nDisfruta el cielo con privacidad total, servicio personalizado\ny amenidades de primer nivel.",
       "vip": "La experiencia más exclusiva.\nUn vuelo privado en globo con champaña,\ndesayuno gourmet y atención de principio a fin."
     },
 
     "awardSection": {
-      "title": "Excelencia reconocida",
-      "subtitle": "EN AVIACIÓN",
+      "title": "Somos una",
+      "subtitle": "COMPAÑÍA DE AVIACIÓN",
       "description": "Vuela con una de las compañías de globos aerostáticos más confiables y reconocidas de México, donde la precisión británica se encuentra con la calidez mexicana. Desde hace más de veinte años, Flying Pictures México marca el estándar de los vuelos seguros y cuidadosamente ejecutados sobre el extraordinario Valle de Teotihuacán."
     },
 
@@ -71,7 +71,7 @@
       "description": "Volamos principalmente con aeronaves Cameron Balloons del Reino Unido, reconocidas como referente mundial en diseño y fabricación de globos aerostáticos. Su ingeniería ofrece desempeño, seguridad y calidad duradera: los mismos estándares que exigimos en cada vuelo."
     },
     {
-      "title": "La regla de una sola salida",
+      "title": "La regla de un solo vuelo",
       "description": "Al limitar nuestras salidas diarias, mantenemos un ritmo sereno y ofrecemos una experiencia más cuidada sobre el Valle de Teotihuacán y sus pirámides atemporales."
     },
     {
@@ -119,9 +119,9 @@
     },
 
     "viewPromise": {
-      "title": "La promesa de cada amanecer",
-      "description": "Volamos para ver despertar el valle. Algunos días nos recibe un amanecer dorado; otros, una neblina mística envuelve las pirámides en silencio. Ambos paisajes los decide la naturaleza.",
-      "cta": "Conoce nuestra política meteorológica"
+      "title": "El valle, distinto cada mañana",
+      "description": "Volamos para contemplar cómo despierta el valle. Algunas mañanas nos reciben con luz dorada; otras, con neblina sobre las pirámides. La naturaleza define el paisaje; nuestros estándares de seguridad y operación se mantienen siempre.",
+      "cta": "Consulta nuestra política meteorológica"
     },
 
     "station": "ESTACIÓN",

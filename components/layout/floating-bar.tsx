@@ -108,12 +108,12 @@ const FloatingBar1 = ({ show }: { show: boolean }) => {
       show={show}
       className="bottom-6 inset-x-0 flex justify-center px-4 lg:hidden"
     >
-      <FloatingCard>
-        <Button asChild variant="primary" size="floating" className="flex-1">
+      <FloatingCard className="max-w-[calc(100vw-1rem)] justify-center gap-3 sm:max-w-122">
+        <Button asChild variant="primary" size="floating" className="min-w-0 flex-[0.85] px-4 sm:flex-none sm:px-7">
           <Link href="/flight-experiences">{t("bookFlight")}</Link>
         </Button>
 
-        <Button asChild variant="secondary" size="floating" className="flex-1">
+        <Button asChild variant="secondary" size="floating" className="min-w-0 flex-[1.15] px-4 sm:flex-none sm:px-7">
           <a href={SITE_CONTACT.whatsapp} target="_blank" rel="noopener noreferrer">
             <span className="flex items-center gap-2">
               {t("talkExpert")}

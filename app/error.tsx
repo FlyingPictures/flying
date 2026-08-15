@@ -24,7 +24,7 @@ export default function Error({
           Algo salió mal
         </h2>
         <p className="text-muted-foreground mb-8">
-          Lo sentimos, ha ocurrido un error inesperado. Por favor, intenta nuevamente.
+          Lo sentimos, ocurrió un error inesperado. Inténtalo de nuevo.
         </p>
         <div className="flex gap-4 justify-center">
           <Button onClick={reset} variant="primary">

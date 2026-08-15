@@ -1,9 +1,9 @@
 {
   "safety": {
     "hero": {
-      "title": "La seguridad es nuestra base.\nLa emoción viene después.",
+      "title": "La seguridad es nuestra base:\nla ingeniería de la tranquilidad.",
       "subtitle": "Ingeniería para volar con tranquilidad.",
-      "description": "En una industria llena de intermediarios sin aeronaves propias y ofertas que compiten solo por precio, nosotros operamos con listas de verificación rigurosas, valores innegociables y pasión técnica.\n\nFlying Pictures México parte de una idea muy simple: la emoción debe estar en la vista, nunca en el riesgo. Por eso somos una verdadera compañía de aviación en el Valle de Teotihuacán."
+      "description": "En una industria llena de intermediarios sin aeronaves propias y ofertas que compiten solo por precio, nosotros operamos con listas de verificación rigurosas, valores innegociables y pasión técnica.\n\nFlying Pictures México parte de una idea muy simple: la emoción debe estar en el vuelo, nunca en el riesgo. Por eso somos una verdadera compañía de aviación en el Valle de Teotihuacán."
     },
     "legacy": {
       "subtitle": "EL LEGADO",
@@ -21,11 +21,11 @@
         },
         "2": {
           "title": "Resistencia térmica",
-          "description": "Tecnología desarrollada por Cameron para prolongar la vida útil de la aeronave y mantener un comportamiento estable en vuelo."
+          "description": "Tecnología Cameron diseñada para gestionar las altas temperaturas que se generan durante la operación habitual de un globo."
         },
         "3": {
           "title": "Durabilidad operativa",
-          "description": "Una evolución de materiales pensada para mayor durabilidad, control térmico y operación confiable en condiciones exigentes."
+          "description": "Materiales seleccionados para ofrecer un desempeño confiable y una mayor vida útil bajo condiciones de operación exigentes."
         },
         "4": {
           "title": "Mantenimiento técnico",
@@ -34,8 +34,8 @@
       }
     },
     "footer": {
-      "title": "Ya conoces la ingeniería.\nAhora mira la vista.",
-      "description": "Leer sobre seguridad puede ser técnico.\nVolar con ella se siente extraordinario.",
+      "title": "Ya conoces las especificaciones.\nAhora disfruta el vuelo.",
+      "description": "Leer sobre seguridad puede no ser emocionante.\nVolar con ella es extraordinario.",
       "button": "Reserva con confianza"
     },
     "tale": {
@@ -51,7 +51,7 @@
         "2": {
           "flag": "mx",
           "title": "México:",
-          "description": "La experiencia llega a México con una operación enfocada en vuelos sobre Teotihuacán, seguridad y servicio premium."
+          "description": "La experiencia llega a México con una operación enfocada en vuelos sobre Teotihuacán, seguridad y servicio de alto nivel."
         },
         "3": {
           "flag": "gb",
@@ -85,7 +85,7 @@
         },
         "3": {
           "title": "Torre de control privada",
-          "description": "Operamos nuestra propia estación interna de monitoreo meteorológico. Revisamos velocidad y dirección del viento en tiempo real antes y durante la operación."
+          "description": "Somos la única compañía del valle que opera su propia estación interna de monitoreo meteorológico. Revisamos la velocidad y dirección del viento en tiempo real."
         },
         "4": {
           "title": "Solvencia verificada",
@@ -108,12 +108,12 @@
         },
         "3": {
           "name": "Modelo de mentoría",
-          "description": "Los pilotos más jóvenes no solo se integran al equipo: se forman bajo supervisión estricta para conservar intacta nuestra cultura de seguridad."
+          "description": "Los pilotos más jóvenes no solo se integran al equipo: reciben mentoría y vuelan bajo la estricta supervisión de nuestros fundadores para conservar intacta nuestra cultura de seguridad."
         }
       }
     },
     "meetGiants": {
-      "title": "Conoce a los gigantes amables",
+      "title": "Conoce a nuestros gigantes amables",
       "description": "Tratamos a nuestros globos como miembros de la familia. Cada uno tiene un nombre, una historia y una personalidad propia.",
       "subtitle": "LOS BUQUES INSIGNIA",
       "description2": "Diseñados para estabilidad, comodidad y el vuelo Tradicional.",
@@ -123,7 +123,7 @@
         "1": {
           "name": "Cameron A-315 (Los pesos pesados)",
           "subname": "XB-PCA / XB-SGN",
-          "description": "Piensa en ellos como los grandes transatlánticos del cielo. Con gran capacidad de elevación, estos envolventes ofrecen una experiencia estable, suave y cómoda. Están equipados con canastillas compartimentadas para que cada pasajero tenga su propio espacio para disfrutar y tomar fotografías.",
+          "description": "Piensa en ellos como los grandes transatlánticos del cielo. Con una capacidad de elevación de 800 kg, estos enormes envolventes ofrecen un vuelo suave y estable. Están equipados con nuestras canastillas compartimentadas, para que cada pasajero tenga su propio espacio para disfrutar y tomar fotografías.",
           "capacity": "Capacidad: 12 pasajeros + piloto",
           "mission": "Misión: Vuelo Clásico compartido"
         },
@@ -150,9 +150,9 @@
         "carddescription": "Pasión",
         "cardsubdescription": "Fiel a su nombre, esta aeronave suele acompañar nuestros momentos más románticos. Ha sido testigo de cientos de \"sí, acepto\" sobre la Pirámide del Sol.",
         "carddescription2": "Cóndor",
-        "cardsubdescription2": "Nombrado en honor al soberano de los cielos andinos, este globo combina potencia de elevación con la majestuosidad de un vuelo sereno.",
+        "cardsubdescription2": "Nombrado en honor al soberano de los cielos andinos, es una de las aeronaves más versátiles del valle: combina potencia de elevación con la majestuosidad del vuelo.",
         "carddescription3": "Mercurio & Rubicón",
-        "cardsubdescription3": "Nuestra flota de apoyo ágil, lista para eventos especiales, operación privada y logística de filmación."
+        "cardsubdescription3": "Nuestra flota de apoyo ágil, lista para eventos especiales y logística de filmación."
       }
     }
   }

@@ -7,7 +7,7 @@
     "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
-    "title": "Sin Estrés, de tu Puerta al Cielo",
+    "title": "Sin estrés, de tu puerta al cielo",
     "paragraph": "Una experiencia todo en uno: transporte redondo compartido desde CDMX, vuelo, desayuno buffet y hasta dos horas de acceso libre a la zona arqueológica. Nosotros coordinamos la logística para que tú te concentres en disfrutar el día."
   },
   "itinerary": {
@@ -18,25 +18,25 @@
         "description": "Llegarás a la recepción de Flying Pictures y te daremos la bienvenida para completar tu registro."
       },
       {
-        "title": "Bienvenida y Café",
+        "title": "Bienvenida y café",
         "description": "Después de tu registro te esperamos con nuestra estación de café, bebidas calientes y galletas tradicionales."
       },
       {
-        "title": "El Espectáculo de Inflado",
+        "title": "El espectáculo del inflado",
         "description": "Camina al campo de lanzamiento para ver a los \"Gigantes\" cobrar vida. Ver los enormes globos elevarse con el rugido de los quemadores es el primer acto del espectáculo."
       },
       {
-        "title": "El Ascenso",
-        "description": "Despega suavemente hacia el amanecer. Durante aprox. 45-60 minutos, flota en silencio sobre el Valle de Teotihuacán, viendo cómo el sol revela las pirámides desde arriba."
+        "title": "El ascenso",
+        "description": "Despega suavemente con las primeras luces. Durante aproximadamente 45 a 60 minutos, flota en silencio sobre el Valle de Teotihuacán. El paisaje cambia con las condiciones de cada mañana."
       },
       {
-        "title": "El Brindis de 1783",
+        "title": "El brindis de 1783",
         "description": "Al aterrizar, celebramos con un tradicional brindis de vino espumoso. Un ritual que se remonta a los primeros aviadores para agradecer a los dioses del viento un regreso seguro."
       }
     ]
   },
   "pricing": {
-    "dates": "Ver Fechas",
+    "dates": "Ver fechas",
     "adults": "Adultos",
     "kids": "Niños (4-12)"
   },
@@ -44,7 +44,7 @@
     "included": [
       "Transporte redondo compartido entre CDMX y Teotihuacán",
       "Vuelo compartido de aproximadamente 40 minutos",
-      "Coffee break con galletas y bebidas tradicionales mexicanas",
+      "Café de bienvenida con galletas y bebidas tradicionales mexicanas",
       "Brindis con vino espumoso u opción sin alcohol",
       "Certificado de vuelo personalizado",
       "Desayuno buffet",
@@ -71,18 +71,18 @@
     "notes": [
       "El acceso a la zona arqueológica es libre y no incluye guía.",
       "Los extranjeros no residentes pagan $110 MXN adicionales por persona al llegar.",
-      "El punto y horario de recogida en CDMX se confirman con la reservación."
+      "El punto y la hora en que pasaremos por ti en CDMX se confirman con la reservación."
     ],
     "itinerary": {
       "title": "Qué harás",
       "steps": [
         { "time": "Salida", "title": "Pasamos por ti en CDMX", "description": "Te recogemos en el punto de encuentro confirmado para viajar a Teotihuacán." },
         { "time": "Traslado", "title": "Viajas al Globopuerto", "description": "Disfrutas el trayecto mientras nuestro equipo se encarga de la logística." },
-        { "time": "Bienvenida", "title": "Tomas un coffee break", "description": "Al llegar te esperan café, galletas y bebidas tradicionales mexicanas." },
+        { "time": "Bienvenida", "title": "Disfrutas un café de bienvenida", "description": "Al llegar te esperan café, galletas y bebidas tradicionales mexicanas." },
         { "time": "Preparación", "title": "Ves inflar los globos", "description": "Conoces de cerca la preparación de la aeronave antes del despegue." },
         { "time": "Despegue", "title": "Comienza el ascenso", "description": "El piloto despega cuando las condiciones meteorológicas y operativas son adecuadas." },
-        { "time": "En el aire", "title": "Vuelas aproximadamente 40 minutos", "description": "Contemplas las vistas del Valle de Teotihuacán desde el aire." },
-        { "time": "Al aterrizar", "title": "Brindas y desayunas buffet", "description": "Celebras el vuelo, recibes tu certificado y disfrutas el desayuno." },
+        { "time": "En el aire", "title": "Vuelas aproximadamente 40 minutos", "description": "Contemplas el Valle de Teotihuacán desde el aire." },
+        { "time": "Al aterrizar", "title": "Brindas y disfrutas el desayuno buffet", "description": "Celebras el vuelo, recibes tu certificado y disfrutas el desayuno." },
         { "time": "Visita libre", "title": "Recorres la zona arqueológica", "description": "Dispones de hasta dos horas para explorar por tu cuenta con el acceso incluido." },
         { "time": "Regreso", "title": "Volvemos a CDMX", "description": "Regresas al punto acordado al terminar la visita." }
       ]

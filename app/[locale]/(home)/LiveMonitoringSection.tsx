@@ -42,7 +42,7 @@ export async function LiveMonitoringSection() {
       title: t('viewPromise.title'),
       description: t('viewPromise.description'),
       cta: t('viewPromise.cta'),
-      href: '/plan-your-visit',
+      href: '/plan-your-visit#weather-policy',
     },
   ]
 

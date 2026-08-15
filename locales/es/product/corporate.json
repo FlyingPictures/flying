@@ -1,14 +1,14 @@
 {
   "hero": {
-    "subtitle": "Canasta Privada | 45-60 Minutos | 🇬🇧 Estándares de Seguridad Británicos"
+    "subtitle": "Canastilla privada | 45-60 minutos | 🇬🇧 Estándares de seguridad británicos"
   },
   "rating": {
     "score": 4.8,
     "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
-    "title": "Team Building Fuera de lo Ordinario",
-    "paragraph": "Lleva a tu equipo a donde ninguna sala de juntas puede llegar. Un vuelo privado en globo sobre Teotihuacán rompe jerarquías, detona conversaciones y crea memorias compartidas que duran más que cualquier ejercicio de team building. Flying Pictures se encarga de cada detalle logístico para que tu único trabajo sea disfrutar la vista junto a tus colegas — y quizás cerrar ese trato a 2,000 metros."
+    "title": "Una experiencia de equipo fuera de lo común",
+    "paragraph": "Lleva a tu equipo a donde ninguna sala de juntas puede llegar. Un vuelo privado en globo sobre Teotihuacán rompe jerarquías, abre conversaciones y crea recuerdos compartidos que perduran más que cualquier dinámica de integración. Flying Pictures coordina cada detalle logístico para que ustedes solo se ocupen de disfrutar el vuelo —y quizá cerrar ese trato a 2,000 metros."
   },
   "itinerary": {
     "title": "Qué harás",
@@ -18,19 +18,19 @@
         "description": "Llegarás a la recepción de Flying Pictures y te daremos la bienvenida para completar tu registro."
       },
       {
-        "title": "Bienvenida y Café",
+        "title": "Bienvenida y café",
         "description": "Después de tu registro te esperamos con nuestra estación de café, bebidas calientes y galletas tradicionales."
       },
       {
-        "title": "El Espectáculo de Inflado",
+        "title": "El espectáculo del inflado",
         "description": "Camina al campo de lanzamiento para ver a los \"Gigantes\" cobrar vida. Ver los enormes globos elevarse con el rugido de los quemadores es el primer acto del espectáculo."
       },
       {
-        "title": "El Ascenso",
-        "description": "Despega suavemente hacia el amanecer. Durante aprox. 45-60 minutos, flota en silencio sobre el Valle de Teotihuacán, viendo cómo el sol revela las pirámides desde arriba."
+        "title": "El ascenso",
+        "description": "Despega suavemente con las primeras luces. Durante aproximadamente 45 a 60 minutos, flota en silencio sobre el Valle de Teotihuacán. El paisaje cambia con las condiciones de cada mañana."
       },
       {
-        "title": "El Brindis de 1783",
+        "title": "El brindis de 1783",
         "description": "Al aterrizar, celebramos con un tradicional brindis de vino espumoso. Un ritual que se remonta a los primeros aviadores para agradecer a los dioses del viento un regreso seguro."
       }
     ]

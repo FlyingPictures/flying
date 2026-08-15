@@ -7,8 +7,8 @@
     "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
-    "title": "El Sí Más Inolvidable de tu Vida",
-    "paragraph": "Una propuesta coordinada de principio a fin: vuelo privado para dos, lona sorpresa con la gran pregunta, ramo de 24 rosas, brindis y desayuno completo. Nuestro equipo prepara cada detalle con discreción para que ustedes vivan el momento."
+    "title": "El sí más inolvidable de tu vida",
+    "paragraph": "Una propuesta coordinada de principio a fin: vuelo privado para dos, lona sorpresa con la gran pregunta, ramo de 24 rosas, brindis y desayuno completo. Nuestro equipo prepara cada detalle con discreción para que tú te concentres en el momento."
   },
   "itinerary": {
     "title": "Qué harás",
@@ -18,32 +18,32 @@
         "description": "Llegarás a la recepción de Flying Pictures y te daremos la bienvenida para completar tu registro."
       },
       {
-        "title": "Bienvenida y Café",
+        "title": "Bienvenida y café",
         "description": "Después de tu registro te esperamos con nuestra estación de café, bebidas calientes y galletas tradicionales."
       },
       {
-        "title": "El Espectáculo de Inflado",
+        "title": "El espectáculo del inflado",
         "description": "Camina al campo de lanzamiento para ver a los \"Gigantes\" cobrar vida. Ver los enormes globos elevarse con el rugido de los quemadores es el primer acto del espectáculo."
       },
       {
-        "title": "El Ascenso",
-        "description": "Despega suavemente hacia el amanecer. Durante aprox. 45-60 minutos, flota en silencio sobre el Valle de Teotihuacán, viendo cómo el sol revela las pirámides desde arriba."
+        "title": "El ascenso",
+        "description": "Despega suavemente con las primeras luces. Durante aproximadamente 45 a 60 minutos, flota en silencio sobre el Valle de Teotihuacán. El paisaje cambia con las condiciones de cada mañana."
       },
       {
-        "title": "El Brindis de 1783",
+        "title": "El brindis de 1783",
         "description": "Al aterrizar, celebramos con un tradicional brindis de vino espumoso. Un ritual que se remonta a los primeros aviadores para agradecer a los dioses del viento un regreso seguro."
       }
     ]
   },
   "pricing": {
-    "dates": "Ver Fechas",
+    "dates": "Ver fechas",
     "adults": "2 adultos (vuelo privado)",
     "kids": "Persona adicional"
   },
   "details": {
     "included": [
       "Vuelo privado de aproximadamente 40 minutos para dos adultos",
-      "Coffee break con galletas y degustación de bebidas tradicionales mexicanas",
+      "Café de bienvenida con galletas y degustación de bebidas tradicionales mexicanas",
       "Brindis con vino espumoso u opción sin alcohol",
       "Certificados de vuelo personalizados",
       "Desayuno completo",
@@ -53,7 +53,7 @@
     ],
     "notIncluded": [
       "Transporte entre CDMX y Teotihuacán",
-      "Champagne francés — el brindis incluido es con vino espumoso",
+      "Champaña francesa — el brindis incluido es con vino espumoso",
       "Fotos y video del vuelo",
       "Mariachis",
       "Acceso, traslado o guía en la zona arqueológica",
@@ -61,7 +61,7 @@
     ],
     "recommendedExtras": [
       "Transporte redondo compartido o privado",
-      "Champagne",
+      "Champaña",
       "Fotos y video durante el vuelo",
       "Mariachis al aterrizaje",
       "Lona personalizada adicional",
@@ -71,13 +71,13 @@
     "notes": [
       "El precio base de $11,500 MXN corresponde a dos adultos en vuelo privado.",
       "Cada persona adicional tiene un costo de $2,600 MXN.",
-      "Fotos y video se consideran un extra hasta recibir confirmación comercial distinta."
+      "Fotos y video se consideran un extra hasta que el equipo comercial confirme lo contrario."
     ],
     "itinerary": {
       "title": "Qué harás",
       "steps": [
-        { "time": "Bienvenida", "title": "Llegan al Globopuerto", "description": "Los recibimos con coffee break mientras el equipo mantiene la sorpresa." },
-        { "time": "Preparación", "title": "Su globo, solo para ustedes", "description": "Abordan una canasta privada preparada para la ocasión." },
+        { "time": "Bienvenida", "title": "Llegan al Globopuerto", "description": "Los recibimos con café y galletas mientras el equipo mantiene la sorpresa." },
+        { "time": "Preparación", "title": "Su globo, solo para ustedes", "description": "Abordan una canastilla privada preparada para la ocasión." },
         { "time": "Despegue", "title": "Comienza el vuelo privado", "description": "El piloto despega cuando las condiciones meteorológicas son adecuadas." },
         { "time": "Momento especial", "title": "Aparece la gran pregunta", "description": "El equipo despliega la lona sorpresa con la frase ¿Te quieres casar conmigo?" },
         { "time": "Al aterrizar", "title": "Reciben el ramo y brindan", "description": "Los esperamos con 24 rosas y un brindis con vino espumoso." },

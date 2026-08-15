@@ -2,6 +2,10 @@
   "nav": {
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
+    "menuTitle": "Menú principal",
+    "chooseFlight": "Elige tu vuelo",
+    "viewAllExperiences": "Ver todas las experiencias",
+    "exploreFlying": "Conoce Flying",
     "switchLanguage": "Cambiar idioma",
     "chooseLanguage": "Selecciona tu idioma",
     "shared": "Vuelo compartido",

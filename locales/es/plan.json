@@ -3,41 +3,41 @@
     "hero": {
       "title": "Tu viaje hacia los cielos.",
       "subtitle": "Todo lo que necesitas saber antes de que suene el despertador",
-      "description": "Los momentos más sublimes comienzan antes de que el mundo despierte. Para garantizar que tu llegada a nuestro sitio de lanzamiento privado sea fluida y profesional, te proporcionamos esta información operativa. Desde el horario del transporte hasta los puntos de encuentro, nosotros gestionamos la precisión para que tú puedas disfrutar de la serenidad."
+      "description": "Los mejores momentos comienzan antes de que despierte el mundo. Para que tu llegada a nuestro sitio privado de despegue sea puntual y sin complicaciones, preparamos esta guía operativa. Horarios, transporte y puntos de encuentro: nosotros coordinamos los detalles para que tú disfrutes la calma."
     },
     "sunriseRitual": {
       "label": "La ciencia del vuelo",
       "title": "Por qué volamos al amanecer.",
-      "description": "Un globo aerostático es una aeronave de precisión que navega dentro de la masa de aire en lugar de resistirse a ella. Para lograrlo con absoluta seguridad, necesitamos una atmósfera estable. Este fenómeno meteorológico llamado inversión térmica ocurre exclusivamente durante las primeras horas de luz. Cuando el sol calienta el terreno, las corrientes térmicas crean turbulencias atmosféricas que hacen que las condiciones de vuelo no sean adecuadas para el globo. No programamos nuestros ascensos al amanecer solo por la estética; lo hacemos para mantener los más altos estándares de seguridad aeronáutica y estabilidad operativa."
+      "description": "Un globo aerostático es una aeronave de precisión que navega dentro de la masa de aire, en lugar de oponerse a ella. Para volar con seguridad necesitamos una atmósfera estable. Durante las primeras horas de luz puede presentarse el fenómeno meteorológico conocido como inversión térmica. Conforme el sol calienta el terreno, las corrientes térmicas pueden generar turbulencia y hacer que las condiciones dejen de ser adecuadas para volar. Programamos nuestros ascensos a primera hora no solo por el paisaje, sino para mantener los más altos estándares de seguridad aeronáutica y estabilidad operativa."
     },
     "gettingHere": {
       "label": "Llegada e indicaciones",
       "title": "Tu puerta de entrada \n al Valle.",
-      "description": "Ubicado en el corazón del Valle de Teotihuacán, nuestro sitio de lanzamiento privado es fácilmente accesible desde la Ciudad de México y sus alrededores. La precisión en tu llegada garantiza la excelencia de tu vuelo.",
+      "description": "Nuestro sitio privado de despegue se encuentra en el corazón del Valle de Teotihuacán y es fácilmente accesible desde la Ciudad de México y sus alrededores. Llegar a tiempo es el primer paso para que toda la experiencia fluya como debe.",
       "shuttle": {
         "cardTitle": "La opción sin estrés",
         "cardBody": "Si reservaste un paquete con transporte, nuestra camioneta te recoge directamente en tu hotel o Airbnb en zonas designadas (Reforma, Polanco, Centro, Roma/Condesa).",
-        "pickupTime": "Horario de salida: 04:30 AM y 05:00 AM",
+        "pickupTime": "Horarios para pasar por ti: 4:30 a.m. y 5:00 a.m.",
         "pickupNote": "(Confirmado por WhatsApp la noche anterior).",
-        "perks": "Ventajas: Aire acondicionado, cinturones de seguridad y la oportunidad de dormir una siesta en el regreso.",
+        "perks": "Ventajas: aire acondicionado, cinturones de seguridad y la oportunidad de dormir una siesta de regreso.",
         "openMaps": "Abrir en Google Maps"
       },
       "selfDrive": {
         "cardTitle": "En tu propio auto",
         "cardBody": "Si tienes vehículo propio, el trayecto dura entre 45 y 60 minutos desde el centro de CDMX (el tráfico es inexistente a esa hora).",
-        "parking": "Estacionamiento: Ofrecemos estacionamiento cerrado y seguro en el lugar sin costo adicional. Tu coche está seguro mientras tú estás en las nubes.",
+        "parking": "Estacionamiento: ofrecemos estacionamiento cerrado y seguro en nuestras instalaciones, sin costo adicional. Tu auto estará resguardado mientras vuelas.",
         "openMaps": "Abrir en Google Maps",
         "openWaze": "Abrir en Waze",
-        "disclaimer": "No adivines. Usa este enlace de Waze/Google Maps directamente a nuestro Globopuerto."
+        "disclaimer": "No improvises la ruta. Usa estos enlaces de Waze o Google Maps para llegar directamente a nuestro Globopuerto."
       }
     },
     "weatherPolicy": {
-      "label": "POLÍTICA CLIMÁTICA",
-      "title": "Integridad operativa:\n Nuestra garantía de vuelo.",
-      "description": "Mantenemos los protocolos de seguridad más rigurosos de la industria. Si las condiciones meteorológicas no cumplen con nuestros exigentes estándares, simplemente no volamos. Nuestro compromiso es con tu seguridad por encima de todo.\n \n Si se cancela un vuelo por mal clima, ofrecemos un cambio de fecha sin problemas o un reembolso completo. Priorizamos tu tranquilidad tanto como tu protección.",
+      "label": "POLÍTICA METEOROLÓGICA",
+      "title": "Integridad operativa:\nnuestra garantía ante el clima.",
+      "description": "Mantenemos protocolos de seguridad rigurosos. Si las condiciones meteorológicas no cumplen con nuestros estándares, simplemente no volamos. Tu seguridad está por encima de todo.\n\nSi un vuelo se cancela por mal clima, puedes cambiar de fecha sin costo o solicitar un reembolso completo. Cuidamos tu tranquilidad tanto como tu seguridad.",
       "companyCancellation": {
-        "title": "Si cancelamos nosotros (mal clima):",
-        "description": "Recibes un reembolso del 100% o un cambio de fecha gratuito para la próxima fecha disponible. Sin cargos ocultos ni discusiones."
+        "title": "Si cancelamos por mal clima:",
+        "description": "Recibes un reembolso del 100% o un cambio gratuito a la siguiente fecha disponible. Sin cargos ocultos ni complicaciones."
       },
       "customerCancellation": {
         "48plus": {
@@ -50,7 +50,7 @@
         },
         "24less": {
           "label": "Menos de 24 horas antes",
-          "description": "No reembolsable (la logística y el desayuno perecedero ya están en marcha)."
+            "description": "No hay reembolso. Los cambios de fecha están sujetos a disponibilidad."
         }
       }
     },
@@ -59,7 +59,7 @@
       "title": "Vístete para dos climas",
       "items": {
         "onionStrategy": {
-          "title": "La estrategia de la cebolla",
+          "title": "La estrategia de las capas",
           "description": "A las 6:00 AM hace fresco (y a veces frío), pero cuando aterrizamos y desayunamos, el sol mexicano ya calienta. Usa capas. Una chaqueta que puedas quitarte es tu mejor aliada."
         },
         "footwear": {
@@ -68,7 +68,7 @@
         },
         "luggage": {
           "title": "Equipaje",
-          "description": "Por favor, trae solo mochilas pequeñas. Las maletas grandes se pueden guardar de forma segura en nuestra recepción, pero no pueden volar en la canasta debido al peso y al espacio."
+          "description": "Trae solo una mochila pequeña. Podemos guardar las maletas grandes en nuestra recepción, pero no pueden subir a la canastilla por razones de peso y espacio."
         }
       }
     },
@@ -82,15 +82,15 @@
       "items": {
         "afraidHeights": {
           "question": "Tengo miedo a las alturas. ¿Me voy a marear?",
-          "answer": "Sorprendentemente, no. El vértigo suele venir de la conexión con el suelo. En un globo, estás despegado. El movimiento es tan estable que podrías equilibrar una moneda en su borde. La mayoría de los pasajeros nerviosos están sonriendo a los dos minutos."
+          "answer": "Por lo general, no. El vértigo suele aparecer por la referencia visual con el suelo; en un globo, esa conexión cambia. El movimiento es tan estable que podrías equilibrar una moneda sobre su canto. La mayoría de quienes suben con nervios comienza a sonreír en los primeros minutos."
         },
         "restrooms": {
           "question": "¿Hay baños?",
-          "answer": "Sí, contamos con servicios sanitarios en nuestras instalaciones antes del despegue. Durante el vuelo (aproximadamente una hora) no hay baño a bordo, así que recomendamos ir antes de abordar."
+          "answer": "Sí. Contamos con baños en nuestras instalaciones antes del despegue. No hay baño a bordo, así que recomendamos usarlos antes de subir a la canastilla."
         },
         "childrenFly": {
           "question": "¿Pueden volar niños?",
-          "answer": "Sí, niños de 4 años en adelante siempre que estén acompañados por un adulto. Cada niño debe ocupar su propio lugar en la canasta."
+          "answer": "Sí. Pueden volar niños de 4 años en adelante, siempre acompañados por un adulto. Cada niño debe ocupar su propio lugar en la canastilla."
         },
         "pregnantFly": {
           "question": "¿Pueden volar mujeres embarazadas?",
@@ -98,11 +98,11 @@
         },
         "weightLimit": {
           "question": "¿Hay límite de peso?",
-          "answer": "El peso máximo por pasajero es de 120 kg (265 libras). Por razones de seguridad y equilibrio del globo, los pasajeros que superen este límite no podrán volar. Si tienes dudas, contáctanos antes de reservar."
+          "answer": "El peso máximo por pasajero es de 120 kg (265 lb). Si tienes alguna duda, contáctanos antes de reservar para que nuestro equipo pueda planear el vuelo de forma segura."
         },
         "bringCamera": {
           "question": "¿Puedo llevar una cámara?",
-          "answer": "Sí, puedes traer tu cámara. Recomendamos un objetivo gran angular para capturar las hermosas vistas. Las cámaras profesionales están permitidas, pero deben ir aseguradas con una correa para evitar caídas."
+          "answer": "Sí. Puedes traer tu cámara; un lente gran angular funciona especialmente bien para capturar el paisaje. Las cámaras profesionales deben llevar una correa de seguridad."
         },
         "breakfast": {
           "question": "¿Cómo es el desayuno?",
