@@ -10,6 +10,8 @@
     "lint": "eslint",
     "validate:data": "node scripts/validate-data.mjs",
     "test:pricing": "node --experimental-strip-types --test tests/product-pricing.test.mjs",
+    "test:packages": "node --experimental-strip-types --test tests/*.test.mjs",
+    "verify:packages": "node scripts/verify-package-preview.mjs",
     "check": "npm run validate:data && npm run lint"
   },
   "dependencies": {

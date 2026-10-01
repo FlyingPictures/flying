@@ -1,0 +1,478 @@
+{
+  "date": "2026-09-30",
+  "productChecks": [
+    {
+      "errorOverlay": false,
+      "path": "/es/product/classic",
+      "price": "Precio por adulto$2,599 MXNNiños (4–12)$1,999 MXNConsultar disponibilidad",
+      "title": "Vuelo Esencial",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/es/product/transport",
+      "price": "Precio por adulto$3,550 MXNNiños (4–12)$2,850 MXNConsultar disponibilidad",
+      "title": "+Transporte + Pirámides",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/es/product/vip",
+      "price": "Precio por paquete$22,500 MXNConsultar disponibilidadConfirma cuántas personas incluye el paquete y el total de tu grupo.",
+      "title": "Premium - VIP",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/es/product/celebration",
+      "price": "Precio por paquete$11,999 MXNConsultar disponibilidadMínimo 2 personas. Confirma cuántas personas incluye el paquete y el total de tu grupo.",
+      "title": "Celebración",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/es/product/journey",
+      "price": "Consultar precioConsultar disponibilidadMínimo 2 personas. Confirma cuántas personas incluye el paquete y el total de tu grupo.",
+      "title": "Viajero",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/es/product/private",
+      "price": "Precio por paquete$11,499 MXNConsultar disponibilidadMínimo 2 personas. Confirma cuántas personas incluye el paquete y el total de tu grupo.",
+      "title": "Experiencia en Globo Privada",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/es/product/charter",
+      "price": "Precio por paquete$30,000 MXNConsultar disponibilidadConfirma cuántas personas incluye el paquete y el total de tu grupo.",
+      "title": "FPM Private Charter",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/classic",
+      "price": "Price per adult$2,599 MXNChildren (4–12)$1,999 MXNAsk about availability",
+      "title": "Essential Flight",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/transport",
+      "price": "Price per adult$3,550 MXNChildren (4–12)$2,850 MXNAsk about availability",
+      "title": "Flight + Transport + Pyramids",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/vip",
+      "price": "Price per package$22,500 MXNAsk about availabilityConfirm how many guests the package includes and your group's total.",
+      "title": "Premium - VIP",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/celebration",
+      "price": "Price per package$11,999 MXNAsk about availabilityMinimum 2 guests. Confirm how many guests the package includes and your group's total.",
+      "title": "Celebration",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/journey",
+      "price": "Ask for pricingAsk about availabilityMinimum 2 guests. Confirm how many guests the package includes and your group's total.",
+      "title": "Traveler",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/private",
+      "price": "Price per package$11,499 MXNAsk about availabilityMinimum 2 guests. Confirm how many guests the package includes and your group's total.",
+      "title": "Private Balloon Experience",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/charter",
+      "price": "Price per package$30,000 MXNAsk about availabilityConfirm how many guests the package includes and your group's total.",
+      "title": "FPM Private Charter",
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "errorOverlay": false,
+      "path": "/es/product/classic",
+      "price": "Precio por adulto$2,599 MXNNiños (4–12)$1,999 MXNConsultar disponibilidad",
+      "title": "Vuelo Esencial",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "errorOverlay": false,
+      "path": "/es/product/transport",
+      "price": "Precio por adulto$3,550 MXNNiños (4–12)$2,850 MXNConsultar disponibilidad",
+      "title": "+Transporte + Pirámides",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "errorOverlay": false,
+      "path": "/es/product/vip",
+      "price": "Precio por paquete$22,500 MXNConsultar disponibilidadConfirma cuántas personas incluye el paquete y el total de tu grupo.",
+      "title": "Premium - VIP",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "errorOverlay": false,
+      "path": "/es/product/celebration",
+      "price": "Precio por paquete$11,999 MXNConsultar disponibilidadMínimo 2 personas. Confirma cuántas personas incluye el paquete y el total de tu grupo.",
+      "title": "Celebración",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "errorOverlay": false,
+      "path": "/es/product/journey",
+      "price": "Consultar precioConsultar disponibilidadMínimo 2 personas. Confirma cuántas personas incluye el paquete y el total de tu grupo.",
+      "title": "Viajero",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "errorOverlay": false,
+      "path": "/es/product/private",
+      "price": "Precio por paquete$11,499 MXNConsultar disponibilidadMínimo 2 personas. Confirma cuántas personas incluye el paquete y el total de tu grupo.",
+      "title": "Experiencia en Globo Privada",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "errorOverlay": false,
+      "path": "/es/product/charter",
+      "price": "Precio por paquete$30,000 MXNConsultar disponibilidadConfirma cuántas personas incluye el paquete y el total de tu grupo.",
+      "title": "FPM Private Charter",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/classic",
+      "price": "Price per adult$2,599 MXNChildren (4–12)$1,999 MXNAsk about availability",
+      "title": "Essential Flight",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/transport",
+      "price": "Price per adult$3,550 MXNChildren (4–12)$2,850 MXNAsk about availability",
+      "title": "Flight + Transport + Pyramids",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/vip",
+      "price": "Price per package$22,500 MXNAsk about availabilityConfirm how many guests the package includes and your group's total.",
+      "title": "Premium - VIP",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/celebration",
+      "price": "Price per package$11,999 MXNAsk about availabilityMinimum 2 guests. Confirm how many guests the package includes and your group's total.",
+      "title": "Celebration",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/journey",
+      "price": "Ask for pricingAsk about availabilityMinimum 2 guests. Confirm how many guests the package includes and your group's total.",
+      "title": "Traveler",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/private",
+      "price": "Price per package$11,499 MXNAsk about availabilityMinimum 2 guests. Confirm how many guests the package includes and your group's total.",
+      "title": "Private Balloon Experience",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "errorOverlay": false,
+      "path": "/en/product/charter",
+      "price": "Price per package$30,000 MXNAsk about availabilityConfirm how many guests the package includes and your group's total.",
+      "title": "FPM Private Charter",
+      "viewport": 320,
+      "width": 320
+    }
+  ],
+  "homeCategoryChecks": [
+    {
+      "category": "Compartido",
+      "slides": [
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hola%2C%20quiero%20consultar%20disponibilidad%2C%20condiciones%20y%20precio%20total%20para%20%2BTransporte%20%2B%20Pir%C3%A1mides.",
+              "text": "Consultar disponibilidad"
+            },
+            {
+              "href": "/es/product/transport",
+              "text": "Ver detalles del vuelo"
+            }
+          ],
+          "title": "+Transporte + Pirámides"
+        },
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hola%2C%20quiero%20consultar%20disponibilidad%2C%20condiciones%20y%20precio%20total%20para%20Vuelo%20Esencial.",
+              "text": "Consultar disponibilidad"
+            },
+            {
+              "href": "/es/product/classic",
+              "text": "Ver detalles del vuelo"
+            }
+          ],
+          "title": "Vuelo Esencial"
+        },
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hola%2C%20quiero%20consultar%20disponibilidad%2C%20condiciones%20y%20precio%20total%20para%20Viajero.",
+              "text": "Consultar disponibilidad"
+            },
+            {
+              "href": "/es/product/journey",
+              "text": "Ver detalles del vuelo"
+            }
+          ],
+          "title": "Viajero"
+        }
+      ],
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "category": "Privado",
+      "slides": [
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hola%2C%20quiero%20consultar%20disponibilidad%2C%20condiciones%20y%20precio%20total%20para%20Celebraci%C3%B3n.",
+              "text": "Consultar disponibilidad"
+            },
+            {
+              "href": "/es/product/celebration",
+              "text": "Ver detalles del vuelo"
+            }
+          ],
+          "title": "Celebración"
+        },
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hola%2C%20quiero%20consultar%20disponibilidad%2C%20condiciones%20y%20precio%20total%20para%20Experiencia%20en%20Globo%20Privada.",
+              "text": "Consultar disponibilidad"
+            },
+            {
+              "href": "/es/product/private",
+              "text": "Ver detalles del vuelo"
+            }
+          ],
+          "title": "Experiencia en Globo Privada"
+        }
+      ],
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "category": "VIP y recorridos",
+      "slides": [
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hola%2C%20quiero%20consultar%20disponibilidad%2C%20condiciones%20y%20precio%20total%20para%20FPM%20Private%20Charter.",
+              "text": "Consultar disponibilidad"
+            },
+            {
+              "href": "/es/product/charter",
+              "text": "Ver detalles del vuelo"
+            }
+          ],
+          "title": "FPM Private Charter"
+        },
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hola%2C%20quiero%20consultar%20disponibilidad%2C%20condiciones%20y%20precio%20total%20para%20Premium%20-%20VIP.",
+              "text": "Consultar disponibilidad"
+            },
+            {
+              "href": "/es/product/vip",
+              "text": "Ver detalles del vuelo"
+            }
+          ],
+          "title": "Premium - VIP"
+        }
+      ],
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "category": "Shared",
+      "path": "/en",
+      "slides": [
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20availability%2C%20terms%20and%20the%20total%20price%20for%20Flight%20%2B%20Transport%20%2B%20Pyramids.",
+              "text": "Ask about availability"
+            },
+            {
+              "href": "/en/product/transport",
+              "text": "View Flight Details"
+            }
+          ],
+          "title": "Flight + Transport + Pyramids"
+        },
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20availability%2C%20terms%20and%20the%20total%20price%20for%20Essential%20Flight.",
+              "text": "Ask about availability"
+            },
+            {
+              "href": "/en/product/classic",
+              "text": "View Flight Details"
+            }
+          ],
+          "title": "Essential Flight"
+        },
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20availability%2C%20terms%20and%20the%20total%20price%20for%20Traveler.",
+              "text": "Ask about availability"
+            },
+            {
+              "href": "/en/product/journey",
+              "text": "View Flight Details"
+            }
+          ],
+          "title": "Traveler"
+        }
+      ],
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "category": "Private",
+      "path": "/en",
+      "slides": [
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20availability%2C%20terms%20and%20the%20total%20price%20for%20Celebration.",
+              "text": "Ask about availability"
+            },
+            {
+              "href": "/en/product/celebration",
+              "text": "View Flight Details"
+            }
+          ],
+          "title": "Celebration"
+        },
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20availability%2C%20terms%20and%20the%20total%20price%20for%20Private%20Balloon%20Experience.",
+              "text": "Ask about availability"
+            },
+            {
+              "href": "/en/product/private",
+              "text": "View Flight Details"
+            }
+          ],
+          "title": "Private Balloon Experience"
+        }
+      ],
+      "viewport": 1280,
+      "width": 1280
+    },
+    {
+      "category": "Vip & Tours",
+      "path": "/en",
+      "slides": [
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20availability%2C%20terms%20and%20the%20total%20price%20for%20FPM%20Private%20Charter.",
+              "text": "Ask about availability"
+            },
+            {
+              "href": "/en/product/charter",
+              "text": "View Flight Details"
+            }
+          ],
+          "title": "FPM Private Charter"
+        },
+        {
+          "links": [
+            {
+              "href": "https://wa.me/525510484758?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20availability%2C%20terms%20and%20the%20total%20price%20for%20Premium%20-%20VIP.",
+              "text": "Ask about availability"
+            },
+            {
+              "href": "/en/product/vip",
+              "text": "View Flight Details"
+            }
+          ],
+          "title": "Premium - VIP"
+        }
+      ],
+      "viewport": 1280,
+      "width": 1280
+    }
+  ],
+  "catalogAnchors": [
+    {
+      "intent": "Experiencia completa",
+      "url": "http://127.0.0.1:3100/es/flight-experiences#catalog-complete"
+    },
+    {
+      "intent": "Vuelo compartido",
+      "url": "http://127.0.0.1:3100/es/flight-experiences#catalog-shared"
+    },
+    {
+      "intent": "Celebraciones",
+      "url": "http://127.0.0.1:3100/es/flight-experiences#catalog-celebration"
+    },
+    {
+      "intent": "Privado y VIP",
+      "url": "http://127.0.0.1:3100/es/flight-experiences#catalog-private-vip"
+    }
+  ],
+  "homeInquiryIssues": [],
+  "consoleErrors": []
+}

@@ -36,6 +36,8 @@ El snapshot incluye todos los archivos no ignorados que figuraban pendientes ant
 
 | `fpm-packages-2026-09-30-m5-review` | Destinos de consulta revisados; compra directa y versiones activas pendientes | `milestone-5-reservas-2026-09-30.md` |
 
+| `fpm-packages-2026-09-30-m6` | Versión de consulta validada, ajustes móviles y evidencia de pruebas/navegador | `milestone-6-validacion-2026-09-30.md` |
+
 ## Revisar o recuperar una versión anterior sin borrar trabajo
 
 Primero comprobar si hay trabajo pendiente:

@@ -92,22 +92,25 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
         <div className="lg:col-span-5 flex flex-col gap-8 lg:gap-12 text-center lg:text-center lg:self-center py-6 lg:py-0">
           <h1 className="product-title">{getProductName(slug, locale)}</h1>
           <p className="text-sm text-muted-foreground">{data.hero.subtitle}</p>
-          <div className="mx-auto flex w-full max-w-md flex-col items-center gap-4 rounded-(--radius) border border-border bg-card/50 p-4 sm:flex-row sm:justify-between">
-            {productPricing && (
-              <div className="flex flex-col text-left text-sm lg:text-base">
-                {priceDisplay.rows.length ? priceDisplay.rows.map((row) => (
-                  <span key={row.label}>
-                    <strong>{row.label}</strong>{" "}{row.formattedAmount}
-                  </span>
-                )) : <strong>{priceDisplay.headline}</strong>}
-                {priceDisplay.note && <p className="mt-2 text-xs text-muted-foreground">{priceDisplay.note}</p>}
-              </div>
-            )}
-            <Button variant="primary" size="sm" className="shrink-0" asChild>
-              <a href={reservationUrl} target="_blank" rel="noopener noreferrer">
-                {data.pricing.dates}
-              </a>
-            </Button>
+          <div className="mx-auto flex w-full max-w-md flex-col gap-4 rounded-(--radius) border border-border bg-card/50 p-4">
+            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+              {productPricing && (
+                <div className="flex flex-col text-left text-sm lg:text-base">
+                  {priceDisplay.rows.length ? priceDisplay.rows.map((row) => (
+                    <span key={row.label} className="flex flex-wrap items-baseline gap-x-2">
+                      <strong>{row.label}</strong>
+                      <span className="whitespace-nowrap">{row.formattedAmount}</span>
+                    </span>
+                  )) : <strong>{priceDisplay.headline}</strong>}
+                </div>
+              )}
+              <Button variant="primary" size="sm" className="shrink-0" asChild>
+                <a href={reservationUrl} target="_blank" rel="noopener noreferrer">
+                  {data.pricing.dates}
+                </a>
+              </Button>
+            </div>
+            {productPricing && priceDisplay.note && <p className="text-left text-xs leading-relaxed text-muted-foreground">{priceDisplay.note}</p>}
           </div>
           <div className="flex flex-col gap-2">
             <h5 className="font-bold text-lg">{data.description.title}</h5>

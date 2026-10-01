@@ -31,10 +31,6 @@ const EXPERIENCES = PACKAGE_SLUGS.map((slug) => ({
   href: `/product/${slug}`,
 }))
 
-const MOBILE_FEATURED_EXPERIENCES = EXPERIENCES.filter(({ slug }) =>
-  (["classic", "transport", "journey", "vip"] as ProductSlug[]).includes(slug),
-)
-
 const NavLink = ({ id, href, className = "", onClick }: { id: string; href: string; className?: string; onClick?: () => void }) => {
   const t = useTranslations("nav")
   const pathname = usePathname()
@@ -337,7 +333,7 @@ export default function Navbar() {
                         {t("chooseFlight")}
                       </p>
                       <div className="overflow-hidden rounded-2xl border border-secondary/10 bg-background shadow-[0_12px_40px_rgba(3,48,59,0.06)]">
-                        {MOBILE_FEATURED_EXPERIENCES.map((exp, index) => (
+                        {EXPERIENCES.map((exp, index) => (
                           <ProductNavLink
                             key={exp.slug}
                             slug={exp.slug}

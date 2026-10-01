@@ -1,6 +1,6 @@
 # Plan de actualización de paquetes Flying Pictures
 
-Fecha: 30 de septiembre de 2026. El usuario autorizó dividir el plan en milestones, establecer control de versiones, comenzar M1 y posteriormente continuar. Las condiciones comerciales pendientes siguen abiertas. M2 incorporó el modelo de precios; M3 activa el catálogo nuevo y sus contenidos con consulta de disponibilidad. No se ha publicado ningún cambio.
+Fecha: 30 de septiembre de 2026. El usuario autorizó dividir el plan en milestones, establecer control de versiones, comenzar M1 y posteriormente continuar. Las condiciones comerciales pendientes siguen abiertas. M2 incorporó el modelo de precios; M3 activa el catálogo nuevo y sus contenidos con consulta de disponibilidad. M4 conserva enlaces y SEO; M6 valida la versión de consulta. No se ha publicado ningún cambio.
 
 ## Milestones y checkpoints
 
@@ -14,7 +14,7 @@ Rama de trabajo: `codex/new-packages-2026-09-30`. Cada milestone tendrá un comm
 | M3 — Contenido y catálogo ES/EN | Siete fichas, portada, catálogo, navegación e imágenes actualizados | Paridad entre idiomas y servicios coherentes en todo el recorrido | M1 y M2 | Completado; tag `fpm-packages-2026-09-30-m3` |
 | M4 — Enlaces y SEO | Direcciones conservadas, redirecciones de celebraciones y metadata/sitemap actualizados | Rutas y cambio de idioma correctos; enlaces antiguos llevan a su equivalente | M3 | Completado; tag `fpm-packages-2026-09-30-m4` |
 | M5 — Reservas y versiones temporales | Destinos correctos de Peek o consulta por WhatsApp; landing reconciliada si sigue activa | Cada botón abre el paquete correcto; modalidad de reserva y versiones activas definidas | M1, M3 y destino confirmado | Preparado para consulta; modalidad y versiones activas pendientes |
-| M6 — Validación y vista previa | Comprobaciones de datos, compilación y revisión funcional/visual | Precios cotejados con matriz; siete fichas ES/EN comprobadas en móvil y escritorio | M2–M5 | Pendiente |
+| M6 — Validación y vista previa | Comprobaciones de datos, compilación y revisión funcional/visual | Precios cotejados con matriz; siete fichas ES/EN comprobadas en móvil y escritorio | M2–M5; validación de la versión de consulta | Completado técnicamente; tag `fpm-packages-2026-09-30-m6` |
 | M7 — Publicación y verificación | Versión aprobada publicada, referencia al despliegue anterior y revisión posterior | Destino y vista previa aprobados; oferta coherente con reservas; rollback de despliegue identificado | M6 y aprobación de publicación | Pendiente |
 
 Checkpoint inicial: `fpm-packages-2026-09-30-baseline`, commit `2f5dfe6c5479854d627b57f6a6823956fd786151`. Incluye los cambios previos de la barra móvil, documentación, landing y auditorías existentes. Esos archivos no son cambios producidos por M1.
@@ -131,6 +131,8 @@ Actualizar `scripts/validate-data.mjs`, que actualmente exige la lista de produc
 Revisar en escritorio y móvil las siete fichas en ambos idiomas, navegación, filtros, imágenes, etiquetas por persona/paquete, adicionales, barra flotante, botones, cambio de idioma, sitemap y redirecciones. Buscar nombres, precios, enlaces y promesas de la oferta anterior en las superficies comerciales activas.
 
 Comparar los precios y servicios visibles con la matriz aprobada y revisar los destinos de Peek sin completar ninguna compra. Entregar una vista previa y un resumen de cambios antes de publicar.
+
+Entrega M6: [validación y vista previa](milestone-6-validacion-2026-09-30.md). Pasaron 14 pruebas, 29 comprobaciones de rutas/SEO, revisión de tipos/código y compilación. Las catorce fichas se comprobaron en navegador a 1280 y 320 píxeles, con navegación e idioma. Las condiciones comerciales siguen pendientes; M6 valida la versión de consulta, no aprueba compra ni publicación.
 
 ### M7. Publicar y verificar
 

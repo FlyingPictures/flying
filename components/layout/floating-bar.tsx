@@ -115,7 +115,6 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
               <span className="whitespace-nowrap">{row.formattedAmount}</span>
             </div>
           )) : <span className="font-bold">{priceDisplay.headline}</span>}
-          {priceDisplay.note && <p className="mt-1 text-[10px] text-muted-foreground">{priceDisplay.note}</p>}
         </div>
       )}
 
@@ -130,6 +129,12 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
           <WhatsappLogoIcon size={28} weight="bold" />
         </a>
       </Button>
+
+      {pricing && priceDisplay.note && (
+        <p className="basis-full text-[11px] leading-4 text-muted-foreground md:text-xs">
+          {priceDisplay.note}
+        </p>
+      )}
     </>
   )
 
@@ -141,7 +146,7 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
       >
         <FloatingCard
           className={cn(
-            "max-w-[calc(100vw-1rem)] gap-2",
+            "max-w-[calc(100vw-1rem)] flex-wrap gap-2",
             isCorporate && "max-w-80",
           )}
         >
@@ -156,7 +161,7 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
           isCorporate ? "w-80" : "w-120",
         )}
       >
-        <FloatingCard className="max-w-none gap-4">{Content}</FloatingCard>
+        <FloatingCard className="max-w-none flex-wrap gap-4">{Content}</FloatingCard>
       </FloatingWrapper>
     </>
   )
