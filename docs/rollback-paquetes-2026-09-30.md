@@ -19,7 +19,7 @@ El snapshot incluye todos los archivos no ignorados que figuraban pendientes ant
 - Tags de cierre: `fpm-packages-2026-09-30-m0`, `...-m1`, hasta `...-m7`.
 - Entregas con decisiones abiertas: `...-m1-review`, sin tag de cierre M1 hasta resolver su criterio comercial.
 - Registrar evidencias y estado en el plan. La preparación documental no equivale a validación del sitio ni aprobación comercial.
-- Mantener commits y tags locales durante M0/M1. No se ha enviado esta rama al remoto ni publicado el sitio.
+- Mantener commits y tags locales durante esta preparación. No se ha enviado esta rama al remoto ni publicado el sitio.
 
 ## Checkpoints registrados
 
@@ -28,6 +28,7 @@ El snapshot incluye todos los archivos no ignorados que figuraban pendientes ant
 | `fpm-packages-2026-09-30-baseline` | Trabajo previo completo, antes de la migración | Commit `2f5dfe6c5479854d627b57f6a6823956fd786151` |
 | `fpm-packages-2026-09-30-m0` | Milestones definidos y procedimiento de rollback | Commit `a39bcca7c7ab18dc54f463f66f99c7abb2cf771d` |
 | `fpm-packages-2026-09-30-m1-review` | Matriz preparada y verificada; confirmaciones comerciales abiertas | Tag de revisión asociado a esta entrega; no es el cierre comercial de M1 |
+| `fpm-packages-2026-09-30-m2` | Modelo de precios y presentación común preparados; catálogo anterior aún activo | Comprobaciones y alcance en `milestone-2-precios-2026-09-30.md` |
 
 ## Revisar o recuperar una versión anterior sin borrar trabajo
 

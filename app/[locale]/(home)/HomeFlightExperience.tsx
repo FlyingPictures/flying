@@ -8,7 +8,7 @@ import { CloudinaryImage } from '@/components/CloudinaryImage'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { IMAGES } from '@/lib/images'
-import { BOOKING_URLS, PRODUCT_PRICING, ProductSlug, formatMxn, getProductName } from '@/lib/commercial-config'
+import { BOOKING_URLS, PRODUCT_PRICING, ProductSlug, getPriceDisplay, getProductName } from '@/lib/commercial-config'
 import { Link } from '@/i18n/routing'
 
 type TabKey = 'shared' | 'private' | 'vip'
@@ -273,6 +273,7 @@ export function FlightExperienceSection() {
         >
           {visibleFlights.map((flight, index) => {
             const pricing = PRODUCT_PRICING[flight.slug]!
+            const priceDisplay = getPriceDisplay(pricing, locale)
             const bookingUrl = BOOKING_URLS[flight.slug]!
 
             return (
@@ -308,9 +309,10 @@ export function FlightExperienceSection() {
                     )}
                   </div>
                   <div className="mt-auto flex flex-wrap justify-between items-center gap-3">
-                    <strong className="text-[clamp(16px,2vw,22px)]">
-                      {t('from', { price: formatMxn(pricing.primary) })}
-                    </strong>
+                    <div>
+                      <span className="block text-xs text-background/80">{priceDisplay.unitLabel}</span>
+                      <strong className="text-[clamp(16px,2vw,22px)]">{priceDisplay.summary}</strong>
+                    </div>
                     <Button variant="primary" size="xs" asChild>
                       <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
                         {t('bookFlight')}
@@ -320,6 +322,7 @@ export function FlightExperienceSection() {
                 </div>
               </div>
               <div className="flex flex-col items-center px-4 py-5">
+                {priceDisplay.note && <p className="mb-2 max-w-150 text-center text-xs text-popover-foreground">{priceDisplay.note}</p>}
                 <p className="text-center text-popover-foreground max-w-150 text-[clamp(14px,1.4vw,17px)] leading-relaxed">
                   {productT(`subtitles.${flight.slug}`)}
                 </p>

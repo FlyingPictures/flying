@@ -1,3 +1,7 @@
+import type { ProductPricing } from "./product-pricing";
+export { formatMxn, getPriceDisplay } from "./product-pricing";
+export type { ProductPricing, PriceDisplay, PriceRow } from "./product-pricing";
+
 export const PRODUCT_SLUGS = [
   "classic",
   "journey",
@@ -49,24 +53,8 @@ export const PRODUCT_NAMES: Record<
   },
 };
 
-export const HOME_FLIGHT_NAMES = {
-  shared: { es: PRODUCT_NAMES.classic.es, en: PRODUCT_NAMES.classic.en },
-  private: {
-    es: "Tradicional privado",
-    en: "Private Traditional Flight",
-  },
-  vip: { es: PRODUCT_NAMES.vip.es, en: PRODUCT_NAMES.vip.en },
-} as const;
-
 export function getProductName(slug: ProductSlug, locale: string) {
   return PRODUCT_NAMES[slug][locale === "es" ? "es" : "en"];
-}
-
-export function getHomeFlightName(
-  type: keyof typeof HOME_FLIGHT_NAMES,
-  locale: string,
-) {
-  return HOME_FLIGHT_NAMES[type][locale === "es" ? "es" : "en"];
 }
 
 export const BOOKING_URLS: Partial<Record<ProductSlug, string>> = {
@@ -80,12 +68,6 @@ export const BOOKING_URLS: Partial<Record<ProductSlug, string>> = {
   vip: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/Exzbg",
 };
 
-type ProductPricing = {
-  primary: number;
-  secondary: number | null;
-  model: "perPerson" | "privateForTwo" | "voucher";
-};
-
 export const PRODUCT_PRICING: Record<ProductSlug, ProductPricing | null> = {
   classic: { primary: 2599, secondary: 1999, model: "perPerson" },
   journey: { primary: 3950, secondary: 3250, model: "perPerson" },
@@ -97,25 +79,6 @@ export const PRODUCT_PRICING: Record<ProductSlug, ProductPricing | null> = {
   vip: { primary: 4499, secondary: 3499, model: "perPerson" },
   corporate: null,
 };
-
-export const HOME_FLIGHT_OFFERS = {
-  shared: {
-    price: 2599,
-    bookingUrl: BOOKING_URLS.classic!,
-  },
-  private: {
-    price: 9199,
-    bookingUrl: "https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/2z1J",
-  },
-  vip: {
-    price: 4499,
-    bookingUrl: BOOKING_URLS.vip!,
-  },
-} as const;
-
-export function formatMxn(amount: number) {
-  return `$${new Intl.NumberFormat("en-US").format(amount)} MXN`;
-}
 
 export const BUSINESS_HOURS = {
   start: 6,

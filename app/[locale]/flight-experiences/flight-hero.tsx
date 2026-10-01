@@ -1,10 +1,10 @@
 import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { Button } from "@/components/ui/button";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { IMAGES } from "@/lib/images";
 import {
   PRODUCT_PRICING,
-  formatMxn,
+  getPriceDisplay,
 } from "@/lib/commercial-config";
 import { SITE_CONTACT } from "@/lib/site-config";
 import {
@@ -13,8 +13,11 @@ import {
 } from "@/lib/tripadvisor-reviews";
 
 export async function FlightHero() {
-  const t = await getTranslations("flightExperiences.hero");
-  const entryPrice = PRODUCT_PRICING.classic!.primary;
+  const [t, locale] = await Promise.all([
+    getTranslations("flightExperiences.hero"),
+    getLocale(),
+  ]);
+  const entryPrice = getPriceDisplay(PRODUCT_PRICING.classic, locale);
 
   return (
     <section className="relative flex min-h-[780px] overflow-hidden bg-secondary pb-14 pt-40 text-background md:min-h-[720px] md:pt-44 lg:min-h-[820px] lg:items-center lg:pb-16 lg:pt-44">
@@ -54,7 +57,7 @@ export async function FlightHero() {
 
           <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
             <strong className="text-xl text-background md:text-2xl">
-              {t("experiencesFrom", { price: formatMxn(entryPrice) })}
+              {entryPrice.rows.length ? t("experiencesFrom", { price: entryPrice.headline }) : entryPrice.headline}
             </strong>
             <span className="hidden h-5 w-px bg-background/25 sm:block" aria-hidden="true" />
             <span className="text-sm font-semibold text-background/65">{t("secureBooking")}</span>

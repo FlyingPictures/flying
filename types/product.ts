@@ -4,6 +4,8 @@ import {
 } from "@/lib/commercial-config";
 
 export type { ProductSlug };
+export type { ProductPricing, PriceDisplay, PriceRow } from "@/lib/product-pricing";
+export type { NewPackageSlug, PackageOffer } from "@/lib/package-catalog";
 export const PRODUCTS = PRODUCT_SLUGS;
 
 export interface ItineraryStep {

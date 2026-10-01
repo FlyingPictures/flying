@@ -5,7 +5,7 @@ import { IMAGES } from "@/lib/images";
 import {
   BOOKING_URLS,
   PRODUCT_PRICING,
-  formatMxn,
+  getPriceDisplay,
   getProductName,
   type ProductSlug,
 } from "@/lib/commercial-config";
@@ -111,7 +111,7 @@ export async function FlightCardsSection() {
         ))}
       </div>
 
-      <GiftCard t={t} />
+      <GiftCard t={t} locale={locale} />
     </section>
   );
 }
@@ -128,6 +128,7 @@ function FlightCard({
   featured?: boolean;
 }) {
   const pricing = PRODUCT_PRICING[id]!;
+  const priceDisplay = getPriceDisplay(pricing, locale);
   const bookingUrl = BOOKING_URLS[id] ?? SITE_CONTACT.whatsapp;
   const features = getFeatures(t(`includes.${id}`));
   const intentId = getIntentId(id);
@@ -203,11 +204,12 @@ function FlightCard({
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="text-xs font-semibold text-secondary/50">
-                {t(`priceModels.${pricing.model}`)}
+                {priceDisplay.unitLabel}
               </p>
               <strong className="mt-1 block text-[clamp(1.2rem,2vw,1.65rem)] text-secondary">
-                {t("fromPrice", { price: formatMxn(pricing.primary) })}
+                {priceDisplay.summary}
               </strong>
+              {priceDisplay.note && <p className="mt-2 max-w-sm text-xs text-secondary/60">{priceDisplay.note}</p>}
             </div>
             <Button variant="primary" size="sm" asChild>
               <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
@@ -243,8 +245,10 @@ function FlightCard({
 
 function GiftCard({
   t,
+  locale,
 }: {
   t: Awaited<ReturnType<typeof getTranslations>>;
+  locale: string;
 }) {
   const id = "open" as const;
   const pricing = PRODUCT_PRICING[id]!;
@@ -294,7 +298,7 @@ function GiftCard({
             {t("gift.value")}
           </p>
           <strong className="mt-2 block text-3xl text-background">
-            {formatMxn(pricing.primary)}
+            {getPriceDisplay(pricing, locale).headline}
           </strong>
           <Button variant="primary" size="sm" className="mt-6 w-full" asChild>
             <a href={bookingUrl} target="_blank" rel="noopener noreferrer">

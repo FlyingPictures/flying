@@ -1,58 +1,19 @@
 "use client"
 
-import { createContext, useContext, useState } from "react"
 import { Link, usePathname } from "@/i18n/routing"
 import { useScrollDirection } from "@/hooks/use-scroll-direction"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { WhatsappLogoIcon } from "@phosphor-icons/react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { SITE_CONTACT } from "@/lib/site-config"
 import {
   BOOKING_URLS,
+  PRODUCT_PRICING,
+  getPriceDisplay,
   isBusinessOpen,
   isProductSlug,
 } from "@/lib/commercial-config"
-
-/* ===================================== */
-/* CONSTANTS */
-/* ===================================== */
-
-/* ===================================== */
-/* PRICING CONTEXT */
-/* ===================================== */
-
-interface PricingData {
-  adults: string
-  kids: string
-  priceAdults: string
-  priceKids: string
-  dates?: string
-}
-
-interface PricingContextValue extends PricingData {
-  setPricing: (p: PricingData) => void
-}
-
-const PricingContext = createContext<PricingContextValue | null>(null)
-
-export const PricingProvider = ({ children }: { children: React.ReactNode }) => {
-  const [pricing, setPricing] = useState<PricingData>({
-    dates: "",
-    adults: "",
-    kids: "",
-    priceAdults: "",
-    priceKids: "",
-  })
-
-  return (
-    <PricingContext.Provider value={{ ...pricing, setPricing }}>
-      {children}
-    </PricingContext.Provider>
-  )
-}
-
-export const usePricing = () => useContext(PricingContext)
 
 /* ===================================== */
 /* REUSABLE WRAPPER */
@@ -129,35 +90,37 @@ const FloatingBar1 = ({ show }: { show: boolean }) => {
 /* ===================================== */
 
 const FloatingBar2 = ({ show }: { show: boolean }) => {
-  const pricing = usePricing()
+  const locale = useLocale()
   const pathname = usePathname()
 
   const slug = pathname.split("/").pop() ?? ""
   const isCorporate = slug === "corporate"
-  const bookingUrl = isProductSlug(slug) ? BOOKING_URLS[slug] : undefined
+  const productSlug = isProductSlug(slug) ? slug : null
+  const bookingUrl = productSlug ? BOOKING_URLS[productSlug] : undefined
   const reservationUrl = bookingUrl ?? SITE_CONTACT.whatsapp
-  const hasPublishedPrice = Boolean(pricing?.priceAdults)
+  const pricing = productSlug ? PRODUCT_PRICING[productSlug] : null
+  const priceDisplay = getPriceDisplay(pricing, locale)
+  const reservationLabel = locale === "es"
+    ? (isCorporate ? "Solicitar cotización" : slug === "open" ? "Comprar tarjeta" : bookingUrl ? "Ver fechas" : "Consultar disponibilidad")
+    : (isCorporate ? "Request a quote" : slug === "open" ? "Buy gift card" : bookingUrl ? "Check dates" : "Ask about availability")
 
   const Content = (
     <>
-      {hasPublishedPrice && (
-        <div className="grid min-w-0 flex-1 grid-cols-[max-content_max-content] items-baseline gap-x-2 gap-y-0.5 text-[11px] leading-tight min-[360px]:text-xs md:flex-none md:text-base">
-          <div className="contents whitespace-nowrap">
-            <span className="font-bold">{pricing?.adults}</span>
-            <span>{pricing?.priceAdults}</span>
-          </div>
-          {pricing?.priceKids && (
-            <div className="contents whitespace-nowrap">
-              <span className="font-bold">{pricing.kids}</span>
-              <span>{pricing.priceKids}</span>
+      {pricing && (
+        <div className="min-w-0 flex-1 text-[11px] leading-tight min-[360px]:text-xs md:text-sm">
+          {priceDisplay.rows.length ? priceDisplay.rows.map((row) => (
+            <div key={row.label} className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+              <span className="font-bold">{row.label}</span>
+              <span className="whitespace-nowrap">{row.formattedAmount}</span>
             </div>
-          )}
+          )) : <span className="font-bold">{priceDisplay.headline}</span>}
+          {priceDisplay.note && <p className="mt-1 text-[10px] text-muted-foreground">{priceDisplay.note}</p>}
         </div>
       )}
 
       <Button variant="primary" size="xs" className="shrink-0 px-3 text-xs min-[360px]:px-4 md:px-6 md:text-sm" asChild>
         <a href={reservationUrl} target="_blank" rel="noopener noreferrer">
-          {pricing?.dates}
+          {reservationLabel}
         </a>
       </Button>
 

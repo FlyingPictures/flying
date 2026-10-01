@@ -7,13 +7,12 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { cloudinaryUrl } from "@/lib/cloudinary";
 import { ProductTranslation } from "@/types/product";
 import { IMAGES } from "@/lib/images";
-import { usePricing } from "@/components/layout/floating-bar";
 import { Button } from "@/components/ui/button";
 import { SITE_CONTACT } from "@/lib/site-config";
 import {
   BOOKING_URLS,
   PRODUCT_PRICING,
-  formatMxn,
+  getPriceDisplay,
   getProductName,
   type ProductSlug,
 } from "@/lib/commercial-config";
@@ -36,22 +35,9 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
   ];
   const [carouselIndex, setCarouselIndex] = useState<number | null>(null);
   const locale = useLocale();
-  const pricing = usePricing();
-  const setPricing = pricing?.setPricing;
   const productPricing = PRODUCT_PRICING[slug];
+  const priceDisplay = getPriceDisplay(productPricing, locale);
   const reservationUrl = BOOKING_URLS[slug] ?? SITE_CONTACT.whatsapp;
-
-  useEffect(() => {
-    setPricing?.({
-      adults: data.pricing.adults,
-      kids: data.pricing.kids,
-      priceAdults: productPricing ? formatMxn(productPricing.primary) : "",
-      priceKids: productPricing?.secondary
-        ? formatMxn(productPricing.secondary)
-        : "",
-      dates: data.pricing.dates,
-    });
-  }, [data.pricing, productPricing, setPricing]);
 
   const prev = useCallback(
     () => setCarouselIndex((i) => (i === null ? 0 : (i - 1 + images.length) % images.length)),
@@ -110,16 +96,12 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
           <div className="mx-auto flex w-full max-w-md flex-col items-center gap-4 rounded-(--radius) border border-border bg-card/50 p-4 sm:flex-row sm:justify-between">
             {productPricing && (
               <div className="flex flex-col text-left text-sm lg:text-base">
-                <span>
-                  <strong>{data.pricing.adults}</strong>{" "}
-                  {formatMxn(productPricing.primary)}
-                </span>
-                {productPricing.secondary && (
-                  <span>
-                    <strong>{data.pricing.kids}</strong>{" "}
-                    {formatMxn(productPricing.secondary)}
+                {priceDisplay.rows.length ? priceDisplay.rows.map((row) => (
+                  <span key={row.label}>
+                    <strong>{row.label}</strong>{" "}{row.formattedAmount}
                   </span>
-                )}
+                )) : <strong>{priceDisplay.headline}</strong>}
+                {priceDisplay.note && <p className="mt-2 text-xs text-muted-foreground">{priceDisplay.note}</p>}
               </div>
             )}
             <Button variant="primary" size="sm" className="shrink-0" asChild>
