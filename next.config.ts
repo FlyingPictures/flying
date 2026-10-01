@@ -29,6 +29,13 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
+      ...['es', 'en'].flatMap((locale) =>
+        ['birthday', 'anniversary', 'proposal'].map((slug) => ({
+          source: `/${locale}/product/${slug}`,
+          destination: `/${locale}/product/celebration`,
+          permanent: true,
+        })),
+      ),
       // Rutas específicas que cambiaron de nombre — español
       {
         source: '/la-experiencia/:path*',

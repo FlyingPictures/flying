@@ -12,7 +12,7 @@ Rama de trabajo: `codex/new-packages-2026-09-30`. Cada milestone tendrá un comm
 | M1 — Matriz comercial | Siete paquetes documentados con precios, personas, servicios, extras, fuente y pendientes | Extracción comprobada y decisiones comerciales necesarias resueltas o modalidad de consulta acordada; incertidumbres explícitas | M0 | Preparado; confirmación comercial pendiente |
 | M2 — Configuración y precios | Modelo por persona/paquete y presentación consistente en fichas, tarjetas y barra flotante | La aplicación distingue precio, unidad, mínimos y adicionales; no depende de datos no confirmados | Matriz M1; las confirmaciones de compra pueden continuar pendientes para preparar consulta | Completado; tag `fpm-packages-2026-09-30-m2` |
 | M3 — Contenido y catálogo ES/EN | Siete fichas, portada, catálogo, navegación e imágenes actualizados | Paridad entre idiomas y servicios coherentes en todo el recorrido | M1 y M2 | Completado; tag `fpm-packages-2026-09-30-m3` |
-| M4 — Enlaces y SEO | Direcciones conservadas, redirecciones de celebraciones y metadata/sitemap actualizados | Rutas y cambio de idioma correctos; enlaces antiguos llevan a su equivalente | M3 | Pendiente |
+| M4 — Enlaces y SEO | Direcciones conservadas, redirecciones de celebraciones y metadata/sitemap actualizados | Rutas y cambio de idioma correctos; enlaces antiguos llevan a su equivalente | M3 | Completado; tag `fpm-packages-2026-09-30-m4` |
 | M5 — Reservas y versiones temporales | Destinos correctos de Peek o consulta por WhatsApp; landing reconciliada si sigue activa | Cada botón abre el paquete correcto; modalidad de reserva y versiones activas definidas | M1, M3 y destino confirmado | Pendiente |
 | M6 — Validación y vista previa | Comprobaciones de datos, compilación y revisión funcional/visual | Precios cotejados con matriz; siete fichas ES/EN comprobadas en móvil y escritorio | M2–M5 | Pendiente |
 | M7 — Publicación y verificación | Versión aprobada publicada, referencia al despliegue anterior y revisión posterior | Destino y vista previa aprobados; oferta coherente con reservas; rollback de despliegue identificado | M6 y aprobación de publicación | Pendiente |
@@ -113,6 +113,8 @@ Propuesta para reducir roturas: conservar las direcciones existentes de `classic
 Configurar redirecciones permanentes de `birthday`, `anniversary` y `proposal` a `celebration` en ES/EN. Actualizar enlaces internos, títulos, descripciones, vistas para compartir, canonicals, alternancia de idiomas y sitemap. Mapear también las rutas históricas que se encuentren en la versión publicada; no enviar todos los productos a la portada.
 
 La información estructurada actual es general y no contiene tarifas de cada producto. Verificar su consistencia; no es necesario añadir un sistema nuevo de datos de producto para completar este reemplazo.
+
+Entrega M4: [enlaces y SEO comprobados](milestone-4-enlaces-seo-2026-09-30.md). Se verificaron las seis redirecciones 308, metadata de las catorce fichas nuevas y sitemap accesible como XML.
 
 ### M5. Revisar reservas y versiones temporales
 

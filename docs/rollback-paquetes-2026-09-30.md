@@ -32,6 +32,8 @@ El snapshot incluye todos los archivos no ignorados que figuraban pendientes ant
 
 | `fpm-packages-2026-09-30-m3` | Catálogo nuevo activo en el proyecto, contenido ES/EN y consulta por paquete | `milestone-3-catalogo-2026-09-30.md` |
 
+| `fpm-packages-2026-09-30-m4` | Enlaces antiguos redirigidos y sitemap accesible con el catálogo nuevo | `milestone-4-enlaces-seo-2026-09-30.md` |
+
 ## Revisar o recuperar una versión anterior sin borrar trabajo
 
 Primero comprobar si hay trabajo pendiente:
