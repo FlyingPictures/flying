@@ -1,6 +1,25 @@
 # Plan de actualización de paquetes Flying Pictures
 
-Fecha: 30 de septiembre de 2026. Estado: pendiente de aprobación. Este documento prepara la actualización; no se ha modificado el sitio ni publicado ningún cambio.
+Fecha: 30 de septiembre de 2026. El usuario autorizó dividir el plan en milestones, establecer control de versiones y comenzar el milestone 1. Las condiciones comerciales pendientes siguen abiertas. La aplicación y la publicación no se han modificado durante esta migración.
+
+## Milestones y checkpoints
+
+Rama de trabajo: `codex/new-packages-2026-09-30`. Cada milestone tendrá un commit separado y un tag al cerrar sus criterios de aceptación. Los avances con decisiones pendientes se identificarán como `review`, sin presentarlos como milestones cerrados.
+
+| Milestone | Entrega | Criterio de cierre | Dependencias | Estado |
+| --- | --- | --- | --- | --- |
+| M0 — Respaldo y organización | Estado previo guardado, rama de trabajo, plan dividido y procedimiento de rollback | Snapshot recuperable que incluya el trabajo previo; plan y recuperación documentados | Ninguna | Snapshot guardado; organización en curso |
+| M1 — Matriz comercial | Siete paquetes documentados con precios, personas, servicios, extras, fuente y pendientes | Extracción comprobada y decisiones comerciales necesarias resueltas o modalidad de consulta acordada; incertidumbres explícitas | M0 | En curso |
+| M2 — Configuración y precios | Modelo por persona/paquete y presentación consistente en fichas, tarjetas y barra flotante | La aplicación distingue precio, unidad, mínimos y adicionales; no depende de datos no confirmados | Matriz M1; las confirmaciones de compra pueden continuar pendientes para preparar consulta | Pendiente |
+| M3 — Contenido y catálogo ES/EN | Siete fichas, portada, catálogo, navegación e imágenes actualizados | Paridad entre idiomas y servicios coherentes en todo el recorrido | M1 y M2 | Pendiente |
+| M4 — Enlaces y SEO | Direcciones conservadas, redirecciones de celebraciones y metadata/sitemap actualizados | Rutas y cambio de idioma correctos; enlaces antiguos llevan a su equivalente | M3 | Pendiente |
+| M5 — Reservas y versiones temporales | Destinos correctos de Peek o consulta por WhatsApp; landing reconciliada si sigue activa | Cada botón abre el paquete correcto; modalidad de reserva y versiones activas definidas | M1, M3 y destino confirmado | Pendiente |
+| M6 — Validación y vista previa | Comprobaciones de datos, compilación y revisión funcional/visual | Precios cotejados con matriz; siete fichas ES/EN comprobadas en móvil y escritorio | M2–M5 | Pendiente |
+| M7 — Publicación y verificación | Versión aprobada publicada, referencia al despliegue anterior y revisión posterior | Destino y vista previa aprobados; oferta coherente con reservas; rollback de despliegue identificado | M6 y aprobación de publicación | Pendiente |
+
+Checkpoint inicial: `fpm-packages-2026-09-30-baseline`, commit `2f5dfe6c5479854d627b57f6a6823956fd786151`. Incluye los cambios previos de la barra móvil, documentación, landing y auditorías existentes. Esos archivos no son cambios producidos por M1.
+
+Procedimiento de recuperación: [control de versiones y rollback](rollback-paquetes-2026-09-30.md). El rollback del código y el de una publicación son operaciones diferentes: volver en Git no modifica por sí solo el hosting ni Peek.
 
 ## Objetivo y alcance
 
@@ -59,19 +78,19 @@ Inclusiones: filas 21–49. Extras por paquete: filas 51–63. Las filas 14–17
 
 Comprobación de fórmulas: C12 = $2,850, D13 = $22,500 y H13 = $30,000. C18 = $3,550 × 2 + $4,999 + $2,000 = $14,099, consistente con vuelo y transporte privados. La revisión anterior de la landing lo compara solo con el cargo de vuelo y debe corregirse para incluir el transporte.
 
-## Secuencia de implementación tras la aprobación
+## Detalle de los milestones
 
-### 1. Cerrar la matriz comercial
+### M1. Cerrar la matriz comercial
 
 Documentar por cada paquete: nombre ES/EN, modalidad, precio y unidad, personas incluidas, mínimo de reserva, adicionales, inclusiones, exclusiones, extras, condiciones y URL de reserva. Resolver los pendientes necesarios para compra directa. Se puede preparar contenido y componentes mientras se completan estos datos; las condiciones no confirmadas no se inventarán.
 
-### 2. Actualizar la configuración y los precios
+### M2. Actualizar la configuración y los precios
 
 Actualizar `lib/commercial-config.ts` y `types/product.ts` para soportar las siete ofertas. Añadir un modelo explícito por paquete, con campos separados para personas incluidas, mínimos y adicionales. Diferenciar tarifa infantil de pasajero adicional.
 
 Actualizar `ProductMain.tsx`, el contexto y la barra de `components/layout/floating-bar.tsx`, tarjetas de catálogo y portada para mostrar la misma tarifa y unidad. Revisar y retirar las configuraciones auxiliares obsoletas de Tradicional privado por $9,199 y otros importes anteriores aunque ya no se utilicen en la interfaz.
 
-### 3. Sustituir el contenido y la navegación en ambos idiomas
+### M3. Sustituir el contenido y la navegación en ambos idiomas
 
 - Reescribir las fichas de las cuatro ofertas que continúan y crear Celebración, Globo Privado y Charter.
 - Sustituir las tres fichas de celebraciones anteriores por la nueva oferta y su personalización.
@@ -81,7 +100,7 @@ Actualizar `ProductMain.tsx`, el contexto y la barra de `components/layout/float
 - Revisar textos comunes de las fichas: el cierre actual habla de compartir con desconocidos y no es adecuado para los vuelos privados; el punto de encuentro también debe distinguir quienes tienen pickup incluido.
 - Revisar preguntas frecuentes y planificación solo en lo afectado por paquetes, desayunos, transporte y condiciones confirmadas.
 
-### 4. Conservar enlaces y actualizar SEO
+### M4. Conservar enlaces y actualizar SEO
 
 Propuesta para reducir roturas: conservar las direcciones existentes de `classic`, `transport`, `journey` y `vip`, actualizando sus nombres visibles; crear `celebration`, `private` y `charter`.
 
@@ -89,19 +108,23 @@ Configurar redirecciones permanentes de `birthday`, `anniversary` y `proposal` a
 
 La información estructurada actual es general y no contiene tarifas de cada producto. Verificar su consistencia; no es necesario añadir un sistema nuevo de datos de producto para completar este reemplazo.
 
-### 5. Revisar reservas y versiones temporales
+### M5. Revisar reservas y versiones temporales
 
 Comprobar todos los puntos de reserva: portada, tarjetas, fichas y barra flotante. Cada enlace debe abrir la oferta correspondiente con precios y condiciones coincidentes. Si se usa WhatsApp, identificar paquete e idioma y comunicar consulta de disponibilidad; no prometer confirmación inmediata de Peek para paquetes sin compra habilitada.
 
 Si la landing temporal sigue en uso, reconciliar su fuente con el Excel adjunto, corregir su revisión comercial y regenerar las páginas ES/EN y el ZIP después de resolver los pendientes. Su contenido existente no se tomará como aprobación de las tarifas o de las personas incluidas.
 
-### 6. Validar y presentar la vista previa
+### M6. Validar y presentar la vista previa
 
 Actualizar `scripts/validate-data.mjs`, que actualmente exige la lista de productos anterior y resúmenes con 40 minutos. Ejecutar validación bilingüe, revisión de código y compilación del proyecto.
 
 Revisar en escritorio y móvil las siete fichas en ambos idiomas, navegación, filtros, imágenes, etiquetas por persona/paquete, adicionales, barra flotante, botones, cambio de idioma, sitemap y redirecciones. Buscar nombres, precios, enlaces y promesas de la oferta anterior en las superficies comerciales activas.
 
-Comparar los precios y servicios visibles con la matriz aprobada y revisar los destinos de Peek sin completar ninguna compra. Entregar una vista previa y un resumen de cambios antes de publicar. Coordinar la salida con las tarifas del sistema de reservas y conservar un respaldo de la versión anterior.
+Comparar los precios y servicios visibles con la matriz aprobada y revisar los destinos de Peek sin completar ninguna compra. Entregar una vista previa y un resumen de cambios antes de publicar.
+
+### M7. Publicar y verificar
+
+Después de la revisión de la vista previa y de acordar el destino, coordinar la salida con las tarifas de reservas. Registrar la versión anterior del despliegue y el procedimiento específico para restaurarla. Publicar la versión aprobada, comprobar las rutas principales y los botones en el sitio público y guardar la referencia del despliegue asociado al commit. La autorización actual comprende comenzar M1; no autoriza publicar ahora.
 
 ## Criterios de aceptación
 
