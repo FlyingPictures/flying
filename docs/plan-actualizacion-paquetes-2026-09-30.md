@@ -13,7 +13,7 @@ Rama de trabajo: `codex/new-packages-2026-09-30`. Cada milestone tendrá un comm
 | M2 — Configuración y precios | Modelo por persona/paquete y presentación consistente en fichas, tarjetas y barra flotante | La aplicación distingue precio, unidad, mínimos y adicionales; no depende de datos no confirmados | Matriz M1; las confirmaciones de compra pueden continuar pendientes para preparar consulta | Completado; tag `fpm-packages-2026-09-30-m2` |
 | M3 — Contenido y catálogo ES/EN | Siete fichas, portada, catálogo, navegación e imágenes actualizados | Paridad entre idiomas y servicios coherentes en todo el recorrido | M1 y M2 | Completado; tag `fpm-packages-2026-09-30-m3` |
 | M4 — Enlaces y SEO | Direcciones conservadas, redirecciones de celebraciones y metadata/sitemap actualizados | Rutas y cambio de idioma correctos; enlaces antiguos llevan a su equivalente | M3 | Completado; tag `fpm-packages-2026-09-30-m4` |
-| M5 — Reservas y versiones temporales | Destinos correctos de Peek o consulta por WhatsApp; landing reconciliada si sigue activa | Cada botón abre el paquete correcto; modalidad de reserva y versiones activas definidas | M1, M3 y destino confirmado | Pendiente |
+| M5 — Reservas y versiones temporales | Destinos correctos de Peek o consulta por WhatsApp; landing reconciliada si sigue activa | Cada botón abre el paquete correcto; modalidad de reserva y versiones activas definidas | M1, M3 y destino confirmado | Preparado para consulta; modalidad y versiones activas pendientes |
 | M6 — Validación y vista previa | Comprobaciones de datos, compilación y revisión funcional/visual | Precios cotejados con matriz; siete fichas ES/EN comprobadas en móvil y escritorio | M2–M5 | Pendiente |
 | M7 — Publicación y verificación | Versión aprobada publicada, referencia al despliegue anterior y revisión posterior | Destino y vista previa aprobados; oferta coherente con reservas; rollback de despliegue identificado | M6 y aprobación de publicación | Pendiente |
 
@@ -121,6 +121,8 @@ Entrega M4: [enlaces y SEO comprobados](milestone-4-enlaces-seo-2026-09-30.md). 
 Comprobar todos los puntos de reserva: portada, tarjetas, fichas y barra flotante. Cada enlace debe abrir la oferta correspondiente con precios y condiciones coincidentes. Si se usa WhatsApp, identificar paquete e idioma y comunicar consulta de disponibilidad; no prometer confirmación inmediata de Peek para paquetes sin compra habilitada.
 
 Si la landing temporal sigue en uso, reconciliar su fuente con el Excel adjunto, corregir su revisión comercial y regenerar las páginas ES/EN y el ZIP después de resolver los pendientes. Su contenido existente no se tomará como aprobación de las tarifas o de las personas incluidas.
+
+Entrega M5: [reservas preparadas para consulta](milestone-5-reservas-2026-09-30.md). Todos los paquetes abren consultas con nombre e idioma. No hay enlaces nuevos de Peek verificados ni destino de publicación confirmado; la landing temporal requiere reconciliación si permanece activa. Checkpoint `fpm-packages-2026-09-30-m5-review`.
 
 ### M6. Validar y presentar la vista previa
 
