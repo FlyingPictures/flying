@@ -1,82 +1,75 @@
 {
-    "product": {
-      "included": {
-        "title": "What’s included",
-        "included1": "40-60 min Flight",
-        "description1": "Sunrise flight over the Teotihuacán Valley.",
-        "included2": "Welcome Coffee Break",
-        "description2": "Enjoy hot coffee and cookies before flight.",
-        "included3": "Flight Certificate",
-        "description3": "Personalized proof of your adventure.",
-        "included4": "Traditional Toast",
-        "description4": "Sparkling wine celebration upon landing.",
-        "included5": "Full Insurance",
-        "description5": "Full coverage from start to finish.",
-        "included6": "Experienced Pilots",
-        "description6": "Certified experts with global standards."
-       },
-
-       "packageDetails": {
-        "eyebrow": "Package information",
-        "title": "Everything clear before you book"
-       },
-
-       "itineraryControls": {
-        "eyebrow": "Your experience",
-        "showAll": "Show full itinerary",
-        "showSummary": "Show summary",
-        "steps": "steps"
-       },
-
-       "notIncluded": {
-        "title": "Not included"
-       },
-
-       "packageNotes": {
-        "title": "Important conditions"
-       },
-
-       "recommended": {
-        "title": "Recommended extras",
-        "round": "Round-Trip Transport",
-        "rounddesc": "Pickup from CDMX at 05:00 AM. (Shared or Private).",
-        "breakfast": "Breakfast Buffet",
-        "breakdesc": "Traditional Mexican meal at Gran Teocalli Restaurant",
-        "medial": "Media Package",
-        "mediadesc": "Professional photos and video of your flight."
-       }, 
-
-       "meet": {
-        "title": "Where we’ll meet",
-        "subtitle": "5:00 AM - Arrival & Check-in",
-        "description": "You’ll arrive at Flying Pictures Reception, where our team will welcome you and help you complete check-in.",
-        "title2": "Things to know",
-        "button": "Get Directions",
-        "openGoogleMaps": "Open in Google Maps",
-        "openWaze": "Open in Waze",
-        "thinks": [
-          {
-            "tittle1": "Passenger requirements",
-            "subtittle1": "We’ll ask for basic information such as weight, age, and relevant medical conditions so we can operate safely."
-          },
-          {
-            "tittle2": "Activity level",
-            "subtittle2": "Light activity. You’ll need to stand during the flight and enter and exit the basket with assistance from our team."
-          },
-          {
-            "tittle3": "What to bring",
-            "subtittle3": "Comfortable clothing, closed-toe shoes, and a light jacket for the early morning."
-          },
-          {
-            "tittle4": "Cancellation policy",
-            "subtittle4": "If weather conditions do not allow us to fly safely, we’ll help you reschedule according to our policy."
-          }
-        ]
-       },
-
-      "footer": {
-        "title": "Flight Experiences Safely Designed",
-        "description": "This is the quintessential ballooning experience. Join a select group of fellow adventurers for a morning where strangers become friends. "
-       }
+  "product": {
+    "included": {
+      "title": "What’s included",
+      "included1": "Sunrise flight",
+      "description1": "Sunrise flight over the Teotihuacán Valley.",
+      "included2": "Welcome Coffee Break",
+      "description2": "Enjoy hot coffee and cookies before flight.",
+      "included3": "Flight Certificate",
+      "description3": "Personalized proof of your adventure.",
+      "included4": "Traditional Toast",
+      "description4": "Sparkling wine celebration upon landing.",
+      "included5": "Full Insurance",
+      "description5": "Full coverage from start to finish.",
+      "included6": "Experienced Pilots",
+      "description6": "Certified experts with global standards."
+    },
+    "packageDetails": {
+      "eyebrow": "Package information",
+      "title": "Everything clear before you book"
+    },
+    "itineraryControls": {
+      "eyebrow": "Your experience",
+      "showAll": "Show full itinerary",
+      "showSummary": "Show summary",
+      "steps": "steps"
+    },
+    "notIncluded": {
+      "title": "Not included"
+    },
+    "packageNotes": {
+      "title": "Important conditions"
+    },
+    "recommended": {
+      "title": "Recommended extras",
+      "round": "Round-Trip Transport",
+      "rounddesc": "Pickup from CDMX at 05:00 AM. (Shared or Private).",
+      "breakfast": "Breakfast Buffet",
+      "breakdesc": "Traditional Mexican meal at Gran Teocalli Restaurant",
+      "medial": "Media Package",
+      "mediadesc": "Professional photos and video of your flight."
+    },
+    "meet": {
+      "title": "Where we’ll meet",
+      "subtitle": "Timing and meeting point to be confirmed",
+      "description": "Confirm the meeting time and place with our team. If your package includes transport, we will coordinate your pickup; if you arrive independently, use these directions to the launch site.",
+      "title2": "Things to know",
+      "button": "Get Directions",
+      "openGoogleMaps": "Open in Google Maps",
+      "openWaze": "Open in Waze",
+      "thinks": [
+        {
+          "tittle1": "Passenger requirements",
+          "subtittle1": "We’ll ask for basic information such as weight, age, and relevant medical conditions so we can operate safely."
+        },
+        {
+          "tittle2": "Activity level",
+          "subtittle2": "Light activity. You’ll need to stand during the flight and enter and exit the basket with assistance from our team."
+        },
+        {
+          "tittle3": "What to bring",
+          "subtittle3": "Comfortable clothing, closed-toe shoes, and a light jacket for the early morning."
+        },
+        {
+          "tittle4": "Cancellation policy",
+          "subtittle4": "If weather conditions do not allow us to fly safely, we’ll help you reschedule according to our policy."
+        }
+      ]
+    },
+    "footer": {
+      "title": "Flight Experiences Safely Designed",
+      "description": "Choose a shared flight or a private experience and review your package’s services. Our team will help confirm the details of your visit."
+    }
   }
 }

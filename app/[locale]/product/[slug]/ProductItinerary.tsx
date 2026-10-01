@@ -23,9 +23,8 @@ function getSummaryIndexes(length: number) {
     return Array.from({ length }, (_, index) => index);
   }
 
-  return Array.from({ length: SUMMARY_STEP_COUNT }, (_, index) =>
-    Math.round((index * (length - 1)) / (SUMMARY_STEP_COUNT - 1))
-  );
+  // Keep arrival, preparation and the flight visible when ground activities extend the itinerary.
+  return [0, 1, 2, length - 2, length - 1];
 }
 
 export default function ProductItinerary({ slug, data }: Props) {

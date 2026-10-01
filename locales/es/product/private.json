@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "subtitle": "Vuelo privado | Champagne | Desayuno completo"
+  },
+  "rating": {
+    "score": 4.8,
+    "reviewsCount": "225 opiniones en Tripadvisor"
+  },
+  "description": {
+    "title": "Un vuelo reservado para tu grupo",
+    "paragraph": "Disfruta el Valle de Teotihuacán en un vuelo privado con coffee break, seguro, brindis con champagne, certificado y desayuno completo. El transporte, las fotografías y las visitas en tierra se cotizan como extras. Confirma las personas cubiertas por el paquete."
+  },
+  "itinerary": {
+    "title": "Tu experiencia",
+    "steps": [
+      {
+        "time": "Antes del vuelo",
+        "title": "Llegada y coffee break",
+        "description": "El equipo te recibe para el registro y el coffee break. Confirma tu punto de encuentro."
+      },
+      {
+        "time": "Preparación",
+        "title": "Preparación para volar",
+        "description": "El equipo te orienta para abordar y disfrutar la experiencia con seguridad."
+      },
+      {
+        "time": "En el aire",
+        "title": "Vuelo privado",
+        "description": "Contempla el Valle de Teotihuacán desde el globo. La ruta depende de las condiciones del día."
+      },
+      {
+        "time": "Al aterrizar",
+        "title": "Brindis tradicional",
+        "description": "Celebra el vuelo con champagne."
+      },
+      {
+        "time": "Recuerdo del vuelo",
+        "title": "Certificado de vuelo",
+        "description": "Recibe tu certificado de vuelo."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Desayuno completo",
+        "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar en el recorrido."
+      }
+    ]
+  },
+  "pricing": {
+    "adults": "Adultos",
+    "kids": "Niños (4–12)",
+    "dates": "Consultar disponibilidad"
+  },
+  "details": {
+    "included": [
+      "Vuelo privado",
+      "Coffee break",
+      "Seguro de vuelo",
+      "Brindis tradicional con champagne",
+      "Certificado de vuelo",
+      "Desayuno completo"
+    ],
+    "notIncluded": [
+      "Transporte",
+      "Fotografías y video",
+      "Acceso o guía en la zona arqueológica",
+      "Flores y mariachis",
+      "Pastel"
+    ],
+    "recommendedExtras": [
+      "Transporte redondo privado para dos personas en zona céntrica",
+      "Fotografías y video",
+      "Ramo de flores",
+      "Mariachis al aterrizaje",
+      "Pastel de cinco rebanadas",
+      "Acceso a la zona arqueológica",
+      "Champagne adicional — consulta su alcance",
+      "Guía bilingüe para 1–6 personas",
+      "Pasajero adicional"
+    ],
+    "notes": [
+      "Confirma la disponibilidad, el horario, el punto de encuentro y el total antes de reservar.",
+      "La duración, la ruta y el orden de actividades se confirman según las condiciones meteorológicas y operativas.",
+      "Los extras se cotizan por separado; confirma su alcance, tarifa y disponibilidad.",
+      "Confirma cuántas personas incluye el paquete, el mínimo de reserva y los cargos por pasajeros o acompañantes adicionales.",
+      "El brindis con champagne está incluido. Consulta el alcance de cualquier champagne adicional."
+    ],
+    "itinerary": {
+      "title": "Tu experiencia",
+      "steps": [
+        {
+          "time": "Antes del vuelo",
+          "title": "Llegada y coffee break",
+          "description": "El equipo te recibe para el registro y el coffee break. Confirma tu punto de encuentro."
+        },
+        {
+          "time": "Preparación",
+          "title": "Preparación para volar",
+          "description": "El equipo te orienta para abordar y disfrutar la experiencia con seguridad."
+        },
+        {
+          "time": "En el aire",
+          "title": "Vuelo privado",
+          "description": "Contempla el Valle de Teotihuacán desde el globo. La ruta depende de las condiciones del día."
+        },
+        {
+          "time": "Al aterrizar",
+          "title": "Brindis tradicional",
+          "description": "Celebra el vuelo con champagne."
+        },
+        {
+          "time": "Recuerdo del vuelo",
+          "title": "Certificado de vuelo",
+          "description": "Recibe tu certificado de vuelo."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Desayuno completo",
+          "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar en el recorrido."
+        }
+      ]
+    }
+  }
+}

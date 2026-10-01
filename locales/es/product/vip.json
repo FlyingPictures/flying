@@ -1,87 +1,152 @@
 {
   "hero": {
-    "subtitle": "Transporte y vuelo privados | Aproximadamente 40 minutos | Recorrido por aire y tierra"
+    "subtitle": "Vuelo y transporte privados | Guía y cuevas | Brunch Mayahuel"
   },
   "rating": {
     "score": 4.8,
     "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
-    "title": "Tu cielo, tus reglas",
-    "paragraph": "La experiencia más completa y privada del catálogo: transporte exclusivo, vuelo solo para tu grupo, champaña francesa con servicio de mesero, cuevas ceremoniales, brunch y recorrido de la zona arqueológica con historiador. Las fotos y el video del vuelo están incluidos."
+    "title": "Un recorrido privado por aire y tierra",
+    "paragraph": "Premium - VIP reúne vuelo privado, transporte redondo privado, brindis con champagne, acceso arqueológico con guía bilingüe y tour en cuevas ceremoniales. Incluye fotografías y video, mesero, canapés y snacks, y brunch en Mayahuel. Consulta cuántas personas cubre el paquete y el total de tu grupo."
   },
   "itinerary": {
-    "title": "Qué harás",
+    "title": "Tu experiencia",
     "steps": [
       {
-        "title": "5:00 AM - Llegada y registro",
-        "description": "Llegarás a la recepción de Flying Pictures y te daremos la bienvenida para completar tu registro."
+        "time": "Antes del vuelo",
+        "title": "Llegada y coffee break",
+        "description": "El equipo te recibe para el registro y el coffee break. Confirma tu punto de encuentro."
       },
       {
-        "title": "Bienvenida y café",
-        "description": "Después de tu registro te esperamos con nuestra estación de café, bebidas calientes y galletas tradicionales."
+        "time": "Preparación",
+        "title": "Preparación para volar",
+        "description": "El equipo te orienta para abordar y disfrutar la experiencia con seguridad."
       },
       {
-        "title": "El espectáculo del inflado",
-        "description": "Camina al campo de lanzamiento para ver a los \"Gigantes\" cobrar vida. Ver los enormes globos elevarse con el rugido de los quemadores es el primer acto del espectáculo."
+        "time": "En el aire",
+        "title": "Vuelo privado",
+        "description": "Contempla el Valle de Teotihuacán desde el globo. La ruta depende de las condiciones del día."
       },
       {
-        "title": "El ascenso",
-        "description": "Despega suavemente con las primeras luces. Durante aproximadamente 45 a 60 minutos, flota en silencio sobre el Valle de Teotihuacán. El paisaje cambia con las condiciones de cada mañana."
+        "time": "Al aterrizar",
+        "title": "Brindis tradicional",
+        "description": "Celebra el vuelo con champagne."
       },
       {
-        "title": "El brindis de 1783",
-        "description": "Al aterrizar, celebramos con un tradicional brindis de vino espumoso. Un ritual que se remonta a los primeros aviadores para agradecer a los dioses del viento un regreso seguro."
+        "time": "Recuerdo del vuelo",
+        "title": "Certificado de vuelo",
+        "description": "Recibe tu certificado de vuelo."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Acceso a la zona arqueológica",
+        "description": "Disfruta este servicio incluido: acceso a la zona arqueológica. Confirma el horario y su lugar en el recorrido."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Guía bilingüe",
+        "description": "Disfruta este servicio incluido: guía bilingüe. Confirma el horario y su lugar en el recorrido."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Tour en cuevas ceremoniales",
+        "description": "Disfruta este servicio incluido: tour en cuevas ceremoniales. Confirma el horario y su lugar en el recorrido."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Brunch en Mayahuel",
+        "description": "Disfruta este servicio incluido: brunch en mayahuel. Confirma el horario y su lugar en el recorrido."
       }
     ]
   },
   "pricing": {
-    "dates": "Ver fechas",
     "adults": "Adultos",
-    "kids": "Niños (4-12)"
+    "kids": "Niños (4–12)",
+    "dates": "Consultar disponibilidad"
   },
   "details": {
     "included": [
-      "Transporte privado redondo entre CDMX y Teotihuacán; coordinamos dónde pasar por ti",
-      "Vuelo privado de aproximadamente 40 minutos",
-      "Café de bienvenida con galletas y bebidas tradicionales mexicanas",
-      "Brindis con champaña francesa — jugo para niños",
-      "Servicio de mesero con canapés, guacamole, café, pan y fruta local",
-      "Recorrido privado guiado por cuevas ceremoniales de aproximadamente 30 minutos",
-      "Brunch tradicional en un restaurante local",
-      "Recorrido privado de aproximadamente dos horas y media por la zona arqueológica con historiador",
-      "Certificado de vuelo personalizado",
-      "Seguro de viajero",
-      "Fotos y video del vuelo"
+      "Vuelo privado",
+      "Coffee break",
+      "Seguro de vuelo",
+      "Brindis tradicional con champagne",
+      "Certificado de vuelo",
+      "Transporte redondo privado",
+      "Acceso a la zona arqueológica",
+      "Guía bilingüe",
+      "Tour en cuevas ceremoniales",
+      "Fotografías y video",
+      "Servicio de mesero",
+      "Canapés y snacks",
+      "Brunch en Mayahuel"
     ],
     "notIncluded": [
-      "Mariachis al aterrizaje",
-      "Ramo de flores",
-      "Lonas personalizadas",
-      "Hospedaje",
-      "Cargo de $110 MXN por persona para extranjeros no residentes"
+      "Desayuno completo separado del brunch",
+      "Flores y mariachis",
+      "Pasajeros adicionales o acompañantes que no vuelan"
     ],
     "recommendedExtras": [
-      "Mariachis al aterrizaje — cuatro canciones",
-      "Ramo de flores"
+      "Pasajero adulto adicional",
+      "Pasajero infantil adicional",
+      "Ramo de flores",
+      "Mariachis al aterrizaje",
+      "Servicio para acompañante que no vuela"
     ],
     "notes": [
-      "La reservación requiere un mínimo de cuatro personas.",
-      "El adulto adicional tiene un precio de $3,999 MXN y el precio infantil es de $3,499 MXN.",
-      "Los extranjeros no residentes pagan $110 MXN adicionales por persona al llegar."
+      "Confirma la disponibilidad, el horario, el punto de encuentro y el total antes de reservar.",
+      "La duración, la ruta y el orden de actividades se confirman según las condiciones meteorológicas y operativas.",
+      "Los extras se cotizan por separado; confirma su alcance, tarifa y disponibilidad.",
+      "Confirma cuántas personas incluye el paquete, el mínimo de reserva y los cargos por pasajeros o acompañantes adicionales."
     ],
     "itinerary": {
-      "title": "Qué harás",
+      "title": "Tu experiencia",
       "steps": [
-        { "time": "Salida", "title": "Te recogemos en transporte privado", "description": "Un vehículo exclusivo lleva a tu grupo de CDMX a Teotihuacán." },
-        { "time": "Bienvenida", "title": "Disfrutas un café de bienvenida", "description": "Te recibimos con café, galletas y bebidas tradicionales mexicanas." },
-        { "time": "Preparación", "title": "Abordas tu globo privado", "description": "Solo tu grupo comparte la canastilla durante el vuelo." },
-        { "time": "En el aire", "title": "Vuelas aproximadamente 40 minutos", "description": "El equipo registra fotos y video mientras contemplas el valle." },
-        { "time": "Al aterrizar", "title": "Te reciben con champaña y canapés", "description": "Un mesero sirve el brindis, guacamole, café, pan y fruta local." },
-        { "time": "Inframundo", "title": "Exploras cuevas ceremoniales", "description": "Realizas un recorrido privado guiado de aproximadamente 30 minutos." },
-        { "time": "Brunch", "title": "Pruebas un brunch tradicional", "description": "Disfrutas alimentos típicos en un restaurante local." },
-        { "time": "Historia", "title": "Recorres las pirámides con historiador", "description": "Un especialista acompaña a tu grupo durante aproximadamente dos horas y media." },
-        { "time": "Cierre", "title": "Recibes certificado, fotos y video", "description": "Terminas con tu certificado personalizado y el material de la experiencia." }
+        {
+          "time": "Antes del vuelo",
+          "title": "Llegada y coffee break",
+          "description": "El equipo te recibe para el registro y el coffee break. Confirma tu punto de encuentro."
+        },
+        {
+          "time": "Preparación",
+          "title": "Preparación para volar",
+          "description": "El equipo te orienta para abordar y disfrutar la experiencia con seguridad."
+        },
+        {
+          "time": "En el aire",
+          "title": "Vuelo privado",
+          "description": "Contempla el Valle de Teotihuacán desde el globo. La ruta depende de las condiciones del día."
+        },
+        {
+          "time": "Al aterrizar",
+          "title": "Brindis tradicional",
+          "description": "Celebra el vuelo con champagne."
+        },
+        {
+          "time": "Recuerdo del vuelo",
+          "title": "Certificado de vuelo",
+          "description": "Recibe tu certificado de vuelo."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Acceso a la zona arqueológica",
+          "description": "Disfruta este servicio incluido: acceso a la zona arqueológica. Confirma el horario y su lugar en el recorrido."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Guía bilingüe",
+          "description": "Disfruta este servicio incluido: guía bilingüe. Confirma el horario y su lugar en el recorrido."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Tour en cuevas ceremoniales",
+          "description": "Disfruta este servicio incluido: tour en cuevas ceremoniales. Confirma el horario y su lugar en el recorrido."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Brunch en Mayahuel",
+          "description": "Disfruta este servicio incluido: brunch en mayahuel. Confirma el horario y su lugar en el recorrido."
+        }
       ]
     }
   }

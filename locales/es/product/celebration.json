@@ -1,0 +1,129 @@
+{
+  "hero": {
+    "subtitle": "Vuelo privado | Desayuno y flores | Pastel y/o mañanitas"
+  },
+  "rating": {
+    "score": 4.8,
+    "reviewsCount": "225 opiniones en Tripadvisor"
+  },
+  "description": {
+    "title": "Celebra con una experiencia privada",
+    "paragraph": "Un vuelo privado para celebrar cumpleaños, aniversarios o un momento especial. Incluye desayuno completo, flores, pastel y/o mañanitas, coffee break, seguro, brindis con vino espumoso y certificado. Las lonas de personalización y las fotografías se cotizan por separado."
+  },
+  "itinerary": {
+    "title": "Tu experiencia",
+    "steps": [
+      {
+        "time": "Antes del vuelo",
+        "title": "Llegada y coffee break",
+        "description": "El equipo te recibe para el registro y el coffee break. Confirma tu punto de encuentro."
+      },
+      {
+        "time": "Preparación",
+        "title": "Preparación para volar",
+        "description": "El equipo te orienta para abordar y disfrutar la experiencia con seguridad."
+      },
+      {
+        "time": "En el aire",
+        "title": "Vuelo privado",
+        "description": "Contempla el Valle de Teotihuacán desde el globo. La ruta depende de las condiciones del día."
+      },
+      {
+        "time": "Al aterrizar",
+        "title": "Brindis tradicional",
+        "description": "Celebra el vuelo con vino espumoso."
+      },
+      {
+        "time": "Recuerdo del vuelo",
+        "title": "Certificado de vuelo",
+        "description": "Recibe tu certificado de vuelo."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Desayuno completo",
+        "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar en el recorrido."
+      }
+    ]
+  },
+  "pricing": {
+    "adults": "Adultos",
+    "kids": "Niños (4–12)",
+    "dates": "Consultar disponibilidad"
+  },
+  "details": {
+    "included": [
+      "Vuelo privado",
+      "Coffee break",
+      "Seguro de vuelo",
+      "Brindis tradicional con vino espumoso",
+      "Certificado de vuelo",
+      "Desayuno completo",
+      "Ramo de flores",
+      "Pastel y/o mañanitas"
+    ],
+    "notIncluded": [
+      "Transporte",
+      "Lonas de personalización",
+      "Fotografías y video",
+      "Acceso o guía en la zona arqueológica",
+      "Mariachis al aterrizaje"
+    ],
+    "recommendedExtras": [
+      "Transporte redondo privado para dos personas en zona céntrica",
+      "Mariachis al aterrizaje",
+      "Fotografías y video",
+      "Champagne",
+      "Acceso a la zona arqueológica",
+      "Guía bilingüe para 1–6 personas",
+      "Desayuno para acompañante",
+      "Lona estándar «Feliz Cumpleaños»",
+      "Lona estándar «Te Amo»",
+      "Lona estándar «Feliz Aniversario»",
+      "Lona estándar «¿Te quieres casar conmigo?»",
+      "Lona estándar «¿Quieres ser mi novia?»",
+      "Pasajero adicional"
+    ],
+    "notes": [
+      "Confirma la disponibilidad, el horario, el punto de encuentro y el total antes de reservar.",
+      "La duración, la ruta y el orden de actividades se confirman según las condiciones meteorológicas y operativas.",
+      "Los extras se cotizan por separado; confirma su alcance, tarifa y disponibilidad.",
+      "Confirma cuántas personas incluye el paquete, el mínimo de reserva y los cargos por pasajeros o acompañantes adicionales.",
+      "Confirma la modalidad de pastel y/o mañanitas y la personalización que deseas. Las lonas no forman parte del paquete base."
+    ],
+    "itinerary": {
+      "title": "Tu experiencia",
+      "steps": [
+        {
+          "time": "Antes del vuelo",
+          "title": "Llegada y coffee break",
+          "description": "El equipo te recibe para el registro y el coffee break. Confirma tu punto de encuentro."
+        },
+        {
+          "time": "Preparación",
+          "title": "Preparación para volar",
+          "description": "El equipo te orienta para abordar y disfrutar la experiencia con seguridad."
+        },
+        {
+          "time": "En el aire",
+          "title": "Vuelo privado",
+          "description": "Contempla el Valle de Teotihuacán desde el globo. La ruta depende de las condiciones del día."
+        },
+        {
+          "time": "Al aterrizar",
+          "title": "Brindis tradicional",
+          "description": "Celebra el vuelo con vino espumoso."
+        },
+        {
+          "time": "Recuerdo del vuelo",
+          "title": "Certificado de vuelo",
+          "description": "Recibe tu certificado de vuelo."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Desayuno completo",
+          "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar en el recorrido."
+        }
+      ]
+    }
+  }
+}

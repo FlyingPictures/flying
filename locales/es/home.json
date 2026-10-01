@@ -7,38 +7,32 @@
     "poweredBy": "Bienvenido al estándar más alto de aviación certificada \n en el Valle de Teotihuacán.",
     "ctaSecondary": "Despegamos con las primeras luces"
   },
-
   "FlightExperience": {
-    "bookFlight": "Reservar vuelo",
+    "bookFlight": "Consultar disponibilidad",
     "flightDetails": "Ver detalles del vuelo",
     "subtitle": "ELIGE CÓMO VOLAR",
     "title": "Experiencias de vuelo\nhechas para la aventura",
-
     "tabs": {
       "shared": "Compartido",
       "private": "Privado",
       "vip": "VIP y recorridos"
     },
-
     "flightBadge": "VUELO {type}",
     "from": "Desde {price}",
     "featured": "Destacado",
     "previousPackage": "Experiencia anterior",
     "nextPackage": "Experiencia siguiente",
     "packageCount": "{current} de {total}",
-
     "descriptions": {
-      "shared": "Ideal para quienes viajan solos, parejas y grupos de amigos.\nVuela en una canastilla compartimentada, con espacio propio\ny un campo visual amplio para cada pasajero.",
-      "private": "Una experiencia exclusiva para tu grupo.\nDisfruta el cielo con privacidad total, servicio personalizado\ny amenidades de primer nivel.",
-      "vip": "La experiencia más exclusiva.\nUn vuelo privado en globo con champaña,\ndesayuno gourmet y atención de principio a fin."
+      "shared": "Tres experiencias compartidas: Esencial, Transporte + Pirámides y Viajero. Revisa los servicios de cada paquete.",
+      "private": "Celebración y Globo Privado: vuelo reservado para tu grupo, con los servicios propios de cada paquete.",
+      "vip": "Premium - VIP y FPM Private Charter: vuelo y transporte privados, visitas guiadas y brunch según el paquete."
     },
-
     "awardSection": {
       "title": "Somos una",
       "subtitle": "COMPAÑÍA DE AVIACIÓN",
       "description": "Vuela con una de las compañías de globos aerostáticos más confiables y reconocidas de México, donde la precisión británica se encuentra con la calidez mexicana. Desde hace más de veinte años, Flying Pictures México marca el estándar de los vuelos seguros y cuidadosamente ejecutados sobre el extraordinario Valle de Teotihuacán."
     },
-
     "cards": {
       "tradition": {
         "title": "Más que un vuelo, una tradición.",
@@ -46,13 +40,11 @@
         "button": "Conoce nuestros vuelos",
         "award_label": "Proveedor de aviación más confiable 2024"
       },
-
       "other": {
         "title": "Seguridad ante todo.",
         "description": "Cada ascenso combina pilotos certificados, equipo de clase mundial y decisiones tomadas con disciplina aeronáutica.",
         "button": "Explorar vuelos"
       },
-
       "safety": {
         "title": "La seguridad, siempre primero.",
         "description": "Nuestros pilotos cuentan con licencia y aportan años —en muchos casos, décadas— de experiencia a cada ascenso. Cada vuelo incluye seguro integral para pasajeros y un brindis tradicional al aterrizar. Todo, acompañado por la serenidad del amanecer sobre el valle.",
@@ -60,27 +52,25 @@
       }
     }
   },
-
   "whyChoose": {
-  "title": "POR QUÉ VOLAR CON NOSOTROS",
-  "takeAway": "LO ESENCIAL EN 30 SEGUNDOS",
-  "await": "Ya sea que celebres una ocasión especial, descubras la historia o cumplas un sueño de toda la vida, tu vuelo se suma a una tradición de excelencia perfeccionada por nuestros fundadores durante más de cuatro décadas de liderazgo internacional en aviación.",
-  "reasons": [
-    {
-      "title": "Equipo sin comparación",
-      "description": "Volamos principalmente con aeronaves Cameron Balloons del Reino Unido, reconocidas como referente mundial en diseño y fabricación de globos aerostáticos. Su ingeniería ofrece desempeño, seguridad y calidad duradera: los mismos estándares que exigimos en cada vuelo."
-    },
-    {
-      "title": "La regla de un solo vuelo",
-      "description": "Al limitar nuestras salidas diarias, mantenemos un ritmo sereno y ofrecemos una experiencia más cuidada sobre el Valle de Teotihuacán y sus pirámides atemporales."
-    },
-    {
-      "title": "Mente británica, corazón mexicano",
-      "description": "Fundada por Sean y Diana Byrne, Flying Pictures une ingeniería de precisión con auténtica hospitalidad mexicana. Cada detalle de la operación se coordina con absoluto cuidado."
-    }
-  ]
-},
-
+    "title": "POR QUÉ VOLAR CON NOSOTROS",
+    "takeAway": "LO ESENCIAL EN 30 SEGUNDOS",
+    "await": "Ya sea que celebres una ocasión especial, descubras la historia o cumplas un sueño de toda la vida, tu vuelo se suma a una tradición de excelencia perfeccionada por nuestros fundadores durante más de cuatro décadas de liderazgo internacional en aviación.",
+    "reasons": [
+      {
+        "title": "Equipo sin comparación",
+        "description": "Volamos principalmente con aeronaves Cameron Balloons del Reino Unido, reconocidas como referente mundial en diseño y fabricación de globos aerostáticos. Su ingeniería ofrece desempeño, seguridad y calidad duradera: los mismos estándares que exigimos en cada vuelo."
+      },
+      {
+        "title": "La regla de un solo vuelo",
+        "description": "Al limitar nuestras salidas diarias, mantenemos un ritmo sereno y ofrecemos una experiencia más cuidada sobre el Valle de Teotihuacán y sus pirámides atemporales."
+      },
+      {
+        "title": "Mente británica, corazón mexicano",
+        "description": "Fundada por Sean y Diana Byrne, Flying Pictures une ingeniería de precisión con auténtica hospitalidad mexicana. Cada detalle de la operación se coordina con absoluto cuidado."
+      }
+    ]
+  },
   "imagegridsection": {
     "planYourVisit": "Planea tu visita",
     "experience": "Experiencia",
@@ -89,7 +79,6 @@
     "bookNow": "Reservar ahora",
     "language": "Idioma"
   },
-
   "reviews": {
     "tittle": "Reseñas",
     "homeReadRealReviews": "NUESTRA REPUTACIÓN",
@@ -106,24 +95,20 @@
     "travelerPhoto": "Foto del viajero",
     "readFullReview": "Leer opinión completa en Tripadvisor"
   },
-
   "weather": {
     "liveMonitoring": "MONITOREO EN VIVO",
     "heading": "Inteligencia meteorológica: la seguridad nunca se deja al azar.",
     "description": "Cada decisión de vuelo se basa en datos meteorológicos en tiempo real, pronósticos especializados y una evaluación disciplinada del riesgo. En aviación, el entorno dicta la operación; nosotros respetamos sus límites para cuidar tu seguridad.",
-
     "safetyPromise": {
       "title": "Nuestra promesa de seguridad",
       "description": "Si las condiciones no son adecuadas, no volamos. Preferimos mantenerte en tierra antes que ponerte en riesgo en el aire.",
       "cta": "Ver nuestros protocolos de seguridad"
     },
-
     "viewPromise": {
       "title": "El valle, distinto cada mañana",
       "description": "Volamos para contemplar cómo despierta el valle. Algunas mañanas nos reciben con luz dorada; otras, con neblina sobre las pirámides. La naturaleza define el paisaje; nuestros estándares de seguridad y operación se mantienen siempre.",
       "cta": "Consulta nuestra política meteorológica"
     },
-
     "station": "ESTACIÓN",
     "status": "ESTADO",
     "active": "ACTIVO",
@@ -132,7 +117,6 @@
     "temperature": "Temperatura",
     "pressure": "Presión"
   },
-
   "tradition": {
     "title": "Nuestra tradición y compromiso con la seguridad"
   }

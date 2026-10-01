@@ -1,0 +1,141 @@
+{
+  "hero": {
+    "subtitle": "Private flight | Premium transport and guide from pickup | Club Campestre brunch"
+  },
+  "rating": {
+    "score": 4.8,
+    "reviewsCount": "225 reviews on Tripadvisor"
+  },
+  "description": {
+    "title": "A private experience with service from pickup",
+    "paragraph": "FPM Private Charter includes a private flight, premium private round-trip transport, a bilingual guide from pickup and archaeological site admission. Enjoy a light buffet breakfast before take-off, a champagne toast, photos and video, waiter service, canapés and snacks, and brunch at Club Campestre. Confirm the guests covered and booking minimum."
+  },
+  "itinerary": {
+    "title": "Your experience",
+    "steps": [
+      {
+        "time": "Before the flight",
+        "title": "Arrival, light breakfast and coffee break",
+        "description": "The team welcomes you for check-in, a coffee break and a light buffet breakfast before take-off. Confirm your pickup."
+      },
+      {
+        "time": "Preparation",
+        "title": "Getting ready to fly",
+        "description": "The team briefs you on boarding and enjoying the experience safely."
+      },
+      {
+        "time": "In the air",
+        "title": "Private flight",
+        "description": "See the Teotihuacán Valley from the balloon. The route depends on the day’s conditions."
+      },
+      {
+        "time": "On landing",
+        "title": "Traditional toast",
+        "description": "Celebrate the flight with champagne."
+      },
+      {
+        "time": "Flight keepsake",
+        "title": "Flight certificate",
+        "description": "Receive your flight certificate."
+      },
+      {
+        "time": "According to the confirmed itinerary",
+        "title": "Archaeological site admission",
+        "description": "Enjoy this included service: archaeological site admission. Confirm its timing and place in your itinerary."
+      },
+      {
+        "time": "According to the confirmed itinerary",
+        "title": "Bilingual guide from pickup",
+        "description": "Enjoy this included service: bilingual guide from pickup. Confirm its timing and place in your itinerary."
+      },
+      {
+        "time": "According to the confirmed itinerary",
+        "title": "Brunch at Club Campestre",
+        "description": "Enjoy this included service: brunch at club campestre. Confirm its timing and place in your itinerary."
+      }
+    ]
+  },
+  "pricing": {
+    "adults": "Adults",
+    "kids": "Children (4–12)",
+    "dates": "Ask about availability"
+  },
+  "details": {
+    "included": [
+      "Private flight",
+      "Coffee break",
+      "Flight insurance",
+      "Traditional champagne toast",
+      "Flight certificate",
+      "Light buffet breakfast before take-off",
+      "Premium private round-trip transport",
+      "Archaeological site admission",
+      "Bilingual guide from pickup",
+      "Photos and video",
+      "Waiter service",
+      "Canapés and snacks",
+      "Brunch at Club Campestre"
+    ],
+    "notIncluded": [
+      "Ceremonial cave tour",
+      "Flowers and mariachi music",
+      "Additional passengers"
+    ],
+    "recommendedExtras": [
+      "Additional passenger",
+      "Flower bouquet",
+      "Mariachi music on landing"
+    ],
+    "notes": [
+      "Confirm availability, timing, the meeting point and your total before booking.",
+      "Flight duration, route and activity order are confirmed according to weather and operating conditions.",
+      "Extras are quoted separately; confirm their scope, price and availability.",
+      "Confirm how many guests the package includes, the booking minimum and charges for additional passengers or companions."
+    ],
+    "itinerary": {
+      "title": "Your experience",
+      "steps": [
+        {
+          "time": "Before the flight",
+          "title": "Arrival, light breakfast and coffee break",
+          "description": "The team welcomes you for check-in, a coffee break and a light buffet breakfast before take-off. Confirm your pickup."
+        },
+        {
+          "time": "Preparation",
+          "title": "Getting ready to fly",
+          "description": "The team briefs you on boarding and enjoying the experience safely."
+        },
+        {
+          "time": "In the air",
+          "title": "Private flight",
+          "description": "See the Teotihuacán Valley from the balloon. The route depends on the day’s conditions."
+        },
+        {
+          "time": "On landing",
+          "title": "Traditional toast",
+          "description": "Celebrate the flight with champagne."
+        },
+        {
+          "time": "Flight keepsake",
+          "title": "Flight certificate",
+          "description": "Receive your flight certificate."
+        },
+        {
+          "time": "According to the confirmed itinerary",
+          "title": "Archaeological site admission",
+          "description": "Enjoy this included service: archaeological site admission. Confirm its timing and place in your itinerary."
+        },
+        {
+          "time": "According to the confirmed itinerary",
+          "title": "Bilingual guide from pickup",
+          "description": "Enjoy this included service: bilingual guide from pickup. Confirm its timing and place in your itinerary."
+        },
+        {
+          "time": "According to the confirmed itinerary",
+          "title": "Brunch at Club Campestre",
+          "description": "Enjoy this included service: brunch at club campestre. Confirm its timing and place in your itinerary."
+        }
+      ]
+    }
+  }
+}

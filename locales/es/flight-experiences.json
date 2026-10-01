@@ -15,7 +15,7 @@
       "conversionTitleTail": "sobre el Valle de Teotihuacán.",
       "conversionDescription": "Elige entre vuelos compartidos, experiencias completas y vuelos privados operados con el estándar de seguridad de Flying Pictures México.",
       "experiencesFrom": "Experiencias desde {price}",
-      "secureBooking": "Reserva segura mediante Peek · Confirmación inmediata",
+      "secureBooking": "Consulta disponibilidad y condiciones con nuestro equipo",
       "ctaPrimary": "Ver vuelos y disponibilidad",
       "ctaSecondary": "Habla con un especialista",
       "reviews": "{count} opiniones en Tripadvisor",
@@ -30,7 +30,6 @@
       "recommendedDescription": "Vuelo, transporte redondo y acceso a la zona arqueológica en una experiencia coordinada de principio a fin.",
       "viewRecommended": "Ver experiencia completa"
     },
-
     "cards": {
       "subtitle": "VUELOS SELECCIONADOS",
       "title": "Elige\ntu viaje",
@@ -43,78 +42,54 @@
       "idealFor": "Ideal para",
       "keyIncludes": "Lo esencial",
       "recommended": "Experiencia recomendada",
-
       "intents": {
         "complete": "Experiencia completa",
         "shared": "Vuelo compartido",
         "celebration": "Celebraciones",
-        "privateVip": "Privado y VIP",
-        "gift": "Tarjeta de regalo"
+        "privateVip": "Privado y VIP"
       },
-
       "categories": {
         "complete": "Experiencia completa",
         "shared": "Vuelo compartido",
         "celebration": "Celebración",
         "private": "Experiencia privada",
-        "vip": "VIP y recorridos"
+        "vip": "Premium y Charter"
       },
-
-      "priceModels": {
-        "perPerson": "Precio por adulto",
-        "privateForTwo": "Experiencia privada para dos",
-        "voucher": "Valor de la tarjeta"
-      },
-
-      "gift": {
-        "eyebrow": "Tarjeta de regalo Flying",
-        "title": "Regala el cielo.",
-        "value": "Valor de la experiencia",
-        "details": "Conoce la tarjeta de regalo"
-      },
-
       "books": {
-        "classic": "Reservar vuelo",
-        "journey": "Reservar experiencia completa",
-        "transport": "Reservar experiencia completa",
-        "open": "Comprar ahora",
-        "proposal": "Reservar experiencia completa",
-        "anniversary": "Reservar experiencia completa",
-        "birthday": "Reservar experiencia completa",
-        "vip": "Reservar experiencia completa"
+        "classic": "Consultar disponibilidad",
+        "transport": "Consultar disponibilidad",
+        "vip": "Consultar disponibilidad",
+        "celebration": "Consultar disponibilidad",
+        "journey": "Consultar disponibilidad",
+        "private": "Consultar disponibilidad",
+        "charter": "Consultar disponibilidad"
       },
-
       "subtitles": {
-        "classic": "Ideal para quienes viajan solos, parejas y grupos de amigos que quieren compartir una perspectiva extraordinaria.",
-        "journey": "Ideal para quienes viajan solos, parejas y grupos de amigos que disfrutan descubrir juntos.",
-        "transport": "Ideal para visitantes internacionales y viajeros que buscan una experiencia fluida, impecable y sin preocupaciones logísticas.",
-        "open": "Regala un recuerdo, no una cosa. Recibe al instante un pase de abordar digital y deja que esa persona elija la fecha de su vuelo. La tarjeta se activa un mes después de la compra y puede utilizarse durante los seis meses siguientes, sujeta a disponibilidad.",
-        "proposal": "Ideal para parejas que buscan el escenario definitivo para hacer la pregunta más importante de su vida.",
-        "anniversary": "Ideal para parejas y familias que quieren conmemorar un aniversario importante con un gesto excepcional.",
-        "birthday": "Ideal para celebrar un nuevo capítulo con una perspectiva extraordinaria.",
-        "vip": "Ideal para visitantes internacionales y grupos privados que buscan exclusividad sin concesiones."
+        "classic": "Ideal para quienes buscan el vuelo compartido con sus servicios esenciales.",
+        "transport": "Ideal para quienes quieren combinar vuelo, transporte y zona arqueológica.",
+        "vip": "Ideal para grupos que buscan vuelo privado, recorrido guiado y brunch.",
+        "celebration": "Ideal para cumpleaños, aniversarios y ocasiones especiales en un vuelo privado.",
+        "journey": "Ideal para quienes buscan vuelo, visita guiada y tradiciones locales.",
+        "private": "Ideal para quienes buscan un vuelo privado con desayuno y champagne.",
+        "charter": "Ideal para grupos que buscan transporte premium, guía desde pickup y brunch."
       },
-
       "descriptions": {
-        "classic": "La experiencia: únete a un grupo selecto de viajeros en nuestras canastillas compartimentadas. A diferencia de los diseños abiertos, nuestra flota Cameron Balloons ofrece a cada pasajero un punto de observación propio y amplio espacio personal. El equilibrio ideal entre una experiencia compartida y un vuelo cómodo y cuidado.",
-        "journey": "La experiencia: diseñada para quien no quiere ocuparse de la logística. Coordinamos el transporte redondo, te acompañamos por la zona arqueológica y te acercamos a las tradiciones locales. Incluye un kit de viajero —sombrero y agua— para que tú te concentres en disfrutar.",
-        "transport": "La experiencia: diseñada para quienes buscan excelencia sin complicaciones. Coordinamos todo el itinerario: transporte privado de puerta a puerta, vuelo con la primera luz del día, desayuno buffet y acceso directo a la zona arqueológica. Una ejecución impecable, desde que pasamos por ti hasta tu regreso.",
-        "open": "La experiencia: compra un pase flexible y deja que la persona elija la fecha de su vuelo. Una forma elegante de regalar una experiencia sobre Teotihuacán sin tener que definir cada detalle por adelantado.",
-        "proposal": "La experiencia: la excelencia se diseña. Coordinamos con precisión el despliegue de la lona «¿Quieres casarte conmigo?» mientras disfrutan de privacidad total en el cielo. Flores frescas, detalles gourmet y fotografía profesional: nosotros resolvemos la complejidad para que tú te concentres en el momento. Tú trae el anillo; nosotros cuidamos el resto.",
-        "anniversary": "La experiencia: las celebraciones tradicionales pueden repetirse; la serenidad del Valle de Teotihuacán, no. Creamos una atmósfera cuidada para honrar su historia juntos. Después del vuelo les espera un desayuno buffet en El Jaguar y el brindis tradicional, además de una lona personalizada y un paquete de fotografía digital para conservar el recuerdo.",
-        "birthday": "La experiencia: ¿por qué celebrar en tierra cuando puedes hacerlo desde el cielo? Comienza un nuevo año personal con la primera luz sobre el valle. Coordinamos cada detalle: una lona personalizada al aterrizar, pastel simbólico y el brindis tradicional. Una celebración cuidada bajo los estándares de seguridad de Flying Pictures.",
-        "vip": "La experiencia: nuestro servicio más exclusivo, creado para quienes exigen discreción y precisión absolutas. Coordinamos un viaje privado desde la puerta de tu hotel hasta el cielo del Valle de Teotihuacán, seguido de un brunch exclusivo en Mayahuel. Puedes complementar la experiencia con champaña fría y un recorrido por la zona arqueológica guiado por un historiador."
+        "classic": "Comparte un vuelo en globo sobre el Valle de Teotihuacán. La experiencia incluye coffee break, seguro de vuelo, brindis con vino espumoso y certificado. El desayuno y el transporte se contratan por separado.",
+        "transport": "Combina el vuelo compartido con transporte redondo compartido, desayuno completo y acceso a la zona arqueológica. Incluye coffee break, seguro, brindis con vino espumoso y certificado. Puedes solicitar guía bilingüe y cotizar por separado las conversiones del vuelo o del transporte a privado.",
+        "vip": "Premium - VIP reúne vuelo privado, transporte redondo privado, brindis con champagne, acceso arqueológico con guía bilingüe y tour en cuevas ceremoniales. Incluye fotografías y video, mesero, canapés y snacks, y brunch en Mayahuel. Consulta cuántas personas cubre el paquete y el total de tu grupo.",
+        "celebration": "Un vuelo privado para celebrar cumpleaños, aniversarios o un momento especial. Incluye desayuno completo, flores, pastel y/o mañanitas, coffee break, seguro, brindis con vino espumoso y certificado. Las lonas de personalización y las fotografías se cotizan por separado.",
+        "journey": "Viajero combina vuelo y transporte redondo compartidos con desayuno completo, acceso arqueológico y guía bilingüe. Incluye taller de artesanías y bebidas típicas, kit o souvenir viajero, coffee break, seguro, brindis con vino espumoso y certificado. Consulta el precio y las personas cubiertas antes de reservar.",
+        "private": "Disfruta el Valle de Teotihuacán en un vuelo privado con coffee break, seguro, brindis con champagne, certificado y desayuno completo. El transporte, las fotografías y las visitas en tierra se cotizan como extras. Confirma las personas cubiertas por el paquete.",
+        "charter": "FPM Private Charter incluye vuelo privado, transporte redondo privado premium, guía bilingüe desde el pickup y acceso arqueológico. Disfruta desayuno buffet ligero previo al despegue, brindis con champagne, fotografías y video, mesero, canapés y snacks, y brunch en Club Campestre. Consulta las personas cubiertas y el mínimo de reserva."
       },
-
       "includes": {
-        "classic": "Incluye: vuelo de 45-60 min, café de bienvenida y brindis con vino espumoso.",
-        "journey": "Incluye: transporte redondo desde CDMX, vuelo, desayuno, recorrido por las pirámides, entradas y detalle para el viajero.",
-        "transport": "Incluye: transporte redondo desde CDMX, vuelo de 40 min, café de bienvenida, brindis con vino espumoso, desayuno buffet, entradas a las pirámides y certificado.",
-        "open": "Incluye: pase flexible para vuelo, café de bienvenida, brindis con vino espumoso y certificado.",
-        "proposal": "Incluye: vuelo privado, montaje sorpresa de propuesta, ramo de 24 rosas, paquete de foto y video, brindis con vino espumoso y desayuno.",
-        "anniversary": "Incluye: vuelo, letrero de aniversario, café de bienvenida, brindis con vino espumoso, desayuno buffet, certificado de vuelo y seguro.",
-        "birthday": "Incluye: vuelo, letrero de cumpleaños, rebanada de pastel, café de bienvenida, brindis con vino espumoso, desayuno buffet y certificado de vuelo.",
-        "vip": "Incluye: transporte privado, vuelo privado, champaña, servicio personalizado, canapés, recorrido privado por cuevas y pirámides, brunch y paquete de foto y video."
+        "classic": "Vuelo compartido, coffee break, brindis con vino espumoso",
+        "transport": "Vuelo compartido y transporte redondo compartido, desayuno completo, acceso a la zona arqueológica",
+        "vip": "Vuelo y transporte privados, guía y cuevas ceremoniales, brunch en Mayahuel",
+        "celebration": "Vuelo privado, desayuno completo y flores, pastel y/o mañanitas",
+        "journey": "Vuelo y transporte compartidos, zona arqueológica con guía bilingüe, taller y kit viajero",
+        "private": "Vuelo privado, brindis con champagne, desayuno completo",
+        "charter": "Vuelo y transporte privado premium, guía desde pickup y acceso arqueológico, brunch en Club Campestre"
       }
     }
   }

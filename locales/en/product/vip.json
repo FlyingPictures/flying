@@ -1,87 +1,152 @@
 {
   "hero": {
-    "subtitle": "Private transport and flight | Approximately 40 minutes | Air-and-land tour"
+    "subtitle": "Private flight and transport | Guide and caves | Mayahuel brunch"
   },
   "rating": {
     "score": 4.8,
-    "reviewsCount": "225 Tripadvisor reviews"
+    "reviewsCount": "225 reviews on Tripadvisor"
   },
   "description": {
-    "title": "Your Sky, Your Rules",
-    "paragraph": "The catalogue's most complete private experience: exclusive transport, a flight just for your group, French champagne with waiter service, ceremonial caves, brunch, and an archaeological-zone tour with a historian. Flight photos and video are already included."
+    "title": "A private journey through air and land",
+    "paragraph": "Premium - VIP brings together a private flight, private round-trip transport, a champagne toast, archaeological site admission with a bilingual guide and a ceremonial cave tour. Photos and video, waiter service, canapés and snacks, and brunch at Mayahuel are included. Confirm the number of guests covered and your group’s total."
   },
   "itinerary": {
-    "title": "What you'll do",
+    "title": "Your experience",
     "steps": [
       {
-        "title": "5:00 AM - Arrive & Check-in",
-        "description": "You’ll arrive at Flying Pictures Reception, where our team will welcome you and help you complete check-in."
+        "time": "Before the flight",
+        "title": "Arrival and coffee break",
+        "description": "The team welcomes you for check-in and a coffee break. Confirm your meeting point."
       },
       {
-        "title": "Welcome & Coffee Break",
-        "description": "After you complete your check-in we will welcome you with our coffee station with hot beverages and traditional cookies."
+        "time": "Preparation",
+        "title": "Getting ready to fly",
+        "description": "The team briefs you on boarding and enjoying the experience safely."
       },
       {
-        "title": "The Inflation Spectacle",
-        "description": "Walk to the launch field to watch the \"Giants\" come to life. Seeing the massive balloons rise with the roar of the burners is the first act of the show."
+        "time": "In the air",
+        "title": "Private flight",
+        "description": "See the Teotihuacán Valley from the balloon. The route depends on the day’s conditions."
       },
       {
-        "title": "The Ascent",
-        "description": "Lift off gently into the dawn. For approx. 45-60 minutes, float silently over the Valley of Teotihuacán, watching the sun reveal the pyramids from above."
+        "time": "On landing",
+        "title": "Traditional toast",
+        "description": "Celebrate the flight with champagne."
       },
       {
-        "title": "The 1783 Toast",
-        "description": "Upon landing, we celebrate with a traditional sparkling wine toast. A ritual dating back to the first aviators to thank the wind gods for a safe return."
+        "time": "Flight keepsake",
+        "title": "Flight certificate",
+        "description": "Receive your flight certificate."
+      },
+      {
+        "time": "According to the confirmed itinerary",
+        "title": "Archaeological site admission",
+        "description": "Enjoy this included service: archaeological site admission. Confirm its timing and place in your itinerary."
+      },
+      {
+        "time": "According to the confirmed itinerary",
+        "title": "Bilingual guide",
+        "description": "Enjoy this included service: bilingual guide. Confirm its timing and place in your itinerary."
+      },
+      {
+        "time": "According to the confirmed itinerary",
+        "title": "Ceremonial cave tour",
+        "description": "Enjoy this included service: ceremonial cave tour. Confirm its timing and place in your itinerary."
+      },
+      {
+        "time": "According to the confirmed itinerary",
+        "title": "Brunch at Mayahuel",
+        "description": "Enjoy this included service: brunch at mayahuel. Confirm its timing and place in your itinerary."
       }
     ]
   },
-   "pricing": {
-    "dates": "See Dates",
+  "pricing": {
     "adults": "Adults",
-    "kids": "Kids (4-12)"
+    "kids": "Children (4–12)",
+    "dates": "Ask about availability"
   },
   "details": {
     "included": [
-      "Private round-trip transport between Mexico City and Teotihuacán with coordinated pickup",
-      "Private flight of approximately 40 minutes",
-      "Coffee break with cookies and traditional Mexican drinks",
-      "French-champagne toast — juice for children",
-      "Waiter service with canapés, guacamole, coffee, bread, and local fruit",
-      "Private guided ceremonial-cave tour of approximately 30 minutes",
-      "Traditional brunch at a local restaurant",
-      "Private archaeological-zone tour of approximately two and a half hours with a historian",
-      "Personalised flight certificate",
-      "Traveller insurance",
-      "Flight photos and video"
+      "Private flight",
+      "Coffee break",
+      "Flight insurance",
+      "Traditional champagne toast",
+      "Flight certificate",
+      "Private round-trip transport",
+      "Archaeological site admission",
+      "Bilingual guide",
+      "Ceremonial cave tour",
+      "Photos and video",
+      "Waiter service",
+      "Canapés and snacks",
+      "Brunch at Mayahuel"
     ],
     "notIncluded": [
-      "Mariachis upon landing",
-      "Bouquet of flowers",
-      "Personalised banners",
-      "Accommodation",
-      "$110 MXN per-person fee for non-resident foreign visitors"
+      "Full breakfast separate from brunch",
+      "Flowers and mariachi music",
+      "Additional passengers or non-flying companions"
     ],
     "recommendedExtras": [
-      "Mariachis upon landing — four songs",
-      "Bouquet of flowers"
+      "Additional adult passenger",
+      "Additional child passenger",
+      "Flower bouquet",
+      "Mariachi music on landing",
+      "Service for a non-flying companion"
     ],
     "notes": [
-      "A minimum booking of four people is required.",
-      "An additional adult costs $3,999 MXN and the child price is $3,499 MXN.",
-      "Non-resident foreign visitors pay an additional $110 MXN per person upon arrival."
+      "Confirm availability, timing, the meeting point and your total before booking.",
+      "Flight duration, route and activity order are confirmed according to weather and operating conditions.",
+      "Extras are quoted separately; confirm their scope, price and availability.",
+      "Confirm how many guests the package includes, the booking minimum and charges for additional passengers or companions."
     ],
     "itinerary": {
-      "title": "What you'll do",
+      "title": "Your experience",
       "steps": [
-        { "time": "Departure", "title": "Travel in private transport", "description": "An exclusive vehicle takes your group from Mexico City to Teotihuacán." },
-        { "time": "Welcome", "title": "Enjoy the coffee break", "description": "We welcome you with coffee, cookies, and traditional Mexican drinks." },
-        { "time": "Preparation", "title": "Board your private balloon", "description": "Only your group shares the basket during the flight." },
-        { "time": "In the air", "title": "Fly for approximately 40 minutes", "description": "The team captures photos and video while you enjoy views of the valley." },
-        { "time": "After landing", "title": "Enjoy champagne and canapés", "description": "A waiter serves the toast, guacamole, coffee, bread, and local fruit." },
-        { "time": "Underworld", "title": "Explore ceremonial caves", "description": "Take a private guided tour lasting approximately 30 minutes." },
-        { "time": "Brunch", "title": "Try a traditional brunch", "description": "Enjoy local dishes at a nearby restaurant." },
-        { "time": "History", "title": "Tour the pyramids with a historian", "description": "A specialist accompanies your group for approximately two and a half hours." },
-        { "time": "Closing", "title": "Receive your certificate, photos, and video", "description": "Finish with your personalised certificate and the media from your experience." }
+        {
+          "time": "Before the flight",
+          "title": "Arrival and coffee break",
+          "description": "The team welcomes you for check-in and a coffee break. Confirm your meeting point."
+        },
+        {
+          "time": "Preparation",
+          "title": "Getting ready to fly",
+          "description": "The team briefs you on boarding and enjoying the experience safely."
+        },
+        {
+          "time": "In the air",
+          "title": "Private flight",
+          "description": "See the Teotihuacán Valley from the balloon. The route depends on the day’s conditions."
+        },
+        {
+          "time": "On landing",
+          "title": "Traditional toast",
+          "description": "Celebrate the flight with champagne."
+        },
+        {
+          "time": "Flight keepsake",
+          "title": "Flight certificate",
+          "description": "Receive your flight certificate."
+        },
+        {
+          "time": "According to the confirmed itinerary",
+          "title": "Archaeological site admission",
+          "description": "Enjoy this included service: archaeological site admission. Confirm its timing and place in your itinerary."
+        },
+        {
+          "time": "According to the confirmed itinerary",
+          "title": "Bilingual guide",
+          "description": "Enjoy this included service: bilingual guide. Confirm its timing and place in your itinerary."
+        },
+        {
+          "time": "According to the confirmed itinerary",
+          "title": "Ceremonial cave tour",
+          "description": "Enjoy this included service: ceremonial cave tour. Confirm its timing and place in your itinerary."
+        },
+        {
+          "time": "According to the confirmed itinerary",
+          "title": "Brunch at Mayahuel",
+          "description": "Enjoy this included service: brunch at mayahuel. Confirm its timing and place in your itinerary."
+        }
       ]
     }
   }

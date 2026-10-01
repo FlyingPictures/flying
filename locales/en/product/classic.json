@@ -1,86 +1,103 @@
 {
   "hero": {
-    "subtitle": "Shared basket | Approximately 40-minute flight | 🇬🇧 British safety standards"
+    "subtitle": "Shared flight | Coffee break | Toast and certificate"
   },
   "rating": {
     "score": 4.8,
-    "reviewsCount": "225 Tripadvisor reviews"
+    "reviewsCount": "225 reviews on Tripadvisor"
   },
   "description": {
-    "title": "Experience the Magic of Shared Flight",
-    "paragraph": "Join a select group of fellow adventurers for a morning where strangers become friends. Unlike standard \"open\" baskets where guests are crowded together, Flying Pictures uses Cameron Balloons Compartmented Baskets. What does this mean for you? Even in a shared flight, you have your own protected corner of the sky. No fighting for a view, just shared awe."
+    "title": "The essentials for seeing Teotihuacán from the air",
+    "paragraph": "Share a balloon flight over the Teotihuacán Valley. The experience includes a coffee break, flight insurance, a sparkling wine toast and a certificate. Breakfast and transport are not included."
   },
   "itinerary": {
-    "title": "What you'll do",
+    "title": "Your experience",
     "steps": [
       {
-        "title": "5:00 AM - Arrive & Check-in",
-        "description": "You’ll arrive at Flying Pictures Reception, where our team will welcome you and help you complete check-in."
+        "time": "Before the flight",
+        "title": "Arrival and coffee break",
+        "description": "The team welcomes you for check-in and a coffee break. Confirm your meeting point."
       },
       {
-        "title": "Welcome & Coffee Break",
-        "description": "After you complete your check-in we will welcome you with our coffee station with hot beverages and traditional cookies."
+        "time": "Preparation",
+        "title": "Getting ready to fly",
+        "description": "The team briefs you on boarding and enjoying the experience safely."
       },
       {
-        "title": "The Inflation Spectacle",
-        "description": "Walk to the launch field to watch the \"Giants\" come to life. Seeing the massive balloons rise with the roar of the burners is the first act of the show."
+        "time": "In the air",
+        "title": "Shared flight",
+        "description": "See the Teotihuacán Valley from the balloon. The route depends on the day’s conditions."
       },
       {
-        "title": "The Ascent",
-        "description": "Lift off gently into the dawn. For approx. 45-60 minutes, float silently over the Valley of Teotihuacán, watching the sun reveal the pyramids from above."
+        "time": "On landing",
+        "title": "Traditional toast",
+        "description": "Celebrate the flight with sparkling wine."
       },
       {
-        "title": "The 1783 Toast",
-        "description": "Upon landing, we celebrate with a traditional sparkling wine toast. A ritual dating back to the first aviators to thank the wind gods for a safe return."
+        "time": "Flight keepsake",
+        "title": "Flight certificate",
+        "description": "Receive your flight certificate."
       }
     ]
   },
-   "pricing": {
-    "dates": "See Dates",
+  "pricing": {
     "adults": "Adults",
-    "kids": "Kids (4-12)"
+    "kids": "Children (4–12)",
+    "dates": "Ask about availability"
   },
   "details": {
     "included": [
-      "Shared flight of approximately 40 minutes over the Teotihuacán Valley",
-      "Coffee break with cookies and traditional Mexican drinks",
-      "Sparkling-wine toast or a non-alcoholic option",
-      "Personalised flight certificate",
-      "Traveller insurance"
+      "Shared flight",
+      "Coffee break",
+      "Flight insurance",
+      "Traditional sparkling wine toast",
+      "Flight certificate"
     ],
     "notIncluded": [
-      "Transport between Mexico City and Teotihuacán",
-      "Breakfast buffet",
-      "Admission, transport, or guide for the archaeological zone",
-      "Flight photos and video",
-      "Private flight",
-      "Celebration services such as flowers, banner, or mariachis"
+      "Breakfast",
+      "Transport",
+      "Archaeological site admission or guide",
+      "Photos and video",
+      "Private flight"
     ],
     "recommendedExtras": [
-      "Shared round-trip transport from $500 MXN per person",
-      "Private transport for an additional $2,000 MXN over shared service",
-      "Upgrade the flight to private for $3,999 MXN",
-      "Breakfast buffet",
-      "Admission and transport to the archaeological zone",
-      "Photos and video during the flight",
-      "Personalised banner",
-      "Bouquet of flowers",
-      "Mariachis upon landing — four songs",
-      "Bilingual guide"
+      "Private round-trip transport for 1–4 guests in the central area",
+      "Photos and video",
+      "Archaeological site admission"
     ],
     "notes": [
-      "The experience is booked as a shared flight; private use is available as an extra.",
-      "The route and flight time depend on the day's weather and operating conditions."
+      "Confirm availability, timing, the meeting point and your total before booking.",
+      "Flight duration, route and activity order are confirmed according to weather and operating conditions.",
+      "Extras are quoted separately; confirm their scope, price and availability."
     ],
     "itinerary": {
-      "title": "What you'll do",
+      "title": "Your experience",
       "steps": [
-        { "time": "Before the flight", "title": "Arrive at the Globoport", "description": "We welcome you for check-in with hot coffee, cookies, and traditional drinks." },
-        { "time": "Preparation", "title": "Watch your balloon inflate", "description": "Follow the aircraft preparation and see the envelope take shape." },
-        { "time": "Take-off", "title": "Begin the ascent", "description": "The pilot selects the take-off time and location according to the day's conditions." },
-        { "time": "In the air", "title": "Fly for approximately 40 minutes", "description": "Enjoy views of the Teotihuacán Valley from a compartmented Cameron basket." },
-        { "time": "After landing", "title": "Join the traditional toast", "description": "Celebrate the landing with sparkling wine or a non-alcoholic option." },
-        { "time": "Closing", "title": "Receive your certificate", "description": "Take home a personalised certificate as a memento of the experience." }
+        {
+          "time": "Before the flight",
+          "title": "Arrival and coffee break",
+          "description": "The team welcomes you for check-in and a coffee break. Confirm your meeting point."
+        },
+        {
+          "time": "Preparation",
+          "title": "Getting ready to fly",
+          "description": "The team briefs you on boarding and enjoying the experience safely."
+        },
+        {
+          "time": "In the air",
+          "title": "Shared flight",
+          "description": "See the Teotihuacán Valley from the balloon. The route depends on the day’s conditions."
+        },
+        {
+          "time": "On landing",
+          "title": "Traditional toast",
+          "description": "Celebrate the flight with sparkling wine."
+        },
+        {
+          "time": "Flight keepsake",
+          "title": "Flight certificate",
+          "description": "Receive your flight certificate."
+        }
       ]
     }
   }

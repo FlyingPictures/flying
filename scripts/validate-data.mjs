@@ -6,22 +6,22 @@ const root = process.cwd();
 const localesRoot = path.join(root, 'locales');
 const locales = ['es', 'en'];
 const expectedProducts = [
-  'anniversary',
-  'birthday',
+  'celebration',
+  'charter',
   'classic',
   'corporate',
   'journey',
   'open',
-  'proposal',
+  'private',
   'transport',
   'vip',
 ];
 const detailedProducts = [
-  'anniversary',
-  'birthday',
+  'celebration',
+  'charter',
   'classic',
   'journey',
-  'proposal',
+  'private',
   'transport',
   'vip',
 ];
@@ -166,8 +166,8 @@ for (const slug of detailedProducts) {
       });
     }
 
-    if (!document.hero?.subtitle?.includes('40')) {
-      errors.push(`${locale}/${relativePath}: el resumen debe comunicar la duración aproximada de 40 minutos`);
+    if (!document.hero?.subtitle?.trim()) {
+      errors.push(`${locale}/${relativePath}: falta el resumen del paquete`);
     }
 
     const included = new Set((details.included ?? []).map(normaliseItem));

@@ -149,13 +149,6 @@ export const IMAGES = {
         "Rectangle_41_5_1_q9jkki",
         "Rectangle_41_2_fyibpj"
       ],
-      proposal: [
-        "proposal_01",
-        "proposal_02",
-        "proposal_03",
-        "proposal_04",
-        "proposal_05" 
-      ],
       vip: [
         "vip_01",
         "vip_02",
@@ -184,20 +177,14 @@ export const IMAGES = {
         "Rectangle_41_5_1_q9jkki",
         "Rectangle_41_4_p6etxl"
       ],
-      anniversary: [
-        "aniversary_01",
-        "aniversary_02",
-        "aniversary_03",
-        "aniversary_04",
-        "aniversary_05",
-        "aniversary_06"
+      celebration: [
+        "vip_05", "Rectangle_41_6_qcbkkl", "vip_06", "flightHero_tqysvs"
       ],
-      birthday: [
-        "birthday_01",
-        "birthday_02",
-        "birthday_03",
-        "birthday_04",
-        "birthday_05"
+      private: [
+        "vip_05", "Rectangle_41_6_qcbkkl", "vip_06", "flightHero_tqysvs"
+      ],
+      charter: [
+        "vip_01", "vip_02", "vip_03", "vip_04", "vip_05", "vip_06"
       ],
       corporate: [
         "corporate_06",

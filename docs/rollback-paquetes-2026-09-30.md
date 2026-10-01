@@ -30,6 +30,8 @@ El snapshot incluye todos los archivos no ignorados que figuraban pendientes ant
 | `fpm-packages-2026-09-30-m1-review` | Matriz preparada y verificada; confirmaciones comerciales abiertas | Tag de revisión asociado a esta entrega; no es el cierre comercial de M1 |
 | `fpm-packages-2026-09-30-m2` | Modelo de precios y presentación común preparados; catálogo anterior aún activo | Comprobaciones y alcance en `milestone-2-precios-2026-09-30.md` |
 
+| `fpm-packages-2026-09-30-m3` | Catálogo nuevo activo en el proyecto, contenido ES/EN y consulta por paquete | `milestone-3-catalogo-2026-09-30.md` |
+
 ## Revisar o recuperar una versión anterior sin borrar trabajo
 
 Primero comprobar si hay trabajo pendiente:

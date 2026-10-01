@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "subtitle": "Private flight | Champagne | Full breakfast"
+  },
+  "rating": {
+    "score": 4.8,
+    "reviewsCount": "225 reviews on Tripadvisor"
+  },
+  "description": {
+    "title": "A flight reserved for your group",
+    "paragraph": "Enjoy the Teotihuacán Valley on a private flight with a coffee break, insurance, a champagne toast, certificate and full breakfast. Transport, photos and ground visits are quoted as extras. Confirm how many guests the package includes."
+  },
+  "itinerary": {
+    "title": "Your experience",
+    "steps": [
+      {
+        "time": "Before the flight",
+        "title": "Arrival and coffee break",
+        "description": "The team welcomes you for check-in and a coffee break. Confirm your meeting point."
+      },
+      {
+        "time": "Preparation",
+        "title": "Getting ready to fly",
+        "description": "The team briefs you on boarding and enjoying the experience safely."
+      },
+      {
+        "time": "In the air",
+        "title": "Private flight",
+        "description": "See the Teotihuacán Valley from the balloon. The route depends on the day’s conditions."
+      },
+      {
+        "time": "On landing",
+        "title": "Traditional toast",
+        "description": "Celebrate the flight with champagne."
+      },
+      {
+        "time": "Flight keepsake",
+        "title": "Flight certificate",
+        "description": "Receive your flight certificate."
+      },
+      {
+        "time": "According to the confirmed itinerary",
+        "title": "Full breakfast",
+        "description": "Enjoy this included service: full breakfast. Confirm its timing and place in your itinerary."
+      }
+    ]
+  },
+  "pricing": {
+    "adults": "Adults",
+    "kids": "Children (4–12)",
+    "dates": "Ask about availability"
+  },
+  "details": {
+    "included": [
+      "Private flight",
+      "Coffee break",
+      "Flight insurance",
+      "Traditional champagne toast",
+      "Flight certificate",
+      "Full breakfast"
+    ],
+    "notIncluded": [
+      "Transport",
+      "Photos and video",
+      "Archaeological site admission or guide",
+      "Flowers and mariachi music",
+      "Cake"
+    ],
+    "recommendedExtras": [
+      "Private round-trip transport for two guests in the central area",
+      "Photos and video",
+      "Flower bouquet",
+      "Mariachi music on landing",
+      "Five-slice cake",
+      "Archaeological site admission",
+      "Additional champagne — ask for details",
+      "Bilingual guide for 1–6 guests",
+      "Additional passenger"
+    ],
+    "notes": [
+      "Confirm availability, timing, the meeting point and your total before booking.",
+      "Flight duration, route and activity order are confirmed according to weather and operating conditions.",
+      "Extras are quoted separately; confirm their scope, price and availability.",
+      "Confirm how many guests the package includes, the booking minimum and charges for additional passengers or companions.",
+      "The champagne toast is included. Ask about the scope of any additional champagne."
+    ],
+    "itinerary": {
+      "title": "Your experience",
+      "steps": [
+        {
+          "time": "Before the flight",
+          "title": "Arrival and coffee break",
+          "description": "The team welcomes you for check-in and a coffee break. Confirm your meeting point."
+        },
+        {
+          "time": "Preparation",
+          "title": "Getting ready to fly",
+          "description": "The team briefs you on boarding and enjoying the experience safely."
+        },
+        {
+          "time": "In the air",
+          "title": "Private flight",
+          "description": "See the Teotihuacán Valley from the balloon. The route depends on the day’s conditions."
+        },
+        {
+          "time": "On landing",
+          "title": "Traditional toast",
+          "description": "Celebrate the flight with champagne."
+        },
+        {
+          "time": "Flight keepsake",
+          "title": "Flight certificate",
+          "description": "Receive your flight certificate."
+        },
+        {
+          "time": "According to the confirmed itinerary",
+          "title": "Full breakfast",
+          "description": "Enjoy this included service: full breakfast. Confirm its timing and place in your itinerary."
+        }
+      ]
+    }
+  }
+}

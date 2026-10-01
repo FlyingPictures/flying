@@ -7,38 +7,32 @@
     "poweredBy": "Welcome to the highest standard of certified \n aviation in the Teotihuacán Valley.",
     "ctaSecondary": "Taking off at first light"
   },
-
   "FlightExperience": {
-    "bookFlight": "Book Flight",
+    "bookFlight": "Ask about availability",
     "flightDetails": "View Flight Details",
     "subtitle": "CHOOSE YOUR ASCENT",
     "title": "Flight Experiences \n Designed for adventure",
-
     "tabs": {
       "shared": "Shared",
       "private": "Private",
       "vip": "Vip & Tours"
     },
-
     "flightBadge": "{type} FLIGHT",
     "from": "From {price}",
     "featured": "Featured",
     "previousPackage": "Previous package",
     "nextPackage": "Next package",
     "packageCount": "{current} of {total}",
-
     "descriptions": {
-      "shared": "Ideal for solo travellers, friends, couples and groups. Enjoy a compartmented basket design that guarantees every guest their own clear view of the valley. Upgrade your flight with private transport, breakfast, and other optional extras.",
-      "private": "Ideal for solo travellers, friends, couples and groups. Enjoy a compartmented basket design that guarantees every guest their own clear view of the valley. Upgrade your flight with private transport, breakfast, and other optional extras.",
-      "vip": "Ideal for solo travellers, friends, couples and groups. Enjoy a compartmented basket design that guarantees every guest their own clear view of the valley. Upgrade your flight with private transport, breakfast, and other optional extras."
+      "shared": "Three shared experiences: Essential, Transport + Pyramids and Traveler. Check each package’s services.",
+      "private": "Celebration and Private Balloon Experience: a flight reserved for your group, with each package’s own services.",
+      "vip": "Premium - VIP and FPM Private Charter: private flights and transport, guided visits and brunch depending on the package."
     },
-
     "awardSection": {
       "title": "Award-winning",
       "subtitle": "AVIATION COMPANY",
       "description": "Experience one of Mexico’s most trusted and distinguished hot air balloon operations, where British attention to detail meets the vibrant spirit of Mexico. For more than twenty years, Flying Pictures México has set the gold standard for safe, beautifully executed flights over the extraordinary Teotihuacán Valley."
     },
-
     "cards": {
       "tradition": {
         "title": "More Than a Flight. A Tradition.",
@@ -46,13 +40,11 @@
         "button": "Explore Flight Collection",
         "award_label": "Most Trusted Aviation Provider 2024"
       },
-
       "other": {
         "title": "Safety Always Comes First.",
         "description": "Our fully licensed pilots bring years often decades of experience to every ascent. With comprehensive passenger insurance included, a traditional celebratory toast upon landing, and the tranquil beauty of sunrise across the valley, each flight reflects a balance of professionalism and heritage.",
         "button": "Explore Flights"
       },
-
       "safety": {
         "title": "Safety Always Comes First.",
         "description": "Our fully licensed pilots bring years — often decades — of experience to every ascent. With comprehensive passenger insurance included, a traditional celebratory toast upon landing, and the tranquil beauty of sunrise across the valley, each flight reflects a balance of professionalism and heritage.",
@@ -60,7 +52,6 @@
       }
     }
   },
-
   "whyChoose": {
     "title": "WHY FLY WITH US",
     "takeAway": "THE 30 SECOND TAKEAWAY",
@@ -80,7 +71,6 @@
       }
     ]
   },
-
   "imagegridsection": {
     "planYourVisit": "Plan Your Visit",
     "experience": "Experience",
@@ -89,7 +79,6 @@
     "bookNow": "Book Now",
     "language": "Language"
   },
-
   "reviews": {
     "tittle": "Reviews",
     "homeReadRealReviews": "Our Reputation:",
@@ -106,24 +95,20 @@
     "travelerPhoto": "Traveler photo",
     "readFullReview": "Read full review on Tripadvisor"
   },
-
   "weather": {
     "liveMonitoring": "LIVE MONITORING",
     "heading": "Weather Intelligence: We never leave safety to chance.",
     "description": "Our flight decisions are guided by real-time meteorological data, advanced forecasting, and disciplined risk assessment. In aviation, the environment dictates the operation and we respect its parameters to ensure your absolute safety.",
-
     "safetyPromise": {
       "title": "The Safety Promise",
       "description": "If the weather is not suitable, we don't fly. We would rather keep you on the ground than risk you in the air.",
       "cta": "View our Safety Protocols"
     },
-
     "viewPromise": {
       "title": "The Valley, Different Every Morning",
       "description": "We fly to witness the valley awaken. Some mornings bring golden light; others, mist over the pyramids. Nature shapes the landscape; our standards of safety and operation remain constant.",
       "cta": "View our Weather Policy"
     },
-
     "station": "STATION",
     "status": "STATUS",
     "active": "ACTIVE",
@@ -132,7 +117,6 @@
     "temperature": "Temperature",
     "pressure": "Pressure"
   },
-
   "tradition": {
     "title": "Our Tradition and Safety Commitment"
   }

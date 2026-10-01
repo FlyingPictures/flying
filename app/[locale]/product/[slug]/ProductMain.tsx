@@ -8,9 +8,8 @@ import { cloudinaryUrl } from "@/lib/cloudinary";
 import { ProductTranslation } from "@/types/product";
 import { IMAGES } from "@/lib/images";
 import { Button } from "@/components/ui/button";
-import { SITE_CONTACT } from "@/lib/site-config";
 import {
-  BOOKING_URLS,
+  getReservationUrl,
   PRODUCT_PRICING,
   getPriceDisplay,
   getProductName,
@@ -37,7 +36,7 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
   const locale = useLocale();
   const productPricing = PRODUCT_PRICING[slug];
   const priceDisplay = getPriceDisplay(productPricing, locale);
-  const reservationUrl = BOOKING_URLS[slug] ?? SITE_CONTACT.whatsapp;
+  const reservationUrl = getReservationUrl(slug, locale);
 
   const prev = useCallback(
     () => setCarouselIndex((i) => (i === null ? 0 : (i - 1 + images.length) % images.length)),

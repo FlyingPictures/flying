@@ -1,6 +1,6 @@
 {
   "hero": {
-    "subtitle": "Private Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
+    "subtitle": "Groups and companies | Experience by quotation"
   },
   "rating": {
     "score": 4.8,
@@ -8,36 +8,32 @@
   },
   "description": {
     "title": "Team Building Above the Ordinary",
-    "paragraph": "Take your team somewhere no boardroom can reach. A private balloon flight over Teotihuacán breaks hierarchies, sparks conversation, and creates shared memories that outlast any team-building exercise. Flying Pictures handles every logistical detail so your only job is to enjoy the view alongside your colleagues — and maybe close that deal at 2,000 meters."
+    "paragraph": "Plan a balloon experience over Teotihuacán for your team, event or group. Tell Flying Pictures about your guests, flight arrangement, transport and services; the offer and price are defined in your quote."
   },
   "itinerary": {
-    "title": "What you'll do",
+    "title": "How to enquire",
     "steps": [
       {
-        "title": "5:00 AM - Arrive & Check-in",
-        "description": "You’ll arrive at Flying Pictures Reception, where our team will welcome you and help you complete check-in."
+        "title": "Tell us about your event",
+        "description": "Share your preferred date, guest count and the purpose of the visit."
       },
       {
-        "title": "Welcome & Coffee Break",
-        "description": "After you complete your check-in we will welcome you with our coffee station with hot beverages and traditional cookies."
+        "title": "Choose the services",
+        "description": "Discuss flight arrangements, transport and activities for your group."
       },
       {
-        "title": "The Inflation Spectacle",
-        "description": "Walk to the launch field to watch the \"Giants\" come to life. Seeing the massive balloons rise with the roar of the burners is the first act of the show."
+        "title": "Receive your quote",
+        "description": "Confirm the scope of services and the total price."
       },
       {
-        "title": "The Ascent",
-        "description": "Lift off gently into the dawn. For approx. 45-60 minutes, float silently over the Valley of Teotihuacán, watching the sun reveal the pyramids from above."
-      },
-      {
-        "title": "The 1783 Toast",
-        "description": "Upon landing, we celebrate with a traditional sparkling wine toast. A ritual dating back to the first aviators to thank the wind gods for a safe return."
+        "title": "Coordinate your visit",
+        "description": "We agree on availability, timing and the meeting point."
       }
     ]
   },
-   "pricing": {
+  "pricing": {
     "dates": "Request a Quote",
-    "adults": "Adults",
-    "kids": "Kids (4-12)"
+    "adults": "",
+    "kids": ""
   }
 }

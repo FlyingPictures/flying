@@ -1,94 +1,165 @@
 {
   "hero": {
-    "subtitle": "Transporte redondo | Vuelo aproximado de 40 minutos | Recorrido guiado y degustación"
+    "subtitle": "Vuelo y transporte compartidos | Guía | Taller y kit viajero"
   },
   "rating": {
     "score": 4.8,
     "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
-    "title": "La experiencia de vuelo por excelencia",
-    "paragraph": "La experiencia más completa para descubrir Teotihuacán: transporte redondo, vuelo, desayuno, visita guiada a la zona arqueológica, taller de artesanías y degustación de tequila, mezcal y pulque. Incluye un kit de viajero para acompañarte durante el recorrido."
+    "title": "Descubre Teotihuacán más allá del vuelo",
+    "paragraph": "Viajero combina vuelo y transporte redondo compartidos con desayuno completo, acceso arqueológico y guía bilingüe. Incluye taller de artesanías y bebidas típicas, kit o souvenir viajero, coffee break, seguro, brindis con vino espumoso y certificado. Consulta el precio y las personas cubiertas antes de reservar."
   },
-
   "itinerary": {
-    "title": "Qué harás",
+    "title": "Tu experiencia",
     "steps": [
       {
-        "title": "5:00 AM - Llegada y registro",
-        "description": "Llegarás a la recepción de Flying Pictures y te recibiremos para ayudarte con el registro."
+        "time": "Antes del vuelo",
+        "title": "Llegada y coffee break",
+        "description": "El equipo te recibe para el registro y el coffee break. Confirma tu punto de encuentro."
       },
       {
-        "title": "Bienvenida y café",
-        "description": "Después de completar tu registro, te recibiremos en nuestra estación de café con bebidas calientes y galletas tradicionales."
+        "time": "Preparación",
+        "title": "Preparación para volar",
+        "description": "El equipo te orienta para abordar y disfrutar la experiencia con seguridad."
       },
       {
-        "title": "El espectáculo del inflado",
-        "description": "Camina hasta el campo de lanzamiento para ver a los \"Gigantes\" cobrar vida. Ver los enormes globos elevarse con el rugido de los quemadores es el primer acto del espectáculo."
+        "time": "En el aire",
+        "title": "Vuelo compartido",
+        "description": "Contempla el Valle de Teotihuacán desde el globo. La ruta depende de las condiciones del día."
       },
       {
-        "title": "El ascenso",
-        "description": "Despega suavemente con las primeras luces. Durante aproximadamente 45 a 60 minutos, flota en silencio sobre el Valle de Teotihuacán. El paisaje cambia con las condiciones de cada mañana."
+        "time": "Al aterrizar",
+        "title": "Brindis tradicional",
+        "description": "Celebra el vuelo con vino espumoso."
       },
       {
-        "title": "El brindis de 1783",
-        "description": "Al aterrizar, celebramos con un brindis tradicional de vino espumoso. Un ritual que se remonta a los primeros aviadores para agradecer a los dioses del viento un regreso seguro."
+        "time": "Recuerdo del vuelo",
+        "title": "Certificado de vuelo",
+        "description": "Recibe tu certificado de vuelo."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Desayuno completo",
+        "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar en el recorrido."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Acceso a la zona arqueológica",
+        "description": "Disfruta este servicio incluido: acceso a la zona arqueológica. Confirma el horario y su lugar en el recorrido."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Guía bilingüe",
+        "description": "Disfruta este servicio incluido: guía bilingüe. Confirma el horario y su lugar en el recorrido."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Kit / souvenir viajero",
+        "description": "Disfruta este servicio incluido: kit / souvenir viajero. Confirma el horario y su lugar en el recorrido."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Taller de artesanías y bebidas típicas",
+        "description": "Disfruta este servicio incluido: taller de artesanías y bebidas típicas. Confirma el horario y su lugar en el recorrido."
       }
     ]
   },
-
   "pricing": {
-    "dates": "Ver fechas",
     "adults": "Adultos",
-    "kids": "Niños (4-12)"
+    "kids": "Niños (4–12)",
+    "dates": "Consultar disponibilidad"
   },
   "details": {
     "included": [
-      "Transporte redondo compartido entre CDMX y Teotihuacán",
-      "Vuelo compartido de aproximadamente 40 minutos",
-      "Café de bienvenida con galletas y bebidas tradicionales mexicanas",
-      "Brindis con vino espumoso u opción sin alcohol",
-      "Certificado de vuelo personalizado",
-      "Desayuno",
-      "Seguro de viajero",
-      "Visita a la zona arqueológica con guía certificado",
-      "Taller de artesanías locales",
-      "Degustación de tequila, mezcal y pulque",
-      "Kit de viajero con sombrero, agua y recuerdo"
+      "Vuelo compartido",
+      "Coffee break",
+      "Seguro de vuelo",
+      "Brindis tradicional con vino espumoso",
+      "Certificado de vuelo",
+      "Desayuno completo",
+      "Transporte redondo compartido",
+      "Acceso a la zona arqueológica",
+      "Guía bilingüe",
+      "Kit / souvenir viajero",
+      "Taller de artesanías y bebidas típicas"
     ],
     "notIncluded": [
-      "Vuelo y transporte privados",
-      "Fotos y video del vuelo",
-      "Ramo de flores, lona personalizada o mariachis",
-      "Servicios no especificados en el itinerario",
-      "Cargo de $110 MXN por persona para extranjeros no residentes"
+      "Vuelo privado",
+      "Transporte privado",
+      "Fotografías y video",
+      "Flores y mariachis"
     ],
     "recommendedExtras": [
-      "Transporte privado redondo entre CDMX y Teotihuacán",
-      "Convertir el grupo a privado por $5,999 MXN",
-      "Fotos y video durante el vuelo",
-      "Lona personalizada",
+      "Fotografías y video",
+      "Mariachis al aterrizaje",
+      "Pasajero adicional",
+      "Champagne",
       "Ramo de flores",
-      "Mariachis al aterrizaje — cuatro canciones"
+      "Conversión del vuelo a privado",
+      "Conversión del transporte a privado"
     ],
     "notes": [
-      "La reservación requiere un mínimo de dos personas.",
-      "Los extranjeros no residentes pagan $110 MXN adicionales por persona al llegar.",
-      "El punto y la hora en que pasaremos por ti en CDMX se confirman con la reservación."
+      "Confirma la disponibilidad, el horario, el punto de encuentro y el total antes de reservar.",
+      "La duración, la ruta y el orden de actividades se confirman según las condiciones meteorológicas y operativas.",
+      "Los extras se cotizan por separado; confirma su alcance, tarifa y disponibilidad.",
+      "Confirma cuántas personas incluye el paquete, el mínimo de reserva y los cargos por pasajeros o acompañantes adicionales.",
+      "Las conversiones de vuelo y transporte a privado se cotizan por separado.",
+      "Si conviertes el vuelo a privado, confirma también el servicio de guía privado."
     ],
     "itinerary": {
-      "title": "Qué harás",
+      "title": "Tu experiencia",
       "steps": [
-        { "time": "Salida", "title": "Te recogemos en CDMX", "description": "Viajas a Teotihuacán en transporte compartido coordinado por nuestro equipo." },
-        { "time": "Bienvenida", "title": "Recibes tu kit de viajero", "description": "Te entregamos sombrero, agua y un recuerdo para acompañar el recorrido." },
-        { "time": "Antes del vuelo", "title": "Disfrutas un café de bienvenida", "description": "Te esperan café, galletas y bebidas tradicionales mexicanas." },
-        { "time": "Preparación", "title": "Ves inflar los globos", "description": "Conoces de cerca el proceso de preparación antes de abordar." },
-        { "time": "Despegue", "title": "Comienza el ascenso", "description": "El piloto selecciona el momento de despegue según las condiciones del día." },
-        { "time": "En el aire", "title": "Vuelas aproximadamente 40 minutos", "description": "Contemplas el Valle de Teotihuacán desde una canastilla Cameron." },
-        { "time": "Al aterrizar", "title": "Brindas y desayunas", "description": "Celebras el vuelo, desayunas y recibes tu certificado personalizado." },
-        { "time": "Cultura local", "title": "Visitas un taller de artesanías", "description": "Conoces técnicas y materiales tradicionales de la región." },
-        { "time": "Degustación", "title": "Pruebas bebidas tradicionales", "description": "Degustas tequila, mezcal y pulque como parte de la experiencia cultural." },
-        { "time": "Recorrido", "title": "Exploras las pirámides con guía", "description": "Un guía certificado acompaña tu visita por la zona arqueológica." }
+        {
+          "time": "Antes del vuelo",
+          "title": "Llegada y coffee break",
+          "description": "El equipo te recibe para el registro y el coffee break. Confirma tu punto de encuentro."
+        },
+        {
+          "time": "Preparación",
+          "title": "Preparación para volar",
+          "description": "El equipo te orienta para abordar y disfrutar la experiencia con seguridad."
+        },
+        {
+          "time": "En el aire",
+          "title": "Vuelo compartido",
+          "description": "Contempla el Valle de Teotihuacán desde el globo. La ruta depende de las condiciones del día."
+        },
+        {
+          "time": "Al aterrizar",
+          "title": "Brindis tradicional",
+          "description": "Celebra el vuelo con vino espumoso."
+        },
+        {
+          "time": "Recuerdo del vuelo",
+          "title": "Certificado de vuelo",
+          "description": "Recibe tu certificado de vuelo."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Desayuno completo",
+          "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar en el recorrido."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Acceso a la zona arqueológica",
+          "description": "Disfruta este servicio incluido: acceso a la zona arqueológica. Confirma el horario y su lugar en el recorrido."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Guía bilingüe",
+          "description": "Disfruta este servicio incluido: guía bilingüe. Confirma el horario y su lugar en el recorrido."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Kit / souvenir viajero",
+          "description": "Disfruta este servicio incluido: kit / souvenir viajero. Confirma el horario y su lugar en el recorrido."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Taller de artesanías y bebidas típicas",
+          "description": "Disfruta este servicio incluido: taller de artesanías y bebidas típicas. Confirma el horario y su lugar en el recorrido."
+        }
       ]
     }
   }

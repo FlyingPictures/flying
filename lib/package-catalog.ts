@@ -1,6 +1,6 @@
 import type { ProductPricing } from "./product-pricing";
 
-// Prepared in M2. M3 will activate these offers together with their matching content.
+// Active offers, transcribed from the M1 source matrix. Unconfirmed purchase terms stay explicit.
 export const NEW_PACKAGE_SLUGS = [
   "classic", "transport", "vip", "celebration", "journey", "private", "charter",
 ] as const;

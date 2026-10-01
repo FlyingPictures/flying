@@ -1,39 +1,35 @@
 {
   "hero": {
-    "subtitle": "Tarjeta flexible | Vigencia de 6 meses | Vuelo Tradicional"
+    "subtitle": "Información de tarjetas | Condiciones por confirmar"
   },
   "rating": {
     "score": 4.8,
     "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
-    "title": "Regala una experiencia para recordar",
-    "paragraph": "La tarjeta de regalo te permite obsequiar un vuelo Tradicional sin elegir la fecha de inmediato. Es transferible, se activa un mes después de la compra y puede utilizarse durante los seis meses siguientes, sujeto a disponibilidad."
+    "title": "Consulta las opciones para regalar un vuelo",
+    "paragraph": "Contacta a Flying Pictures para conocer las opciones actuales de regalo. Antes de adquirir una tarjeta, confirma el paquete que cubre, su precio, vigencia, activación y disponibilidad. Si ya tienes una tarjeta, comparte tu folio con nuestro equipo para revisar sus condiciones."
   },
   "itinerary": {
-    "title": "Cómo funciona",
+    "title": "Cómo consultar",
     "steps": [
       {
-        "title": "Compra tu tarjeta",
-        "description": "Adquiere la tarjeta individual y conserva el número de folio de la compra."
+        "title": "Contacta al equipo",
+        "description": "Cuéntanos si buscas regalar un vuelo o si ya tienes una tarjeta."
       },
       {
-        "title": "Recibe tu tarjeta",
-        "description": "Entrega la tarjeta como regalo o consérvala para utilizarla más adelante."
+        "title": "Confirma las condiciones",
+        "description": "Revisa paquete, personas cubiertas, precio, vigencia y activación."
       },
       {
-        "title": "Activa tu fecha",
-        "description": "Contacta a Flying Pictures con tu folio y reserva con al menos 48 horas de anticipación, sujeto a disponibilidad."
-      },
-      {
-        "title": "Vive el vuelo tradicional",
-        "description": "Disfruta el vuelo en globo con brindis, certificado y desayuno incluidos conforme a las condiciones de la tarjeta."
+        "title": "Consulta disponibilidad",
+        "description": "Coordina la fecha con nuestro equipo según las condiciones confirmadas."
       }
     ]
   },
   "pricing": {
-    "dates": "Comprar tarjeta",
-    "adults": "Tarjeta individual",
+    "dates": "Consultar opciones de regalo",
+    "adults": "",
     "kids": ""
   }
 }

@@ -1,90 +1,132 @@
 {
   "hero": {
-    "subtitle": "Shared round-trip transport from Mexico City | Approximately 40-minute flight | Pyramids"
+    "subtitle": "Shared flight and transport | Breakfast | Pyramid admission"
   },
   "rating": {
     "score": 4.8,
-    "reviewsCount": "225 Tripadvisor reviews"
+    "reviewsCount": "225 reviews on Tripadvisor"
   },
   "description": {
-    "title": "Stress-Free from Door to Sky",
-    "paragraph": "An all-in-one experience with shared round-trip transport from Mexico City, a balloon flight, breakfast buffet, and up to two hours of independent access to the archaeological zone. We coordinate the logistics so you can focus on enjoying the day."
+    "title": "A morning of flying and pyramids",
+    "paragraph": "Combine a shared balloon flight with shared round-trip transport, a full breakfast and archaeological site admission. A coffee break, insurance, a sparkling wine toast and a certificate are included. Request a bilingual guide or quote the private flight and private transport upgrades separately."
   },
   "itinerary": {
-    "title": "What you'll do",
+    "title": "Your experience",
     "steps": [
       {
-        "title": "5:00 AM - Arrive & Check-in",
-        "description": "You’ll arrive at Flying Pictures Reception, where our team will welcome you and help you complete check-in."
+        "time": "Before the flight",
+        "title": "Arrival and coffee break",
+        "description": "The team welcomes you for check-in and a coffee break. Confirm your meeting point."
       },
       {
-        "title": "Welcome & Coffee Break",
-        "description": "After you complete your check-in we will welcome you with our coffee station with hot beverages and traditional cookies."
+        "time": "Preparation",
+        "title": "Getting ready to fly",
+        "description": "The team briefs you on boarding and enjoying the experience safely."
       },
       {
-        "title": "The Inflation Spectacle",
-        "description": "Walk to the launch field to watch the \"Giants\" come to life. Seeing the massive balloons rise with the roar of the burners is the first act of the show."
+        "time": "In the air",
+        "title": "Shared flight",
+        "description": "See the Teotihuacán Valley from the balloon. The route depends on the day’s conditions."
       },
       {
-        "title": "The Ascent",
-        "description": "Lift off gently into the dawn. For approx. 45-60 minutes, float silently over the Valley of Teotihuacán, watching the sun reveal the pyramids from above."
+        "time": "On landing",
+        "title": "Traditional toast",
+        "description": "Celebrate the flight with sparkling wine."
       },
       {
-        "title": "The 1783 Toast",
-        "description": "Upon landing, we celebrate with a traditional sparkling wine toast. A ritual dating back to the first aviators to thank the wind gods for a safe return."
+        "time": "Flight keepsake",
+        "title": "Flight certificate",
+        "description": "Receive your flight certificate."
+      },
+      {
+        "time": "According to the confirmed itinerary",
+        "title": "Full breakfast",
+        "description": "Enjoy this included service: full breakfast. Confirm its timing and place in your itinerary."
+      },
+      {
+        "time": "According to the confirmed itinerary",
+        "title": "Archaeological site admission",
+        "description": "Enjoy this included service: archaeological site admission. Confirm its timing and place in your itinerary."
       }
     ]
   },
-   "pricing": {
-    "dates": "See Dates",
+  "pricing": {
     "adults": "Adults",
-    "kids": "Kids (4-12)"
+    "kids": "Children (4–12)",
+    "dates": "Ask about availability"
   },
   "details": {
     "included": [
-      "Shared round-trip transport between Mexico City and Teotihuacán",
-      "Shared flight of approximately 40 minutes",
-      "Coffee break with cookies and traditional Mexican drinks",
-      "Sparkling-wine toast or a non-alcoholic option",
-      "Personalised flight certificate",
-      "Breakfast buffet",
-      "Independent admission to the archaeological zone for up to two hours",
-      "Traveller insurance"
+      "Shared flight",
+      "Coffee break",
+      "Flight insurance",
+      "Traditional sparkling wine toast",
+      "Flight certificate",
+      "Full breakfast",
+      "Shared round-trip transport",
+      "Archaeological site admission"
     ],
     "notIncluded": [
-      "Private flight and transport",
-      "Guide inside the archaeological zone",
-      "Flight photos and video",
+      "Private flight",
+      "Private transport",
       "Bilingual guide",
-      "Bouquet, personalised banner, or mariachis",
-      "Craft workshop or tasting",
-      "$110 MXN per-person fee for non-resident foreign visitors"
+      "Photos and video",
+      "Flowers and mariachi music"
     ],
     "recommendedExtras": [
-      "Upgrade flight and transport to private for $4,999 MXN",
-      "Bilingual guide",
-      "Photos and video during the flight",
-      "Personalised banner",
-      "Bouquet of flowers",
-      "Mariachis upon landing — four songs"
+      "Bilingual guide for 1–6 guests",
+      "Photos and video",
+      "Flower bouquet",
+      "Service for a non-flying companion",
+      "Mariachi music on landing",
+      "Champagne",
+      "Private flight upgrade",
+      "Private transport upgrade"
     ],
     "notes": [
-      "Archaeological-zone access is independent and does not include a guide.",
-      "Non-resident foreign visitors pay an additional $110 MXN per person upon arrival.",
-      "The Mexico City pickup point and time are confirmed with the booking."
+      "Confirm availability, timing, the meeting point and your total before booking.",
+      "Flight duration, route and activity order are confirmed according to weather and operating conditions.",
+      "Extras are quoted separately; confirm their scope, price and availability.",
+      "Private flight and transport upgrades are quoted separately."
     ],
     "itinerary": {
-      "title": "What you'll do",
+      "title": "Your experience",
       "steps": [
-        { "time": "Departure", "title": "Meet us in Mexico City", "description": "We collect you at the confirmed meeting point for the trip to Teotihuacán." },
-        { "time": "Transfer", "title": "Travel to the Globoport", "description": "Enjoy the journey while our team handles the logistics." },
-        { "time": "Welcome", "title": "Have a coffee break", "description": "Coffee, cookies, and traditional Mexican drinks await you upon arrival." },
-        { "time": "Preparation", "title": "Watch the balloons inflate", "description": "See the aircraft preparation up close before take-off." },
-        { "time": "Take-off", "title": "Begin the ascent", "description": "The pilot takes off when weather and operating conditions are suitable." },
-        { "time": "In the air", "title": "Fly for approximately 40 minutes", "description": "Take in views of the Teotihuacán Valley from the air." },
-        { "time": "After landing", "title": "Toast and enjoy the breakfast buffet", "description": "Celebrate the flight, receive your certificate, and have breakfast." },
-        { "time": "Independent visit", "title": "Explore the archaeological zone", "description": "Use up to two hours to explore independently with admission included." },
-        { "time": "Return", "title": "Travel back to Mexico City", "description": "Return to the agreed point after the visit." }
+        {
+          "time": "Before the flight",
+          "title": "Arrival and coffee break",
+          "description": "The team welcomes you for check-in and a coffee break. Confirm your meeting point."
+        },
+        {
+          "time": "Preparation",
+          "title": "Getting ready to fly",
+          "description": "The team briefs you on boarding and enjoying the experience safely."
+        },
+        {
+          "time": "In the air",
+          "title": "Shared flight",
+          "description": "See the Teotihuacán Valley from the balloon. The route depends on the day’s conditions."
+        },
+        {
+          "time": "On landing",
+          "title": "Traditional toast",
+          "description": "Celebrate the flight with sparkling wine."
+        },
+        {
+          "time": "Flight keepsake",
+          "title": "Flight certificate",
+          "description": "Receive your flight certificate."
+        },
+        {
+          "time": "According to the confirmed itinerary",
+          "title": "Full breakfast",
+          "description": "Enjoy this included service: full breakfast. Confirm its timing and place in your itinerary."
+        },
+        {
+          "time": "According to the confirmed itinerary",
+          "title": "Archaeological site admission",
+          "description": "Enjoy this included service: archaeological site admission. Confirm its timing and place in your itinerary."
+        }
       ]
     }
   }

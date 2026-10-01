@@ -6,8 +6,6 @@ import ProductMain from "./ProductMain";
 import Meet from "./Meet";
 import ProductFooter from "./Footer";
 import Reviews from "./Reviews";
-import RecommendedExtras from "./Recommended";
-import Included from "./Included";
 import PackageDetails from "./PackageDetails";
 import ProductItinerary from "./ProductItinerary";
 
@@ -130,12 +128,7 @@ export default async function Page({ params }: PageProps) {
       <ProductItinerary slug={slug} data={data} />
       {data.details ? (
         <PackageDetails details={data.details} />
-      ) : (
-        <>
-          <Included />
-          <RecommendedExtras />
-        </>
-      )}
+      ) : null}
       <Reviews />
       <Meet />
       <ProductFooter />

@@ -1,0 +1,141 @@
+{
+  "hero": {
+    "subtitle": "Vuelo privado | Transporte premium y guía desde pickup | Brunch Club Campestre"
+  },
+  "rating": {
+    "score": 4.8,
+    "reviewsCount": "225 opiniones en Tripadvisor"
+  },
+  "description": {
+    "title": "Una experiencia privada con atención desde el pickup",
+    "paragraph": "FPM Private Charter incluye vuelo privado, transporte redondo privado premium, guía bilingüe desde el pickup y acceso arqueológico. Disfruta desayuno buffet ligero previo al despegue, brindis con champagne, fotografías y video, mesero, canapés y snacks, y brunch en Club Campestre. Consulta las personas cubiertas y el mínimo de reserva."
+  },
+  "itinerary": {
+    "title": "Tu experiencia",
+    "steps": [
+      {
+        "time": "Antes del vuelo",
+        "title": "Llegada, desayuno ligero y coffee break",
+        "description": "El equipo te recibe para el registro, el coffee break y el desayuno buffet ligero previo al despegue. Confirma tu pickup."
+      },
+      {
+        "time": "Preparación",
+        "title": "Preparación para volar",
+        "description": "El equipo te orienta para abordar y disfrutar la experiencia con seguridad."
+      },
+      {
+        "time": "En el aire",
+        "title": "Vuelo privado",
+        "description": "Contempla el Valle de Teotihuacán desde el globo. La ruta depende de las condiciones del día."
+      },
+      {
+        "time": "Al aterrizar",
+        "title": "Brindis tradicional",
+        "description": "Celebra el vuelo con champagne."
+      },
+      {
+        "time": "Recuerdo del vuelo",
+        "title": "Certificado de vuelo",
+        "description": "Recibe tu certificado de vuelo."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Acceso a la zona arqueológica",
+        "description": "Disfruta este servicio incluido: acceso a la zona arqueológica. Confirma el horario y su lugar en el recorrido."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Guía bilingüe desde tu pickup",
+        "description": "Disfruta este servicio incluido: guía bilingüe desde tu pickup. Confirma el horario y su lugar en el recorrido."
+      },
+      {
+        "time": "Según itinerario confirmado",
+        "title": "Brunch en Club Campestre",
+        "description": "Disfruta este servicio incluido: brunch en club campestre. Confirma el horario y su lugar en el recorrido."
+      }
+    ]
+  },
+  "pricing": {
+    "adults": "Adultos",
+    "kids": "Niños (4–12)",
+    "dates": "Consultar disponibilidad"
+  },
+  "details": {
+    "included": [
+      "Vuelo privado",
+      "Coffee break",
+      "Seguro de vuelo",
+      "Brindis tradicional con champagne",
+      "Certificado de vuelo",
+      "Desayuno buffet ligero previo al despegue",
+      "Transporte redondo privado premium",
+      "Acceso a la zona arqueológica",
+      "Guía bilingüe desde tu pickup",
+      "Fotografías y video",
+      "Servicio de mesero",
+      "Canapés y snacks",
+      "Brunch en Club Campestre"
+    ],
+    "notIncluded": [
+      "Tour en cuevas ceremoniales",
+      "Flores y mariachis",
+      "Pasajeros adicionales"
+    ],
+    "recommendedExtras": [
+      "Pasajero adicional",
+      "Ramo de flores",
+      "Mariachis al aterrizaje"
+    ],
+    "notes": [
+      "Confirma la disponibilidad, el horario, el punto de encuentro y el total antes de reservar.",
+      "La duración, la ruta y el orden de actividades se confirman según las condiciones meteorológicas y operativas.",
+      "Los extras se cotizan por separado; confirma su alcance, tarifa y disponibilidad.",
+      "Confirma cuántas personas incluye el paquete, el mínimo de reserva y los cargos por pasajeros o acompañantes adicionales."
+    ],
+    "itinerary": {
+      "title": "Tu experiencia",
+      "steps": [
+        {
+          "time": "Antes del vuelo",
+          "title": "Llegada, desayuno ligero y coffee break",
+          "description": "El equipo te recibe para el registro, el coffee break y el desayuno buffet ligero previo al despegue. Confirma tu pickup."
+        },
+        {
+          "time": "Preparación",
+          "title": "Preparación para volar",
+          "description": "El equipo te orienta para abordar y disfrutar la experiencia con seguridad."
+        },
+        {
+          "time": "En el aire",
+          "title": "Vuelo privado",
+          "description": "Contempla el Valle de Teotihuacán desde el globo. La ruta depende de las condiciones del día."
+        },
+        {
+          "time": "Al aterrizar",
+          "title": "Brindis tradicional",
+          "description": "Celebra el vuelo con champagne."
+        },
+        {
+          "time": "Recuerdo del vuelo",
+          "title": "Certificado de vuelo",
+          "description": "Recibe tu certificado de vuelo."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Acceso a la zona arqueológica",
+          "description": "Disfruta este servicio incluido: acceso a la zona arqueológica. Confirma el horario y su lugar en el recorrido."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Guía bilingüe desde tu pickup",
+          "description": "Disfruta este servicio incluido: guía bilingüe desde tu pickup. Confirma el horario y su lugar en el recorrido."
+        },
+        {
+          "time": "Según itinerario confirmado",
+          "title": "Brunch en Club Campestre",
+          "description": "Disfruta este servicio incluido: brunch en club campestre. Confirma el horario y su lugar en el recorrido."
+        }
+      ]
+    }
+  }
+}

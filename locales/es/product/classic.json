@@ -1,86 +1,103 @@
 {
   "hero": {
-    "subtitle": "Canastilla compartida | Vuelo aproximado de 40 minutos | 🇬🇧 Estándares de seguridad británicos"
+    "subtitle": "Vuelo compartido | Coffee break | Brindis y certificado"
   },
   "rating": {
     "score": 4.8,
     "reviewsCount": "225 opiniones en Tripadvisor"
   },
   "description": {
-    "title": "Vive la magia del vuelo compartido",
-    "paragraph": "Comparte la mañana con un grupo selecto de viajeros. A diferencia de las canastillas abiertas, donde todos ocupan un mismo espacio, Flying Pictures utiliza canastillas compartimentadas Cameron Balloons. Así, incluso en un vuelo compartido, cada pasajero cuenta con su propio espacio y un punto de observación despejado."
+    "title": "Lo esencial para vivir Teotihuacán desde el aire",
+    "paragraph": "Comparte un vuelo en globo sobre el Valle de Teotihuacán. La experiencia incluye coffee break, seguro de vuelo, brindis con vino espumoso y certificado. El desayuno y el transporte se contratan por separado."
   },
   "itinerary": {
-    "title": "Qué harás",
+    "title": "Tu experiencia",
     "steps": [
       {
-        "title": "5:00 AM - Llegada y registro",
-        "description": "Llegarás a la recepción de Flying Pictures y te daremos la bienvenida para completar tu registro."
+        "time": "Antes del vuelo",
+        "title": "Llegada y coffee break",
+        "description": "El equipo te recibe para el registro y el coffee break. Confirma tu punto de encuentro."
       },
       {
-        "title": "Bienvenida y café",
-        "description": "Después de tu registro te esperamos con nuestra estación de café, bebidas calientes y galletas tradicionales."
+        "time": "Preparación",
+        "title": "Preparación para volar",
+        "description": "El equipo te orienta para abordar y disfrutar la experiencia con seguridad."
       },
       {
-        "title": "El espectáculo del inflado",
-        "description": "Camina al campo de lanzamiento para ver a los \"Gigantes\" cobrar vida. Ver los enormes globos elevarse con el rugido de los quemadores es el primer acto del espectáculo."
+        "time": "En el aire",
+        "title": "Vuelo compartido",
+        "description": "Contempla el Valle de Teotihuacán desde el globo. La ruta depende de las condiciones del día."
       },
       {
-        "title": "El ascenso",
-        "description": "Despega suavemente con las primeras luces. Durante aproximadamente 45 a 60 minutos, flota en silencio sobre el Valle de Teotihuacán. El paisaje cambia con las condiciones de cada mañana."
+        "time": "Al aterrizar",
+        "title": "Brindis tradicional",
+        "description": "Celebra el vuelo con vino espumoso."
       },
       {
-        "title": "El brindis de 1783",
-        "description": "Al aterrizar, celebramos con un tradicional brindis de vino espumoso. Un ritual que se remonta a los primeros aviadores para agradecer a los dioses del viento un regreso seguro."
+        "time": "Recuerdo del vuelo",
+        "title": "Certificado de vuelo",
+        "description": "Recibe tu certificado de vuelo."
       }
     ]
   },
   "pricing": {
-    "dates": "Ver fechas",
     "adults": "Adultos",
-    "kids": "Niños (4-12)"
+    "kids": "Niños (4–12)",
+    "dates": "Consultar disponibilidad"
   },
   "details": {
     "included": [
-      "Vuelo compartido de aproximadamente 40 minutos sobre el Valle de Teotihuacán",
-      "Café de bienvenida con galletas y bebidas tradicionales mexicanas",
-      "Brindis con vino espumoso u opción sin alcohol",
-      "Certificado de vuelo personalizado",
-      "Seguro de viajero"
+      "Vuelo compartido",
+      "Coffee break",
+      "Seguro de vuelo",
+      "Brindis tradicional con vino espumoso",
+      "Certificado de vuelo"
     ],
     "notIncluded": [
-      "Transporte entre CDMX y Teotihuacán",
-      "Desayuno buffet",
-      "Acceso, traslado o guía en la zona arqueológica",
-      "Fotos y video del vuelo",
-      "Vuelo privado",
-      "Servicios de celebración como flores, lona o mariachis"
+      "Desayuno",
+      "Transporte",
+      "Acceso o guía en la zona arqueológica",
+      "Fotografías y video",
+      "Vuelo privado"
     ],
     "recommendedExtras": [
-      "Transporte redondo compartido desde $500 MXN por persona",
-      "Transporte privado por $2,000 MXN adicionales al servicio compartido",
-      "Convertir el vuelo a privado por $3,999 MXN",
-      "Desayuno buffet",
-      "Acceso y traslado a la zona arqueológica",
-      "Fotos y video durante el vuelo",
-      "Lona personalizada",
-      "Ramo de flores",
-      "Mariachis al aterrizaje — cuatro canciones",
-      "Guía bilingüe"
+      "Transporte redondo privado para 1–4 personas en zona céntrica",
+      "Fotografías y video",
+      "Acceso a la zona arqueológica"
     ],
     "notes": [
-      "La experiencia se reserva como vuelo compartido; el uso privado de la canastilla se contrata como extra.",
-      "La ruta y la duración del vuelo dependen de las condiciones meteorológicas y operativas del día."
+      "Confirma la disponibilidad, el horario, el punto de encuentro y el total antes de reservar.",
+      "La duración, la ruta y el orden de actividades se confirman según las condiciones meteorológicas y operativas.",
+      "Los extras se cotizan por separado; confirma su alcance, tarifa y disponibilidad."
     ],
     "itinerary": {
-      "title": "Qué harás",
+      "title": "Tu experiencia",
       "steps": [
-        { "time": "Antes del vuelo", "title": "Llegas al Globopuerto", "description": "Te recibimos para el registro con café caliente, galletas y bebidas tradicionales." },
-        { "time": "Preparación", "title": "Ves inflar tu globo", "description": "Acompañas la preparación de la aeronave y ves cómo el envolvente cobra forma." },
-        { "time": "Despegue", "title": "Comienza el ascenso", "description": "El piloto selecciona el momento y punto de despegue de acuerdo con las condiciones del día." },
-        { "time": "En el aire", "title": "Vuelas aproximadamente 40 minutos", "description": "Contemplas el Valle de Teotihuacán desde una canastilla compartimentada Cameron." },
-        { "time": "Al aterrizar", "title": "Participas en el brindis tradicional", "description": "Celebramos el aterrizaje con vino espumoso u opción sin alcohol." },
-        { "time": "Cierre", "title": "Recibes tu certificado", "description": "Te entregamos un certificado personalizado como recuerdo de la experiencia." }
+        {
+          "time": "Antes del vuelo",
+          "title": "Llegada y coffee break",
+          "description": "El equipo te recibe para el registro y el coffee break. Confirma tu punto de encuentro."
+        },
+        {
+          "time": "Preparación",
+          "title": "Preparación para volar",
+          "description": "El equipo te orienta para abordar y disfrutar la experiencia con seguridad."
+        },
+        {
+          "time": "En el aire",
+          "title": "Vuelo compartido",
+          "description": "Contempla el Valle de Teotihuacán desde el globo. La ruta depende de las condiciones del día."
+        },
+        {
+          "time": "Al aterrizar",
+          "title": "Brindis tradicional",
+          "description": "Celebra el vuelo con vino espumoso."
+        },
+        {
+          "time": "Recuerdo del vuelo",
+          "title": "Certificado de vuelo",
+          "description": "Recibe tu certificado de vuelo."
+        }
       ]
     }
   }

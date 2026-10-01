@@ -1,6 +1,6 @@
 # Plan de actualización de paquetes Flying Pictures
 
-Fecha: 30 de septiembre de 2026. El usuario autorizó dividir el plan en milestones, establecer control de versiones, comenzar M1 y posteriormente continuar. Las condiciones comerciales pendientes siguen abiertas. M2 incorpora el modelo de precios y su presentación común; la activación del catálogo nuevo corresponde a M3. No se ha publicado ningún cambio.
+Fecha: 30 de septiembre de 2026. El usuario autorizó dividir el plan en milestones, establecer control de versiones, comenzar M1 y posteriormente continuar. Las condiciones comerciales pendientes siguen abiertas. M2 incorporó el modelo de precios; M3 activa el catálogo nuevo y sus contenidos con consulta de disponibilidad. No se ha publicado ningún cambio.
 
 ## Milestones y checkpoints
 
@@ -11,7 +11,7 @@ Rama de trabajo: `codex/new-packages-2026-09-30`. Cada milestone tendrá un comm
 | M0 — Respaldo y organización | Estado previo guardado, rama de trabajo, plan dividido y procedimiento de rollback | Snapshot recuperable que incluya el trabajo previo; plan y recuperación documentados | Ninguna | Completado; tag `fpm-packages-2026-09-30-m0` |
 | M1 — Matriz comercial | Siete paquetes documentados con precios, personas, servicios, extras, fuente y pendientes | Extracción comprobada y decisiones comerciales necesarias resueltas o modalidad de consulta acordada; incertidumbres explícitas | M0 | Preparado; confirmación comercial pendiente |
 | M2 — Configuración y precios | Modelo por persona/paquete y presentación consistente en fichas, tarjetas y barra flotante | La aplicación distingue precio, unidad, mínimos y adicionales; no depende de datos no confirmados | Matriz M1; las confirmaciones de compra pueden continuar pendientes para preparar consulta | Completado; tag `fpm-packages-2026-09-30-m2` |
-| M3 — Contenido y catálogo ES/EN | Siete fichas, portada, catálogo, navegación e imágenes actualizados | Paridad entre idiomas y servicios coherentes en todo el recorrido | M1 y M2 | Pendiente |
+| M3 — Contenido y catálogo ES/EN | Siete fichas, portada, catálogo, navegación e imágenes actualizados | Paridad entre idiomas y servicios coherentes en todo el recorrido | M1 y M2 | Completado; tag `fpm-packages-2026-09-30-m3` |
 | M4 — Enlaces y SEO | Direcciones conservadas, redirecciones de celebraciones y metadata/sitemap actualizados | Rutas y cambio de idioma correctos; enlaces antiguos llevan a su equivalente | M3 | Pendiente |
 | M5 — Reservas y versiones temporales | Destinos correctos de Peek o consulta por WhatsApp; landing reconciliada si sigue activa | Cada botón abre el paquete correcto; modalidad de reserva y versiones activas definidas | M1, M3 y destino confirmado | Pendiente |
 | M6 — Validación y vista previa | Comprobaciones de datos, compilación y revisión funcional/visual | Precios cotejados con matriz; siete fichas ES/EN comprobadas en móvil y escritorio | M2–M5 | Pendiente |
@@ -84,7 +84,7 @@ Comprobación de fórmulas: C12 = $2,850, D13 = $22,500 y H13 = $30,000. C18 = $
 
 Documentar por cada paquete: nombre ES/EN, modalidad, precio y unidad, personas incluidas, mínimo de reserva, adicionales, inclusiones, exclusiones, extras, condiciones y URL de reserva. Resolver los pendientes necesarios para compra directa. Se puede preparar contenido y componentes mientras se completan estos datos; las condiciones no confirmadas no se inventarán.
 
-Entrega preparada: [matriz comercial revisable](matriz-comercial-paquetes-2026-09-30.md) y [datos con trazabilidad al Excel](matriz-comercial-paquetes-2026-09-30.json). La extracción reúne siete paquetes, 59 casillas de inclusión activadas y 44 extras aplicables; los seis resultados de fórmulas se cotejaron con cálculos independientes y 508 celdas se verificaron contra el contenido XML del XLSX. Quedan 14 decisiones documentadas, algunas necesarias para cerrar M1 y otras para reservas o publicación posteriores. Se solicitaron al usuario las tres confirmaciones prioritarias: tarifa Viajero, personas incluidas/mínimos y modalidad de reserva. La preparación se guarda bajo `fpm-packages-2026-09-30-m1-review`; no se declara cerrado M1 ni se inicia M2 en esta entrega.
+Entrega preparada: [matriz comercial revisable](matriz-comercial-paquetes-2026-09-30.md) y [datos con trazabilidad al Excel](matriz-comercial-paquetes-2026-09-30.json). La extracción reúne siete paquetes, 59 casillas de inclusión activadas y 44 extras aplicables; los seis resultados de fórmulas se cotejaron con cálculos independientes y 508 celdas se verificaron contra el contenido XML del XLSX. Quedan 14 decisiones documentadas, algunas necesarias para cerrar M1 y otras para reservas o publicación posteriores. Se solicitaron al usuario las tres confirmaciones prioritarias: tarifa Viajero, personas incluidas/mínimos y modalidad de reserva. La preparación se guarda bajo `fpm-packages-2026-09-30-m1-review`; no es el cierre comercial de M1. El usuario autorizó continuar la preparación del sitio.
 
 ### M2. Actualizar la configuración y los precios
 
@@ -103,6 +103,8 @@ Entrega: [resultado y comprobaciones de M2](milestone-2-precios-2026-09-30.md). 
 - Mantener la identidad visual. Reutilizar fotografías apropiadas y revisar que las galerías no prometan servicios excluidos. Crear las asociaciones de imágenes de las tres fichas nuevas en `lib/images.ts`.
 - Revisar textos comunes de las fichas: el cierre actual habla de compartir con desconocidos y no es adecuado para los vuelos privados; el punto de encuentro también debe distinguir quienes tienen pickup incluido.
 - Revisar preguntas frecuentes y planificación solo en lo afectado por paquetes, desayunos, transporte y condiciones confirmadas.
+
+Entrega M3: [contenido y catálogo nuevos](milestone-3-catalogo-2026-09-30.md). Se activan siete ofertas ES/EN, con consulta de disponibilidad y condiciones pendientes visibles. La tarjeta de regalo conserva una página informativa sin compra; grupos/empresas sigue por cotización.
 
 ### M4. Conservar enlaces y actualizar SEO
 
@@ -128,7 +130,7 @@ Comparar los precios y servicios visibles con la matriz aprobada y revisar los d
 
 ### M7. Publicar y verificar
 
-Después de la revisión de la vista previa y de acordar el destino, coordinar la salida con las tarifas de reservas. Registrar la versión anterior del despliegue y el procedimiento específico para restaurarla. Publicar la versión aprobada, comprobar las rutas principales y los botones en el sitio público y guardar la referencia del despliegue asociado al commit. La autorización actual comprende comenzar M1; no autoriza publicar ahora.
+Después de la revisión de la vista previa y de acordar el destino, coordinar la salida con las tarifas de reservas. Registrar la versión anterior del despliegue y el procedimiento específico para restaurarla. Publicar la versión aprobada, comprobar las rutas principales y los botones en el sitio público y guardar la referencia del despliegue asociado al commit. La autorización actual permite preparar y validar los cambios; la publicación queda sujeta a revisión y destino acordado.
 
 ## Criterios de aceptación
 

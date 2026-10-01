@@ -1,39 +1,35 @@
 {
   "hero": {
-    "subtitle": "Flexible Voucher | 6-Month Validity | Traditional Flight"
+    "subtitle": "Gift card information | Terms to be confirmed"
   },
   "rating": {
     "score": 4.8,
     "reviewsCount": "225 Tripadvisor reviews"
   },
   "description": {
-    "title": "Give an unforgettable experience",
-    "paragraph": "The Gift Card lets you give a traditional balloon flight without choosing the date immediately. The voucher is transferable, becomes active one month after purchase, and can be used during the following six months, subject to availability."
+    "title": "Ask about options for gifting a flight",
+    "paragraph": "Contact Flying Pictures to learn about current gift options. Before purchasing a card, confirm the package it covers, price, validity, activation and availability. If you already have a card, share its reference with our team to check its terms."
   },
   "itinerary": {
-    "title": "How it works",
+    "title": "How to enquire",
     "steps": [
       {
-        "title": "Purchase the gift card",
-        "description": "Buy the individual voucher and keep the purchase reference number."
+        "title": "Contact our team",
+        "description": "Tell us whether you want to gift a flight or already have a card."
       },
       {
-        "title": "Receive your voucher",
-        "description": "Give the card as a gift or keep it to use at a later date."
+        "title": "Confirm the terms",
+        "description": "Check the package, guests covered, price, validity and activation."
       },
       {
-        "title": "Activate your flight date",
-        "description": "Contact Flying Pictures with your reference number and reserve at least 48 hours in advance, subject to availability."
-      },
-      {
-        "title": "Enjoy the traditional flight",
-        "description": "Experience the balloon flight with a toast, flight certificate, and breakfast included under the voucher conditions."
+        "title": "Ask about availability",
+        "description": "Coordinate a date with our team according to the confirmed terms."
       }
     ]
   },
-   "pricing": {
-    "dates": "Buy Voucher",
-    "adults": "Individual voucher",
+  "pricing": {
+    "dates": "Ask about gift options",
+    "adults": "",
     "kids": ""
   }
 }

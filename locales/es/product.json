@@ -1,83 +1,75 @@
 {
-    "product": {
-      "included": {
-        "title": "Qué incluye",
-        "included1": "Vuelo de 40-60 min",
-        "description1": "Vuelo al amanecer sobre el Valle de Teotihuacán.",
-        "included2": "Café de bienvenida",
-        "description2": "Disfruta café caliente y galletas antes del vuelo.",
-        "included3": "Certificado de vuelo",
-        "description3": "Recuerdo personalizado de tu experiencia.",
-        "included4": "Brindis tradicional",
-        "description4": "Celebración con vino espumoso al aterrizar.",
+  "product": {
+    "included": {
+      "title": "Qué incluye",
+      "included1": "Vuelo al amanecer",
+      "description1": "Vuelo al amanecer sobre el Valle de Teotihuacán.",
+      "included2": "Café de bienvenida",
+      "description2": "Disfruta café caliente y galletas antes del vuelo.",
+      "included3": "Certificado de vuelo",
+      "description3": "Recuerdo personalizado de tu experiencia.",
+      "included4": "Brindis tradicional",
+      "description4": "Celebración con vino espumoso al aterrizar.",
       "included5": "Seguro integral",
       "description5": "Cobertura durante toda la experiencia.",
-        "included6": "Pilotos experimentados",
-        "description6": "Pilotos certificados bajo estándares internacionales."
-      },
-
-      "packageDetails": {
-        "eyebrow": "Información del paquete",
-        "title": "Todo claro antes de reservar"
-      },
-
-      "itineraryControls": {
-        "eyebrow": "Tu experiencia",
-        "showAll": "Ver itinerario completo",
-        "showSummary": "Ver versión resumida",
-        "steps": "pasos"
-      },
-
-      "notIncluded": {
-        "title": "No incluye"
-      },
-
-      "packageNotes": {
-        "title": "Condiciones importantes"
-      },
-
-      "recommended": {
-        "title": "Extras recomendados",
+      "included6": "Pilotos experimentados",
+      "description6": "Pilotos certificados bajo estándares internacionales."
+    },
+    "packageDetails": {
+      "eyebrow": "Información del paquete",
+      "title": "Todo claro antes de reservar"
+    },
+    "itineraryControls": {
+      "eyebrow": "Tu experiencia",
+      "showAll": "Ver itinerario completo",
+      "showSummary": "Ver versión resumida",
+      "steps": "pasos"
+    },
+    "notIncluded": {
+      "title": "No incluye"
+    },
+    "packageNotes": {
+      "title": "Condiciones importantes"
+    },
+    "recommended": {
+      "title": "Extras recomendados",
       "round": "Transporte redondo",
       "rounddesc": "Pasamos por ti en CDMX alrededor de las 5:00 a.m., en modalidad compartida o privada.",
-        "breakfast": "Buffet de desayuno",
-        "breakdesc": "Comida tradicional mexicana en el Restaurante Gran Teocalli.",
-        "medial": "Paquete de foto y video",
+      "breakfast": "Buffet de desayuno",
+      "breakdesc": "Comida tradicional mexicana en el Restaurante Gran Teocalli.",
+      "medial": "Paquete de foto y video",
       "mediadesc": "Fotos y video profesionales de tu vuelo."
-      },
-
-      "meet": {
-        "title": "Dónde nos encontraremos",
-        "subtitle": "5:00 AM - Llegada y registro",
-        "description": "Llegarás a la recepción de Flying Pictures y te recibiremos para ayudarte con el registro.",
-        "title2": "Cosas que debes saber",
-        "button": "Cómo llegar",
-        "openGoogleMaps": "Abrir en Google Maps",
-        "openWaze": "Abrir en Waze",
-
-        "thinks": [
-          {
-            "tittle1": "Requisitos para pasajeros",
-            "subtittle1": "Te pediremos datos básicos como peso, edad y condiciones médicas relevantes para operar con seguridad."
-          },
-          {
-            "tittle2": "Nivel de actividad",
+    },
+    "meet": {
+      "title": "Dónde nos encontraremos",
+      "subtitle": "Horario y punto de encuentro por confirmar",
+      "description": "Confirma con nuestro equipo la hora y el lugar de encuentro. Si tu paquete incluye transporte, coordinaremos tu pickup; si llegas por tu cuenta, utiliza estas indicaciones al Globopuerto.",
+      "title2": "Cosas que debes saber",
+      "button": "Cómo llegar",
+      "openGoogleMaps": "Abrir en Google Maps",
+      "openWaze": "Abrir en Waze",
+      "thinks": [
+        {
+          "tittle1": "Requisitos para pasajeros",
+          "subtittle1": "Te pediremos datos básicos como peso, edad y condiciones médicas relevantes para operar con seguridad."
+        },
+        {
+          "tittle2": "Nivel de actividad",
           "subtittle2": "Actividad ligera. Deberás permanecer de pie durante el vuelo y subir y bajar de la canastilla con apoyo del equipo."
-          },
-          {
-            "tittle3": "Qué traer",
-            "subtittle3": "Ropa cómoda, zapatos cerrados y una chamarra ligera para las primeras horas de la mañana."
-          },
-          {
-            "tittle4": "Política de cancelación",
-            "subtittle4": "Si el clima no permite volar con seguridad, te ayudaremos a reprogramar conforme a nuestra política."
-          }
-        ]
-      },
-
-      "footer": {
+        },
+        {
+          "tittle3": "Qué traer",
+          "subtittle3": "Ropa cómoda, zapatos cerrados y una chamarra ligera para las primeras horas de la mañana."
+        },
+        {
+          "tittle4": "Política de cancelación",
+          "subtittle4": "Si el clima no permite volar con seguridad, te ayudaremos a reprogramar conforme a nuestra política."
+        }
+      ]
+    },
+    "footer": {
       "title": "Experiencias de vuelo diseñadas para tu seguridad",
-        "description": "Esta es la experiencia de globo por excelencia. Únete a un grupo selecto de aventureros para una mañana en la que los desconocidos se vuelven amigos."
-      }
+      "description": "Elige un vuelo compartido o una experiencia privada y revisa los servicios de tu paquete. Nuestro equipo te ayudará a confirmar los detalles de tu visita."
     }
+  }
 }

@@ -5,13 +5,11 @@
       "subtitle": "Everything you need to know before the alarm clock rings",
       "description": "The most sublime moments begin before the world awakes. To ensure your arrival at our private launch site is seamless and professional, we have provided this operational briefing. From transportation timing to meeting points, we manage the precision so you can enjoy the serenity."
     },
-
     "sunriseRitual": {
       "label": "The Science of Flight",
       "title": "Why We Fly at Dawn.",
       "description": "A hot air balloon is a precision aircraft that navigates within the air mass rather than resisting it. To achieve this safely, we require a stable atmosphere. The meteorological phenomenon known as thermal inversion occurs during the first light of day. As the sun warms the terrain, thermal currents can create atmospheric turbulence and make conditions unsuitable for ballooning. We schedule our ascents at dawn not only for the view, but to uphold the highest standards of aeronautical safety and operational stability."
     },
-
     "gettingHere": {
       "label": "Arrival & Directions",
       "title": "Your Gateway \n to the Valley.",
@@ -33,17 +31,14 @@
         "disclaimer": "Do not guess. Use this Waze/Google Maps link directly to our Globoport."
       }
     },
-
     "weatherPolicy": {
       "label": "WEATHER POLICY",
       "title": "Operational Integrity:\n Our Flight Guarantee.",
       "description": "We maintain rigorous safety protocols. If meteorological conditions do not meet our standards, we simply do not fly. Our commitment is to your safety above all else.\n\nShould a flight be cancelled due to weather, we offer seamless rescheduling or a full refund. We prioritise your peace of mind as much as your protection.",
-
       "companyCancellation": {
         "title": "If We Cancel (Bad Weather):",
         "description": "You get a 100% Refund or a free reschedule for the next available date. No hidden fees, no arguments."
       },
-
       "customerCancellation": {
         "48plus": {
           "label": "72+ hours before",
@@ -59,11 +54,9 @@
         }
       }
     },
-
     "dressTo": {
       "label": "ESSENTIAL PREP",
       "title": "Dress for Two Climates",
-
       "items": {
         "onionStrategy": {
           "title": "The Onion Strategy",
@@ -79,16 +72,13 @@
         }
       }
     },
-
     "faq": {
       "title": "Frequently asked\n questions",
-
       "categories": {
         "aboutFlight": "About the flight",
         "safetyLimits": "Safety & Limits",
         "bookingExtra": "Booking & Extra"
       },
-
       "items": {
         "afraidHeights": {
           "question": "I am afraid of heights. Will I get dizzy?",
@@ -116,7 +106,7 @@
         },
         "breakfast": {
           "question": "What is the breakfast like?",
-          "answer": "Breakfast inclusions depend on the package you select. Check your experience details or contact us before booking if you have dietary restrictions."
+          "answer": "Essential does not include breakfast. Transport + Pyramids, Celebration, Traveler and Private Balloon Experience include a full breakfast; Premium - VIP includes brunch at Mayahuel; Charter includes a light breakfast before take-off and brunch at Club Campestre. Discuss any dietary restrictions."
         }
       }
     }

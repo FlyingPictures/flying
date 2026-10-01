@@ -3,13 +3,12 @@ import { Button } from "@/components/ui/button";
 import { getLocale, getTranslations } from "next-intl/server";
 import { IMAGES } from "@/lib/images";
 import {
-  BOOKING_URLS,
+  getReservationUrl,
   PRODUCT_PRICING,
   getPriceDisplay,
   getProductName,
   type ProductSlug,
 } from "@/lib/commercial-config";
-import { SITE_CONTACT } from "@/lib/site-config";
 import { Link } from "@/i18n/routing";
 import {
   TRIPADVISOR_PROFILE_URL,
@@ -24,41 +23,39 @@ const CATALOG_FLIGHTS = [
   "transport",
   "classic",
   "journey",
-  "birthday",
-  "anniversary",
-  "proposal",
+  "celebration",
+  "private",
+  "charter",
   "vip",
 ] as const satisfies readonly FlightId[];
 
-const CARD_IMAGES: Record<(typeof CATALOG_FLIGHTS)[number] | "open", string> = {
+const CARD_IMAGES: Record<(typeof CATALOG_FLIGHTS)[number], string> = {
   transport: IMAGES.product.gallery.transport[0],
   classic: IMAGES.product.gallery.classic[0],
   journey: IMAGES.product.gallery.journey[0],
-  birthday: IMAGES.product.gallery.birthday[0],
-  anniversary: IMAGES.product.gallery.anniversary[0],
-  proposal: IMAGES.product.gallery.proposal[0],
+  celebration: IMAGES.product.gallery.celebration[0],
+  private: IMAGES.product.gallery.private[0],
+  charter: IMAGES.product.gallery.charter[0],
   vip: IMAGES.product.gallery.vip[0],
-  open: IMAGES.flightExperiences.flights.open,
 };
 
 const IMAGE_POSITION: Partial<Record<FlightId, string>> = {
   transport: "object-[center_48%]",
   classic: "object-[center_46%]",
   journey: "object-center",
-  birthday: "object-[center_42%]",
-  anniversary: "object-[center_45%]",
-  proposal: "object-[center_44%]",
+  celebration: "object-center",
+  private: "object-center",
+  charter: "object-center",
   vip: "object-[center_46%]",
-  open: "object-center",
 };
 
 const CARD_CATEGORY: Record<(typeof CATALOG_FLIGHTS)[number], string> = {
   transport: "complete",
   classic: "shared",
   journey: "complete",
-  birthday: "celebration",
-  anniversary: "celebration",
-  proposal: "private",
+  celebration: "celebration",
+  private: "private",
+  charter: "vip",
   vip: "vip",
 };
 
@@ -88,10 +85,10 @@ export async function FlightCardsSection() {
         aria-label={t("browseByIntent")}
         className="relative mx-auto mt-10 flex max-w-5xl flex-wrap justify-center gap-2 px-6"
       >
-        {(["complete", "shared", "celebration", "privateVip", "gift"] as const).map((intent) => (
+        {(["complete", "shared", "celebration", "privateVip"] as const).map((intent) => (
           <a
             key={intent}
-            href={intent === "gift" ? "#gift-card" : `#catalog-${intent === "privateVip" ? "private-vip" : intent}`}
+            href={`#catalog-${intent === "privateVip" ? "private-vip" : intent}`}
             className="rounded-full border border-secondary/12 bg-background/85 px-4 py-2 text-sm font-bold text-secondary shadow-sm backdrop-blur transition-colors hover:border-secondary hover:bg-secondary hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
             {t(`intents.${intent}`)}
@@ -110,8 +107,6 @@ export async function FlightCardsSection() {
           />
         ))}
       </div>
-
-      <GiftCard t={t} locale={locale} />
     </section>
   );
 }
@@ -129,7 +124,7 @@ function FlightCard({
 }) {
   const pricing = PRODUCT_PRICING[id]!;
   const priceDisplay = getPriceDisplay(pricing, locale);
-  const bookingUrl = BOOKING_URLS[id] ?? SITE_CONTACT.whatsapp;
+  const bookingUrl = getReservationUrl(id, locale);
   const features = getFeatures(t(`includes.${id}`));
   const intentId = getIntentId(id);
 
@@ -243,81 +238,6 @@ function FlightCard({
   );
 }
 
-function GiftCard({
-  t,
-  locale,
-}: {
-  t: Awaited<ReturnType<typeof getTranslations>>;
-  locale: string;
-}) {
-  const id = "open" as const;
-  const pricing = PRODUCT_PRICING[id]!;
-  const bookingUrl = BOOKING_URLS[id] ?? SITE_CONTACT.whatsapp;
-  const features = getFeatures(t(`includes.${id}`));
-
-  return (
-    <article
-      id="gift-card"
-      className="relative mx-auto mt-20 max-w-330 scroll-mt-36 overflow-hidden rounded-[2rem] bg-secondary text-background shadow-[0_30px_90px_rgba(3,48,59,0.24)] md:mt-28"
-    >
-      <div className="absolute inset-0 opacity-30">
-        <CloudinaryImage
-          publicId={CARD_IMAGES.open}
-          alt=""
-          fill
-          sizes="100vw"
-          className={cn("object-cover", IMAGE_POSITION.open)}
-          objectFit="cover"
-        />
-      </div>
-      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(3,48,59,1)_18%,rgba(3,48,59,0.94)_52%,rgba(236,31,43,0.82)_135%)]" />
-      <div className="pointer-events-none absolute -right-16 -top-16 size-52 rounded-full border-[28px] border-primary/20" aria-hidden="true" />
-
-      <div className="relative grid gap-10 p-7 md:p-12 lg:grid-cols-[1fr_auto] lg:items-center lg:p-16">
-        <div className="max-w-3xl">
-          <span className="inline-flex rounded-full border border-background/25 bg-background/10 px-3 py-1.5 text-[0.68rem] font-bold uppercase tracking-[0.16em] backdrop-blur">
-            {t("gift.eyebrow")}
-          </span>
-          <h3 className="mt-5 font-poppins text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.05] tracking-[-0.04em] text-background">
-            {t("gift.title")}
-          </h3>
-          <p className="mt-5 max-w-2xl text-background/78">
-            {stripIdealPrefix(t(`subtitles.${id}`))}
-          </p>
-          <ul className="mt-6 flex flex-wrap gap-2">
-            {features.map((feature) => (
-              <li key={feature} className="rounded-full border border-background/20 bg-background/10 px-3 py-2 text-sm font-semibold text-background/90 backdrop-blur">
-                {feature}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="relative min-w-64 rounded-[1.5rem] border border-dashed border-background/35 bg-background/10 p-6 backdrop-blur-md before:absolute before:-left-3 before:top-1/2 before:size-6 before:-translate-y-1/2 before:rounded-full before:bg-secondary after:absolute after:-right-3 after:top-1/2 after:size-6 after:-translate-y-1/2 after:rounded-full after:bg-secondary">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-background/55">
-            {t("gift.value")}
-          </p>
-          <strong className="mt-2 block text-3xl text-background">
-            {getPriceDisplay(pricing, locale).headline}
-          </strong>
-          <Button variant="primary" size="sm" className="mt-6 w-full" asChild>
-            <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
-              {t(`books.${id}`)}
-            </a>
-          </Button>
-          <Link
-            href={`/product/${id}`}
-            scroll
-            className="mx-auto mt-5 block w-fit text-sm font-bold text-background underline decoration-current underline-offset-4 transition-opacity hover:opacity-70"
-          >
-            {t("gift.details")}
-          </Link>
-        </div>
-      </div>
-    </article>
-  );
-}
-
 function getFeatures(includes: string) {
   const content = includes.includes(":") ? includes.split(":").slice(1).join(":") : includes;
   return content
@@ -336,7 +256,7 @@ function stripIdealPrefix(text: string) {
 function getIntentId(id: (typeof CATALOG_FLIGHTS)[number]) {
   if (id === "transport") return "catalog-complete";
   if (id === "classic") return "catalog-shared";
-  if (id === "birthday") return "catalog-celebration";
-  if (id === "proposal") return "catalog-private-vip";
+  if (id === "celebration") return "catalog-celebration";
+  if (id === "private") return "catalog-private-vip";
   return undefined;
 }

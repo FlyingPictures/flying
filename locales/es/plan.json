@@ -50,7 +50,7 @@
         },
         "24less": {
           "label": "Menos de 24 horas antes",
-            "description": "No hay reembolso. Los cambios de fecha están sujetos a disponibilidad."
+          "description": "No hay reembolso. Los cambios de fecha están sujetos a disponibilidad."
         }
       }
     },
@@ -106,7 +106,7 @@
         },
         "breakfast": {
           "question": "¿Cómo es el desayuno?",
-          "answer": "El desayuno incluido depende del paquete que elijas. Revisa los detalles de tu experiencia o contáctanos antes de reservar si tienes alguna restricción alimenticia."
+          "answer": "Esencial no incluye desayuno. Transporte + Pirámides, Celebración, Viajero y Globo Privado incluyen desayuno completo; Premium - VIP incluye brunch en Mayahuel; Charter incluye desayuno ligero previo al despegue y brunch en Club Campestre. Confirma cualquier restricción alimenticia."
         }
       }
     }

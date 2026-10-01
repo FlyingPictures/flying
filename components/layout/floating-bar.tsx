@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 import { SITE_CONTACT } from "@/lib/site-config"
 import {
   BOOKING_URLS,
+  getReservationUrl,
   PRODUCT_PRICING,
   getPriceDisplay,
   isBusinessOpen,
@@ -97,12 +98,12 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
   const isCorporate = slug === "corporate"
   const productSlug = isProductSlug(slug) ? slug : null
   const bookingUrl = productSlug ? BOOKING_URLS[productSlug] : undefined
-  const reservationUrl = bookingUrl ?? SITE_CONTACT.whatsapp
+  const reservationUrl = productSlug ? getReservationUrl(productSlug, locale) : SITE_CONTACT.whatsapp
   const pricing = productSlug ? PRODUCT_PRICING[productSlug] : null
   const priceDisplay = getPriceDisplay(pricing, locale)
   const reservationLabel = locale === "es"
-    ? (isCorporate ? "Solicitar cotización" : slug === "open" ? "Comprar tarjeta" : bookingUrl ? "Ver fechas" : "Consultar disponibilidad")
-    : (isCorporate ? "Request a quote" : slug === "open" ? "Buy gift card" : bookingUrl ? "Check dates" : "Ask about availability")
+    ? (isCorporate ? "Solicitar cotización" : bookingUrl ? "Ver fechas" : "Consultar disponibilidad")
+    : (isCorporate ? "Request a quote" : bookingUrl ? "Check dates" : "Ask about availability")
 
   const Content = (
     <>
@@ -125,7 +126,7 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
       </Button>
 
       <Button asChild variant="ghost" size="icon" className="shrink-0 rounded-full">
-        <a href={SITE_CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <a href={reservationUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
           <WhatsappLogoIcon size={28} weight="bold" />
         </a>
       </Button>

@@ -8,7 +8,7 @@ import { CloudinaryImage } from '@/components/CloudinaryImage'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { IMAGES } from '@/lib/images'
-import { BOOKING_URLS, PRODUCT_PRICING, ProductSlug, getPriceDisplay, getProductName } from '@/lib/commercial-config'
+import { getReservationUrl, PRODUCT_PRICING, ProductSlug, getPriceDisplay, getProductName } from '@/lib/commercial-config'
 import { Link } from '@/i18n/routing'
 
 type TabKey = 'shared' | 'private' | 'vip'
@@ -29,9 +29,9 @@ const ALL_FLIGHTS: HomeFlight[] = [
   { slug: 'transport', cat: 'shared', image: IMAGES.product.gallery.transport[0], imageClassName: 'object-[center_48%]', featured: true },
   { slug: 'classic', cat: 'shared', image: IMAGES.product.gallery.classic[0], imageClassName: 'object-[center_42%]' },
   { slug: 'journey', cat: 'shared', image: IMAGES.product.gallery.journey[0], imageClassName: 'object-[center_45%]' },
-  { slug: 'proposal', cat: 'private', image: IMAGES.product.gallery.proposal[0], imageClassName: 'object-[center_48%]' },
-  { slug: 'anniversary', cat: 'private', image: IMAGES.product.gallery.anniversary[0], imageClassName: 'object-[center_45%]' },
-  { slug: 'birthday', cat: 'private', image: IMAGES.product.gallery.birthday[0], imageClassName: 'object-[center_44%]' },
+  { slug: 'celebration', cat: 'private', image: IMAGES.product.gallery.celebration[0] },
+  { slug: 'private', cat: 'private', image: IMAGES.product.gallery.private[0] },
+  { slug: 'charter', cat: 'vip', image: IMAGES.product.gallery.charter[0] },
   { slug: 'vip', cat: 'vip', image: IMAGES.product.gallery.vip[0], imageClassName: 'object-[center_46%]', featured: true },
 ]
 
@@ -274,7 +274,7 @@ export function FlightExperienceSection() {
           {visibleFlights.map((flight, index) => {
             const pricing = PRODUCT_PRICING[flight.slug]!
             const priceDisplay = getPriceDisplay(pricing, locale)
-            const bookingUrl = BOOKING_URLS[flight.slug]!
+            const bookingUrl = getReservationUrl(flight.slug, locale)
 
             return (
             <article
