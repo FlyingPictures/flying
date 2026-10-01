@@ -1,0 +1,546 @@
+[
+  {
+    "id": "essential",
+    "name": {
+      "es": "Vuelo Esencial",
+      "en": "Essential Flight"
+    },
+    "description": {
+      "es": "El amanecer, el valle y la emoción de volar. La experiencia esencial para quienes quieren disfrutar del globo a su manera.",
+      "en": "The sunrise, the valley and the joy of flying. The essential experience for those who want to enjoy a balloon flight their own way."
+    },
+    "type": "shared",
+    "price": 2599,
+    "child": 1999,
+    "unit": "person",
+    "includes": [
+      {
+        "es": "Café y refrigerio antes del vuelo",
+        "en": "Pre-flight coffee break"
+      },
+      {
+        "es": "Seguro de vuelo",
+        "en": "Flight insurance"
+      },
+      {
+        "es": "Brindis tradicional con vino espumoso",
+        "en": "Traditional sparkling wine toast"
+      },
+      {
+        "es": "Certificado de vuelo",
+        "en": "Flight certificate"
+      }
+    ],
+    "extras": [
+      {
+        "es": "Transporte Redondo Privado 1-4Pax , Zona Centrica - $2500",
+        "en": "Private round-trip transportation, 1–4 guests, central area - $2500"
+      },
+      {
+        "es": "Fotografías y Video",
+        "en": "Photos and video"
+      },
+      {
+        "es": "Acceso a la Zona Arqueológica - $210",
+        "en": "Admission to the archaeological site - $210"
+      }
+    ],
+    "bookingUrl": null
+  },
+  {
+    "id": "pyramids",
+    "name": {
+      "es": "+Transporte + Pirámides",
+      "en": "Flight + Transport + Pyramids"
+    },
+    "description": {
+      "es": "Del vuelo al encuentro con las pirámides. Combina tu aventura en el aire con desayuno, transporte y acceso a la zona arqueológica.",
+      "en": "From the sky to the pyramids. Pair your balloon flight with breakfast, transportation and admission to the archaeological site."
+    },
+    "type": "shared",
+    "price": 3550,
+    "child": 2850,
+    "unit": "person",
+    "includes": [
+      {
+        "es": "Café y refrigerio antes del vuelo",
+        "en": "Pre-flight coffee break"
+      },
+      {
+        "es": "Seguro de vuelo",
+        "en": "Flight insurance"
+      },
+      {
+        "es": "Brindis tradicional con vino espumoso",
+        "en": "Traditional sparkling wine toast"
+      },
+      {
+        "es": "Certificado de vuelo",
+        "en": "Flight certificate"
+      },
+      {
+        "es": "Desayuno completo",
+        "en": "Full breakfast"
+      },
+      {
+        "es": "Transporte redondo compartido",
+        "en": "Shared round-trip transportation"
+      },
+      {
+        "es": "Acceso a la zona arqueológica",
+        "en": "Admission to the archaeological site"
+      }
+    ],
+    "extras": [
+      {
+        "es": "Guía Bilingüe (1-6 Personas) -$ 1,850",
+        "en": "Bilingual guide (1–6 guests) -$ 1,850"
+      },
+      {
+        "es": "Fotografías y Video",
+        "en": "Photos and video"
+      },
+      {
+        "es": "Ramo de Flores - $550",
+        "en": "Flower bouquet - $550"
+      },
+      {
+        "es": "Servicio por acompañante extra (no vuela) - $910",
+        "en": "Additional non-flying companion - $910"
+      },
+      {
+        "es": "Mariachis al aterrizaje - $2000",
+        "en": "Mariachi music upon landing - $2000"
+      },
+      {
+        "es": "Champagne - $1800",
+        "en": "Champagne - $1800"
+      }
+    ],
+    "bookingUrl": null
+  },
+  {
+    "id": "premium",
+    "name": {
+      "es": "Premium - VIP",
+      "en": "Premium – VIP"
+    },
+    "description": {
+      "es": "Una experiencia privada por aire y tierra: champagne, brunch en Mayahuel, pirámides y un recorrido por cuevas ceremoniales.",
+      "en": "A private experience in the air and on the ground: champagne, brunch at Mayahuel, pyramids and a ceremonial cave tour."
+    },
+    "type": "private",
+    "price": 22500,
+    "child": null,
+    "unit": "package",
+    "includes": [
+      {
+        "es": "Café y refrigerio antes del vuelo",
+        "en": "Pre-flight coffee break"
+      },
+      {
+        "es": "Seguro de vuelo",
+        "en": "Flight insurance"
+      },
+      {
+        "es": "Brindis con champagne",
+        "en": "Champagne toast"
+      },
+      {
+        "es": "Certificado de vuelo",
+        "en": "Flight certificate"
+      },
+      {
+        "es": "Transporte redondo privado",
+        "en": "Private round-trip transportation"
+      },
+      {
+        "es": "Acceso a la zona arqueológica",
+        "en": "Admission to the archaeological site"
+      },
+      {
+        "es": "Guía bilingüe",
+        "en": "Bilingual guide"
+      },
+      {
+        "es": "Tour en cuevas ceremoniales",
+        "en": "Ceremonial cave tour"
+      },
+      {
+        "es": "Fotografías y video",
+        "en": "Photos and video"
+      },
+      {
+        "es": "Servicio de mesero",
+        "en": "Waiter service"
+      },
+      {
+        "es": "Canapés y snacks",
+        "en": "Canapés and snacks"
+      },
+      {
+        "es": "Brunch en Mayahuel",
+        "en": "Brunch at Mayahuel"
+      }
+    ],
+    "extras": [
+      {
+        "es": "Persona Adicional Adulto VIP- $4,559",
+        "en": "Additional adult (VIP)- $4,559"
+      },
+      {
+        "es": "Persona Adicional Niño VIP- $3,559",
+        "en": "Additional child (VIP)- $3,559"
+      },
+      {
+        "es": "Ramo de Flores - $550",
+        "en": "Flower bouquet - $550"
+      },
+      {
+        "es": "Mariachis al aterrizaje - $2000",
+        "en": "Mariachi music upon landing - $2000"
+      },
+      {
+        "es": "Persona Adicional Que no Vuela (VIP)- $1,960",
+        "en": "Additional non-flying guest (VIP)- $1,960"
+      }
+    ],
+    "bookingUrl": null
+  },
+  {
+    "id": "celebration",
+    "name": {
+      "es": "Celebración",
+      "en": "Celebration"
+    },
+    "description": {
+      "es": "Un vuelo privado para una ocasión que merece algo extraordinario. Flores, desayuno y detalles para celebrar juntos.",
+      "en": "A private flight for an occasion that deserves something extraordinary. Flowers, breakfast and thoughtful touches to celebrate together."
+    },
+    "type": "private",
+    "price": 11999,
+    "child": null,
+    "unit": "package",
+    "includes": [
+      {
+        "es": "Café y refrigerio antes del vuelo",
+        "en": "Pre-flight coffee break"
+      },
+      {
+        "es": "Seguro de vuelo",
+        "en": "Flight insurance"
+      },
+      {
+        "es": "Brindis tradicional con vino espumoso",
+        "en": "Traditional sparkling wine toast"
+      },
+      {
+        "es": "Certificado de vuelo",
+        "en": "Flight certificate"
+      },
+      {
+        "es": "Desayuno completo",
+        "en": "Full breakfast"
+      },
+      {
+        "es": "Ramo de flores",
+        "en": "Flower bouquet"
+      },
+      {
+        "es": "Pastel y/o mañanitas",
+        "en": "Cake and/or birthday song"
+      }
+    ],
+    "extras": [
+      {
+        "es": "Transporte Redondo Privado 2 Pax , Zona Centrica - $2500",
+        "en": "Private round-trip transportation, 2 guests, central area - $2500"
+      },
+      {
+        "es": "Mariachis al aterrizaje - $2000",
+        "en": "Mariachi music upon landing - $2000"
+      },
+      {
+        "es": "Fotografías y Video",
+        "en": "Photos and video"
+      },
+      {
+        "es": "Champagne - $1800",
+        "en": "Champagne - $1800"
+      },
+      {
+        "es": "Acceso a la Zona Arqueológica - $210",
+        "en": "Admission to the archaeological site - $210"
+      },
+      {
+        "es": "Guía Bilingüe (1-6 Personas) -$ 1,850",
+        "en": "Bilingual guide (1–6 guests) -$ 1,850"
+      },
+      {
+        "es": "Desayuno Completo para acompañante (Buffette) - $200",
+        "en": "Full buffet breakfast for a companion - $200"
+      },
+      {
+        "es": "Lona Estandar \"Feliz Cumpleaños\"",
+        "en": "Standard banner \"Happy Birthday\""
+      },
+      {
+        "es": "Lona Estandar \"Te Amo\"",
+        "en": "Standard banner \"I Love You\""
+      },
+      {
+        "es": "Lona Estandar \"Feliz Aniversario\"",
+        "en": "Standard banner \"Happy Anniversary\""
+      },
+      {
+        "es": "Lona Estandar \"¿Te Quieres Casar Conmigo?\"",
+        "en": "Standard banner \"Will You Marry Me?\""
+      },
+      {
+        "es": "Lona Estandar \"¿Quieres ser mi novia?\"",
+        "en": "Standard banner \"Will You Be My Girlfriend?\""
+      },
+      {
+        "es": "Persona Adicional (Celebración)- $2,799",
+        "en": "Additional guest (Celebration)- $2,799"
+      }
+    ],
+    "bookingUrl": null
+  },
+  {
+    "id": "traveler",
+    "name": {
+      "es": "Viajero",
+      "en": "Traveler"
+    },
+    "description": {
+      "es": "Para quienes quieren descubrir más. Vuelo, pirámides con guía bilingüe, artesanías y bebidas típicas en una misma experiencia.",
+      "en": "For those who want to discover more. A balloon flight, pyramids with a bilingual guide, local crafts and traditional drinks in one experience."
+    },
+    "type": "shared",
+    "price": 7999,
+    "child": null,
+    "unit": "package",
+    "includes": [
+      {
+        "es": "Café y refrigerio antes del vuelo",
+        "en": "Pre-flight coffee break"
+      },
+      {
+        "es": "Seguro de vuelo",
+        "en": "Flight insurance"
+      },
+      {
+        "es": "Brindis tradicional con vino espumoso",
+        "en": "Traditional sparkling wine toast"
+      },
+      {
+        "es": "Certificado de vuelo",
+        "en": "Flight certificate"
+      },
+      {
+        "es": "Desayuno completo",
+        "en": "Full breakfast"
+      },
+      {
+        "es": "Transporte redondo compartido",
+        "en": "Shared round-trip transportation"
+      },
+      {
+        "es": "Acceso a la zona arqueológica",
+        "en": "Admission to the archaeological site"
+      },
+      {
+        "es": "Guía bilingüe",
+        "en": "Bilingual guide"
+      },
+      {
+        "es": "Kit de recuerdos Viajero",
+        "en": "Traveler souvenir kit"
+      },
+      {
+        "es": "Taller de artesanías y bebidas típicas",
+        "en": "Local crafts and traditional drinks workshop"
+      }
+    ],
+    "extras": [
+      {
+        "es": "Fotografías y Video",
+        "en": "Photos and video"
+      },
+      {
+        "es": "Mariachis al aterrizaje - $2000",
+        "en": "Mariachi music upon landing - $2000"
+      },
+      {
+        "es": "Persona Adicional (Viajero)- $1,450",
+        "en": "Additional guest (Traveler)- $1,450"
+      },
+      {
+        "es": "Champagne - $1800",
+        "en": "Champagne - $1800"
+      },
+      {
+        "es": "Ramo de Flores - $550",
+        "en": "Flower bouquet - $550"
+      }
+    ],
+    "bookingUrl": null
+  },
+  {
+    "id": "private",
+    "name": {
+      "es": "Experiencia en Globo Privada",
+      "en": "Private Balloon Experience"
+    },
+    "description": {
+      "es": "Una canastilla solo para tu grupo. Comparte el cielo con quienes tú elijas y celebra con champagne y desayuno.",
+      "en": "A basket exclusively for your group. Share the sky with the people you choose, followed by champagne and breakfast."
+    },
+    "type": "private",
+    "price": 11499,
+    "child": null,
+    "unit": "package",
+    "includes": [
+      {
+        "es": "Café y refrigerio antes del vuelo",
+        "en": "Pre-flight coffee break"
+      },
+      {
+        "es": "Seguro de vuelo",
+        "en": "Flight insurance"
+      },
+      {
+        "es": "Brindis con champagne",
+        "en": "Champagne toast"
+      },
+      {
+        "es": "Certificado de vuelo",
+        "en": "Flight certificate"
+      },
+      {
+        "es": "Desayuno completo",
+        "en": "Full breakfast"
+      }
+    ],
+    "extras": [
+      {
+        "es": "Transporte Redondo Privado 2 Pax , Zona Centrica - $2500",
+        "en": "Private round-trip transportation, 2 guests, central area - $2500"
+      },
+      {
+        "es": "Fotografías y Video",
+        "en": "Photos and video"
+      },
+      {
+        "es": "Ramo de Flores - $550",
+        "en": "Flower bouquet - $550"
+      },
+      {
+        "es": "Mariachis al aterrizaje - $2000",
+        "en": "Mariachi music upon landing - $2000"
+      },
+      {
+        "es": "Pastel (5 Rebanadas)- $500",
+        "en": "Cake (5 slices)- $500"
+      },
+      {
+        "es": "Acceso a la Zona Arqueológica - $210",
+        "en": "Admission to the archaeological site - $210"
+      },
+      {
+        "es": "Champagne - $1800",
+        "en": "Champagne - $1800"
+      },
+      {
+        "es": "Guía Bilingüe (1-6 Personas) -$ 1,850",
+        "en": "Bilingual guide (1–6 guests) -$ 1,850"
+      },
+      {
+        "es": "Persona Adicional (Paq 6)- $1,999",
+        "en": "Additional guest (Private Balloon Experience)- $1,999"
+      }
+    ],
+    "bookingUrl": null
+  },
+  {
+    "id": "charter",
+    "name": {
+      "es": "FPM Private Charter",
+      "en": "FPM Private Charter"
+    },
+    "description": {
+      "es": "Tu experiencia más completa: vuelo privado, transporte premium, guía bilingüe desde la recogida y brunch en Club Campestre.",
+      "en": "Your most complete experience: a private flight, premium transportation, a bilingual guide from pickup and brunch at Club Campestre."
+    },
+    "type": "private",
+    "price": 30000,
+    "child": null,
+    "unit": "package",
+    "includes": [
+      {
+        "es": "Café y refrigerio antes del vuelo",
+        "en": "Pre-flight coffee break"
+      },
+      {
+        "es": "Seguro de vuelo",
+        "en": "Flight insurance"
+      },
+      {
+        "es": "Brindis con champagne",
+        "en": "Champagne toast"
+      },
+      {
+        "es": "Certificado de vuelo",
+        "en": "Flight certificate"
+      },
+      {
+        "es": "Desayuno buffet ligero antes del despegue",
+        "en": "Light buffet breakfast before takeoff"
+      },
+      {
+        "es": "Transporte redondo privado premium",
+        "en": "Premium private round-trip transportation"
+      },
+      {
+        "es": "Acceso a la zona arqueológica",
+        "en": "Admission to the archaeological site"
+      },
+      {
+        "es": "Guía bilingüe desde la recogida",
+        "en": "Bilingual guide from pickup"
+      },
+      {
+        "es": "Fotografías y video",
+        "en": "Photos and video"
+      },
+      {
+        "es": "Servicio de mesero",
+        "en": "Waiter service"
+      },
+      {
+        "es": "Canapés y snacks",
+        "en": "Canapés and snacks"
+      },
+      {
+        "es": "Brunch en Club Campestre",
+        "en": "Brunch at Club Campestre"
+      }
+    ],
+    "extras": [
+      {
+        "es": "Persona Adicional (FPM)- $5,000",
+        "en": "Additional guest (FPM)- $5,000"
+      },
+      {
+        "es": "Ramo de Flores - $550",
+        "en": "Flower bouquet - $550"
+      },
+      {
+        "es": "Mariachis al aterrizaje - $2000",
+        "en": "Mariachi music upon landing - $2000"
+      }
+    ],
+    "bookingUrl": null
+  }
+]

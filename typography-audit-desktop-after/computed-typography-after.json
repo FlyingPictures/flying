@@ -1,0 +1,134 @@
+[
+  {
+    "route": "01-home",
+    "data": [
+      {
+        "fontFamily": "Poppins",
+        "fontSize": "64px",
+        "letterSpacing": "-1.92px",
+        "lineHeight": "78.976px",
+        "tag": "h1",
+        "text": "The Original Teotihuacán Balloon Flight."
+      },
+      {
+        "fontFamily": "Inter",
+        "fontSize": "20px",
+        "letterSpacing": "normal",
+        "lineHeight": "24px",
+        "tag": "p",
+        "text": "Over decades, we have learned that the finest adventures are those sha"
+      }
+    ]
+  },
+  {
+    "route": "02-safety-heritage",
+    "data": [
+      {
+        "fontFamily": "Poppins",
+        "fontSize": "64px",
+        "letterSpacing": "-1.92px",
+        "lineHeight": "78.976px",
+        "tag": "h1",
+        "text": "Safety as our Foundation: The Engineering of Peace of Mind."
+      },
+      {
+        "fontFamily": "Libre Baskerville",
+        "fontSize": "20px",
+        "letterSpacing": "-0.6px",
+        "lineHeight": "24.68px",
+        "tag": "h3",
+        "text": "The Engineering of Peace of Mind."
+      },
+      {
+        "fontFamily": "Inter",
+        "fontSize": "20px",
+        "letterSpacing": "normal",
+        "lineHeight": "24px",
+        "tag": "p",
+        "text": "In an industry often crowded by agencies lacking their own aircraft an"
+      },
+      {
+        "fontFamily": "Poppins",
+        "fontSize": "64px",
+        "letterSpacing": "-3.2px",
+        "lineHeight": "96px",
+        "tag": "h2",
+        "text": "Corporate Discipline"
+      }
+    ]
+  },
+  {
+    "route": "05-product-classic",
+    "data": [
+      {
+        "fontFamily": "ui-sans-serif",
+        "fontSize": "16px",
+        "letterSpacing": "normal",
+        "lineHeight": "24px",
+        "tag": "h1",
+        "text": "The Classic Journey"
+      },
+      {
+        "fontFamily": "Inter",
+        "fontSize": "14px",
+        "letterSpacing": "normal",
+        "lineHeight": "20px",
+        "tag": "p",
+        "text": "Shared Basket | 45-60 Minutes | 🇬🇧 British Safety Standards"
+      },
+      {
+        "fontFamily": "Inter",
+        "fontSize": "18px",
+        "letterSpacing": "normal",
+        "lineHeight": "22px",
+        "tag": "p",
+        "text": "Join a select group of fellow adventurers for a morning where stranger"
+      },
+      {
+        "fontFamily": "Libre Baskerville",
+        "fontSize": "32px",
+        "letterSpacing": "-0.96px",
+        "lineHeight": "39.488px",
+        "tag": "h3",
+        "text": "What you'll do"
+      }
+    ]
+  },
+  {
+    "route": "06-contact",
+    "data": [
+      {
+        "fontFamily": "Poppins",
+        "fontSize": "64px",
+        "letterSpacing": "-1.92px",
+        "lineHeight": "78.976px",
+        "tag": "h1",
+        "text": "Contact Mission Control: We are at your service"
+      },
+      {
+        "fontFamily": "Libre Baskerville",
+        "fontSize": "20px",
+        "letterSpacing": "-0.6px",
+        "lineHeight": "24.68px",
+        "tag": "h3",
+        "text": "We are morning people. How can we help?"
+      },
+      {
+        "fontFamily": "Inter",
+        "fontSize": "20px",
+        "letterSpacing": "normal",
+        "lineHeight": "24px",
+        "tag": "p",
+        "text": "Whether you require bespoke logistical arrangements or specific flight"
+      },
+      {
+        "fontFamily": "Poppins",
+        "fontSize": "64px",
+        "letterSpacing": "-3.2px",
+        "lineHeight": "96px",
+        "tag": "h2",
+        "text": "General Inquiries & Booking"
+      }
+    ]
+  }
+]

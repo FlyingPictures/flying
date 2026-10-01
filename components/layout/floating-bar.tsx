@@ -108,17 +108,15 @@ const FloatingBar1 = ({ show }: { show: boolean }) => {
       show={show}
       className="bottom-6 inset-x-0 flex justify-center px-4 lg:hidden"
     >
-      <FloatingCard className="max-w-[calc(100vw-1rem)] justify-center gap-3 sm:max-w-122">
-        <Button asChild variant="primary" size="floating" className="min-w-0 flex-[0.85] px-4 sm:flex-none sm:px-7">
+      <FloatingCard className="max-w-[calc(100vw-1rem)] flex-col items-stretch justify-center gap-2 p-2.5 min-[360px]:flex-row min-[360px]:items-center sm:max-w-122 sm:gap-3 sm:p-3">
+        <Button asChild variant="primary" size="floating" className="w-full flex-none px-5 text-xs min-[360px]:w-auto min-[360px]:min-w-0 min-[360px]:flex-[0.82] min-[360px]:px-3 min-[360px]:text-[clamp(0.66rem,2.8vw,0.76rem)] min-[390px]:text-[0.72rem] sm:flex-none sm:px-7 sm:text-[0.8rem]">
           <Link href="/flight-experiences">{t("bookFlight")}</Link>
         </Button>
 
-        <Button asChild variant="secondary" size="floating" className="min-w-0 flex-[1.15] px-4 sm:flex-none sm:px-7">
+        <Button asChild variant="secondary" size="floating" className="w-full flex-none gap-1.5 px-5 text-xs tracking-[-0.015em] min-[360px]:w-auto min-[360px]:min-w-0 min-[360px]:flex-[1.18] min-[360px]:px-3 min-[360px]:text-[clamp(0.66rem,2.8vw,0.76rem)] min-[390px]:text-[0.72rem] sm:flex-none sm:px-7 sm:text-[0.8rem]">
           <a href={SITE_CONTACT.whatsapp} target="_blank" rel="noopener noreferrer">
-            <span className="flex items-center gap-2">
-              {t("talkExpert")}
-              <WhatsappLogoIcon size={20} />
-            </span>
+            {t("talkExpert")}
+            <WhatsappLogoIcon size={18} weight="bold" />
           </a>
         </Button>
       </FloatingCard>
@@ -210,7 +208,7 @@ const FloatingBar3 = ({ show }: { show: boolean }) => {
 
   const Content = (
     <>
-      <div className="flex min-w-0 flex-1 flex-col gap-0.5 pr-2">
+      <div className="flex min-w-0 flex-1 flex-col gap-0.5 min-[360px]:flex-[0.7] min-[360px]:pr-1 min-[390px]:flex-[0.85] md:flex-1 md:pr-2">
         <div className="flex items-center gap-1">
           <div
             className={cn(
@@ -230,11 +228,11 @@ const FloatingBar3 = ({ show }: { show: boolean }) => {
         asChild
         variant="primary"
         size="floating"
-        className="min-w-40 px-4 md:flex-none md:min-w-52 md:px-6 md:text-sm"
+        className="w-full flex-none gap-1.5 px-5 text-xs tracking-[-0.015em] min-[360px]:w-auto min-[360px]:min-w-0 min-[360px]:flex-[1.3] min-[360px]:px-3 min-[360px]:text-[clamp(0.66rem,2.8vw,0.76rem)] min-[390px]:flex-[1.15] min-[390px]:text-[0.72rem] md:flex-none md:min-w-52 md:px-6 md:text-sm"
       >
         <a href={SITE_CONTACT.whatsapp} target="_blank" rel="noopener noreferrer">
           {t("cta")}
-          <WhatsappLogoIcon size={22} weight="bold" />
+          <WhatsappLogoIcon size={20} weight="bold" />
         </a>
       </Button>
     </>
@@ -246,7 +244,9 @@ const FloatingBar3 = ({ show }: { show: boolean }) => {
         show={show}
         className="bottom-6 inset-x-0 flex justify-center px-2 md:hidden"
       >
-        <FloatingCard>{Content}</FloatingCard>
+        <FloatingCard className="max-w-[calc(100vw-1rem)] flex-col items-stretch gap-2.5 min-[360px]:flex-row min-[360px]:items-center min-[360px]:gap-2">
+          {Content}
+        </FloatingCard>
       </FloatingWrapper>
 
       <FloatingWrapper

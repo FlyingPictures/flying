@@ -1,0 +1,265 @@
+{
+  "checks": [
+    {
+      "name": "Seven packages",
+      "pass": true
+    },
+    {
+      "name": "All images load",
+      "pass": true
+    },
+    {
+      "name": "Three shared packages",
+      "pass": true
+    },
+    {
+      "name": "Four private packages",
+      "pass": true
+    },
+    {
+      "name": "essential modal opens",
+      "pass": true
+    },
+    {
+      "name": "essential WhatsApp names correct package",
+      "pass": true
+    },
+    {
+      "name": "essential Escape closes and restores focus",
+      "pass": true
+    },
+    {
+      "name": "pyramids modal opens",
+      "pass": true
+    },
+    {
+      "name": "pyramids WhatsApp names correct package",
+      "pass": true
+    },
+    {
+      "name": "pyramids Escape closes and restores focus",
+      "pass": true
+    },
+    {
+      "name": "premium modal opens",
+      "pass": true
+    },
+    {
+      "name": "premium WhatsApp names correct package",
+      "pass": true
+    },
+    {
+      "name": "premium Escape closes and restores focus",
+      "pass": true
+    },
+    {
+      "name": "celebration modal opens",
+      "pass": true
+    },
+    {
+      "name": "celebration WhatsApp names correct package",
+      "pass": true
+    },
+    {
+      "name": "celebration Escape closes and restores focus",
+      "pass": true
+    },
+    {
+      "name": "traveler modal opens",
+      "pass": true
+    },
+    {
+      "name": "traveler WhatsApp names correct package",
+      "pass": true
+    },
+    {
+      "name": "traveler Escape closes and restores focus",
+      "pass": true
+    },
+    {
+      "name": "private modal opens",
+      "pass": true
+    },
+    {
+      "name": "private WhatsApp names correct package",
+      "pass": true
+    },
+    {
+      "name": "private Escape closes and restores focus",
+      "pass": true
+    },
+    {
+      "name": "charter modal opens",
+      "pass": true
+    },
+    {
+      "name": "charter WhatsApp names correct package",
+      "pass": true
+    },
+    {
+      "name": "charter Escape closes and restores focus",
+      "pass": true
+    },
+    {
+      "name": "English language switch",
+      "pass": true
+    },
+    {
+      "name": "Language preference remembered",
+      "pass": true
+    },
+    {
+      "name": "English WhatsApp message",
+      "pass": true
+    },
+    {
+      "name": "es/essential standalone page",
+      "pass": true
+    },
+    {
+      "name": "es/essential images",
+      "pass": true
+    },
+    {
+      "name": "es/pyramids standalone page",
+      "pass": true
+    },
+    {
+      "name": "es/pyramids images",
+      "pass": true
+    },
+    {
+      "name": "es/premium standalone page",
+      "pass": true
+    },
+    {
+      "name": "es/premium images",
+      "pass": true
+    },
+    {
+      "name": "es/celebration standalone page",
+      "pass": true
+    },
+    {
+      "name": "es/celebration images",
+      "pass": true
+    },
+    {
+      "name": "es/traveler standalone page",
+      "pass": true
+    },
+    {
+      "name": "es/traveler images",
+      "pass": true
+    },
+    {
+      "name": "es/private standalone page",
+      "pass": true
+    },
+    {
+      "name": "es/private images",
+      "pass": true
+    },
+    {
+      "name": "es/charter standalone page",
+      "pass": true
+    },
+    {
+      "name": "es/charter images",
+      "pass": true
+    },
+    {
+      "name": "en/essential standalone page",
+      "pass": true
+    },
+    {
+      "name": "en/essential images",
+      "pass": true
+    },
+    {
+      "name": "en/pyramids standalone page",
+      "pass": true
+    },
+    {
+      "name": "en/pyramids images",
+      "pass": true
+    },
+    {
+      "name": "en/premium standalone page",
+      "pass": true
+    },
+    {
+      "name": "en/premium images",
+      "pass": true
+    },
+    {
+      "name": "en/celebration standalone page",
+      "pass": true
+    },
+    {
+      "name": "en/celebration images",
+      "pass": true
+    },
+    {
+      "name": "en/traveler standalone page",
+      "pass": true
+    },
+    {
+      "name": "en/traveler images",
+      "pass": true
+    },
+    {
+      "name": "en/private standalone page",
+      "pass": true
+    },
+    {
+      "name": "en/private images",
+      "pass": true
+    },
+    {
+      "name": "en/charter standalone page",
+      "pass": true
+    },
+    {
+      "name": "en/charter images",
+      "pass": true
+    },
+    {
+      "name": "No horizontal overflow at 390px",
+      "pass": true
+    },
+    {
+      "name": "Modal fits 390px",
+      "pass": true
+    },
+    {
+      "name": "No horizontal overflow at 320px",
+      "pass": true
+    },
+    {
+      "name": "Modal fits 320px",
+      "pass": true
+    },
+    {
+      "name": "No horizontal overflow at 768px",
+      "pass": true
+    },
+    {
+      "name": "Modal fits 768px",
+      "pass": true
+    },
+    {
+      "name": "Details work without JavaScript",
+      "pass": true
+    },
+    {
+      "name": "Package language switch works without JavaScript",
+      "pass": true
+    },
+    {
+      "name": "No browser or HTTP errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

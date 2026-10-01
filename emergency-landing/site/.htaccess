@@ -1,0 +1,3 @@
+# Static temporary Flying Pictures website: no PHP required.
+# Back up the existing .htaccess before replacing it with this file.
+DirectoryIndex index.html
