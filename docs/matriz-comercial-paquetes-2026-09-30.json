@@ -1,0 +1,4494 @@
+{
+  "schemaVersion": 1,
+  "milestone": "M1",
+  "status": "prepared_pending_commercial_confirmation",
+  "date": "2026-09-30",
+  "purpose": "Review source data; not imported by the running site.",
+  "source": {
+    "fileName": "Paquetes_FlyingPictures_Teotihuacan_Sean_09092026 (1).xlsx",
+    "originalPath": "/Users/enriquevelasco/Work/Clientes/01 - Flying pictures/Nuevos paquetes/Paquetes_FlyingPictures_Teotihuacan_Sean_09092026 (1).xlsx",
+    "sha256": "6d0487526fdf4287d3f1c4d24466f33876d12e2ac53eedd0fa7e3722482dffc8",
+    "sheetsUsed": [
+      "Paquetes",
+      "Extras"
+    ],
+    "excludedHistoricalSheet": "Paquetes y Precios Publicados"
+  },
+  "rules": [
+    "A minimum is not the number of people included.",
+    "Zero and blank extra prices are not promises of free services.",
+    "Checkboxes distinguish base inclusions, not all purchasable services.",
+    "English names are proposals.",
+    "No legacy booking link is verified for the new catalogue.",
+    "No commercial ambiguity is resolved by an assumption."
+  ],
+  "childAgeSource": {
+    "source": "Paquetes!A12",
+    "value": "Precio Niño (4-12 años)"
+  },
+  "packages": [
+    {
+      "id": "classic",
+      "nameEs": "Vuelo Esencial",
+      "proposedNameEn": "Essential Flight",
+      "nameSource": "Paquetes!B2",
+      "mode": "shared",
+      "modeSource": "Paquetes!B3",
+      "replacesLegacyIds": [
+        "classic"
+      ],
+      "basePrice": {
+        "source": "Paquetes!B11",
+        "value": 2599,
+        "currency": "MXN",
+        "unit": "per_adult",
+        "commercialStatus": "consistent_in_source",
+        "approvedForDirectPurchase": false
+      },
+      "childPrice": {
+        "source": "Paquetes!B12",
+        "value": 1999
+      },
+      "group": {
+        "includedPeople": 1,
+        "minimumBookingPeople": 1,
+        "minimumPrivateFlightPeople": null,
+        "observedMinimumBookingPeople": {
+          "source": "Paquetes!B5",
+          "value": 1
+        },
+        "observedPrivateFlightMinimum": {
+          "source": "Paquetes!B17",
+          "value": null
+        },
+        "descriptionCondition": {
+          "source": "Paquetes!B4",
+          "value": "Solo Vuelo"
+        },
+        "privateCondition": {
+          "source": "Paquetes!B16",
+          "value": null
+        },
+        "commercialStatus": "consistent_in_source"
+      },
+      "privateFlightUpgrade": {
+        "source": "Paquetes!B14",
+        "value": null
+      },
+      "privateTransportUpgrade": {
+        "source": "Paquetes!B15",
+        "value": null
+      },
+      "privateSampleTotal": {
+        "source": "Paquetes!B18",
+        "value": null
+      },
+      "notes": {
+        "source": "Paquetes!B19",
+        "value": null
+      },
+      "included": [
+        {
+          "nameEs": "Coffee Break",
+          "source": "Paquetes!B21"
+        },
+        {
+          "nameEs": "Seguro de Vuelo",
+          "source": "Paquetes!B22"
+        },
+        {
+          "nameEs": "Brindis Tradicional con Vino Espumoso",
+          "source": "Paquetes!B23"
+        },
+        {
+          "nameEs": "Certificado de Vuelo",
+          "source": "Paquetes!B25"
+        }
+      ],
+      "notMarkedIncluded": [
+        {
+          "nameEs": "Brindis Tradicional con Champagne",
+          "source": "Paquetes!B24"
+        },
+        {
+          "nameEs": "Desayuno Bufette Ligero (Previo al Despegue)",
+          "source": "Paquetes!B26"
+        },
+        {
+          "nameEs": "Desayuno Completo",
+          "source": "Paquetes!B27"
+        },
+        {
+          "nameEs": "Desayuno Extra",
+          "source": "Paquetes!B28"
+        },
+        {
+          "nameEs": "Transporte Redondo Compartido",
+          "source": "Paquetes!B29"
+        },
+        {
+          "nameEs": "Transporte Privado",
+          "source": "Paquetes!B30"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado",
+          "source": "Paquetes!B31"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado Premium",
+          "source": "Paquetes!B32"
+        },
+        {
+          "nameEs": "Conversión a Vuelo Privado",
+          "source": "Paquetes!B33"
+        },
+        {
+          "nameEs": "Lona Personalizada",
+          "source": "Paquetes!B34"
+        },
+        {
+          "nameEs": "Ramo de Flores",
+          "source": "Paquetes!B35"
+        },
+        {
+          "nameEs": "Mariachis al aterrizaje",
+          "source": "Paquetes!B36"
+        },
+        {
+          "nameEs": "Champagne",
+          "source": "Paquetes!B37"
+        },
+        {
+          "nameEs": "Pastel y/o Mañanitas",
+          "source": "Paquetes!B38"
+        },
+        {
+          "nameEs": "Acceso a la Zona Arqueológica",
+          "source": "Paquetes!B39"
+        },
+        {
+          "nameEs": "Guía Bilingüe",
+          "source": "Paquetes!B40"
+        },
+        {
+          "nameEs": "Guía Bilingüe desde tu pickup",
+          "source": "Paquetes!B41"
+        },
+        {
+          "nameEs": "Tour en Cuevas Ceremoniales",
+          "source": "Paquetes!B42"
+        },
+        {
+          "nameEs": "Fotografías y Video",
+          "source": "Paquetes!B43"
+        },
+        {
+          "nameEs": "Kit / Souvenir Viajero",
+          "source": "Paquetes!B44"
+        },
+        {
+          "nameEs": "Servicio de Mesero",
+          "source": "Paquetes!B45"
+        },
+        {
+          "nameEs": "Canapes y Snacks",
+          "source": "Paquetes!B46"
+        },
+        {
+          "nameEs": "Brunch (Mayahuel)",
+          "source": "Paquetes!B47"
+        },
+        {
+          "nameEs": "Brunch (Club Campestre)",
+          "source": "Paquetes!B48"
+        },
+        {
+          "nameEs": "Taller de Artesanias y Bebidas Tipicas",
+          "source": "Paquetes!B49"
+        }
+      ],
+      "extras": [
+        {
+          "labelEs": "Transporte Redondo Privado 1-4Pax , Zona Centrica - $2500",
+          "source": "Paquetes!B51",
+          "observedAmountMxn": 2500,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Fotografías y Video",
+          "source": "Paquetes!B52",
+          "observedAmountMxn": null,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Acceso a la Zona Arqueológica - $210",
+          "source": "Paquetes!B53",
+          "observedAmountMxn": 210,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        }
+      ],
+      "booking": {
+        "verifiedUrl": null,
+        "mode": "pending_decision",
+        "sourceContainsBookingUrl": false
+      },
+      "durationMinutes": null,
+      "commercialStatus": "pending_confirmation"
+    },
+    {
+      "id": "transport",
+      "nameEs": "+Transporte + Pirámides",
+      "proposedNameEn": "Flight + Transport + Pyramids",
+      "nameSource": "Paquetes!C2",
+      "mode": "shared",
+      "modeSource": "Paquetes!C3",
+      "replacesLegacyIds": [
+        "transport"
+      ],
+      "basePrice": {
+        "source": "Paquetes!C11",
+        "value": 3550,
+        "currency": "MXN",
+        "unit": "per_adult",
+        "commercialStatus": "consistent_in_source",
+        "approvedForDirectPurchase": false
+      },
+      "childPrice": {
+        "source": "Paquetes!C12",
+        "value": 2850,
+        "formula": "=C11-700"
+      },
+      "group": {
+        "includedPeople": 1,
+        "minimumBookingPeople": 1,
+        "minimumPrivateFlightPeople": 2,
+        "observedMinimumBookingPeople": {
+          "source": "Paquetes!C5",
+          "value": 1
+        },
+        "observedPrivateFlightMinimum": {
+          "source": "Paquetes!C17",
+          "value": 2
+        },
+        "descriptionCondition": {
+          "source": "Paquetes!C4",
+          "value": null
+        },
+        "privateCondition": {
+          "source": "Paquetes!C16",
+          "value": "Cargo Vuelo Privado por Grupo 2pax (Extra)"
+        },
+        "commercialStatus": "consistent_in_source"
+      },
+      "privateFlightUpgrade": {
+        "source": "Paquetes!C14",
+        "value": 4999
+      },
+      "privateTransportUpgrade": {
+        "source": "Paquetes!C15",
+        "value": 2000
+      },
+      "privateSampleTotal": {
+        "source": "Paquetes!C18",
+        "value": 14099,
+        "formula": "=C11*2+C14+C15"
+      },
+      "notes": {
+        "source": "Paquetes!C19",
+        "value": null
+      },
+      "included": [
+        {
+          "nameEs": "Coffee Break",
+          "source": "Paquetes!C21"
+        },
+        {
+          "nameEs": "Seguro de Vuelo",
+          "source": "Paquetes!C22"
+        },
+        {
+          "nameEs": "Brindis Tradicional con Vino Espumoso",
+          "source": "Paquetes!C23"
+        },
+        {
+          "nameEs": "Certificado de Vuelo",
+          "source": "Paquetes!C25"
+        },
+        {
+          "nameEs": "Desayuno Completo",
+          "source": "Paquetes!C27"
+        },
+        {
+          "nameEs": "Transporte Redondo Compartido",
+          "source": "Paquetes!C29"
+        },
+        {
+          "nameEs": "Acceso a la Zona Arqueológica",
+          "source": "Paquetes!C39"
+        }
+      ],
+      "notMarkedIncluded": [
+        {
+          "nameEs": "Brindis Tradicional con Champagne",
+          "source": "Paquetes!C24"
+        },
+        {
+          "nameEs": "Desayuno Bufette Ligero (Previo al Despegue)",
+          "source": "Paquetes!C26"
+        },
+        {
+          "nameEs": "Desayuno Extra",
+          "source": "Paquetes!C28"
+        },
+        {
+          "nameEs": "Transporte Privado",
+          "source": "Paquetes!C30"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado",
+          "source": "Paquetes!C31"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado Premium",
+          "source": "Paquetes!C32"
+        },
+        {
+          "nameEs": "Conversión a Vuelo Privado",
+          "source": "Paquetes!C33"
+        },
+        {
+          "nameEs": "Lona Personalizada",
+          "source": "Paquetes!C34"
+        },
+        {
+          "nameEs": "Ramo de Flores",
+          "source": "Paquetes!C35"
+        },
+        {
+          "nameEs": "Mariachis al aterrizaje",
+          "source": "Paquetes!C36"
+        },
+        {
+          "nameEs": "Champagne",
+          "source": "Paquetes!C37"
+        },
+        {
+          "nameEs": "Pastel y/o Mañanitas",
+          "source": "Paquetes!C38"
+        },
+        {
+          "nameEs": "Guía Bilingüe",
+          "source": "Paquetes!C40"
+        },
+        {
+          "nameEs": "Guía Bilingüe desde tu pickup",
+          "source": "Paquetes!C41"
+        },
+        {
+          "nameEs": "Tour en Cuevas Ceremoniales",
+          "source": "Paquetes!C42"
+        },
+        {
+          "nameEs": "Fotografías y Video",
+          "source": "Paquetes!C43"
+        },
+        {
+          "nameEs": "Kit / Souvenir Viajero",
+          "source": "Paquetes!C44"
+        },
+        {
+          "nameEs": "Servicio de Mesero",
+          "source": "Paquetes!C45"
+        },
+        {
+          "nameEs": "Canapes y Snacks",
+          "source": "Paquetes!C46"
+        },
+        {
+          "nameEs": "Brunch (Mayahuel)",
+          "source": "Paquetes!C47"
+        },
+        {
+          "nameEs": "Brunch (Club Campestre)",
+          "source": "Paquetes!C48"
+        },
+        {
+          "nameEs": "Taller de Artesanias y Bebidas Tipicas",
+          "source": "Paquetes!C49"
+        }
+      ],
+      "extras": [
+        {
+          "labelEs": "Guía Bilingüe (1-6 Personas) -$ 1,850",
+          "source": "Paquetes!C51",
+          "observedAmountMxn": 1850,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Fotografías y Video",
+          "source": "Paquetes!C52",
+          "observedAmountMxn": null,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Ramo de Flores - $550",
+          "source": "Paquetes!C53",
+          "observedAmountMxn": 550,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Servicio por acompañante extra (no vuela) - $910",
+          "source": "Paquetes!C54",
+          "observedAmountMxn": 910,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Mariachis al aterrizaje - $2000",
+          "source": "Paquetes!C55",
+          "observedAmountMxn": 2000,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Champagne - $1800",
+          "source": "Paquetes!C56",
+          "observedAmountMxn": 1800,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        }
+      ],
+      "booking": {
+        "verifiedUrl": null,
+        "mode": "pending_decision",
+        "sourceContainsBookingUrl": false
+      },
+      "durationMinutes": null,
+      "commercialStatus": "pending_confirmation"
+    },
+    {
+      "id": "vip",
+      "nameEs": "Premium - VIP",
+      "proposedNameEn": "Premium - VIP",
+      "nameSource": "Paquetes!D2",
+      "mode": "private",
+      "modeSource": "Paquetes!D3",
+      "replacesLegacyIds": [
+        "vip"
+      ],
+      "basePrice": {
+        "source": "Paquetes!D13",
+        "value": 22500,
+        "formula": "=5500*4+500",
+        "currency": "MXN",
+        "unit": "per_package",
+        "commercialStatus": "consistent_in_source",
+        "approvedForDirectPurchase": false
+      },
+      "childPrice": null,
+      "group": {
+        "includedPeople": null,
+        "minimumBookingPeople": null,
+        "minimumPrivateFlightPeople": 4,
+        "observedMinimumBookingPeople": {
+          "source": "Paquetes!D5",
+          "value": 1
+        },
+        "observedPrivateFlightMinimum": {
+          "source": "Paquetes!D17",
+          "value": 4
+        },
+        "descriptionCondition": {
+          "source": "Paquetes!D4",
+          "value": "- Minimo 4 + persona adicional"
+        },
+        "privateCondition": {
+          "source": "Paquetes!D16",
+          "value": "N/A"
+        },
+        "commercialStatus": "pending_confirmation"
+      },
+      "privateFlightUpgrade": {
+        "source": "Paquetes!D14",
+        "value": null
+      },
+      "privateTransportUpgrade": {
+        "source": "Paquetes!D15",
+        "value": null
+      },
+      "privateSampleTotal": {
+        "source": "Paquetes!D18",
+        "value": null
+      },
+      "notes": {
+        "source": "Paquetes!D19",
+        "value": null
+      },
+      "included": [
+        {
+          "nameEs": "Coffee Break",
+          "source": "Paquetes!D21"
+        },
+        {
+          "nameEs": "Seguro de Vuelo",
+          "source": "Paquetes!D22"
+        },
+        {
+          "nameEs": "Brindis Tradicional con Champagne",
+          "source": "Paquetes!D24"
+        },
+        {
+          "nameEs": "Certificado de Vuelo",
+          "source": "Paquetes!D25"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado",
+          "source": "Paquetes!D31"
+        },
+        {
+          "nameEs": "Champagne",
+          "source": "Paquetes!D37"
+        },
+        {
+          "nameEs": "Acceso a la Zona Arqueológica",
+          "source": "Paquetes!D39"
+        },
+        {
+          "nameEs": "Guía Bilingüe",
+          "source": "Paquetes!D40"
+        },
+        {
+          "nameEs": "Tour en Cuevas Ceremoniales",
+          "source": "Paquetes!D42"
+        },
+        {
+          "nameEs": "Fotografías y Video",
+          "source": "Paquetes!D43"
+        },
+        {
+          "nameEs": "Servicio de Mesero",
+          "source": "Paquetes!D45"
+        },
+        {
+          "nameEs": "Canapes y Snacks",
+          "source": "Paquetes!D46"
+        },
+        {
+          "nameEs": "Brunch (Mayahuel)",
+          "source": "Paquetes!D47"
+        }
+      ],
+      "notMarkedIncluded": [
+        {
+          "nameEs": "Brindis Tradicional con Vino Espumoso",
+          "source": "Paquetes!D23"
+        },
+        {
+          "nameEs": "Desayuno Bufette Ligero (Previo al Despegue)",
+          "source": "Paquetes!D26"
+        },
+        {
+          "nameEs": "Desayuno Completo",
+          "source": "Paquetes!D27"
+        },
+        {
+          "nameEs": "Desayuno Extra",
+          "source": "Paquetes!D28"
+        },
+        {
+          "nameEs": "Transporte Redondo Compartido",
+          "source": "Paquetes!D29"
+        },
+        {
+          "nameEs": "Transporte Privado",
+          "source": "Paquetes!D30"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado Premium",
+          "source": "Paquetes!D32"
+        },
+        {
+          "nameEs": "Conversión a Vuelo Privado",
+          "source": "Paquetes!D33"
+        },
+        {
+          "nameEs": "Lona Personalizada",
+          "source": "Paquetes!D34"
+        },
+        {
+          "nameEs": "Ramo de Flores",
+          "source": "Paquetes!D35"
+        },
+        {
+          "nameEs": "Mariachis al aterrizaje",
+          "source": "Paquetes!D36"
+        },
+        {
+          "nameEs": "Pastel y/o Mañanitas",
+          "source": "Paquetes!D38"
+        },
+        {
+          "nameEs": "Guía Bilingüe desde tu pickup",
+          "source": "Paquetes!D41"
+        },
+        {
+          "nameEs": "Kit / Souvenir Viajero",
+          "source": "Paquetes!D44"
+        },
+        {
+          "nameEs": "Brunch (Club Campestre)",
+          "source": "Paquetes!D48"
+        },
+        {
+          "nameEs": "Taller de Artesanias y Bebidas Tipicas",
+          "source": "Paquetes!D49"
+        }
+      ],
+      "extras": [
+        {
+          "labelEs": "Persona Adicional Adulto VIP- $4,559",
+          "source": "Paquetes!D51",
+          "observedAmountMxn": 4559,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Persona Adicional Niño VIP- $3,559",
+          "source": "Paquetes!D52",
+          "observedAmountMxn": 3559,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Ramo de Flores - $550",
+          "source": "Paquetes!D53",
+          "observedAmountMxn": 550,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Mariachis al aterrizaje - $2000",
+          "source": "Paquetes!D54",
+          "observedAmountMxn": 2000,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Persona Adicional Que no Vuela (VIP)- $1,960",
+          "source": "Paquetes!D55",
+          "observedAmountMxn": 1960,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        }
+      ],
+      "booking": {
+        "verifiedUrl": null,
+        "mode": "pending_decision",
+        "sourceContainsBookingUrl": false
+      },
+      "durationMinutes": null,
+      "commercialStatus": "pending_confirmation"
+    },
+    {
+      "id": "celebration",
+      "nameEs": "Celebración",
+      "proposedNameEn": "Celebration",
+      "nameSource": "Paquetes!E2",
+      "mode": "private",
+      "modeSource": "Paquetes!E3",
+      "replacesLegacyIds": [
+        "birthday",
+        "anniversary",
+        "proposal"
+      ],
+      "basePrice": {
+        "source": "Paquetes!E13",
+        "value": 11999,
+        "currency": "MXN",
+        "unit": "per_package",
+        "commercialStatus": "consistent_in_source",
+        "approvedForDirectPurchase": false
+      },
+      "childPrice": null,
+      "group": {
+        "includedPeople": null,
+        "minimumBookingPeople": 2,
+        "minimumPrivateFlightPeople": 2,
+        "observedMinimumBookingPeople": {
+          "source": "Paquetes!E5",
+          "value": 2
+        },
+        "observedPrivateFlightMinimum": {
+          "source": "Paquetes!E17",
+          "value": 2
+        },
+        "descriptionCondition": {
+          "source": "Paquetes!E4",
+          "value": null
+        },
+        "privateCondition": {
+          "source": "Paquetes!E16",
+          "value": "N/A"
+        },
+        "commercialStatus": "pending_confirmation"
+      },
+      "privateFlightUpgrade": {
+        "source": "Paquetes!E14",
+        "value": null
+      },
+      "privateTransportUpgrade": {
+        "source": "Paquetes!E15",
+        "value": null
+      },
+      "privateSampleTotal": {
+        "source": "Paquetes!E18",
+        "value": 11999,
+        "formula": "=E13"
+      },
+      "notes": {
+        "source": "Paquetes!E19",
+        "value": null
+      },
+      "included": [
+        {
+          "nameEs": "Coffee Break",
+          "source": "Paquetes!E21"
+        },
+        {
+          "nameEs": "Seguro de Vuelo",
+          "source": "Paquetes!E22"
+        },
+        {
+          "nameEs": "Brindis Tradicional con Vino Espumoso",
+          "source": "Paquetes!E23"
+        },
+        {
+          "nameEs": "Certificado de Vuelo",
+          "source": "Paquetes!E25"
+        },
+        {
+          "nameEs": "Desayuno Completo",
+          "source": "Paquetes!E27"
+        },
+        {
+          "nameEs": "Ramo de Flores",
+          "source": "Paquetes!E35"
+        },
+        {
+          "nameEs": "Pastel y/o Mañanitas",
+          "source": "Paquetes!E38"
+        }
+      ],
+      "notMarkedIncluded": [
+        {
+          "nameEs": "Brindis Tradicional con Champagne",
+          "source": "Paquetes!E24"
+        },
+        {
+          "nameEs": "Desayuno Bufette Ligero (Previo al Despegue)",
+          "source": "Paquetes!E26"
+        },
+        {
+          "nameEs": "Desayuno Extra",
+          "source": "Paquetes!E28"
+        },
+        {
+          "nameEs": "Transporte Redondo Compartido",
+          "source": "Paquetes!E29"
+        },
+        {
+          "nameEs": "Transporte Privado",
+          "source": "Paquetes!E30"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado",
+          "source": "Paquetes!E31"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado Premium",
+          "source": "Paquetes!E32"
+        },
+        {
+          "nameEs": "Conversión a Vuelo Privado",
+          "source": "Paquetes!E33"
+        },
+        {
+          "nameEs": "Lona Personalizada",
+          "source": "Paquetes!E34"
+        },
+        {
+          "nameEs": "Mariachis al aterrizaje",
+          "source": "Paquetes!E36"
+        },
+        {
+          "nameEs": "Champagne",
+          "source": "Paquetes!E37"
+        },
+        {
+          "nameEs": "Acceso a la Zona Arqueológica",
+          "source": "Paquetes!E39"
+        },
+        {
+          "nameEs": "Guía Bilingüe",
+          "source": "Paquetes!E40"
+        },
+        {
+          "nameEs": "Guía Bilingüe desde tu pickup",
+          "source": "Paquetes!E41"
+        },
+        {
+          "nameEs": "Tour en Cuevas Ceremoniales",
+          "source": "Paquetes!E42"
+        },
+        {
+          "nameEs": "Fotografías y Video",
+          "source": "Paquetes!E43"
+        },
+        {
+          "nameEs": "Kit / Souvenir Viajero",
+          "source": "Paquetes!E44"
+        },
+        {
+          "nameEs": "Servicio de Mesero",
+          "source": "Paquetes!E45"
+        },
+        {
+          "nameEs": "Canapes y Snacks",
+          "source": "Paquetes!E46"
+        },
+        {
+          "nameEs": "Brunch (Mayahuel)",
+          "source": "Paquetes!E47"
+        },
+        {
+          "nameEs": "Brunch (Club Campestre)",
+          "source": "Paquetes!E48"
+        },
+        {
+          "nameEs": "Taller de Artesanias y Bebidas Tipicas",
+          "source": "Paquetes!E49"
+        }
+      ],
+      "extras": [
+        {
+          "labelEs": "Transporte Redondo Privado 2 Pax , Zona Centrica - $2500",
+          "source": "Paquetes!E51",
+          "observedAmountMxn": 2500,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Mariachis al aterrizaje - $2000",
+          "source": "Paquetes!E52",
+          "observedAmountMxn": 2000,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Fotografías y Video",
+          "source": "Paquetes!E53",
+          "observedAmountMxn": null,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Champagne - $1800",
+          "source": "Paquetes!E54",
+          "observedAmountMxn": 1800,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Acceso a la Zona Arqueológica - $210",
+          "source": "Paquetes!E55",
+          "observedAmountMxn": 210,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Guía Bilingüe (1-6 Personas) -$ 1,850",
+          "source": "Paquetes!E56",
+          "observedAmountMxn": 1850,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Desayuno Completo para acompañante (Buffette) - $200",
+          "source": "Paquetes!E57",
+          "observedAmountMxn": 200,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Lona Estandar \"Feliz Cumpleaños\"",
+          "source": "Paquetes!E58",
+          "observedAmountMxn": null,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Lona Estandar \"Te Amo\"",
+          "source": "Paquetes!E59",
+          "observedAmountMxn": null,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Lona Estandar \"Feliz Aniversario\"",
+          "source": "Paquetes!E60",
+          "observedAmountMxn": null,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Lona Estandar \"¿Te Quieres Casar Conmigo?\"",
+          "source": "Paquetes!E61",
+          "observedAmountMxn": null,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Lona Estandar \"¿Quieres ser mi novia?\"",
+          "source": "Paquetes!E62",
+          "observedAmountMxn": null,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Persona Adicional (Celebración)- $2,799",
+          "source": "Paquetes!E63",
+          "observedAmountMxn": 2799,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        }
+      ],
+      "booking": {
+        "verifiedUrl": null,
+        "mode": "pending_decision",
+        "sourceContainsBookingUrl": false
+      },
+      "durationMinutes": null,
+      "commercialStatus": "pending_confirmation"
+    },
+    {
+      "id": "journey",
+      "nameEs": "Viajero",
+      "proposedNameEn": "Traveler",
+      "nameSource": "Paquetes!F2",
+      "mode": "shared",
+      "modeSource": "Paquetes!F3",
+      "replacesLegacyIds": [
+        "journey"
+      ],
+      "basePrice": {
+        "source": "Paquetes!F13",
+        "value": 7999,
+        "comment": "Enrique Cruz Nicolás:\nSe ajusto de $8,020 a $8,099",
+        "currency": "MXN",
+        "unit": "per_package",
+        "commercialStatus": "pending_confirmation",
+        "approvedForDirectPurchase": false
+      },
+      "childPrice": null,
+      "group": {
+        "includedPeople": null,
+        "minimumBookingPeople": 2,
+        "minimumPrivateFlightPeople": 2,
+        "observedMinimumBookingPeople": {
+          "source": "Paquetes!F5",
+          "value": 2
+        },
+        "observedPrivateFlightMinimum": {
+          "source": "Paquetes!F17",
+          "value": 2
+        },
+        "descriptionCondition": {
+          "source": "Paquetes!F4",
+          "value": null
+        },
+        "privateCondition": {
+          "source": "Paquetes!F16",
+          "value": null
+        },
+        "commercialStatus": "pending_confirmation"
+      },
+      "privateFlightUpgrade": {
+        "source": "Paquetes!F14",
+        "value": 5999
+      },
+      "privateTransportUpgrade": {
+        "source": "Paquetes!F15",
+        "value": 2000
+      },
+      "privateSampleTotal": {
+        "source": "Paquetes!F18",
+        "value": 15998,
+        "formula": "=F13+F14+F15"
+      },
+      "notes": {
+        "source": "Paquetes!F19",
+        "value": "Si se vuelve Privado el paquete el guia también es privado, por ello el incremento de precio"
+      },
+      "included": [
+        {
+          "nameEs": "Coffee Break",
+          "source": "Paquetes!F21"
+        },
+        {
+          "nameEs": "Seguro de Vuelo",
+          "source": "Paquetes!F22"
+        },
+        {
+          "nameEs": "Brindis Tradicional con Vino Espumoso",
+          "source": "Paquetes!F23"
+        },
+        {
+          "nameEs": "Certificado de Vuelo",
+          "source": "Paquetes!F25"
+        },
+        {
+          "nameEs": "Desayuno Completo",
+          "source": "Paquetes!F27"
+        },
+        {
+          "nameEs": "Transporte Redondo Compartido",
+          "source": "Paquetes!F29"
+        },
+        {
+          "nameEs": "Acceso a la Zona Arqueológica",
+          "source": "Paquetes!F39"
+        },
+        {
+          "nameEs": "Guía Bilingüe",
+          "source": "Paquetes!F40"
+        },
+        {
+          "nameEs": "Kit / Souvenir Viajero",
+          "source": "Paquetes!F44"
+        },
+        {
+          "nameEs": "Taller de Artesanias y Bebidas Tipicas",
+          "source": "Paquetes!F49"
+        }
+      ],
+      "notMarkedIncluded": [
+        {
+          "nameEs": "Brindis Tradicional con Champagne",
+          "source": "Paquetes!F24"
+        },
+        {
+          "nameEs": "Desayuno Bufette Ligero (Previo al Despegue)",
+          "source": "Paquetes!F26"
+        },
+        {
+          "nameEs": "Desayuno Extra",
+          "source": "Paquetes!F28"
+        },
+        {
+          "nameEs": "Transporte Privado",
+          "source": "Paquetes!F30"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado",
+          "source": "Paquetes!F31"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado Premium",
+          "source": "Paquetes!F32"
+        },
+        {
+          "nameEs": "Conversión a Vuelo Privado",
+          "source": "Paquetes!F33"
+        },
+        {
+          "nameEs": "Lona Personalizada",
+          "source": "Paquetes!F34"
+        },
+        {
+          "nameEs": "Ramo de Flores",
+          "source": "Paquetes!F35"
+        },
+        {
+          "nameEs": "Mariachis al aterrizaje",
+          "source": "Paquetes!F36"
+        },
+        {
+          "nameEs": "Champagne",
+          "source": "Paquetes!F37"
+        },
+        {
+          "nameEs": "Pastel y/o Mañanitas",
+          "source": "Paquetes!F38"
+        },
+        {
+          "nameEs": "Guía Bilingüe desde tu pickup",
+          "source": "Paquetes!F41"
+        },
+        {
+          "nameEs": "Tour en Cuevas Ceremoniales",
+          "source": "Paquetes!F42"
+        },
+        {
+          "nameEs": "Fotografías y Video",
+          "source": "Paquetes!F43"
+        },
+        {
+          "nameEs": "Servicio de Mesero",
+          "source": "Paquetes!F45"
+        },
+        {
+          "nameEs": "Canapes y Snacks",
+          "source": "Paquetes!F46"
+        },
+        {
+          "nameEs": "Brunch (Mayahuel)",
+          "source": "Paquetes!F47"
+        },
+        {
+          "nameEs": "Brunch (Club Campestre)",
+          "source": "Paquetes!F48"
+        }
+      ],
+      "extras": [
+        {
+          "labelEs": "Fotografías y Video",
+          "source": "Paquetes!F51",
+          "observedAmountMxn": null,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Mariachis al aterrizaje - $2000",
+          "source": "Paquetes!F52",
+          "observedAmountMxn": 2000,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Persona Adicional (Viajero)- $1,450",
+          "source": "Paquetes!F53",
+          "observedAmountMxn": 1450,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Champagne - $1800",
+          "source": "Paquetes!F54",
+          "observedAmountMxn": 1800,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Ramo de Flores - $550",
+          "source": "Paquetes!F55",
+          "observedAmountMxn": 550,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        }
+      ],
+      "booking": {
+        "verifiedUrl": null,
+        "mode": "pending_decision",
+        "sourceContainsBookingUrl": false
+      },
+      "durationMinutes": null,
+      "commercialStatus": "pending_confirmation"
+    },
+    {
+      "id": "private",
+      "nameEs": "Experiencia en Globo Privada",
+      "proposedNameEn": "Private Balloon Experience",
+      "nameSource": "Paquetes!G2",
+      "mode": "private",
+      "modeSource": "Paquetes!G3",
+      "replacesLegacyIds": [],
+      "basePrice": {
+        "source": "Paquetes!G13",
+        "value": 11499,
+        "currency": "MXN",
+        "unit": "per_package",
+        "commercialStatus": "consistent_in_source",
+        "approvedForDirectPurchase": false
+      },
+      "childPrice": null,
+      "group": {
+        "includedPeople": null,
+        "minimumBookingPeople": 2,
+        "minimumPrivateFlightPeople": 2,
+        "observedMinimumBookingPeople": {
+          "source": "Paquetes!G5",
+          "value": 2
+        },
+        "observedPrivateFlightMinimum": {
+          "source": "Paquetes!G17",
+          "value": 2
+        },
+        "descriptionCondition": {
+          "source": "Paquetes!G4",
+          "value": null
+        },
+        "privateCondition": {
+          "source": "Paquetes!G16",
+          "value": "Minimo 2 Pax"
+        },
+        "commercialStatus": "pending_confirmation"
+      },
+      "privateFlightUpgrade": {
+        "source": "Paquetes!G14",
+        "value": null
+      },
+      "privateTransportUpgrade": {
+        "source": "Paquetes!G15",
+        "value": null
+      },
+      "privateSampleTotal": {
+        "source": "Paquetes!G18",
+        "value": null
+      },
+      "notes": {
+        "source": "Paquetes!G19",
+        "value": null
+      },
+      "included": [
+        {
+          "nameEs": "Coffee Break",
+          "source": "Paquetes!G21"
+        },
+        {
+          "nameEs": "Seguro de Vuelo",
+          "source": "Paquetes!G22"
+        },
+        {
+          "nameEs": "Brindis Tradicional con Champagne",
+          "source": "Paquetes!G24"
+        },
+        {
+          "nameEs": "Certificado de Vuelo",
+          "source": "Paquetes!G25"
+        },
+        {
+          "nameEs": "Desayuno Completo",
+          "source": "Paquetes!G27"
+        }
+      ],
+      "notMarkedIncluded": [
+        {
+          "nameEs": "Brindis Tradicional con Vino Espumoso",
+          "source": "Paquetes!G23"
+        },
+        {
+          "nameEs": "Desayuno Bufette Ligero (Previo al Despegue)",
+          "source": "Paquetes!G26"
+        },
+        {
+          "nameEs": "Desayuno Extra",
+          "source": "Paquetes!G28"
+        },
+        {
+          "nameEs": "Transporte Redondo Compartido",
+          "source": "Paquetes!G29"
+        },
+        {
+          "nameEs": "Transporte Privado",
+          "source": "Paquetes!G30"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado",
+          "source": "Paquetes!G31"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado Premium",
+          "source": "Paquetes!G32"
+        },
+        {
+          "nameEs": "Conversión a Vuelo Privado",
+          "source": "Paquetes!G33"
+        },
+        {
+          "nameEs": "Lona Personalizada",
+          "source": "Paquetes!G34"
+        },
+        {
+          "nameEs": "Ramo de Flores",
+          "source": "Paquetes!G35"
+        },
+        {
+          "nameEs": "Mariachis al aterrizaje",
+          "source": "Paquetes!G36"
+        },
+        {
+          "nameEs": "Champagne",
+          "source": "Paquetes!G37"
+        },
+        {
+          "nameEs": "Pastel y/o Mañanitas",
+          "source": "Paquetes!G38"
+        },
+        {
+          "nameEs": "Acceso a la Zona Arqueológica",
+          "source": "Paquetes!G39"
+        },
+        {
+          "nameEs": "Guía Bilingüe",
+          "source": "Paquetes!G40"
+        },
+        {
+          "nameEs": "Guía Bilingüe desde tu pickup",
+          "source": "Paquetes!G41"
+        },
+        {
+          "nameEs": "Tour en Cuevas Ceremoniales",
+          "source": "Paquetes!G42"
+        },
+        {
+          "nameEs": "Fotografías y Video",
+          "source": "Paquetes!G43"
+        },
+        {
+          "nameEs": "Kit / Souvenir Viajero",
+          "source": "Paquetes!G44"
+        },
+        {
+          "nameEs": "Servicio de Mesero",
+          "source": "Paquetes!G45"
+        },
+        {
+          "nameEs": "Canapes y Snacks",
+          "source": "Paquetes!G46"
+        },
+        {
+          "nameEs": "Brunch (Mayahuel)",
+          "source": "Paquetes!G47"
+        },
+        {
+          "nameEs": "Brunch (Club Campestre)",
+          "source": "Paquetes!G48"
+        },
+        {
+          "nameEs": "Taller de Artesanias y Bebidas Tipicas",
+          "source": "Paquetes!G49"
+        }
+      ],
+      "extras": [
+        {
+          "labelEs": "Transporte Redondo Privado 2 Pax , Zona Centrica - $2500",
+          "source": "Paquetes!G51",
+          "observedAmountMxn": 2500,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Fotografías y Video",
+          "source": "Paquetes!G52",
+          "observedAmountMxn": null,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Ramo de Flores - $550",
+          "source": "Paquetes!G53",
+          "observedAmountMxn": 550,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Mariachis al aterrizaje - $2000",
+          "source": "Paquetes!G54",
+          "observedAmountMxn": 2000,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Pastel (5 Rebanadas)- $500",
+          "source": "Paquetes!G55",
+          "observedAmountMxn": 500,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Acceso a la Zona Arqueológica - $210",
+          "source": "Paquetes!G56",
+          "observedAmountMxn": 210,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Champagne - $1800",
+          "source": "Paquetes!G57",
+          "observedAmountMxn": 1800,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Guía Bilingüe (1-6 Personas) -$ 1,850",
+          "source": "Paquetes!G58",
+          "observedAmountMxn": 1850,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Persona Adicional (Paq 6)- $1,999",
+          "source": "Paquetes!G59",
+          "observedAmountMxn": 1999,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        }
+      ],
+      "booking": {
+        "verifiedUrl": null,
+        "mode": "pending_decision",
+        "sourceContainsBookingUrl": false
+      },
+      "durationMinutes": null,
+      "commercialStatus": "pending_confirmation"
+    },
+    {
+      "id": "charter",
+      "nameEs": "FPM Private Charter",
+      "proposedNameEn": "FPM Private Charter",
+      "nameSource": "Paquetes!H2",
+      "mode": "private",
+      "modeSource": "Paquetes!H3",
+      "replacesLegacyIds": [],
+      "basePrice": {
+        "source": "Paquetes!H13",
+        "value": 30000,
+        "formula": "=6250*4+5000",
+        "currency": "MXN",
+        "unit": "per_package",
+        "commercialStatus": "consistent_in_source",
+        "approvedForDirectPurchase": false
+      },
+      "childPrice": null,
+      "group": {
+        "includedPeople": null,
+        "minimumBookingPeople": null,
+        "minimumPrivateFlightPeople": 4,
+        "observedMinimumBookingPeople": {
+          "source": "Paquetes!H5",
+          "value": 1
+        },
+        "observedPrivateFlightMinimum": {
+          "source": "Paquetes!H17",
+          "value": 4
+        },
+        "descriptionCondition": {
+          "source": "Paquetes!H4",
+          "value": "- Minimo 2 + persona adicional"
+        },
+        "privateCondition": {
+          "source": "Paquetes!H16",
+          "value": "N/A"
+        },
+        "commercialStatus": "pending_confirmation"
+      },
+      "privateFlightUpgrade": {
+        "source": "Paquetes!H14",
+        "value": null
+      },
+      "privateTransportUpgrade": {
+        "source": "Paquetes!H15",
+        "value": null
+      },
+      "privateSampleTotal": {
+        "source": "Paquetes!H18",
+        "value": null
+      },
+      "notes": {
+        "source": "Paquetes!H19",
+        "value": null
+      },
+      "included": [
+        {
+          "nameEs": "Coffee Break",
+          "source": "Paquetes!H21"
+        },
+        {
+          "nameEs": "Seguro de Vuelo",
+          "source": "Paquetes!H22"
+        },
+        {
+          "nameEs": "Brindis Tradicional con Champagne",
+          "source": "Paquetes!H24"
+        },
+        {
+          "nameEs": "Certificado de Vuelo",
+          "source": "Paquetes!H25"
+        },
+        {
+          "nameEs": "Desayuno Bufette Ligero (Previo al Despegue)",
+          "source": "Paquetes!H26"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado Premium",
+          "source": "Paquetes!H32"
+        },
+        {
+          "nameEs": "Champagne",
+          "source": "Paquetes!H37"
+        },
+        {
+          "nameEs": "Acceso a la Zona Arqueológica",
+          "source": "Paquetes!H39"
+        },
+        {
+          "nameEs": "Guía Bilingüe desde tu pickup",
+          "source": "Paquetes!H41"
+        },
+        {
+          "nameEs": "Fotografías y Video",
+          "source": "Paquetes!H43"
+        },
+        {
+          "nameEs": "Servicio de Mesero",
+          "source": "Paquetes!H45"
+        },
+        {
+          "nameEs": "Canapes y Snacks",
+          "source": "Paquetes!H46"
+        },
+        {
+          "nameEs": "Brunch (Club Campestre)",
+          "source": "Paquetes!H48"
+        }
+      ],
+      "notMarkedIncluded": [
+        {
+          "nameEs": "Brindis Tradicional con Vino Espumoso",
+          "source": "Paquetes!H23"
+        },
+        {
+          "nameEs": "Desayuno Completo",
+          "source": "Paquetes!H27"
+        },
+        {
+          "nameEs": "Desayuno Extra",
+          "source": "Paquetes!H28"
+        },
+        {
+          "nameEs": "Transporte Redondo Compartido",
+          "source": "Paquetes!H29"
+        },
+        {
+          "nameEs": "Transporte Privado",
+          "source": "Paquetes!H30"
+        },
+        {
+          "nameEs": "Transporte Redondo Privado",
+          "source": "Paquetes!H31"
+        },
+        {
+          "nameEs": "Conversión a Vuelo Privado",
+          "source": "Paquetes!H33"
+        },
+        {
+          "nameEs": "Lona Personalizada",
+          "source": "Paquetes!H34"
+        },
+        {
+          "nameEs": "Ramo de Flores",
+          "source": "Paquetes!H35"
+        },
+        {
+          "nameEs": "Mariachis al aterrizaje",
+          "source": "Paquetes!H36"
+        },
+        {
+          "nameEs": "Pastel y/o Mañanitas",
+          "source": "Paquetes!H38"
+        },
+        {
+          "nameEs": "Guía Bilingüe",
+          "source": "Paquetes!H40"
+        },
+        {
+          "nameEs": "Tour en Cuevas Ceremoniales",
+          "source": "Paquetes!H42"
+        },
+        {
+          "nameEs": "Kit / Souvenir Viajero",
+          "source": "Paquetes!H44"
+        },
+        {
+          "nameEs": "Brunch (Mayahuel)",
+          "source": "Paquetes!H47"
+        },
+        {
+          "nameEs": "Taller de Artesanias y Bebidas Tipicas",
+          "source": "Paquetes!H49"
+        }
+      ],
+      "extras": [
+        {
+          "labelEs": "Persona Adicional (FPM)- $5,000",
+          "source": "Paquetes!H51",
+          "observedAmountMxn": 5000,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Ramo de Flores - $550",
+          "source": "Paquetes!H53",
+          "observedAmountMxn": 550,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        },
+        {
+          "labelEs": "Mariachis al aterrizaje - $2000",
+          "source": "Paquetes!H54",
+          "observedAmountMxn": 2000,
+          "billingUnit": null,
+          "commercialStatus": "pending_confirmation"
+        }
+      ],
+      "booking": {
+        "verifiedUrl": null,
+        "mode": "pending_decision",
+        "sourceContainsBookingUrl": false
+      },
+      "durationMinutes": null,
+      "commercialStatus": "pending_confirmation"
+    }
+  ],
+  "openDecisions": [
+    {
+      "id": "C01",
+      "topic": "Precio Viajero",
+      "evidence": [
+        "Paquetes!F13",
+        "comentario Paquetes!F13"
+      ],
+      "observation": "La celda contiene $7,999; el comentario indica un ajuste a $8,099.",
+      "question": "¿El precio definitivo es $7,999 o $8,099 por paquete?",
+      "blocks": "Compra directa de Viajero y publicación de su tarifa definitiva.",
+      "status": "pending_user_confirmation"
+    },
+    {
+      "id": "C02",
+      "topic": "Personas Premium–VIP",
+      "evidence": [
+        "Paquetes!D4",
+        "Paquetes!D5",
+        "Paquetes!D13",
+        "Paquetes!D17"
+      ],
+      "observation": "D4 y D17 indican cuatro; D5 indica uno. La fórmula usa cuatro, pero no distingue personas incluidas y mínimo comercial.",
+      "question": "¿Cuántas personas cubren $22,500 y cuál es el mínimo de reserva?",
+      "blocks": "Compra directa y presentación de personas incluidas.",
+      "status": "pending_user_confirmation"
+    },
+    {
+      "id": "C03",
+      "topic": "Personas FPM Private Charter",
+      "evidence": [
+        "Paquetes!H4",
+        "Paquetes!H5",
+        "Paquetes!H13",
+        "Paquetes!H17"
+      ],
+      "observation": "La descripción menciona dos, Pax Mínimo dice uno y el mínimo privado dice cuatro. La fórmula utiliza cuatro.",
+      "question": "¿Cuántas personas cubren $30,000 y cuál es el mínimo de reserva?",
+      "blocks": "Compra directa y presentación de personas incluidas.",
+      "status": "pending_user_confirmation"
+    },
+    {
+      "id": "C04",
+      "topic": "Personas Celebración, Viajero y Globo Privado",
+      "evidence": [
+        "Paquetes!E5",
+        "Paquetes!E13",
+        "Paquetes!E18",
+        "Paquetes!F5",
+        "Paquetes!F13",
+        "Paquetes!F18",
+        "Paquetes!G5",
+        "Paquetes!G13",
+        "Paquetes!G16"
+      ],
+      "observation": "El mínimo es dos, pero no hay un campo explícito de personas incluidas. E18 sugiere un ejemplo para dos; F18 es base más conversiones a privado.",
+      "question": "¿Cada tarifa cubre dos personas? ¿Cómo se consideran niños y personas adicionales?",
+      "blocks": "Compra directa y cálculo de grupos.",
+      "status": "pending_user_confirmation"
+    },
+    {
+      "id": "C05",
+      "topic": "Flores y mariachis",
+      "evidence": [
+        "Paquetes!C53",
+        "Extras!A10",
+        "Extras!D10",
+        "Paquetes!E52",
+        "Extras!D11",
+        "Extras!A36"
+      ],
+      "observation": "Flores: $550 en etiquetas frente a $500 en el campo numérico. Mariachis: $2,000 en paquetes frente a $1,950 en el catálogo.",
+      "question": "¿Qué tarifa y unidad de cobro son vigentes para cada extra?",
+      "blocks": "Publicación de esos precios de extras.",
+      "status": "pending_user_confirmation"
+    },
+    {
+      "id": "C06",
+      "topic": "Transporte y conversiones",
+      "evidence": [
+        "Paquetes!C14:C18",
+        "Paquetes!F14:F19",
+        "Paquetes!B51",
+        "Paquetes!E51",
+        "Extras!D7:D8",
+        "Extras!A49:A51"
+      ],
+      "observation": "Hay servicios completos de $2,500, conversiones de $2,000 y otros valores de transporte. El catálogo genérico de vuelo privado dice desde $3,999 y los paquetes C/F usan $4,999/$5,999.",
+      "question": "¿Se distinguen traslado completo y conversión? Confirmar cobertura, personas, unidad y compatibilidad por paquete.",
+      "blocks": "Precios y condiciones de estos extras.",
+      "status": "pending_user_confirmation"
+    },
+    {
+      "id": "C07",
+      "topic": "Pasajeros adicionales y acompañantes",
+      "evidence": [
+        "Paquetes!D51:D55",
+        "Paquetes!E63",
+        "Paquetes!F53",
+        "Paquetes!G59",
+        "Paquetes!H51",
+        "Extras!A31",
+        "Extras!A40"
+      ],
+      "observation": "Los adicionales figuran en etiquetas sin regla para adultos/niños salvo VIP. Acompañante VIP: $1,960 en paquete frente a $2,400 en otra etiqueta.",
+      "question": "Confirmar qué servicios recibe cada adicional, edades aplicables, límites y tarifa del acompañante VIP.",
+      "blocks": "Cálculo y compra de adicionales; precio del acompañante VIP.",
+      "status": "pending_user_confirmation"
+    },
+    {
+      "id": "C08",
+      "topic": "Reservas Peek o WhatsApp",
+      "evidence": [
+        "Paquetes!B2:H63",
+        "lib/commercial-config.ts",
+        "emergency-landing/booking-links.json"
+      ],
+      "observation": "No hay enlaces de compra nuevos en el Excel; los existentes pertenecen al catálogo anterior y la landing los tiene nulos.",
+      "question": "¿Se usará WhatsApp hasta verificar los siete destinos Peek o se proporcionarán los enlaces y productos actualizados?",
+      "blocks": "Habilitación de compra directa y promesa de confirmación inmediata.",
+      "status": "pending_user_confirmation"
+    },
+    {
+      "id": "C09",
+      "topic": "Celebración y lonas",
+      "evidence": [
+        "Paquetes!E35",
+        "Paquetes!E38",
+        "Paquetes!E58:E62",
+        "Extras!D25:D28"
+      ],
+      "observation": "Flores y pastel y/o mañanitas están incluidos. Las lonas figuran como extras; algunos precios del catálogo son cero y otros están vacíos.",
+      "question": "¿Pastel, mañanitas y lonas dependen de la ocasión? ¿Las lonas son gratuitas, incluidas o de costo adicional?",
+      "blocks": "Promesas de celebración y precios de personalización.",
+      "status": "pending_user_confirmation"
+    },
+    {
+      "id": "C10",
+      "topic": "Duración, edad y logística",
+      "evidence": [
+        "Paquetes!A12",
+        "locales/es/product/*.json",
+        "locales/es/flight-experiences.json"
+      ],
+      "observation": "El Excel fija niños 4–12 pero no duración. Los textos existentes muestran duraciones distintas y condiciones de pickup heredadas.",
+      "question": "Confirmar duración comercial, edad, horarios, zonas de pickup y secuencia operativa por paquete.",
+      "blocks": "Publicación de afirmaciones operativas precisas.",
+      "status": "pending_user_confirmation"
+    },
+    {
+      "id": "C11",
+      "topic": "Recargo para extranjeros",
+      "evidence": [
+        "locales/es/product/transport.json",
+        "locales/es/product/journey.json",
+        "locales/es/product/vip.json",
+        "Paquetes!B21:H63"
+      ],
+      "observation": "Las fichas antiguas tienen un recargo de $110 que no aparece entre las nuevas condiciones por paquete.",
+      "question": "¿Se conserva el recargo, cambia o ya está incluido?",
+      "blocks": "Información de cargos adicionales.",
+      "status": "pending_user_confirmation"
+    },
+    {
+      "id": "C12",
+      "topic": "Servicios fuera de los siete paquetes",
+      "evidence": [
+        "lib/commercial-config.ts",
+        "locales/es/product/open.json",
+        "locales/es/product/corporate.json"
+      ],
+      "observation": "Tarjeta de regalo y servicio corporativo no figuran en el nuevo Excel. El plan propone separar empresas y suspender venta de tarjeta hasta confirmar.",
+      "question": "Confirmar vigencia de la tarjeta y condiciones del servicio corporativo; no trasladar precios antiguos.",
+      "blocks": "Venta de tarjeta y condiciones comerciales de servicios externos al catálogo.",
+      "status": "pending_user_confirmation"
+    },
+    {
+      "id": "C13",
+      "topic": "Destino de publicación",
+      "evidence": [
+        "lib/site-config.ts",
+        "emergency-landing/INSTALACION-HOSTGATOR.md"
+      ],
+      "observation": "Hay proyecto principal, landing estática y una página pública diferente.",
+      "question": "¿Qué versión y dominio se publicarán y cuáles seguirán activos?",
+      "blocks": "M5 en sus versiones temporales y M7.",
+      "status": "pending_user_confirmation"
+    },
+    {
+      "id": "C14",
+      "topic": "Champagne en Globo Privado",
+      "evidence": [
+        "Paquetes!G24",
+        "Paquetes!G57"
+      ],
+      "observation": "El brindis con champagne está incluido y champagne también aparece como extra de $1,800.",
+      "question": "¿El extra corresponde a una botella adicional, una mejora o un servicio distinto?",
+      "blocks": "Publicación y cobro de ese extra sin duplicar un servicio incluido.",
+      "status": "pending_user_confirmation"
+    }
+  ],
+  "formulaChecks": [
+    {
+      "source": "Paquetes!C12",
+      "formula": "=C11-700",
+      "cachedValue": 2850,
+      "independentResult": 2850,
+      "matches": true
+    },
+    {
+      "source": "Paquetes!D13",
+      "formula": "=5500*4+500",
+      "cachedValue": 22500,
+      "independentResult": 22500,
+      "matches": true
+    },
+    {
+      "source": "Paquetes!H13",
+      "formula": "=6250*4+5000",
+      "cachedValue": 30000,
+      "independentResult": 30000,
+      "matches": true
+    },
+    {
+      "source": "Paquetes!C18",
+      "formula": "=C11*2+C14+C15",
+      "cachedValue": 14099,
+      "independentResult": 14099,
+      "matches": true
+    },
+    {
+      "source": "Paquetes!E18",
+      "formula": "=E13",
+      "cachedValue": 11999,
+      "independentResult": 11999,
+      "matches": true
+    },
+    {
+      "source": "Paquetes!F18",
+      "formula": "=F13+F14+F15",
+      "cachedValue": 15998,
+      "independentResult": 15998,
+      "matches": true
+    }
+  ],
+  "sourceCells": {
+    "Paquetes": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "source": "Paquetes!A1",
+            "value": "Item"
+          },
+          {
+            "source": "Paquetes!B1",
+            "value": "Paquete 1"
+          },
+          {
+            "source": "Paquetes!C1",
+            "value": "Paquete 2"
+          },
+          {
+            "source": "Paquetes!D1",
+            "value": "Paquete 3"
+          },
+          {
+            "source": "Paquetes!E1",
+            "value": "Paquete 4"
+          },
+          {
+            "source": "Paquetes!F1",
+            "value": "Paquete 5"
+          },
+          {
+            "source": "Paquetes!G1",
+            "value": "Paquete 6"
+          },
+          {
+            "source": "Paquetes!H1",
+            "value": "Paquete 7"
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          {
+            "source": "Paquetes!A2",
+            "value": "Nombre del Paquete"
+          },
+          {
+            "source": "Paquetes!B2",
+            "value": "Vuelo Esencial"
+          },
+          {
+            "source": "Paquetes!C2",
+            "value": "+Transporte + Pirámides"
+          },
+          {
+            "source": "Paquetes!D2",
+            "value": "Premium - VIP"
+          },
+          {
+            "source": "Paquetes!E2",
+            "value": "Celebración"
+          },
+          {
+            "source": "Paquetes!F2",
+            "value": "Viajero"
+          },
+          {
+            "source": "Paquetes!G2",
+            "value": "Experiencia en Globo Privada"
+          },
+          {
+            "source": "Paquetes!H2",
+            "value": "FPM Private Charter"
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "cells": [
+          {
+            "source": "Paquetes!A3",
+            "value": "Tipo"
+          },
+          {
+            "source": "Paquetes!B3",
+            "value": "Compartido"
+          },
+          {
+            "source": "Paquetes!C3",
+            "value": "Compartido"
+          },
+          {
+            "source": "Paquetes!D3",
+            "value": "Privado"
+          },
+          {
+            "source": "Paquetes!E3",
+            "value": "Privado"
+          },
+          {
+            "source": "Paquetes!F3",
+            "value": "Compartido"
+          },
+          {
+            "source": "Paquetes!G3",
+            "value": "Privado"
+          },
+          {
+            "source": "Paquetes!H3",
+            "value": "Privado"
+          }
+        ]
+      },
+      {
+        "row": 4,
+        "cells": [
+          {
+            "source": "Paquetes!A4",
+            "value": "Descripción"
+          },
+          {
+            "source": "Paquetes!B4",
+            "value": "Solo Vuelo"
+          },
+          {
+            "source": "Paquetes!D4",
+            "value": "- Minimo 4 + persona adicional"
+          },
+          {
+            "source": "Paquetes!H4",
+            "value": "- Minimo 2 + persona adicional"
+          }
+        ]
+      },
+      {
+        "row": 5,
+        "cells": [
+          {
+            "source": "Paquetes!A5",
+            "value": "Pax Mínimo"
+          },
+          {
+            "source": "Paquetes!B5",
+            "value": 1
+          },
+          {
+            "source": "Paquetes!C5",
+            "value": 1
+          },
+          {
+            "source": "Paquetes!D5",
+            "value": 1
+          },
+          {
+            "source": "Paquetes!E5",
+            "value": 2
+          },
+          {
+            "source": "Paquetes!F5",
+            "value": 2
+          },
+          {
+            "source": "Paquetes!G5",
+            "value": 2
+          },
+          {
+            "source": "Paquetes!H5",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "row": 7,
+        "cells": [
+          {
+            "source": "Paquetes!A7",
+            "value": "Precio Anterior Adulto"
+          },
+          {
+            "source": "Paquetes!B7",
+            "value": 2599
+          },
+          {
+            "source": "Paquetes!C7",
+            "value": 3250
+          },
+          {
+            "source": "Paquetes!D7",
+            "value": 4499
+          },
+          {
+            "source": "Paquetes!E7",
+            "value": 2799
+          },
+          {
+            "source": "Paquetes!F7",
+            "value": 3950
+          },
+          {
+            "source": "Paquetes!H7",
+            "value": 4499
+          }
+        ]
+      },
+      {
+        "row": 8,
+        "cells": [
+          {
+            "source": "Paquetes!A8",
+            "value": "Precio Anterior Niño"
+          },
+          {
+            "source": "Paquetes!B8",
+            "value": 1999
+          },
+          {
+            "source": "Paquetes!C8",
+            "value": 2299
+          },
+          {
+            "source": "Paquetes!D8",
+            "value": 3499
+          },
+          {
+            "source": "Paquetes!E8",
+            "value": 1999
+          },
+          {
+            "source": "Paquetes!H8",
+            "value": 3499
+          }
+        ]
+      },
+      {
+        "row": 9,
+        "cells": [
+          {
+            "source": "Paquetes!A9",
+            "value": "Cargo Vuelo Privado (Anterior)"
+          },
+          {
+            "source": "Paquetes!B9",
+            "value": 3999
+          },
+          {
+            "source": "Paquetes!C9",
+            "value": 4999
+          },
+          {
+            "source": "Paquetes!E9",
+            "value": 3999
+          },
+          {
+            "source": "Paquetes!F9",
+            "value": 5999
+          }
+        ]
+      },
+      {
+        "row": 11,
+        "cells": [
+          {
+            "source": "Paquetes!A11",
+            "value": "Precio Adulto"
+          },
+          {
+            "source": "Paquetes!B11",
+            "value": 2599
+          },
+          {
+            "source": "Paquetes!C11",
+            "value": 3550
+          }
+        ]
+      },
+      {
+        "row": 12,
+        "cells": [
+          {
+            "source": "Paquetes!A12",
+            "value": "Precio Niño (4-12 años)"
+          },
+          {
+            "source": "Paquetes!B12",
+            "value": 1999
+          },
+          {
+            "source": "Paquetes!C12",
+            "value": 2850,
+            "formula": "=C11-700"
+          }
+        ]
+      },
+      {
+        "row": 13,
+        "cells": [
+          {
+            "source": "Paquetes!A13",
+            "value": "Precio Paquete"
+          },
+          {
+            "source": "Paquetes!D13",
+            "value": 22500,
+            "formula": "=5500*4+500"
+          },
+          {
+            "source": "Paquetes!E13",
+            "value": 11999
+          },
+          {
+            "source": "Paquetes!F13",
+            "value": 7999,
+            "comment": "Enrique Cruz Nicolás:\nSe ajusto de $8,020 a $8,099"
+          },
+          {
+            "source": "Paquetes!G13",
+            "value": 11499
+          },
+          {
+            "source": "Paquetes!H13",
+            "value": 30000,
+            "formula": "=6250*4+5000"
+          }
+        ]
+      },
+      {
+        "row": 14,
+        "cells": [
+          {
+            "source": "Paquetes!A14",
+            "value": "Cargo Extra Vuelo Privado"
+          },
+          {
+            "source": "Paquetes!C14",
+            "value": 4999
+          },
+          {
+            "source": "Paquetes!F14",
+            "value": 5999
+          }
+        ]
+      },
+      {
+        "row": 15,
+        "cells": [
+          {
+            "source": "Paquetes!A15",
+            "value": "Cargo Extra Transporte Privado"
+          },
+          {
+            "source": "Paquetes!C15",
+            "value": 2000
+          },
+          {
+            "source": "Paquetes!F15",
+            "value": 2000
+          }
+        ]
+      },
+      {
+        "row": 16,
+        "cells": [
+          {
+            "source": "Paquetes!A16",
+            "value": "Condiciones Privado"
+          },
+          {
+            "source": "Paquetes!C16",
+            "value": "Cargo Vuelo Privado por Grupo 2pax (Extra)"
+          },
+          {
+            "source": "Paquetes!D16",
+            "value": "N/A"
+          },
+          {
+            "source": "Paquetes!E16",
+            "value": "N/A"
+          },
+          {
+            "source": "Paquetes!G16",
+            "value": "Minimo 2 Pax"
+          },
+          {
+            "source": "Paquetes!H16",
+            "value": "N/A"
+          }
+        ]
+      },
+      {
+        "row": 17,
+        "cells": [
+          {
+            "source": "Paquetes!A17",
+            "value": "Pax minimo para vuelo privado"
+          },
+          {
+            "source": "Paquetes!C17",
+            "value": 2
+          },
+          {
+            "source": "Paquetes!D17",
+            "value": 4
+          },
+          {
+            "source": "Paquetes!E17",
+            "value": 2
+          },
+          {
+            "source": "Paquetes!F17",
+            "value": 2
+          },
+          {
+            "source": "Paquetes!G17",
+            "value": 2
+          },
+          {
+            "source": "Paquetes!H17",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "row": 18,
+        "cells": [
+          {
+            "source": "Paquetes!A18",
+            "value": "Sample (2 Adultos + Paquete Privado)"
+          },
+          {
+            "source": "Paquetes!C18",
+            "value": 14099,
+            "formula": "=C11*2+C14+C15"
+          },
+          {
+            "source": "Paquetes!E18",
+            "value": 11999,
+            "formula": "=E13"
+          },
+          {
+            "source": "Paquetes!F18",
+            "value": 15998,
+            "formula": "=F13+F14+F15"
+          }
+        ]
+      },
+      {
+        "row": 19,
+        "cells": [
+          {
+            "source": "Paquetes!A19",
+            "value": "Notas"
+          },
+          {
+            "source": "Paquetes!F19",
+            "value": "Si se vuelve Privado el paquete el guia también es privado, por ello el incremento de precio"
+          }
+        ]
+      },
+      {
+        "row": 20,
+        "cells": [
+          {
+            "source": "Paquetes!A20",
+            "value": "Qué Incluye"
+          }
+        ]
+      },
+      {
+        "row": 21,
+        "cells": [
+          {
+            "source": "Paquetes!A21",
+            "value": "Coffee Break"
+          },
+          {
+            "source": "Paquetes!B21",
+            "value": true
+          },
+          {
+            "source": "Paquetes!C21",
+            "value": true
+          },
+          {
+            "source": "Paquetes!D21",
+            "value": true
+          },
+          {
+            "source": "Paquetes!E21",
+            "value": true
+          },
+          {
+            "source": "Paquetes!F21",
+            "value": true
+          },
+          {
+            "source": "Paquetes!G21",
+            "value": true
+          },
+          {
+            "source": "Paquetes!H21",
+            "value": true
+          }
+        ]
+      },
+      {
+        "row": 22,
+        "cells": [
+          {
+            "source": "Paquetes!A22",
+            "value": "Seguro de Vuelo"
+          },
+          {
+            "source": "Paquetes!B22",
+            "value": true
+          },
+          {
+            "source": "Paquetes!C22",
+            "value": true
+          },
+          {
+            "source": "Paquetes!D22",
+            "value": true
+          },
+          {
+            "source": "Paquetes!E22",
+            "value": true
+          },
+          {
+            "source": "Paquetes!F22",
+            "value": true
+          },
+          {
+            "source": "Paquetes!G22",
+            "value": true
+          },
+          {
+            "source": "Paquetes!H22",
+            "value": true
+          }
+        ]
+      },
+      {
+        "row": 23,
+        "cells": [
+          {
+            "source": "Paquetes!A23",
+            "value": "Brindis Tradicional con Vino Espumoso"
+          },
+          {
+            "source": "Paquetes!B23",
+            "value": true
+          },
+          {
+            "source": "Paquetes!C23",
+            "value": true
+          },
+          {
+            "source": "Paquetes!D23",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E23",
+            "value": true
+          },
+          {
+            "source": "Paquetes!F23",
+            "value": true
+          },
+          {
+            "source": "Paquetes!G23",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H23",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 24,
+        "cells": [
+          {
+            "source": "Paquetes!A24",
+            "value": "Brindis Tradicional con Champagne"
+          },
+          {
+            "source": "Paquetes!B24",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C24",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D24",
+            "value": true
+          },
+          {
+            "source": "Paquetes!E24",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F24",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G24",
+            "value": true
+          },
+          {
+            "source": "Paquetes!H24",
+            "value": true
+          }
+        ]
+      },
+      {
+        "row": 25,
+        "cells": [
+          {
+            "source": "Paquetes!A25",
+            "value": "Certificado de Vuelo"
+          },
+          {
+            "source": "Paquetes!B25",
+            "value": true
+          },
+          {
+            "source": "Paquetes!C25",
+            "value": true
+          },
+          {
+            "source": "Paquetes!D25",
+            "value": true
+          },
+          {
+            "source": "Paquetes!E25",
+            "value": true
+          },
+          {
+            "source": "Paquetes!F25",
+            "value": true
+          },
+          {
+            "source": "Paquetes!G25",
+            "value": true
+          },
+          {
+            "source": "Paquetes!H25",
+            "value": true
+          }
+        ]
+      },
+      {
+        "row": 26,
+        "cells": [
+          {
+            "source": "Paquetes!A26",
+            "value": "Desayuno Bufette Ligero (Previo al Despegue)"
+          },
+          {
+            "source": "Paquetes!B26",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C26",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D26",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E26",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F26",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G26",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H26",
+            "value": true
+          }
+        ]
+      },
+      {
+        "row": 27,
+        "cells": [
+          {
+            "source": "Paquetes!A27",
+            "value": "Desayuno Completo"
+          },
+          {
+            "source": "Paquetes!B27",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C27",
+            "value": true
+          },
+          {
+            "source": "Paquetes!D27",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E27",
+            "value": true
+          },
+          {
+            "source": "Paquetes!F27",
+            "value": true
+          },
+          {
+            "source": "Paquetes!G27",
+            "value": true
+          },
+          {
+            "source": "Paquetes!H27",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 28,
+        "cells": [
+          {
+            "source": "Paquetes!A28",
+            "value": "Desayuno Extra"
+          },
+          {
+            "source": "Paquetes!B28",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C28",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D28",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E28",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F28",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G28",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H28",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 29,
+        "cells": [
+          {
+            "source": "Paquetes!A29",
+            "value": "Transporte Redondo Compartido"
+          },
+          {
+            "source": "Paquetes!B29",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C29",
+            "value": true
+          },
+          {
+            "source": "Paquetes!D29",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E29",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F29",
+            "value": true
+          },
+          {
+            "source": "Paquetes!G29",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H29",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 30,
+        "cells": [
+          {
+            "source": "Paquetes!A30",
+            "value": "Transporte Privado"
+          },
+          {
+            "source": "Paquetes!B30",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C30",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D30",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E30",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F30",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G30",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H30",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 31,
+        "cells": [
+          {
+            "source": "Paquetes!A31",
+            "value": "Transporte Redondo Privado"
+          },
+          {
+            "source": "Paquetes!B31",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C31",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D31",
+            "value": true
+          },
+          {
+            "source": "Paquetes!E31",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F31",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G31",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H31",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 32,
+        "cells": [
+          {
+            "source": "Paquetes!A32",
+            "value": "Transporte Redondo Privado Premium"
+          },
+          {
+            "source": "Paquetes!B32",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C32",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D32",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E32",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F32",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G32",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H32",
+            "value": true
+          }
+        ]
+      },
+      {
+        "row": 33,
+        "cells": [
+          {
+            "source": "Paquetes!A33",
+            "value": "Conversión a Vuelo Privado"
+          },
+          {
+            "source": "Paquetes!B33",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C33",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D33",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E33",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F33",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G33",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H33",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 34,
+        "cells": [
+          {
+            "source": "Paquetes!A34",
+            "value": "Lona Personalizada"
+          },
+          {
+            "source": "Paquetes!B34",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C34",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D34",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E34",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F34",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G34",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H34",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 35,
+        "cells": [
+          {
+            "source": "Paquetes!A35",
+            "value": "Ramo de Flores"
+          },
+          {
+            "source": "Paquetes!B35",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C35",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D35",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E35",
+            "value": true
+          },
+          {
+            "source": "Paquetes!F35",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G35",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H35",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 36,
+        "cells": [
+          {
+            "source": "Paquetes!A36",
+            "value": "Mariachis al aterrizaje"
+          },
+          {
+            "source": "Paquetes!B36",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C36",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D36",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E36",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F36",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G36",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H36",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 37,
+        "cells": [
+          {
+            "source": "Paquetes!A37",
+            "value": "Champagne"
+          },
+          {
+            "source": "Paquetes!B37",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C37",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D37",
+            "value": true
+          },
+          {
+            "source": "Paquetes!E37",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F37",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G37",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H37",
+            "value": true
+          }
+        ]
+      },
+      {
+        "row": 38,
+        "cells": [
+          {
+            "source": "Paquetes!A38",
+            "value": "Pastel y/o Mañanitas"
+          },
+          {
+            "source": "Paquetes!B38",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C38",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D38",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E38",
+            "value": true
+          },
+          {
+            "source": "Paquetes!F38",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G38",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H38",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 39,
+        "cells": [
+          {
+            "source": "Paquetes!A39",
+            "value": "Acceso a la Zona Arqueológica"
+          },
+          {
+            "source": "Paquetes!B39",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C39",
+            "value": true
+          },
+          {
+            "source": "Paquetes!D39",
+            "value": true
+          },
+          {
+            "source": "Paquetes!E39",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F39",
+            "value": true
+          },
+          {
+            "source": "Paquetes!G39",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H39",
+            "value": true
+          }
+        ]
+      },
+      {
+        "row": 40,
+        "cells": [
+          {
+            "source": "Paquetes!A40",
+            "value": "Guía Bilingüe"
+          },
+          {
+            "source": "Paquetes!B40",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C40",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D40",
+            "value": true
+          },
+          {
+            "source": "Paquetes!E40",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F40",
+            "value": true
+          },
+          {
+            "source": "Paquetes!G40",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H40",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 41,
+        "cells": [
+          {
+            "source": "Paquetes!A41",
+            "value": "Guía Bilingüe desde tu pickup"
+          },
+          {
+            "source": "Paquetes!B41",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C41",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D41",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E41",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F41",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G41",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H41",
+            "value": true
+          }
+        ]
+      },
+      {
+        "row": 42,
+        "cells": [
+          {
+            "source": "Paquetes!A42",
+            "value": "Tour en Cuevas Ceremoniales"
+          },
+          {
+            "source": "Paquetes!B42",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C42",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D42",
+            "value": true
+          },
+          {
+            "source": "Paquetes!E42",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F42",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G42",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H42",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 43,
+        "cells": [
+          {
+            "source": "Paquetes!A43",
+            "value": "Fotografías y Video"
+          },
+          {
+            "source": "Paquetes!B43",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C43",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D43",
+            "value": true
+          },
+          {
+            "source": "Paquetes!E43",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F43",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G43",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H43",
+            "value": true
+          }
+        ]
+      },
+      {
+        "row": 44,
+        "cells": [
+          {
+            "source": "Paquetes!A44",
+            "value": "Kit / Souvenir Viajero"
+          },
+          {
+            "source": "Paquetes!B44",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C44",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D44",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E44",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F44",
+            "value": true
+          },
+          {
+            "source": "Paquetes!G44",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H44",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 45,
+        "cells": [
+          {
+            "source": "Paquetes!A45",
+            "value": "Servicio de Mesero"
+          },
+          {
+            "source": "Paquetes!B45",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C45",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D45",
+            "value": true
+          },
+          {
+            "source": "Paquetes!E45",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F45",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G45",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H45",
+            "value": true
+          }
+        ]
+      },
+      {
+        "row": 46,
+        "cells": [
+          {
+            "source": "Paquetes!A46",
+            "value": "Canapes y Snacks"
+          },
+          {
+            "source": "Paquetes!B46",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C46",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D46",
+            "value": true
+          },
+          {
+            "source": "Paquetes!E46",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F46",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G46",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H46",
+            "value": true
+          }
+        ]
+      },
+      {
+        "row": 47,
+        "cells": [
+          {
+            "source": "Paquetes!A47",
+            "value": "Brunch (Mayahuel)"
+          },
+          {
+            "source": "Paquetes!B47",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C47",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D47",
+            "value": true
+          },
+          {
+            "source": "Paquetes!E47",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F47",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G47",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H47",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 48,
+        "cells": [
+          {
+            "source": "Paquetes!A48",
+            "value": "Brunch (Club Campestre)"
+          },
+          {
+            "source": "Paquetes!B48",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C48",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D48",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E48",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F48",
+            "value": false
+          },
+          {
+            "source": "Paquetes!G48",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H48",
+            "value": true
+          }
+        ]
+      },
+      {
+        "row": 49,
+        "cells": [
+          {
+            "source": "Paquetes!A49",
+            "value": "Taller de Artesanias y Bebidas Tipicas"
+          },
+          {
+            "source": "Paquetes!B49",
+            "value": false
+          },
+          {
+            "source": "Paquetes!C49",
+            "value": false
+          },
+          {
+            "source": "Paquetes!D49",
+            "value": false
+          },
+          {
+            "source": "Paquetes!E49",
+            "value": false
+          },
+          {
+            "source": "Paquetes!F49",
+            "value": true
+          },
+          {
+            "source": "Paquetes!G49",
+            "value": false
+          },
+          {
+            "source": "Paquetes!H49",
+            "value": false
+          }
+        ]
+      },
+      {
+        "row": 50,
+        "cells": [
+          {
+            "source": "Paquetes!B50",
+            "value": "Extras que aplican"
+          },
+          {
+            "source": "Paquetes!C50",
+            "value": "Extras que aplican"
+          },
+          {
+            "source": "Paquetes!D50",
+            "value": "Extras que aplican"
+          },
+          {
+            "source": "Paquetes!E50",
+            "value": "Extras que aplican"
+          },
+          {
+            "source": "Paquetes!F50",
+            "value": "Extras que aplican"
+          },
+          {
+            "source": "Paquetes!H50",
+            "value": "Extras que aplican"
+          }
+        ]
+      },
+      {
+        "row": 51,
+        "cells": [
+          {
+            "source": "Paquetes!A51",
+            "value": "Extras"
+          },
+          {
+            "source": "Paquetes!B51",
+            "value": "Transporte Redondo Privado 1-4Pax , Zona Centrica - $2500"
+          },
+          {
+            "source": "Paquetes!C51",
+            "value": "Guía Bilingüe (1-6 Personas) -$ 1,850"
+          },
+          {
+            "source": "Paquetes!D51",
+            "value": "Persona Adicional Adulto VIP- $4,559"
+          },
+          {
+            "source": "Paquetes!E51",
+            "value": "Transporte Redondo Privado 2 Pax , Zona Centrica - $2500"
+          },
+          {
+            "source": "Paquetes!F51",
+            "value": "Fotografías y Video"
+          },
+          {
+            "source": "Paquetes!G51",
+            "value": "Transporte Redondo Privado 2 Pax , Zona Centrica - $2500"
+          },
+          {
+            "source": "Paquetes!H51",
+            "value": "Persona Adicional (FPM)- $5,000"
+          }
+        ]
+      },
+      {
+        "row": 52,
+        "cells": [
+          {
+            "source": "Paquetes!B52",
+            "value": "Fotografías y Video"
+          },
+          {
+            "source": "Paquetes!C52",
+            "value": "Fotografías y Video"
+          },
+          {
+            "source": "Paquetes!D52",
+            "value": "Persona Adicional Niño VIP- $3,559"
+          },
+          {
+            "source": "Paquetes!E52",
+            "value": "Mariachis al aterrizaje - $2000"
+          },
+          {
+            "source": "Paquetes!F52",
+            "value": "Mariachis al aterrizaje - $2000"
+          },
+          {
+            "source": "Paquetes!G52",
+            "value": "Fotografías y Video"
+          }
+        ]
+      },
+      {
+        "row": 53,
+        "cells": [
+          {
+            "source": "Paquetes!B53",
+            "value": "Acceso a la Zona Arqueológica - $210"
+          },
+          {
+            "source": "Paquetes!C53",
+            "value": "Ramo de Flores - $550"
+          },
+          {
+            "source": "Paquetes!D53",
+            "value": "Ramo de Flores - $550"
+          },
+          {
+            "source": "Paquetes!E53",
+            "value": "Fotografías y Video"
+          },
+          {
+            "source": "Paquetes!F53",
+            "value": "Persona Adicional (Viajero)- $1,450"
+          },
+          {
+            "source": "Paquetes!G53",
+            "value": "Ramo de Flores - $550"
+          },
+          {
+            "source": "Paquetes!H53",
+            "value": "Ramo de Flores - $550"
+          }
+        ]
+      },
+      {
+        "row": 54,
+        "cells": [
+          {
+            "source": "Paquetes!C54",
+            "value": "Servicio por acompañante extra (no vuela) - $910"
+          },
+          {
+            "source": "Paquetes!D54",
+            "value": "Mariachis al aterrizaje - $2000"
+          },
+          {
+            "source": "Paquetes!E54",
+            "value": "Champagne - $1800"
+          },
+          {
+            "source": "Paquetes!F54",
+            "value": "Champagne - $1800"
+          },
+          {
+            "source": "Paquetes!G54",
+            "value": "Mariachis al aterrizaje - $2000"
+          },
+          {
+            "source": "Paquetes!H54",
+            "value": "Mariachis al aterrizaje - $2000"
+          }
+        ]
+      },
+      {
+        "row": 55,
+        "cells": [
+          {
+            "source": "Paquetes!C55",
+            "value": "Mariachis al aterrizaje - $2000"
+          },
+          {
+            "source": "Paquetes!D55",
+            "value": "Persona Adicional Que no Vuela (VIP)- $1,960"
+          },
+          {
+            "source": "Paquetes!E55",
+            "value": "Acceso a la Zona Arqueológica - $210"
+          },
+          {
+            "source": "Paquetes!F55",
+            "value": "Ramo de Flores - $550"
+          },
+          {
+            "source": "Paquetes!G55",
+            "value": "Pastel (5 Rebanadas)- $500"
+          }
+        ]
+      },
+      {
+        "row": 56,
+        "cells": [
+          {
+            "source": "Paquetes!C56",
+            "value": "Champagne - $1800"
+          },
+          {
+            "source": "Paquetes!E56",
+            "value": "Guía Bilingüe (1-6 Personas) -$ 1,850"
+          },
+          {
+            "source": "Paquetes!G56",
+            "value": "Acceso a la Zona Arqueológica - $210"
+          },
+          {
+            "source": "Paquetes!I56",
+            "value": "Alberca, Padel, Caballo, Gimnasio, SPA, Museo Gourmet."
+          }
+        ]
+      },
+      {
+        "row": 57,
+        "cells": [
+          {
+            "source": "Paquetes!E57",
+            "value": "Desayuno Completo para acompañante (Buffette) - $200"
+          },
+          {
+            "source": "Paquetes!G57",
+            "value": "Champagne - $1800"
+          }
+        ]
+      },
+      {
+        "row": 58,
+        "cells": [
+          {
+            "source": "Paquetes!E58",
+            "value": "Lona Estandar \"Feliz Cumpleaños\""
+          },
+          {
+            "source": "Paquetes!G58",
+            "value": "Guía Bilingüe (1-6 Personas) -$ 1,850"
+          }
+        ]
+      },
+      {
+        "row": 59,
+        "cells": [
+          {
+            "source": "Paquetes!E59",
+            "value": "Lona Estandar \"Te Amo\""
+          },
+          {
+            "source": "Paquetes!G59",
+            "value": "Persona Adicional (Paq 6)- $1,999"
+          }
+        ]
+      },
+      {
+        "row": 60,
+        "cells": [
+          {
+            "source": "Paquetes!E60",
+            "value": "Lona Estandar \"Feliz Aniversario\""
+          }
+        ]
+      },
+      {
+        "row": 61,
+        "cells": [
+          {
+            "source": "Paquetes!E61",
+            "value": "Lona Estandar \"¿Te Quieres Casar Conmigo?\""
+          }
+        ]
+      },
+      {
+        "row": 62,
+        "cells": [
+          {
+            "source": "Paquetes!E62",
+            "value": "Lona Estandar \"¿Quieres ser mi novia?\""
+          }
+        ]
+      },
+      {
+        "row": 63,
+        "cells": [
+          {
+            "source": "Paquetes!E63",
+            "value": "Persona Adicional (Celebración)- $2,799"
+          }
+        ]
+      }
+    ],
+    "Extras": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "source": "Extras!A1",
+            "value": "Item"
+          },
+          {
+            "source": "Extras!B1",
+            "value": "Categoría"
+          },
+          {
+            "source": "Extras!C1",
+            "value": "Detalles"
+          },
+          {
+            "source": "Extras!D1",
+            "value": "Precios"
+          },
+          {
+            "source": "Extras!E1",
+            "value": "Columna1"
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          {
+            "source": "Extras!A2",
+            "value": "Coffee Break"
+          },
+          {
+            "source": "Extras!B2",
+            "value": "Alimentos y Bebidas"
+          },
+          {
+            "source": "Extras!C2",
+            "value": "Bebida y snack antes del vuelo mientras se preparan los globos."
+          },
+          {
+            "source": "Extras!D2",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "cells": [
+          {
+            "source": "Extras!A3",
+            "value": "Brindis Tradicional"
+          },
+          {
+            "source": "Extras!B3",
+            "value": "Alimentos y Bebidas"
+          },
+          {
+            "source": "Extras!C3",
+            "value": "Con vino espumoso, champagne o bebida sin alcohol al aterrizar."
+          },
+          {
+            "source": "Extras!D3",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "row": 4,
+        "cells": [
+          {
+            "source": "Extras!A4",
+            "value": "Desayuno Completo para acompañante (Buffette) - $200"
+          },
+          {
+            "source": "Extras!B4",
+            "value": "Alimentos y Bebidas"
+          },
+          {
+            "source": "Extras!C4",
+            "value": "Servido en uno de los mejores restaurantes locales de la zona."
+          },
+          {
+            "source": "Extras!D4",
+            "value": 200
+          }
+        ]
+      },
+      {
+        "row": 5,
+        "cells": [
+          {
+            "source": "Extras!A5",
+            "value": "Desayuno Extra"
+          },
+          {
+            "source": "Extras!B5",
+            "value": "Alimentos y Bebidas"
+          },
+          {
+            "source": "Extras!C5",
+            "value": "Ideal para acompañantes en tierra que no realizan el vuelo."
+          },
+          {
+            "source": "Extras!D5",
+            "value": 200
+          }
+        ]
+      },
+      {
+        "row": 6,
+        "cells": [
+          {
+            "source": "Extras!A6",
+            "value": "Transporte Redondo Compartido"
+          },
+          {
+            "source": "Extras!B6",
+            "value": "Transporte"
+          },
+          {
+            "source": "Extras!C6",
+            "value": "Desde un punto céntrico u hotel en CDMX a Teotihuacán ($500 MXN p/p)."
+          },
+          {
+            "source": "Extras!D6",
+            "value": 500
+          }
+        ]
+      },
+      {
+        "row": 7,
+        "cells": [
+          {
+            "source": "Extras!A7",
+            "value": "Transporte Redondo Privado 1-4Pax , Zona Centrica - $2500"
+          },
+          {
+            "source": "Extras!B7",
+            "value": "Transporte"
+          },
+          {
+            "source": "Extras!C7",
+            "value": "Conversión del transporte grupal a un vehículo exclusivo."
+          },
+          {
+            "source": "Extras!D7",
+            "value": 2500
+          },
+          {
+            "source": "Extras!E7",
+            "value": "Desde**"
+          }
+        ]
+      },
+      {
+        "row": 8,
+        "cells": [
+          {
+            "source": "Extras!A8",
+            "value": "Conversión a Vuelo Privado"
+          },
+          {
+            "source": "Extras!B8",
+            "value": "Personalización y Celebración"
+          },
+          {
+            "source": "Extras!C8",
+            "value": "Para volar únicamente con tus acompañantes sin compartir canastilla."
+          },
+          {
+            "source": "Extras!D8",
+            "value": 3999
+          },
+          {
+            "source": "Extras!E8",
+            "value": "Desde**"
+          }
+        ]
+      },
+      {
+        "row": 9,
+        "cells": [
+          {
+            "source": "Extras!A9",
+            "value": "Lona Personalizada"
+          },
+          {
+            "source": "Extras!B9",
+            "value": "Personalización y Celebración"
+          },
+          {
+            "source": "Extras!C9",
+            "value": "Disponible en tamaño chico (CH) o grande (GDE) para mensajes especiales."
+          },
+          {
+            "source": "Extras!D9",
+            "value": 500
+          },
+          {
+            "source": "Extras!E9",
+            "value": "Desde**"
+          }
+        ]
+      },
+      {
+        "row": 10,
+        "cells": [
+          {
+            "source": "Extras!A10",
+            "value": "Ramo de Flores - $550"
+          },
+          {
+            "source": "Extras!B10",
+            "value": "Personalización y Celebración"
+          },
+          {
+            "source": "Extras!C10",
+            "value": "Usualmente de 12 rosas, ideal para compromisos o aniversarios."
+          },
+          {
+            "source": "Extras!D10",
+            "value": 500
+          }
+        ]
+      },
+      {
+        "row": 11,
+        "cells": [
+          {
+            "source": "Extras!A11",
+            "value": "Mariachis al aterrizaje"
+          },
+          {
+            "source": "Extras!B11",
+            "value": "Personalización y Celebración"
+          },
+          {
+            "source": "Extras!C11",
+            "value": "Serenata con 4 canciones justo al tocar tierra."
+          },
+          {
+            "source": "Extras!D11",
+            "value": 1950
+          }
+        ]
+      },
+      {
+        "row": 12,
+        "cells": [
+          {
+            "source": "Extras!A12",
+            "value": "Champagne - $1800"
+          },
+          {
+            "source": "Extras!B12",
+            "value": "Personalización y Celebración"
+          },
+          {
+            "source": "Extras!C12",
+            "value": "Opción premium para elevar el nivel del brindis tradicional."
+          },
+          {
+            "source": "Extras!D12",
+            "value": 1800
+          }
+        ]
+      },
+      {
+        "row": 13,
+        "cells": [
+          {
+            "source": "Extras!A13",
+            "value": "Pastel y Mañanitas"
+          },
+          {
+            "source": "Extras!B13",
+            "value": "Personalización y Celebración"
+          },
+          {
+            "source": "Extras!C13",
+            "value": "Rebanada de pastel para festejados (incluido en paquete de cumpleaños)."
+          },
+          {
+            "source": "Extras!D13",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "row": 14,
+        "cells": [
+          {
+            "source": "Extras!A14",
+            "value": "Acceso a la Zona Arqueológica - $210"
+          },
+          {
+            "source": "Extras!B14",
+            "value": "Tours y Actividades en Tierra"
+          },
+          {
+            "source": "Extras!C14",
+            "value": "Entradas para recorrer las pirámides de Teotihuacán."
+          },
+          {
+            "source": "Extras!D14",
+            "value": 210
+          }
+        ]
+      },
+      {
+        "row": 15,
+        "cells": [
+          {
+            "source": "Extras!A15",
+            "value": "Guía Bilingüe (1-6 Personas) -$ 1,850"
+          },
+          {
+            "source": "Extras!B15",
+            "value": "Tours y Actividades en Tierra"
+          },
+          {
+            "source": "Extras!C15",
+            "value": "Acompañamiento profesional para recorridos en la zona."
+          },
+          {
+            "source": "Extras!D15",
+            "value": 1850
+          }
+        ]
+      },
+      {
+        "row": 16,
+        "cells": [
+          {
+            "source": "Extras!A16",
+            "value": "Taller de Artesanías y Degustación"
+          },
+          {
+            "source": "Extras!B16",
+            "value": "Tours y Actividades en Tierra"
+          },
+          {
+            "source": "Extras!C16",
+            "value": "Visita para conocer artesanías locales y probar tequila, mezcal y pulque."
+          },
+          {
+            "source": "Extras!D16",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "row": 17,
+        "cells": [
+          {
+            "source": "Extras!A17",
+            "value": "Tour en Cuevas Ceremoniales"
+          },
+          {
+            "source": "Extras!B17",
+            "value": "Tours y Actividades en Tierra"
+          },
+          {
+            "source": "Extras!C17",
+            "value": "Recorrido privado guiado explicando la importancia del inframundo."
+          },
+          {
+            "source": "Extras!D17",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "row": 18,
+        "cells": [
+          {
+            "source": "Extras!A18",
+            "value": "Fotografías y Video"
+          },
+          {
+            "source": "Extras!B18",
+            "value": "Recuerdos y VIP"
+          },
+          {
+            "source": "Extras!C18",
+            "value": "Opción de cámara GoPro o paquete completo durante el trayecto en el aire."
+          },
+          {
+            "source": "Extras!D18",
+            "value": 2000
+          }
+        ]
+      },
+      {
+        "row": 19,
+        "cells": [
+          {
+            "source": "Extras!A19",
+            "value": "Certificado de Vuelo"
+          },
+          {
+            "source": "Extras!B19",
+            "value": "Recuerdos y VIP"
+          },
+          {
+            "source": "Extras!C19",
+            "value": "Documento personalizado como comprobante de la experiencia."
+          },
+          {
+            "source": "Extras!D19",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "row": 20,
+        "cells": [
+          {
+            "source": "Extras!A20",
+            "value": "Kit / Souvenir Viajero"
+          },
+          {
+            "source": "Extras!B20",
+            "value": "Recuerdos y VIP"
+          },
+          {
+            "source": "Extras!C20",
+            "value": "Incluye un sombrero, botella de agua y un recuerdo físico."
+          },
+          {
+            "source": "Extras!D20",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "row": 21,
+        "cells": [
+          {
+            "source": "Extras!A21",
+            "value": "Servicio de Mesero"
+          },
+          {
+            "source": "Extras!B21",
+            "value": "Recuerdos y VIP"
+          },
+          {
+            "source": "Extras!C21",
+            "value": "Atención durante el vuelo con canapés exóticos, guacamole y bebidas."
+          },
+          {
+            "source": "Extras!D21",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "row": 22,
+        "cells": [
+          {
+            "source": "Extras!A22",
+            "value": "Transporte Local y Desayuno para persona Extra"
+          },
+          {
+            "source": "Extras!B22",
+            "value": "Transporte"
+          },
+          {
+            "source": "Extras!C22",
+            "value": "opción para acompañantes que no vuelan"
+          },
+          {
+            "source": "Extras!D22",
+            "value": 600
+          }
+        ]
+      },
+      {
+        "row": 23,
+        "cells": [
+          {
+            "source": "Extras!A23",
+            "value": "Desayuno Acompañante (incluye traslado local en Teotihuacán)"
+          },
+          {
+            "source": "Extras!B23",
+            "value": "Transporte"
+          },
+          {
+            "source": "Extras!C23",
+            "value": "opción para acompañantes que no vuelan"
+          },
+          {
+            "source": "Extras!D23",
+            "value": 600
+          }
+        ]
+      },
+      {
+        "row": 24,
+        "cells": [
+          {
+            "source": "Extras!A24",
+            "value": "Desayuno Acompañante VIP (incluye traslado local en Teotihuacán)"
+          },
+          {
+            "source": "Extras!B24",
+            "value": "Alimentos y Bebidas"
+          }
+        ]
+      },
+      {
+        "row": 25,
+        "cells": [
+          {
+            "source": "Extras!A25",
+            "value": "Lona Estandar \"Feliz Cumpleaños\""
+          },
+          {
+            "source": "Extras!B25",
+            "value": "Personalización y Celebración"
+          },
+          {
+            "source": "Extras!D25",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "row": 26,
+        "cells": [
+          {
+            "source": "Extras!A26",
+            "value": "Lona Estandar \"¿Te Quieres Casar Conmigo?\""
+          },
+          {
+            "source": "Extras!B26",
+            "value": "Personalización y Celebración"
+          },
+          {
+            "source": "Extras!D26",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "row": 27,
+        "cells": [
+          {
+            "source": "Extras!A27",
+            "value": "Lona Estandar \"Te Amo\""
+          },
+          {
+            "source": "Extras!B27",
+            "value": "Personalización y Celebración"
+          },
+          {
+            "source": "Extras!D27",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "row": 28,
+        "cells": [
+          {
+            "source": "Extras!A28",
+            "value": "Lona Estandar \"Feliz Aniversario\""
+          },
+          {
+            "source": "Extras!B28",
+            "value": "Personalización y Celebración"
+          },
+          {
+            "source": "Extras!D28",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "row": 29,
+        "cells": [
+          {
+            "source": "Extras!A29",
+            "value": "Lona Personalizada Gde."
+          },
+          {
+            "source": "Extras!B29",
+            "value": "Personalización y Celebración"
+          }
+        ]
+      },
+      {
+        "row": 30,
+        "cells": [
+          {
+            "source": "Extras!A30",
+            "value": "Lona Personalizada Chica."
+          },
+          {
+            "source": "Extras!B30",
+            "value": "Personalización y Celebración"
+          }
+        ]
+      },
+      {
+        "row": 31,
+        "cells": [
+          {
+            "source": "Extras!A31",
+            "value": "Pax que no vuela (VIP) $2,400"
+          }
+        ]
+      },
+      {
+        "row": 32,
+        "cells": [
+          {
+            "source": "Extras!A32",
+            "value": "Servicio por acompañante extra (no vuela) - $910"
+          }
+        ]
+      },
+      {
+        "row": 33,
+        "cells": [
+          {
+            "source": "Extras!A33",
+            "value": "Lona Estandar \"¿Quieres ser mi novia?\""
+          }
+        ]
+      },
+      {
+        "row": 34,
+        "cells": [
+          {
+            "source": "Extras!A34",
+            "value": "Transporte Redondo Privado 2 Pax , Zona Centrica - $2500"
+          }
+        ]
+      },
+      {
+        "row": 35,
+        "cells": [
+          {
+            "source": "Extras!A35",
+            "value": "Pastel (5 Rebanadas)- $500"
+          }
+        ]
+      },
+      {
+        "row": 36,
+        "cells": [
+          {
+            "source": "Extras!A36",
+            "value": "Mariachis al aterrizaje - $2000"
+          }
+        ]
+      },
+      {
+        "row": 37,
+        "cells": [
+          {
+            "source": "Extras!A37",
+            "value": "Persona Extra en Globo- $2,799"
+          }
+        ]
+      },
+      {
+        "row": 38,
+        "cells": [
+          {
+            "source": "Extras!A38",
+            "value": "Persona Adicional Adulto VIP- $4,559"
+          }
+        ]
+      },
+      {
+        "row": 39,
+        "cells": [
+          {
+            "source": "Extras!A39",
+            "value": "Persona Adicional Niño VIP- $3,559"
+          }
+        ]
+      },
+      {
+        "row": 40,
+        "cells": [
+          {
+            "source": "Extras!A40",
+            "value": "Persona Adicional Que no Vuela (VIP)- $1,960"
+          }
+        ]
+      },
+      {
+        "row": 41,
+        "cells": [
+          {
+            "source": "Extras!A41",
+            "value": "Persona Adicional (Celebración)- $2,799"
+          }
+        ]
+      },
+      {
+        "row": 42,
+        "cells": [
+          {
+            "source": "Extras!A42",
+            "value": "Persona Adicional (Viajero)- $1,450"
+          }
+        ]
+      },
+      {
+        "row": 43,
+        "cells": [
+          {
+            "source": "Extras!A43",
+            "value": "Persona Adicional (Paq 6)- $1,999"
+          }
+        ]
+      },
+      {
+        "row": 44,
+        "cells": [
+          {
+            "source": "Extras!A44",
+            "value": "Persona Adicional (FPM)- $5,000"
+          }
+        ]
+      },
+      {
+        "row": 48,
+        "cells": [
+          {
+            "source": "Extras!A48",
+            "value": "En Privados"
+          }
+        ]
+      },
+      {
+        "row": 49,
+        "cells": [
+          {
+            "source": "Extras!A49",
+            "value": "Transporte 1-4 Pax $2,000"
+          }
+        ]
+      },
+      {
+        "row": 50,
+        "cells": [
+          {
+            "source": "Extras!A50",
+            "value": "Transporte SUV 1-3 Pax $4,500"
+          }
+        ]
+      },
+      {
+        "row": 51,
+        "cells": [
+          {
+            "source": "Extras!A51",
+            "value": "Por persona $500"
+          }
+        ]
+      }
+    ]
+  }
+}

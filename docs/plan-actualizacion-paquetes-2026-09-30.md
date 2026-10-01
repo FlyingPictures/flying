@@ -8,8 +8,8 @@ Rama de trabajo: `codex/new-packages-2026-09-30`. Cada milestone tendrá un comm
 
 | Milestone | Entrega | Criterio de cierre | Dependencias | Estado |
 | --- | --- | --- | --- | --- |
-| M0 — Respaldo y organización | Estado previo guardado, rama de trabajo, plan dividido y procedimiento de rollback | Snapshot recuperable que incluya el trabajo previo; plan y recuperación documentados | Ninguna | Snapshot guardado; organización en curso |
-| M1 — Matriz comercial | Siete paquetes documentados con precios, personas, servicios, extras, fuente y pendientes | Extracción comprobada y decisiones comerciales necesarias resueltas o modalidad de consulta acordada; incertidumbres explícitas | M0 | En curso |
+| M0 — Respaldo y organización | Estado previo guardado, rama de trabajo, plan dividido y procedimiento de rollback | Snapshot recuperable que incluya el trabajo previo; plan y recuperación documentados | Ninguna | Completado; tag `fpm-packages-2026-09-30-m0` |
+| M1 — Matriz comercial | Siete paquetes documentados con precios, personas, servicios, extras, fuente y pendientes | Extracción comprobada y decisiones comerciales necesarias resueltas o modalidad de consulta acordada; incertidumbres explícitas | M0 | Preparado; confirmación comercial pendiente |
 | M2 — Configuración y precios | Modelo por persona/paquete y presentación consistente en fichas, tarjetas y barra flotante | La aplicación distingue precio, unidad, mínimos y adicionales; no depende de datos no confirmados | Matriz M1; las confirmaciones de compra pueden continuar pendientes para preparar consulta | Pendiente |
 | M3 — Contenido y catálogo ES/EN | Siete fichas, portada, catálogo, navegación e imágenes actualizados | Paridad entre idiomas y servicios coherentes en todo el recorrido | M1 y M2 | Pendiente |
 | M4 — Enlaces y SEO | Direcciones conservadas, redirecciones de celebraciones y metadata/sitemap actualizados | Rutas y cambio de idioma correctos; enlaces antiguos llevan a su equivalente | M3 | Pendiente |
@@ -83,6 +83,8 @@ Comprobación de fórmulas: C12 = $2,850, D13 = $22,500 y H13 = $30,000. C18 = $
 ### M1. Cerrar la matriz comercial
 
 Documentar por cada paquete: nombre ES/EN, modalidad, precio y unidad, personas incluidas, mínimo de reserva, adicionales, inclusiones, exclusiones, extras, condiciones y URL de reserva. Resolver los pendientes necesarios para compra directa. Se puede preparar contenido y componentes mientras se completan estos datos; las condiciones no confirmadas no se inventarán.
+
+Entrega preparada: [matriz comercial revisable](matriz-comercial-paquetes-2026-09-30.md) y [datos con trazabilidad al Excel](matriz-comercial-paquetes-2026-09-30.json). La extracción reúne siete paquetes, 59 casillas de inclusión activadas y 44 extras aplicables; los seis resultados de fórmulas se cotejaron con cálculos independientes y 508 celdas se verificaron contra el contenido XML del XLSX. Quedan 14 decisiones documentadas, algunas necesarias para cerrar M1 y otras para reservas o publicación posteriores. Se solicitaron al usuario las tres confirmaciones prioritarias: tarifa Viajero, personas incluidas/mínimos y modalidad de reserva. La preparación se guarda bajo `fpm-packages-2026-09-30-m1-review`; no se declara cerrado M1 ni se inicia M2 en esta entrega.
 
 ### M2. Actualizar la configuración y los precios
 
