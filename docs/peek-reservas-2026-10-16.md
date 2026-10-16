@@ -22,3 +22,11 @@ Validación: datos bilingües, 15 pruebas, tipos, lint (sin errores; advertencia
 Los importes comerciales pendientes del Excel conservan su estado; esta integración no modifica Peek ni la landing estática previa. El punto anterior a Peek es `fpm-packages-2026-09-30-m6` / `e1e3e6947b5cea16ce62f58efa15d7f4c1481b4e`. El checkpoint de esta entrega será `fpm-packages-2026-10-16-peek`.
 
 La vista previa se cargará directamente al proyecto `flying` del equipo `flyingpictures-projects`, conservando la versión de producción `dpl_2s6tEHzZ8WEUai5kjxiYcb4mFsdz`. Solo se enviarán archivos de aplicación y recursos públicos; documentos, Excel, PDF, auditorías, credenciales y landing antigua quedan fuera del despliegue.
+
+## Vista previa publicada y verificada
+
+Vercel confirmó `READY`: `dpl_CjNPErEPtc1388V9fLeaJGxfchiW`, URL `https://flying-ly2q028un-flyingpictures-projects.vercel.app`. Código de aplicación: `399b488a0f51c2613ac933776e519459940398c1`. Se enviaron 136 archivos de aplicación y recursos públicos, mediante el conector autenticado de Vercel. El manifiesto con hashes se conserva en `audit/peek-2026-10-16/vercel-deployment.json`. La API no devolvió metadata Git; el manifiesto local identifica el contenido enviado. El enlace de acceso temporal se entrega al usuario y no se guarda en el repositorio.
+
+Se comprobó el catálogo con seis enlaces de Peek y Charter por WhatsApp, la ventana de Celebración desde Vercel y la de Viajero en inglés. Captura: `audit/peek-2026-10-16/vercel-celebration-popup.png`. La lista de producción mantiene `dpl_2s6tEHzZ8WEUai5kjxiYcb4mFsdz`, `main` / `21c0883d255884c02899e4377ca461ac84f6ad39`. No se cambiaron los dominios públicos ni se envió código a GitHub.
+
+Diferencia comercial detectada: la descripción de Peek de Celebración dice «Special Services (flowers, cake, banner)»; el Excel y el sitio excluyen las lonas del paquete base. Se conserva la fuente del Excel y se comunica la diferencia al usuario para confirmación antes de producción. El botón apunta al producto correcto, pero no implica que esas condiciones contradictorias estén aprobadas.

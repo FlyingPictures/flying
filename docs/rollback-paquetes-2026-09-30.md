@@ -80,3 +80,5 @@ No se modificará Peek como parte de un rollback de código. Cualquier restaurac
 Checkpoint anterior: `fpm-packages-2026-09-30-m6` (`e1e3e6947b5cea16ce62f58efa15d7f4c1481b4e`). Checkpoint nuevo: `fpm-packages-2026-10-16-peek`. Para retirar únicamente los botones de Peek, crear un `git revert` del commit de integración, conservando el catálogo nuevo. Las etiquetas y el historial permanecen locales.
 
 Vista previa autorizada en Vercel: proyecto `flying`, equipo `team_Q0AQ8S0YznjirSGK3jqSV6iP`. Producción previa: `dpl_2s6tEHzZ8WEUai5kjxiYcb4mFsdz`, commit `21c0883d255884c02899e4377ca461ac84f6ad39`. Una vista previa no cambia los dominios de producción. No se publica código en GitHub.
+
+Vista previa del 16 de octubre: `dpl_CjNPErEPtc1388V9fLeaJGxfchiW` (READY), aplicación `399b488a0f51c2613ac933776e519459940398c1`. Restaurar código desde el checkpoint anterior o revertir ese commit y crear otra vista previa; esta operación no requiere rollback de producción, que se conservó en su despliegue anterior.
