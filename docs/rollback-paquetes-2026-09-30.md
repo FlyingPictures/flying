@@ -82,3 +82,7 @@ Checkpoint anterior: `fpm-packages-2026-09-30-m6` (`e1e3e6947b5cea16ce62f58efa15
 Vista previa autorizada en Vercel: proyecto `flying`, equipo `team_Q0AQ8S0YznjirSGK3jqSV6iP`. Producción previa: `dpl_2s6tEHzZ8WEUai5kjxiYcb4mFsdz`, commit `21c0883d255884c02899e4377ca461ac84f6ad39`. Una vista previa no cambia los dominios de producción. No se publica código en GitHub.
 
 Vista previa del 16 de octubre: `dpl_CjNPErEPtc1388V9fLeaJGxfchiW` (READY), aplicación `399b488a0f51c2613ac933776e519459940398c1`. Restaurar código desde el checkpoint anterior o revertir ese commit y crear otra vista previa; esta operación no requiere rollback de producción, que se conservó en su despliegue anterior.
+
+## Precio confirmado de Viajero
+
+El usuario confirmó $7,999 MXN por paquete el 16 de octubre de 2026. Checkpoint: `fpm-packages-2026-10-16-traveler-price`, aplicación `1564d572ff42169b7f96241d9e4173adc0271a76`. Vista previa READY: `dpl_ATB2T6MbZhZvauYB1b8nNUodfw3j`. La vista anterior (`dpl_CjNPErEPtc1388V9fLeaJGxfchiW`) permanece recuperable, pero conserva “Ask for pricing”. Para deshacer solo esta corrección, revertir el commit 1564d57 y crear otra vista previa, sin tocar la producción vigente.

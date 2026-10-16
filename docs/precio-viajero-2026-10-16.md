@@ -9,3 +9,7 @@ El número de personas cubiertas se conserva pendiente en el modelo; esta correc
 Se actualizaron las pruebas existentes para exigir $7,999 y rechazar $8,099 y el texto de precio pendiente. Validación: 15 pruebas, datos bilingües, tipos, lint sin errores (advertencia previa en landing antigua), compilación y las comprobaciones de rutas. La versión anterior recuperable es el checkpoint `fpm-packages-2026-10-16-peek`, aplicación `399b488a0f51c2613ac933776e519459940398c1`, y su vista previa `dpl_CjNPErEPtc1388V9fLeaJGxfchiW`.
 
 La actualización se desplegará como vista previa del proyecto `flying`, equipo `flyingpictures-projects`, conservando el despliegue de producción. Los documentos, capturas y fuentes comerciales se excluyen del envío a Vercel.
+
+## Despliegue y verificación
+
+Vercel confirmó `READY` para `dpl_ATB2T6MbZhZvauYB1b8nNUodfw3j`: `https://flying-oxvqyk3ho-flyingpictures-projects.vercel.app`. Aplicación `1564d572ff42169b7f96241d9e4173adc0271a76`, tag `fpm-packages-2026-10-16-traveler-price`. Se comprobó en navegador que las seis páginas de portada, catálogo y ficha ES/EN muestran $7,999 MXN, sin el texto de precio pendiente y conservando el flujo Peek D06ep. Evidencia y manifiesto en `audit/traveler-price-2026-10-16/`. El enlace temporal de acceso se entrega en la conversación, sin guardarlo en Git.

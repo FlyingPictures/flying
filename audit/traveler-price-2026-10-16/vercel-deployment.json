@@ -1,0 +1,563 @@
+{
+  "date": "2026-10-16",
+  "state": "READY",
+  "environment": "preview",
+  "deploymentId": "dpl_ATB2T6MbZhZvauYB1b8nNUodfw3j",
+  "url": "https://flying-oxvqyk3ho-flyingpictures-projects.vercel.app",
+  "projectId": "prj_DnSOOecZvInGr4bKJ67Fg3CruBZY",
+  "teamId": "team_Q0AQ8S0YznjirSGK3jqSV6iP",
+  "applicationCommit": "1564d572ff42169b7f96241d9e4173adc0271a76",
+  "sourceTag": "fpm-packages-2026-10-16-traveler-price",
+  "travelerPriceMxn": 7999,
+  "priceModel": "perPackage",
+  "confirmedByUser": true,
+  "payloadSha256": "1e43236bdbe12011ee058d8b1f9355ca49a1b2b1f10bb23a98f4627d0cd9ee9d",
+  "previousPreview": "dpl_CjNPErEPtc1388V9fLeaJGxfchiW",
+  "productionPreserved": "dpl_2s6tEHzZ8WEUai5kjxiYcb4mFsdz",
+  "sourceFiles": [
+    {
+      "path": "app/[locale]/(home)/HomeFlightExperience.tsx",
+      "sha256": "b92f2eef6a2b0ffe17fa7936b6097eec98a30e118ff91bb5de7f1e02f94ad75e"
+    },
+    {
+      "path": "app/[locale]/(home)/HomeHeroSection.tsx",
+      "sha256": "69a2968dcd7458637bf3a6452b0df5e287d4135a5a46bde13a3b4ebd57e0301f"
+    },
+    {
+      "path": "app/[locale]/(home)/HomeReviewsSection.tsx",
+      "sha256": "d4d106583219882c44266aa6f1b65dfa659894715219eb629f3f80ffa339dc53"
+    },
+    {
+      "path": "app/[locale]/(home)/LiveMonitoringSection.tsx",
+      "sha256": "7d6ee7ac8563f898a9507e24a076fca2b9b7afe4dacf2d4a6d8f67f0adaa6cb1"
+    },
+    {
+      "path": "app/[locale]/(home)/WhyFlightWhitUs.tsx",
+      "sha256": "49680efbf4ecd9d17042614b21e5e9601cd237d095ce07bdadabbae48f0e1a08"
+    },
+    {
+      "path": "app/[locale]/contact/contact-hero.tsx",
+      "sha256": "fb0dbf98443e5213987675ecec6ff4da7a5200a549d477a7919122db041c8453"
+    },
+    {
+      "path": "app/[locale]/contact/contact-info.tsx",
+      "sha256": "efe4a809dcb647b08321870ec54fa62f25cd7e3e29b76fbcc2ef6a7f3a6811d7"
+    },
+    {
+      "path": "app/[locale]/contact/contact-location.tsx",
+      "sha256": "7c43406490f30f8e045218f5b3d61306e1dcb3068c6445f25b9052e6f1fa3643"
+    },
+    {
+      "path": "app/[locale]/contact/page.tsx",
+      "sha256": "5322744eb0194fff423148afd712acf11e459849de2b9bac3faa4b7704c5200a"
+    },
+    {
+      "path": "app/[locale]/flight-experiences/flight-card.tsx",
+      "sha256": "626d9fb32e37788cfd4b86a2d4233e2f283fcd1e8ab90b880734cd5977453e00"
+    },
+    {
+      "path": "app/[locale]/flight-experiences/flight-hero.tsx",
+      "sha256": "3539962410d3271e346ad9acd65a2fe79685351e6f0c89bebdffe3b411f12bcb"
+    },
+    {
+      "path": "app/[locale]/flight-experiences/page.tsx",
+      "sha256": "8544099efbd85f7d402c14123d0f432a7a7ad653e06e8b5720f2cea413c1aab1"
+    },
+    {
+      "path": "app/[locale]/layout.tsx",
+      "sha256": "999051e68c357c24ce2e0286fa35172de3336c22787be2800a54085e30e6b73f"
+    },
+    {
+      "path": "app/[locale]/legal/cancellation/page.tsx",
+      "sha256": "4a2ce4838d43260b175212f394f6bbbd98e7a475997f926d51ace02cba309278"
+    },
+    {
+      "path": "app/[locale]/legal/privacy/page.tsx",
+      "sha256": "2c9fd5ed8691a5495e4af987327edd627ed7901393529729a1c540e75e176e15"
+    },
+    {
+      "path": "app/[locale]/legal/terms/page.tsx",
+      "sha256": "9225e31cb2613031ac846dcf3834b46e3aaac332535e4c271701f2b47aa9ca18"
+    },
+    {
+      "path": "app/[locale]/not-found.tsx",
+      "sha256": "a6eb3111ece29ef08fc3ec97b7b0e00ed54ebbccba882db37555f8d69fecf981"
+    },
+    {
+      "path": "app/[locale]/not-found/page.tsx",
+      "sha256": "5aa4ef6ea57da28cd0000574de37f2d2ad6c36fe6977e07f18295790d6e3d77b"
+    },
+    {
+      "path": "app/[locale]/page.tsx",
+      "sha256": "3418984d9510f2764af27259a2256f27d7fff9ba7d8f51f42a5fe6a8dff656da"
+    },
+    {
+      "path": "app/[locale]/plan-your-visit/page.tsx",
+      "sha256": "91d8c0f19cd880ac10d849e532938be23dadafc2190544a3a92e907e4c187203"
+    },
+    {
+      "path": "app/[locale]/plan-your-visit/plan-faq.tsx",
+      "sha256": "441d5b074b5c2b884fe15238eecd372262b446305b936db676415f227e5b5e21"
+    },
+    {
+      "path": "app/[locale]/plan-your-visit/plan-getting-here.tsx",
+      "sha256": "1fefb756e56c505511dd25d35c3ca9e4c5cd9a8f0db887215225b26c90613d11"
+    },
+    {
+      "path": "app/[locale]/plan-your-visit/plan-hero.tsx",
+      "sha256": "7e90468292199ee78c26b2431442ab6831e5dd39a05e0b9fe4425e77abe37b7b"
+    },
+    {
+      "path": "app/[locale]/plan-your-visit/plan-sunrise.tsx",
+      "sha256": "dc35cb176742923793a5b027c3d07c5fd4ab68e3425ed9bf69daaeec729ccc28"
+    },
+    {
+      "path": "app/[locale]/plan-your-visit/plan-weather-policy.tsx",
+      "sha256": "84ab37fb66eccef92d51daf36f840f9c066f91a4e431039cdc6effbe7927a49b"
+    },
+    {
+      "path": "app/[locale]/product/[slug]/Footer.tsx",
+      "sha256": "91fa434064f0db44f471b5ba903e293cd0fa2dea670710733e5932dfb2542754"
+    },
+    {
+      "path": "app/[locale]/product/[slug]/Included.tsx",
+      "sha256": "7cceaec26d948e313e4f831479dbe4cf13b98ee82e7b6957e7c7fac153eaf6f6"
+    },
+    {
+      "path": "app/[locale]/product/[slug]/Meet.tsx",
+      "sha256": "700ed73baaa8ab984e8fbe8334147a7458e9596b44d9b3cecca83ee746e5ef81"
+    },
+    {
+      "path": "app/[locale]/product/[slug]/PackageDetails.tsx",
+      "sha256": "c2ea1b416561dea05a4580e586600b6462767e35a2c4aed419890a2445c945ec"
+    },
+    {
+      "path": "app/[locale]/product/[slug]/ProductItinerary.tsx",
+      "sha256": "4f567fc8179f34b2b668de643d35c6f3886e6efcb04d1ed83b4cf8d623a6e2f9"
+    },
+    {
+      "path": "app/[locale]/product/[slug]/ProductMain.tsx",
+      "sha256": "280451fd07aea0b3ab4c5af46bde3d32ff7ada833f90f2f0ab8d03cbfc89652e"
+    },
+    {
+      "path": "app/[locale]/product/[slug]/Recommended.tsx",
+      "sha256": "a46a23d7ffaf5391d8ebbec66e1907d4f166ec57932136aa1d29dde8de5cdcf3"
+    },
+    {
+      "path": "app/[locale]/product/[slug]/Reviews.tsx",
+      "sha256": "1bff818c6823da922ca60db646e22a50be1cfd94b0036558dfb4ece9818e0aa0"
+    },
+    {
+      "path": "app/[locale]/product/[slug]/page.tsx",
+      "sha256": "a1bd906e04af1f51e9ff492912c728bcd4b516513bd1959270bde21039d9ced0"
+    },
+    {
+      "path": "app/[locale]/safety-heritage/page.tsx",
+      "sha256": "3cbc672f253508d3a1a468444d52acaea304717a53393ed7e072a01a767fcc57"
+    },
+    {
+      "path": "app/[locale]/safety-heritage/safety-finest-aircraft.tsx",
+      "sha256": "f067eea3ecd6a1bcc184b8285b635635c596ed7432dc79669cb8ba66430e99f3"
+    },
+    {
+      "path": "app/[locale]/safety-heritage/safety-footer.tsx",
+      "sha256": "86737eb11bacf279e827ee72cd813d275a6e40cb31db25b6bad9d1d1a80496ff"
+    },
+    {
+      "path": "app/[locale]/safety-heritage/safety-hero.tsx",
+      "sha256": "f0ff11a4647c480f6a4f6d47a8969203cfd04ed322ddcceba1bf508d89aaa41c"
+    },
+    {
+      "path": "app/[locale]/safety-heritage/safety-legacy.tsx",
+      "sha256": "9eb6aa1d1ade17d3ea7aae1afdfe7f77d185a6c1ca23d1d8896f10a074ee260e"
+    },
+    {
+      "path": "app/[locale]/safety-heritage/safety-mastery.tsx",
+      "sha256": "3b18a335c39fc646ec25e60baef5515f1d9fcfade7a7139d0e66af5db2d60a53"
+    },
+    {
+      "path": "app/[locale]/safety-heritage/safety-meet-giants.tsx",
+      "sha256": "89b8a4e1bf1ae96532d324556076afa905c2dbbef42e8956e30b2eae60b9eb08"
+    },
+    {
+      "path": "app/[locale]/safety-heritage/safety-safety.tsx",
+      "sha256": "b77ac9577a14c826c5227feb9b05acad3029045c9f64286e1a555b3384678412"
+    },
+    {
+      "path": "app/[locale]/safety-heritage/safety-tale.tsx",
+      "sha256": "840063733f74ebc83a0992ab4064f3d6275441b93ae24dabde9734ee4ad79ea6"
+    },
+    {
+      "path": "app/error.tsx",
+      "sha256": "a6001b1eeda3ca6311ce2613e3d7705b6c9604d4a28efbf2293f27d6d1122257"
+    },
+    {
+      "path": "app/faviocon.ico",
+      "sha256": "046f75c2a33b64b99cf7195f6f4a9e0be8c34432e32874ccd58e3699dcf500b3"
+    },
+    {
+      "path": "app/global-error.tsx",
+      "sha256": "2068ed1dd8e60f8fb4e10d712212a26787aeb33612530c1625586d95ef37f39e"
+    },
+    {
+      "path": "app/globals.css",
+      "sha256": "d393c06476ba2bfb4938213e84fea503381899ee5309f6870920123d8e27917d"
+    },
+    {
+      "path": "app/layout.tsx",
+      "sha256": "6861cc85ca9f1a7a15ab903f4aa6311c8a2bc0b8959e1e4606e5c2a231d423c5"
+    },
+    {
+      "path": "app/manifest.ts",
+      "sha256": "f1766b904202530f0fd21c056b3b569d79c8847a0eda6fefc58c3a4e9c8e5b69"
+    },
+    {
+      "path": "app/not-found.tsx",
+      "sha256": "d283dd42f98008d17a02d8e99cd52284078e2d5cd7efc641d833802747e523d9"
+    },
+    {
+      "path": "app/sitemap.ts",
+      "sha256": "4a756128a4bd6b0f885902ddad8d0e525aeb34539b511b977341281fe8f7ef04"
+    },
+    {
+      "path": "components/CloudinaryImage.tsx",
+      "sha256": "3dc1d884e43d5b3b4bd4f7dec097f10055882e3626807d145366968804254b49"
+    },
+    {
+      "path": "components/analytics/google-analytics.tsx",
+      "sha256": "a5296294aa766303b4c5582ec8ce41fdbf5187cdfd2c3aedf7ca42de5fe5f686"
+    },
+    {
+      "path": "components/booking/peek-script.tsx",
+      "sha256": "3078ed6b109b31a2127ec86db41f1d520c3b5f08a4525b94644dbacc8fb273b9"
+    },
+    {
+      "path": "components/booking/reservation-link.tsx",
+      "sha256": "9682d23b1a8f53f956a4d43069622073a82921bd374db9d0499a785ffcc5f867"
+    },
+    {
+      "path": "components/layout/floating-bar.tsx",
+      "sha256": "d1cbaffc759cec9bb2f648eef3b4f74060a514718152ce6c1c738548ef15cba1"
+    },
+    {
+      "path": "components/layout/footer.tsx",
+      "sha256": "343116b776540a6cb6b8ec6e674a1471415e25e7040034b8f7ccda576dc64474"
+    },
+    {
+      "path": "components/layout/navbar.tsx",
+      "sha256": "1913355477dc9cfa7effa908e3c37289f3548fa71bfe04c5d6bd826dc98fc828"
+    },
+    {
+      "path": "components/not-found-content.tsx",
+      "sha256": "4b457446a817c5a66692c8a848ab5be334dc6eb0ae417e59d97d0e51b70d2cfb"
+    },
+    {
+      "path": "components/reviews/TripadvisorReviewsCarousel.tsx",
+      "sha256": "d1b0acdd297f8eeb20f5a27a3a1fc20790654b68a96677ee7d1c2b9e0c8f1596"
+    },
+    {
+      "path": "components/ui/button.tsx",
+      "sha256": "c770e115ced5d69cfbdd33ddd12b09d5fe6b41cba3d03eb86319de608b4df23a"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "sha256": "f763d225afed9666b80cc06f21e15b1a2571d94c2e388f71b567095924c6a223"
+    },
+    {
+      "path": "hooks/use-scroll-direction.ts",
+      "sha256": "427b643ef2caa515178c9f5f99c134ee54c9f030611384e0a2222d48ac1cbf6f"
+    },
+    {
+      "path": "i18n/config.ts",
+      "sha256": "98285f9f7bae91f0bd381184a2b2edacd9cf59ef190f5d57fe5fc512092b0458"
+    },
+    {
+      "path": "i18n/request.ts",
+      "sha256": "9b9821a6a392ad2766d17b629803d4d7480a838f3479b5395c3d98cdb67855d8"
+    },
+    {
+      "path": "i18n/routing.ts",
+      "sha256": "aa8f8c7b2045a9e5ad1abb0e99dcf17a7862b8471747518766f8a0250d2362fd"
+    },
+    {
+      "path": "lib/cloudinary.ts",
+      "sha256": "54c464027bc29b097bdfecac03adfc6261085c596ab669efd753d0847e2cd384"
+    },
+    {
+      "path": "lib/commercial-config.ts",
+      "sha256": "b7cffb81a0b956d1142fe9fb8bbf42fad9a7db01ef62536e5077cad20fe317b6"
+    },
+    {
+      "path": "lib/fonts.ts",
+      "sha256": "da25337bff69053157893c01927af2c3cd437b85ba2d90add3d7b2a67b132e27"
+    },
+    {
+      "path": "lib/images.ts",
+      "sha256": "7165f8aca48a716265303cbaf031c5818403f896e1598e1bc9654e54b10ead0c"
+    },
+    {
+      "path": "lib/package-catalog.ts",
+      "sha256": "bf6502c281016eb4e41339573d2ae0d60ca41a06d0f8226dc34fb0f24db32bbb"
+    },
+    {
+      "path": "lib/product-pricing.ts",
+      "sha256": "53b2c23f2435cadd9c9c2ac7c8455a81cc7a9a3a29669252d2a536e48e816f66"
+    },
+    {
+      "path": "lib/site-config.ts",
+      "sha256": "ad82de8e90cf8e650aa8c70c94745f349b52fada8e90e079256c8628250adf07"
+    },
+    {
+      "path": "lib/structured-data.tsx",
+      "sha256": "18c721553af9a5c4183280a983547526a89c37c9dc845970425c0dc7d080facc"
+    },
+    {
+      "path": "lib/tripadvisor-reviews.ts",
+      "sha256": "0c1697f5f9f9a19882175ec40e037365c573eb81f1d835b318b0fd8285301bfa"
+    },
+    {
+      "path": "lib/utils.ts",
+      "sha256": "7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d"
+    },
+    {
+      "path": "locales/en/common.json",
+      "sha256": "5f5fc69505cfb6c8fcaa89fb9890471f27ad722e66a1cde3e2d9c40db7b44dc6"
+    },
+    {
+      "path": "locales/en/contact.json",
+      "sha256": "79f8610df4a65746d8ca05f820999e7d6b64e2146b965e9b8dcd2e94807c1411"
+    },
+    {
+      "path": "locales/en/flight-experiences.json",
+      "sha256": "70e0bb68ae69a9850d6be1885c8052198a8b428f691f81585741f4b8f4b0a410"
+    },
+    {
+      "path": "locales/en/home.json",
+      "sha256": "feb49b70445d052c64543090f9c4b7e0ff30229714027790e066a8b2eae4b2b4"
+    },
+    {
+      "path": "locales/en/legal.json",
+      "sha256": "177b9eb292609d165501a99154ff2bfae52f78110fa1a79370eadeafca794fa8"
+    },
+    {
+      "path": "locales/en/not-found.json",
+      "sha256": "8db8fc96eaddecd7e047ccbe010dfdc2f007709a19bcaa2867479b24d65c8fc1"
+    },
+    {
+      "path": "locales/en/plan.json",
+      "sha256": "18eb41828c47c1b5050a74188a1ca455167f874bdc326c2522e739c9c19cd251"
+    },
+    {
+      "path": "locales/en/product.json",
+      "sha256": "3034beb6f73981b2a93d59667a5707a275c0b9211636e1dece29fd74c7740160"
+    },
+    {
+      "path": "locales/en/product/celebration.json",
+      "sha256": "925c48ef7c3be20a53bf6678e70f85fb62c43a3624ebb014885451c3425de654"
+    },
+    {
+      "path": "locales/en/product/charter.json",
+      "sha256": "b4f87d947600e5ee12a28627ae9e519ef8be26d88520b2e89b21a20eab9bac0e"
+    },
+    {
+      "path": "locales/en/product/classic.json",
+      "sha256": "cbb285c8d6008dae8f72607942df989041c9756e8cc41dbc7947ee6d6bc9766b"
+    },
+    {
+      "path": "locales/en/product/corporate.json",
+      "sha256": "90ab33e84a072315d423f3c4199e91c3be18f6d91c0e48ae9750e0987c69e44d"
+    },
+    {
+      "path": "locales/en/product/journey.json",
+      "sha256": "50188a374d1ba96d1a70020f529843ad635cacf2c08ac3366c327abda05c080c"
+    },
+    {
+      "path": "locales/en/product/open.json",
+      "sha256": "22c441f8d195c7606afd3ee8971243950fd7ea4c32ea2b164be7548b704f9059"
+    },
+    {
+      "path": "locales/en/product/private.json",
+      "sha256": "7a8d9430135f5a9dbc80f428cd80dac409bd51253b93ce7732935a32e33c8391"
+    },
+    {
+      "path": "locales/en/product/transport.json",
+      "sha256": "7781793b0ed709cd14f4d138f7a07b06b368ee29ee1ce8e4903883c6234d8d16"
+    },
+    {
+      "path": "locales/en/product/vip.json",
+      "sha256": "b9faf0c1eecf18769c487970c7d3a05905b1730029bb0fd09d03b8fee6c229d9"
+    },
+    {
+      "path": "locales/en/safety-heritage.json",
+      "sha256": "761d101e11fe30dd955208976e5abefca2d9e927c90f48e1bb0af46975e5aee2"
+    },
+    {
+      "path": "locales/es/common.json",
+      "sha256": "e6a6c3b11004b2966b07a95579ee3fb2c716a9e360e138a668dd7d98671ac594"
+    },
+    {
+      "path": "locales/es/contact.json",
+      "sha256": "a5b248743e8855d00c061fd5e7c4b284a50f8eec37bec6bd4752513e8f15dc1a"
+    },
+    {
+      "path": "locales/es/flight-experiences.json",
+      "sha256": "0c3371d57ff33dc70d9403247591cb606a5dcfc96e161a430ef9510312b36238"
+    },
+    {
+      "path": "locales/es/home.json",
+      "sha256": "8ad5a2825a7e36145054aaf07608e9ab6a4e8268729969ef48da4a5c4be43f25"
+    },
+    {
+      "path": "locales/es/legal.json",
+      "sha256": "7a1a3ba9ca71064fd973321eb8c1a65fce420858246ca803c7a1a7cd711a368f"
+    },
+    {
+      "path": "locales/es/not-found.json",
+      "sha256": "f6fb136414f99af4ecaa82d1579f060da9dad34fb9c6d4326e71082348ab138c"
+    },
+    {
+      "path": "locales/es/plan.json",
+      "sha256": "00ab519397263c40a05ebcebb3c24200ca37ad698f064ec89ba5058b746cff64"
+    },
+    {
+      "path": "locales/es/product.json",
+      "sha256": "2aff2e510c4e7549925b119df60d3a155efb6fe24e7014415f90ed0db65e1006"
+    },
+    {
+      "path": "locales/es/product/celebration.json",
+      "sha256": "977675525958cb5b64354cf7d3abc293ed600f30965ceba309f24dd05d13c3fa"
+    },
+    {
+      "path": "locales/es/product/charter.json",
+      "sha256": "9a9a7dc6be80ac2c99a0d46dfcbc954f9116bc85004a435c9bd7981246e8c47e"
+    },
+    {
+      "path": "locales/es/product/classic.json",
+      "sha256": "cb8085287afc4013d54b30d4422b1f7ccb9a56c6263a363b02ed8aec578c3896"
+    },
+    {
+      "path": "locales/es/product/corporate.json",
+      "sha256": "077748a4dc382053a326dd76dfa6bb804a8ea5d655185a378fc904c71f280b65"
+    },
+    {
+      "path": "locales/es/product/journey.json",
+      "sha256": "279d327c8b402c366fed89915156f0fdb3c599fd374aa1fa2733485fe26ac9e4"
+    },
+    {
+      "path": "locales/es/product/open.json",
+      "sha256": "8e8690833b562edd210357548d60c56b2b17114dc1e4af9cdb74d5c07849dcc6"
+    },
+    {
+      "path": "locales/es/product/private.json",
+      "sha256": "ab6a8010e8fa6cf8c89dd5cd9afe49ad3fdd2a6516aeb4b2496fbdd026ce6e5c"
+    },
+    {
+      "path": "locales/es/product/transport.json",
+      "sha256": "bf7934dd4b78ca2aa677a3c2498f29ce18ad3ea334e22684398b5ed379a50672"
+    },
+    {
+      "path": "locales/es/product/vip.json",
+      "sha256": "7f8f7a00fa3cde95ae7f249e5ec839e6fce759d32f067f6bf9a19704d5a2f0c7"
+    },
+    {
+      "path": "locales/es/safety-heritage.json",
+      "sha256": "ef7aabef78f09ee53e87061375ff0b2c69e92b569056299dce82612332557488"
+    },
+    {
+      "path": "next.config.ts",
+      "sha256": "f7b80359a5c25fe1fb5182ab5c5676af7a9c44750bfaefadc0a3e66db26a6c7e"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "455143d08933d1e806ba0ed432ca457e721fca0333b35bc567e8f0456a587e04"
+    },
+    {
+      "path": "package.json",
+      "sha256": "c817375618c938d24126a03513cb361653bdc9f3ab4b529437b0e4df2854f4fc"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+    },
+    {
+      "path": "proxy.ts",
+      "sha256": "186d97d489e84deaa0ff9ccd4ee7bd686aaca6a2afb8e9ff67811e0f44b49067"
+    },
+    {
+      "path": "public/.well-known/security.txt",
+      "sha256": "0d01a9e1c99b9a4c44fb2395ff9f171fb910213410b60b628aeb9b9ea6c8e21c"
+    },
+    {
+      "path": "public/android-chrome-192x192.png",
+      "sha256": "daefe65fb59bd49e590c4823972f7d628815939eda7533f8928529d870f423e4"
+    },
+    {
+      "path": "public/android-chrome-512x512.png",
+      "sha256": "9c1aed4efdd60f314e2586cdcfdcf2c13a75873681a1d038ac7b731ac2c955ea"
+    },
+    {
+      "path": "public/apple-touch-icon.png",
+      "sha256": "5510c6b244618699d179c06457a56e1a22833d0a105c9238f31f8dde52fff287"
+    },
+    {
+      "path": "public/favicon-16x16.png",
+      "sha256": "a8108bbc9b6aef6efc9e1b2d4e9ab9373abe53891538c6e9cb8c85aed342bc9d"
+    },
+    {
+      "path": "public/favicon-32x32.png",
+      "sha256": "63c409a562bdc9a61ccdb0b7c532aed2b0ad5d06722cabd70014abab62e5ed42"
+    },
+    {
+      "path": "public/favicon.ico",
+      "sha256": "1171550209755a2b4a3f3651e86147c63d4d50ca600c8b4793c44ae3fc277f0d"
+    },
+    {
+      "path": "public/favicon.svg",
+      "sha256": "666c6f15b9493344c6bd045c34c78b67aa843e95cd81535a3b809cc21b842e19"
+    },
+    {
+      "path": "public/file.svg",
+      "sha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4"
+    },
+    {
+      "path": "public/globe.svg",
+      "sha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf"
+    },
+    {
+      "path": "public/next.svg",
+      "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc"
+    },
+    {
+      "path": "public/robots.txt",
+      "sha256": "40d80a60f5a1072299afdf40872010b6c1038da1d45721302277a04382314f28"
+    },
+    {
+      "path": "public/site.webmanifest",
+      "sha256": "778781800e67ffd4a8cecb224da32dd22d8a3e45c10a02b0f4909baa82383890"
+    },
+    {
+      "path": "public/vercel.svg",
+      "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4"
+    },
+    {
+      "path": "public/window.svg",
+      "sha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1"
+    },
+    {
+      "path": "scripts/validate-data.mjs",
+      "sha256": "72ac67474a1e352652b7a9e9f65a4a4479a6783711c775fa032a4a7d7f1716af"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "8d9ea2b8314b5cf1d38a8b22accd952f0dd40138ecf4bc4dd64104aff65e648f"
+    },
+    {
+      "path": "types/common.ts",
+      "sha256": "56d09a4f085712c26393fdabc883bf3df43f7fed39a8a4c21420313d5b1526f9"
+    },
+    {
+      "path": "types/product.ts",
+      "sha256": "d31a944fee45780488b228759496ac815809594f7134ebfc6cdd657eb1bac962"
+    }
+  ]
+}

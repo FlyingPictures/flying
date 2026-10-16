@@ -1,0 +1,50 @@
+[
+  {
+    "path": "/es",
+    "booking": 1,
+    "hasPlaceholder": false,
+    "hasPrice": true,
+    "overflow": false,
+    "title": "El vuelo original en globo sobre Teotihuacán. | Flying Pictures México"
+  },
+  {
+    "path": "/en",
+    "booking": 1,
+    "hasPlaceholder": false,
+    "hasPrice": true,
+    "overflow": false,
+    "title": "The Original Teotihuacán Balloon Flight. | Flying Pictures México"
+  },
+  {
+    "path": "/es/flight-experiences",
+    "booking": 1,
+    "hasPlaceholder": false,
+    "hasPrice": true,
+    "overflow": false,
+    "title": "El horizonte te espera. | Flying Pictures México"
+  },
+  {
+    "path": "/en/flight-experiences",
+    "booking": 1,
+    "hasPlaceholder": false,
+    "hasPrice": true,
+    "overflow": false,
+    "title": "The Horizon Awaits. | Flying Pictures México"
+  },
+  {
+    "path": "/es/product/journey",
+    "booking": 3,
+    "hasPlaceholder": false,
+    "hasPrice": true,
+    "overflow": false,
+    "title": "Viajero | Flying Pictures México"
+  },
+  {
+    "path": "/en/product/journey",
+    "booking": 3,
+    "hasPlaceholder": false,
+    "hasPrice": true,
+    "overflow": false,
+    "title": "Traveler | Flying Pictures México"
+  }
+]
