@@ -74,3 +74,9 @@ Git permite recuperar los archivos del proyecto. No recupera automáticamente el
 Antes de M7 se debe registrar el destino y la versión anterior del despliegue. Si se utiliza la landing estática, respaldar los archivos públicos y `.htaccess` del servidor antes de sustituirlos. Si se usa un proveedor con despliegues versionados, identificar el despliegue previo y cómo volver a él.
 
 No se modificará Peek como parte de un rollback de código. Cualquier restauración de la oferta publicada debe coordinarse con las tarifas y disponibilidad vigentes en reservas.
+
+## Integración de Peek del 16 de octubre de 2026
+
+Checkpoint anterior: `fpm-packages-2026-09-30-m6` (`e1e3e6947b5cea16ce62f58efa15d7f4c1481b4e`). Checkpoint nuevo: `fpm-packages-2026-10-16-peek`. Para retirar únicamente los botones de Peek, crear un `git revert` del commit de integración, conservando el catálogo nuevo. Las etiquetas y el historial permanecen locales.
+
+Vista previa autorizada en Vercel: proyecto `flying`, equipo `team_Q0AQ8S0YznjirSGK3jqSV6iP`. Producción previa: `dpl_2s6tEHzZ8WEUai5kjxiYcb4mFsdz`, commit `21c0883d255884c02899e4377ca461ac84f6ad39`. Una vista previa no cambia los dominios de producción. No se publica código en GitHub.

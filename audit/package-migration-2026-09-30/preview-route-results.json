@@ -1,54 +1,54 @@
 {
-  "date": "2026-09-30",
+  "date": "2026-10-16",
   "base": "http://127.0.0.1:3100",
   "results": [
     {
       "path": "/es/product/classic",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "correct Peek flow",
       "metadata": "verified"
     },
     {
       "path": "/es/product/transport",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "correct Peek flow",
       "metadata": "verified"
     },
     {
       "path": "/es/product/vip",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "correct Peek flow",
       "metadata": "verified"
     },
     {
       "path": "/es/product/celebration",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "correct Peek flow",
       "metadata": "verified"
     },
     {
       "path": "/es/product/journey",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "correct Peek flow",
       "metadata": "verified"
     },
     {
       "path": "/es/product/private",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "correct Peek flow",
       "metadata": "verified"
     },
     {
       "path": "/es/product/charter",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "WhatsApp inquiry",
       "metadata": "verified"
     },
     {
@@ -90,49 +90,49 @@
       "path": "/en/product/classic",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "correct Peek flow",
       "metadata": "verified"
     },
     {
       "path": "/en/product/transport",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "correct Peek flow",
       "metadata": "verified"
     },
     {
       "path": "/en/product/vip",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "correct Peek flow",
       "metadata": "verified"
     },
     {
       "path": "/en/product/celebration",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "correct Peek flow",
       "metadata": "verified"
     },
     {
       "path": "/en/product/journey",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "correct Peek flow",
       "metadata": "verified"
     },
     {
       "path": "/en/product/private",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "correct Peek flow",
       "metadata": "verified"
     },
     {
       "path": "/en/product/charter",
       "status": 200,
       "prices": "source matched",
-      "inquiry": "correct package",
+      "reservation": "WhatsApp inquiry",
       "metadata": "verified"
     },
     {

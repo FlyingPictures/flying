@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "classic",
+    "product": "Essential Flight (Shared Flight)",
+    "status": "popup and calendar visible"
+  },
+  {
+    "slug": "transport",
+    "product": "Transport + Pyramids – Shared Flight",
+    "status": "popup and calendar visible"
+  },
+  {
+    "slug": "vip",
+    "product": "Premium – VIP Private Charter (4 Pax)",
+    "status": "correct popup product"
+  },
+  {
+    "slug": "celebration",
+    "product": "Celebration – Private Flight (2 Pax)",
+    "status": "correct popup product"
+  },
+  {
+    "slug": "journey",
+    "product": "Traveler Experience – Shared Flight (2 Pax)",
+    "status": "correct popup product, English page"
+  },
+  {
+    "slug": "private",
+    "product": "Private Essential Flight – 2 Pax",
+    "status": "correct popup product, English page"
+  }
+]

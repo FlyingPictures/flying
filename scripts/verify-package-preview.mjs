@@ -5,6 +5,8 @@ const base = new URL(process.env.PACKAGE_PREVIEW_URL ?? 'http://127.0.0.1:3100')
 assert.ok(['127.0.0.1', 'localhost'].includes(base.hostname), 'Verify a local preview only');
 const matrix = JSON.parse(await readFile('docs/matriz-comercial-paquetes-2026-09-30.json', 'utf8'));
 const results = [];
+const peekFlows = { classic: 'aDOeY', transport: 'OvVBY', vip: 'XWOzq', celebration: 'qjNAb', journey: 'D06ep', private: 'RdYP4' };
+const peekUrl = (slug) => `https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/${peekFlows[slug]}`;
 const decode = (text) => text.replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 const money = (amount) => `$${new Intl.NumberFormat('en-US').format(amount)} MXN`;
 const linkValues = (html) => [...html.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map((match) => decode(match[1]));
@@ -20,7 +22,12 @@ for (const locale of ['es', 'en']) {
     assert.ok(html.includes(`<h1 class="product-title">${name}</h1>`), `${path}: correct name`);
     assert.ok(html.includes(copy.description.paragraph), `${path}: current description`);
     for (const item of copy.details.included) assert.ok(html.includes(item), `${path}: inclusion ${item}`);
-    assert.ok(!/book\.peek\.com|voucher-de-vuelo/.test(html), `${path}: no legacy purchase`);
+    assert.ok(!/voucher-de-vuelo/.test(html), `${path}: no legacy voucher purchase`);
+    const bookingLinks = linkValues(html).filter((href) => href.startsWith('https://book.peek.com/s/'));
+    if (peekFlows[pkg.id]) {
+      assert.ok(bookingLinks.length >= 3, `${path}: main and floating Peek buttons`);
+      assert.ok(bookingLinks.every((href) => href === peekUrl(pkg.id)), `${path}: correct Peek flow`);
+    } else assert.equal(bookingLinks.length, 0, `${path}: no invented Charter flow`);
     if (pkg.id === 'journey') {
       assert.ok(html.includes(locale === 'es' ? 'Consultar precio' : 'Ask for pricing'), `${path}: price pending`);
       assert.ok(!html.includes('$7,999') && !html.includes('$8,099'), `${path}: disputed amounts absent`);
@@ -34,11 +41,11 @@ for (const locale of ['es', 'en']) {
       assert.ok(!html.includes(locale === 'es' ? '<strong>Niños' : '<strong>Children'), `${path}: no invented child fare`);
     }
     const inquiries = linkValues(html).filter((href) => href.startsWith('https://wa.me/') && href.includes('?text='));
-    assert.ok(inquiries.length >= 3, `${path}: main button and floating links`);
+    assert.ok(inquiries.length >= (peekFlows[pkg.id] ? 2 : 3), `${path}: WhatsApp contact preserved`);
     for (const href of inquiries) assert.ok(new URL(href).searchParams.get('text').includes(name), `${path}: correct inquiry package`);
     assert.ok(html.includes(`rel="canonical" href="https://www.flyingpicturesmexico.mx${path}"`), `${path}: canonical`);
     for (const lang of ['es', 'en']) assert.ok(html.includes(`hrefLang="${lang}" href="https://www.flyingpicturesmexico.mx/${lang}/product/${pkg.id}"`), `${path}: language alternate`);
-    results.push({path, status: 200, prices: 'source matched', inquiry: 'correct package', metadata: 'verified'});
+    results.push({path, status: 200, prices: 'source matched', reservation: peekFlows[pkg.id] ? 'correct Peek flow' : 'WhatsApp inquiry', metadata: 'verified'});
   }
   for (const slug of ['birthday', 'anniversary', 'proposal']) {
     const path = `/${locale}/product/${slug}`;
@@ -60,14 +67,17 @@ for (const locale of ['es', 'en']) {
     const response = await fetch(new URL(path, base));
     assert.equal(response.status, 200, path);
     const html = decode(await response.text());
-    assert.ok(!/book\.peek\.com|voucher-de-vuelo/.test(html), `${path}: no legacy purchase`);
+    assert.ok(!/voucher-de-vuelo/.test(html), `${path}: no legacy voucher purchase`);
     const catalog = route ? html.slice(html.indexOf('id="flight-options"')) : html;
     const inquiryLinks = linkValues(catalog).filter((href) => href.startsWith('https://wa.me/') && href.includes('?text='));
     if (route) {
-      assert.equal(inquiryLinks.length, 7, `${path}: seven catalog inquiries`);
+      assert.equal(inquiryLinks.length, 1, `${path}: Charter catalog inquiry`);
+      const bookingLinks = linkValues(catalog).filter((href) => href.startsWith('https://book.peek.com/s/'));
+      assert.equal(bookingLinks.length, 6, `${path}: six Peek booking buttons`);
       for (const pkg of matrix.packages) {
         const name = locale === 'es' ? pkg.nameEs : pkg.proposedNameEn;
-        assert.ok(inquiryLinks.some((href) => new URL(href).searchParams.get('text').includes(name)), `${path}: ${name}`);
+        if (peekFlows[pkg.id]) assert.ok(bookingLinks.includes(peekUrl(pkg.id)), `${path}: ${name}`);
+        else assert.ok(inquiryLinks.some((href) => new URL(href).searchParams.get('text').includes(name)), `${path}: ${name}`);
       }
     }
     results.push({path, status: 200, legacyPurchaseLinks: 0});
@@ -84,5 +94,5 @@ for (const locale of ['es', 'en']) {
   for (const slug of ['birthday', 'anniversary', 'proposal']) assert.ok(!sitemap.includes(`/product/${slug}`), `sitemap: excludes ${slug}`);
 }
 results.push({path: '/sitemap.xml', newPackages: 14, retiredProducts: 0});
-await writeFile('audit/package-migration-2026-09-30/preview-route-results.json', JSON.stringify({date: '2026-09-30', base: base.origin, results}, null, 2) + '\n');
-console.log(`Preview verified: ${results.length} route and sitemap checks; Excel prices, inquiries, metadata and redirects match.`);
+await writeFile('audit/package-migration-2026-09-30/preview-route-results.json', JSON.stringify({date: '2026-10-16', base: base.origin, results}, null, 2) + '\n');
+console.log(`Preview verified: ${results.length} route and sitemap checks; Excel prices, Peek flows, inquiries, metadata and redirects match.`);

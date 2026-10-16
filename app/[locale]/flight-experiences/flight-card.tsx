@@ -1,9 +1,9 @@
 import { CloudinaryImage } from "@/components/CloudinaryImage";
+import { ReservationLink } from "@/components/booking/reservation-link";
 import { Button } from "@/components/ui/button";
 import { getLocale, getTranslations } from "next-intl/server";
 import { IMAGES } from "@/lib/images";
 import {
-  getReservationUrl,
   PRODUCT_PRICING,
   getPriceDisplay,
   getProductName,
@@ -124,7 +124,6 @@ function FlightCard({
 }) {
   const pricing = PRODUCT_PRICING[id]!;
   const priceDisplay = getPriceDisplay(pricing, locale);
-  const bookingUrl = getReservationUrl(id, locale);
   const features = getFeatures(t(`includes.${id}`));
   const intentId = getIntentId(id);
 
@@ -207,9 +206,7 @@ function FlightCard({
               {priceDisplay.note && <p className="mt-2 max-w-sm text-xs text-secondary/60">{priceDisplay.note}</p>}
             </div>
             <Button variant="primary" size="sm" asChild>
-              <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
-                {t(`books.${id}`)}
-              </a>
+              <ReservationLink slug={id} locale={locale} />
             </Button>
           </div>
 

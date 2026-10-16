@@ -15,6 +15,7 @@ import {
 import { cloudinaryOgUrl } from "@/lib/cloudinary";
 import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { Suspense } from "react";
+import { PeekScript } from "@/components/booking/peek-script";
 
 const SITE_CONFIG = {
   name: SITE_NAME,
@@ -115,6 +116,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
       <StructuredData data={organizationSchema} />
       <StructuredData data={websiteSchema} />
+      <PeekScript />
 
       <Suspense fallback={null}>
         <GoogleAnalytics />

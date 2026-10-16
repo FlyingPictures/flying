@@ -6,9 +6,10 @@ import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import { CloudinaryImage } from '@/components/CloudinaryImage'
 import { cn } from '@/lib/utils'
+import { ReservationLink } from "@/components/booking/reservation-link";
 import { Button } from '@/components/ui/button'
 import { IMAGES } from '@/lib/images'
-import { getReservationUrl, PRODUCT_PRICING, ProductSlug, getPriceDisplay, getProductName } from '@/lib/commercial-config'
+import { PRODUCT_PRICING, ProductSlug, getPriceDisplay, getProductName } from '@/lib/commercial-config'
 import { Link } from '@/i18n/routing'
 
 type TabKey = 'shared' | 'private' | 'vip'
@@ -274,7 +275,6 @@ export function FlightExperienceSection() {
           {visibleFlights.map((flight, index) => {
             const pricing = PRODUCT_PRICING[flight.slug]!
             const priceDisplay = getPriceDisplay(pricing, locale)
-            const bookingUrl = getReservationUrl(flight.slug, locale)
 
             return (
             <article
@@ -314,9 +314,7 @@ export function FlightExperienceSection() {
                       <strong className="text-[clamp(16px,2vw,22px)]">{priceDisplay.summary}</strong>
                     </div>
                     <Button variant="primary" size="xs" asChild>
-                      <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
-                        {t('bookFlight')}
-                      </a>
+                      <ReservationLink slug={flight.slug} locale={locale} />
                     </Button>
                   </div>
                 </div>

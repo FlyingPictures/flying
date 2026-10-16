@@ -153,3 +153,7 @@ Después de la revisión de la vista previa y de acordar el destino, coordinar l
 `lib/commercial-config.ts`, `types/product.ts`, `lib/images.ts`, `locales/{es,en}/{home,flight-experiences,product,plan,safety-heritage}.json` según referencias afectadas, `locales/{es,en}/product/*.json`, `app/[locale]/(home)/HomeFlightExperience.tsx`, `app/[locale]/flight-experiences/{flight-card,flight-hero}.tsx`, `app/[locale]/product/[slug]/*`, `components/layout/{navbar,footer,floating-bar}.tsx`, `app/sitemap.ts`, `next.config.ts` y `scripts/validate-data.mjs`.
 
 `emergency-landing/` y la versión actualmente publicada se actualizarán de acuerdo con el destino y el alcance de publicación aprobados.
+
+## Actualización del 16 de octubre de 2026
+
+El usuario entregó los códigos de Peek y autorizó su integración antes de subir la vista previa. Se conectaron y comprobaron seis productos; Charter conserva consulta por falta de código. Detalles y límites: [integración de Peek](peek-reservas-2026-10-16.md). Esta actualización sustituye el estado anterior de `BOOKING_URLS` vacío para esos seis paquetes.

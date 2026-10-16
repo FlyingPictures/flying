@@ -4,12 +4,12 @@ import { Link, usePathname } from "@/i18n/routing"
 import { useScrollDirection } from "@/hooks/use-scroll-direction"
 import { useLocale, useTranslations } from "next-intl"
 import { WhatsappLogoIcon } from "@phosphor-icons/react"
+import { ReservationLink } from "@/components/booking/reservation-link";
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { SITE_CONTACT } from "@/lib/site-config"
 import {
-  BOOKING_URLS,
-  getReservationUrl,
+  getInquiryUrl,
   PRODUCT_PRICING,
   getPriceDisplay,
   isBusinessOpen,
@@ -97,13 +97,9 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
   const slug = pathname.split("/").pop() ?? ""
   const isCorporate = slug === "corporate"
   const productSlug = isProductSlug(slug) ? slug : null
-  const bookingUrl = productSlug ? BOOKING_URLS[productSlug] : undefined
-  const reservationUrl = productSlug ? getReservationUrl(productSlug, locale) : SITE_CONTACT.whatsapp
+  const inquiryUrl = productSlug ? getInquiryUrl(productSlug, locale) : SITE_CONTACT.whatsapp
   const pricing = productSlug ? PRODUCT_PRICING[productSlug] : null
   const priceDisplay = getPriceDisplay(pricing, locale)
-  const reservationLabel = locale === "es"
-    ? (isCorporate ? "Solicitar cotización" : bookingUrl ? "Ver fechas" : "Consultar disponibilidad")
-    : (isCorporate ? "Request a quote" : bookingUrl ? "Check dates" : "Ask about availability")
 
   const Content = (
     <>
@@ -119,13 +115,11 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
       )}
 
       <Button variant="primary" size="xs" className="shrink-0 px-3 text-xs min-[360px]:px-4 md:px-6 md:text-sm" asChild>
-        <a href={reservationUrl} target="_blank" rel="noopener noreferrer">
-          {reservationLabel}
-        </a>
+        <ReservationLink slug={productSlug ?? "corporate"} locale={locale} />
       </Button>
 
       <Button asChild variant="ghost" size="icon" className="shrink-0 rounded-full">
-        <a href={reservationUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <a href={inquiryUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
           <WhatsappLogoIcon size={28} weight="bold" />
         </a>
       </Button>

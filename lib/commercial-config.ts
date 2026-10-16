@@ -1,5 +1,5 @@
 import type { ProductPricing } from "./product-pricing";
-import { NEW_PACKAGE_OFFERS, NEW_PACKAGE_SLUGS } from "./package-catalog";
+import { NEW_PACKAGE_OFFERS, NEW_PACKAGE_SLUGS, PEEK_BOOKING_URLS } from "./package-catalog";
 import { SITE_CONTACT } from "./site-config";
 export { formatMxn, getPriceDisplay } from "./product-pricing";
 export type { ProductPricing, PriceDisplay, PriceRow } from "./product-pricing";
@@ -38,12 +38,21 @@ export function getProductName(slug: ProductSlug, locale: string) {
   return PRODUCT_NAMES[slug][locale === "es" ? "es" : "en"];
 }
 
-// Enable direct purchase only after the new offer is verified in the booking system.
-export const BOOKING_URLS: Partial<Record<ProductSlug, string>> = {};
+export const BOOKING_URLS: Partial<Record<ProductSlug, string>> = PEEK_BOOKING_URLS;
+
+export function getReservationLabel(slug: ProductSlug, locale: string) {
+  if (BOOKING_URLS[slug]) return locale === "es" ? "Reservar" : "Book now";
+  if (slug === "corporate") return locale === "es" ? "Solicitar cotización" : "Request a quote";
+  return locale === "es" ? "Consultar disponibilidad" : "Ask about availability";
+}
 
 export function getReservationUrl(slug: ProductSlug, locale: string) {
   const bookingUrl = BOOKING_URLS[slug];
   if (bookingUrl) return bookingUrl;
+  return getInquiryUrl(slug, locale);
+}
+
+export function getInquiryUrl(slug: ProductSlug, locale: string) {
   const name = getProductName(slug, locale);
   const message = locale === "es"
     ? `Hola, quiero consultar disponibilidad, condiciones y precio total para ${name}.`

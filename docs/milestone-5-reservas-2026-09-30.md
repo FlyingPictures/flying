@@ -13,3 +13,7 @@ La tarjeta de regalo es informativa; grupos/empresas conserva cotización. Ningu
 La landing de `emergency-landing/` es una versión previa respaldada en el checkpoint inicial. No se regeneró ni se subió: su fuente y condiciones requieren reconciliación si el usuario confirma que permanece activa. Antes de publicar debe definirse qué dominio/proyecto recibe el cambio y qué otras versiones deben retirarse o actualizarse para evitar ofertas divergentes.
 
 Para cerrar M5 se necesita confirmar la modalidad de reserva y las versiones activas. La alternativa de consulta está implementada y es revisable, sin resolver por suposición los pendientes de M1.
+
+## Actualización del 16 de octubre de 2026
+
+El usuario entregó los códigos de Peek y autorizó su integración antes de subir la vista previa. Se conectaron y comprobaron seis productos; Charter conserva consulta por falta de código. Detalles y límites: [integración de Peek](peek-reservas-2026-10-16.md). Esta actualización sustituye el estado anterior de `BOOKING_URLS` vacío para esos seis paquetes.

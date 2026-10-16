@@ -14,7 +14,6 @@ test("new package prices match the reviewed source without choosing a disputed p
     assert.equal(offer.pricing.model, source.basePrice.unit === "per_adult" ? "perPerson" : "perPackage");
     assert.equal(offer.pricing.primary, source.basePrice.commercialStatus === "pending_confirmation" ? null : source.basePrice.value);
     assert.equal(offer.pricing.secondary, source.childPrice?.value ?? null);
-    assert.equal(offer.bookingUrl, null, "Legacy checkout must not be assigned to a new offer");
     if (offer.pricing.model === "perPackage") {
       assert.equal(offer.pricing.includedPeople, null);
       assert.equal(offer.pricing.minimumPeople, source.group.minimumBookingPeople);
@@ -67,4 +66,16 @@ test("a quote-only service and a voucher do not invent child prices", () => {
   const voucher = getPriceDisplay({ primary: 2600, secondary: null, model: "voucher" }, "en");
   assert.equal(voucher.rows.length, 1);
   assert.equal(voucher.unitLabel, "Individual gift card");
+});
+
+const peekFlows = { classic: 'aDOeY', transport: 'OvVBY', vip: 'XWOzq', celebration: 'qjNAb', journey: 'D06ep', private: 'RdYP4' };
+test('Each new package uses its own Peek flow from the supplied PDF', () => {
+  const urls = new Set();
+  for (const [slug, flow] of Object.entries(peekFlows)) {
+    const expected = `https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1decab9b/${flow}`;
+    assert.equal(NEW_PACKAGE_OFFERS[slug].bookingUrl, expected, slug);
+    urls.add(expected);
+  }
+  assert.equal(urls.size, 6);
+  assert.equal(NEW_PACKAGE_OFFERS.charter.bookingUrl, null, 'No Charter flow was supplied');
 });

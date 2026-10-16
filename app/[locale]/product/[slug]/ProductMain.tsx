@@ -7,9 +7,9 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { cloudinaryUrl } from "@/lib/cloudinary";
 import { ProductTranslation } from "@/types/product";
 import { IMAGES } from "@/lib/images";
+import { ReservationLink } from "@/components/booking/reservation-link";
 import { Button } from "@/components/ui/button";
 import {
-  getReservationUrl,
   PRODUCT_PRICING,
   getPriceDisplay,
   getProductName,
@@ -36,7 +36,6 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
   const locale = useLocale();
   const productPricing = PRODUCT_PRICING[slug];
   const priceDisplay = getPriceDisplay(productPricing, locale);
-  const reservationUrl = getReservationUrl(slug, locale);
 
   const prev = useCallback(
     () => setCarouselIndex((i) => (i === null ? 0 : (i - 1 + images.length) % images.length)),
@@ -105,9 +104,7 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
                 </div>
               )}
               <Button variant="primary" size="sm" className="shrink-0" asChild>
-                <a href={reservationUrl} target="_blank" rel="noopener noreferrer">
-                  {data.pricing.dates}
-                </a>
+                <ReservationLink slug={slug} locale={locale} />
               </Button>
             </div>
             {productPricing && priceDisplay.note && <p className="text-left text-xs leading-relaxed text-muted-foreground">{priceDisplay.note}</p>}
