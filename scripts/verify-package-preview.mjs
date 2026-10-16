@@ -29,8 +29,9 @@ for (const locale of ['es', 'en']) {
       assert.ok(bookingLinks.every((href) => href === peekUrl(pkg.id)), `${path}: correct Peek flow`);
     } else assert.equal(bookingLinks.length, 0, `${path}: no invented Charter flow`);
     if (pkg.id === 'journey') {
-      assert.ok(html.includes(locale === 'es' ? 'Consultar precio' : 'Ask for pricing'), `${path}: price pending`);
-      assert.ok(!html.includes('$7,999') && !html.includes('$8,099'), `${path}: disputed amounts absent`);
+      assert.ok(html.includes(money(7999)), `${path}: verified Peek package price`);
+      assert.ok(!html.includes('$8,099'), `${path}: unused Excel comment absent`);
+      assert.ok(!html.includes(locale === 'es' ? 'Consultar precio' : 'Ask for pricing'), `${path}: price is visible`);
     } else {
       assert.ok(html.includes(money(pkg.basePrice.value)), `${path}: Excel base price`);
     }
@@ -80,7 +81,9 @@ for (const locale of ['es', 'en']) {
         else assert.ok(inquiryLinks.some((href) => new URL(href).searchParams.get('text').includes(name)), `${path}: ${name}`);
       }
     }
-    results.push({path, status: 200, legacyPurchaseLinks: 0});
+    assert.ok(html.includes(money(7999)), `${path}: Traveler price is visible`);
+    assert.ok(!html.includes(locale === 'es' ? 'Consultar precio' : 'Ask for pricing'), `${path}: no missing package price`);
+    results.push({path, status: 200, legacyPurchaseLinks: 0, travelerPrice: 7999});
   }
 }
 

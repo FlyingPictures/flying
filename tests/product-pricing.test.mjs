@@ -4,7 +4,7 @@ import test from "node:test";
 import { getPriceDisplay } from "../lib/product-pricing.ts";
 import { NEW_PACKAGE_OFFERS, NEW_PACKAGE_SLUGS } from "../lib/package-catalog.ts";
 
-test("new package prices match the reviewed source without choosing a disputed price", async () => {
+test("new package prices match the source and the verified Traveler Peek price", async () => {
   const matrix = JSON.parse(await readFile(new URL("../docs/matriz-comercial-paquetes-2026-09-30.json", import.meta.url), "utf8"));
   assert.equal(NEW_PACKAGE_SLUGS.length, 7);
   for (const source of matrix.packages) {
@@ -12,7 +12,7 @@ test("new package prices match the reviewed source without choosing a disputed p
     assert.ok(offer, `Missing ${source.id}`);
     assert.equal(offer.mode, source.mode);
     assert.equal(offer.pricing.model, source.basePrice.unit === "per_adult" ? "perPerson" : "perPackage");
-    assert.equal(offer.pricing.primary, source.basePrice.commercialStatus === "pending_confirmation" ? null : source.basePrice.value);
+    assert.equal(offer.pricing.primary, source.id === "journey" ? 7999 : source.basePrice.commercialStatus === "pending_confirmation" ? null : source.basePrice.value);
     assert.equal(offer.pricing.secondary, source.childPrice?.value ?? null);
     if (offer.pricing.model === "perPackage") {
       assert.equal(offer.pricing.includedPeople, null);
@@ -37,12 +37,14 @@ for (const locale of ["es", "en"]) {
     assert.doesNotMatch(display.note, locale === "es" ? /Incluye 2/ : /Includes 2/);
   });
 
-  test(`${locale}: disputed Traveler price is absent from all display values`, () => {
+  test(`${locale}: Traveler shows the verified Peek package price`, () => {
     const display = getPriceDisplay(NEW_PACKAGE_OFFERS.journey.pricing, locale);
-    assert.deepEqual(display.rows, []);
-    assert.equal(display.headline, locale === "es" ? "Consultar precio" : "Ask for pricing");
-    assert.equal(display.summary, display.headline);
-    assert.doesNotMatch(JSON.stringify(display), /7,999|8,099|7999|8099|\$0/);
+    assert.equal(display.rows.length, 1);
+    assert.equal(display.rows[0].amount, 7999);
+    assert.equal(display.unitLabel, locale === "es" ? "Precio por paquete" : "Price per package");
+    assert.equal(display.headline, "$7,999 MXN");
+    assert.match(display.summary, /\$7,999 MXN/);
+    assert.doesNotMatch(JSON.stringify(display), /8,099|8099|Ask for pricing|Consultar precio|\$0/);
   });
 
   test(`${locale}: a child price is separate from an additional guest price`, () => {

@@ -79,12 +79,14 @@
     {
       "path": "/es",
       "status": 200,
-      "legacyPurchaseLinks": 0
+      "legacyPurchaseLinks": 0,
+      "travelerPrice": 7999
     },
     {
       "path": "/es/flight-experiences",
       "status": 200,
-      "legacyPurchaseLinks": 0
+      "legacyPurchaseLinks": 0,
+      "travelerPrice": 7999
     },
     {
       "path": "/en/product/classic",
@@ -163,12 +165,14 @@
     {
       "path": "/en",
       "status": 200,
-      "legacyPurchaseLinks": 0
+      "legacyPurchaseLinks": 0,
+      "travelerPrice": 7999
     },
     {
       "path": "/en/flight-experiences",
       "status": 200,
-      "legacyPurchaseLinks": 0
+      "legacyPurchaseLinks": 0,
+      "travelerPrice": 7999
     },
     {
       "path": "/sitemap.xml",

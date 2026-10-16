@@ -25,7 +25,6 @@ export interface PackageOffer {
   mode: "shared" | "private";
   pricing: ProductPricing;
   priceSource: string;
-  unresolvedPriceCandidates?: readonly number[];
   bookingUrl: string | null;
   additionalPassengers: readonly {
     category: "adult" | "child" | "guest" | "nonFlyingGuest";
@@ -66,8 +65,8 @@ export const NEW_PACKAGE_OFFERS: Record<NewPackageSlug, PackageOffer> = {
   },
   journey: {
     names: { es: "Viajero", en: "Traveler" }, mode: "shared",
-    pricing: { primary: null, secondary: null, model: "perPackage", includedPeople: null, minimumPeople: 2 },
-    priceSource: "Paquetes!F13 y comentario", unresolvedPriceCandidates: [7999, 8099], bookingUrl: PEEK_BOOKING_URLS.journey,
+    pricing: { primary: 7999, secondary: null, model: "perPackage", includedPeople: null, minimumPeople: 2 },
+    priceSource: "Paquetes!F13; Peek D06ep verificado 2026-10-16", bookingUrl: PEEK_BOOKING_URLS.journey,
     additionalPassengers: [
       { category: "guest", observedAmount: 1450, source: "Paquetes!F53", status: "pendingConfirmation" },
     ],
