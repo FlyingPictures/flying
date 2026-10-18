@@ -99,10 +99,6 @@ export const IMAGES = {
     finest: {
       cards: ["Rectangle_123_1_x3ehkj", "Rectangle_123_1_x3ehkj", "Rectangle_123_1_x3ehkj", "Rectangle_123_1_x3ehkj"],
     },
-    meetGiants: {
-      banner: "Rectangle_41_3_ptng3e",
-      cards: ["Rectangle_41_7_ukxg3h", "Rectangle_41_6_qcbkkl", "Rectangle_41_2_fyibpj"],
-    },
     mastery: { background: "Rectangle_39_1_xdhqj7" },
     safety: { background: "Rectangle_40_lkwnum" },
     tale: {

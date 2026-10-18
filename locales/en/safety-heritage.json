@@ -114,47 +114,11 @@
              }
         },
         "meetGiants": {
-            "title": "Meet Gentle Giants",
-            "description": "We treat our balloons like members of the family. Each one has a name, a history, and a distinct personality.",
-            "subtitle": "THE FLAGSHIPS",
-            "description2": "Designed for stability, comfort, and the Essential Flight.",
-            "subtitle2": "THE VIP INTERCEPTORS",
-            "description3": "Designed for agility, intimacy, and Private Ascents.",
-            "cards": {
-                "1": {
-                    "name": "Cameron A-315 (The Heavy Lifters)",
-                    "subname": "XB-PCA / XB-SGN",
-                    "description": "Think of them as the \"Ocean Liners\" of the sky. With a lift capacity of 800kg, these massive envelopes offer the smoothest, most stable flight experience. They are equipped with our signature compartmented baskets, ensuring every guest has their own \"corner\" for photography.",
-                    "capacity": "Capacity: 12 Passengers + Pilot",
-                    "mission": "Mission: The Essential Shared Flight"
-                },
-                "2": {
-                    "name": "Cameron Z-120 (The Racer)",
-                    "subname": "XB-OWK",
-                    "description": "The \"Roadster\". The Z-Series features a slightly more aerodynamic shape, allowing for quicker climbs and responsive handling. It is small, fast, and incredibly intimate.",
-                    "capacity": "Capacity: 2-3 Passengers (Exclusive)",
-                    "mission": "Mission: Proposals & Private Couple Flights."
-                },
-                 "3": {
-                    "name": "Cameron Z-160",
-                    "subname": "XB-USY",
-                    "description": "The perfect balance between power and privacy. Large enough for a double date or a small family, but small enough to feel like your own private balcony over the pyramids.",
-                    "capacity": "Capacity: 4 Passengers (Family/Double Date)",
-                    "mission": "Mission: Anniversaries & Small Families."
-                 }
-             },
-            "banner": {
-                "title": "THE LEGACY SQUADRON",
-                "subtitle": "The versatile vessels that round out our capability.",
-                "cardtitle": "Various Cameron Series",
-                "cardsubtitle": "Verified Fleet",
-                "carddescription": "Pasión",
-                "cardsubdescription": "True to its name, this aircraft is often requested for our most romantic milestones. It has witnessed hundreds of \"Yes, I will\" moments above the Sun Pyramid.",
-                "carddescription2": "Cóndor",
-                "cardsubdescription2": "Named after the ruler of the Andean skies, this vessel is a workhorse of the valley, combining lift power with the majesty of flight.",
-                "carddescription3": "Mercurio & Rubicón",
-                "cardsubdescription3": "The agile support fleet, ready to deploy for special events and film logistics."
-            }
+            "title": "Meet the Gentle Giants",
+            "subtitle": "OUR FLEET",
+            "description": "Every balloon has a name and a story of its own. At Flying Pictures, we fly Cameron Balloons aircraft and continue to invest in our fleet. Behind their colours is equipment we prepare and care for before each flight over the Teotihuacán Valley.",
+            "pendingPhoto": "Photo to be added",
+            "photoAlt": "Flying Pictures balloon {name}"
         }
     }
 }

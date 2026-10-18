@@ -114,46 +114,10 @@
     },
     "meetGiants": {
       "title": "Conoce a nuestros gigantes amables",
-      "description": "Tratamos a nuestros globos como miembros de la familia. Cada uno tiene un nombre, una historia y una personalidad propia.",
-      "subtitle": "LOS BUQUES INSIGNIA",
-      "description2": "Diseñados para estabilidad, comodidad y el Vuelo Esencial.",
-      "subtitle2": "LOS GLOBOS VIP",
-      "description3": "Diseñados para agilidad, intimidad y vuelos privados.",
-      "cards": {
-        "1": {
-          "name": "Cameron A-315 (Los pesos pesados)",
-          "subname": "XB-PCA / XB-SGN",
-          "description": "Piensa en ellos como los grandes transatlánticos del cielo. Con una capacidad de elevación de 800 kg, estos enormes envolventes ofrecen un vuelo suave y estable. Están equipados con nuestras canastillas compartimentadas, para que cada pasajero tenga su propio espacio para disfrutar y tomar fotografías.",
-          "capacity": "Capacidad: 12 pasajeros + piloto",
-          "mission": "Misión: Vuelo Clásico compartido"
-        },
-        "2": {
-          "name": "Cameron Z-120 (El Corredor)",
-          "subname": "XB-OWK",
-          "description": "El roadster de la flota. La Serie Z tiene una forma más aerodinámica, permite ascensos ágiles y responde con gran precisión. Es pequeño, veloz e increíblemente íntimo.",
-          "capacity": "Capacidad: 2-3 pasajeros (exclusivo)",
-          "mission": "Misión: propuestas y vuelos privados en pareja."
-        },
-        "3": {
-          "name": "Cameron Z-160",
-          "subname": "XB-USY",
-          "description": "El equilibrio perfecto entre potencia y privacidad. Suficientemente amplio para una familia pequeña o dos parejas, pero íntimo para sentirse como un balcón privado sobre las pirámides.",
-          "capacity": "Capacidad: 4 pasajeros (familia o dos parejas)",
-          "mission": "Misión: aniversarios y familias pequeñas."
-        }
-      },
-      "banner": {
-        "title": "EL ESCUADRÓN LEGADO",
-        "subtitle": "Las aeronaves versátiles que completan nuestra capacidad operativa.",
-        "cardtitle": "Varias series Cameron",
-        "cardsubtitle": "Flota verificada",
-        "carddescription": "Pasión",
-        "cardsubdescription": "Fiel a su nombre, esta aeronave suele acompañar nuestros momentos más románticos. Ha sido testigo de cientos de \"sí, acepto\" sobre la Pirámide del Sol.",
-        "carddescription2": "Cóndor",
-        "cardsubdescription2": "Nombrado en honor al soberano de los cielos andinos, es una de las aeronaves más versátiles del valle: combina potencia de elevación con la majestuosidad del vuelo.",
-        "carddescription3": "Mercurio & Rubicón",
-        "cardsubdescription3": "Nuestra flota de apoyo ágil, lista para eventos especiales y logística de filmación."
-      }
+      "subtitle": "NUESTRA FLOTA",
+      "description": "Cada globo tiene nombre y una historia propia. En Flying Pictures volamos con aeronaves Cameron Balloons y seguimos invirtiendo en nuestra flota. Detrás de sus colores hay equipo que preparamos y cuidamos para cada vuelo sobre el Valle de Teotihuacán.",
+      "pendingPhoto": "Foto por agregar",
+      "photoAlt": "Globo {name} de Flying Pictures"
     }
   }
 }
