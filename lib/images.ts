@@ -99,7 +99,7 @@ export const IMAGES = {
     finest: {
       cards: ["Rectangle_123_1_x3ehkj", "Rectangle_123_1_x3ehkj", "Rectangle_123_1_x3ehkj", "Rectangle_123_1_x3ehkj"],
     },
-    mastery: { background: "Rectangle_39_1_xdhqj7" },
+    mastery: { background: "pilotos1_cg67fi.webp" },
     safety: { background: "Rectangle_40_lkwnum" },
     tale: {
       cards: [

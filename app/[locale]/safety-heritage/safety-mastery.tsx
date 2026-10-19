@@ -13,26 +13,26 @@ export async function SafetyMastery() {
   const stories = Object.values(t.raw('cards') as Record<string, PilotStory>)
 
   return (
-    <section className="relative isolate w-full overflow-hidden px-4 py-[clamp(72px,9vw,144px)] sm:px-6">
-      <div className="absolute inset-0 -z-20">
+    <section className="relative w-full overflow-hidden bg-[#dbe7eb] pt-[clamp(72px,8vw,112px)] pb-[clamp(72px,8vw,112px)]">
+      <div className="relative mx-auto flex max-w-230 flex-col items-center gap-5 px-4 text-center sm:px-6">
+        <h4 className="text-secondary">{t('subtitle')}</h4>
+        <h2 className="max-w-210 text-secondary">{t('title')}</h2>
+        <p className="max-w-175 text-secondary/90">{t('description')}</p>
+      </div>
+
+      <div className="relative mt-[clamp(36px,5vw,72px)] h-[clamp(260px,44vw,620px)] w-full overflow-hidden bg-[#b7cbd4]">
         <CloudinaryImage
           publicId={IMAGES.safety.mastery.background}
           alt=""
           fill
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-[center_58%] md:object-[center_55%]"
         />
+        <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent via-transparent to-[#dbe7eb]/40" />
       </div>
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(229,238,243,0.89)_0%,rgba(229,238,243,0.72)_49%,rgba(204,222,230,0.87)_100%)]" />
 
-      <div className="relative mx-auto max-w-325">
-        <div className="mx-auto flex max-w-230 flex-col items-center gap-5 text-center">
-          <h4 className="text-secondary">{t('subtitle')}</h4>
-          <h2 className="max-w-210 text-secondary">{t('title')}</h2>
-          <p className="max-w-175 text-secondary/90">{t('description')}</p>
-        </div>
-
-        <ol className="mt-[clamp(40px,6vw,80px)] grid gap-4 md:grid-cols-3 md:gap-5">
+      <div className="relative mx-auto -mt-8 max-w-325 px-4 sm:-mt-12 sm:px-6 lg:-mt-16">
+        <ol className="grid gap-4 md:grid-cols-3 md:gap-5">
           {stories.map((story, index) => (
             <li
               key={story.title}
