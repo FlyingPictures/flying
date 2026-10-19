@@ -1,7 +1,9 @@
 import { CloudinaryImage } from "@/components/CloudinaryImage";
+import { HeroBackgroundVideo } from "@/components/HeroBackgroundVideo";
 import { Button } from "@/components/ui/button";
 import { getLocale, getTranslations } from "next-intl/server";
 import { IMAGES } from "@/lib/images";
+import { cloudinaryUrl } from "@/lib/cloudinary";
 import {
   PRODUCT_PRICING,
   getPriceDisplay,
@@ -12,6 +14,9 @@ import {
   TRIPADVISOR_REVIEW_COUNT,
 } from "@/lib/tripadvisor-reviews";
 
+const HERO_VIDEO_URL =
+  "https://res.cloudinary.com/dkmjguzvx/video/upload/v1792443510/videobg_mreohi.mp4";
+
 export async function FlightHero() {
   const [t, locale] = await Promise.all([
     getTranslations("flightExperiences.hero"),
@@ -20,7 +25,7 @@ export async function FlightHero() {
   const entryPrice = getPriceDisplay(PRODUCT_PRICING.classic, locale);
 
   return (
-    <section className="relative flex min-h-[780px] overflow-hidden bg-secondary pb-14 pt-40 text-background md:min-h-[720px] md:pt-44 lg:min-h-[820px] lg:items-center lg:pb-16 lg:pt-44">
+    <section className="relative flex min-h-[780px] overflow-hidden bg-secondary pb-24 pt-40 text-background md:min-h-[720px] md:pb-14 md:pt-44 lg:min-h-[820px] lg:items-center lg:pb-16 lg:pt-44">
       <div className="absolute inset-0">
         <CloudinaryImage
           publicId={IMAGES.flightExperiences.hero.background}
@@ -30,6 +35,12 @@ export async function FlightHero() {
           sizes="100vw"
           className="h-full w-full object-cover object-[center_45%]"
           objectFit="cover"
+        />
+        <HeroBackgroundVideo
+          src={HERO_VIDEO_URL}
+          poster={cloudinaryUrl(IMAGES.flightExperiences.hero.background)}
+          pauseLabel={t("pauseVideo")}
+          playLabel={t("playVideo")}
         />
         <div className="absolute inset-0 bg-secondary/10" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,48,59,0.88)_0%,rgba(3,48,59,0.67)_43%,rgba(3,48,59,0.14)_78%,rgba(3,48,59,0.04)_100%)]" />
