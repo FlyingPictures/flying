@@ -95,21 +95,24 @@
              }
         },
         "mastery": {
-            "subtitle": "MEET THE CAPTAINS",
-            "title": "Mastery Has No Shortcut.",
-            "description": "In aviation, respect is earned in hours, not years. Whether they are veterans with decades in the air or rising stars of the sport, every Flying Pictures pilot meets the \"Sean Standard.\"",
+            "subtitle": "OUR PILOTS",
+            "title": "The experience begins with the people making the decisions.",
+            "description": "Our team includes pilots who have flown at festivals and on projects in Mexico and abroad. Their work begins before you step into the basket: preparing the flight and explaining what you need to know. Once in the air, there is room to ask questions, talk, and discover the valley from their perspective.",
             "cards": {
                 "1": {
-                    "name": "Certified Authority",
-                    "description": "Every pilot holds a commercial license issued by the AFAC (Agencia Federal de Aviación Civil). We don't employ hobbyists."
+                    "label": "EXPERIENCE",
+                    "title": "Experience across different skies",
+                    "description": "Pilots on our team have experience with balloon festivals and flight projects in Mexico and other countries. Each setting broadens the perspective they bring to Teotihuacán."
                 },
                 "2": {
-                    "name": "2,000+ Hours",
-                    "description": "The average experience in our cockpit far exceeds the industry requirement."
+                    "label": "BEFORE TAKEOFF",
+                    "title": "Prepare and explain",
+                    "description": "A flight begins with preparation and clear guidance for passengers. It is a chance to understand the plan and ask questions before takeoff."
                 },
                 "3": {
-                    "name": "The Mentorship Model",
-                    "description": "Our younger pilots are not just hired; they are mentored. They fly under the strict supervision of our founders, ensuring the safety culture remains unbroken."
+                    "label": "IN THE AIR",
+                    "title": "Share the valley",
+                    "description": "There is time for conversation, too: watching the balloons move, understanding the landscape, and hearing what the pilot notices from the basket."
                 }
              }
         },

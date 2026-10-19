@@ -94,21 +94,24 @@
       }
     },
     "mastery": {
-      "subtitle": "CONOCE A LOS CAPITANES",
-      "title": "La maestría no tiene atajos.",
-      "description": "En aviación, el respeto se gana en horas de vuelo, no solo en años. Desde pilotos veteranos hasta nuevas generaciones formadas dentro de nuestra cultura operativa, cada capitán de Flying Pictures cumple con el Estándar Sean.",
+      "subtitle": "NUESTROS PILOTOS",
+      "title": "La experiencia empieza con quien toma las decisiones.",
+      "description": "En nuestro equipo hay pilotos que han volado en festivales y proyectos dentro y fuera de México. Su trabajo comienza antes de subir a la canastilla: preparar el vuelo y explicar lo que necesitas saber. Ya en el aire, también hay espacio para preguntar, conversar y descubrir el valle desde su perspectiva.",
       "cards": {
         "1": {
-          "name": "Autoridad certificada",
-          "description": "Cada piloto cuenta con licencia comercial emitida por la AFAC, la Agencia Federal de Aviación Civil. No ponemos tu vuelo en manos de aficionados."
+          "label": "TRAYECTORIA",
+          "title": "Experiencia en distintos cielos",
+          "description": "Entre los pilotos del equipo hay experiencia en festivales y proyectos de vuelo en México y otros países. Cada entorno amplía su perspectiva al volar sobre Teotihuacán."
         },
         "2": {
-          "name": "Más de 2,000 horas",
-          "description": "La experiencia promedio en nuestra cabina supera ampliamente los requisitos habituales de la industria."
+          "label": "ANTES DEL DESPEGUE",
+          "title": "Preparar y explicar",
+          "description": "El vuelo empieza con preparación e indicaciones claras para los pasajeros. Es el momento de conocer el plan y resolver dudas antes de despegar."
         },
         "3": {
-          "name": "Modelo de mentoría",
-          "description": "Los pilotos más jóvenes no solo se integran al equipo: reciben mentoría y vuelan bajo la estricta supervisión de nuestros fundadores para conservar intacta nuestra cultura de seguridad."
+          "label": "EN EL AIRE",
+          "title": "Compartir el valle",
+          "description": "También hay tiempo para conversar: observar el movimiento de los globos, entender el paisaje y escuchar lo que el piloto descubre desde la canastilla."
         }
       }
     },
