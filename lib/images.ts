@@ -17,7 +17,7 @@ export const IMAGES = {
       { publicId: "telcelogo150150_wslrln", alt: "Telcel" },
     ],
     liveMonitoring: {
-      background: "Rectangle_63_x9khlt",
+      background: "Rectangle_40_lkwnum",
       card1: "livemonitoring_ujhljj",
       card2: "yellowcard_dvlrgw",
     },

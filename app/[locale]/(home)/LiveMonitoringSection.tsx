@@ -48,6 +48,16 @@ export async function LiveMonitoringSection() {
 
   return (
     <section className="relative w-full overflow-hidden border-0 bg-black py-24 outline-none ring-0 shadow-none">
+      <div className="absolute inset-0" aria-hidden="true">
+        <CloudinaryImage
+          publicId={IMAGES.home.liveMonitoring.background}
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,#000_0%,rgba(0,0,0,0.12)_38%,#000_100%)]" />
+      </div>
       <div className="relative mx-auto flex w-full flex-col items-center px-4 md:px-8 pt-21 max-w-[clamp(345px,100%,1268px)]">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 inline-flex items-center justify-center rounded-full px-6 py-2 backdrop-blur-md text-background bg-[rgba(217,217,217,0.37)]">
           <span className="mr-2 h-2 w-2 animate-pulse rounded-full bg-green-500" />
