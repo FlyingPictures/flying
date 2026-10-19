@@ -3,17 +3,17 @@ export type FleetBalloon = {
   publicId: string | null;
 };
 
-// Names come from Flying Pictures' fleet slide. Add the matching Cloudinary
-// public ID for each confirmed balloon after the photo selection is approved.
+// Names come from Flying Pictures' fleet slide. Image paths are taken from the
+// Cloudinary links supplied for each named balloon; keep the format extension.
 export const SAFETY_FLEET: readonly FleetBalloon[] = [
-  { name: "Turco", publicId: null },
-  { name: "Zafiro", publicId: null },
+  { name: "Turco", publicId: "turco_kx357y.webp" },
+  { name: "Zafiro", publicId: "zafiro_oehcka.webp" },
   { name: "Pasión", publicId: null },
-  { name: "Turquesa", publicId: null },
-  { name: "Candy", publicId: null },
-  { name: "Harris", publicId: null },
+  { name: "Turquesa", publicId: "turquesa_azu4dw.webp" },
+  { name: "Candy", publicId: "candy_aaayef.webp" },
+  { name: "Harris", publicId: "harris_e83z0q.webp" },
   { name: "Mercurio", publicId: null },
-  { name: "Acuario", publicId: null },
+  { name: "Acuario", publicId: "Acuario_skovv0.webp" },
   { name: "Jambo", publicId: null },
   { name: "Cóndor", publicId: null },
   { name: "Rubicón", publicId: null },
