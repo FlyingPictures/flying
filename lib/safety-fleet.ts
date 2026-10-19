@@ -14,7 +14,7 @@ export const SAFETY_FLEET: readonly FleetBalloon[] = [
   { name: "Harris", publicId: "harris_e83z0q.webp" },
   { name: "Mercurio", publicId: null },
   { name: "Acuario", publicId: "Acuario_skovv0.webp" },
-  { name: "Jambo", publicId: null },
+  { name: "Jambo", publicId: "Jambo_jufmzu.webp" },
   { name: "Cóndor", publicId: null },
   { name: "Rubicón", publicId: null },
   { name: "Rumaya", publicId: null },
