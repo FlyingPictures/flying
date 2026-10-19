@@ -33,17 +33,17 @@ const CARD_IMAGES: Record<(typeof CATALOG_FLIGHTS)[number], string> = {
   transport: IMAGES.product.gallery.transport[0],
   classic: IMAGES.product.gallery.classic[0],
   journey: IMAGES.product.gallery.journey[0],
-  celebration: IMAGES.product.gallery.celebration[0],
+  celebration: IMAGES.product.gallery.celebration[1],
   private: IMAGES.product.gallery.private[0],
   charter: IMAGES.product.gallery.charter[0],
-  vip: IMAGES.product.gallery.vip[0],
+  vip: IMAGES.product.gallery.vip[1],
 };
 
 const IMAGE_POSITION: Partial<Record<FlightId, string>> = {
   transport: "object-[center_48%]",
   classic: "object-[center_46%]",
   journey: "object-center",
-  celebration: "object-center",
+  celebration: "object-bottom",
   private: "object-center",
   charter: "object-center",
   vip: "object-[center_46%]",
