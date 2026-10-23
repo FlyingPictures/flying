@@ -85,10 +85,7 @@ export default function ProductItinerary({ slug, data }: Props) {
     <section className="w-full px-4 pb-10 pt-4 md:px-10 lg:px-20 lg:pb-14 lg:pt-6">
       <div className="mx-auto w-full max-w-270 border-t border-border pt-8 lg:pt-10">
         <header className="max-w-180 lg:mx-auto lg:text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary-foreground/70">
-            {t("eyebrow")}
-          </p>
-          <h3 className="mt-2">{itinerary.title}</h3>
+          <h3>{itinerary.title}</h3>
         </header>
 
         <div

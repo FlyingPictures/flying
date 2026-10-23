@@ -183,6 +183,8 @@ const HeaderBanner = () => {
 
 export default function Navbar() {
   const t = useTranslations("nav")
+  const pathname = usePathname()
+  const isPackagePage = pathname.startsWith("/product/")
   const { scrollDirection, scrollY } = useScrollDirection()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSheetOpen, setIsSheetOpen] = useState(false)
@@ -268,7 +270,7 @@ export default function Navbar() {
             <div className="flex flex-1 items-center justify-end gap-8">
               <NavLink id="contactSupport" href="/contact" />
               <LanguageSwitcher />
-              <BookButton />
+              {!isPackagePage && <BookButton />}
             </div>
           </nav>
         </div>
@@ -293,7 +295,7 @@ export default function Navbar() {
             />
           </Link>
           <div className="flex items-center gap-3 ml-auto">
-            <BookButton />
+            {!isPackagePage && <BookButton />}
             <SheetPrimitive.Root open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetPrimitive.Trigger asChild>
                 <button className="p-1 outline-none" aria-label={t("openMenu")}>
@@ -375,9 +377,11 @@ export default function Navbar() {
                     </div>
                   </div>
 
-                  <div className="shrink-0 border-t border-secondary/10 bg-background px-5 pb-[max(1rem,env(safe-area-inset-bottom))] pt-4 shadow-[0_-12px_35px_rgba(3,48,59,0.08)]">
-                    <BookButton className="w-full" onClick={() => setIsSheetOpen(false)} />
-                  </div>
+                  {!isPackagePage && (
+                    <div className="shrink-0 border-t border-secondary/10 bg-background px-5 pb-[max(1rem,env(safe-area-inset-bottom))] pt-4 shadow-[0_-12px_35px_rgba(3,48,59,0.08)]">
+                      <BookButton className="w-full" onClick={() => setIsSheetOpen(false)} />
+                    </div>
+                  )}
                 </SheetPrimitive.Content>
               </SheetPrimitive.Portal>
             </SheetPrimitive.Root>

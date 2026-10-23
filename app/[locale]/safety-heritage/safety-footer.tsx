@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import { Button } from '@/components/ui/button'
+import { Link } from '@/i18n/routing'
 
 export async function SafetyFooter() {
   const t = await getTranslations('safety.footer')
@@ -11,7 +12,9 @@ export async function SafetyFooter() {
           <h2 className="text-background whitespace-pre-line text-left! md:text-center! text-[36px]! w-full">{t('title')}</h2>
           <h3 className="text-background text-left md:text-center md:whitespace-pre-line italic">{t('description')}</h3>
         </div>
-        <Button className="md:mt-0">{t('button')}</Button>
+        <Button asChild className="md:mt-0">
+          <Link href="/flight-experiences">{t('button')}</Link>
+        </Button>
       </div>
     </section>
   )
