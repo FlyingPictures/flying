@@ -10,7 +10,8 @@
     "https://drive.google.com/drive/folders/1zCecgZ9qu2zXQlsmv4MLlwRxqbdjEMXZ",
     "https://drive.google.com/drive/folders/1P-jwCMcIjMGvkCJqvh6uHd0R7jzQO9qX",
     "https://drive.google.com/drive/folders/1Lk5C230Lchb4EiWy1sWigyXzyJyT5LVu",
-    "https://drive.google.com/drive/folders/1d7IdMhsM04BRXK6tUg1HavY_Cy6VIuqz"
+    "https://drive.google.com/drive/folders/1d7IdMhsM04BRXK6tUg1HavY_Cy6VIuqz",
+    "https://drive.google.com/drive/folders/1amHa651zLdBDedMGVTX6GzNBprmwEe6y"
   ],
   "review": {
     "albums": {
@@ -23,9 +24,14 @@
     },
     "newFileIdsOutsidePreviousPreviewIndex": 1157,
     "additionalThumbnailsInspected": 1148,
-    "note": "Se recorrieron los seis álbumes y se cotejaron sus archivos por identificador. Se compararon las miniaturas nuevas disponibles y se abrieron los originales seleccionados. Las fotos pendientes requieren confirmación del servicio o la operación.",
-    "distinctGalleryPhotos": 32,
-    "distinctItineraryPhotosProposed": 33
+    "note": "Se contrastó la selección de los seis álbumes con las inclusiones de cada ficha y con el archivo web y audiovisual de Flying.",
+    "distinctGalleryPhotos": 19,
+    "distinctItineraryPhotosProposed": 34,
+    "galleryStatusCounts": {
+      "propuesta": 15,
+      "confirmar_sean": 4,
+      "falta_foto": 8
+    }
   },
   "implementationRules": [
     "Galería y fotografías de itinerario deben tener mapas independientes. Eliminar el uso de índice módulo longitud de galería para asignar las fotos del itinerario.",
@@ -62,32 +68,6 @@
       "originalInspected": true,
       "label": "Reacción",
       "reason": "Una carcajada entre tres pasajeros, a la distancia de quien va con ellos."
-    },
-    "n1084": {
-      "filename": "DSC09646.JPG",
-      "driveFileId": "1q-QL_Y3Lks5XkiruQZ-73UVMvCcKQtE3",
-      "sourceUrl": "https://drive.google.com/file/d/1q-QL_Y3Lks5XkiruQZ-73UVMvCcKQtE3/view",
-      "album": "Pedro",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "Detalle",
-      "reason": "Primer plano del quemador encendido. Cambia el ritmo entre dos imágenes de personas."
-    },
-    "n468": {
-      "filename": "_CAP8487.JPG",
-      "driveFileId": "1WXnojmysNzR1iweYM49_u8HytH22qX7y",
-      "sourceUrl": "https://drive.google.com/file/d/1WXnojmysNzR1iweYM49_u8HytH22qX7y/view",
-      "album": "Carlos",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "Escala",
-      "reason": "Dos viajeros abren los brazos contra la enorme tela azul. El tamaño se entiende de un vistazo."
     },
     "b1629": {
       "filename": "IMG_6470.JPG",
@@ -175,58 +155,6 @@
         "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
       }
     },
-    "n735": {
-      "filename": "DSC00892.JPG",
-      "driveFileId": "1x7q6Nf1w-VJypAUEatbHcPFCyIjs7JWN",
-      "sourceUrl": "https://drive.google.com/file/d/1x7q6Nf1w-VJypAUEatbHcPFCyIjs7JWN/view",
-      "album": "Pedro",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "Destino",
-      "reason": "Tres viajeras sonríen en la canastilla con la pirámide visible a la derecha. Conservar ambos extremos."
-    },
-    "b1455": {
-      "filename": "IMG_8192.JPG",
-      "driveFileId": "19vKyNz_GKaxeUF1pWnLc25JXsibh7_z2",
-      "sourceUrl": "https://drive.google.com/file/d/19vKyNz_GKaxeUF1pWnLc25JXsibh7_z2/view",
-      "album": "Natalia",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "En familia",
-      "reason": "Una niña levanta los brazos junto a sus padres frente a los colores del globo."
-    },
-    "n549": {
-      "filename": "_CAP9264.JPG",
-      "driveFileId": "1se13NaWsI4MUtPB66iuCvU_2FF8s6WQr",
-      "sourceUrl": "https://drive.google.com/file/d/1se13NaWsI4MUtPB66iuCvU_2FF8s6WQr/view",
-      "album": "Carlos",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "En vuelo",
-      "reason": "Una canastilla identificada con Flying y la bandera de México se recorta contra el cielo."
-    },
-    "a673": {
-      "filename": "IMG_0556.JPG",
-      "driveFileId": "1uGZ5uSsEUUwyMR7iw_sz6QqEfyR3urFZ",
-      "sourceUrl": "https://drive.google.com/file/d/1uGZ5uSsEUUwyMR7iw_sz6QqEfyR3urFZ/view",
-      "album": "Natalia",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "Emoción",
-      "reason": "Una pasajera levanta el puño junto a su acompañante. La expresión cuenta lo que se siente al subir."
-    },
     "b2304": {
       "filename": "_MG_1563.JPG",
       "driveFileId": "1XRhksUBf-ZIZphl3oKQ3hJ1JRmW7nDFr",
@@ -309,19 +237,6 @@
       "label": "Traslado con pasajeros",
       "reason": "Sean debe confirmar el vehículo y si corresponde al traslado compartido vigente."
     },
-    "b516": {
-      "filename": "BDS_7520.JPG",
-      "driveFileId": "1mMOns-oosLsMPnQi4LkTjaI-FcJO6Wg4",
-      "sourceUrl": "https://drive.google.com/file/d/1mMOns-oosLsMPnQi4LkTjaI-FcJO6Wg4/view",
-      "album": "Javier",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "Descubrimiento",
-      "reason": "Una viajera mira a un lado mientras el globo con el ave de Flying asciende detrás."
-    },
     "aerial": {
       "label": "Territorio",
       "filename": "_CAP6416.JPG",
@@ -338,45 +253,6 @@
         "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
         "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
       }
-    },
-    "n863": {
-      "filename": "DSC04905.JPG",
-      "driveFileId": "1xg4h3Qmz5XGeISJlaoRB_CdAfrdZ6oMl",
-      "sourceUrl": "https://drive.google.com/file/d/1xg4h3Qmz5XGeISJlaoRB_CdAfrdZ6oMl/view",
-      "album": "Pedro",
-      "dimensions": {
-        "width": 4000,
-        "height": 6000
-      },
-      "originalInspected": true,
-      "label": "Mirada",
-      "reason": "Un niño mira a través de su cámara. Ilustra la curiosidad por el destino."
-    },
-    "b999": {
-      "filename": "_DSC1426.JPG",
-      "driveFileId": "1QFGLJR9eSkNeI-vL-zMuD3xh6-5BQYZh",
-      "sourceUrl": "https://drive.google.com/file/d/1QFGLJR9eSkNeI-vL-zMuD3xh6-5BQYZh/view",
-      "album": "Luis",
-      "dimensions": {
-        "width": 3008,
-        "height": 2000
-      },
-      "originalInspected": true,
-      "label": "México",
-      "reason": "Dos viajeros despliegan la bandera desde la canastilla junto al equipo. La chamarra roja identifica a Flying en el mismo encuadre."
-    },
-    "a649": {
-      "filename": "IMG_1000.JPG",
-      "driveFileId": "1tImyP-AU0jbJRkhR2VL0cw4n-uaKK7lB",
-      "sourceUrl": "https://drive.google.com/file/d/1tImyP-AU0jbJRkhR2VL0cw4n-uaKK7lB/view",
-      "album": "Natalia",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "Recuerdo",
-      "reason": "Cinco amigas saltan en el campo. El horizonte despejado deja que sus siluetas cierren la secuencia."
     },
     "n963": {
       "filename": "DSC06025.JPG",
@@ -469,23 +345,6 @@
       "label": "Flores",
       "reason": "La entrega del ramo en el campo conserva la expresión de ambos y el contexto del vuelo."
     },
-    "celebration-flight": {
-      "label": "Emoción",
-      "filename": "_CAP2048.JPG",
-      "driveFileId": "1six9IJepytAhsH3ESy1DWRnXSr9uPKOV",
-      "sourceUrl": "https://drive.google.com/file/d/1six9IJepytAhsH3ESy1DWRnXSr9uPKOV/view",
-      "album": "Carlos",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "reason": "Varias pasajeras celebran con los brazos arriba y el quemador encendido.",
-      "crop": {
-        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
-        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
-      }
-    },
     "cake": {
       "label": "Cumpleaños",
       "filename": "DSC03320.JPG",
@@ -502,19 +361,6 @@
         "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
         "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
       }
-    },
-    "b1696": {
-      "filename": "IMG_6275.JPG",
-      "driveFileId": "1pfOAtk8ZSaSOjKft_Np4NPAGudI6Dxe1",
-      "sourceUrl": "https://drive.google.com/file/d/1pfOAtk8ZSaSOjKft_Np4NPAGudI6Dxe1/view",
-      "album": "Suyin",
-      "dimensions": {
-        "width": 5472,
-        "height": 3648
-      },
-      "originalInspected": true,
-      "label": "Flying",
-      "reason": "Una pareja forma corazones con las manos delante del ave de Flying."
     },
     "n1151": {
       "filename": "_DSC9773.JPG",
@@ -599,32 +445,6 @@
       },
       "requiresSeanConfirmation": true
     },
-    "n612": {
-      "filename": "_CAP9701.JPG",
-      "driveFileId": "1L-MqHbWD_7ris15sGel54bOp80Rh4dG6",
-      "sourceUrl": "https://drive.google.com/file/d/1L-MqHbWD_7ris15sGel54bOp80Rh4dG6/view",
-      "album": "Carlos",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "Complicidad",
-      "reason": "La pareja se mira y se ríe de perfil mientras se prepara el globo detrás."
-    },
-    "n842": {
-      "filename": "DSC04091.JPG",
-      "driveFileId": "1l91AZIAXIA8WubFnu9u9xhMNW-4Izdu1",
-      "sourceUrl": "https://drive.google.com/file/d/1l91AZIAXIA8WubFnu9u9xhMNW-4Izdu1/view",
-      "album": "Pedro",
-      "dimensions": {
-        "width": 4000,
-        "height": 6000
-      },
-      "originalInspected": true,
-      "label": "Ambiente",
-      "reason": "El quemador ilumina la envolvente y la canastilla en el campo todavía oscuro."
-    },
     "b3076": {
       "filename": "DSC03683.JPG",
       "driveFileId": "1pCrTaHDDuVHtNHD7AEKaIms7GfcoXt2N",
@@ -637,19 +457,6 @@
       "originalInspected": true,
       "label": "A bordo",
       "reason": "Dos pasajeros asomados por la misma canastilla. El número 03 y la marca quedan a la vista."
-    },
-    "n859": {
-      "filename": "DSC04355.JPG",
-      "driveFileId": "1joY0OeSxvFCzK_HqZrAAjM0s5FXK_jhx",
-      "sourceUrl": "https://drive.google.com/file/d/1joY0OeSxvFCzK_HqZrAAjM0s5FXK_jhx/view",
-      "album": "Pedro",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "Detalle",
-      "reason": "La geometría azul del interior del globo lleva la mirada hacia la corona."
     },
     "b1572": {
       "filename": "IMG_7701.JPG",
@@ -733,24 +540,6 @@
       "label": "Certificado de vuelo",
       "reason": "Una pareja muestra sus dos certificados y sus copas."
     },
-    "couple-flame-candidate": {
-      "label": "Un amanecer para dos",
-      "filename": "DSC02168.JPG",
-      "driveFileId": "1sWIOgvxb-YCHghLiwpoHy4CPb0FMQQMi",
-      "sourceUrl": "https://drive.google.com/file/d/1sWIOgvxb-YCHghLiwpoHy4CPb0FMQQMi/view",
-      "album": "Pedro",
-      "dimensions": {
-        "width": 4000,
-        "height": 6000
-      },
-      "originalInspected": true,
-      "reason": "Validar que este vuelo y la canastilla Ultramagic corresponden a la operación de Flying.",
-      "crop": {
-        "gallery": "Conservar escala y contexto; fotografía completa al abrir el original.",
-        "itinerary": "Priorizar la actividad que representa el paso y mantener rostros y marca legibles."
-      },
-      "requiresSeanConfirmation": true
-    },
     "pilot": {
       "label": "Piloto y destino",
       "filename": "_CAP6464.JPG",
@@ -767,45 +556,6 @@
         "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
         "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
       }
-    },
-    "n1097": {
-      "filename": "DSC09865.JPG",
-      "driveFileId": "1VfMYAQXFv9d5_vse_pAkEgKR5x7La_IO",
-      "sourceUrl": "https://drive.google.com/file/d/1VfMYAQXFv9d5_vse_pAkEgKR5x7La_IO/view",
-      "album": "Pedro",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "Preparativos",
-      "reason": "El equipo junto a la canastilla da escala a la envolvente verde mientras toma forma."
-    },
-    "n541": {
-      "filename": "_CAP9243 (1).JPG",
-      "driveFileId": "1hSTJp6yXz6JChqD13zDJZlxuf0HFZtr2",
-      "sourceUrl": "https://drive.google.com/file/d/1hSTJp6yXz6JChqD13zDJZlxuf0HFZtr2/view",
-      "album": "Carlos",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "Viajeros",
-      "reason": "Una pareja espera en el campo al amanecer con el equipo de inflado trabajando detrás."
-    },
-    "b2443": {
-      "filename": "DSC06944.JPG",
-      "driveFileId": "1QeVDQruICaWPwjvk98wlgIn4iAsmqoOD",
-      "sourceUrl": "https://drive.google.com/file/d/1QeVDQruICaWPwjvk98wlgIn4iAsmqoOD/view",
-      "album": "Pedro",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "Servicio",
-      "reason": "Dos viajeros sostienen sus copas con la canastilla detrás. La atención continúa en tierra."
     },
     "n259": {
       "filename": "_MG_1285.JPG",
@@ -906,32 +656,6 @@
         "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
       }
     },
-    "n509": {
-      "filename": "_CAP9066.JPG",
-      "driveFileId": "18SN1wHUWQjnKRvieH0qVFsYeIJbF0aaO",
-      "sourceUrl": "https://drive.google.com/file/d/18SN1wHUWQjnKRvieH0qVFsYeIJbF0aaO/view",
-      "album": "Carlos",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "Flying",
-      "reason": "La pareja mira hacia arriba, enmarcada entre la tela azul y el ave de Flying."
-    },
-    "n1075": {
-      "filename": "DSC09251.JPG",
-      "driveFileId": "1u6A6nUN4OfBaalzS5YKTcJYW6sqET7Uu",
-      "sourceUrl": "https://drive.google.com/file/d/1u6A6nUN4OfBaalzS5YKTcJYW6sqET7Uu/view",
-      "album": "Pedro",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "label": "Oficio",
-      "reason": "De perfil, el operador acciona el quemador. La llama azul cruza el encuadre hacia la envolvente."
-    },
     "n365": {
       "filename": "_MG_1541.JPG",
       "driveFileId": "1Q7WV6dN9aJ1K9hCQN_0EhumZU_MC2OzE",
@@ -1027,47 +751,80 @@
         "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
       },
       "requiresSeanConfirmation": true
+    },
+    "ground-visit": {
+      "filename": "vip_04",
+      "sourceUrl": "https://res.cloudinary.com/dkmjguzvx/image/upload/vip_04",
+      "album": "Archivo web de Flying",
+      "dimensions": {
+        "width": 960,
+        "height": 1280
+      },
+      "originalInspected": true,
+      "label": "Visita a pie",
+      "reason": "Una viajera se fotografía en la plaza con la pirámide completa detrás. Conservar el encuadre vertical.",
+      "sourceType": "cloudinary"
+    },
+    "cave-group": {
+      "filename": "DSC_0605.JPG",
+      "sourceUrl": "https://drive.google.com/file/d/1sXPr5qbNifIKiCAd3hhFv3YcHPwDU5vG/view",
+      "album": "Flight collection · 04",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "label": "Grupo dentro de la cueva",
+      "reason": "Los visitantes con casco rodean el haz de luz y extienden las manos hacia él.",
+      "driveFileId": "1sXPr5qbNifIKiCAd3hhFv3YcHPwDU5vG"
+    },
+    "buffet-frame": {
+      "filename": "desayuno.mp4 · 00:01",
+      "sourceUrl": "../../../../Ads/Podcast/flying/desayuno.mp4",
+      "album": "Archivo de video de Flying",
+      "dimensions": {
+        "width": 720,
+        "height": 1280
+      },
+      "originalInspected": true,
+      "label": "Desayuno buffet",
+      "reason": "Fotograma del buffet con platos y ensaladas. Confirmar sede y servicio. Pedir el original fotográfico para pantalla grande.",
+      "sourceType": "video_local",
+      "frameSeconds": 1
     }
   },
   "packages": {
     "classic": {
       "name": "Vuelo Esencial",
-      "marketingFocus": "La primera vez en el aire",
+      "marketingFocus": "Tu primer vuelo compartido",
       "gallery": [
         {
           "order": 1,
-          "photo": "n9",
+          "photo": "n997",
           "status": "propuesta",
-          "visualRole": "Despegue",
-          "intent": "La canastilla Flying 03 se separa del suelo junto al ave de Flying."
+          "visualRole": "Compartir la canastilla",
+          "intent": "Tres viajeros ríen juntos a bordo. El encuadre cercano permite imaginar con quién compartes el vuelo."
         },
         {
           "order": 2,
-          "photo": "n997",
+          "photo": "n9",
           "status": "propuesta",
-          "visualRole": "Reacción",
-          "intent": "Una carcajada entre tres pasajeros, a la distancia de quien va con ellos."
+          "visualRole": "El despegue de Flying",
+          "intent": "El globo identificado como Flying 03 ya está en el aire. Se distinguen la canastilla y el ave de la marca."
         },
         {
           "order": 3,
-          "photo": "n1084",
+          "photo": "b1629",
           "status": "propuesta",
-          "visualRole": "Detalle",
-          "intent": "Primer plano del quemador encendido. Cambia el ritmo entre dos imágenes de personas."
+          "visualRole": "Brindis al aterrizar",
+          "intent": "El equipo sirve espumoso a los viajeros reunidos en el campo."
         },
         {
           "order": 4,
-          "photo": "n468",
+          "photo": "certificate-group",
           "status": "propuesta",
-          "visualRole": "Escala",
-          "intent": "Dos viajeros abren los brazos contra la enorme tela azul. El tamaño se entiende de un vistazo."
-        },
-        {
-          "order": 5,
-          "photo": "b1629",
-          "status": "propuesta",
-          "visualRole": "Brindis",
-          "intent": "El equipo sirve el espumoso a un grupo de amigos al terminar el vuelo."
+          "visualRole": "El recuerdo que te llevas",
+          "intent": "Cuatro viajeros sostienen sus certificados. Mantenerlos visibles en el encuadre."
         }
       ],
       "itinerary": [
@@ -1119,40 +876,40 @@
       ],
       "candidatesPendingSean": [],
       "missingPhotos": [],
-      "galleryCompleteness": "base_visual_propuesta",
-      "photoSequenceLogic": "Primero se ve cuánto sube la canastilla. Después se oyen casi las risas y el quemador. El brindis cierra la historia."
+      "galleryCompleteness": "propuesta_completa",
+      "photoSequenceLogic": "Abrir a bordo con otros viajeros, salir al plano abierto del despegue y cerrar con el brindis y el recuerdo que te llevas."
     },
     "transport": {
       "name": "+Transporte + Pirámides",
-      "marketingFocus": "Teotihuacán desde la canastilla",
+      "marketingFocus": "Volar sobre el valle y entrar a Teotihuacán",
       "gallery": [
         {
           "order": 1,
-          "photo": "n735",
+          "photo": "pyramids",
           "status": "propuesta",
-          "visualRole": "Destino",
-          "intent": "Tres viajeras sonríen en la canastilla con la pirámide visible a la derecha. Conservar ambos extremos."
+          "visualRole": "Las pirámides desde el aire",
+          "intent": "La pirámide ocupa el primer plano y un globo da escala. Conservar la base de la pirámide al recortar. La trayectoria depende del viento."
         },
         {
           "order": 2,
-          "photo": "b1455",
+          "photo": "ground-visit",
           "status": "propuesta",
-          "visualRole": "En familia",
-          "intent": "Una niña levanta los brazos junto a sus padres frente a los colores del globo."
+          "visualRole": "Entrada a la zona arqueológica",
+          "intent": "Una viajera se fotografía frente a la pirámide desde la plaza. Aquí se entiende que también se puede recorrer el sitio a pie."
         },
         {
           "order": 3,
-          "photo": "n549",
-          "status": "propuesta",
-          "visualRole": "En vuelo",
-          "intent": "Una canastilla identificada con Flying y la bandera de México se recorta contra el cielo."
+          "photo": "b3065",
+          "status": "confirmar_sean",
+          "visualRole": "Traslado redondo compartido",
+          "intent": "Pasajeros junto a la puerta abierta de la camioneta. Sean debe identificarla como la unidad del traslado compartido vigente. Si es de apoyo, sustituir esta toma."
         },
         {
           "order": 4,
-          "photo": "a673",
-          "status": "propuesta",
-          "visualRole": "Emoción",
-          "intent": "Una pasajera levanta el puño junto a su acompañante. La expresión cuenta lo que se siente al subir."
+          "photo": "buffet-frame",
+          "status": "confirmar_sean",
+          "visualRole": "Desayuno completo",
+          "intent": "Referencia del buffet en el archivo de Flying. Sean debe confirmar que corresponde al desayuno incluido. Para la galería a pantalla completa hace falta una fotografía horizontal de la mesa."
         }
       ],
       "itinerary": [
@@ -1205,89 +962,70 @@
           "step": 6,
           "title": "Desayuno completo",
           "time": "Según itinerario confirmado",
-          "photo": null,
-          "status": "falta_foto",
+          "photo": "buffet-frame",
+          "status": "confirmar_sean",
           "missingPhotoBrief": "breakfast",
-          "note": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales."
+          "note": "Fotograma de referencia del buffet. Sean debe confirmar que es el servicio vigente."
         },
         {
           "step": 7,
           "title": "Acceso a la zona arqueológica",
           "time": "Según itinerario confirmado",
-          "photo": null,
-          "status": "falta_foto",
-          "missingPhotoBrief": "ground",
-          "note": "Visitantes a nivel de suelo con pirámide o Calzada de los Muertos reconocible; una vista aérea no documenta este paso."
+          "photo": "ground-visit",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": "La plaza y la pirámide se ven desde el nivel del visitante."
         }
       ],
-      "candidatesPendingSean": [
-        {
-          "photo": "b3065",
-          "status": "confirmar_sean",
-          "note": "Sean debe confirmar el vehículo y si corresponde al traslado compartido vigente."
-        }
-      ],
+      "candidatesPendingSean": [],
       "missingPhotos": [
         {
           "key": "shared-transport",
           "label": "Transporte compartido",
           "brief": "Vehículo de pasajeros actualmente asignado, interior cómodo o viajeros abordando. No usar vehículos de apoyo o emergencia.",
-          "status": "falta_foto"
+          "status": "confirmar_sean"
         },
         {
           "key": "breakfast",
           "label": "Desayuno completo",
           "brief": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales.",
-          "status": "falta_foto"
-        },
-        {
-          "key": "ground",
-          "label": "Visita a la zona arqueológica",
-          "brief": "Visitantes a nivel de suelo con pirámide o Calzada de los Muertos reconocible; una vista aérea no documenta este paso.",
-          "status": "falta_foto"
+          "status": "confirmar_sean"
         }
       ],
-      "galleryCompleteness": "faltan_fotos_de_diferenciadores_del_paquete",
-      "photoSequenceLogic": "Abrir con la pirámide y las pasajeras en un mismo plano sitúa el viaje. La foto de traslado se suma cuando se confirme el vehículo."
+      "galleryCompleteness": "requiere_validacion",
+      "photoSequenceLogic": "La primera foto sitúa el vuelo. La segunda muestra qué puedes hacer gracias a la entrada incluida. El traslado y el desayuno completan la decisión de compra."
     },
     "journey": {
       "name": "Viajero",
-      "marketingFocus": "El valle a través de los ojos del viajero",
+      "marketingFocus": "Conocer Teotihuacán con un guía y entrar al taller",
       "gallery": [
         {
           "order": 1,
-          "photo": "b516",
-          "status": "propuesta",
-          "visualRole": "Descubrimiento",
-          "intent": "Una viajera mira a un lado mientras el globo con el ave de Flying asciende detrás."
+          "photo": null,
+          "status": "falta_foto",
+          "visualRole": "Recorrido guiado entre las pirámides",
+          "intent": "Buscar al guía vigente explicando un detalle a los viajeros, con la zona arqueológica reconocible en el mismo encuadre."
         },
         {
           "order": 2,
-          "photo": "aerial",
-          "status": "propuesta",
-          "visualRole": "Territorio",
-          "intent": "La vista cenital permite leer la traza de Teotihuacán y su escala en el valle."
+          "photo": null,
+          "status": "falta_foto",
+          "visualRole": "Taller de artesanías y bebidas típicas",
+          "intent": "Una persona del taller demuestra una técnica mientras participa un viajero. Incluir la pieza o la bebida que realmente se ofrece."
         },
         {
           "order": 3,
-          "photo": "n863",
+          "photo": "aerial",
           "status": "propuesta",
-          "visualRole": "Mirada",
-          "intent": "Un niño mira a través de su cámara. Ilustra la curiosidad por el destino."
+          "visualRole": "El sitio que después se recorre a pie",
+          "intent": "La vista aérea permite reconocer las pirámides y la traza de la ciudad antes de entrar en ella."
         },
         {
           "order": 4,
-          "photo": "b999",
-          "status": "propuesta",
-          "visualRole": "México",
-          "intent": "Dos viajeros despliegan la bandera desde la canastilla junto al equipo. La chamarra roja identifica a Flying en el mismo encuadre."
-        },
-        {
-          "order": 5,
-          "photo": "a649",
-          "status": "propuesta",
-          "visualRole": "Recuerdo",
-          "intent": "Cinco amigas saltan en el campo. El horizonte despejado deja que sus siluetas cierren la secuencia."
+          "photo": null,
+          "status": "falta_foto",
+          "visualRole": "El kit viajero",
+          "intent": "Fotografiar el contenido vigente al abrirlo o al entregarlo, con luz natural y cada pieza visible."
         }
       ],
       "itinerary": [
@@ -1394,7 +1132,7 @@
           "key": "shared-transport",
           "label": "Transporte compartido",
           "brief": "Vehículo de pasajeros actualmente asignado, interior cómodo o viajeros abordando. No usar vehículos de apoyo o emergencia.",
-          "status": "falta_foto"
+          "status": "confirmar_sean"
         },
         {
           "key": "breakfast",
@@ -1427,47 +1165,40 @@
           "status": "falta_foto"
         }
       ],
-      "galleryCompleteness": "faltan_fotos_de_diferenciadores_del_paquete",
-      "photoSequenceLogic": "El ave de Flying sitúa al viajero. Alternar la mirada personal, el paisaje arqueológico y los amigos da sentido de descubrimiento."
+      "galleryCompleteness": "requiere_fotografia",
+      "photoSequenceLogic": "La apertura debe mostrar al guía con los viajeros y una pirámide reconocible. El taller y el kit explican qué se añade al paquete de transporte y acceso."
     },
     "celebration": {
       "name": "Celebración",
-      "marketingFocus": "El instante de la sorpresa",
+      "marketingFocus": "Una ocasión que se reconoce en la foto",
       "gallery": [
         {
           "order": 1,
           "photo": "n1049",
           "status": "propuesta",
-          "visualRole": "Ocasión",
-          "intent": "Una persona se arrodilla frente a su pareja, con el globo y el campo de aterrizaje alrededor."
+          "visualRole": "La ocasión",
+          "intent": "La pareja, el anillo y el globo en el mismo encuadre cuentan la pedida. Es un ejemplo de celebración."
         },
         {
           "order": 2,
           "photo": "n374",
           "status": "propuesta",
-          "visualRole": "Flores",
-          "intent": "La entrega del ramo en el campo conserva la expresión de ambos y el contexto del vuelo."
+          "visualRole": "Entrega del ramo",
+          "intent": "El ramo cambia de manos. Mostrar las flores y la reacción de quien las recibe."
         },
         {
           "order": 3,
-          "photo": "celebration-flight",
+          "photo": "cake",
           "status": "propuesta",
-          "visualRole": "Emoción",
-          "intent": "Varias pasajeras celebran con los brazos arriba y el quemador encendido."
+          "visualRole": "El pastel de cumpleaños",
+          "intent": "La fruta y la inscripción permiten reconocer el pastel incluso en pantalla pequeña."
         },
         {
           "order": 4,
-          "photo": "cake",
-          "status": "propuesta",
-          "visualRole": "Cumpleaños",
-          "intent": "El pastel con fruta y la inscripción de cumpleaños se leen de cerca."
-        },
-        {
-          "order": 5,
-          "photo": "b1696",
-          "status": "propuesta",
-          "visualRole": "Flying",
-          "intent": "Una pareja forma corazones con las manos delante del ave de Flying."
+          "photo": "mariachi",
+          "status": "confirmar_sean",
+          "visualRole": "Mañanitas",
+          "intent": "El conjunto aparece con sus instrumentos. Sean debe confirmar que representa las mañanitas que se ofrecen hoy y en qué modalidad."
         }
       ],
       "itinerary": [
@@ -1526,13 +1257,7 @@
           "note": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales."
         }
       ],
-      "candidatesPendingSean": [
-        {
-          "photo": "mariachi",
-          "status": "confirmar_sean",
-          "note": "Confirmar que el trío representa las mañanitas actualmente incluidas antes de incorporarlo."
-        }
-      ],
+      "candidatesPendingSean": [],
       "missingPhotos": [
         {
           "key": "breakfast",
@@ -1541,47 +1266,33 @@
           "status": "falta_foto"
         }
       ],
-      "galleryCompleteness": "base_visual_propuesta",
-      "photoSequenceLogic": "La propuesta de matrimonio y el cumpleaños muestran dos razones distintas para reservar. Las flores y el pastel concretan la ocasión."
+      "galleryCompleteness": "requiere_validacion",
+      "photoSequenceLogic": "La pedida abre por la emoción. El ramo y el pastel muestran los detalles que recibe el festejado. Las mañanitas quedan sujetas a su modalidad vigente."
     },
     "private": {
       "name": "Experiencia en Globo Privada",
-      "marketingFocus": "El vuelo para dos",
+      "marketingFocus": "Volar con las personas que tú eliges",
       "gallery": [
         {
           "order": 1,
-          "photo": "n612",
+          "photo": "b3076",
           "status": "propuesta",
-          "visualRole": "Complicidad",
-          "intent": "La pareja se mira y se ríe de perfil mientras se prepara el globo detrás."
+          "visualRole": "La canastilla para tu grupo",
+          "intent": "Dos personas miran desde la canastilla 03 de Flying. Mantener al grupo y la identificación de la canastilla en el recorte."
         },
         {
           "order": 2,
-          "photo": "n842",
+          "photo": "b1572",
           "status": "propuesta",
-          "visualRole": "Ambiente",
-          "intent": "El quemador ilumina la envolvente y la canastilla en el campo todavía oscuro."
+          "visualRole": "El brindis de la pareja",
+          "intent": "Un miembro del equipo atiende a los dos pasajeros con sus copas después del vuelo."
         },
         {
           "order": 3,
-          "photo": "b3076",
-          "status": "propuesta",
-          "visualRole": "A bordo",
-          "intent": "Dos pasajeros asomados por la misma canastilla. El número 03 y la marca quedan a la vista."
-        },
-        {
-          "order": 4,
-          "photo": "n859",
-          "status": "propuesta",
-          "visualRole": "Detalle",
-          "intent": "La geometría azul del interior del globo lleva la mirada hacia la corona."
-        },
-        {
-          "order": 5,
-          "photo": "b1572",
-          "status": "propuesta",
-          "visualRole": "Atención",
-          "intent": "Un miembro del equipo sirve las dos copas frente a la pareja."
+          "photo": null,
+          "status": "falta_foto",
+          "visualRole": "Desayuno completo",
+          "intent": "Una mesa del servicio real con los platillos servidos y los acompañantes desayunando. Verificar la presentación vigente."
         }
       ],
       "itinerary": [
@@ -1640,14 +1351,7 @@
           "note": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales."
         }
       ],
-      "candidatesPendingSean": [
-        {
-          "photo": "couple-flame-candidate",
-          "status": "confirmar_sean",
-          "note": "Validar que este vuelo y la canastilla Ultramagic corresponden a la operación de Flying.",
-          "shortNote": "validar operación y flota Flying"
-        }
-      ],
+      "candidatesPendingSean": [],
       "missingPhotos": [
         {
           "key": "breakfast",
@@ -1656,40 +1360,40 @@
           "status": "falta_foto"
         }
       ],
-      "galleryCompleteness": "base_visual_propuesta",
-      "photoSequenceLogic": "La complicidad de una pareja abre la galería. Un amanecer amplio, dos personas en la canastilla y dos copas sostienen esa intimidad."
+      "galleryCompleteness": "requiere_fotografia",
+      "photoSequenceLogic": "Primero se ve a la pareja en la canastilla de Flying. La siguiente foto baja al detalle del servicio para dos. El desayuno completa lo incluido."
     },
     "charter": {
       "name": "FPM Private Charter",
-      "marketingFocus": "Quién está a cargo de tu vuelo",
+      "marketingFocus": "Atención privada desde la recogida hasta el Club Campestre",
       "gallery": [
         {
           "order": 1,
-          "photo": "pilot",
-          "status": "propuesta",
-          "visualRole": "Piloto y destino",
-          "intent": "El piloto de Flying acciona los controles con una pirámide visible detrás. Conservar el encuadre vertical."
+          "photo": null,
+          "status": "falta_foto",
+          "visualRole": "Recepción en el transporte premium",
+          "intent": "Guía recibiendo al grupo en la puerta del vehículo privado asignado a Charter. Mostrar el interior y el equipaje de los viajeros si cabe."
         },
         {
           "order": 2,
-          "photo": "n1097",
+          "photo": "pilot",
           "status": "propuesta",
-          "visualRole": "Preparativos",
-          "intent": "El equipo junto a la canastilla da escala a la envolvente verde mientras toma forma."
+          "visualRole": "El vuelo de tu grupo",
+          "intent": "El piloto de Flying acciona los controles con una pirámide detrás. Mantener los mandos y el paisaje en el mismo cuadro."
         },
         {
           "order": 3,
-          "photo": "n541",
-          "status": "propuesta",
-          "visualRole": "Viajeros",
-          "intent": "Una pareja espera en el campo al amanecer con el equipo de inflado trabajando detrás."
+          "photo": null,
+          "status": "falta_foto",
+          "visualRole": "Brunch en Club Campestre",
+          "intent": "Mesa servida con comensales y un rasgo reconocible del Club. Confirmar con Sean el espacio y el menú vigentes."
         },
         {
           "order": 4,
-          "photo": "b2443",
-          "status": "propuesta",
-          "visualRole": "Servicio",
-          "intent": "Dos viajeros sostienen sus copas con la canastilla detrás. La atención continúa en tierra."
+          "photo": null,
+          "status": "falta_foto",
+          "visualRole": "Servicio de mesero y canapés",
+          "intent": "Una bandeja llegando a la mesa del grupo. Deben verse tanto el servicio personal como los alimentos que recibe el cliente."
         }
       ],
       "itinerary": [
@@ -1766,19 +1470,7 @@
           "note": "Mesa, platillos y ambiente del Club Campestre actual. Sean debe identificar y validar la sede."
         }
       ],
-      "candidatesPendingSean": [
-        {
-          "photo": "couple-flame-candidate",
-          "status": "confirmar_sean",
-          "note": "Validar que este vuelo y la canastilla Ultramagic corresponden a la operación de Flying.",
-          "shortNote": "validar operación y flota Flying"
-        },
-        {
-          "photo": "n259",
-          "status": "confirmar_sean",
-          "note": "Confirmar que este montaje es el desayuno ligero que se sirve antes del vuelo Charter."
-        }
-      ],
+      "candidatesPendingSean": [],
       "missingPhotos": [
         {
           "key": "premium-transport",
@@ -1790,7 +1482,7 @@
           "key": "light-breakfast",
           "label": "Buffet ligero antes del vuelo",
           "brief": "Oferta real de desayuno ligero en el punto de recepción; diferenciarla del brunch posterior.",
-          "status": "falta_foto"
+          "status": "confirmar_sean"
         },
         {
           "key": "ground",
@@ -1811,40 +1503,40 @@
           "status": "falta_foto"
         }
       ],
-      "galleryCompleteness": "faltan_fotos_de_diferenciadores_del_paquete",
-      "photoSequenceLogic": "La primera foto reúne piloto, controles y pirámide. El resto muestra la escala de la operación, a quién recibe Flying y el servicio al aterrizar."
+      "galleryCompleteness": "requiere_fotografia",
+      "photoSequenceLogic": "El vehículo premium, el guía que recibe a los viajeros y el brunch en el Club son las fotos que distinguen Charter de los otros vuelos privados."
     },
     "vip": {
       "name": "Premium · VIP",
-      "marketingFocus": "El valle y el placer de detenerse",
+      "marketingFocus": "Vuelo privado y cuevas ceremoniales",
       "gallery": [
         {
           "order": 1,
-          "photo": "vip-toast",
-          "status": "propuesta",
-          "visualRole": "Brindis",
-          "intent": "Dos viajeras brindan en el campo abierto. El espacio alrededor y el globo al fondo hacen funcionar tu foto favorita."
+          "photo": "cave-group",
+          "status": "confirmar_sean",
+          "visualRole": "El recorrido en la cueva",
+          "intent": "Un grupo con casco acerca las manos al haz de luz. Sean debe confirmar que la cueva corresponde al tour ceremonial vigente."
         },
         {
           "order": 2,
-          "photo": "pyramids",
+          "photo": "pilot-dawn",
           "status": "propuesta",
-          "visualRole": "Destino",
-          "intent": "La pirámide domina el valle en una vista aérea amplia."
+          "visualRole": "Vuelo privado al amanecer",
+          "intent": "El piloto de Flying opera los controles a primera luz."
         },
         {
           "order": 3,
-          "photo": "n509",
+          "photo": "vip-toast",
           "status": "propuesta",
-          "visualRole": "Flying",
-          "intent": "La pareja mira hacia arriba, enmarcada entre la tela azul y el ave de Flying."
+          "visualRole": "El brindis al aire libre",
+          "intent": "Las viajeras chocan sus copas en el campo. Es la fotografía que elegiste como referencia."
         },
         {
           "order": 4,
-          "photo": "n1075",
-          "status": "propuesta",
-          "visualRole": "Oficio",
-          "intent": "De perfil, el operador acciona el quemador. La llama azul cruza el encuadre hacia la envolvente."
+          "photo": null,
+          "status": "falta_foto",
+          "visualRole": "Canapés y brunch",
+          "intent": "Buscar el servicio real de mesa con los canapés o el brunch servido. Identificar la sede y el momento fotografiado antes de publicar."
         }
       ],
       "itinerary": [
@@ -1932,11 +1624,6 @@
       ],
       "candidatesPendingSean": [
         {
-          "photo": "cave",
-          "status": "confirmar_sean",
-          "note": "Confirmar la cueva y recorrido actuales."
-        },
-        {
           "photo": "photographer",
           "status": "confirmar_sean",
           "note": "Confirmar que retrata el servicio de fotografía incluido y no a otro pasajero con cámara."
@@ -1945,8 +1632,8 @@
       "missingPhotos": [
         {
           "key": "premium-transport",
-          "label": "Transporte privado premium",
-          "brief": "Vehículo e interior del servicio vigente de Charter/VIP. Sean debe confirmar el modelo antes de seleccionarlo.",
+          "label": "Transporte privado",
+          "brief": "Vehículo del traslado privado incluido en VIP, con la unidad actual identificada por Sean.",
           "status": "falta_foto"
         },
         {
@@ -1980,8 +1667,8 @@
           "status": "falta_foto"
         }
       ],
-      "galleryCompleteness": "faltan_fotos_de_diferenciadores_del_paquete",
-      "photoSequenceLogic": "El brindis que elegiste abre esta galería. La vista de la pirámide, la presencia de Flying y el trabajo del piloto llevan del paisaje al detalle."
+      "galleryCompleteness": "requiere_fotografia",
+      "photoSequenceLogic": "Abrir dentro de la cueva permite reconocer la experiencia VIP antes de leer el nombre. Después se ven el vuelo y el brindis que elegiste."
     }
   },
   "notSelected": [
@@ -2034,25 +1721,16 @@
     "Fotografías de ingeniería",
     "Fotografías de flota"
   ],
-  "revision": 3,
-  "revisionNote": "Cada toma propuesta tiene un solo destino entre las galerías y los pasos de itinerario de los siete paquetes.",
-  "previousProposalCommit": "b7d4eb0",
+  "revision": 4,
+  "revisionNote": "Cada galería se organiza por servicios incluidos. Cuando una foto documenta exactamente un paso, puede reutilizarse dentro del mismo paquete.",
+  "previousProposalCommit": "9bff5eb",
   "artDirection": {
-    "principle": "La galería debe hacer sentir el vuelo y reconocer a Flying; el itinerario debe explicar visualmente la actividad real.",
-    "balance": [
-      "Planos amplios: valle, pirámides y escala del globo",
-      "Emoción: reacciones, cercanía y momentos compartidos",
-      "Flying reconocible: canastilla identificada, ave de marca, uniformes y piloto en acción",
-      "Diferenciadores del paquete: solo servicios visibles y verificables; flores y pastel para Celebración",
-      "Ritual: brindis como cierre de la experiencia"
-    ],
+    "principle": "Mostrar qué compra el viajero con imágenes reconocibles de los servicios. Reservar la apertura para el diferenciador principal.",
     "avoid": [
-      "Retratos de registro como hilo conductor de la galería",
-      "Certificados como imagen comercial principal",
-      "Varias fotos que repiten la misma pose o encuadre",
-      "Globos con marcas identificables de otros operadores",
-      "Afirmar que una foto acredita exclusividad, certificaciones o una ruta garantizada"
-    ],
-    "packageDifferenceGap": "Siguen abiertos los servicios en tierra para los que faltan tomas inequívocas. El traslado compartido y la mesa de Charter tienen candidatas identificadas para Sean."
+      "Prometer una trayectoria fija del globo",
+      "Usar la misma foto en las galerías de dos paquetes",
+      "Mostrar globos de otros operadores",
+      "Confundir un extra con un servicio incluido"
+    ]
   }
 }
