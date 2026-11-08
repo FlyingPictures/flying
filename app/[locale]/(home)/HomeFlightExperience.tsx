@@ -297,8 +297,13 @@ export function FlightExperienceSection() {
                   className={`w-full h-full object-cover ${flight.imageClassName ?? ''}`}
                   objectFit="cover"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-secondary/90 via-secondary/5 via-65% to-transparent" />
-                <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-linear-to-b from-secondary/75 via-secondary/35 to-transparent" />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0"
+                  style={{
+                    background: 'linear-gradient(to bottom, rgb(3 48 59 / 64%) 0%, rgb(3 48 59 / 48%) 12%, rgb(3 48 59 / 20%) 29%, rgb(3 48 59 / 4%) 44%, transparent 52%, rgb(3 48 59 / 5%) 62%, rgb(3 48 59 / 25%) 76%, rgb(3 48 59 / 59%) 90%, rgb(3 48 59 / 80%) 100%)',
+                  }}
+                />
                 <Link
                   href={`/product/${flight.slug}`}
                   aria-label={`${t('flightDetails')} · ${getProductName(flight.slug, locale)}`}
@@ -307,7 +312,7 @@ export function FlightExperienceSection() {
                 />
                 <div className="pointer-events-none absolute inset-0 p-[clamp(18px,4vw,32px)] flex flex-col text-background">
                   <div className="flex items-start justify-between gap-3">
-                    <div className="text-white [text-shadow:0_1px_3px_rgb(0_0_0/95%),0_2px_10px_rgb(0_0_0/90%)]">
+                    <div className="text-white [text-shadow:0_1px_4px_rgb(0_0_0/72%),0_3px_12px_rgb(0_0_0/62%)]">
                     <h4>{t('flightBadge', { type: t(`tabs.${flight.cat}`) })}</h4>
                     <h3 className="font-libre-baskerville text-[clamp(23px,3vw,34px)] leading-tight mt-1 max-w-120">
                       {getProductName(flight.slug, locale)}
