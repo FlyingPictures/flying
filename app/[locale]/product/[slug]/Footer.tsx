@@ -1,4 +1,4 @@
-import { BrandLogo } from "@/components/BrandLogo";
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 export default async function ProductFooter() {
@@ -17,7 +17,14 @@ export default async function ProductFooter() {
             "linear-gradient(180deg, rgba(123,149,171,0.57) 0%, rgba(0,0,0,0.57) 100%), linear-gradient(0deg,#000000,#000000)",
         }}
       >
-        <BrandLogo className="h-24 w-auto" />
+        <Image
+          src="https://res.cloudinary.com/dkmjguzvx/image/upload/v1771956786/sello_flying_1_l7dniq.png"
+          alt="Flying Pictures México"
+          width={120}
+          height={120}
+          unoptimized
+          className="size-30 object-contain"
+        />
 
         <h3 className="font-libre-baskerville text-xl md:text-2xl italic font-normal leading-tight">
           {t("title")}
