@@ -172,7 +172,6 @@ export function FlightExperienceSection() {
     scrollToIndex(container, getClosestCardIndex(container))
   }, [])
 
-  const isPair = visibleFlights.length === 2
   const dragHandlers = useMouseDrag(scrollRef, snapToClosest)
 
   const handleTabClick = useCallback((tab: TabKey) => {
@@ -218,7 +217,7 @@ export function FlightExperienceSection() {
       >
         <h4 className="text-foreground mb-3">{t('subtitle')}</h4>
         <h2 className="text-foreground whitespace-pre-line max-w-229 mx-auto">{t('title')}</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-secondary font-libre-baskerville font-normal leading-relaxed first-letter:text-[2.3em] first-letter:leading-none">
+        <p className="mx-auto mt-4 max-w-2xl text-secondary font-libre-baskerville font-normal leading-relaxed">
           {t('allFlightsInclude')}
         </p>
       </header>
@@ -267,12 +266,15 @@ export function FlightExperienceSection() {
         <div
           ref={scrollRef}
           {...dragHandlers}
-          className={cn(
-            "relative flex w-full gap-[clamp(16px,3vw,36px)] overflow-x-auto snap-x snap-mandatory no-scrollbar cursor-grab active:cursor-grabbing",
-            isPair
-              ? "max-w-[var(--slide-width)] md:grid md:max-w-[80rem] md:grid-cols-2 md:px-6 md:overflow-visible md:cursor-auto"
-              : "px-[calc((100%_-_var(--slide-width))/2)] [mask-image:linear-gradient(to_right,transparent,black_7%,black_93%,transparent)]",
-          )}
+          className="relative flex w-full overflow-x-auto no-scrollbar gap-[clamp(16px,3vw,36px)] cursor-grab active:cursor-grabbing"
+          style={{
+            scrollSnapType: 'x mandatory',
+            WebkitOverflowScrolling: 'touch',
+            paddingLeft: 'calc((100% - var(--slide-width)) / 2)',
+            paddingRight: 'calc((100% - var(--slide-width)) / 2)',
+            maskImage: 'linear-gradient(to right, transparent 0, black clamp(32px, 7vw, 100px), black calc(100% - clamp(32px, 7vw, 100px)), transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0, black clamp(32px, 7vw, 100px), black calc(100% - clamp(32px, 7vw, 100px)), transparent 100%)',
+          }}
         >
           {visibleFlights.map((flight, index) => {
             const pricing = PRODUCT_PRICING[flight.slug]!
@@ -283,7 +285,7 @@ export function FlightExperienceSection() {
               key={flight.slug}
               data-slide
               data-index={index}
-              className={cn("shrink-0 w-[var(--slide-width)] select-none flex flex-col", isPair && "md:w-full md:min-w-0")}
+              className="shrink-0 w-[var(--slide-width)] select-none flex flex-col"
               style={{ scrollSnapAlign: 'center' }}
             >
               <div className="relative aspect-[16/10] rounded-(--radius) overflow-hidden bg-secondary/10 shadow-[0_18px_50px_rgba(3,48,59,0.12)]">
@@ -344,7 +346,7 @@ export function FlightExperienceSection() {
           )})}
         </div>
 
-        <div className={cn("relative z-30 mt-2 flex items-center gap-4 rounded-full bg-background/90 px-4 py-2 shadow-sm backdrop-blur-sm", isPair && "md:hidden")}>
+        <div className="relative z-30 mt-2 flex items-center gap-4 rounded-full bg-background/90 px-4 py-2 shadow-sm backdrop-blur-sm">
           <button type="button" onClick={() => moveTo(activeIndex - 1)} disabled={activeIndex === 0} aria-label={t('previousPackage')} className="flex size-10 items-center justify-center rounded-full border border-secondary/20 text-secondary transition disabled:opacity-30 hover:bg-secondary hover:text-background">←</button>
           <span className="min-w-16 text-center text-sm font-bold text-secondary">
             {t('packageCount', { current: activeIndex + 1, total: visibleFlights.length })}
