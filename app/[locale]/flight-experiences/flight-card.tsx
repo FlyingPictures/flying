@@ -137,9 +137,11 @@ function FlightCard({
         featured && "lg:col-span-2 lg:grid lg:grid-cols-[1.18fr_0.82fr]",
       )}
     >
-      <div
+      <Link
+        href={`/product/${id}`}
+        aria-label={`${t("viewDetails")} · ${getProductName(id, locale)}`}
         className={cn(
-          "relative aspect-[16/10] overflow-hidden bg-secondary/10",
+          "block relative aspect-[16/10] overflow-hidden bg-secondary/10",
           featured && "lg:aspect-auto lg:min-h-132",
         )}
       >
@@ -172,7 +174,7 @@ function FlightCard({
             {getProductName(id, locale)}
           </h3>
         </div>
-      </div>
+      </Link>
 
       <div className={cn("flex flex-1 flex-col p-6 md:p-8", featured && "lg:justify-center lg:p-10")}>
         <p className="text-xs font-bold uppercase tracking-[0.14em] text-secondary/45">

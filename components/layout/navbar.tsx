@@ -173,10 +173,13 @@ const LanguageSwitcher = ({
 const HeaderBanner = () => {
   const bannerT = useTranslations("banner")
   return (
-    <div className="w-full bg-destructive text-background font-bold h-12 flex items-center justify-center px-4 overflow-hidden">
-      <a href={`tel:${SITE_CONTACT.phone}`} className="uppercase whitespace-nowrap text-[0.7rem] lg:text-[clamp(0.65rem,2.5vw,0.875rem)]">
-        {bannerT("company")} {SITE_CONTACT.display}
-      </a>
+    <div className="flex h-12 w-full flex-col items-center justify-center gap-x-2 bg-destructive px-2 text-[0.7rem] font-bold text-background sm:flex-row lg:text-sm">
+      <span>{bannerT("company")}</span>
+      <span className="flex items-center gap-2 whitespace-nowrap">
+        <a href={`tel:${SITE_CONTACT.phone}`}>{SITE_CONTACT.display}</a>
+        <span aria-hidden="true">/</span>
+        <a href={`tel:${SITE_CONTACT.whatsappPhone}`}>{SITE_CONTACT.whatsappDisplay}</a>
+      </span>
     </div>
   )
 }

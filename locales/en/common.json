@@ -25,8 +25,6 @@
     "company": "AN AVIATION COMPANY - CALL US"
   },
   "concierge": {
-    "online": "Online",
-    "offline": "Offline",
   "hours": "6:00 AM - 8:00 PM",
   "location": "Mexico City",
     "cta": "Chat with Concierge"

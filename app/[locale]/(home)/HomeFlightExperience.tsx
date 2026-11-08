@@ -265,12 +265,12 @@ export function FlightExperienceSection() {
         <div
           ref={scrollRef}
           {...dragHandlers}
-          className="flex w-full overflow-x-auto no-scrollbar gap-[clamp(16px,3vw,36px)] cursor-grab active:cursor-grabbing"
+          className="relative flex w-full overflow-x-auto no-scrollbar gap-[clamp(16px,3vw,36px)] cursor-grab active:cursor-grabbing"
           style={{
             scrollSnapType: 'x mandatory',
             WebkitOverflowScrolling: 'touch',
-            paddingLeft: 'calc(50vw - var(--slide-width) / 2)',
-            paddingRight: 'calc(50vw - var(--slide-width) / 2)',
+            paddingLeft: 'calc((100% - var(--slide-width)) / 2)',
+            paddingRight: 'calc((100% - var(--slide-width)) / 2)',
             maskImage: 'linear-gradient(to right, transparent 0, black clamp(32px, 7vw, 100px), black calc(100% - clamp(32px, 7vw, 100px)), transparent 100%)',
             WebkitMaskImage: 'linear-gradient(to right, transparent 0, black clamp(32px, 7vw, 100px), black calc(100% - clamp(32px, 7vw, 100px)), transparent 100%)',
           }}
@@ -297,9 +297,15 @@ export function FlightExperienceSection() {
                   objectFit="cover"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-secondary/90 via-secondary/5 via-65% to-transparent" />
-                <div className="absolute inset-0 p-[clamp(18px,4vw,32px)] flex flex-col text-background">
+                <Link
+                  href={`/product/${flight.slug}`}
+                  aria-label={`${t('flightDetails')} · ${getProductName(flight.slug, locale)}`}
+                  draggable={false}
+                  className="absolute inset-0 focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-primary"
+                />
+                <div className="pointer-events-none absolute inset-0 p-[clamp(18px,4vw,32px)] flex flex-col text-background">
                   <div className="flex items-start justify-between gap-3">
-                    <div>
+                    <div className="rounded-xl bg-background/95 px-3 py-2 text-secondary">
                     <h4>{t('flightBadge', { type: t(`tabs.${flight.cat}`) })}</h4>
                     <h3 className="font-libre-baskerville text-[clamp(23px,3vw,34px)] leading-tight mt-1 max-w-120">
                       {getProductName(flight.slug, locale)}
@@ -316,7 +322,7 @@ export function FlightExperienceSection() {
                       <span className="block text-xs text-background/80">{priceDisplay.unitLabel}</span>
                       <strong className="text-[clamp(16px,2vw,22px)]">{priceDisplay.summary}</strong>
                     </div>
-                    <Button variant="primary" size="xs" asChild>
+                    <Button variant="primary" size="xs" className="pointer-events-auto" asChild>
                       <ReservationLink slug={flight.slug} locale={locale} />
                     </Button>
                   </div>

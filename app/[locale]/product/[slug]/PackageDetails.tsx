@@ -5,9 +5,10 @@ import type { PackageDetails as PackageDetailsData } from "@/types/product";
 
 type Props = {
   details: PackageDetailsData;
+  name: string;
 };
 
-export default async function PackageDetails({ details }: Props) {
+export default async function PackageDetails({ details, name }: Props) {
   const t = await getTranslations("product");
 
   return (
@@ -15,7 +16,7 @@ export default async function PackageDetails({ details }: Props) {
       <div className="mx-auto flex w-full max-w-270 flex-col gap-8 border-t border-border pt-10 lg:gap-10 lg:pt-12">
         <header className="max-w-180 lg:mx-auto lg:text-center">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary-foreground/70">
-            {t("packageDetails.eyebrow")}
+            {name}
           </p>
           <h3 className="mt-2">{t("packageDetails.title")}</h3>
         </header>

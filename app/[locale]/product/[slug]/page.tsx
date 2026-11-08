@@ -127,7 +127,7 @@ export default async function Page({ params }: PageProps) {
       <ProductMain slug={slug} data={data} />
       <ProductItinerary slug={slug} data={data} />
       {data.details ? (
-        <PackageDetails details={data.details} />
+        <PackageDetails details={data.details} name={getProductName(slug, locale)} />
       ) : null}
       <Reviews />
       <Meet />

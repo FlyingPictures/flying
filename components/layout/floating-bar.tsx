@@ -12,7 +12,6 @@ import {
   getInquiryUrl,
   PRODUCT_PRICING,
   getPriceDisplay,
-  isBusinessOpen,
   isProductSlug,
 } from "@/lib/commercial-config"
 
@@ -167,22 +166,10 @@ const FloatingBar2 = ({ show }: { show: boolean }) => {
 
 const FloatingBar3 = ({ show }: { show: boolean }) => {
   const t = useTranslations("concierge")
-  const isOnline = isBusinessOpen()
 
   const Content = (
     <>
       <div className="flex min-w-0 flex-1 flex-col gap-0.5 min-[360px]:flex-[0.7] min-[360px]:pr-1 min-[390px]:flex-[0.85] md:flex-1 md:pr-2">
-        <div className="flex items-center gap-1">
-          <div
-            className={cn(
-              "w-3 h-3 rounded-full shrink-0",
-              isOnline ? "bg-green-500" : "bg-red-500"
-            )}
-          />
-          <span className="text-sm font-bold md:text-base">
-            {t(isOnline ? "online" : "offline")}
-          </span>
-        </div>
         <span className="whitespace-nowrap text-xs leading-4 md:text-sm">{t("hours")}</span>
         <span className="text-xs leading-4 md:text-sm">{t("location")}</span>
       </div>
