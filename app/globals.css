@@ -198,7 +198,7 @@
   margin-inline: auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 64rem) {
   html {
     scroll-padding-top: 6rem;
   }

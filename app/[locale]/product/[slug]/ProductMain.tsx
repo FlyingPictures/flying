@@ -15,7 +15,7 @@ export default function ProductMain({ slug, data }: { slug: ProductSlug; data: P
   const price = getPriceDisplay(PRODUCT_PRICING[slug], locale);
 
   return (
-    <section className="site-frame max-lg:max-w-[calc(100%-2rem)] grid min-w-0 gap-4 pt-36 lg:grid-cols-[1.3fr_1fr] lg:grid-rows-[auto_1fr] lg:gap-x-[clamp(2rem,4vw,4rem)] min-[1200px]:pt-47">
+    <section className="site-frame max-lg:max-w-[calc(100%-2rem)] grid min-w-0 gap-4 pt-36 lg:grid-cols-[1.3fr_1fr] lg:grid-rows-[auto_1fr] lg:gap-x-[clamp(2rem,4vw,4rem)] lg:pt-47">
       <div className="space-y-2 lg:col-start-2">
         <h1 className="product-title">{getProductName(slug, locale)}</h1>
         <p className="text-sm leading-relaxed text-muted-foreground">{data.hero.subtitle}</p>

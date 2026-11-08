@@ -194,7 +194,7 @@ export default function Navbar() {
   const locale = useLocale()
 
   useEffect(() => {
-    const desktop = window.matchMedia("(min-width: 1200px)")
+    const desktop = window.matchMedia("(min-width: 64rem)")
     const closeMenus = () => {
       setIsMenuOpen(false)
       setIsSheetOpen(false)
@@ -205,20 +205,20 @@ export default function Navbar() {
 
   return (
     <>
-      <header data-hidden={isHeaderHidden} className={cn("desktop-header pointer-events-none fixed inset-x-0 top-0 z-50 hidden flex-col items-center transition-transform duration-200 motion-reduce:transition-none min-[1200px]:flex [&>*]:pointer-events-auto",
+      <header data-hidden={isHeaderHidden} className={cn("desktop-header pointer-events-none fixed inset-x-0 top-0 z-50 hidden flex-col items-center transition-transform duration-200 motion-reduce:transition-none lg:flex [&>*]:pointer-events-auto",
         isHeaderHidden ? "-translate-y-[calc(100%+1rem)]" : scrollY > 80 && "-translate-y-12")}>
         <HeaderBanner />
         <div className="site-frame mt-4">
-          <nav aria-label={t("menuTitle")} className="relative grid h-21 grid-rows-[100%] grid-cols-[minmax(0,1fr)_4.75rem_minmax(0,1fr)] gap-x-6 items-center rounded-2xl bg-background px-5 shadow-2xl min-[1440px]:px-8">
+          <nav aria-label={t("menuTitle")} className="relative grid h-21 grid-rows-[100%] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-x-3 items-center rounded-2xl bg-background px-4 min-[1200px]:gap-x-6 min-[1200px]:px-5 shadow-2xl min-[1440px]:px-8">
             <Link
               href="/"
               aria-label={locale === "es" ? "Flying Pictures México — Inicio" : "Flying Pictures México — Home"}
-              className="relative z-20 col-start-2 row-start-1 h-24 w-19 self-start"
+              className="relative z-20 col-start-2 row-start-1 h-21 w-[4.2rem] self-start min-[1200px]:h-24 min-[1200px]:w-19"
             >
               <BrandLogo priority className="w-full h-full object-contain" />
             </Link>
 
-            <div className="col-start-1 row-start-1 flex items-center gap-[clamp(.75rem,1.5vw,1.75rem)] whitespace-nowrap text-[0.875rem] min-[1440px]:gap-7 min-[1440px]:text-base">
+            <div className="col-start-1 row-start-1 flex items-center gap-2 min-[1200px]:gap-[clamp(.75rem,1.5vw,1.75rem)] whitespace-nowrap text-[0.875rem] min-[1440px]:gap-7 min-[1440px]:text-base">
               <div className="flex items-center">
                 <NavLink id="flightExperiences" href="/flight-experiences" />
                 <DropdownMenu.Root open={isMenuOpen} onOpenChange={setIsMenuOpen} modal={false}>
@@ -250,32 +250,33 @@ export default function Navbar() {
               <NavLink id="planYourVisit" href="/plan-your-visit" />
             </div>
 
-            <div className="col-start-3 row-start-1 flex items-center justify-end gap-3 whitespace-nowrap text-sm min-[1440px]:gap-7 min-[1440px]:text-base">
+            <div className="col-start-3 row-start-1 flex items-center justify-end gap-2 min-[1200px]:gap-3 whitespace-nowrap text-sm min-[1440px]:gap-7 min-[1440px]:text-base">
               <NavLink id="contactSupport" href="/contact" />
               <LanguageSwitcher />
-              {showBookButton && <BookButton />}
+              {showBookButton && <BookButton className="max-[1199px]:px-4 max-[1199px]:text-sm" />}
             </div>
           </nav>
         </div>
       </header>
 
-      <header className={cn("min-[1200px]:hidden fixed top-0 inset-x-0 z-50 transition-transform duration-200 motion-reduce:transition-none has-[:focus-visible]:translate-y-0", isHeaderHidden ? "-translate-y-32" : scrollY > 80 && !isSheetOpen && "-translate-y-12")}>
+      <header className={cn("lg:hidden fixed top-0 inset-x-0 z-50 transition-transform duration-200 motion-reduce:transition-none has-[:focus-visible]:translate-y-0", isHeaderHidden ? "-translate-y-32" : scrollY > 80 && !isSheetOpen && "-translate-y-12")}>
         <HeaderBanner />
-        <nav className="relative h-18 bg-white px-6 flex items-center justify-between shadow-md">
+        <nav className="flex h-18 items-center justify-between gap-2 bg-white px-3 shadow-md min-[400px]:px-6">
           <Link
             href="/"
             aria-label={locale === "es" ? "Flying Pictures México — Inicio" : "Flying Pictures México — Home"}
             onClick={() => setIsSheetOpen(false)}
-            className="absolute top-0 left-6 z-10 w-15.5 h-19.5"
+            className="z-10 h-19.5 w-15.5 shrink-0 self-start"
           >
             <BrandLogo priority className="w-full h-full object-contain" />
           </Link>
-          <div className="flex items-center gap-3 ml-auto">
-            {showBookButton && <BookButton />}
+          <div className="ml-auto flex items-center gap-1.5 min-[400px]:gap-3">
+            {showBookButton && <BookButton className="h-11 px-3.5 text-sm min-[400px]:h-12 min-[400px]:px-6" />}
             <SheetPrimitive.Root open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetPrimitive.Trigger asChild>
-                <button className="p-1 outline-none" aria-label={t("openMenu")}>
-                  <EqualsIcon size={32} weight="bold" aria-hidden="true" />
+                <button type="button" aria-label={t("openMenu")} className="inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-sm font-bold text-secondary hover:bg-secondary/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary">
+                  <EqualsIcon size={22} weight="bold" aria-hidden="true" />
+                  {t("menu")}
                 </button>
               </SheetPrimitive.Trigger>
               <SheetPrimitive.Portal>
