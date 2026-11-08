@@ -1,10 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { WhatsappLogoIcon } from "@phosphor-icons/react";
 import { Link, usePathname } from "@/i18n/routing";
-import { useScrollDirection } from "@/hooks/use-scroll-direction";
 import { ReservationLink } from "@/components/booking/reservation-link";
 import { Button } from "@/components/ui/button";
 import { PackagePrices } from "@/components/booking/package-prices";
@@ -12,6 +11,18 @@ import { cn } from "@/lib/utils";
 import { CallMenu } from "./call-menu";
 import { SITE_CONTACT } from "@/lib/site-config";
 import { BOOKING_URLS, getInquiryUrl, getPriceDisplay, isProductSlug, PRODUCT_PRICING } from "@/lib/commercial-config";
+
+function subscribeToViewportChanges(update: () => void) {
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  const resize = new ResizeObserver(update);
+  resize.observe(document.body);
+  return () => {
+    window.removeEventListener("scroll", update);
+    window.removeEventListener("resize", update);
+    resize.disconnect();
+  };
+}
 
 export function FloatingBar() {
   const locale = useLocale();
@@ -24,9 +35,13 @@ export function FloatingBar() {
   const price = slug && PRODUCT_PRICING[slug] ? getPriceDisplay(PRODUCT_PRICING[slug], locale) : null;
   const isContact = pathname === "/contact";
   const showCatalogLink = !slug && !isContact && pathname !== "/flight-experiences";
-  const { scrollY } = useScrollDirection();
+  const pastBookingOptions = useSyncExternalStore(subscribeToViewportChanges, () => {
+    if (!slug) return window.scrollY > 80;
+    const options = document.getElementById(`booking-options-${slug}`);
+    return options !== null && options.getBoundingClientRect().bottom <= 0;
+  }, () => false);
   const [calling, setCalling] = useState(false);
-  const hidden = scrollY <= 80 && !calling;
+  const hidden = !pastBookingOptions && (slug !== null || !calling);
   const actionClass = "min-h-11 min-w-0 whitespace-normal px-3 text-center text-xs leading-tight sm:px-5 sm:text-sm";
 
   return (
@@ -50,7 +65,7 @@ export function FloatingBar() {
             className="inline-flex min-h-11 shrink-0 items-center justify-center gap-1 rounded-full bg-secondary px-2.5 text-xs font-bold text-white hover:bg-secondary/90 focus-visible:ring-2 focus-visible:ring-primary sm:px-4 sm:text-sm">
             <WhatsappLogoIcon size={18} aria-hidden="true" />WhatsApp
           </a>}
-          <CallMenu onOpenChange={setCalling} />
+          {!hidden && <CallMenu onOpenChange={slug ? undefined : setCalling} />}
         </div>
       </div>
     </aside>

@@ -26,7 +26,7 @@ export default function ProductMain({ slug, data }: { slug: ProductSlug; data: P
           <h2 className="text-left font-inter text-lg font-bold tracking-normal">{data.description.title}</h2>
           <p className="product-body mt-2">{data.description.paragraph}</p>
         </div>
-        <div className="w-full space-y-4 rounded-2xl bg-secondary/[.045] p-4 sm:p-5">
+        <div id={`booking-options-${slug}`} className="w-full space-y-4 rounded-2xl bg-secondary/[.045] p-4 sm:p-5">
           <PackagePrices rows={price.rows} />
           {price.note && <p className="text-xs text-muted-foreground">{price.note}</p>}
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
