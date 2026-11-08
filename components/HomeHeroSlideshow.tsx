@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { cloudinaryPhotoUrl } from '@/lib/cloudinary';
 import { IMAGES } from '@/lib/images';
 
@@ -8,7 +8,7 @@ const SLIDES = IMAGES.home.hero.slides;
 const HOLD_MS = 8000;
 
 function heroSrcSet(slide: (typeof SLIDES)[number]) {
-  const widths = [360, 540, 768, 1080, 1536, 2160, 2880].filter((width) => width <= slide.width);
+  const widths = [360, 540, 768, 1080, 1536, 2160, 2880, 3840].filter((width) => width <= slide.width);
   return widths.map((width) => `${cloudinaryPhotoUrl(slide.publicId, width)} ${width}w`).join(', ');
 }
 
@@ -79,9 +79,14 @@ export function HomeHeroSlideshow() {
             ref={index === 0 ? firstImageRef : undefined}
             src={cloudinaryPhotoUrl(slide.publicId, Math.min(1920, slide.width))}
             srcSet={heroSrcSet(slide)}
-            sizes="(min-width: 1500px) 860px, (min-width: 800px) 57vw, 100vw"
+            sizes="(max-width: 640px) max(100vw, 95svh), 100vw"
             alt="" width={slide.width} height={slide.height}
-            className="absolute inset-0 h-full w-full object-contain"
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{
+              '--focus-x': slide.focusX,
+              '--subject-top': slide.subjectTop,
+              '--height-per-width': slide.height / slide.width,
+            } as CSSProperties}
             fetchPriority={index === 0 ? 'high' : 'low'}
             decoding="async"
             onLoad={({ currentTarget }) => {
