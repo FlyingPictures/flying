@@ -2,9 +2,8 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
+import { CloudinaryPhoto } from "@/components/CloudinaryPhoto";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import { cloudinaryUrl } from "@/lib/cloudinary";
 import { ProductTranslation } from "@/types/product";
 import { TRIPADVISOR_RATING, TRIPADVISOR_REVIEW_COUNT } from "@/lib/tripadvisor-reviews";
 import { IMAGES } from "@/lib/images";
@@ -78,12 +77,14 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
                 aria-label={`${locale === "es" ? "Abrir foto" : "Open photo"} ${i + 1}`}
                 className={`relative aspect-square overflow-hidden ${CORNERS[i]} cursor-pointer`}
               >
-                <Image
-                  src={cloudinaryUrl(img)}   // ← sin parámetros
+                <CloudinaryPhoto
+                  publicId={img}
                   alt={`${locale === "es" ? "Foto" : "Photo"} ${i + 1}`}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
-                  unoptimized={true}
+                  sizes="(max-width: 1023px) 50vw, 30vw"
+                  aspectRatio="1:1"
+                  priority={i === 0}
                 />
               </button>
             ))}
@@ -164,13 +165,13 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
                 }
               }}
             >
-              <Image
-                src={cloudinaryUrl(images[carouselIndex])} // ← sin parámetros
+              <CloudinaryPhoto
+                publicId={images[carouselIndex]}
                 alt={`${locale === "es" ? "Foto" : "Photo"} ${carouselIndex + 1}`}
                 fill
-                className="object-cover rounded-(--radius)"
+                className="object-contain rounded-(--radius)"
                 priority
-                unoptimized={true}   // ← añadido
+                sizes="(max-width: 767px) 100vw, 768px"
               />
             </div>
 

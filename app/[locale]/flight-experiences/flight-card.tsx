@@ -1,4 +1,4 @@
-import { CloudinaryImage } from "@/components/CloudinaryImage";
+import { CloudinaryPhoto } from "@/components/CloudinaryPhoto";
 import { ReservationLink } from "@/components/booking/reservation-link";
 import { Button } from "@/components/ui/button";
 import { getLocale, getTranslations } from "next-intl/server";
@@ -33,17 +33,17 @@ const CARD_IMAGES: Record<(typeof CATALOG_FLIGHTS)[number], string> = {
   transport: IMAGES.product.gallery.transport[0],
   classic: IMAGES.product.gallery.classic[0],
   journey: IMAGES.product.gallery.journey[0],
-  celebration: IMAGES.product.gallery.celebration[1],
+  celebration: IMAGES.product.gallery.celebration[0],
   private: IMAGES.product.gallery.private[0],
   charter: IMAGES.product.gallery.charter[0],
-  vip: IMAGES.product.gallery.vip[1],
+  vip: IMAGES.product.gallery.vip[0],
 };
 
 const IMAGE_POSITION: Partial<Record<FlightId, string>> = {
   transport: "object-[center_48%]",
   classic: "object-[center_46%]",
   journey: "object-center",
-  celebration: "object-bottom",
+  celebration: "object-[center_60%]",
   private: "object-center",
   charter: "object-center",
   vip: "object-[center_46%]",
@@ -145,7 +145,7 @@ function FlightCard({
           featured && "lg:aspect-auto lg:min-h-132",
         )}
       >
-        <CloudinaryImage
+        <CloudinaryPhoto
           publicId={CARD_IMAGES[id]}
           alt={getProductName(id, locale)}
           fill
@@ -154,7 +154,6 @@ function FlightCard({
             "h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]",
             IMAGE_POSITION[id],
           )}
-          objectFit="cover"
         />
         <div className="absolute inset-0 bg-linear-to-t from-secondary/85 via-secondary/10 via-55% to-transparent" />
 

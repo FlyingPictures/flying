@@ -4,7 +4,7 @@ export const IMAGES = {
       logo: "logo_fsv096",
     },
     hero: {
-      background: "hero1_rszxmn",
+      background: "thumbnail_cylgjq",
       stars: "5_stars_xbtijo",
       cameronLogo: "cameronlogo_hve9ws",
     },
@@ -126,7 +126,7 @@ export const IMAGES = {
         "Rectangle_95_4_hzsd3x",
       ],
       classic: [
-        "traditional_01",
+        "uc_l4srpt",
         "traditional_02",
         "traditional_03",
         "traditional_04",
@@ -134,7 +134,7 @@ export const IMAGES = {
         "traditional_06"
       ],
       journey: [
-        "Rectangle_37_2_vkbxog",
+        "thumbnail_joqzvo",
         "Rectangle_41_6_qcbkkl",
         "flightHero_tqysvs",
         "Rectangle_33_3_vuzq4o",
@@ -146,7 +146,7 @@ export const IMAGES = {
         "Rectangle_41_2_fyibpj"
       ],
       vip: [
-        "vip_01",
+        "thumbnail_vnugqt",
         "vip_02",
         "vip_03",
         "vip_04",
@@ -154,7 +154,7 @@ export const IMAGES = {
         "vip_06"
       ],
       transport: [
-        "transport_01",
+        "thumbnail_eilzjm",
         "transport_02",
         "transport_03",
         "transport_04",
@@ -174,13 +174,13 @@ export const IMAGES = {
         "Rectangle_41_4_p6etxl"
       ],
       celebration: [
-        "vip_05", "Rectangle_41_6_qcbkkl", "vip_06", "flightHero_tqysvs"
+        "thumbnail_gaj5x0", "Rectangle_41_6_qcbkkl", "vip_06", "flightHero_tqysvs"
       ],
       private: [
-        "vip_05", "Rectangle_41_6_qcbkkl", "vip_06", "flightHero_tqysvs"
+        "thumbnail_zjstmn", "Rectangle_41_6_qcbkkl", "vip_06", "flightHero_tqysvs"
       ],
       charter: [
-        "vip_01", "vip_02", "vip_03", "vip_04", "vip_05", "vip_06"
+        "thumbnail_cylgjq", "vip_02", "vip_03", "vip_04", "vip_05", "vip_06"
       ],
       corporate: [
         "corporate_06",

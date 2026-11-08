@@ -5,6 +5,7 @@ import * as React from 'react'
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import { CloudinaryImage } from '@/components/CloudinaryImage'
+import { CloudinaryPhoto } from '@/components/CloudinaryPhoto'
 import { cn } from '@/lib/utils'
 import { ReservationLink } from "@/components/booking/reservation-link";
 import { Button } from '@/components/ui/button'
@@ -30,7 +31,7 @@ const ALL_FLIGHTS: HomeFlight[] = [
   { slug: 'transport', cat: 'shared', image: IMAGES.product.gallery.transport[0], imageClassName: 'object-[center_48%]', featured: true },
   { slug: 'classic', cat: 'shared', image: IMAGES.product.gallery.classic[0], imageClassName: 'object-[center_42%]' },
   { slug: 'journey', cat: 'shared', image: IMAGES.product.gallery.journey[0], imageClassName: 'object-[center_45%]' },
-  { slug: 'celebration', cat: 'private', image: IMAGES.product.gallery.celebration[0] },
+  { slug: 'celebration', cat: 'private', image: IMAGES.product.gallery.celebration[0], imageClassName: 'object-[center_60%]' },
   { slug: 'private', cat: 'private', image: IMAGES.product.gallery.private[0] },
   { slug: 'charter', cat: 'vip', image: IMAGES.product.gallery.charter[0] },
   { slug: 'vip', cat: 'vip', image: IMAGES.product.gallery.vip[0], imageClassName: 'object-[center_46%]', featured: true },
@@ -289,13 +290,12 @@ export function FlightExperienceSection() {
               style={{ scrollSnapAlign: 'center' }}
             >
               <div className="relative aspect-[16/10] rounded-(--radius) overflow-hidden bg-secondary/10 shadow-[0_18px_50px_rgba(3,48,59,0.12)]">
-                <CloudinaryImage
+                <CloudinaryPhoto
                   publicId={flight.image}
                   alt={getProductName(flight.slug, locale)}
                   fill
                   sizes="(max-width: 767px) 84vw, (max-width: 1023px) 62vw, 620px"
                   className={`w-full h-full object-cover ${flight.imageClassName ?? ''}`}
-                  objectFit="cover"
                 />
                 <div
                   aria-hidden="true"

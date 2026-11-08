@@ -1,0 +1,267 @@
+{
+  "date": "2026-11-08",
+  "scope": "Selección aprobada: portada y foto principal de siete paquetes; tarjetas del home, catálogo y primera imagen de cada galería. Se conservan las demás fotos.",
+  "cloudinaryCloud": "dkmjguzvx",
+  "sources": [
+    {
+      "placement": "portada / Charter",
+      "originalFilename": "_CAP6416.JPG",
+      "sourceUrl": "https://drive.google.com/file/d/1ZAvhgmhn2zw7P2i8WuvW8EpZnUm6AcEY/view",
+      "publicId": "thumbnail_cylgjq",
+      "uploadedDimensions": [
+        3840,
+        2560
+      ]
+    },
+    {
+      "placement": "Esencial",
+      "originalFilename": "_CAP4515.JPG",
+      "sourceUrl": "https://drive.google.com/file/d/1W7CgPaqEkVsZ9t2Zr_TTv8spYrjfxLcS/view",
+      "publicId": "uc_l4srpt",
+      "uploadedDimensions": [
+        6000,
+        4000
+      ]
+    },
+    {
+      "placement": "Transporte + Pirámides",
+      "originalFilename": "_CAP6467.JPG",
+      "sourceUrl": "https://drive.google.com/file/d/1-KmdHPie0WEfRgdgtgC27mrUiUhdeRy2/view",
+      "publicId": "thumbnail_eilzjm",
+      "uploadedDimensions": [
+        3840,
+        2560
+      ]
+    },
+    {
+      "placement": "Viajero",
+      "originalFilename": "_CAP1603.JPG",
+      "sourceUrl": "https://drive.google.com/file/d/1FqbGZNyxRvQ2BOqlcgzwKn4_O9-sozLl/view",
+      "publicId": "thumbnail_joqzvo",
+      "uploadedDimensions": [
+        3840,
+        2560
+      ]
+    },
+    {
+      "placement": "Celebración",
+      "originalFilename": "_CAP2048.JPG",
+      "sourceUrl": "https://drive.google.com/file/d/1six9IJepytAhsH3ESy1DWRnXSr9uPKOV/view",
+      "publicId": "thumbnail_gaj5x0",
+      "uploadedDimensions": [
+        3840,
+        2560
+      ]
+    },
+    {
+      "placement": "Privado",
+      "originalFilename": "_CAP2088.JPG",
+      "sourceUrl": "https://drive.google.com/file/d/1GfC0dPpJiNkm0CMoaeMFqRjcqRtCR5zf/view",
+      "publicId": "thumbnail_zjstmn",
+      "uploadedDimensions": [
+        3840,
+        2560
+      ]
+    },
+    {
+      "placement": "Premium VIP",
+      "originalFilename": "_CAP1487.JPG",
+      "sourceUrl": "https://drive.google.com/file/d/1HTN681tFPvrMZdqmW9RxgKlaDLK4POa7/view",
+      "publicId": "thumbnail_vnugqt",
+      "uploadedDimensions": [
+        3840,
+        2560
+      ]
+    }
+  ],
+  "delivery": {
+    "format": "f_auto",
+    "quality": "q_auto:good",
+    "responsive": "srcset y sizes; recortes de portada por breakpoint; galería inicial cuadrada",
+    "loading": "portada con fetchpriority high, primera foto de producto prioritaria, tarjetas y restantes fotos con carga diferida",
+    "fullscreenGallery": "Fotografía completa con object-contain, sin recorte destructivo.",
+    "uploadLimit": "Cloudinary admite 10 MB por archivo. Las seis fotos mayores se importaron a 3840 × 2560; los originales de 6000 × 4000 permanecen en Drive."
+  },
+  "pendingSean": [
+    "Fotografías de ingeniería",
+    "Fotografías de flota"
+  ],
+  "validation": {
+    "build": "npm run build -- --webpack: OK",
+    "packages": "15 pruebas aprobadas",
+    "lint": "Sin errores ni advertencias en los componentes modificados; advertencia preexistente en emergency-landing/site/assets/app.js",
+    "routes": "14 páginas de paquetes verificadas: 7 en español y 7 en inglés",
+    "visual": "Portada en 1440 × 1000 y 390 × 844, tarjetas del home y catálogo, galería móvil VIP completa. Carrusel conserva navegación y diseño.",
+    "measurementNote": "Descargas reales del CDN con Accept para formatos modernos; muestras de imágenes, no una auditoría de Core Web Vitals."
+  },
+  "cdnSamples": [
+    {
+      "name": "aerial",
+      "widthRequested": 828,
+      "dimensions": [
+        828,
+        1656
+      ],
+      "bytes": 324447,
+      "format": "image/jpeg",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_fill,g_center,ar_1:2,w_828/f_auto,q_auto:good/thumbnail_cylgjq"
+    },
+    {
+      "name": "aerial",
+      "widthRequested": 1920,
+      "dimensions": [
+        1920,
+        1280
+      ],
+      "bytes": 581949,
+      "format": "image/jpeg",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_1920/f_auto,q_auto:good/thumbnail_cylgjq"
+    },
+    {
+      "name": "esencial",
+      "widthRequested": 828,
+      "dimensions": [
+        828,
+        552
+      ],
+      "bytes": 39236,
+      "format": "image/webp",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_828/f_auto,q_auto:good/uc_l4srpt"
+    },
+    {
+      "name": "esencial",
+      "widthRequested": 1280,
+      "dimensions": [
+        1280,
+        853
+      ],
+      "bytes": 74900,
+      "format": "image/webp",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_1280/f_auto,q_auto:good/uc_l4srpt"
+    },
+    {
+      "name": "transporte",
+      "widthRequested": 828,
+      "dimensions": [
+        828,
+        552
+      ],
+      "bytes": 53165,
+      "format": "image/jpeg",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_828/f_auto,q_auto:good/thumbnail_eilzjm"
+    },
+    {
+      "name": "transporte",
+      "widthRequested": 1280,
+      "dimensions": [
+        1280,
+        853
+      ],
+      "bytes": 123461,
+      "format": "image/jpeg",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_1280/f_auto,q_auto:good/thumbnail_eilzjm"
+    },
+    {
+      "name": "viajero",
+      "widthRequested": 828,
+      "dimensions": [
+        828,
+        552
+      ],
+      "bytes": 53718,
+      "format": "image/webp",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_828/f_auto,q_auto:good/thumbnail_joqzvo"
+    },
+    {
+      "name": "viajero",
+      "widthRequested": 1280,
+      "dimensions": [
+        1280,
+        853
+      ],
+      "bytes": 119044,
+      "format": "image/webp",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_1280/f_auto,q_auto:good/thumbnail_joqzvo"
+    },
+    {
+      "name": "celebracion",
+      "widthRequested": 828,
+      "dimensions": [
+        828,
+        552
+      ],
+      "bytes": 56412,
+      "format": "image/webp",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_828/f_auto,q_auto:good/thumbnail_gaj5x0"
+    },
+    {
+      "name": "celebracion",
+      "widthRequested": 1280,
+      "dimensions": [
+        1280,
+        853
+      ],
+      "bytes": 124170,
+      "format": "image/webp",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_1280/f_auto,q_auto:good/thumbnail_gaj5x0"
+    },
+    {
+      "name": "privado",
+      "widthRequested": 828,
+      "dimensions": [
+        828,
+        552
+      ],
+      "bytes": 38618,
+      "format": "image/webp",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_828/f_auto,q_auto:good/thumbnail_zjstmn"
+    },
+    {
+      "name": "privado",
+      "widthRequested": 1280,
+      "dimensions": [
+        1280,
+        853
+      ],
+      "bytes": 88866,
+      "format": "image/webp",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_1280/f_auto,q_auto:good/thumbnail_zjstmn"
+    },
+    {
+      "name": "vip",
+      "widthRequested": 828,
+      "dimensions": [
+        828,
+        552
+      ],
+      "bytes": 47966,
+      "format": "image/webp",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_828/f_auto,q_auto:good/thumbnail_vnugqt"
+    },
+    {
+      "name": "vip",
+      "widthRequested": 1280,
+      "dimensions": [
+        1280,
+        853
+      ],
+      "bytes": 124574,
+      "format": "image/jpeg",
+      "cacheControl": "private, no-transform, max-age=2592000",
+      "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_1280/f_auto,q_auto:good/thumbnail_vnugqt"
+    }
+  ]
+}
