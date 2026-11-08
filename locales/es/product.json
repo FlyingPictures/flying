@@ -2,7 +2,7 @@
   "product": {
     "gallery": {
       "title": "Galería de fotos",
-      "expand": "Ampliar foto",
+      "allPhotos": "Ver {total} fotos",
       "close": "Cerrar galería",
       "previous": "Foto anterior",
       "next": "Foto siguiente",

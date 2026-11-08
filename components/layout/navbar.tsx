@@ -209,16 +209,16 @@ export default function Navbar() {
         isHeaderHidden ? "-translate-y-[calc(100%+1rem)]" : scrollY > 80 && "-translate-y-12")}>
         <HeaderBanner />
         <div className="site-frame mt-4">
-          <nav aria-label={t("menuTitle")} className="relative grid h-21 grid-cols-[1fr_5rem_1fr] items-center rounded-2xl bg-background px-5 shadow-2xl min-[1440px]:px-8">
+          <nav aria-label={t("menuTitle")} className="relative grid h-21 grid-rows-[100%] grid-cols-[minmax(0,1fr)_4.75rem_minmax(0,1fr)] gap-x-6 items-center rounded-2xl bg-background px-5 shadow-2xl min-[1440px]:px-8">
             <Link
               href="/"
               aria-label={locale === "es" ? "Flying Pictures México — Inicio" : "Flying Pictures México — Home"}
-              className="absolute left-1/2 -translate-x-1/2 top-0 z-20 w-19 h-24"
+              className="relative z-20 col-start-2 row-start-1 h-24 w-19 self-start"
             >
               <BrandLogo priority className="w-full h-full object-contain" />
             </Link>
 
-            <div className="flex items-center justify-between gap-2 whitespace-nowrap text-[0.875rem] min-[1440px]:justify-start min-[1440px]:gap-7 min-[1440px]:text-base">
+            <div className="col-start-1 row-start-1 flex items-center gap-[clamp(.75rem,1.5vw,1.75rem)] whitespace-nowrap text-[0.875rem] min-[1440px]:gap-7 min-[1440px]:text-base">
               <div className="flex items-center">
                 <NavLink id="flightExperiences" href="/flight-experiences" />
                 <DropdownMenu.Root open={isMenuOpen} onOpenChange={setIsMenuOpen} modal={false}>
@@ -250,7 +250,7 @@ export default function Navbar() {
               <NavLink id="planYourVisit" href="/plan-your-visit" />
             </div>
 
-            <div className="col-start-3 flex items-center justify-end gap-3 whitespace-nowrap text-sm min-[1440px]:gap-7 min-[1440px]:text-base">
+            <div className="col-start-3 row-start-1 flex items-center justify-end gap-3 whitespace-nowrap text-sm min-[1440px]:gap-7 min-[1440px]:text-base">
               <NavLink id="contactSupport" href="/contact" />
               <LanguageSwitcher />
               {showBookButton && <BookButton />}
