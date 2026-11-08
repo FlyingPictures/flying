@@ -1,0 +1,1310 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-08",
+  "status": "propuesta_para_revision",
+  "appliedToSite": false,
+  "scope": "Galerías y asignación explícita de fotografías a cada paso de los itinerarios de siete paquetes. No cambia precios, servicios, orden del itinerario ni fotografías de portada del sitio.",
+  "sourceFolders": [
+    "https://drive.google.com/drive/folders/12odjnHcdcBbwwOg-hVa94lFxy0HuPg3d",
+    "https://drive.google.com/drive/folders/12Pg4Z3oYeavI0C8lgSZ5ewZNDaInPj8C"
+  ],
+  "review": {
+    "previousIndexedPhotos": 1195,
+    "additionalThumbnailsInspected": 3169,
+    "note": "Revisión visual de las hojas de contacto del índice previo y de las nuevas miniaturas descargadas. No se afirma que el listado del proveedor sea exhaustivo; algunos álbumes llegaron al límite de 1,000 elementos por llamada. Los originales de las fotos propuestas fueron inspeccionados individualmente.",
+    "criteria": [
+      "Emoción y deseo de vivir la experiencia",
+      "Correspondencia con los servicios incluidos",
+      "Nitidez y luz antes que número de megapíxeles",
+      "Marca Flying identificable cuando es posible; excluir marcas de otros operadores",
+      "Variedad de planos sin rellenar servicios faltantes con fotos genéricas"
+    ]
+  },
+  "implementationRules": [
+    "Galería y fotografías de itinerario deben tener mapas independientes. Eliminar el uso de índice módulo longitud de galería para asignar las fotos del itinerario.",
+    "Mantener las fotos sin correspondencia verificable pendientes; usar un icono neutral o esperar la foto real antes de publicar.",
+    "Mantener los siete itinerarios comerciales actuales, en sus dos idiomas; no agregar pasos porque exista una foto.",
+    "Cargar variantes responsivas de Cloudinary, f_auto y q_auto:good; prioridad solo para la imagen inicial visible. Carga diferida para las demás.",
+    "Respetar orientación EXIF y evitar ampliar originales; lightbox con fotografía completa y recortes móviles validados.",
+    "Revisar recortes de certificado y copas en miniaturas de 48–64 px. No mostrar una vista aérea como evidencia de guía o visita a pie.",
+    "Las candidatas marcadas confirmar_sean no deben publicarse sin esa validación."
+  ],
+  "assets": {
+    "shared-basket": {
+      "label": "Amigos a bordo · Flying 07",
+      "filename": "IMG_0047.JPG",
+      "driveFileId": "1g4OHtZNgNApfHBRMXfXz30-bSRCp8dpK",
+      "sourceUrl": "https://drive.google.com/file/d/1g4OHtZNgNApfHBRMXfXz30-bSRCp8dpK/view",
+      "album": "Biblioteca de fotos",
+      "dimensions": {
+        "width": 5472,
+        "height": 3648
+      },
+      "originalInspected": true,
+      "reason": "Rostros cercanos y marca Flying visible. Encuadre horizontal para abrir Esencial.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "shared-family": {
+      "label": "Una experiencia para compartir",
+      "filename": "IMG_0038.JPG",
+      "driveFileId": "1oOPsXFl-99M4rihNJqZ4Nqt3GzpTHJEg",
+      "sourceUrl": "https://drive.google.com/file/d/1oOPsXFl-99M4rihNJqZ4Nqt3GzpTHJEg/view",
+      "album": "Biblioteca de fotos",
+      "dimensions": {
+        "width": 5472,
+        "height": 3648
+      },
+      "originalInspected": true,
+      "reason": "Pasajeras sonriendo en la canastilla; aporta cercanía y diversidad de viajeros.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "vip-toast": {
+      "label": "Brindis al amanecer",
+      "filename": "_CAP1487.JPG",
+      "driveFileId": "1HTN681tFPvrMZdqmW9RxgKlaDLK4POa7",
+      "sourceUrl": "https://drive.google.com/file/d/1HTN681tFPvrMZdqmW9RxgKlaDLK4POa7/view",
+      "album": "Biblioteca de fotos",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Fotografía preferida por el usuario; conserva el protagonismo en Premium VIP.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "aerial": {
+      "label": "Teotihuacán desde el aire",
+      "filename": "_CAP6416.JPG",
+      "driveFileId": "1ZAvhgmhn2zw7P2i8WuvW8EpZnUm6AcEY",
+      "sourceUrl": "https://drive.google.com/file/d/1ZAvhgmhn2zw7P2i8WuvW8EpZnUm6AcEY/view",
+      "album": "Carlos",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Panorama de gran escala; ilustra el vuelo. No equivale a una visita a pie ni garantiza una ruta.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "pyramids": {
+      "label": "Pirámides y globo",
+      "filename": "_CAP6467.JPG",
+      "driveFileId": "1-KmdHPie0WEfRgdgtgC27mrUiUhdeRy2",
+      "sourceUrl": "https://drive.google.com/file/d/1-KmdHPie0WEfRgdgtgC27mrUiUhdeRy2/view",
+      "album": "Carlos",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Imagen del destino para galerías de paquetes con zona arqueológica. Es una vista aérea.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "celebration-flight": {
+      "label": "Celebrar juntos en globo",
+      "filename": "_CAP2048.JPG",
+      "driveFileId": "1six9IJepytAhsH3ESy1DWRnXSr9uPKOV",
+      "sourceUrl": "https://drive.google.com/file/d/1six9IJepytAhsH3ESy1DWRnXSr9uPKOV/view",
+      "album": "Carlos",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Emoción, manos arriba y llama del quemador. Foto principal previamente aprobada.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "private-couple": {
+      "label": "Un momento en pareja",
+      "filename": "_CAP2088.JPG",
+      "driveFileId": "1GfC0dPpJiNkm0CMoaeMFqRjcqRtCR5zf",
+      "sourceUrl": "https://drive.google.com/file/d/1GfC0dPpJiNkm0CMoaeMFqRjcqRtCR5zf/view",
+      "album": "Carlos",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Risa espontánea y cercanía. Foto principal previamente aprobada.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "boarding": {
+      "label": "Preparación con el equipo Flying",
+      "filename": "_CAP1812.JPG",
+      "driveFileId": "17gitxIXY9rNeotMMhqijYhrmZfYypeP7",
+      "sourceUrl": "https://drive.google.com/file/d/17gitxIXY9rNeotMMhqijYhrmZfYypeP7/view",
+      "album": "Carlos",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "El equipo ayuda a los pasajeros en la canastilla. Apta para el paso de preparación.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "flowers": {
+      "label": "Flores a bordo",
+      "filename": "DSC01658.JPG",
+      "driveFileId": "1jJfKecwaj0sc63utcdL5yoetgEDF_vaf",
+      "sourceUrl": "https://drive.google.com/file/d/1jJfKecwaj0sc63utcdL5yoetgEDF_vaf/view",
+      "album": "Suyin",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Pareja con ramo y equipo Flying; muestra un diferenciador de Celebración.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "cake": {
+      "label": "Pastel de cumpleaños",
+      "filename": "DSC03320.JPG",
+      "driveFileId": "16SwlwORUNRMp_4ViT_C9BsVCdB3-MXux",
+      "sourceUrl": "https://drive.google.com/file/d/16SwlwORUNRMp_4ViT_C9BsVCdB3-MXux/view",
+      "album": "Pedro",
+      "dimensions": {
+        "width": 4000,
+        "height": 6000
+      },
+      "originalInspected": true,
+      "reason": "Detalle real del pastel. Ilustra la celebración sin prometer un diseño o tamaño específicos.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "birthday": {
+      "label": "Un cumpleaños especial",
+      "filename": "IMG_9570.JPG",
+      "driveFileId": "1y_jTgECiuc-YyOLRNPdDlBwK7o5cTG0A",
+      "sourceUrl": "https://drive.google.com/file/d/1y_jTgECiuc-YyOLRNPdDlBwK7o5cTG0A/view",
+      "album": "Natalia",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Lona en español y festejado. Complemento de Celebración; no representa una propuesta de matrimonio.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "certificate-couple": {
+      "label": "Tu certificado de vuelo",
+      "filename": "DSC09906.JPG",
+      "driveFileId": "1e5ftFDh6ZyyXt_oFFAYXzG4HxMhw2YRk",
+      "sourceUrl": "https://drive.google.com/file/d/1e5ftFDh6ZyyXt_oFFAYXzG4HxMhw2YRk/view",
+      "album": "Pedro",
+      "dimensions": {
+        "width": 4000,
+        "height": 6000
+      },
+      "originalInspected": true,
+      "reason": "Pareja y equipo Flying con certificados legibles. Encuadre vertical que debe conservar los diplomas.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "certificate-group": {
+      "label": "Un recuerdo para cada viajero",
+      "filename": "IMG_6477.JPG",
+      "driveFileId": "1pR827ufY8C_pDvIDumNHLKGGXDdCx73g",
+      "sourceUrl": "https://drive.google.com/file/d/1pR827ufY8C_pDvIDumNHLKGGXDdCx73g/view",
+      "album": "Suyin",
+      "dimensions": {
+        "width": 5472,
+        "height": 3648
+      },
+      "originalInspected": true,
+      "reason": "Grupo con certificados Flying y copas. Encuadre horizontal claro para certificado.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "shared-toast": {
+      "label": "El brindis después del vuelo",
+      "filename": "IMG_6472.JPG",
+      "driveFileId": "1-qvMCCZ4g0ElN5K6xJsj5DnAK4--QDI1",
+      "sourceUrl": "https://drive.google.com/file/d/1-qvMCCZ4g0ElN5K6xJsj5DnAK4--QDI1/view",
+      "album": "Suyin",
+      "dimensions": {
+        "width": 5472,
+        "height": 3648
+      },
+      "originalInspected": true,
+      "reason": "Copas, pasajeros y uniforme Flying; acción concreta y fondo limpio para el brindis.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "pilot": {
+      "label": "El vuelo con tu piloto",
+      "filename": "_CAP6464.JPG",
+      "driveFileId": "1UzSQuG5LPfHV--yAOoGL_f9JNcqmohoh",
+      "sourceUrl": "https://drive.google.com/file/d/1UzSQuG5LPfHV--yAOoGL_f9JNcqmohoh/view",
+      "album": "Carlos",
+      "dimensions": {
+        "width": 4000,
+        "height": 6000
+      },
+      "originalInspected": true,
+      "reason": "Piloto Flying operando los controles con la pirámide al fondo; muestra el vuelo desde la canastilla.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      }
+    },
+    "private-basket": {
+      "label": "Pareja y piloto · Flying 08",
+      "filename": "DSC08772.JPG",
+      "driveFileId": "1scwaEum7iM3ssl2hoIfGh9-hpPXcRhQL",
+      "sourceUrl": "https://drive.google.com/file/d/1scwaEum7iM3ssl2hoIfGh9-hpPXcRhQL/view",
+      "album": "Pedro",
+      "dimensions": {
+        "width": 4000,
+        "height": 6000
+      },
+      "originalInspected": true,
+      "reason": "Canastilla con dos pasajeros y piloto, marca Flying visible. La foto no documenta por sí sola el tipo de reserva.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      },
+      "restriction": "Ilustra una pareja en canastilla; no documenta exclusividad de una reserva específica."
+    },
+    "toast-detail": {
+      "label": "Detalle del brindis",
+      "filename": "DSC00067.JPG",
+      "driveFileId": "1yg72SSTJpayXFaQk-wf48ioiJdoHkLpH",
+      "sourceUrl": "https://drive.google.com/file/d/1yg72SSTJpayXFaQk-wf48ioiJdoHkLpH/view",
+      "album": "Pedro",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Servicio de vino espumoso en copa. Ilustra el momento; no acredita una denominación Champagne. Para paquetes con champagne se propone la foto de copas sin botella.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      },
+      "restriction": "Solo vino espumoso. No usar botella como prueba visual del champagne de Privado, Charter o VIP."
+    },
+    "photographer": {
+      "label": "Un recuerdo de la experiencia",
+      "filename": "_DSC3084.JPG",
+      "driveFileId": "1XfcwRMrCpyjzG3Qfhb00crg1Y8IaWenw",
+      "sourceUrl": "https://drive.google.com/file/d/1XfcwRMrCpyjzG3Qfhb00crg1Y8IaWenw/view",
+      "album": "Luis",
+      "dimensions": {
+        "width": 3008,
+        "height": 2000
+      },
+      "originalInspected": true,
+      "reason": "Persona fotografiando a bordo con equipo Flying en la escena. Candidata para ilustrar el servicio de fotos; Sean debe confirmar que es el fotógrafo del servicio incluido.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      },
+      "requiresSeanConfirmation": true
+    },
+    "cave": {
+      "label": "Luz en una cueva",
+      "filename": "DSC_0535.JPG",
+      "driveFileId": "1t0Xx2adVRQiCVwiQR4OsM2_cb-jIQx6W",
+      "sourceUrl": "https://drive.google.com/file/d/1t0Xx2adVRQiCVwiQR4OsM2_cb-jIQx6W/view",
+      "album": "Luis",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Toma evocadora de una visitante en una cueva. Sean debe identificar el lugar y confirmar que forma parte del tour VIP actual.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      },
+      "requiresSeanConfirmation": true
+    },
+    "mariachi": {
+      "label": "Música para celebrar",
+      "filename": "BDS_6367.JPG",
+      "driveFileId": "1NSggd_KCWDQ4NXF3RwsXneBlJM8a3Qdt",
+      "sourceUrl": "https://drive.google.com/file/d/1NSggd_KCWDQ4NXF3RwsXneBlJM8a3Qdt/view",
+      "album": "Javier",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Trío de músicos junto al globo. Sean debe confirmar que corresponde a las mañanitas ofrecidas actualmente.",
+      "crop": {
+        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
+        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
+      },
+      "requiresSeanConfirmation": true
+    }
+  },
+  "packages": {
+    "classic": {
+      "name": "Vuelo Esencial",
+      "marketingFocus": "Pasajeros, vuelo compartido, brindis y certificado",
+      "gallery": [
+        {
+          "order": 1,
+          "photo": "shared-basket",
+          "status": "propuesta"
+        },
+        {
+          "order": 2,
+          "photo": "shared-family",
+          "status": "propuesta"
+        },
+        {
+          "order": 3,
+          "photo": "aerial",
+          "status": "propuesta"
+        },
+        {
+          "order": 4,
+          "photo": "shared-toast",
+          "status": "propuesta"
+        },
+        {
+          "order": 5,
+          "photo": "certificate-group",
+          "status": "propuesta"
+        }
+      ],
+      "itinerary": [
+        {
+          "step": 1,
+          "title": "Llegada y coffee break",
+          "time": "Antes del vuelo",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "coffee",
+          "note": "Café servido, manos y sonrisas en la recepción real; luz cálida y fondo limpio, sin decoración estacional dominante."
+        },
+        {
+          "step": 2,
+          "title": "Preparación para volar",
+          "time": "Preparación",
+          "photo": "boarding",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 3,
+          "title": "Vuelo compartido",
+          "time": "En el aire",
+          "photo": "aerial",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 4,
+          "title": "Brindis tradicional",
+          "time": "Al aterrizar",
+          "photo": "shared-toast",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 5,
+          "title": "Certificado de vuelo",
+          "time": "Recuerdo del vuelo",
+          "photo": "certificate-group",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        }
+      ],
+      "candidatesPendingSean": [],
+      "missingPhotos": [
+        {
+          "key": "coffee",
+          "label": "Coffee break",
+          "brief": "Café servido, manos y sonrisas en la recepción real; luz cálida y fondo limpio, sin decoración estacional dominante.",
+          "status": "falta_foto"
+        }
+      ]
+    },
+    "transport": {
+      "name": "+Transporte + Pirámides",
+      "marketingFocus": "Vuelo y Teotihuacán · faltan transporte y desayuno",
+      "gallery": [
+        {
+          "order": 1,
+          "photo": "pyramids",
+          "status": "propuesta"
+        },
+        {
+          "order": 2,
+          "photo": "shared-basket",
+          "status": "propuesta"
+        },
+        {
+          "order": 3,
+          "photo": "aerial",
+          "status": "propuesta"
+        },
+        {
+          "order": 4,
+          "photo": "shared-toast",
+          "status": "propuesta"
+        },
+        {
+          "order": 5,
+          "photo": "certificate-group",
+          "status": "propuesta"
+        }
+      ],
+      "itinerary": [
+        {
+          "step": 1,
+          "title": "Llegada y coffee break",
+          "time": "Antes del vuelo",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "coffee",
+          "note": "Café servido, manos y sonrisas en la recepción real; luz cálida y fondo limpio, sin decoración estacional dominante."
+        },
+        {
+          "step": 2,
+          "title": "Preparación para volar",
+          "time": "Preparación",
+          "photo": "boarding",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 3,
+          "title": "Vuelo compartido",
+          "time": "En el aire",
+          "photo": "aerial",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 4,
+          "title": "Brindis tradicional",
+          "time": "Al aterrizar",
+          "photo": "shared-toast",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 5,
+          "title": "Certificado de vuelo",
+          "time": "Recuerdo del vuelo",
+          "photo": "certificate-group",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 6,
+          "title": "Desayuno completo",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "breakfast",
+          "note": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales."
+        },
+        {
+          "step": 7,
+          "title": "Acceso a la zona arqueológica",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "ground",
+          "note": "Visitantes a nivel de suelo con pirámide o Calzada de los Muertos reconocible; una vista aérea no documenta este paso."
+        }
+      ],
+      "candidatesPendingSean": [],
+      "missingPhotos": [
+        {
+          "key": "shared-transport",
+          "label": "Transporte compartido",
+          "brief": "Vehículo de pasajeros actualmente asignado, interior cómodo o viajeros abordando. No usar vehículos de apoyo o emergencia.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "coffee",
+          "label": "Coffee break",
+          "brief": "Café servido, manos y sonrisas en la recepción real; luz cálida y fondo limpio, sin decoración estacional dominante.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "breakfast",
+          "label": "Desayuno completo",
+          "brief": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "ground",
+          "label": "Visita a la zona arqueológica",
+          "brief": "Visitantes a nivel de suelo con pirámide o Calzada de los Muertos reconocible; una vista aérea no documenta este paso.",
+          "status": "falta_foto"
+        }
+      ]
+    },
+    "journey": {
+      "name": "Viajero",
+      "marketingFocus": "La jornada de vuelo · faltan guía, taller y kit",
+      "gallery": [
+        {
+          "order": 1,
+          "photo": "shared-family",
+          "status": "propuesta"
+        },
+        {
+          "order": 2,
+          "photo": "pyramids",
+          "status": "propuesta"
+        },
+        {
+          "order": 3,
+          "photo": "aerial",
+          "status": "propuesta"
+        },
+        {
+          "order": 4,
+          "photo": "shared-toast",
+          "status": "propuesta"
+        },
+        {
+          "order": 5,
+          "photo": "certificate-group",
+          "status": "propuesta"
+        }
+      ],
+      "itinerary": [
+        {
+          "step": 1,
+          "title": "Llegada y coffee break",
+          "time": "Antes del vuelo",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "coffee",
+          "note": "Café servido, manos y sonrisas en la recepción real; luz cálida y fondo limpio, sin decoración estacional dominante."
+        },
+        {
+          "step": 2,
+          "title": "Preparación para volar",
+          "time": "Preparación",
+          "photo": "boarding",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 3,
+          "title": "Vuelo compartido",
+          "time": "En el aire",
+          "photo": "aerial",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 4,
+          "title": "Brindis tradicional",
+          "time": "Al aterrizar",
+          "photo": "shared-toast",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 5,
+          "title": "Certificado de vuelo",
+          "time": "Recuerdo del vuelo",
+          "photo": "certificate-group",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 6,
+          "title": "Desayuno completo",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "breakfast",
+          "note": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales."
+        },
+        {
+          "step": 7,
+          "title": "Acceso a la zona arqueológica",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "ground",
+          "note": "Visitantes a nivel de suelo con pirámide o Calzada de los Muertos reconocible; una vista aérea no documenta este paso."
+        },
+        {
+          "step": 8,
+          "title": "Guía bilingüe",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "guide",
+          "note": "Guía interactuando con viajeros durante el recorrido arqueológico; no sustituir por un piloto en el campo de despegue."
+        },
+        {
+          "step": 9,
+          "title": "Kit / souvenir viajero",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "kit",
+          "note": "Contenido actual del kit dispuesto y completo o entregándose al viajero; sin objetos ajenos al paquete."
+        },
+        {
+          "step": 10,
+          "title": "Taller de artesanías y bebidas típicas",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "workshop",
+          "note": "Artesano o anfitrión explicando la actividad con visitantes; piezas, herramientas y degustación de los productos realmente incluidos."
+        }
+      ],
+      "candidatesPendingSean": [],
+      "missingPhotos": [
+        {
+          "key": "shared-transport",
+          "label": "Transporte compartido",
+          "brief": "Vehículo de pasajeros actualmente asignado, interior cómodo o viajeros abordando. No usar vehículos de apoyo o emergencia.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "coffee",
+          "label": "Coffee break",
+          "brief": "Café servido, manos y sonrisas en la recepción real; luz cálida y fondo limpio, sin decoración estacional dominante.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "breakfast",
+          "label": "Desayuno completo",
+          "brief": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "ground",
+          "label": "Visita a la zona arqueológica",
+          "brief": "Visitantes a nivel de suelo con pirámide o Calzada de los Muertos reconocible; una vista aérea no documenta este paso.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "guide",
+          "label": "Guía bilingüe",
+          "brief": "Guía interactuando con viajeros durante el recorrido arqueológico; no sustituir por un piloto en el campo de despegue.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "kit",
+          "label": "Kit / souvenir viajero",
+          "brief": "Contenido actual del kit dispuesto y completo o entregándose al viajero; sin objetos ajenos al paquete.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "workshop",
+          "label": "Taller y bebidas típicas",
+          "brief": "Artesano o anfitrión explicando la actividad con visitantes; piezas, herramientas y degustación de los productos realmente incluidos.",
+          "status": "falta_foto"
+        }
+      ]
+    },
+    "celebration": {
+      "name": "Celebración",
+      "marketingFocus": "Alegría, flores, pastel y cumpleaños",
+      "gallery": [
+        {
+          "order": 1,
+          "photo": "celebration-flight",
+          "status": "propuesta"
+        },
+        {
+          "order": 2,
+          "photo": "flowers",
+          "status": "propuesta"
+        },
+        {
+          "order": 3,
+          "photo": "cake",
+          "status": "propuesta"
+        },
+        {
+          "order": 4,
+          "photo": "birthday",
+          "status": "propuesta"
+        },
+        {
+          "order": 5,
+          "photo": "shared-toast",
+          "status": "propuesta"
+        },
+        {
+          "order": 6,
+          "photo": "certificate-couple",
+          "status": "propuesta"
+        }
+      ],
+      "itinerary": [
+        {
+          "step": 1,
+          "title": "Llegada y coffee break",
+          "time": "Antes del vuelo",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "coffee",
+          "note": "Café servido, manos y sonrisas en la recepción real; luz cálida y fondo limpio, sin decoración estacional dominante."
+        },
+        {
+          "step": 2,
+          "title": "Preparación para volar",
+          "time": "Preparación",
+          "photo": "boarding",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 3,
+          "title": "Vuelo privado",
+          "time": "En el aire",
+          "photo": "pilot",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 4,
+          "title": "Brindis tradicional",
+          "time": "Al aterrizar",
+          "photo": "shared-toast",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 5,
+          "title": "Certificado de vuelo",
+          "time": "Recuerdo del vuelo",
+          "photo": "certificate-couple",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 6,
+          "title": "Desayuno completo",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "breakfast",
+          "note": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales."
+        }
+      ],
+      "candidatesPendingSean": [
+        {
+          "photo": "mariachi",
+          "status": "confirmar_sean",
+          "note": "Confirmar que el trío representa las mañanitas actualmente incluidas antes de incorporarlo."
+        }
+      ],
+      "missingPhotos": [
+        {
+          "key": "coffee",
+          "label": "Coffee break",
+          "brief": "Café servido, manos y sonrisas en la recepción real; luz cálida y fondo limpio, sin decoración estacional dominante.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "breakfast",
+          "label": "Desayuno completo",
+          "brief": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales.",
+          "status": "falta_foto"
+        }
+      ]
+    },
+    "private": {
+      "name": "Experiencia en Globo Privada",
+      "marketingFocus": "Cercanía en pareja y experiencia con el piloto",
+      "gallery": [
+        {
+          "order": 1,
+          "photo": "private-couple",
+          "status": "propuesta"
+        },
+        {
+          "order": 2,
+          "photo": "private-basket",
+          "status": "propuesta"
+        },
+        {
+          "order": 3,
+          "photo": "pilot",
+          "status": "propuesta"
+        },
+        {
+          "order": 4,
+          "photo": "vip-toast",
+          "status": "propuesta"
+        },
+        {
+          "order": 5,
+          "photo": "certificate-couple",
+          "status": "propuesta"
+        }
+      ],
+      "itinerary": [
+        {
+          "step": 1,
+          "title": "Llegada y coffee break",
+          "time": "Antes del vuelo",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "coffee",
+          "note": "Café servido, manos y sonrisas en la recepción real; luz cálida y fondo limpio, sin decoración estacional dominante."
+        },
+        {
+          "step": 2,
+          "title": "Preparación para volar",
+          "time": "Preparación",
+          "photo": "private-basket",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 3,
+          "title": "Vuelo privado",
+          "time": "En el aire",
+          "photo": "pilot",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 4,
+          "title": "Brindis tradicional",
+          "time": "Al aterrizar",
+          "photo": "vip-toast",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": "Copas sin botella visible: ilustra el brindis y no atribuye a otra bebida la denominación champagne."
+        },
+        {
+          "step": 5,
+          "title": "Certificado de vuelo",
+          "time": "Recuerdo del vuelo",
+          "photo": "certificate-couple",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 6,
+          "title": "Desayuno completo",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "breakfast",
+          "note": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales."
+        }
+      ],
+      "candidatesPendingSean": [],
+      "missingPhotos": [
+        {
+          "key": "coffee",
+          "label": "Coffee break",
+          "brief": "Café servido, manos y sonrisas en la recepción real; luz cálida y fondo limpio, sin decoración estacional dominante.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "breakfast",
+          "label": "Desayuno completo",
+          "brief": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales.",
+          "status": "falta_foto"
+        }
+      ]
+    },
+    "charter": {
+      "name": "FPM Private Charter",
+      "marketingFocus": "Panorámica, atención del piloto y experiencia en pareja",
+      "gallery": [
+        {
+          "order": 1,
+          "photo": "aerial",
+          "status": "propuesta"
+        },
+        {
+          "order": 2,
+          "photo": "pilot",
+          "status": "propuesta"
+        },
+        {
+          "order": 3,
+          "photo": "private-basket",
+          "status": "propuesta"
+        },
+        {
+          "order": 4,
+          "photo": "vip-toast",
+          "status": "propuesta"
+        },
+        {
+          "order": 5,
+          "photo": "certificate-couple",
+          "status": "propuesta"
+        }
+      ],
+      "itinerary": [
+        {
+          "step": 1,
+          "title": "Llegada, desayuno ligero y coffee break",
+          "time": "Antes del vuelo",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "light-breakfast",
+          "note": "Oferta real de desayuno ligero en el punto de recepción; diferenciarla del brunch posterior."
+        },
+        {
+          "step": 2,
+          "title": "Preparación para volar",
+          "time": "Preparación",
+          "photo": "private-basket",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 3,
+          "title": "Vuelo privado",
+          "time": "En el aire",
+          "photo": "pilot",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 4,
+          "title": "Brindis tradicional",
+          "time": "Al aterrizar",
+          "photo": "vip-toast",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": "Copas sin botella visible: ilustra el brindis y no atribuye a otra bebida la denominación champagne."
+        },
+        {
+          "step": 5,
+          "title": "Certificado de vuelo",
+          "time": "Recuerdo del vuelo",
+          "photo": "certificate-couple",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 6,
+          "title": "Acceso a la zona arqueológica",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "ground",
+          "note": "Visitantes a nivel de suelo con pirámide o Calzada de los Muertos reconocible; una vista aérea no documenta este paso."
+        },
+        {
+          "step": 7,
+          "title": "Guía bilingüe desde tu pickup",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "guide-pickup",
+          "note": "Guía y viajeros en el encuentro o traslado real. Sean debe confirmar a quién y qué servicio se retrata."
+        },
+        {
+          "step": 8,
+          "title": "Brunch en Club Campestre",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "club-brunch",
+          "note": "Mesa, platillos y ambiente del Club Campestre actual. Sean debe identificar y validar la sede."
+        }
+      ],
+      "candidatesPendingSean": [],
+      "missingPhotos": [
+        {
+          "key": "premium-transport",
+          "label": "Transporte privado premium",
+          "brief": "Vehículo e interior del servicio vigente de Charter/VIP. Sean debe confirmar el modelo antes de seleccionarlo.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "light-breakfast",
+          "label": "Buffet ligero antes del vuelo",
+          "brief": "Oferta real de desayuno ligero en el punto de recepción; diferenciarla del brunch posterior.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "ground",
+          "label": "Visita a la zona arqueológica",
+          "brief": "Visitantes a nivel de suelo con pirámide o Calzada de los Muertos reconocible; una vista aérea no documenta este paso.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "guide-pickup",
+          "label": "Guía desde el pickup",
+          "brief": "Guía y viajeros en el encuentro o traslado real. Sean debe confirmar a quién y qué servicio se retrata.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "club-brunch",
+          "label": "Brunch en Club Campestre",
+          "brief": "Mesa, platillos y ambiente del Club Campestre actual. Sean debe identificar y validar la sede.",
+          "status": "falta_foto"
+        }
+      ]
+    },
+    "vip": {
+      "name": "Premium · VIP",
+      "marketingFocus": "Brindis y vuelo · cuevas y fotos por confirmar",
+      "gallery": [
+        {
+          "order": 1,
+          "photo": "vip-toast",
+          "status": "propuesta"
+        },
+        {
+          "order": 2,
+          "photo": "pyramids",
+          "status": "propuesta"
+        },
+        {
+          "order": 3,
+          "photo": "private-basket",
+          "status": "propuesta"
+        },
+        {
+          "order": 4,
+          "photo": "pilot",
+          "status": "propuesta"
+        },
+        {
+          "order": 5,
+          "photo": "certificate-couple",
+          "status": "propuesta"
+        }
+      ],
+      "itinerary": [
+        {
+          "step": 1,
+          "title": "Llegada y coffee break",
+          "time": "Antes del vuelo",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "coffee",
+          "note": "Café servido, manos y sonrisas en la recepción real; luz cálida y fondo limpio, sin decoración estacional dominante."
+        },
+        {
+          "step": 2,
+          "title": "Preparación para volar",
+          "time": "Preparación",
+          "photo": "private-basket",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 3,
+          "title": "Vuelo privado",
+          "time": "En el aire",
+          "photo": "pilot",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 4,
+          "title": "Brindis tradicional",
+          "time": "Al aterrizar",
+          "photo": "vip-toast",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": "Copas sin botella visible: ilustra el brindis y no atribuye a otra bebida la denominación champagne."
+        },
+        {
+          "step": 5,
+          "title": "Certificado de vuelo",
+          "time": "Recuerdo del vuelo",
+          "photo": "certificate-couple",
+          "status": "propuesta",
+          "missingPhotoBrief": null,
+          "note": null
+        },
+        {
+          "step": 6,
+          "title": "Acceso a la zona arqueológica",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "ground",
+          "note": "Visitantes a nivel de suelo con pirámide o Calzada de los Muertos reconocible; una vista aérea no documenta este paso."
+        },
+        {
+          "step": 7,
+          "title": "Guía bilingüe",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "guide",
+          "note": "Guía interactuando con viajeros durante el recorrido arqueológico; no sustituir por un piloto en el campo de despegue."
+        },
+        {
+          "step": 8,
+          "title": "Tour en cuevas ceremoniales",
+          "time": "Según itinerario confirmado",
+          "photo": "cave",
+          "status": "confirmar_sean",
+          "missingPhotoBrief": null,
+          "note": "Toma evocadora de una visitante en una cueva. Sean debe identificar el lugar y confirmar que forma parte del tour VIP actual."
+        },
+        {
+          "step": 9,
+          "title": "Brunch",
+          "time": "Según itinerario confirmado",
+          "photo": null,
+          "status": "falta_foto",
+          "missingPhotoBrief": "vip-brunch",
+          "note": "Mesa servida y ambiente del brunch incluido actualmente; confirmar sede con Sean."
+        }
+      ],
+      "candidatesPendingSean": [
+        {
+          "photo": "cave",
+          "status": "confirmar_sean",
+          "note": "Confirmar la cueva y recorrido actuales."
+        },
+        {
+          "photo": "photographer",
+          "status": "confirmar_sean",
+          "note": "Confirmar que retrata el servicio de fotografía incluido y no a otro pasajero con cámara."
+        }
+      ],
+      "missingPhotos": [
+        {
+          "key": "premium-transport",
+          "label": "Transporte privado premium",
+          "brief": "Vehículo e interior del servicio vigente de Charter/VIP. Sean debe confirmar el modelo antes de seleccionarlo.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "coffee",
+          "label": "Coffee break",
+          "brief": "Café servido, manos y sonrisas en la recepción real; luz cálida y fondo limpio, sin decoración estacional dominante.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "ground",
+          "label": "Visita a la zona arqueológica",
+          "brief": "Visitantes a nivel de suelo con pirámide o Calzada de los Muertos reconocible; una vista aérea no documenta este paso.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "guide",
+          "label": "Guía bilingüe",
+          "brief": "Guía interactuando con viajeros durante el recorrido arqueológico; no sustituir por un piloto en el campo de despegue.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "vip-brunch",
+          "label": "Brunch VIP",
+          "brief": "Mesa servida y ambiente del brunch incluido actualmente; confirmar sede con Sean.",
+          "status": "falta_foto"
+        },
+        {
+          "key": "snacks",
+          "label": "Canapés, snacks y atención VIP",
+          "brief": "Servicio real de alimentos y atención del mesero correspondiente al paquete VIP.",
+          "status": "falta_foto"
+        }
+      ]
+    }
+  },
+  "notSelected": [
+    {
+      "sourceUrl": "https://drive.google.com/file/d/1gmmzZghl-SlUvs6uZI3tktnNIaDnMd5g/view",
+      "reason": "Globo con marca Volare legible al fondo."
+    },
+    {
+      "sourceUrl": "https://drive.google.com/file/d/1eKieb-1mtzXHsY8-_bq9Tems0VOIlbRG/view",
+      "reason": "Distintivos de Volare en los pasajeros, visibles en el original. Excluida para evitar promoción de otro operador."
+    },
+    {
+      "sourceUrl": "https://drive.google.com/file/d/1Q2cvPuD7hwzeqi4CeFZ5eR1bwfNJGVNX/view",
+      "reason": "Vehículo con torreta; no hay evidencia de que sea el transporte de pasajeros vigente. No usar para vender transporte incluido."
+    },
+    {
+      "sourceUrl": "https://drive.google.com/file/d/1mxeIN69EOi7xV7O4RSAGkCFXGtUGj3ze/view",
+      "reason": "Café y fogata visibles, pero hay ruido de baja luz y decoración estacional; no cumple la calidad buscada para imagen definitiva."
+    },
+    {
+      "sourceUrl": "https://drive.google.com/file/d/10JvnGeRMDRh7ltG0UjS99MrqyAAW14fn/view",
+      "reason": "En la toma completa se observa un globo en preparación, no una pirámide. No sirve para zona arqueológica."
+    },
+    {
+      "sourceUrl": "https://drive.google.com/file/d/1QH-7V60kJcSlKs3t6bVJOwIPPUgbc_QY/view",
+      "reason": "Entrega de certificados; no muestra un taller artesanal."
+    },
+    {
+      "sourceUrl": "https://drive.google.com/file/d/1G_-jbv1cWe8B5LRirHZ2phufDdoDbp6L/view",
+      "reason": "Servicio de vino espumoso; no demuestra degustación de bebidas típicas ni taller."
+    }
+  ],
+  "existingSeanPendingOutsideScope": [
+    "Fotografías de ingeniería",
+    "Fotografías de flota"
+  ]
+}
