@@ -84,17 +84,17 @@
     "tittle": "Reviews",
     "homeReadRealReviews": "Our Reputation:",
     "homeTitle": "Do not simply take our word for it;",
-    "homeSubtitle": "Discover why discerning travellers and global icons trust our expertise.",
-    "readRealReviews": "VERIFIED ON TRIPADVISOR",
+    "homeSubtitle": "Read excerpts from travelers’ reviews on Tripadvisor and Viator.",
+    "readRealReviews": "TRAVELER REVIEWS",
     "dontJustTakeOurWord": "Real stories from above the valley",
-    "Subtittle": "A curated selection of recent traveler reviews, linked directly to their original Tripadvisor posts.",
-    "readMoreReviews": "See all reviews on Tripadvisor",
+    "Subtittle": "Excerpts from traveler reviews on Tripadvisor and Viator.",
+    "readMoreReviews": "See all reviews on {platform}",
     "totalReviews": "{count} reviews",
-    "lastVerified": "Verified August 2026",
+    "lastVerified": "Checked November 8, 2026",
     "previous": "Previous reviews",
     "next": "Next reviews",
     "travelerPhoto": "Traveler photo",
-    "readFullReview": "Read full review on Tripadvisor"
+    "readFullReview": "Read on {platform}"
   },
   "weather": {
     "liveMonitoring": "LIVE MONITORING",

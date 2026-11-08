@@ -32,7 +32,7 @@ export async function LiveMonitoringSection() {
       title: t('safetyPromise.title'),
       description: t('safetyPromise.description'),
       cta: t('safetyPromise.cta'),
-      href: '/safety-heritage',
+      href: '/safety-heritage#safety-protocols',
     },
     {
       publicId: IMAGES.home.liveMonitoring.card2,

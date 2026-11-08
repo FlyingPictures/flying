@@ -298,6 +298,7 @@ export function FlightExperienceSection() {
                   objectFit="cover"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-secondary/90 via-secondary/5 via-65% to-transparent" />
+                <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-linear-to-b from-secondary/75 via-secondary/35 to-transparent" />
                 <Link
                   href={`/product/${flight.slug}`}
                   aria-label={`${t('flightDetails')} · ${getProductName(flight.slug, locale)}`}

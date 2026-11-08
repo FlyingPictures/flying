@@ -13,7 +13,7 @@ export async function SafetyFooter() {
           <h3 className="text-background text-left md:text-center md:whitespace-pre-line italic">{t('description')}</h3>
         </div>
         <Button asChild className="md:mt-0">
-          <Link href="/flight-experiences">{t('button')}</Link>
+          <Link href="/flight-experiences#flight-options">{t('button')}</Link>
         </Button>
       </div>
     </section>

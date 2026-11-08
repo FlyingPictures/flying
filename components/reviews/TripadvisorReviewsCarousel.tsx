@@ -12,9 +12,9 @@ import {
   TRIPADVISOR_PROFILE_URL,
   TRIPADVISOR_RATING,
   TRIPADVISOR_REVIEW_COUNT,
-  TRIPADVISOR_REVIEWS,
-  getTripadvisorText,
-  type TripadvisorReview,
+  VIATOR_REVIEWS_URL,
+  TRAVELER_REVIEWS,
+  type TravelerReview,
 } from "@/lib/tripadvisor-reviews";
 import { cn } from "@/lib/utils";
 
@@ -82,24 +82,15 @@ export function TripadvisorReviewsCarousel({ variant }: Props) {
             </p>
           </div>
 
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-secondary">
-            <div className="inline-flex items-center gap-2" aria-label="Tripadvisor">
-              <span className="grid size-8 grid-cols-2 place-items-center gap-0.5 rounded-full bg-secondary px-2" aria-hidden="true">
-                <span className="size-1.5 rounded-full bg-primary" />
-                <span className="size-1.5 rounded-full bg-primary" />
-              </span>
-              <span className="font-bold tracking-tight">Tripadvisor</span>
-            </div>
-            <span className="hidden h-5 w-px bg-border sm:block" aria-hidden="true" />
-            <div className="flex items-baseline gap-2">
-              <strong className="font-libre-baskerville text-2xl font-normal">
-                {TRIPADVISOR_RATING}
-              </strong>
-              <span className="text-xs font-bold">/ 5</span>
-              <span className="text-sm text-secondary/65">
-                {t("totalReviews", { count: TRIPADVISOR_REVIEW_COUNT })}
-              </span>
-            </div>
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
+            <a href={TRIPADVISOR_PROFILE_URL} target="_blank" rel="noopener noreferrer nofollow" className="flex min-h-12 flex-wrap items-center justify-center gap-3 rounded-xl bg-background px-4 py-2 shadow-sm hover:shadow-md">
+              <PlatformLogo platform="Tripadvisor" />
+              <span className="text-sm text-secondary">{TRIPADVISOR_RATING} / 5 · {t("totalReviews", { count: TRIPADVISOR_REVIEW_COUNT })}</span>
+            </a>
+            <a href={VIATOR_REVIEWS_URL} target="_blank" rel="noopener noreferrer nofollow" className="flex min-h-12 items-center gap-2 rounded-xl bg-background px-4 py-2 shadow-sm hover:shadow-md">
+              <PlatformLogo platform="Viator" />
+              <ArrowUpRight size={16} aria-hidden="true" />
+            </a>
           </div>
         </header>
 
@@ -139,98 +130,55 @@ export function TripadvisorReviewsCarousel({ variant }: Props) {
               "linear-gradient(to right, transparent 0, black 2.5rem, black calc(100% - 2.5rem), transparent 100%)",
           }}
         >
-          {TRIPADVISOR_REVIEWS.map((review) => (
-            <ReviewCard key={review.id} review={review} locale={locale} />
+          {TRAVELER_REVIEWS.map((review) => (
+            <ReviewCard key={review.url} review={review} locale={locale} />
           ))}
         </div>
 
-        <div className="mt-2 flex justify-center">
-          <a
-            href={TRIPADVISOR_PROFILE_URL}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="text-card-link inline-flex items-center gap-1.5 text-secondary"
-          >
-            {t("readMoreReviews")}
-            <ArrowUpRight size={18} />
-          </a>
+        <div className="mt-2 flex flex-wrap justify-center gap-x-6 gap-y-3">
+          {(["Tripadvisor", "Viator"] as const).map((platform) => (
+            <a key={platform} href={platform === "Tripadvisor" ? TRIPADVISOR_PROFILE_URL : VIATOR_REVIEWS_URL}
+              target="_blank" rel="noopener noreferrer nofollow" className="text-card-link inline-flex items-center gap-1.5 text-secondary">
+              {t("readMoreReviews", { platform })} <ArrowUpRight size={18} aria-hidden="true" />
+            </a>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-function ReviewCard({
-  review,
-  locale,
-}: {
-  review: TripadvisorReview;
-  locale: string;
-}) {
+function PlatformLogo({ platform }: { platform: TravelerReview["platform"] }) {
+  const viator = platform === "Viator";
+  return (
+    <Image src={viator ? "/reviews/viator.svg" : "/reviews/tripadvisor.svg"} alt={platform}
+      width={viator ? 80 : 130} height={20} unoptimized className="h-5 w-auto" />
+  );
+}
+
+function ReviewCard({ review, locale }: { review: TravelerReview; locale: string }) {
   const t = useTranslations("reviews");
-  const initials = review.author
-    .split(/\s+/)
-    .map((part) => part[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
+  const language = locale === "es" ? "es" : "en";
+  const date = new Intl.DateTimeFormat(language === "es" ? "es-MX" : "en-US", {
+    dateStyle: "long", timeZone: "UTC",
+  }).format(new Date(review.date));
 
   return (
-    <article className="flex min-h-92 w-[min(86vw,360px)] shrink-0 snap-center flex-col overflow-hidden rounded-(--radius) border border-secondary/10 bg-background shadow-[0_18px_55px_rgba(3,48,59,0.10)] sm:w-90">
-      <div className="flex flex-1 flex-col p-6">
-        <div className="flex items-center gap-3">
-          <a
-            href={review.profileUrl}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="relative flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-secondary font-bold text-primary"
-            aria-label={`${review.author} — Tripadvisor`}
-          >
-            {review.avatarUrl ? (
-              <Image
-                src={review.avatarUrl}
-                alt={review.author}
-                fill
-                sizes="48px"
-                className="object-cover"
-              />
-            ) : (
-              initials
-            )}
-          </a>
-          <div className="min-w-0">
-            <p className="truncate font-bold text-secondary">{review.author}</p>
-            <p className="truncate text-xs text-secondary/60">
-              {getTripadvisorText(review.location, locale)}
-            </p>
-          </div>
-          <span className="ml-auto text-sm tracking-[0.12em] text-primary">
-            {"★".repeat(review.rating)}
-          </span>
-        </div>
-
-        <div className="my-5 h-px bg-secondary/10" />
-
-        <p className="text-xs font-semibold uppercase tracking-[0.12em] text-secondary/45">
-          {getTripadvisorText(review.date, locale)}
-        </p>
-        <h3 className="mt-2 font-libre-baskerville text-2xl leading-tight text-secondary">
-          {getTripadvisorText(review.title, locale)}
-        </h3>
-        <p className="mt-4 text-sm leading-relaxed text-secondary/75">
-          “{getTripadvisorText(review.excerpt, locale)}”
-        </p>
-
-        <a
-          href={review.reviewUrl}
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-          className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-bold text-secondary underline decoration-current decoration-2 underline-offset-4 transition-opacity hover:opacity-70"
-        >
-          {t("readFullReview")}
-          <ArrowUpRight size={16} />
-        </a>
+    <article className="flex min-h-92 w-[min(86vw,360px)] shrink-0 snap-center flex-col rounded-(--radius) border border-secondary/10 bg-background p-6 shadow-[0_18px_55px_rgba(3,48,59,0.10)] sm:w-90">
+      <div className="flex items-center justify-between gap-2 border-b border-secondary/10 pb-4">
+        <PlatformLogo platform={review.platform} />
+        <span className="text-sm tracking-wider text-primary" aria-label={`${review.rating}/5`}>
+          {"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}
+        </span>
       </div>
+      <strong className="mt-4 text-secondary">{review.author}</strong>
+      <time dateTime={review.date} className="text-xs text-secondary/65">{date}</time>
+      <h3 className="mt-3 text-xl leading-tight text-secondary">{review.title}</h3>
+      <p className="mt-4 text-sm leading-relaxed text-secondary/80">“{review.excerpt[language]}”</p>
+      <a href={review.url} target="_blank" rel="noopener noreferrer nofollow"
+        className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-bold text-secondary underline underline-offset-4">
+        {t("readFullReview", { platform: review.platform })} <ArrowUpRight size={16} aria-hidden="true" />
+      </a>
     </article>
   );
 }

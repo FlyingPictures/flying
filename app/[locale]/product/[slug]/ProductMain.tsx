@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { cloudinaryUrl } from "@/lib/cloudinary";
 import { ProductTranslation } from "@/types/product";
+import { TRIPADVISOR_RATING, TRIPADVISOR_REVIEW_COUNT } from "@/lib/tripadvisor-reviews";
 import { IMAGES } from "@/lib/images";
 import { ReservationLink } from "@/components/booking/reservation-link";
 import { Button } from "@/components/ui/button";
@@ -34,6 +35,7 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
   ];
   const [carouselIndex, setCarouselIndex] = useState<number | null>(null);
   const locale = useLocale();
+  const t = useTranslations("flightExperiences.cards");
   const productPricing = PRODUCT_PRICING[slug];
   const priceDisplay = getPriceDisplay(productPricing, locale);
 
@@ -114,8 +116,8 @@ export default function ProductMain({ slug, data }: ProductMainProps) {
             <p className="product-body">{data.description.paragraph}</p>
           </div>
           <div className="text-md lg:text-xl flex items-center gap-2 justify-center text-muted-foreground">
-            <span>★ {data.rating.score}</span>
-            <span>{data.rating.reviewsCount}</span>
+            <span>★ {TRIPADVISOR_RATING}</span>
+            <span>{t("tripadvisorReviews", { count: TRIPADVISOR_REVIEW_COUNT })}</span>
           </div>
         </div>
 

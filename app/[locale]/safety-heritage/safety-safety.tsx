@@ -37,7 +37,7 @@ export async function SafetySafety() {
   }))
 
   return (
-    <section className="relative w-full min-h-246 flex flex-col items-center justify-center overflow-hidden py-[clamp(60px,8vw,120px)] px-4">
+    <section id="safety-protocols" className="relative w-full scroll-mt-28 min-h-246 flex flex-col items-center justify-center overflow-hidden py-[clamp(60px,8vw,120px)] px-4">
 
       <div className="absolute inset-0">
         <CloudinaryImage publicId={IMAGES.safety.safety.background} alt="" fill className="object-cover object-center" />

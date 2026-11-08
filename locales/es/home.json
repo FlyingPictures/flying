@@ -84,17 +84,17 @@
     "tittle": "Reseñas",
     "homeReadRealReviews": "NUESTRA REPUTACIÓN",
     "homeTitle": "No te quedes solo con nuestra palabra",
-    "homeSubtitle": "Descubre por qué viajeros exigentes y figuras reconocidas en todo el mundo confían en nuestra experiencia.",
-    "readRealReviews": "VERIFICADAS EN TRIPADVISOR",
+    "homeSubtitle": "Opiniones de viajeros en Tripadvisor y Viator. Los títulos son los publicados en cada plataforma y los fragmentos se muestran en español.",
+    "readRealReviews": "OPINIONES DE VIAJEROS",
     "dontJustTakeOurWord": "Historias reales sobre el valle",
-    "Subtittle": "Una selección cuidada de opiniones recientes, enlazadas directamente con su publicación original en Tripadvisor.",
-    "readMoreReviews": "Ver todas las opiniones en Tripadvisor",
+    "Subtittle": "Opiniones de viajeros en Tripadvisor y Viator, con fragmentos en español.",
+    "readMoreReviews": "Ver todas las opiniones en {platform}",
     "totalReviews": "{count} opiniones",
-    "lastVerified": "Verificado en agosto de 2026",
+    "lastVerified": "Revisadas el 8 de noviembre de 2026",
     "previous": "Opiniones anteriores",
     "next": "Opiniones siguientes",
     "travelerPhoto": "Foto del viajero",
-    "readFullReview": "Leer opinión completa en Tripadvisor"
+    "readFullReview": "Leer en {platform}"
   },
   "weather": {
     "liveMonitoring": "MONITOREO EN VIVO",
