@@ -19,7 +19,7 @@
       "experiencesFrom": "Experiences from {price}",
       "secureBooking": "Ask our team about availability and terms",
       "ctaPrimary": "View flights & availability",
-      "ctaSecondary": "Talk to an expert",
+      "ctaSecondary": "Ask us on WhatsApp",
       "whatsappMessage": "Hi, I'd like more information about the flights. I'm visiting the flight experiences page.",
       "reviews": "{count} Tripadvisor reviews",
       "certifiedTitle": "Certified pilots",
@@ -79,16 +79,16 @@
       "descriptions": {
         "classic": "Share a balloon flight over the Teotihuacán Valley. The experience includes a coffee break, flight insurance, a sparkling wine toast and a certificate. Breakfast and transport are not included.",
         "transport": "Combine a shared balloon flight with shared round-trip transport, a full breakfast and archaeological site admission. A coffee break, insurance, a sparkling wine toast and a certificate are included. Request a bilingual guide or quote the private flight and private transport upgrades separately.",
-        "vip": "Premium - VIP brings together a private flight, private round-trip transport, a champagne toast, archaeological site admission with a bilingual guide and a ceremonial cave tour. Photos and video, waiter service, canapés and snacks, and brunch at Mayahuel are included. Confirm the number of guests covered and your group’s total.",
+        "vip": "Premium - VIP brings together a private flight, private round-trip transport, a champagne toast, archaeological site admission with a bilingual guide and a ceremonial cave tour. Photos and video, waiter service, canapés and snacks, and brunch are included. Confirm the number of guests covered and your group’s total.",
         "celebration": "A private flight for a birthday, anniversary or special moment. Full breakfast, flowers, cake and/or a birthday song, a coffee break, insurance, a sparkling wine toast and a certificate are included. Personalization banners and photos are quoted separately.",
         "journey": "Traveler combines a shared flight and shared round-trip transport with a full breakfast, archaeological site admission and a bilingual guide. A crafts and traditional drinks workshop, traveler kit or souvenir, coffee break, insurance, sparkling wine toast and certificate are included. Confirm the number of guests covered and your total with any selected extras before booking.",
-        "private": "Enjoy the Teotihuacán Valley on a private flight with a coffee break, insurance, a champagne toast, certificate and full breakfast. Transport, photos and ground visits are quoted as extras. Confirm how many guests the package includes.",
+        "private": "Enjoy the Teotihuacán Valley on a private flight with a coffee break, insurance, a champagne toast, certificate and full breakfast. Transport, photos and ground visits are quoted as extras. Confirm how many people will be joining you.",
         "charter": "FPM Private Charter includes a private flight, premium private round-trip transport, a bilingual guide from pickup and archaeological site admission. Enjoy a light buffet breakfast before take-off, a champagne toast, photos and video, waiter service, canapés and snacks, and brunch at Club Campestre. Confirm the guests covered and booking minimum."
       },
       "includes": {
         "classic": "Shared flight, coffee break, sparkling wine toast",
         "transport": "Shared flight and shared round-trip transport, full breakfast, archaeological site admission",
-        "vip": "Private flight and transport, guide and ceremonial caves, brunch at Mayahuel",
+        "vip": "Private flight and transport, guide and ceremonial caves, brunch",
         "celebration": "Private flight, full breakfast and flowers, cake and/or birthday song",
         "journey": "Shared flight and transport, archaeological site with bilingual guide, workshop and traveler kit",
         "private": "Private flight, champagne toast, full breakfast",

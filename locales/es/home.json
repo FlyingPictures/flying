@@ -1,11 +1,11 @@
 {
   "herosection": {
     "h1": "El vuelo original \n en globo sobre Teotihuacán.",
-    "h3": "Precisión británica. Corazón mexicano. \n Un amanecer para recordar toda la vida.",
+    "h3": "Precisión británica. Corazón mexicano. \n Una mañana sobre el valle de Teotihuacán.",
     "paragraph": "Décadas de experiencia nos han enseñado que las mejores aventuras \n se construyen cuidando cada detalle \n y sin hacer concesiones en seguridad.",
     "ctaPrimary": "Ver vuelos disponibles",
     "poweredBy": "Bienvenido al estándar más alto de aviación certificada \n en el Valle de Teotihuacán.",
-    "ctaSecondary": "Despegamos con las primeras luces"
+    "ctaSecondary": "Vuelos en las primeras horas del día"
   },
   "FlightExperience": {
     "bookFlight": "Consultar disponibilidad",
@@ -17,6 +17,7 @@
       "private": "Privado",
       "vip": "VIP y recorridos"
     },
+    "allFlightsInclude": "Todos los vuelos incluyen coffee break, seguro de vuelo, brindis tradicional y certificado de vuelo.",
     "flightBadge": "VUELO {type}",
     "from": "Desde {price}",
     "featured": "Destacado",
@@ -36,7 +37,7 @@
     "cards": {
       "tradition": {
         "title": "Más que un vuelo, una tradición.",
-        "description": "Al elevarte con la primera luz del día, el valle se despliega bajo ti: los perfiles majestuosos de la ciudad antigua y, si la fortuna acompaña, kilómetros de horizonte dorado. Cada instante se siente sereno, elegante y discretamente inolvidable.",
+        "description": "Al elevarte en las primeras horas del día, el valle se despliega bajo ti: los perfiles majestuosos de la ciudad antigua y, si la fortuna acompaña, kilómetros de horizonte dorado. Cada instante se siente sereno, elegante y discretamente inolvidable.",
         "button": "Conoce nuestros vuelos",
         "award_label": "Proveedor de aviación más confiable 2024"
       },
@@ -47,7 +48,7 @@
       },
       "safety": {
         "title": "La seguridad, siempre primero.",
-        "description": "Nuestros pilotos cuentan con licencia y aportan años —en muchos casos, décadas— de experiencia a cada ascenso. Cada vuelo incluye seguro integral para pasajeros y un brindis tradicional al aterrizar. Todo, acompañado por la serenidad del amanecer sobre el valle.",
+        "description": "Nuestros pilotos cuentan con licencia. Algunos han volado en festivales y proyectos fuera de México. Cada vuelo incluye seguro para pasajeros y un brindis tradicional al aterrizar.",
         "button": "Conoce nuestra flota"
       }
     }

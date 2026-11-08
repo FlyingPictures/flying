@@ -7,8 +7,8 @@
     },
     "sunriseRitual": {
       "label": "La ciencia del vuelo",
-      "title": "Por qué volamos al amanecer.",
-      "description": "Un globo aerostático es una aeronave de precisión que navega dentro de la masa de aire, en lugar de oponerse a ella. Para volar con seguridad necesitamos una atmósfera estable. Durante las primeras horas de luz puede presentarse el fenómeno meteorológico conocido como inversión térmica. Conforme el sol calienta el terreno, las corrientes térmicas pueden generar turbulencia y hacer que las condiciones dejen de ser adecuadas para volar. Programamos nuestros ascensos a primera hora no solo por el paisaje, sino para mantener los más altos estándares de seguridad aeronáutica y estabilidad operativa."
+      "title": "Vuelo en las primeras horas del día sobre el valle de Teotihuacán",
+      "description": "En un globo nos movemos con el viento. En las primeras horas del día el aire suele ser más estable. A medida que el sol calienta el suelo, se forman corrientes térmicas que pueden generar turbulencia. La tripulación evalúa el viento y la estabilidad del aire para determinar el momento del despegue."
     },
     "gettingHere": {
       "label": "Llegada e indicaciones",
@@ -18,14 +18,14 @@
         "cardTitle": "La opción sin estrés",
         "cardBody": "Si reservaste un paquete con transporte, nuestra camioneta te recoge directamente en tu hotel o Airbnb en zonas designadas (Reforma, Polanco, Centro, Roma/Condesa).",
         "pickupTime": "Horarios para pasar por ti: 4:30 a.m. y 5:00 a.m.",
-        "pickupNote": "(Confirmado por WhatsApp la noche anterior).",
+        "pickupNote": "Confirmados en tu pickup antes de tu vuelo.",
         "perks": "Ventajas: aire acondicionado, cinturones de seguridad y la oportunidad de dormir una siesta de regreso.",
         "openMaps": "Abrir en Google Maps"
       },
       "selfDrive": {
         "cardTitle": "En tu propio auto",
-        "cardBody": "Si tienes vehículo propio, el trayecto dura entre 45 y 60 minutos desde el centro de CDMX (el tráfico es inexistente a esa hora).",
-        "parking": "Estacionamiento: ofrecemos estacionamiento cerrado y seguro en nuestras instalaciones, sin costo adicional. Tu auto estará resguardado mientras vuelas.",
+        "cardBody": "Desde el centro de la Ciudad de México, calcula entre 45 y 60 minutos de trayecto. Es un tiempo estimado y puede variar según el tráfico. Planea tu salida para llegar 15 minutos antes de la hora indicada en tu reserva.",
+        "parking": "Tu reserva incluye estacionamiento en nuestro globopuerto sin costo adicional.",
         "openMaps": "Abrir en Google Maps",
         "openWaze": "Abrir en Waze",
         "disclaimer": "No improvises la ruta. Usa estos enlaces de Waze o Google Maps para llegar directamente a nuestro Globopuerto."
@@ -90,7 +90,7 @@
         },
         "childrenFly": {
           "question": "¿Pueden volar niños?",
-          "answer": "Sí. Pueden volar niños de 4 años en adelante, siempre acompañados por un adulto. Cada niño debe ocupar su propio lugar en la canastilla."
+          "answer": "Sí. Pueden volar niños de 4 años en adelante, siempre acompañados por un adulto."
         },
         "pregnantFly": {
           "question": "¿Pueden volar mujeres embarazadas?",
@@ -104,9 +104,13 @@
           "question": "¿Puedo llevar una cámara?",
           "answer": "Sí. Puedes traer tu cámara; un lente gran angular funciona especialmente bien para capturar el paisaje. Las cámaras profesionales deben llevar una correa de seguridad."
         },
+        "parking": {
+          "question": "¿Mi reserva incluye estacionamiento?",
+          "answer": "Sí. Puedes estacionarte en nuestro globopuerto sin costo adicional."
+        },
         "breakfast": {
           "question": "¿Cómo es el desayuno?",
-          "answer": "Esencial no incluye desayuno. Transporte + Pirámides, Celebración, Viajero y Globo Privado incluyen desayuno completo; Premium - VIP incluye brunch en Mayahuel; Charter incluye desayuno ligero previo al despegue y brunch en Club Campestre. Confirma cualquier restricción alimenticia."
+          "answer": "Esencial no incluye desayuno. Transporte + Pirámides, Celebración, Viajero y Globo Privado incluyen desayuno completo; Premium - VIP incluye brunch; Charter incluye desayuno ligero previo al despegue y brunch en Club Campestre. Confirma cualquier restricción alimenticia."
         }
       }
     }

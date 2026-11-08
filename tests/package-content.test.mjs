@@ -6,7 +6,7 @@ const matrix = JSON.parse(await readFile(new URL('../docs/matriz-comercial-paque
 const normalize = (text) => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 const sourceWording = {
   'Desayuno Bufette Ligero (Previo al Despegue)': 'Desayuno buffet ligero previo al despegue',
-  'Brunch (Mayahuel)': 'Brunch en Mayahuel',
+  'Brunch (Mayahuel)': 'Brunch',
   'Brunch (Club Campestre)': 'Brunch en Club Campestre',
 };
 const documents = {};

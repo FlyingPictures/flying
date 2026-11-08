@@ -5,7 +5,7 @@
     "paragraph": "Over decades, we have learned that the finest adventures \n are those shaped by meticulous attention to detail \n and an unwavering commitment to safety.",
     "ctaPrimary": "Check Flight Availability",
     "poweredBy": "Welcome to the highest standard of certified \n aviation in the Teotihuacán Valley.",
-    "ctaSecondary": "Taking off at first light"
+    "ctaSecondary": "Flights in the early morning"
   },
   "FlightExperience": {
     "bookFlight": "Ask about availability",
@@ -17,6 +17,7 @@
       "private": "Private",
       "vip": "Vip & Tours"
     },
+    "allFlightsInclude": "Every flight includes a coffee break, flight insurance, a traditional toast and a flight certificate.",
     "flightBadge": "{type} FLIGHT",
     "from": "From {price}",
     "featured": "Featured",
@@ -36,18 +37,18 @@
     "cards": {
       "tradition": {
         "title": "More Than a Flight. A Tradition.",
-        "description": "As you rise with the first light, the valley reveals itself below the majestic contours of the ancient city and, if fortune favours you, miles of golden horizon. Each moment feels perfectly composed: calm, elegant, and quietly unforgettable.",
+        "description": "As you rise into the morning sky, the valley reveals itself below the majestic contours of the ancient city and, if fortune favours you, miles of golden horizon. Each moment feels perfectly composed: calm, elegant, and quietly unforgettable.",
         "button": "Explore Flight Collection",
         "award_label": "Most Trusted Aviation Provider 2024"
       },
       "other": {
         "title": "Safety Always Comes First.",
-        "description": "Our fully licensed pilots bring years often decades of experience to every ascent. With comprehensive passenger insurance included, a traditional celebratory toast upon landing, and the tranquil beauty of sunrise across the valley, each flight reflects a balance of professionalism and heritage.",
+        "description": "Our fully licensed pilots bring years often decades of experience to every ascent. With comprehensive passenger insurance included, a traditional celebratory toast upon landing, and early morning views across the valley, each flight reflects a balance of professionalism and heritage.",
         "button": "Explore Flights"
       },
       "safety": {
         "title": "Safety Always Comes First.",
-        "description": "Our fully licensed pilots bring years — often decades — of experience to every ascent. With comprehensive passenger insurance included, a traditional celebratory toast upon landing, and the tranquil beauty of sunrise across the valley, each flight reflects a balance of professionalism and heritage.",
+        "description": "Our pilots are licensed. Some have flown at festivals and on projects outside Mexico. Every flight includes passenger insurance and a traditional toast after landing.",
         "button": "Meet our fleet"
       }
     }

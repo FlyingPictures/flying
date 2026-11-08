@@ -8,7 +8,7 @@
   },
   "description": {
     "title": "A flight reserved for your group",
-    "paragraph": "Enjoy the Teotihuacán Valley on a private flight with a coffee break, insurance, a champagne toast, certificate and full breakfast. Transport, photos and ground visits are quoted as extras. Confirm how many guests the package includes."
+    "paragraph": "Enjoy the Teotihuacán Valley on a private flight with a coffee break, insurance, a champagne toast, certificate and full breakfast. Transport, photos and ground visits are quoted as extras. Confirm how many people will be joining you."
   },
   "itinerary": {
     "title": "Your experience",
@@ -16,7 +16,7 @@
       {
         "time": "Before the flight",
         "title": "Arrival and coffee break",
-        "description": "The team welcomes you for check-in and a coffee break. Confirm your meeting point."
+        "description": "The team welcomes you for check-in and a coffee break."
       },
       {
         "time": "Preparation",
@@ -41,7 +41,7 @@
       {
         "time": "According to the confirmed itinerary",
         "title": "Full breakfast",
-        "description": "Enjoy this included service: full breakfast. Confirm its timing and place in your itinerary."
+        "description": "Enjoy this included service: full breakfast. Confirm when and where this takes place during the tour."
       }
     ]
   },
@@ -78,7 +78,7 @@
       "Additional passenger"
     ],
     "notes": [
-      "Confirm availability, timing, the meeting point and your total before booking.",
+      "We set the flight schedule and availability. Your meeting point depends on the area we serve.",
       "Flight duration, route and activity order are confirmed according to weather and operating conditions.",
       "Extras are quoted separately; confirm their scope, price and availability.",
       "Confirm how many guests the package includes, the booking minimum and charges for additional passengers or companions.",
@@ -90,7 +90,7 @@
         {
           "time": "Before the flight",
           "title": "Arrival and coffee break",
-          "description": "The team welcomes you for check-in and a coffee break. Confirm your meeting point."
+          "description": "The team welcomes you for check-in and a coffee break."
         },
         {
           "time": "Preparation",
@@ -115,7 +115,7 @@
         {
           "time": "According to the confirmed itinerary",
           "title": "Full breakfast",
-          "description": "Enjoy this included service: full breakfast. Confirm its timing and place in your itinerary."
+          "description": "Enjoy this included service: full breakfast. Confirm when and where this takes place during the tour."
         }
       ]
     }

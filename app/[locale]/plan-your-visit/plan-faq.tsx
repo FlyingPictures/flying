@@ -11,7 +11,7 @@ export async function PlanFaq() {
   const faq = [
     { cat: "aboutFlight", items: ["afraidHeights", "restrooms"] },
     { cat: "safetyLimits", items: ["childrenFly", "pregnantFly", "weightLimit"] },
-    { cat: "bookingExtra", items: ["bringCamera", "breakfast"] },
+    { cat: "bookingExtra", items: ["bringCamera", "breakfast", "parking"] },
   ];
 
   return (

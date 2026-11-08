@@ -60,8 +60,9 @@ const CARD_CATEGORY: Record<(typeof CATALOG_FLIGHTS)[number], string> = {
 };
 
 export async function FlightCardsSection() {
-  const [t, locale] = await Promise.all([
+  const [t, home, locale] = await Promise.all([
     getTranslations("flightExperiences.cards"),
+    getTranslations("FlightExperience"),
     getLocale(),
   ]);
 
@@ -79,6 +80,7 @@ export async function FlightCardsSection() {
         <h4 className="mb-4 text-foreground">{t("subtitle")}</h4>
         <h2 className="mb-5 whitespace-pre-line text-foreground">{t("title")}</h2>
         <p className="mx-auto max-w-3xl text-foreground/75">{t("description")}</p>
+        <p className="mt-3 font-medium text-secondary first-letter:font-libre-baskerville first-letter:text-2xl">{home("allFlightsInclude")}</p>
       </header>
 
       <nav

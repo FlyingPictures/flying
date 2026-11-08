@@ -1,6 +1,6 @@
 {
   "hero": {
-    "subtitle": "Vuelo y transporte privados | Guía y cuevas | Brunch Mayahuel"
+    "subtitle": "Vuelo y transporte privados | Guía y cuevas | Brunch"
   },
   "rating": {
     "score": 4.8,
@@ -8,7 +8,7 @@
   },
   "description": {
     "title": "Un recorrido privado por aire y tierra",
-    "paragraph": "Premium - VIP reúne vuelo privado, transporte redondo privado, brindis con champagne, acceso arqueológico con guía bilingüe y tour en cuevas ceremoniales. Incluye fotografías y video, mesero, canapés y snacks, y brunch en Mayahuel. Consulta cuántas personas cubre el paquete y el total de tu grupo."
+    "paragraph": "Premium - VIP reúne vuelo privado, transporte redondo privado, brindis con champagne, acceso arqueológico con guía bilingüe y tour en cuevas ceremoniales. Incluye fotografías y video, mesero, canapés y snacks, y brunch. Consulta cuántas personas cubre el paquete y el total de tu grupo."
   },
   "itinerary": {
     "title": "Tu experiencia",
@@ -55,8 +55,8 @@
       },
       {
         "time": "Según itinerario confirmado",
-        "title": "Brunch en Mayahuel",
-        "description": "Disfruta este servicio incluido: brunch en mayahuel. Confirma el horario y su lugar en el recorrido."
+        "title": "Brunch",
+        "description": "Disfruta este servicio incluido: brunch. Confirma el horario y su lugar en el recorrido."
       }
     ]
   },
@@ -79,7 +79,7 @@
       "Fotografías y video",
       "Servicio de mesero",
       "Canapés y snacks",
-      "Brunch en Mayahuel"
+      "Brunch"
     ],
     "notIncluded": [
       "Desayuno completo separado del brunch",
@@ -94,7 +94,7 @@
       "Servicio para acompañante que no vuela"
     ],
     "notes": [
-      "Confirma la disponibilidad, el horario, el punto de encuentro y el total antes de reservar.",
+      "Flying Pictures define la disponibilidad y el horario del vuelo. El punto de encuentro depende de la zona de cobertura.",
       "La duración, la ruta y el orden de actividades se confirman según las condiciones meteorológicas y operativas.",
       "Los extras se cotizan por separado; confirma su alcance, tarifa y disponibilidad.",
       "Confirma cuántas personas incluye el paquete, el mínimo de reserva y los cargos por pasajeros o acompañantes adicionales."
@@ -144,8 +144,8 @@
         },
         {
           "time": "Según itinerario confirmado",
-          "title": "Brunch en Mayahuel",
-          "description": "Disfruta este servicio incluido: brunch en mayahuel. Confirma el horario y su lugar en el recorrido."
+          "title": "Brunch",
+          "description": "Disfruta este servicio incluido: brunch. Confirma el horario y su lugar en el recorrido."
         }
       ]
     }

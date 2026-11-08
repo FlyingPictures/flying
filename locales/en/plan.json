@@ -7,8 +7,8 @@
     },
     "sunriseRitual": {
       "label": "The Science of Flight",
-      "title": "Why We Fly at Dawn.",
-      "description": "A hot air balloon is a precision aircraft that navigates within the air mass rather than resisting it. To achieve this safely, we require a stable atmosphere. The meteorological phenomenon known as thermal inversion occurs during the first light of day. As the sun warms the terrain, thermal currents can create atmospheric turbulence and make conditions unsuitable for ballooning. We schedule our ascents at dawn not only for the view, but to uphold the highest standards of aeronautical safety and operational stability."
+      "title": "Early morning flights over the Teotihuacán Valley",
+      "description": "A hot air balloon travels with the wind. The air is usually steadier early in the morning. As the sun warms the ground, rising air can create turbulence. Our crew assesses the wind and air stability to determine when to take off."
     },
     "gettingHere": {
       "label": "Arrival & Directions",
@@ -18,14 +18,14 @@
         "cardTitle": "The Stress-Free Choice",
         "cardBody": "If you booked a package with transport, our van picks you up directly from your hotel or Airbnb in designated zones (Reforma, Polanco, Centro, Roma/Condesa).",
         "pickupTime": "Pick-up Time: 04:30 AM and 05:00 AM",
-        "pickupNote": "(Confirmed via WhatsApp the night before).",
+        "pickupNote": "Times are confirmed at pickup before your flight.",
         "perks": "The Perks: AC, seatbelts, and a nap on the way back.",
         "openMaps": "Open in Google Maps"
       },
       "selfDrive": {
         "cardTitle": "Self Drive",
-        "cardBody": "If you have your own vehicle, the drive takes about 45-60 minutes from central CDMX (traffic is non-existent at this hour).",
-        "parking": "Parking: We offer secure, enclosed parking on-site at no extra cost. Your car is safe while you are in the clouds.",
+        "cardBody": "Allow an estimated 45 to 60 minutes to drive from central Mexico City. Travel time varies with traffic. Plan to arrive 15 minutes before the time on your reservation.",
+        "parking": "Your reservation includes parking at our balloon port at no extra cost.",
         "openMaps": "Open in Google Maps",
         "openWaze": "Open in Waze",
         "disclaimer": "Do not guess. Use this Waze/Google Maps link directly to our Globoport."
@@ -90,7 +90,7 @@
         },
         "childrenFly": {
           "question": "Can children fly?",
-          "answer": "Yes. Children ages 4 and older may fly when accompanied by an adult. Every child must have their own place in the basket."
+          "answer": "Yes. Children ages 4 and older may fly when accompanied by an adult."
         },
         "pregnantFly": {
           "question": "Can pregnant women fly?",
@@ -104,9 +104,13 @@
           "question": "Can I bring a camera?",
           "answer": "Yes. Cameras are welcome, and a wide-angle lens works especially well for the views. Professional cameras must be secured with a strap."
         },
+        "parking": {
+          "question": "Does my booking include parking?",
+          "answer": "Yes. You can park at our balloon port at no extra cost."
+        },
         "breakfast": {
           "question": "What is the breakfast like?",
-          "answer": "Essential does not include breakfast. Transport + Pyramids, Celebration, Traveler and Private Balloon Experience include a full breakfast; Premium - VIP includes brunch at Mayahuel; Charter includes a light breakfast before take-off and brunch at Club Campestre. Discuss any dietary restrictions."
+          "answer": "Essential does not include breakfast. Transport + Pyramids, Celebration, Traveler and Private Balloon Experience include a full breakfast; Premium - VIP includes brunch; Charter includes a light breakfast before take-off and brunch at Club Campestre. Discuss any dietary restrictions."
         }
       }
     }

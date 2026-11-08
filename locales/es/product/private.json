@@ -8,7 +8,7 @@
   },
   "description": {
     "title": "Un vuelo reservado para tu grupo",
-    "paragraph": "Disfruta el Valle de Teotihuacán en un vuelo privado con coffee break, seguro, brindis con champagne, certificado y desayuno completo. El transporte, las fotografías y las visitas en tierra se cotizan como extras. Confirma las personas cubiertas por el paquete."
+    "paragraph": "Disfruta el Valle de Teotihuacán en un vuelo privado con coffee break, seguro, brindis con champagne, certificado y desayuno completo. El transporte, las fotografías y las visitas en tierra se cotizan como extras. Confirma el total de personas que te acompañan."
   },
   "itinerary": {
     "title": "Tu experiencia",
@@ -16,7 +16,7 @@
       {
         "time": "Antes del vuelo",
         "title": "Llegada y coffee break",
-        "description": "El equipo te recibe para el registro y el coffee break. Confirma tu punto de encuentro."
+        "description": "El equipo te recibe para el registro y el coffee break."
       },
       {
         "time": "Preparación",
@@ -41,7 +41,7 @@
       {
         "time": "Según itinerario confirmado",
         "title": "Desayuno completo",
-        "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar en el recorrido."
+        "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar durante el recorrido."
       }
     ]
   },
@@ -78,7 +78,7 @@
       "Pasajero adicional"
     ],
     "notes": [
-      "Confirma la disponibilidad, el horario, el punto de encuentro y el total antes de reservar.",
+      "Flying Pictures define la disponibilidad y el horario del vuelo. El punto de encuentro depende de la zona de cobertura.",
       "La duración, la ruta y el orden de actividades se confirman según las condiciones meteorológicas y operativas.",
       "Los extras se cotizan por separado; confirma su alcance, tarifa y disponibilidad.",
       "Confirma cuántas personas incluye el paquete, el mínimo de reserva y los cargos por pasajeros o acompañantes adicionales.",
@@ -90,7 +90,7 @@
         {
           "time": "Antes del vuelo",
           "title": "Llegada y coffee break",
-          "description": "El equipo te recibe para el registro y el coffee break. Confirma tu punto de encuentro."
+          "description": "El equipo te recibe para el registro y el coffee break."
         },
         {
           "time": "Preparación",
@@ -115,7 +115,7 @@
         {
           "time": "Según itinerario confirmado",
           "title": "Desayuno completo",
-          "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar en el recorrido."
+          "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar durante el recorrido."
         }
       ]
     }

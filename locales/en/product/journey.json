@@ -41,27 +41,27 @@
       {
         "time": "According to the confirmed itinerary",
         "title": "Full breakfast",
-        "description": "Enjoy this included service: full breakfast. Confirm its timing and place in your itinerary."
+        "description": "Enjoy this included service: full breakfast. Confirm when and where this takes place during the tour."
       },
       {
         "time": "According to the confirmed itinerary",
         "title": "Archaeological site admission",
-        "description": "Enjoy this included service: archaeological site admission. Confirm its timing and place in your itinerary."
+        "description": "Enjoy this included service: archaeological site admission. Confirm when and where this takes place during the tour."
       },
       {
         "time": "According to the confirmed itinerary",
         "title": "Bilingual guide",
-        "description": "Enjoy this included service: bilingual guide. Confirm its timing and place in your itinerary."
+        "description": "Enjoy this included service: bilingual guide. Confirm when and where this takes place during the tour."
       },
       {
         "time": "According to the confirmed itinerary",
         "title": "Traveler kit / souvenir",
-        "description": "Enjoy this included service: traveler kit / souvenir. Confirm its timing and place in your itinerary."
+        "description": "Enjoy this included service: traveler kit / souvenir. Confirm when and where this takes place during the tour."
       },
       {
         "time": "According to the confirmed itinerary",
         "title": "Crafts and traditional drinks workshop",
-        "description": "Enjoy this included service: crafts and traditional drinks workshop. Confirm its timing and place in your itinerary."
+        "description": "Enjoy this included service: crafts and traditional drinks workshop. Confirm when and where this takes place during the tour."
       }
     ]
   },
@@ -100,7 +100,7 @@
       "Private transport upgrade"
     ],
     "notes": [
-      "Confirm availability, timing, the meeting point and your total before booking.",
+      "We set the flight schedule and availability. Your meeting point depends on the area we serve.",
       "Flight duration, route and activity order are confirmed according to weather and operating conditions.",
       "Extras are quoted separately; confirm their scope, price and availability.",
       "Confirm how many guests the package includes, the booking minimum and charges for additional passengers or companions.",
@@ -138,27 +138,27 @@
         {
           "time": "According to the confirmed itinerary",
           "title": "Full breakfast",
-          "description": "Enjoy this included service: full breakfast. Confirm its timing and place in your itinerary."
+          "description": "Enjoy this included service: full breakfast. Confirm when and where this takes place during the tour."
         },
         {
           "time": "According to the confirmed itinerary",
           "title": "Archaeological site admission",
-          "description": "Enjoy this included service: archaeological site admission. Confirm its timing and place in your itinerary."
+          "description": "Enjoy this included service: archaeological site admission. Confirm when and where this takes place during the tour."
         },
         {
           "time": "According to the confirmed itinerary",
           "title": "Bilingual guide",
-          "description": "Enjoy this included service: bilingual guide. Confirm its timing and place in your itinerary."
+          "description": "Enjoy this included service: bilingual guide. Confirm when and where this takes place during the tour."
         },
         {
           "time": "According to the confirmed itinerary",
           "title": "Traveler kit / souvenir",
-          "description": "Enjoy this included service: traveler kit / souvenir. Confirm its timing and place in your itinerary."
+          "description": "Enjoy this included service: traveler kit / souvenir. Confirm when and where this takes place during the tour."
         },
         {
           "time": "According to the confirmed itinerary",
           "title": "Crafts and traditional drinks workshop",
-          "description": "Enjoy this included service: crafts and traditional drinks workshop. Confirm its timing and place in your itinerary."
+          "description": "Enjoy this included service: crafts and traditional drinks workshop. Confirm when and where this takes place during the tour."
         }
       ]
     }

@@ -217,6 +217,9 @@ export function FlightExperienceSection() {
       >
         <h4 className="text-foreground mb-3">{t('subtitle')}</h4>
         <h2 className="text-foreground whitespace-pre-line max-w-229 mx-auto">{t('title')}</h2>
+        <p className="mx-auto mt-4 max-w-2xl text-secondary first-letter:font-libre-baskerville first-letter:text-2xl">
+          {t('allFlightsInclude')}
+        </p>
       </header>
 
       {/* Pill tabs */}

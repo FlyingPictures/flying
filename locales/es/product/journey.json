@@ -41,27 +41,27 @@
       {
         "time": "Según itinerario confirmado",
         "title": "Desayuno completo",
-        "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar en el recorrido."
+        "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar durante el recorrido."
       },
       {
         "time": "Según itinerario confirmado",
         "title": "Acceso a la zona arqueológica",
-        "description": "Disfruta este servicio incluido: acceso a la zona arqueológica. Confirma el horario y su lugar en el recorrido."
+        "description": "Disfruta este servicio incluido: acceso a la zona arqueológica. Confirma el horario y su lugar durante el recorrido."
       },
       {
         "time": "Según itinerario confirmado",
         "title": "Guía bilingüe",
-        "description": "Disfruta este servicio incluido: guía bilingüe. Confirma el horario y su lugar en el recorrido."
+        "description": "Disfruta este servicio incluido: guía bilingüe. Confirma el horario y su lugar durante el recorrido."
       },
       {
         "time": "Según itinerario confirmado",
         "title": "Kit / souvenir viajero",
-        "description": "Disfruta este servicio incluido: kit / souvenir viajero. Confirma el horario y su lugar en el recorrido."
+        "description": "Disfruta este servicio incluido: kit / souvenir viajero. Confirma el horario y su lugar durante el recorrido."
       },
       {
         "time": "Según itinerario confirmado",
         "title": "Taller de artesanías y bebidas típicas",
-        "description": "Disfruta este servicio incluido: taller de artesanías y bebidas típicas. Confirma el horario y su lugar en el recorrido."
+        "description": "Disfruta este servicio incluido: taller de artesanías y bebidas típicas. Confirma el horario y su lugar durante el recorrido."
       }
     ]
   },
@@ -100,7 +100,7 @@
       "Conversión del transporte a privado"
     ],
     "notes": [
-      "Confirma la disponibilidad, el horario, el punto de encuentro y el total antes de reservar.",
+      "Flying Pictures define la disponibilidad y el horario del vuelo. El punto de encuentro depende de la zona de cobertura.",
       "La duración, la ruta y el orden de actividades se confirman según las condiciones meteorológicas y operativas.",
       "Los extras se cotizan por separado; confirma su alcance, tarifa y disponibilidad.",
       "Confirma cuántas personas incluye el paquete, el mínimo de reserva y los cargos por pasajeros o acompañantes adicionales.",
@@ -138,27 +138,27 @@
         {
           "time": "Según itinerario confirmado",
           "title": "Desayuno completo",
-          "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar en el recorrido."
+          "description": "Disfruta este servicio incluido: desayuno completo. Confirma el horario y su lugar durante el recorrido."
         },
         {
           "time": "Según itinerario confirmado",
           "title": "Acceso a la zona arqueológica",
-          "description": "Disfruta este servicio incluido: acceso a la zona arqueológica. Confirma el horario y su lugar en el recorrido."
+          "description": "Disfruta este servicio incluido: acceso a la zona arqueológica. Confirma el horario y su lugar durante el recorrido."
         },
         {
           "time": "Según itinerario confirmado",
           "title": "Guía bilingüe",
-          "description": "Disfruta este servicio incluido: guía bilingüe. Confirma el horario y su lugar en el recorrido."
+          "description": "Disfruta este servicio incluido: guía bilingüe. Confirma el horario y su lugar durante el recorrido."
         },
         {
           "time": "Según itinerario confirmado",
           "title": "Kit / souvenir viajero",
-          "description": "Disfruta este servicio incluido: kit / souvenir viajero. Confirma el horario y su lugar en el recorrido."
+          "description": "Disfruta este servicio incluido: kit / souvenir viajero. Confirma el horario y su lugar durante el recorrido."
         },
         {
           "time": "Según itinerario confirmado",
           "title": "Taller de artesanías y bebidas típicas",
-          "description": "Disfruta este servicio incluido: taller de artesanías y bebidas típicas. Confirma el horario y su lugar en el recorrido."
+          "description": "Disfruta este servicio incluido: taller de artesanías y bebidas típicas. Confirma el horario y su lugar durante el recorrido."
         }
       ]
     }
