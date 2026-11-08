@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useState } from 'react'
+import { CameronBalloonsLogo } from "@/components/CameronBalloonsLogo";
 import { CloudinaryImage } from '@/components/CloudinaryImage'
 import { IMAGES } from '@/lib/images'
 import { useTranslations } from 'next-intl'
@@ -55,14 +56,7 @@ export function SafetyFinest() {
       <div className="text-center px-6 pt-[clamp(55px,8vw,80px)]">
         <div className="flex justify-center mb-4">
           <div className="flex items-center gap-2">
-            <div className="relative" style={{ width: '80px', height: '34px' }}>
-              <CloudinaryImage
-                publicId={IMAGES.home.hero.cameronLogo}
-                alt="Cameron Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
+            <CameronBalloonsLogo className="w-20" />
             <h4 className="whitespace-pre-line text-left">{t('subtitle')}</h4>
           </div>
         </div>

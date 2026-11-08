@@ -9,7 +9,6 @@ export const IMAGES = {
         { publicId: "thumbnail_vnugqt", width: 3840, height: 2560, gravity: "faces", position: "center bottom" },
       ],
       stars: "5_stars_xbtijo",
-      cameronLogo: "cameronlogo_hve9ws",
     },
     brandLogos: [
       { publicId: "bbclogo150150_kqylht", alt: "BBC" },
@@ -42,7 +41,6 @@ export const IMAGES = {
     },
     whyChoose: {
       background: "Rectangle_44_1_cuhoex",
-      cameronLogo: "cameronlogo_hve9ws",
       cards: [
         "minigallery1_auhyyf",
         "Rectangle_42_1_wzpq0p",

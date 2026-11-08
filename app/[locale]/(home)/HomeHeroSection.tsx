@@ -1,3 +1,4 @@
+import { CameronBalloonsLogo } from "@/components/CameronBalloonsLogo";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { Button } from "@/components/ui/button";
 import { getTranslations } from "next-intl/server";
@@ -42,14 +43,7 @@ export async function HomeHeroSection() {
           </div>
 
           <div className="flex items-center gap-4 mt-4">
-            <div className="relative mb-2" style={{ width: '78px', height: '33px' }}>
-              <CloudinaryImage
-                publicId={IMAGES.home.hero.cameronLogo}
-                alt="Cameron Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
+            <CameronBalloonsLogo className="mb-2 w-[78px]" />
             <span className={`powered hero text-left ${TEXT_WRAP}`}>{t("poweredBy")}</span>
           </div>
         </div>

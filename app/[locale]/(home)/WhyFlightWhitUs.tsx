@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { CameronBalloonsLogo } from "@/components/CameronBalloonsLogo";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { IMAGES } from "@/lib/images";
 
@@ -18,9 +19,7 @@ const Card = ({ publicId, reason, index, titleWidth }: CardProps) => (
       <div className="absolute inset-0 bg-linear-to-b from-transparent to-popover-foreground/73 opacity-40" />
       <div className="absolute inset-x-5 bottom-5 md:inset-x-4 md:bottom-4 xl:left-8 xl:right-auto xl:bottom-8 flex flex-col" style={{ maxWidth: titleWidth }}>
         {index === 0 && (
-          <div className="relative mb-4 w-17 h-7">
-            <CloudinaryImage publicId={IMAGES.home.whyChoose.cameronLogo} alt="Cameron Balloons UK" width={300} height={150} className="object-contain" />
-          </div>
+          <CameronBalloonsLogo className="mb-4 w-17" />
         )}
         <h3 className="text-card-title text-left">{reason.title}</h3>
       </div>
