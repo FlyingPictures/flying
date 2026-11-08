@@ -75,10 +75,10 @@ export function HomeHeroSlideshow() {
   }, [active, canAnimate, next, nextReady]);
 
   return (
-    <div ref={containerRef} aria-hidden="true" data-home-hero-slideshow data-active-slide={active}
+    <div ref={containerRef} aria-hidden="true" data-home-hero-slideshow data-active-slide={active} data-playing={canAnimate}
       className="pointer-events-none absolute inset-0 overflow-hidden bg-secondary">
       {SLIDES.slice(0, renderedCount).map((slide, index) => (
-        <picture key={slide.publicId} data-hero-slide={index}
+        <picture key={slide.publicId} data-hero-slide={index} data-current={active === index}
           className={`absolute inset-0 transition-opacity duration-[2200ms] ease-in-out motion-reduce:transition-none ${
             active === index ? 'opacity-100' : 'opacity-0'
           } ${index === 0 ? 'motion-reduce:opacity-100' : 'motion-reduce:opacity-0'}`}>

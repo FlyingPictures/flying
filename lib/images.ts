@@ -8,7 +8,6 @@ export const IMAGES = {
         { publicId: "thumbnail_zjstmn", width: 3840, height: 2560, gravity: "faces", position: "center 35%" },
         { publicId: "thumbnail_vnugqt", width: 3840, height: 2560, gravity: "faces", position: "center bottom" },
       ],
-      stars: "5_stars_xbtijo",
     },
     brandLogos: [
       { publicId: "bbclogo150150_kqylht", alt: "BBC" },

@@ -17,12 +17,12 @@ export default function ProductMain({ slug, data }: { slug: ProductSlug; data: P
   return (
     <section className="site-frame max-lg:max-w-[calc(100%-2rem)] grid min-w-0 gap-4 pt-36 lg:grid-cols-[1.3fr_1fr] lg:grid-rows-[auto_1fr] lg:gap-x-[clamp(2rem,4vw,4rem)] lg:pt-47">
       <div className="space-y-2 lg:col-start-2">
-        <h1 className="product-title">{getProductName(slug, locale)}</h1>
-        <p className="text-sm leading-relaxed text-muted-foreground">{data.hero.subtitle}</p>
+        <h1 className="product-title hero-enter text-balance">{getProductName(slug, locale)}</h1>
+        <p className="hero-enter hero-follow text-pretty text-sm leading-relaxed text-muted-foreground">{data.hero.subtitle}</p>
       </div>
       <ProductGallery key={slug} slug={slug} subtitle={data.hero.subtitle} />
       <div className="flex min-w-0 flex-col items-start gap-5 lg:col-start-2">
-        <div className="order-2 lg:order-none">
+        <div className="hero-enter hero-follow order-2 lg:order-none">
           <h2 className="text-left font-inter text-lg font-bold tracking-normal">{data.description.title}</h2>
           <p className="product-body mt-2">{data.description.paragraph}</p>
         </div>

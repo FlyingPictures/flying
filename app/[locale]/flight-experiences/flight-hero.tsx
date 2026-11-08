@@ -25,7 +25,7 @@ export async function FlightHero() {
   const entryPrice = getPriceDisplay(PRODUCT_PRICING.classic, locale);
 
   return (
-    <section className="relative flex min-h-[780px] overflow-hidden bg-secondary pb-24 pt-40 text-background md:min-h-[720px] md:pb-14 md:pt-44 lg:min-h-[820px] lg:items-center lg:pb-16 lg:pt-44">
+    <section className="relative flex min-h-[85svh] overflow-hidden bg-secondary pb-16 pt-36 text-background md:min-h-[720px] md:pb-14 md:pt-44 lg:min-h-[820px] lg:items-center lg:pb-16 lg:pt-44">
       <div className="absolute inset-0">
         <CloudinaryImage
           publicId={IMAGES.flightExperiences.hero.background}
@@ -54,7 +54,7 @@ export async function FlightHero() {
             {t("eyebrow")}
           </div>
 
-          <h1 className="mt-5 max-w-4xl font-poppins text-[clamp(2.45rem,5.15vw,4.35rem)] font-semibold leading-[1.01] tracking-[-0.05em] text-background drop-shadow-[0_3px_20px_rgba(0,0,0,0.34)]">
+          <h1 className="hero-enter mt-5 max-w-4xl text-balance font-poppins text-[clamp(2rem,7vw,2.75rem)] md:text-[clamp(2.45rem,5.15vw,4.35rem)] font-semibold leading-[1.01] tracking-[-0.05em] text-background drop-shadow-[0_3px_20px_rgba(0,0,0,0.34)]">
             {t("conversionTitleLead")} {" "}
             <em className="font-libre-baskerville font-normal italic tracking-[-0.055em]">
               {t("conversionTitleAccent")}
@@ -62,7 +62,7 @@ export async function FlightHero() {
             {t("conversionTitleTail")}
           </h1>
 
-          <p className="mt-4 max-w-2xl text-[clamp(1rem,1.5vw,1.2rem)] leading-relaxed text-background/82">
+          <p className="hero-enter hero-follow mt-4 max-w-2xl text-[clamp(1rem,1.5vw,1.2rem)] leading-relaxed text-background/82">
             {t("conversionDescription")}
           </p>
 
