@@ -80,7 +80,7 @@ export async function FlightCardsSection() {
         <h4 className="mb-4 text-foreground">{t("subtitle")}</h4>
         <h2 className="mb-5 whitespace-pre-line text-foreground">{t("title")}</h2>
         <p className="mx-auto max-w-3xl text-foreground/75">{t("description")}</p>
-        <p className="mt-3 font-medium text-secondary first-letter:font-libre-baskerville first-letter:text-2xl">{home("allFlightsInclude")}</p>
+        <p className="mt-3 text-secondary font-libre-baskerville font-normal leading-relaxed first-letter:text-[2.3em] first-letter:leading-none">{home("allFlightsInclude")}</p>
       </header>
 
       <nav

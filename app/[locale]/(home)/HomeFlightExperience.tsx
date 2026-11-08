@@ -84,7 +84,7 @@ function useMouseDrag(scrollRef: React.RefObject<HTMLDivElement | null>, onDragE
   const onMouseDown = (e: React.MouseEvent) => {
     if (e.button !== 0) return
     const el = scrollRef.current
-    if (!el) return
+    if (!el || el.scrollWidth <= el.clientWidth) return
     el.style.scrollSnapType = 'none'
     drag.current = { active: true, startX: e.clientX, startScroll: el.scrollLeft, moved: false }
     document.body.style.userSelect = 'none'
@@ -172,6 +172,7 @@ export function FlightExperienceSection() {
     scrollToIndex(container, getClosestCardIndex(container))
   }, [])
 
+  const isPair = visibleFlights.length === 2
   const dragHandlers = useMouseDrag(scrollRef, snapToClosest)
 
   const handleTabClick = useCallback((tab: TabKey) => {
@@ -217,7 +218,7 @@ export function FlightExperienceSection() {
       >
         <h4 className="text-foreground mb-3">{t('subtitle')}</h4>
         <h2 className="text-foreground whitespace-pre-line max-w-229 mx-auto">{t('title')}</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-secondary first-letter:font-libre-baskerville first-letter:text-2xl">
+        <p className="mx-auto mt-4 max-w-2xl text-secondary font-libre-baskerville font-normal leading-relaxed first-letter:text-[2.3em] first-letter:leading-none">
           {t('allFlightsInclude')}
         </p>
       </header>
@@ -245,6 +246,7 @@ export function FlightExperienceSection() {
           {TABS.map(tab => (
             <button
               key={tab}
+              aria-pressed={activeFilter === tab}
               onClick={() => handleTabClick(tab)}
               className={cn(
                 'relative font-bold transition-colors duration-100 flex items-center justify-center flex-1 min-w-0',
@@ -265,15 +267,12 @@ export function FlightExperienceSection() {
         <div
           ref={scrollRef}
           {...dragHandlers}
-          className="relative flex w-full overflow-x-auto no-scrollbar gap-[clamp(16px,3vw,36px)] cursor-grab active:cursor-grabbing"
-          style={{
-            scrollSnapType: 'x mandatory',
-            WebkitOverflowScrolling: 'touch',
-            paddingLeft: 'calc((100% - var(--slide-width)) / 2)',
-            paddingRight: 'calc((100% - var(--slide-width)) / 2)',
-            maskImage: 'linear-gradient(to right, transparent 0, black clamp(32px, 7vw, 100px), black calc(100% - clamp(32px, 7vw, 100px)), transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent 0, black clamp(32px, 7vw, 100px), black calc(100% - clamp(32px, 7vw, 100px)), transparent 100%)',
-          }}
+          className={cn(
+            "relative flex w-full gap-[clamp(16px,3vw,36px)] overflow-x-auto snap-x snap-mandatory no-scrollbar cursor-grab active:cursor-grabbing",
+            isPair
+              ? "max-w-[var(--slide-width)] md:grid md:max-w-[80rem] md:grid-cols-2 md:px-6 md:overflow-visible md:cursor-auto"
+              : "px-[calc((100%_-_var(--slide-width))/2)] [mask-image:linear-gradient(to_right,transparent,black_7%,black_93%,transparent)]",
+          )}
         >
           {visibleFlights.map((flight, index) => {
             const pricing = PRODUCT_PRICING[flight.slug]!
@@ -284,7 +283,7 @@ export function FlightExperienceSection() {
               key={flight.slug}
               data-slide
               data-index={index}
-              className="shrink-0 w-[var(--slide-width)] select-none flex flex-col"
+              className={cn("shrink-0 w-[var(--slide-width)] select-none flex flex-col", isPair && "md:w-full md:min-w-0")}
               style={{ scrollSnapAlign: 'center' }}
             >
               <div className="relative aspect-[16/10] rounded-(--radius) overflow-hidden bg-secondary/10 shadow-[0_18px_50px_rgba(3,48,59,0.12)]">
@@ -305,7 +304,7 @@ export function FlightExperienceSection() {
                 />
                 <div className="pointer-events-none absolute inset-0 p-[clamp(18px,4vw,32px)] flex flex-col text-background">
                   <div className="flex items-start justify-between gap-3">
-                    <div className="rounded-xl bg-background/95 px-3 py-2 text-secondary">
+                    <div className="text-white [text-shadow:0_1px_3px_rgb(0_0_0/95%),0_2px_10px_rgb(0_0_0/90%)]">
                     <h4>{t('flightBadge', { type: t(`tabs.${flight.cat}`) })}</h4>
                     <h3 className="font-libre-baskerville text-[clamp(23px,3vw,34px)] leading-tight mt-1 max-w-120">
                       {getProductName(flight.slug, locale)}
@@ -345,7 +344,7 @@ export function FlightExperienceSection() {
           )})}
         </div>
 
-        <div className="relative z-30 mt-2 flex items-center gap-4 rounded-full bg-background/90 px-4 py-2 shadow-sm backdrop-blur-sm">
+        <div className={cn("relative z-30 mt-2 flex items-center gap-4 rounded-full bg-background/90 px-4 py-2 shadow-sm backdrop-blur-sm", isPair && "md:hidden")}>
           <button type="button" onClick={() => moveTo(activeIndex - 1)} disabled={activeIndex === 0} aria-label={t('previousPackage')} className="flex size-10 items-center justify-center rounded-full border border-secondary/20 text-secondary transition disabled:opacity-30 hover:bg-secondary hover:text-background">←</button>
           <span className="min-w-16 text-center text-sm font-bold text-secondary">
             {t('packageCount', { current: activeIndex + 1, total: visibleFlights.length })}
