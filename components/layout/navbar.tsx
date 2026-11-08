@@ -218,7 +218,7 @@ export default function Navbar() {
               <BrandLogo priority className="w-full h-full object-contain" />
             </Link>
 
-            <div className="col-start-1 row-start-1 flex items-center gap-2 min-[1200px]:gap-[clamp(.75rem,1.5vw,1.75rem)] whitespace-nowrap text-[0.875rem] min-[1440px]:gap-7 min-[1440px]:text-base">
+            <div className="col-start-1 row-start-1 flex items-center gap-x-[clamp(.75rem,16vw_-_9.5rem,1.75rem)] whitespace-nowrap text-sm min-[1440px]:text-base">
               <div className="flex items-center">
                 <NavLink id="flightExperiences" href="/flight-experiences" />
                 <DropdownMenu.Root open={isMenuOpen} onOpenChange={setIsMenuOpen} modal={false}>
