@@ -1,5 +1,14 @@
 {
   "product": {
+    "gallery": {
+      "title": "Photo gallery",
+      "expand": "Enlarge photo",
+      "close": "Close gallery",
+      "previous": "Previous photo",
+      "next": "Next photo",
+      "position": "Photo {current} of {total}",
+      "thumbnail": "Photo {number}. {caption}"
+    },
     "included": {
       "title": "What’s included",
       "included1": "Early morning flight",

@@ -1,9 +1,8 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import { Link, usePathname, useRouter } from "@/i18n/routing"
-import { CloudinaryImage } from "@/components/CloudinaryImage"
-import { IMAGES } from "@/lib/images"
+import { BrandLogo } from "@/components/BrandLogo"
 import { Button } from "@/components/ui/button"
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
@@ -191,76 +190,57 @@ export default function Navbar() {
   const { scrollDirection, scrollY } = useScrollDirection()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSheetOpen, setIsSheetOpen] = useState(false)
-  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-
-  const isScrollingDown = scrollDirection === "down"
-  const isHeaderVisible = scrollY < 50 || !isScrollingDown
-  const isHeaderHidden = scrollY > 50 && isScrollingDown && !isSheetOpen
-
-  const handleMouseEnter = () => {
-    if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current)
-    setIsMenuOpen(true)
-  }
-
-  const handleMouseLeave = () => {
-    closeTimeoutRef.current = setTimeout(() => setIsMenuOpen(false), 500)
-  }
-
-  // SOLUCIÓN AL ERROR DE CASCADING RENDERS:
-  useEffect(() => {
-    if (isScrollingDown && isMenuOpen) {
-      // Usamos requestAnimationFrame para que el cambio de estado ocurra
-      // justo antes del próximo repintado, evitando la "cascada" síncrona.
-      const frame = requestAnimationFrame(() => {
-        setIsMenuOpen(false);
-      });
-      return () => cancelAnimationFrame(frame);
-    }
-  }, [isScrollingDown, isMenuOpen])
+  const isHeaderHidden = scrollY > 160 && scrollDirection === "down" && !isSheetOpen && !isMenuOpen
+  const locale = useLocale()
 
   useEffect(() => {
-    return () => {
-      if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current)
+    const desktop = window.matchMedia("(min-width: 1200px)")
+    const closeMenus = () => {
+      setIsMenuOpen(false)
+      setIsSheetOpen(false)
     }
+    desktop.addEventListener("change", closeMenus)
+    return () => desktop.removeEventListener("change", closeMenus)
   }, [])
 
   return (
     <>
-      <header className={cn("hidden min-[1200px]:flex flex-col items-center z-50 fixed top-0 w-full transition-transform duration-500", !isHeaderVisible && "-translate-y-44")}>
+      <header data-hidden={isHeaderHidden} className={cn("desktop-header pointer-events-none fixed inset-x-0 top-0 z-50 hidden flex-col items-center transition-transform duration-200 motion-reduce:transition-none min-[1200px]:flex [&>*]:pointer-events-auto",
+        isHeaderHidden ? "-translate-y-[calc(100%+1rem)]" : scrollY > 80 && "-translate-y-12")}>
         <HeaderBanner />
-        <div className="w-[95%] max-w-368 mt-4">
-          <nav className="relative bg-background h-21 rounded-2xl shadow-2xl flex items-center justify-between px-8">
+        <div className="site-frame mt-4">
+          <nav aria-label={t("menuTitle")} className="relative grid h-21 grid-cols-[1fr_5rem_1fr] items-center rounded-2xl bg-background px-5 shadow-2xl min-[1440px]:px-8">
             <Link
               href="/"
-              aria-label="Flying Pictures México — Inicio"
+              aria-label={locale === "es" ? "Flying Pictures México — Inicio" : "Flying Pictures México — Home"}
               className="absolute left-1/2 -translate-x-1/2 top-0 z-20 w-19 h-24"
             >
-              <CloudinaryImage
-                publicId={IMAGES.home.navbar.logo}
-                alt="Flying Pictures México Logo" 
-                width={200}
-                height={200}
-                priority
-                className="w-full h-full object-contain"
-              />
+              <BrandLogo priority className="w-full h-full object-contain" />
             </Link>
 
-            <div className="flex flex-1 items-center gap-8">
-              <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="h-full flex items-center">
+            <div className="flex items-center justify-between gap-2 whitespace-nowrap text-[0.875rem] min-[1440px]:justify-start min-[1440px]:gap-7 min-[1440px]:text-base">
+              <div className="flex items-center">
+                <NavLink id="flightExperiences" href="/flight-experiences" />
                 <DropdownMenu.Root open={isMenuOpen} onOpenChange={setIsMenuOpen} modal={false}>
                   <DropdownMenu.Trigger asChild>
-                    <Link href="/flight-experiences" className="font-inter font-bold text-secondary tracking-tight outline-none hover:opacity-70 py-4">{t("flightExperiences")}</Link>
+                    <button type="button" aria-label={t("chooseFlight")} className="grid h-11 w-8 place-items-center rounded-lg text-secondary hover:bg-secondary/5 focus-visible:ring-2 focus-visible:ring-primary">
+                      <CaretDownIcon size={16} weight="bold" className={cn("transition-transform", isMenuOpen && "rotate-180")} />
+                    </button>
                   </DropdownMenu.Trigger>
                   <DropdownMenu.Portal>
-                    <DropdownMenu.Content align="center" alignOffset={-120} sideOffset={18} onCloseAutoFocus={(e) => e.preventDefault()} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="bg-white rounded-lg shadow-xl p-2 z-60 min-w-50">
+                    <DropdownMenu.Content align="start" alignOffset={-72} side="bottom" sideOffset={8} collisionPadding={12}
+                      className="z-60 max-h-(--radix-dropdown-menu-content-available-height) min-w-60 overflow-y-auto overscroll-contain rounded-xl border border-secondary/10 bg-white p-2 shadow-xl">
                       {EXPERIENCES.map((exp) => (
-                        <DropdownMenu.Item key={exp.slug} asChild onSelect={() => setIsMenuOpen(false)}>
-                          <div><ProductNavLink slug={exp.slug} href={exp.href} className="block px-4 py-2 text-[0.95rem] hover:bg-secondary/5 rounded-md font-poppins font-medium" /></div>
+                        <DropdownMenu.Item key={exp.slug} asChild>
+                          <Link href={exp.href} aria-current={pathname === exp.href ? "page" : undefined}
+                            className="block rounded-md px-4 py-2 font-medium outline-none data-[highlighted]:bg-secondary/8">
+                            {getProductName(exp.slug, locale)}
+                          </Link>
                         </DropdownMenu.Item>
                       ))}
                       <DropdownMenu.Separator className="my-1 h-px bg-secondary/10" />
-                      <DropdownMenu.Item asChild onSelect={() => setIsMenuOpen(false)}>
-                        <div><NavLink id="corporateService" href="/product/corporate" className="block px-4 py-2 text-[0.95rem] hover:bg-secondary/5 rounded-md font-poppins font-medium" /></div>
+                      <DropdownMenu.Item asChild>
+                        <Link href="/product/corporate" className="block rounded-md px-4 py-2 font-medium outline-none data-[highlighted]:bg-secondary/8">{t("corporateService")}</Link>
                       </DropdownMenu.Item>
                     </DropdownMenu.Content>
                   </DropdownMenu.Portal>
@@ -270,7 +250,7 @@ export default function Navbar() {
               <NavLink id="planYourVisit" href="/plan-your-visit" />
             </div>
 
-            <div className="flex flex-1 items-center justify-end gap-8">
+            <div className="col-start-3 flex items-center justify-end gap-3 whitespace-nowrap text-sm min-[1440px]:gap-7 min-[1440px]:text-base">
               <NavLink id="contactSupport" href="/contact" />
               <LanguageSwitcher />
               {showBookButton && <BookButton />}
@@ -279,23 +259,16 @@ export default function Navbar() {
         </div>
       </header>
 
-      <header className={cn("min-[1200px]:hidden fixed top-0 inset-x-0 z-50 transition-transform duration-500", isHeaderHidden && "-translate-y-32")}>
+      <header className={cn("min-[1200px]:hidden fixed top-0 inset-x-0 z-50 transition-transform duration-200 motion-reduce:transition-none has-[:focus-visible]:translate-y-0", isHeaderHidden ? "-translate-y-32" : scrollY > 80 && !isSheetOpen && "-translate-y-12")}>
         <HeaderBanner />
         <nav className="relative h-18 bg-white px-6 flex items-center justify-between shadow-md">
           <Link
             href="/"
-            aria-label="Flying Pictures México — Inicio"
+            aria-label={locale === "es" ? "Flying Pictures México — Inicio" : "Flying Pictures México — Home"}
             onClick={() => setIsSheetOpen(false)}
             className="absolute top-0 left-6 z-10 w-15.5 h-19.5"
           >
-            <CloudinaryImage
-              publicId={IMAGES.home.navbar.logo}
-              alt="Flying Pictures México Logo"
-              width={200}
-              height={200}
-              priority
-              className="w-full h-full object-contain"
-            />
+            <BrandLogo priority className="w-full h-full object-contain" />
           </Link>
           <div className="flex items-center gap-3 ml-auto">
             {showBookButton && <BookButton />}
@@ -312,17 +285,11 @@ export default function Navbar() {
                   <div className="flex h-24 shrink-0 items-center justify-between border-b border-secondary/10 px-5">
                     <Link
                       href="/"
-                      aria-label="Flying Pictures México — Inicio"
+                      aria-label={locale === "es" ? "Flying Pictures México — Inicio" : "Flying Pictures México — Home"}
                       onClick={() => setIsSheetOpen(false)}
                       className="h-16 w-14 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                     >
-                      <CloudinaryImage
-                        publicId={IMAGES.home.navbar.logo}
-                        alt="Flying Pictures México Logo"
-                        width={112}
-                        height={128}
-                        className="h-full w-full object-contain"
-                      />
+                      <BrandLogo className="h-full w-full object-contain" />
                     </Link>
                     <div className="flex items-center gap-2">
                       <LanguageSwitcher mobileCompact onSelect={() => setIsSheetOpen(false)} />

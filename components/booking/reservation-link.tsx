@@ -1,3 +1,4 @@
+import { WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
 import type { ComponentProps } from "react";
 import { BOOKING_URLS, getReservationLabel, getReservationUrl, type ProductSlug } from "@/lib/commercial-config";
 
@@ -16,6 +17,7 @@ export function ReservationLink({ slug, locale, ...props }: ReservationLinkProps
       target="_blank"
       rel="noopener noreferrer"
     >
+      {!BOOKING_URLS[slug] && <WhatsappLogoIcon size={18} aria-label="WhatsApp" />}
       {label}
     </a>
   );

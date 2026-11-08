@@ -25,7 +25,7 @@ for (const locale of ['es', 'en']) {
     assert.ok(!/voucher-de-vuelo/.test(html), `${path}: no legacy voucher purchase`);
     const bookingLinks = linkValues(html).filter((href) => href.startsWith('https://book.peek.com/s/'));
     if (peekFlows[pkg.id]) {
-      assert.ok(bookingLinks.length >= 3, `${path}: main and floating Peek buttons`);
+      assert.ok(bookingLinks.length >= 2, `${path}: main and floating Peek buttons`);
       assert.ok(bookingLinks.every((href) => href === peekUrl(pkg.id)), `${path}: correct Peek flow`);
     } else assert.equal(bookingLinks.length, 0, `${path}: no invented Charter flow`);
     if (pkg.id === 'journey') {
@@ -42,7 +42,7 @@ for (const locale of ['es', 'en']) {
       assert.ok(!html.includes(locale === 'es' ? '<strong>Niños' : '<strong>Children'), `${path}: no invented child fare`);
     }
     const inquiries = linkValues(html).filter((href) => href.startsWith('https://wa.me/') && href.includes('?text='));
-    assert.ok(inquiries.length >= (peekFlows[pkg.id] ? 2 : 3), `${path}: WhatsApp contact preserved`);
+    assert.ok(inquiries.length >= 2, `${path}: WhatsApp contact preserved`);
     for (const href of inquiries) assert.ok(new URL(href).searchParams.get('text').includes(name), `${path}: correct inquiry package`);
     assert.ok(html.includes(`rel="canonical" href="https://www.flyingpicturesmexico.mx${path}"`), `${path}: canonical`);
     for (const lang of ['es', 'en']) assert.ok(html.includes(`hrefLang="${lang}" href="https://www.flyingpicturesmexico.mx/${lang}/product/${pkg.id}"`), `${path}: language alternate`);

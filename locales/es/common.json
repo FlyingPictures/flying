@@ -1,5 +1,8 @@
 {
   "nav": {
+    "call": "Llamar",
+    "salesLine": "Ventas y reservaciones",
+    "serviceLine": "Atención al cliente",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
     "menuTitle": "Menú principal",

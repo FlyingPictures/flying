@@ -1,6 +1,5 @@
-import Image from "next/image";
+import { BrandLogo } from "@/components/BrandLogo";
 import { getTranslations } from "next-intl/server";
-import { cloudinaryUrl } from "@/lib/cloudinary";
 
 export default async function ProductFooter() {
   const t = await getTranslations("product.footer");
@@ -18,14 +17,7 @@ export default async function ProductFooter() {
             "linear-gradient(180deg, rgba(123,149,171,0.57) 0%, rgba(0,0,0,0.57) 100%), linear-gradient(0deg,#000000,#000000)",
         }}
       >
-        <Image
-          src={cloudinaryUrl("v1771956786/sello_flying_1_l7dniq", )}
-          alt="Flying Seal"
-          width={120}
-          height={120}
-          className="w-30 h-30"
-          priority
-        />
+        <BrandLogo className="h-24 w-auto" />
 
         <h3 className="font-libre-baskerville text-xl md:text-2xl italic font-normal leading-tight">
           {t("title")}

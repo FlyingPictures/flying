@@ -1,8 +1,5 @@
 export const IMAGES = {
   home: {
-    navbar:{
-      logo: "logo_fsv096",
-    },
     hero: {
       background: "thumbnail_cylgjq",
       slides: [
@@ -119,10 +116,6 @@ export const IMAGES = {
   },
 
   product: {
-    footer: { 
-      logo: 
-      "sello_flying_1_l7dniq" 
-    },
     gallery: {
       itinerary: [
         "Rectangle_95_q6zuu9",
@@ -148,7 +141,6 @@ export const IMAGES = {
         "Rectangle_41_5_1_q9jkki",
         "Rectangle_41_3_ptng3e",
         "Rectangle_41_7_ukxg3h",
-        "Rectangle_41_5_1_q9jkki",
         "Rectangle_41_2_fyibpj"
       ],
       vip: [
@@ -168,16 +160,12 @@ export const IMAGES = {
         "transport_06"
       ],
       open: [
-        "Rectangle_37_4_gdprri",
-        "Rectangle_41_6_qcbkkl",
         "flightHero_tqysvs",
-        "Rectangle_41_5_1_q9jkki",
+        "Rectangle_41_6_qcbkkl",
         "Rectangle_33_3_vuzq4o",
-        "Rectangle_36_1_jk4r63",
-        "Rectangle_41_2_fyibpj",
-        "Rectangle_41_7_ukxg3h",
         "Rectangle_41_5_1_q9jkki",
-        "Rectangle_41_4_p6etxl"
+        "Rectangle_41_2_fyibpj",
+        "Rectangle_41_7_ukxg3h"
       ],
       celebration: [
         "thumbnail_gaj5x0", "Rectangle_41_6_qcbkkl", "vip_06", "flightHero_tqysvs"

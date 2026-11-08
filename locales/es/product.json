@@ -1,5 +1,14 @@
 {
   "product": {
+    "gallery": {
+      "title": "Galería de fotos",
+      "expand": "Ampliar foto",
+      "close": "Cerrar galería",
+      "previous": "Foto anterior",
+      "next": "Foto siguiente",
+      "position": "Foto {current} de {total}",
+      "thumbnail": "Foto {number}. {caption}"
+    },
     "included": {
       "title": "Qué incluye",
       "included1": "Vuelo en las primeras horas del día",

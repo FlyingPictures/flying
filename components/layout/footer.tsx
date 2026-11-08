@@ -1,6 +1,5 @@
 import { Link } from "@/i18n/routing"
-import { CloudinaryImage } from "@/components/CloudinaryImage"
-import { IMAGES } from "@/lib/images"
+import { BrandLogo } from "@/components/BrandLogo"
 import { getLocale, getTranslations } from "next-intl/server"
 import { PACKAGE_SLUGS, getProductName } from "@/lib/commercial-config"
 import { SITE_CONTACT } from "@/lib/site-config"
@@ -58,13 +57,7 @@ export async function Footer({ translations }: FooterProps) {
         <div className="flex justify-start">
           <Link href="/" className="inline-block">
             <div className="w-[clamp(62px,6vw,87px)]">
-              <CloudinaryImage
-                publicId={IMAGES.home.navbar.logo}
-                alt="Logo"
-                width={200}
-                height={200}
-                className="w-full h-auto object-contain"
-              />
+              <BrandLogo className="h-auto w-full" />
             </div>
           </Link>
         </div>

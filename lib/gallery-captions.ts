@@ -1,0 +1,42 @@
+import type { IMAGES } from "./images";
+import type { ProductSlug } from "./commercial-config";
+
+type GalleryPhotoId = (typeof IMAGES.product.gallery)[ProductSlug][number];
+
+export const galleryCaptions = {
+  uc_l4srpt: { es: "Una canastilla compartida sobre el valle", en: "A shared basket high above the valley" },
+  traditional_02: { es: "El quemador en acción sobre la canastilla", en: "The burner in action above the basket" },
+  traditional_03: { es: "Los primeros metros después del despegue", en: "The first moments after liftoff" },
+  traditional_04: { es: "Una foto en el campo de despegue", en: "A photo on the launch field" },
+  traditional_05: { es: "La luz de la mañana entre los globos", en: "Morning light between the balloons" },
+  traditional_06: { es: "Viajeros a bordo de la canastilla", en: "Travelers together in the basket" },
+  thumbnail_joqzvo: { es: "Los globos listos en el campo de vuelo", en: "Balloons ready on the launch field" },
+  Rectangle_41_6_qcbkkl: { es: "Preparativos en tierra antes de volar", en: "Getting ready on the ground before the flight" },
+  flightHero_tqysvs: { es: "Globos sobre el paisaje de Teotihuacán", en: "Balloons above the Teotihuacán landscape" },
+  Rectangle_33_3_vuzq4o: { es: "La llama que da forma al globo", en: "The flame that gives the balloon its shape" },
+  Rectangle_39_1_xdhqj7: { es: "El valle entre la bruma de la mañana", en: "The valley in the morning mist" },
+  Rectangle_41_5_1_q9jkki: { es: "La bandera de México a bordo", en: "The Mexican flag on board" },
+  Rectangle_41_3_ptng3e: { es: "El paisaje y los globos vistos desde arriba", en: "The landscape and balloons seen from above" },
+  Rectangle_41_7_ukxg3h: { es: "Un globo suspendido en el aire", en: "A balloon suspended in the sky" },
+  Rectangle_41_2_fyibpj: { es: "El amanecer desde el aire", en: "Sunrise from the air" },
+  thumbnail_vnugqt: { es: "Un momento para dos en el campo de vuelo", en: "A moment for two on the launch field" },
+  vip_02: { es: "Junto a la canastilla antes de abordar", en: "Beside the basket before boarding" },
+  vip_03: { es: "El quemador ilumina el interior del globo", en: "The burner lights up the inside of the balloon" },
+  vip_04: { es: "Una parada en la zona arqueológica", en: "A stop at the archaeological site" },
+  vip_05: { es: "Las canastillas sobre el valle", en: "Balloon baskets over the valley" },
+  vip_06: { es: "Vehículos y globos en el campo de vuelo", en: "Vehicles and balloons on the launch field" },
+  thumbnail_eilzjm: { es: "Un globo en el cielo de las pirámides", en: "A balloon in the sky above the pyramids" },
+  transport_02: { es: "El transporte en el campo de vuelo", en: "Transportation at the launch field" },
+  transport_03: { es: "Entre los globos antes del despegue", en: "Among the balloons before takeoff" },
+  transport_04: { es: "Una pausa para la foto junto al globo", en: "Stopping for a photo beside the balloon" },
+  transport_05: { es: "Una mirada desde la canastilla", en: "A view from inside the basket" },
+  transport_06: { es: "El grupo reunido junto al globo", en: "The group gathered beside the balloon" },
+  thumbnail_gaj5x0: { es: "La emoción de estar juntos a bordo", en: "Sharing the excitement on board" },
+  thumbnail_zjstmn: { es: "Un momento en pareja junto al globo", en: "A couple together beside the balloon" },
+  thumbnail_cylgjq: { es: "Las pirámides y el valle vistos desde el aire", en: "The pyramids and the valley seen from the air" },
+  corporate_06: { es: "Pasajeros saludando desde la canastilla", en: "Passengers waving from the basket" },
+  corporate_02: { es: "Un brindis entre compañeros", en: "Colleagues sharing a toast" },
+  corporate_03: { es: "Una foto de grupo en el campo de vuelo", en: "A group photo on the launch field" },
+  corporate_04: { es: "El equipo de tierra prepara el globo", en: "The ground crew prepares the balloon" },
+  corporate_05: { es: "El grupo al terminar la experiencia", en: "The group at the end of the experience" },
+} satisfies Record<GalleryPhotoId, { es: string; en: string }>;

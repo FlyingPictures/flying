@@ -192,3 +192,24 @@
     opacity: 0.8;
   }
 }
+
+.site-frame {
+  width: min(95%, 92rem);
+  margin-inline: auto;
+}
+
+@media (min-width: 1200px) {
+  html {
+    scroll-padding-top: 6rem;
+  }
+}
+
+/* Keep the active desktop controls in view, including portalled menus. */
+.desktop-header[data-hidden="true"]:has(nav [aria-expanded="true"]),
+.desktop-header[data-hidden="true"]:has(nav :focus-visible) {
+  translate: 0 -3rem;
+}
+
+.desktop-header:has(> div:first-child a:focus-visible) {
+  translate: 0;
+}
