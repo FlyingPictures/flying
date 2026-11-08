@@ -3,6 +3,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import type { ProductTranslation } from "@/types/product";
 import { TRIPADVISOR_RATING, TRIPADVISOR_REVIEW_COUNT } from "@/lib/tripadvisor-reviews";
+import { PackagePrices } from "@/components/booking/package-prices";
 import { ReservationLink } from "@/components/booking/reservation-link";
 import { Button } from "@/components/ui/button";
 import { BOOKING_URLS, PRODUCT_PRICING, getInquiryUrl, getPriceDisplay, getProductName, type ProductSlug } from "@/lib/commercial-config";
@@ -25,12 +26,8 @@ export default function ProductMain({ slug, data }: { slug: ProductSlug; data: P
           <h2 className="text-left font-inter text-lg font-bold tracking-normal">{data.description.title}</h2>
           <p className="product-body mt-2">{data.description.paragraph}</p>
         </div>
-        <div className="w-full space-y-3 border-y border-border py-4">
-          {price.rows.map(row => (
-            <div key={row.label} className="flex flex-wrap items-baseline justify-between gap-x-3">
-              <span className="text-sm">{row.label}</span><strong>{row.formattedAmount}</strong>
-            </div>
-          ))}
+        <div className="w-full space-y-4 rounded-2xl bg-secondary/[.045] p-4 sm:p-5">
+          <PackagePrices rows={price.rows} />
           {price.note && <p className="text-xs text-muted-foreground">{price.note}</p>}
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Button asChild><ReservationLink slug={slug} locale={locale} /></Button>

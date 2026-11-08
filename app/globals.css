@@ -213,3 +213,9 @@
 .desktop-header:has(> div:first-child a:focus-visible) {
   translate: 0;
 }
+
+@media (max-width: 767px) {
+  footer:has(~ .package-booking-bar) {
+    padding-bottom: calc(8rem + env(safe-area-inset-bottom));
+  }
+}
