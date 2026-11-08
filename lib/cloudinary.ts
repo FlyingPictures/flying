@@ -17,11 +17,11 @@ export function cloudinaryOgUrl(publicId: string): string {
 }
 
 // Photo delivery is separate from logos and other existing artwork.
-export function cloudinaryPhotoUrl(publicId: string, width: number, aspectRatio?: string): string {
+export function cloudinaryPhotoUrl(publicId: string, width: number, aspectRatio?: string, gravity: 'center' | 'faces' = 'center'): string {
   const cleanId = publicId.replace(/^v\d+\//, '');
   const imageWidth = Math.min(3840, Math.max(1, Math.round(width)));
   const resize = aspectRatio
-    ? `c_fill,g_center,ar_${aspectRatio},w_${imageWidth}`
+    ? `c_fill,g_${gravity},ar_${aspectRatio},w_${imageWidth}`
     : `c_limit,w_${imageWidth}`;
   return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/${resize}/f_auto,q_auto:good/${cleanId}`;
 }

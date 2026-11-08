@@ -263,5 +263,61 @@
       "cacheControl": "private, no-transform, max-age=2592000",
       "url": "https://res.cloudinary.com/dkmjguzvx/image/upload/c_limit,w_1280/f_auto,q_auto:good/thumbnail_vnugqt"
     }
-  ]
+  ],
+  "homeHeroSlideshow": {
+    "date": "2026-11-08",
+    "order": [
+      {
+        "slide": 1,
+        "publicId": "thumbnail_cylgjq",
+        "description": "Portada nueva: vista aérea de Teotihuacán",
+        "sourceDimensions": [
+          3840,
+          2560
+        ]
+      },
+      {
+        "slide": 2,
+        "publicId": "hero1_rszxmn",
+        "description": "Portada original, conservada por instrucción del usuario",
+        "sourceDimensions": [
+          2160,
+          1715
+        ]
+      },
+      {
+        "slide": 3,
+        "publicId": "thumbnail_zjstmn",
+        "description": "Pareja sonriendo frente al globo, sustituyendo la toma de vuelo por la observación sobre globos de otras compañías",
+        "sourceDimensions": [
+          3840,
+          2560
+        ]
+      },
+      {
+        "slide": 4,
+        "publicId": "thumbnail_vnugqt",
+        "description": "Brindis: la foto favorita indicada por el usuario",
+        "sourceDimensions": [
+          3840,
+          2560
+        ]
+      }
+    ],
+    "behavior": {
+      "controls": false,
+      "holdMs": 8000,
+      "fadeMs": 2200,
+      "loading": "Una foto inicial en HTML con prioridad alta; la siguiente se prepara después de decodificar la actual; sólo avanza si la siguiente está lista.",
+      "responsive": "Recortes por pantalla, formatos y calidad automáticos, candidatos limitados a la resolución disponible para no ampliar originales.",
+      "accessibility": "Fondo decorativo; imagen estática con movimiento reducido; temporizadores detenidos cuando el hero sale de pantalla o la pestaña está oculta."
+    },
+    "validation": [
+      "Compilación de producción y lint correctos.",
+      "HTML de ES y EN: sólo la portada nueva renderizada inicialmente, con prioridad alta y sin controles.",
+      "Rotación automática y fundido de 2.2 segundos observados en el navegador.",
+      "Slide 3 verificado visualmente con la pareja; fuentes móviles optimizadas verificadas.",
+      "Índice de foto estable durante una comprobación de pausa de 10 segundos."
+    ]
+  }
 }

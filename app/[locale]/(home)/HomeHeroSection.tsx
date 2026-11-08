@@ -2,45 +2,17 @@ import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { Button } from "@/components/ui/button";
 import { getTranslations } from "next-intl/server";
 import { IMAGES } from "@/lib/images";
-import { cloudinaryPhotoUrl } from "@/lib/cloudinary";
+import { HomeHeroSlideshow } from "@/components/HomeHeroSlideshow";
 import { Link } from "@/i18n/routing";
 
 const TEXT_WRAP = "whitespace-pre-line";
-const heroSrcSet = (widths: number[], aspectRatio?: string) => widths
-  .map((width) => `${cloudinaryPhotoUrl(IMAGES.home.hero.background, width, aspectRatio)} ${width}w`)
-  .join(', ');
 
 export async function HomeHeroSection() {
   const t = await getTranslations("herosection");
 
   return (
     <section className="relative min-h-[95svh] overflow-hidden lg:h-screen">
-      <picture>
-        <source
-          media="(max-width: 640px)"
-          srcSet={heroSrcSet([480, 640, 828, 1080], '1:2')}
-          sizes="100vw"
-        />
-        <source
-          media="(max-width: 1024px)"
-          srcSet={heroSrcSet([750, 1080, 1536], '3:4')}
-          sizes="100vw"
-        />
-        <source
-          media="(min-width: 1025px)"
-          srcSet={heroSrcSet([1200, 1920, 2560, 3840])}
-          sizes="100vw"
-        />
-        <img
-          src={cloudinaryPhotoUrl(IMAGES.home.hero.background, 1920)}
-          alt=""
-          width={3840}
-          height={2560}
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          fetchPriority="high"
-          decoding="async"
-        />
-      </picture>
+      <HomeHeroSlideshow />
       <div className="absolute inset-0 bg-linear-to-t from-secondary/80 via-secondary/10 to-transparent" />
 
       <div className="relative z-10 flex min-h-[95svh] items-end justify-center px-[clamp(0.75rem,5vw,1.5rem)] pb-[clamp(2.5rem,8vh,5rem)] pt-36 text-center lg:absolute lg:inset-0 lg:min-h-0 lg:pt-40">
