@@ -239,6 +239,35 @@
   }
 }
 
+.home-hero {
+  min-height: min(78svh, 60rem);
+}
+
+@media (max-height: 45rem) {
+  .home-hero .title {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+}
+
+@media (max-height: 32rem) and (min-aspect-ratio: 4/3) {
+  .home-hero-photo {
+    padding-top: 8.25rem;
+  }
+
+  .home-hero .title {
+    max-width: none;
+    white-space: normal;
+  }
+
+  .home-hero .hero-stars, .home-hero .decorative span, .home-hero .home-hero-note {
+    display: none;
+  }
+
+  .home-hero-foot {
+    padding-block: .5rem;
+  }
+}
+
 .site-frame {
   width: min(95%, 92rem);
   margin-inline: auto;

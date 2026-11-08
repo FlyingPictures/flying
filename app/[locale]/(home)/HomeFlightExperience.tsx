@@ -196,6 +196,7 @@ export function FlightExperienceSection() {
 
   return (
     <section
+      id="flight-experiences"
       className="relative w-full overflow-visible bg-[linear-gradient(to_bottom,theme(colors.background)_0%,theme(colors.background)_24%,#758C9C_62%,#7e899b_100%)]"
       style={{ minHeight: 'clamp(2300px,250vw,2440px)' }}
     >
@@ -214,7 +215,7 @@ export function FlightExperienceSection() {
       {/* Header */}
       <header
         className="relative text-center px-6"
-        style={{ paddingTop: 'clamp(72px,9vw,112px)', marginBottom: 'clamp(25px,4vw,33px)' }}
+        style={{ paddingTop: 'clamp(24px,4svh,48px)', marginBottom: 'clamp(25px,4vw,33px)' }}
       >
         <h4 className="text-foreground mb-3">{t('subtitle')}</h4>
         <h2 className="text-foreground whitespace-pre-line max-w-229 mx-auto">{t('title')}</h2>
