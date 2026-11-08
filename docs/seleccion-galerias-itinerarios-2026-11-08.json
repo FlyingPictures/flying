@@ -30,40 +30,6 @@
     "Las candidatas marcadas confirmar_sean no deben publicarse sin esa validación."
   ],
   "assets": {
-    "shared-basket": {
-      "label": "Amigos a bordo · Flying 07",
-      "filename": "IMG_0047.JPG",
-      "driveFileId": "1g4OHtZNgNApfHBRMXfXz30-bSRCp8dpK",
-      "sourceUrl": "https://drive.google.com/file/d/1g4OHtZNgNApfHBRMXfXz30-bSRCp8dpK/view",
-      "album": "Biblioteca de fotos",
-      "dimensions": {
-        "width": 5472,
-        "height": 3648
-      },
-      "originalInspected": true,
-      "reason": "Rostros cercanos y marca Flying visible. Encuadre horizontal para abrir Esencial.",
-      "crop": {
-        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
-        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
-      }
-    },
-    "shared-family": {
-      "label": "Una experiencia para compartir",
-      "filename": "IMG_0038.JPG",
-      "driveFileId": "1oOPsXFl-99M4rihNJqZ4Nqt3GzpTHJEg",
-      "sourceUrl": "https://drive.google.com/file/d/1oOPsXFl-99M4rihNJqZ4Nqt3GzpTHJEg/view",
-      "album": "Biblioteca de fotos",
-      "dimensions": {
-        "width": 5472,
-        "height": 3648
-      },
-      "originalInspected": true,
-      "reason": "Pasajeras sonriendo en la canastilla; aporta cercanía y diversidad de viajeros.",
-      "crop": {
-        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
-        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
-      }
-    },
     "vip-toast": {
       "label": "Brindis al amanecer",
       "filename": "_CAP1487.JPG",
@@ -200,23 +166,6 @@
         "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
       }
     },
-    "birthday": {
-      "label": "Un cumpleaños especial",
-      "filename": "IMG_9570.JPG",
-      "driveFileId": "1y_jTgECiuc-YyOLRNPdDlBwK7o5cTG0A",
-      "sourceUrl": "https://drive.google.com/file/d/1y_jTgECiuc-YyOLRNPdDlBwK7o5cTG0A/view",
-      "album": "Natalia",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "reason": "Lona en español y festejado. Complemento de Celebración; no representa una propuesta de matrimonio.",
-      "crop": {
-        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
-        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
-      }
-    },
     "certificate-couple": {
       "label": "Tu certificado de vuelo",
       "filename": "DSC09906.JPG",
@@ -285,42 +234,6 @@
         "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
       }
     },
-    "private-basket": {
-      "label": "Pareja y piloto · Flying 08",
-      "filename": "DSC08772.JPG",
-      "driveFileId": "1scwaEum7iM3ssl2hoIfGh9-hpPXcRhQL",
-      "sourceUrl": "https://drive.google.com/file/d/1scwaEum7iM3ssl2hoIfGh9-hpPXcRhQL/view",
-      "album": "Pedro",
-      "dimensions": {
-        "width": 4000,
-        "height": 6000
-      },
-      "originalInspected": true,
-      "reason": "Canastilla con dos pasajeros y piloto, marca Flying visible. La foto no documenta por sí sola el tipo de reserva.",
-      "crop": {
-        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
-        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
-      },
-      "restriction": "Ilustra una pareja en canastilla; no documenta exclusividad de una reserva específica."
-    },
-    "toast-detail": {
-      "label": "Detalle del brindis",
-      "filename": "DSC00067.JPG",
-      "driveFileId": "1yg72SSTJpayXFaQk-wf48ioiJdoHkLpH",
-      "sourceUrl": "https://drive.google.com/file/d/1yg72SSTJpayXFaQk-wf48ioiJdoHkLpH/view",
-      "album": "Pedro",
-      "dimensions": {
-        "width": 6000,
-        "height": 4000
-      },
-      "originalInspected": true,
-      "reason": "Servicio de vino espumoso en copa. Ilustra el momento; no acredita una denominación Champagne. Para paquetes con champagne se propone la foto de copas sin botella.",
-      "crop": {
-        "gallery": "Conservar fotografía completa en lightbox; revisar cada recorte de miniatura antes de aplicar.",
-        "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
-      },
-      "restriction": "Solo vino espumoso. No usar botella como prueba visual del champagne de Privado, Charter o VIP."
-    },
     "photographer": {
       "label": "Un recuerdo de la experiencia",
       "filename": "_DSC3084.JPG",
@@ -374,37 +287,150 @@
         "itinerary": "Recorte enfocado en la acción, sin perder copas, certificados ni rostros."
       },
       "requiresSeanConfirmation": true
+    },
+    "shared-joy": {
+      "label": "La alegría de estar a bordo",
+      "filename": "_CAP4741.JPG",
+      "driveFileId": "1oaGWrc4vhvqeUMaOugmmqfH58uq0LoxD",
+      "sourceUrl": "https://drive.google.com/file/d/1oaGWrc4vhvqeUMaOugmmqfH58uq0LoxD/view",
+      "album": "Carlos",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Reacción alegre, manos arriba, llama y equipo Flying. Sustituye retratos estáticos por una escena de experiencia.",
+      "crop": {
+        "gallery": "Conservar escala y contexto; fotografía completa al abrir el original.",
+        "itinerary": "Priorizar la actividad que representa el paso y mantener rostros y marca legibles."
+      }
+    },
+    "pilot-dawn": {
+      "label": "Tu piloto, al amanecer",
+      "filename": "_CAP3219.JPG",
+      "driveFileId": "1EOuatfpFn7S9x2wUZt8CD76S2TwTUG8k",
+      "sourceUrl": "https://drive.google.com/file/d/1EOuatfpFn7S9x2wUZt8CD76S2TwTUG8k/view",
+      "album": "Carlos",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Piloto operando en vuelo, uniforme Flying y emblema Cameron visibles. Muestra quién está a cargo y hace reconocible a Flying sin atribuir certificaciones por la foto.",
+      "crop": {
+        "gallery": "Conservar escala y contexto; fotografía completa al abrir el original.",
+        "itinerary": "Priorizar la actividad que representa el paso y mantener rostros y marca legibles."
+      }
+    },
+    "flying-emblem": {
+      "label": "Un globo que se reconoce",
+      "filename": "_CAP6332.JPG",
+      "driveFileId": "1f42PYw31y3bn0DluH-88m00Ef98KrP_k",
+      "sourceUrl": "https://drive.google.com/file/d/1f42PYw31y3bn0DluH-88m00Ef98KrP_k/view",
+      "album": "Carlos",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Viajera mirando hacia arriba junto al ave de Flying en la envolvente. Combina escala, identidad propia y contemplación.",
+      "crop": {
+        "gallery": "Conservar escala y contexto; fotografía completa al abrir el original.",
+        "itinerary": "Priorizar la actividad que representa el paso y mantener rostros y marca legibles."
+      }
+    },
+    "flying-scale": {
+      "label": "Flying 03, en el aire",
+      "filename": "DSC06150.JPG",
+      "driveFileId": "1Py1-MBEuI8PPELaI55SlTXyWbjfm_H_s",
+      "sourceUrl": "https://drive.google.com/file/d/1Py1-MBEuI8PPELaI55SlTXyWbjfm_H_s/view",
+      "album": "Pedro",
+      "dimensions": {
+        "width": 4000,
+        "height": 6000
+      },
+      "originalInspected": true,
+      "reason": "Contrapicado de globo y canastilla con identificación Flying 03. Escala, color y marca propia en una sola toma, sin depender de retratos.",
+      "crop": {
+        "gallery": "Conservar escala y contexto; fotografía completa al abrir el original.",
+        "itinerary": "Priorizar la actividad que representa el paso y mantener rostros y marca legibles."
+      }
+    },
+    "family-dawn": {
+      "label": "Vivir el amanecer en familia",
+      "filename": "DSC01475.JPG",
+      "driveFileId": "1zqkgZVQKuiAGu-efAUPZXFToUGgukITw",
+      "sourceUrl": "https://drive.google.com/file/d/1zqkgZVQKuiAGu-efAUPZXFToUGgukITw/view",
+      "album": "Pedro",
+      "dimensions": {
+        "width": 6000,
+        "height": 4000
+      },
+      "originalInspected": true,
+      "reason": "Escena espontánea en canastilla con luz del amanecer y piloto a los controles. Aporta presencia humana y asombro tranquilo, sin una pose grupal de registro.",
+      "crop": {
+        "gallery": "Conservar escala y contexto; fotografía completa al abrir el original.",
+        "itinerary": "Priorizar la actividad que representa el paso y mantener rostros y marca legibles."
+      }
+    },
+    "couple-flame-candidate": {
+      "label": "Un amanecer para dos",
+      "filename": "DSC02168.JPG",
+      "driveFileId": "1sWIOgvxb-YCHghLiwpoHy4CPb0FMQQMi",
+      "sourceUrl": "https://drive.google.com/file/d/1sWIOgvxb-YCHghLiwpoHy4CPb0FMQQMi/view",
+      "album": "Pedro",
+      "dimensions": {
+        "width": 4000,
+        "height": 6000
+      },
+      "originalInspected": true,
+      "reason": "Pareja bajo la llama, luz cálida y escala del globo. La canastilla muestra Ultramagic y no se ve identificación Flying; Sean debe confirmar que corresponde a la operación y flota de Flying antes de usarla.",
+      "crop": {
+        "gallery": "Conservar escala y contexto; fotografía completa al abrir el original.",
+        "itinerary": "Priorizar la actividad que representa el paso y mantener rostros y marca legibles."
+      },
+      "requiresSeanConfirmation": true
     }
   },
   "packages": {
     "classic": {
       "name": "Vuelo Esencial",
-      "marketingFocus": "Pasajeros, vuelo compartido, brindis y certificado",
+      "marketingFocus": "Altura y alegría · vuelo compartido con Flying",
       "gallery": [
         {
           "order": 1,
-          "photo": "shared-basket",
-          "status": "propuesta"
+          "photo": "aerial",
+          "status": "propuesta",
+          "visualRole": "Amplitud",
+          "intent": "El valle completo desde el aire"
         },
         {
           "order": 2,
-          "photo": "shared-family",
-          "status": "propuesta"
+          "photo": "shared-joy",
+          "status": "propuesta",
+          "visualRole": "Emoción",
+          "intent": "La alegría de subir y vivir el vuelo"
         },
         {
           "order": 3,
-          "photo": "aerial",
-          "status": "propuesta"
+          "photo": "flying-scale",
+          "status": "propuesta",
+          "visualRole": "Flying",
+          "intent": "La escala de un globo Flying identificado"
         },
         {
           "order": 4,
-          "photo": "shared-toast",
-          "status": "propuesta"
+          "photo": "boarding",
+          "status": "propuesta",
+          "visualRole": "Flying",
+          "intent": "El acompañamiento del equipo"
         },
         {
           "order": 5,
-          "photo": "certificate-group",
-          "status": "propuesta"
+          "photo": "shared-toast",
+          "status": "propuesta",
+          "visualRole": "Cierre",
+          "intent": "El brindis entre viajeros"
         }
       ],
       "itinerary": [
@@ -424,16 +450,16 @@
           "photo": "boarding",
           "status": "propuesta",
           "missingPhotoBrief": null,
-          "note": null
+          "note": "Equipo Flying acompañando al pasajero en la canastilla; corresponde a preparación."
         },
         {
           "step": 3,
           "title": "Vuelo compartido",
           "time": "En el aire",
-          "photo": "aerial",
+          "photo": "flying-scale",
           "status": "propuesta",
           "missingPhotoBrief": null,
-          "note": null
+          "note": "Globo Flying 03 elevado, identificación legible; representa el vuelo y la marca."
         },
         {
           "step": 4,
@@ -462,36 +488,48 @@
           "brief": "Café servido, manos y sonrisas en la recepción real; luz cálida y fondo limpio, sin decoración estacional dominante.",
           "status": "falta_foto"
         }
-      ]
+      ],
+      "galleryCompleteness": "base_visual_propuesta",
+      "photoSequenceLogic": "Abrir con el deseo de vivirlo y alternar escala, emoción y señales concretas de Flying. Los detalles comerciales que faltan requieren fotos reales del servicio actual."
     },
     "transport": {
       "name": "+Transporte + Pirámides",
-      "marketingFocus": "Vuelo y Teotihuacán · faltan transporte y desayuno",
+      "marketingFocus": "Teotihuacán y el amanecer en familia",
       "gallery": [
         {
           "order": 1,
           "photo": "pyramids",
-          "status": "propuesta"
+          "status": "propuesta",
+          "visualRole": "Destino",
+          "intent": "Teotihuacán como protagonista"
         },
         {
           "order": 2,
-          "photo": "shared-basket",
-          "status": "propuesta"
+          "photo": "family-dawn",
+          "status": "propuesta",
+          "visualRole": "Emoción",
+          "intent": "El amanecer compartido en familia"
         },
         {
           "order": 3,
-          "photo": "aerial",
-          "status": "propuesta"
+          "photo": "flying-scale",
+          "status": "propuesta",
+          "visualRole": "Amplitud",
+          "intent": "El globo Flying 03 en vuelo"
         },
         {
           "order": 4,
-          "photo": "shared-toast",
-          "status": "propuesta"
+          "photo": "pilot-dawn",
+          "status": "propuesta",
+          "visualRole": "Flying",
+          "intent": "El piloto a cargo de la experiencia"
         },
         {
           "order": 5,
-          "photo": "certificate-group",
-          "status": "propuesta"
+          "photo": "shared-toast",
+          "status": "propuesta",
+          "visualRole": "Cierre",
+          "intent": "Brindis después del vuelo"
         }
       ],
       "itinerary": [
@@ -511,7 +549,7 @@
           "photo": "boarding",
           "status": "propuesta",
           "missingPhotoBrief": null,
-          "note": null
+          "note": "Equipo Flying acompañando al pasajero en la canastilla; corresponde a preparación."
         },
         {
           "step": 3,
@@ -585,36 +623,48 @@
           "brief": "Visitantes a nivel de suelo con pirámide o Calzada de los Muertos reconocible; una vista aérea no documenta este paso.",
           "status": "falta_foto"
         }
-      ]
+      ],
+      "galleryCompleteness": "faltan_fotos_de_diferenciadores_del_paquete",
+      "photoSequenceLogic": "Abrir con el deseo de vivirlo y alternar escala, emoción y señales concretas de Flying. Los detalles comerciales que faltan requieren fotos reales del servicio actual."
     },
     "journey": {
       "name": "Viajero",
-      "marketingFocus": "La jornada de vuelo · faltan guía, taller y kit",
+      "marketingFocus": "Descubrir el valle · vivir y compartir el viaje",
       "gallery": [
         {
           "order": 1,
-          "photo": "shared-family",
-          "status": "propuesta"
+          "photo": "shared-joy",
+          "status": "propuesta",
+          "visualRole": "Emoción",
+          "intent": "Vivir el viaje con alegría"
         },
         {
           "order": 2,
-          "photo": "pyramids",
-          "status": "propuesta"
+          "photo": "aerial",
+          "status": "propuesta",
+          "visualRole": "Amplitud",
+          "intent": "El valle y la escala del recorrido aéreo"
         },
         {
           "order": 3,
-          "photo": "aerial",
-          "status": "propuesta"
+          "photo": "flying-emblem",
+          "status": "propuesta",
+          "visualRole": "Flying",
+          "intent": "Un globo que se reconoce"
         },
         {
           "order": 4,
-          "photo": "shared-toast",
-          "status": "propuesta"
+          "photo": "boarding",
+          "status": "propuesta",
+          "visualRole": "Flying",
+          "intent": "El trato del equipo al preparar el vuelo"
         },
         {
           "order": 5,
-          "photo": "certificate-group",
-          "status": "propuesta"
+          "photo": "shared-toast",
+          "status": "propuesta",
+          "visualRole": "Cierre",
+          "intent": "La convivencia al brindar"
         }
       ],
       "itinerary": [
@@ -634,7 +684,7 @@
           "photo": "boarding",
           "status": "propuesta",
           "missingPhotoBrief": null,
-          "note": null
+          "note": "Equipo Flying acompañando al pasajero en la canastilla; corresponde a preparación."
         },
         {
           "step": 3,
@@ -753,41 +803,55 @@
           "brief": "Artesano o anfitrión explicando la actividad con visitantes; piezas, herramientas y degustación de los productos realmente incluidos.",
           "status": "falta_foto"
         }
-      ]
+      ],
+      "galleryCompleteness": "faltan_fotos_de_diferenciadores_del_paquete",
+      "photoSequenceLogic": "Abrir con el deseo de vivirlo y alternar escala, emoción y señales concretas de Flying. Los detalles comerciales que faltan requieren fotos reales del servicio actual."
     },
     "celebration": {
       "name": "Celebración",
-      "marketingFocus": "Alegría, flores, pastel y cumpleaños",
+      "marketingFocus": "Emoción a bordo · flores y pastel",
       "gallery": [
         {
           "order": 1,
           "photo": "celebration-flight",
-          "status": "propuesta"
+          "status": "propuesta",
+          "visualRole": "Emoción",
+          "intent": "La celebración empieza a bordo"
         },
         {
           "order": 2,
-          "photo": "flowers",
-          "status": "propuesta"
+          "photo": "flying-scale",
+          "status": "propuesta",
+          "visualRole": "Flying",
+          "intent": "La amplitud y escala de un globo Flying"
         },
         {
           "order": 3,
-          "photo": "cake",
-          "status": "propuesta"
+          "photo": "flowers",
+          "status": "propuesta",
+          "visualRole": "Detalle del paquete",
+          "intent": "El ramo como gesto de celebración"
         },
         {
           "order": 4,
-          "photo": "birthday",
-          "status": "propuesta"
+          "photo": "pilot-dawn",
+          "status": "propuesta",
+          "visualRole": "Flying",
+          "intent": "Tu piloto durante el vuelo"
         },
         {
           "order": 5,
-          "photo": "shared-toast",
-          "status": "propuesta"
+          "photo": "cake",
+          "status": "propuesta",
+          "visualRole": "Detalle del paquete",
+          "intent": "El pastel de cumpleaños"
         },
         {
           "order": 6,
-          "photo": "certificate-couple",
-          "status": "propuesta"
+          "photo": "shared-toast",
+          "status": "propuesta",
+          "visualRole": "Cierre",
+          "intent": "Compartir el brindis"
         }
       ],
       "itinerary": [
@@ -807,7 +871,7 @@
           "photo": "boarding",
           "status": "propuesta",
           "missingPhotoBrief": null,
-          "note": null
+          "note": "Equipo Flying acompañando al pasajero en la canastilla; corresponde a preparación."
         },
         {
           "step": 3,
@@ -866,36 +930,48 @@
           "brief": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales.",
           "status": "falta_foto"
         }
-      ]
+      ],
+      "galleryCompleteness": "base_visual_propuesta",
+      "photoSequenceLogic": "Abrir con el deseo de vivirlo y alternar escala, emoción y señales concretas de Flying. Los detalles comerciales que faltan requieren fotos reales del servicio actual."
     },
     "private": {
       "name": "Experiencia en Globo Privada",
-      "marketingFocus": "Cercanía en pareja y experiencia con el piloto",
+      "marketingFocus": "Cercanía en pareja · espacio, paisaje y atención",
       "gallery": [
         {
           "order": 1,
           "photo": "private-couple",
-          "status": "propuesta"
+          "status": "propuesta",
+          "visualRole": "Emoción",
+          "intent": "Cercanía y risa espontánea en pareja"
         },
         {
           "order": 2,
-          "photo": "private-basket",
-          "status": "propuesta"
+          "photo": "flying-scale",
+          "status": "propuesta",
+          "visualRole": "Amplitud",
+          "intent": "La escala del globo y la identidad Flying"
         },
         {
           "order": 3,
-          "photo": "pilot",
-          "status": "propuesta"
+          "photo": "aerial",
+          "status": "propuesta",
+          "visualRole": "Amplitud",
+          "intent": "El horizonte del valle desde el vuelo"
         },
         {
           "order": 4,
-          "photo": "vip-toast",
-          "status": "propuesta"
+          "photo": "pilot-dawn",
+          "status": "propuesta",
+          "visualRole": "Flying",
+          "intent": "El piloto presente y a los controles"
         },
         {
           "order": 5,
-          "photo": "certificate-couple",
-          "status": "propuesta"
+          "photo": "vip-toast",
+          "status": "propuesta",
+          "visualRole": "Cierre",
+          "intent": "Un brindis con tiempo para disfrutar"
         }
       ],
       "itinerary": [
@@ -912,10 +988,10 @@
           "step": 2,
           "title": "Preparación para volar",
           "time": "Preparación",
-          "photo": "private-basket",
+          "photo": "boarding",
           "status": "propuesta",
           "missingPhotoBrief": null,
-          "note": null
+          "note": "Equipo Flying acompañando al pasajero en la canastilla; corresponde a preparación."
         },
         {
           "step": 3,
@@ -954,7 +1030,14 @@
           "note": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales."
         }
       ],
-      "candidatesPendingSean": [],
+      "candidatesPendingSean": [
+        {
+          "photo": "couple-flame-candidate",
+          "status": "confirmar_sean",
+          "note": "Validar que este vuelo y la canastilla Ultramagic corresponden a la operación de Flying.",
+          "shortNote": "validar operación y flota Flying"
+        }
+      ],
       "missingPhotos": [
         {
           "key": "coffee",
@@ -968,36 +1051,48 @@
           "brief": "Mesa servida del desayuno que se entrega hoy, con platillos y comensales. Identificar sede y modalidad actuales.",
           "status": "falta_foto"
         }
-      ]
+      ],
+      "galleryCompleteness": "base_visual_propuesta",
+      "photoSequenceLogic": "Abrir con el deseo de vivirlo y alternar escala, emoción y señales concretas de Flying. Los detalles comerciales que faltan requieren fotos reales del servicio actual."
     },
     "charter": {
       "name": "FPM Private Charter",
-      "marketingFocus": "Panorámica, atención del piloto y experiencia en pareja",
+      "marketingFocus": "La escala del destino · piloto y experiencia acompañada",
       "gallery": [
         {
           "order": 1,
           "photo": "aerial",
-          "status": "propuesta"
+          "status": "propuesta",
+          "visualRole": "Amplitud",
+          "intent": "Teotihuacán en toda su extensión"
         },
         {
           "order": 2,
           "photo": "pilot",
-          "status": "propuesta"
+          "status": "propuesta",
+          "visualRole": "Flying",
+          "intent": "Piloto y pirámide desde la canastilla"
         },
         {
           "order": 3,
-          "photo": "private-basket",
-          "status": "propuesta"
+          "photo": "family-dawn",
+          "status": "propuesta",
+          "visualRole": "Emoción",
+          "intent": "Contemplar juntos el amanecer"
         },
         {
           "order": 4,
-          "photo": "vip-toast",
-          "status": "propuesta"
+          "photo": "flying-emblem",
+          "status": "propuesta",
+          "visualRole": "Flying",
+          "intent": "El globo y la identidad de Flying"
         },
         {
           "order": 5,
-          "photo": "certificate-couple",
-          "status": "propuesta"
+          "photo": "vip-toast",
+          "status": "propuesta",
+          "visualRole": "Cierre",
+          "intent": "Brindis en el paisaje"
         }
       ],
       "itinerary": [
@@ -1014,10 +1109,10 @@
           "step": 2,
           "title": "Preparación para volar",
           "time": "Preparación",
-          "photo": "private-basket",
+          "photo": "boarding",
           "status": "propuesta",
           "missingPhotoBrief": null,
-          "note": null
+          "note": "Equipo Flying acompañando al pasajero en la canastilla; corresponde a preparación."
         },
         {
           "step": 3,
@@ -1074,7 +1169,14 @@
           "note": "Mesa, platillos y ambiente del Club Campestre actual. Sean debe identificar y validar la sede."
         }
       ],
-      "candidatesPendingSean": [],
+      "candidatesPendingSean": [
+        {
+          "photo": "couple-flame-candidate",
+          "status": "confirmar_sean",
+          "note": "Validar que este vuelo y la canastilla Ultramagic corresponden a la operación de Flying.",
+          "shortNote": "validar operación y flota Flying"
+        }
+      ],
       "missingPhotos": [
         {
           "key": "premium-transport",
@@ -1106,36 +1208,48 @@
           "brief": "Mesa, platillos y ambiente del Club Campestre actual. Sean debe identificar y validar la sede.",
           "status": "falta_foto"
         }
-      ]
+      ],
+      "galleryCompleteness": "faltan_fotos_de_diferenciadores_del_paquete",
+      "photoSequenceLogic": "Abrir con el deseo de vivirlo y alternar escala, emoción y señales concretas de Flying. Los detalles comerciales que faltan requieren fotos reales del servicio actual."
     },
     "vip": {
       "name": "Premium · VIP",
-      "marketingFocus": "Brindis y vuelo · cuevas y fotos por confirmar",
+      "marketingFocus": "Brindis, paisaje y atención de Flying",
       "gallery": [
         {
           "order": 1,
           "photo": "vip-toast",
-          "status": "propuesta"
+          "status": "propuesta",
+          "visualRole": "Emoción",
+          "intent": "El brindis que eligió el usuario"
         },
         {
           "order": 2,
           "photo": "pyramids",
-          "status": "propuesta"
+          "status": "propuesta",
+          "visualRole": "Amplitud",
+          "intent": "Teotihuacán desde el vuelo"
         },
         {
           "order": 3,
-          "photo": "private-basket",
-          "status": "propuesta"
+          "photo": "pilot",
+          "status": "propuesta",
+          "visualRole": "Flying",
+          "intent": "El piloto y el destino, en una misma toma"
         },
         {
           "order": 4,
-          "photo": "pilot",
-          "status": "propuesta"
+          "photo": "flying-scale",
+          "status": "propuesta",
+          "visualRole": "Flying",
+          "intent": "Globo Flying 03 a gran escala"
         },
         {
           "order": 5,
-          "photo": "certificate-couple",
-          "status": "propuesta"
+          "photo": "private-couple",
+          "status": "propuesta",
+          "visualRole": "Emoción",
+          "intent": "Un momento cercano y espontáneo"
         }
       ],
       "itinerary": [
@@ -1152,10 +1266,10 @@
           "step": 2,
           "title": "Preparación para volar",
           "time": "Preparación",
-          "photo": "private-basket",
+          "photo": "boarding",
           "status": "propuesta",
           "missingPhotoBrief": null,
-          "note": null
+          "note": "Equipo Flying acompañando al pasajero en la canastilla; corresponde a preparación."
         },
         {
           "step": 3,
@@ -1270,7 +1384,9 @@
           "brief": "Servicio real de alimentos y atención del mesero correspondiente al paquete VIP.",
           "status": "falta_foto"
         }
-      ]
+      ],
+      "galleryCompleteness": "faltan_fotos_de_diferenciadores_del_paquete",
+      "photoSequenceLogic": "Abrir con el deseo de vivirlo y alternar escala, emoción y señales concretas de Flying. Los detalles comerciales que faltan requieren fotos reales del servicio actual."
     }
   },
   "notSelected": [
@@ -1301,10 +1417,47 @@
     {
       "sourceUrl": "https://drive.google.com/file/d/1G_-jbv1cWe8B5LRirHZ2phufDdoDbp6L/view",
       "reason": "Servicio de vino espumoso; no demuestra degustación de bebidas típicas ni taller."
+    },
+    {
+      "sourceUrl": "https://drive.google.com/file/d/1TjcRhKAdHkL59FdYkBBX1nloB3v93uCm/view",
+      "reason": "La expresión puede leerse como sobresalto o miedo; se prefirió alegría claramente reconocible para inspirar ganas de volar."
+    },
+    {
+      "sourceUrl": "https://drive.google.com/file/d/1PeRa6gSdPAqe9Y_kQoFLLsJ_49FtVrQ1/view",
+      "reason": "En el original se lee Sky en uno de los globos. Excluida de la propuesta pese a su panorama amplio."
+    },
+    {
+      "sourceUrl": "https://drive.google.com/file/d/18vvG0iITyW00VCMNEbHRJDHac0UHO4-e/view",
+      "reason": "Se prefirió la toma aislada de Flying 03, con fondo más limpio y sin otros globos visibles."
+    },
+    {
+      "sourceUrl": "https://drive.google.com/file/d/14ZdpNOFyxPhu2x-Gi7_xkXa7IvvknMzb/view",
+      "reason": "La toma aérea es evocadora, pero al revisar el encuadre grande pierde nitidez frente a las vistas ya seleccionadas. Se excluye de la versión final por calidad; tampoco se usa el recorte para ocultar esa limitación."
     }
   ],
   "existingSeanPendingOutsideScope": [
     "Fotografías de ingeniería",
     "Fotografías de flota"
-  ]
+  ],
+  "revision": 2,
+  "revisionNote": "Selección reforzada para amplitud, emoción y Flying reconocible. Se retiran certificados, retratos estáticos y lona de cumpleaños de las galerías comerciales; los certificados conservan su lugar en el itinerario.",
+  "previousProposalCommit": "3cb87d4",
+  "artDirection": {
+    "principle": "La galería debe hacer sentir el vuelo y reconocer a Flying; el itinerario debe explicar visualmente la actividad real.",
+    "balance": [
+      "Planos amplios: valle, pirámides y escala del globo",
+      "Emoción: reacciones, cercanía y momentos compartidos",
+      "Flying reconocible: canastilla identificada, ave de marca, uniformes y piloto en acción",
+      "Diferenciadores del paquete: solo servicios visibles y verificables; flores y pastel para Celebración",
+      "Ritual: brindis como cierre de la experiencia"
+    ],
+    "avoid": [
+      "Retratos de registro como hilo conductor de la galería",
+      "Certificados como imagen comercial principal",
+      "Varias fotos que repiten la misma pose o encuadre",
+      "Globos con marcas identificables de otros operadores",
+      "Afirmar que una foto acredita exclusividad, certificaciones o una ruta garantizada"
+    ],
+    "packageDifferenceGap": "Transporte, Viajero, Charter y VIP no quedan visualmente completos hasta contar con imágenes verificadas de sus traslados, alimentos y actividades en tierra. Las vistas aéreas muestran el vuelo, no sustituyen esos servicios."
+  }
 }
