@@ -230,41 +230,104 @@
   }
 
   [data-home-hero-slideshow] img {
+    transform: scale(.985);
     transition: transform 0s 2200ms;
   }
 
   [data-home-hero-slideshow][data-playing="true"] [data-current="true"] img {
-    transform: scale(1.035);
+    transform: scale(1);
     transition: transform 11s linear;
   }
 }
 
 .home-hero {
-  min-height: min(78svh, 60rem);
+  padding: 8rem 0 1.75rem;
 }
 
-@media (max-height: 45rem) {
-  .home-hero .title {
-    font-size: clamp(2rem, 4vw, 3rem);
+.home-hero-layout {
+  width: min(94%, 92rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-areas: "photo" "intro" "foot";
+  gap: 1.25rem;
+}
+
+.home-hero-photo {
+  grid-area: photo;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  max-height: 39svh;
+}
+
+.home-hero-intro {
+  grid-area: intro;
+  align-self: center;
+}
+
+.home-hero-intro h1 {
+  font-size: clamp(1.85rem, 6.8vw, 3.2rem);
+  line-height: 1.06;
+  letter-spacing: -.045em;
+}
+
+.home-hero-foot {
+  grid-area: foot;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 50rem), (min-width: 38rem) and (orientation: landscape) {
+  .home-hero-layout {
+    grid-template-columns: minmax(0, .72fr) minmax(0, 1fr);
+    grid-template-areas: "intro photo" "foot foot";
+    gap: clamp(1.5rem, 3vw, 3rem);
   }
-}
 
-@media (max-height: 32rem) and (min-aspect-ratio: 4/3) {
   .home-hero-photo {
-    padding-top: 8.25rem;
+    align-self: center;
+    max-height: 55svh;
   }
 
-  .home-hero .title {
-    max-width: none;
-    white-space: normal;
-  }
-
-  .home-hero .hero-stars, .home-hero .decorative span, .home-hero .home-hero-note {
-    display: none;
+  .home-hero-intro h1 {
+    font-size: clamp(2.1rem, 3.6vw, 3.8rem);
   }
 
   .home-hero-foot {
-    padding-block: .5rem;
+    grid-template-columns: minmax(0, .72fr) minmax(0, 1fr);
+    gap: inherit;
+  }
+}
+
+@media (min-width: 64rem) {
+  .home-hero {
+    padding-block: 11rem clamp(1.5rem, 3vw, 3rem);
+  }
+}
+
+@media (max-width: 38rem) and (max-height: 43rem) {
+  .home-hero-intro {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Keep the two flight links within reach on short phones. */
+  .home-hero-intro .hero-follow {
+    order: 1;
+  }
+}
+
+@media (min-width: 64rem) and (max-height: 45rem) {
+  .home-hero-layout {
+    row-gap: 1rem;
+  }
+
+  .home-hero-photo {
+    max-height: 48svh;
+  }
+
+  .home-hero {
+    padding-bottom: 1.25rem;
   }
 }
 

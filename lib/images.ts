@@ -3,10 +3,10 @@ export const IMAGES = {
     hero: {
       background: "thumbnail_cylgjq",
       slides: [
-        { publicId: "thumbnail_cylgjq", width: 3840, height: 2560, gravity: "center", position: "center" },
-        { publicId: "hero1_rszxmn", width: 2160, height: 1715, gravity: "center", position: "center" },
-        { publicId: "thumbnail_zjstmn", width: 3840, height: 2560, gravity: "faces", position: "center 35%" },
-        { publicId: "thumbnail_vnugqt", width: 3840, height: 2560, gravity: "faces", position: "center bottom" },
+        { publicId: "thumbnail_cylgjq", width: 3840, height: 2560 },
+        { publicId: "hero1_rszxmn", width: 2160, height: 1715 },
+        { publicId: "thumbnail_zjstmn", width: 3840, height: 2560 },
+        { publicId: "thumbnail_vnugqt", width: 3840, height: 2560 },
       ],
     },
     brandLogos: [

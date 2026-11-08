@@ -7,16 +7,9 @@ import { IMAGES } from '@/lib/images';
 const SLIDES = IMAGES.home.hero.slides;
 const HOLD_MS = 8000;
 
-function heroSrcSet(slide: (typeof SLIDES)[number], widths: number[], aspectRatio?: string) {
-  const [widthRatio, heightRatio] = (aspectRatio ?? '1:1').split(':').map(Number);
-  const maxWidth = Math.min(3840, slide.width, aspectRatio
-    ? Math.floor(slide.height * widthRatio / heightRatio)
-    : slide.width);
-  const candidates = [...new Set(widths.map((width) => Math.min(width, maxWidth)))];
-
-  return candidates.map((width) =>
-    `${cloudinaryPhotoUrl(slide.publicId, width, aspectRatio, slide.gravity)} ${width}w`,
-  ).join(', ');
+function heroSrcSet(slide: (typeof SLIDES)[number]) {
+  const widths = [360, 540, 768, 1080, 1536, 2160, 2880].filter((width) => width <= slide.width);
+  return widths.map((width) => `${cloudinaryPhotoUrl(slide.publicId, width)} ${width}w`).join(', ');
 }
 
 export function HomeHeroSlideshow() {
@@ -82,15 +75,13 @@ export function HomeHeroSlideshow() {
           className={`absolute inset-0 transition-opacity duration-[2200ms] ease-in-out motion-reduce:transition-none ${
             active === index ? 'opacity-100' : 'opacity-0'
           } ${index === 0 ? 'motion-reduce:opacity-100' : 'motion-reduce:opacity-0'}`}>
-          <source media="(max-width: 640px)" srcSet={heroSrcSet(slide, [480, 640, 828, 1080], '1:2')} sizes="100vw" />
-          <source media="(max-width: 1024px)" srcSet={heroSrcSet(slide, [750, 1080, 1536], '3:4')} sizes="100vw" />
-          <source media="(min-width: 1025px)" srcSet={heroSrcSet(slide, [1200, 1920, 2560, 3840])} sizes="100vw" />
           <img
             ref={index === 0 ? firstImageRef : undefined}
             src={cloudinaryPhotoUrl(slide.publicId, Math.min(1920, slide.width))}
+            srcSet={heroSrcSet(slide)}
+            sizes="(min-width: 1500px) 860px, (min-width: 800px) 57vw, 100vw"
             alt="" width={slide.width} height={slide.height}
-            className="absolute inset-0 h-full w-full object-cover"
-            style={{ objectPosition: slide.position }}
+            className="absolute inset-0 h-full w-full object-contain"
             fetchPriority={index === 0 ? 'high' : 'low'}
             decoding="async"
             onLoad={({ currentTarget }) => {
