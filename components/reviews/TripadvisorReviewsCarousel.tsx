@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
-import { useLocale, useTranslations } from "next-intl";
+import { useRef, useSyncExternalStore } from "react";
+import { useLocale, useNow, useTranslations } from "next-intl";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -95,9 +95,7 @@ export function TripadvisorReviewsCarousel({ variant }: Props) {
         </header>
 
         <div className="mt-10 flex items-center justify-between">
-          <p className="text-xs uppercase tracking-[0.16em] text-secondary/55">
-            {t("lastVerified")}
-          </p>
+          <CurrentDate />
           <div className="flex gap-2">
             <Button
               type="button"
@@ -146,6 +144,42 @@ export function TripadvisorReviewsCarousel({ variant }: Props) {
       </div>
     </section>
   );
+}
+
+const mexicoDay = new Intl.DateTimeFormat("sv-SE", {
+  timeZone: "America/Mexico_City", year: "numeric", month: "2-digit", day: "2-digit",
+});
+
+function currentDay() {
+  return mexicoDay.format(Date.now());
+}
+
+function subscribeToDayChange(refresh: () => void) {
+  let timer: number;
+  function tick() {
+    refresh();
+    timer = window.setTimeout(tick, 60_000 - Date.now() % 60_000);
+  }
+  timer = window.setTimeout(tick, 60_000 - Date.now() % 60_000);
+  document.addEventListener("visibilitychange", refresh);
+  window.addEventListener("pageshow", refresh);
+  return () => {
+    window.clearTimeout(timer);
+    document.removeEventListener("visibilitychange", refresh);
+    window.removeEventListener("pageshow", refresh);
+  };
+}
+
+function CurrentDate() {
+  const initialNow = useNow();
+  const locale = useLocale();
+  const t = useTranslations("reviews");
+  const day = useSyncExternalStore(subscribeToDayChange, currentDay, () => mexicoDay.format(initialNow));
+  const date = new Intl.DateTimeFormat(locale === "es" ? "es-MX" : "en-US", {
+    dateStyle: "long", timeZone: "UTC",
+  }).format(new Date(day));
+
+  return <time dateTime={day} className="text-xs uppercase tracking-[0.16em] text-secondary/55">{t("today", { date })}</time>;
 }
 
 function PlatformLogo({ platform }: { platform: TravelerReview["platform"] }) {
