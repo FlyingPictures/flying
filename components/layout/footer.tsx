@@ -1,8 +1,10 @@
 import { Link } from "@/i18n/routing"
 import { BrandLogo } from "@/components/BrandLogo"
+import { CloudinaryImage } from "@/components/CloudinaryImage"
 import { getLocale, getTranslations } from "next-intl/server"
 import { PACKAGE_SLUGS, getProductName } from "@/lib/commercial-config"
 import { SITE_CONTACT } from "@/lib/site-config"
+import { IMAGES } from "@/lib/images"
 
 interface FooterProps {
   translations: {
@@ -54,12 +56,20 @@ export async function Footer({ translations }: FooterProps) {
   return (
     <footer className="bg-secondary text-background relative pt-0 pb-16 px-5 md:px-10 lg:px-16">
       <div className="mx-auto w-full max-w-310">
-        <div className="flex justify-start">
+        <div className="flex items-start justify-between gap-6">
           <Link href="/" className="inline-block">
             <div className="w-[clamp(62px,6vw,87px)]">
               <BrandLogo className="h-auto w-full" />
             </div>
           </Link>
+          <CloudinaryImage
+            publicId={IMAGES.home.flightExperience.awards.certificate}
+            alt="Flying Pictures México — Top Safety"
+            width={160}
+            height={82}
+            sizes="(max-width: 767px) 62px, 80px"
+            className="mt-3 h-auto w-[clamp(62px,6vw,80px)] opacity-75 md:mt-4"
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 min-[1200px]:grid-cols-[1.15fr_1.5fr_1fr_0.85fr] gap-x-10 lg:gap-x-14 gap-y-12 mt-12 items-start">
