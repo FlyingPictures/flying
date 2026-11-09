@@ -10,9 +10,8 @@ import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { IMAGES } from "@/lib/images";
 import {
   TRIPADVISOR_PROFILE_URL,
-  TRIPADVISOR_RATING,
-  TRIPADVISOR_REVIEW_COUNT,
   VIATOR_REVIEWS_URL,
+  GOOGLE_PROFILE_URL,
   TRAVELER_REVIEWS,
   type TravelerReview,
 } from "@/lib/tripadvisor-reviews";
@@ -101,15 +100,10 @@ export function TripadvisorReviewsCarousel({ variant }: Props) {
             </h3>
           </div>
 
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
-            <a href={TRIPADVISOR_PROFILE_URL} target="_blank" rel="noopener noreferrer nofollow" className="flex min-h-12 flex-wrap items-center justify-center gap-3 rounded-xl bg-background px-4 py-2 shadow-sm hover:shadow-md">
-              <PlatformLogo platform="Tripadvisor" />
-              <span className="text-sm text-secondary">{TRIPADVISOR_RATING} / 5 · {t("totalReviews", { count: TRIPADVISOR_REVIEW_COUNT })}</span>
-            </a>
-            <a href={VIATOR_REVIEWS_URL} target="_blank" rel="noopener noreferrer nofollow" className="flex min-h-12 items-center gap-2 rounded-xl bg-background px-4 py-2 shadow-sm hover:shadow-md">
-              <PlatformLogo platform="Viator" />
-              <ArrowUpRight size={16} aria-hidden="true" />
-            </a>
+          <div className="mt-6 flex items-center justify-center gap-5 sm:gap-7">
+            <PlatformLogo platform="Tripadvisor" compact />
+            <PlatformLogo platform="Viator" compact />
+            <PlatformLogo platform="Google" compact />
           </div>
         </header>
 
@@ -175,6 +169,7 @@ export function TripadvisorReviewsCarousel({ variant }: Props) {
           {t.rich("moreReviews", {
             tripadvisor: (chunks) => <a href={TRIPADVISOR_PROFILE_URL} target="_blank" rel="noopener noreferrer nofollow" className="underline underline-offset-4">{chunks}</a>,
             viator: (chunks) => <a href={VIATOR_REVIEWS_URL} target="_blank" rel="noopener noreferrer nofollow" className="underline underline-offset-4">{chunks}</a>,
+            google: (chunks) => <a href={GOOGLE_PROFILE_URL} target="_blank" rel="noopener noreferrer nofollow" className="underline underline-offset-4">{chunks}</a>,
           })}
         </p>
       </div>
@@ -241,20 +236,26 @@ function CurrentDate() {
   return <time dateTime={day} className="text-[10px] uppercase tracking-[0.08em] text-secondary/55 sm:text-xs sm:tracking-[0.16em]">{t("today", { date })}</time>;
 }
 
-function PlatformLogo({ platform }: { platform: TravelerReview["platform"] }) {
-  const viator = platform === "Viator";
+const PLATFORM_LOGOS = {
+  Tripadvisor: { src: "/reviews/tripadvisor.svg", width: 130, height: 20 },
+  Viator: { src: "/reviews/viator.svg", width: 80, height: 20 },
+  Google: { src: "/reviews/google.png", width: 74, height: 25 },
+} as const;
+
+function PlatformLogo({ platform, compact = false }: { platform: TravelerReview["platform"]; compact?: boolean }) {
+  const logo = PLATFORM_LOGOS[platform];
   return (
-    <Image src={viator ? "/reviews/viator.svg" : "/reviews/tripadvisor.svg"} alt={platform}
-      width={viator ? 80 : 130} height={20} unoptimized className="h-5 w-auto" />
+    <Image {...logo} alt={platform} unoptimized
+      className={compact ? "h-4 w-auto sm:h-5" : "h-5 w-auto"} />
   );
 }
 
 function ReviewCard({ review, locale }: { review: TravelerReview; locale: string }) {
   const t = useTranslations("reviews");
   const language = locale === "es" ? "es" : "en";
-  const date = new Intl.DateTimeFormat(language === "es" ? "es-MX" : "en-US", {
+  const date = review.date ? new Intl.DateTimeFormat(language === "es" ? "es-MX" : "en-US", {
     dateStyle: "long", timeZone: "UTC",
-  }).format(new Date(review.date));
+  }).format(new Date(review.date)) : null;
 
   return (
     <article className="flex min-h-80 w-[calc(100%-2.75rem)] max-w-76 shrink-0 snap-start flex-col rounded-(--radius) border border-secondary/10 bg-background p-5 shadow-[0_18px_55px_rgba(3,48,59,0.10)] sm:min-h-92 sm:w-90 sm:max-w-none sm:p-6">
@@ -265,9 +266,9 @@ function ReviewCard({ review, locale }: { review: TravelerReview; locale: string
         </span>
       </div>
       <strong className="mt-4 text-secondary">{review.author}</strong>
-      <time dateTime={review.date} className="text-xs text-secondary/65">{date}</time>
-      <h3 className="mt-3 text-lg leading-tight text-secondary sm:text-xl">{review.title}</h3>
-      <p className="mt-4 text-sm leading-relaxed text-secondary/80">“{review.excerpt[language]}”</p>
+      {date && <time dateTime={review.date} className="text-xs text-secondary/65">{date}</time>}
+      {review.title && <h3 className="mt-3 text-lg leading-tight text-secondary sm:text-xl">{review.title}</h3>}
+      <p className={cn("mt-4 leading-relaxed text-secondary/80", review.title ? "text-sm" : "font-libre-baskerville text-lg sm:text-xl")}>“{review.excerpt[language]}”</p>
       <a href={review.url} target="_blank" rel="noopener noreferrer nofollow"
         className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-bold text-secondary underline underline-offset-4">
         {t("readFullReview", { platform: review.platform })} <ArrowUpRight size={16} aria-hidden="true" />

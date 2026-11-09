@@ -5,20 +5,22 @@ export const TRIPADVISOR_RATING = 4.8;
 export const TRIPADVISOR_REVIEW_COUNT = 226;
 export const VIATOR_REVIEWS_URL =
   "https://www.viator.com/tours/Mexico-City/HOT-AIR-BALLOON-RIDE-TOUR-FROM-MEXICO-CITY-INCLUDES-BREAKFAST-AND-PYRAMID-GUIDE/d628-129154P1#reviews_section";
+export const GOOGLE_PROFILE_URL =
+  "https://www.google.com/maps?cid=12618679308242481139";
 
 export type TravelerReview = {
-  platform: "Tripadvisor" | "Viator";
+  platform: "Tripadvisor" | "Viator" | "Google";
   author: string;
   rating: number;
-  date: string;
-  title: string;
+  date?: string;
+  title?: string;
   url: string;
   excerpt: { es: string; en: string };
 };
 
 // Titles, publication dates and ratings checked on the source listings on 2026-11-08.
 // Viator renders these reviews on the product page; its author text locates each entry.
-export const TRAVELER_REVIEWS: readonly TravelerReview[] = [
+const TRIPADVISOR_VIATOR_REVIEWS: readonly TravelerReview[] = [
   {
     "platform": "Tripadvisor",
     "author": "P B",
@@ -260,3 +262,114 @@ export const TRAVELER_REVIEWS: readonly TravelerReview[] = [
     }
   }
 ];
+
+// Checked directly on Google Maps on 2026-11-08; source references are in docs/google-reviews-sources-2026-11-08.json.
+// Google reviews have no titles and showed relative dates, so neither is invented here.
+const GOOGLE_REVIEWS: readonly TravelerReview[] = [
+  {
+    "platform": "Google",
+    "author": "Michael Lisa",
+    "rating": 5,
+    "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tabFIyaFVXVkpJUTNoZlNGbExaVGxtTUdkQ1FVRRAB!2m1!1s0x85d1c02fd88cdccb:0xaf1e8df9665d6ff3!3m1!1s2",
+    "excerpt": {
+      "es": "Un vuelo tranquilo justo sobre la zona arqueológica.",
+      "en": "smooth ride right over the archeological site"
+    }
+  },
+  {
+    "platform": "Google",
+    "author": "Rebecca Clarke",
+    "rating": 5,
+    "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2toVVNtaGtOWFJHWm1KRmFUWkplRkZPTlU1RlFrRRAB!2m1!1s0x85d1c02fd88cdccb:0xaf1e8df9665d6ff3!3m1!1s2",
+    "excerpt": {
+      "es": "Fue una experiencia fabulosa de principio a fin.",
+      "en": "It was a fabulous experience from start to finish."
+    }
+  },
+  {
+    "platform": "Google",
+    "author": "Cristian Vasquez",
+    "rating": 5,
+    "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21GbGVrUnliblZtYzFwUFNteFVObU5DTFVveFMwRRAB!2m1!1s0x85d1c02fd88cdccb:0xaf1e8df9665d6ff3!3m1!1s2",
+    "excerpt": {
+      "es": "El vuelo en globo fue hermoso y tranquilo.",
+      "en": "The balloon ride itself was beautiful, peaceful"
+    }
+  },
+  {
+    "platform": "Google",
+    "author": "Nancy Dorsner",
+    "rating": 5,
+    "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2taRVV6QnZaRUZaVERoU1MwdzJabTB3U1VOak1VRRAB!2m1!1s0x85d1c02fd88cdccb:0xaf1e8df9665d6ff3!3m1!1s2",
+    "excerpt": {
+      "es": "El equipo fue profesional. Una experiencia muy bonita.",
+      "en": "Crew was professional. Really nice experience."
+    }
+  },
+  {
+    "platform": "Google",
+    "author": "Callum Farquhar",
+    "rating": 5,
+    "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25KWFZuSkJSbGRvWm5oQ1lXcHdORVZSTmtOSFkzYxAB!2m1!1s0x85d1c02fd88cdccb:0xaf1e8df9665d6ff3!3m1!1s2",
+    "excerpt": {
+      "es": "La empresa hizo un gran trabajo al organizar todo.",
+      "en": "This company did a great job at organizing it all"
+    }
+  },
+  {
+    "platform": "Google",
+    "author": "Melanie",
+    "rating": 5,
+    "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25Sc1ZtSmliVlk1UVRGbFlqVTBhbEJPTFVWdVYwRRAB!2m1!1s0x85d1c02fd88cdccb:0xaf1e8df9665d6ff3!3m1!1s2",
+    "excerpt": {
+      "es": "Nos sentimos muy seguros con esta empresa.",
+      "en": "We felt very safe with this company"
+    }
+  },
+  {
+    "platform": "Google",
+    "author": "Will Hung",
+    "rating": 5,
+    "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25Cd2RVTkZhVnBQVm5OSlVtRmlja0V6TFVod2VsRRAB!2m1!1s0x85d1c02fd88cdccb:0xaf1e8df9665d6ff3!3m1!1s2",
+    "excerpt": {
+      "es": "El servicio fue muy amable y atento.",
+      "en": "The service was very friendly and attentive."
+    }
+  },
+  {
+    "platform": "Google",
+    "author": "Toy Rassavong",
+    "rating": 5,
+    "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xKYWEzUktiV0ZzT1haUkxVOWtiRWgxWWtWVmVIYxAB!2m1!1s0x85d1c02fd88cdccb:0xaf1e8df9665d6ff3!3m1!1s2",
+    "excerpt": {
+      "es": "¡Gran servicio! Verónica nos explicó todo perfectamente.",
+      "en": "Service is great! Veronica Communicated everything perfectly."
+    }
+  },
+  {
+    "platform": "Google",
+    "author": "Veronika Kuklina",
+    "rating": 5,
+    "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xod1gyVmZSSEkyYlhkQk16RmFjekpMVm5GNGVVRRAB!2m1!1s0x85d1c02fd88cdccb:0xaf1e8df9665d6ff3!3m1!1s2",
+    "excerpt": {
+      "es": "Se sintió como un sueño hecho realidad.",
+      "en": "it truly felt like a dream come true."
+    }
+  },
+  {
+    "platform": "Google",
+    "author": "Pete Martinez",
+    "rating": 5,
+    "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21SRU0xRldWMkk0UzNkVk9HaG1hREJNVkRKV1IwRRAB!2m1!1s0x85d1c02fd88cdccb:0xaf1e8df9665d6ff3!3m1!1s2",
+    "excerpt": {
+      "es": "La recogida y el regreso fueron perfectos.",
+      "en": "The pickup and drop off were perfect."
+    }
+  }
+];
+
+// Keep the original reviews and place a Google review after each Tripadvisor/Viator pair.
+export const TRAVELER_REVIEWS: readonly TravelerReview[] = TRIPADVISOR_VIATOR_REVIEWS.flatMap((review, index) => {
+  const googleReview = index % 2 === 1 ? GOOGLE_REVIEWS[Math.floor(index / 2)] : undefined;
+  return googleReview ? [review, googleReview] : [review];
+});
