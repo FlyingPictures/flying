@@ -40,6 +40,8 @@
         "description": "Si el piloto cancela por clima inseguro, puedes elegir un reembolso del 100%, una reprogramación gratuita o un crédito válido por 12 meses."
       },
       "customerCancellation": {
+        "title": "Cancelaciones por parte del cliente",
+        "intro": "Estos plazos aplican cuando solicitas cancelar o cambiar la fecha de tu reservación.",
         "72plus": {
           "label": "72 horas o más antes",
           "description": "Reembolso total del 100%."

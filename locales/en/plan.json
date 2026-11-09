@@ -40,6 +40,8 @@
         "description": "If the pilot cancels because of unsafe weather, you may choose a full 100% refund, complimentary rescheduling, or credit valid for 12 months."
       },
       "customerCancellation": {
+        "title": "Cancellations requested by the customer",
+        "intro": "These timeframes apply when you request a cancellation or a change to your booking date.",
         "72plus": {
           "label": "72 hours or more before",
           "description": "Full 100% refund."
