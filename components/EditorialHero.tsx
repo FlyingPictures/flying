@@ -5,9 +5,10 @@ type EditorialHeroProps = {
   title: string;
   subtitle: string;
   description: string;
+  badge?: { publicId: string; alt: string };
 };
 
-export function EditorialHero({ image, title, subtitle, description }: EditorialHeroProps) {
+export function EditorialHero({ image, title, subtitle, description, badge }: EditorialHeroProps) {
   return (
     <section className="relative isolate bg-secondary text-background">
       <div className="relative flex min-h-[68svh] flex-col justify-end px-6 pb-6 pt-[max(12rem,35svh)] sm:static sm:min-h-0 sm:items-center sm:pt-[max(16rem,48svh)] sm:text-center">
@@ -15,6 +16,11 @@ export function EditorialHero({ image, title, subtitle, description }: Editorial
           <CloudinaryImage publicId={image} alt="" fill priority sizes="100vw" className="object-top" />
           <div className="absolute inset-0 bg-linear-to-t from-secondary via-secondary/20 to-transparent" />
         </div>
+        {badge && (
+          <CloudinaryImage publicId={badge.publicId} alt={badge.alt} width={256} height={131}
+            loading="eager" sizes="(max-width: 639px) 96px, 128px"
+            className="relative mb-5 h-auto w-24 sm:w-32" />
+        )}
         <h1 className="title hero hero-enter relative max-sm:text-left sm:whitespace-pre-line">{title}</h1>
         <p className="decorative hero hero-enter hero-follow relative mt-3! max-w-2xl max-sm:text-left">{subtitle}</p>
       </div>

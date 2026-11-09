@@ -7,6 +7,7 @@ export async function SafetyHero() {
 
   return (
     <EditorialHero image={IMAGES.safety.hero.background} title={t("title")}
-      subtitle={t("subtitle")} description={t("description")} />
+      subtitle={t("subtitle")} description={t("description")}
+      badge={{ publicId: IMAGES.home.flightExperience.awards.certificate, alt: "Flying Pictures México — Top Safety" }} />
   );
 }
