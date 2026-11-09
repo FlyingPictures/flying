@@ -37,22 +37,23 @@
       "description": "Mantenemos protocolos de seguridad rigurosos. Si las condiciones meteorológicas no cumplen con nuestros estándares, simplemente no volamos. Tu seguridad está por encima de todo.\n\nSi un vuelo se cancela por mal clima, puedes cambiar de fecha sin costo o solicitar un reembolso completo. Cuidamos tu tranquilidad tanto como tu seguridad.",
       "companyCancellation": {
         "title": "Si cancelamos por mal clima:",
-        "description": "Recibes un reembolso del 100% o un cambio gratuito a la siguiente fecha disponible. Sin cargos ocultos ni complicaciones."
+        "description": "Si el piloto cancela por clima inseguro, puedes elegir un reembolso del 100%, una reprogramación gratuita o un crédito válido por 12 meses."
       },
       "customerCancellation": {
-        "48plus": {
-          "label": "Más de 72 horas antes",
-          "description": "Reembolso completo."
+        "72plus": {
+          "label": "72 horas o más antes",
+          "description": "Reembolso total del 100%."
         },
-        "24to48": {
-          "label": "24-72 horas antes",
-          "description": "Reembolso del 50%."
+        "24to72": {
+          "label": "De 24 a menos de 72 horas antes",
+          "description": "Reembolso del 50% o un cambio de fecha sin costo, sujeto a disponibilidad. Los cambios adicionales pueden generar un cargo del 25%."
         },
         "24less": {
           "label": "Menos de 24 horas antes",
-          "description": "No hay reembolso. Los cambios de fecha están sujetos a disponibilidad."
+          "description": "No hay reembolso. Los cambios de fecha están sujetos a disponibilidad y tienen un cargo del 50%."
         }
-      }
+      },
+      "policyLink": "Consultar política de cancelación"
     },
     "dressTo": {
       "label": "PREPARACIÓN ESENCIAL",

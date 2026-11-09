@@ -1,12 +1,17 @@
 import { CloudinaryImage } from "@/components/CloudinaryImage";
 import { getTranslations } from "next-intl/server";
 import { IMAGES } from "@/lib/images";
+import { Link } from "@/i18n/routing";
+import { ArrowRight } from "lucide-react";
 
 const BLOCK = "flex flex-col gap-4";
 const DIVIDER = "border-t border-secondary w-full";
 
 export async function PlanWeatherPolicy() {
-  const t = await getTranslations("planYourVisit.weatherPolicy");
+  const [t, policy] = await Promise.all([
+    getTranslations("planYourVisit.weatherPolicy"),
+    getTranslations("legal.cancellation"),
+  ]);
 
   return (
     <section id="weather-policy" className="relative w-full min-h-[758px] scroll-mt-32 md:min-h-[1031px]">
@@ -37,7 +42,7 @@ export async function PlanWeatherPolicy() {
             <div className={DIVIDER}></div>
           </div>
 
-          {(["48plus", "24to48", "24less"] as const).map((key, index) => (
+          {(["72plus", "24to72", "24less"] as const).map((key, index) => (
             <div key={key} className="w-full">
               <div className={`${BLOCK} w-full`}>
                 <h3 className="italic">{t(`customerCancellation.${key}.label`)}</h3>
@@ -46,6 +51,18 @@ export async function PlanWeatherPolicy() {
               {index < 2 && <div className={`${DIVIDER} mt-6`} />}
             </div>
           ))}
+
+          <div className="flex w-full flex-col items-start gap-4 border-t border-secondary pt-6">
+            <p className="text-sm leading-relaxed">{policy("changesNote")}</p>
+            <p className="text-sm leading-relaxed">{policy("customerNote")}</p>
+            <Link
+              href="/legal/cancellation"
+              className="inline-flex min-h-11 items-center gap-2 font-semibold text-secondary underline underline-offset-4 hover:opacity-80"
+            >
+              {t("policyLink")}
+              <ArrowRight size={18} className="shrink-0" aria-hidden="true" />
+            </Link>
+          </div>
 
         </div>
       </div>

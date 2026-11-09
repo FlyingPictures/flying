@@ -37,22 +37,23 @@
       "description": "We maintain rigorous safety protocols. If meteorological conditions do not meet our standards, we simply do not fly. Our commitment is to your safety above all else.\n\nShould a flight be cancelled due to weather, we offer seamless rescheduling or a full refund. We prioritise your peace of mind as much as your protection.",
       "companyCancellation": {
         "title": "If We Cancel (Bad Weather):",
-        "description": "You get a 100% Refund or a free reschedule for the next available date. No hidden fees, no arguments."
+        "description": "If the pilot cancels because of unsafe weather, you may choose a full 100% refund, complimentary rescheduling, or credit valid for 12 months."
       },
       "customerCancellation": {
-        "48plus": {
-          "label": "72+ hours before",
-          "description": "Full Refund."
+        "72plus": {
+          "label": "72 hours or more before",
+          "description": "Full 100% refund."
         },
-        "24to48": {
-          "label": "24-72 hours before",
-          "description": "50% refund."
+        "24to72": {
+          "label": "24 to less than 72 hours before",
+          "description": "50% refund or one complimentary date change, subject to availability. Additional changes may incur a 25% fee."
         },
         "24less": {
           "label": "Less than 24 hours before",
-          "description": "Non-refundable. Date changes are subject to availability."
+          "description": "No refund. Date changes are subject to availability and a 50% fee."
         }
-      }
+      },
+      "policyLink": "Read the full cancellation policy"
     },
     "dressTo": {
       "label": "ESSENTIAL PREP",
