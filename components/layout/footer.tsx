@@ -67,8 +67,8 @@ export async function Footer({ translations }: FooterProps) {
             alt="Flying Pictures México — Top Safety"
             width={160}
             height={82}
-            sizes="(max-width: 767px) 62px, 80px"
-            className="mt-3 h-auto w-[clamp(62px,6vw,80px)] opacity-75 md:mt-4"
+            sizes="clamp(65.1px, 6.3vw, 84px)"
+            className="mt-3 h-auto w-[clamp(65.1px,6.3vw,84px)] opacity-100 md:mt-4"
           />
         </div>
 
