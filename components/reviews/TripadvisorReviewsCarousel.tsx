@@ -237,16 +237,16 @@ function CurrentDate() {
 }
 
 const PLATFORM_LOGOS = {
-  Tripadvisor: { src: "/reviews/tripadvisor.svg", width: 130, height: 20 },
-  Viator: { src: "/reviews/viator.svg", width: 80, height: 20 },
-  Google: { src: "/reviews/google.png", width: 74, height: 25 },
+  Tripadvisor: { src: "/reviews/tripadvisor.svg", width: 130, height: 20, compactSize: "h-[11px] sm:h-[14px]", cardSize: "h-[14px]" },
+  Viator: { src: "/reviews/viator.svg", width: 80, height: 20, compactSize: "h-[14px] sm:h-[17px]", cardSize: "h-[17px]" },
+  Google: { src: "/reviews/google.png", width: 74, height: 25, compactSize: "h-4 sm:h-5", cardSize: "h-5" },
 } as const;
 
 function PlatformLogo({ platform, compact = false }: { platform: TravelerReview["platform"]; compact?: boolean }) {
-  const logo = PLATFORM_LOGOS[platform];
+  const { compactSize, cardSize, ...logo } = PLATFORM_LOGOS[platform];
   return (
     <Image {...logo} alt={platform} unoptimized
-      className={compact ? "h-4 w-auto sm:h-5" : "h-5 w-auto"} />
+      className={cn("w-auto", compact ? compactSize : cardSize)} />
   );
 }
 
