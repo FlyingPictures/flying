@@ -372,8 +372,8 @@ export function FlightExperienceSection() {
           alt="Flying Pictures México — Top Safety"
           width={640}
           height={328}
-          sizes="(max-width: 767px) 240px, 320px"
-          className="mx-auto h-auto w-60 md:w-80 mb-[clamp(16px,8vw,108px)]"
+          sizes="(max-width: 767px) 160.8px, 214.4px"
+          className="mx-auto h-auto w-[160.8px] md:w-[214.4px] mb-[clamp(16px,8vw,108px)]"
         />
         <div className="max-w-214.5 mx-auto mb-8">
           <h2 className="text-background" style={{ fontSize: 'clamp(36px,5vw,64px)' }}>
