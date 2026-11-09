@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useSyncExternalStore } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { useLocale, useNow, useTranslations } from "next-intl";
-import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Pause, Play } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { CloudinaryImage } from "@/components/CloudinaryImage";
@@ -26,16 +26,38 @@ export function TripadvisorReviewsCarousel({ variant }: Props) {
   const locale = useLocale();
   const t = useTranslations("reviews");
   const trackRef = useRef<HTMLDivElement>(null);
+  const interactionRef = useRef({ hovered: false, focused: false, dragging: false, lastManualMove: 0 });
+  const reducedMotion = useSyncExternalStore(subscribeToReducedMotion, prefersReducedMotion, () => true);
+  const [autoplayPreference, setAutoplayPreference] = useState<boolean | null>(null);
+  const isPlaying = autoplayPreference ?? !reducedMotion;
   const isHome = variant === "home";
 
   const move = (direction: -1 | 1) => {
     const track = trackRef.current;
     if (!track) return;
-    track.scrollBy({
-      left: direction * Math.max(300, track.clientWidth * 0.82),
-      behavior: "smooth",
-    });
+    interactionRef.current.lastManualMove = Date.now();
+    moveReview(track, direction, reducedMotion ? "instant" : "smooth");
   };
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track || !isPlaying) return;
+    let inView = false;
+    const observer = new IntersectionObserver(([entry]) => {
+      inView = entry.isIntersecting;
+    }, { threshold: 0.35 });
+    observer.observe(track);
+    const timer = window.setInterval(() => {
+      const interaction = interactionRef.current;
+      if (!inView || document.hidden || interaction.hovered || interaction.focused || interaction.dragging
+        || Date.now() - interaction.lastManualMove < 6000) return;
+      moveReview(track, 1, reducedMotion ? "instant" : "smooth");
+    }, 6000);
+    return () => {
+      window.clearInterval(timer);
+      observer.disconnect();
+    };
+  }, [isPlaying, reducedMotion]);
 
   return (
     <section
@@ -77,9 +99,6 @@ export function TripadvisorReviewsCarousel({ variant }: Props) {
             >
               {t(isHome ? "homeTitle" : "dontJustTakeOurWord")}
             </h3>
-            <p className="mx-auto mt-4 max-w-2xl text-secondary/70">
-              {t(isHome ? "homeSubtitle" : "Subtittle")}
-            </p>
           </div>
 
           <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
@@ -94,7 +113,7 @@ export function TripadvisorReviewsCarousel({ variant }: Props) {
           </div>
         </header>
 
-        <div className="mt-10 flex items-center justify-between">
+        <div className="mt-8 flex items-center justify-between gap-3">
           <CurrentDate />
           <div className="flex gap-2">
             <Button
@@ -110,6 +129,15 @@ export function TripadvisorReviewsCarousel({ variant }: Props) {
               type="button"
               variant="outline"
               size="icon"
+              onClick={() => setAutoplayPreference(!isPlaying)}
+              aria-label={t(isPlaying ? "pauseAutoplay" : "playAutoplay")}
+            >
+              {isPlaying ? <Pause size={17} /> : <Play size={17} />}
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              size="icon"
               onClick={() => move(1)}
               aria-label={t("next")}
             >
@@ -120,12 +148,22 @@ export function TripadvisorReviewsCarousel({ variant }: Props) {
 
         <div
           ref={trackRef}
-          className="mt-5 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-16 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-          style={{
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent 0, black 2.5rem, black calc(100% - 2.5rem), transparent 100%)",
-            maskImage:
-              "linear-gradient(to right, transparent 0, black 2.5rem, black calc(100% - 2.5rem), transparent 100%)",
+          tabIndex={0}
+          aria-label={t("readRealReviews")}
+          className="mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-9 motion-safe:scroll-smooth sm:gap-5 sm:pb-12 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          onPointerEnter={(event) => { if (event.pointerType === "mouse") interactionRef.current.hovered = true; }}
+          onPointerLeave={() => { interactionRef.current.hovered = false; interactionRef.current.dragging = false; }}
+          onPointerDown={() => { interactionRef.current.dragging = true; interactionRef.current.lastManualMove = Date.now(); }}
+          onPointerUp={() => { interactionRef.current.dragging = false; interactionRef.current.lastManualMove = Date.now(); }}
+          onPointerCancel={() => { interactionRef.current.dragging = false; interactionRef.current.lastManualMove = Date.now(); }}
+          onWheel={() => { interactionRef.current.lastManualMove = Date.now(); }}
+          onFocusCapture={() => { interactionRef.current.focused = true; }}
+          onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) interactionRef.current.focused = false; }}
+          onKeyDown={(event) => {
+            if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+              event.preventDefault();
+              move(event.key === "ArrowLeft" ? -1 : 1);
+            }
           }}
         >
           {TRAVELER_REVIEWS.map((review) => (
@@ -133,17 +171,38 @@ export function TripadvisorReviewsCarousel({ variant }: Props) {
           ))}
         </div>
 
-        <div className="mt-2 flex flex-wrap justify-center gap-x-6 gap-y-3">
-          {(["Tripadvisor", "Viator"] as const).map((platform) => (
-            <a key={platform} href={platform === "Tripadvisor" ? TRIPADVISOR_PROFILE_URL : VIATOR_REVIEWS_URL}
-              target="_blank" rel="noopener noreferrer nofollow" className="text-card-link inline-flex items-center gap-1.5 text-secondary">
-              {t("readMoreReviews", { platform })} <ArrowUpRight size={18} aria-hidden="true" />
-            </a>
-          ))}
-        </div>
+        <p className="mt-2 text-center text-[clamp(0.75rem,3.3vw,0.875rem)] font-semibold whitespace-nowrap text-secondary">
+          {t.rich("moreReviews", {
+            tripadvisor: (chunks) => <a href={TRIPADVISOR_PROFILE_URL} target="_blank" rel="noopener noreferrer nofollow" className="underline underline-offset-4">{chunks}</a>,
+            viator: (chunks) => <a href={VIATOR_REVIEWS_URL} target="_blank" rel="noopener noreferrer nofollow" className="underline underline-offset-4">{chunks}</a>,
+          })}
+        </p>
       </div>
     </section>
   );
+}
+
+function moveReview(track: HTMLDivElement, direction: -1 | 1, behavior: ScrollBehavior) {
+  const first = track.children[0] as HTMLElement | undefined;
+  const second = track.children[1] as HTMLElement | undefined;
+  if (!first || !second) return;
+  const step = second.offsetLeft - first.offsetLeft;
+  const maxScroll = track.scrollWidth - track.clientWidth;
+  const atEnd = track.scrollLeft >= maxScroll - 2;
+  const next = direction === 1 && atEnd ? 0
+    : direction === -1 && track.scrollLeft <= 2 ? maxScroll
+    : (Math.round(track.scrollLeft / step) + direction) * step;
+  track.scrollTo({ left: Math.max(0, Math.min(next, maxScroll)), behavior });
+}
+
+function subscribeToReducedMotion(refresh: () => void) {
+  const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+  media.addEventListener("change", refresh);
+  return () => media.removeEventListener("change", refresh);
+}
+
+function prefersReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
 const mexicoDay = new Intl.DateTimeFormat("sv-SE", {
@@ -179,7 +238,7 @@ function CurrentDate() {
     dateStyle: "long", timeZone: "UTC",
   }).format(new Date(day));
 
-  return <time dateTime={day} className="text-xs uppercase tracking-[0.16em] text-secondary/55">{t("today", { date })}</time>;
+  return <time dateTime={day} className="text-[10px] uppercase tracking-[0.08em] text-secondary/55 sm:text-xs sm:tracking-[0.16em]">{t("today", { date })}</time>;
 }
 
 function PlatformLogo({ platform }: { platform: TravelerReview["platform"] }) {
@@ -198,16 +257,16 @@ function ReviewCard({ review, locale }: { review: TravelerReview; locale: string
   }).format(new Date(review.date));
 
   return (
-    <article className="flex min-h-92 w-[min(86vw,360px)] shrink-0 snap-center flex-col rounded-(--radius) border border-secondary/10 bg-background p-6 shadow-[0_18px_55px_rgba(3,48,59,0.10)] sm:w-90">
-      <div className="flex items-center justify-between gap-2 border-b border-secondary/10 pb-4">
+    <article className="flex min-h-80 w-[calc(100%-2.75rem)] max-w-76 shrink-0 snap-start flex-col rounded-(--radius) border border-secondary/10 bg-background p-5 shadow-[0_18px_55px_rgba(3,48,59,0.10)] sm:min-h-92 sm:w-90 sm:max-w-none sm:p-6">
+      <div className="flex items-center justify-between gap-2 border-b border-secondary/10 pb-4 [&_img]:max-w-[48%] [&_img]:object-contain">
         <PlatformLogo platform={review.platform} />
-        <span className="text-sm tracking-wider text-primary" aria-label={`${review.rating}/5`}>
+        <span className="shrink-0 text-xs tracking-wider text-primary sm:text-sm" aria-label={`${review.rating}/5`}>
           {"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}
         </span>
       </div>
       <strong className="mt-4 text-secondary">{review.author}</strong>
       <time dateTime={review.date} className="text-xs text-secondary/65">{date}</time>
-      <h3 className="mt-3 text-xl leading-tight text-secondary">{review.title}</h3>
+      <h3 className="mt-3 text-lg leading-tight text-secondary sm:text-xl">{review.title}</h3>
       <p className="mt-4 text-sm leading-relaxed text-secondary/80">“{review.excerpt[language]}”</p>
       <a href={review.url} target="_blank" rel="noopener noreferrer nofollow"
         className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-bold text-secondary underline underline-offset-4">

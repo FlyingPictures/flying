@@ -7,11 +7,10 @@ export default async function ProductFooter() {
   return (
     <section className="relative w-full overflow-hidden">
       
-      {/* Simulación de sección anterior */}
-      <div className="absolute top-0 left-0 w-full h-6 bg-background rounded-b-(--radius)" />
+      <div aria-hidden="true" className="absolute top-0 left-0 w-full h-6 bg-background rounded-b-(--radius)" />
 
       <div
-        className="flex flex-col items-center justify-center gap-4 w-full h-106 md:h-122 px-6 pt-36 pb-10 md:py-30 text-center text-background"
+        className="flex w-full flex-col items-center justify-center gap-5 px-6 pt-22 pb-16 text-center text-background md:pt-30 md:pb-24"
         style={{
           background:
             "linear-gradient(180deg, rgba(123,149,171,0.57) 0%, rgba(0,0,0,0.57) 100%), linear-gradient(0deg,#000000,#000000)",
