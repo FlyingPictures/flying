@@ -29,7 +29,7 @@ export const IMAGES = {
         vip: "toggle3_fd1suy",
       },
       awards: {
-        certificate: "certificate_tde9fm",
+        certificate: "1000311531_ulo08q",
         badge: "awward_nvceuz",
       },
       bottomCards: {
