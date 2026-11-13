@@ -375,18 +375,13 @@ export function FlightExperienceSection() {
           sizes="(max-width: 767px) 160.8px, 214.4px"
           className="mx-auto h-auto w-[160.8px] md:w-[214.4px] mb-[clamp(16px,8vw,108px)]"
         />
-        <div className="max-w-214.5 mx-auto mb-8">
-          <h2 className="text-background" style={{ fontSize: 'clamp(36px,5vw,64px)' }}>
-            {t('awardSection.title')}
-          </h2>
-          <h3
-            lang="en"
-            className="text-balance font-poppins font-semibold text-background"
-            style={{ fontSize: 'clamp(24px,5vw,64px)' }}
-          >
-            AN AVIATION COMPANY
-          </h3>
-        </div>
+        <h2
+          lang="en"
+          className="mx-auto mb-8 max-w-214.5 text-balance font-poppins font-semibold text-background"
+          style={{ fontSize: 'clamp(24px,5vw,64px)' }}
+        >
+          AN AVIATION COMPANY
+        </h2>
         <p className="mx-auto text-background max-w-[clamp(309px,70vw,608px)]">
           {t('awardSection.description')}
         </p>
