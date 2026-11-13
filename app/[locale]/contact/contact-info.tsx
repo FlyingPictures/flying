@@ -3,10 +3,10 @@
 import { useTranslations } from "next-intl"
 import { CloudinaryImage } from "@/components/CloudinaryImage"
 import { IMAGES } from "@/lib/images"
-import { EnvelopeSimpleIcon, PhoneIcon } from "@phosphor-icons/react"
+import { EnvelopeSimpleIcon, PhoneIcon, WhatsappLogoIcon } from "@phosphor-icons/react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
-import { SITE_CONTACT } from "@/lib/site-config"
+import { CONTACT_LINES, SITE_CONTACT } from "@/lib/site-config"
 
 const inputClass =
   "w-full h-[48px] bg-transparent border-2 border-background rounded-[12px] px-5 text-background placeholder:text-background placeholder:opacity-100 font-bold outline-none focus:ring-2 focus:ring-background/40 transition"
@@ -61,37 +61,30 @@ export function ContactInfo() {
               <h2>{t("sectionTitle")}</h2>
               <h4 className="lg:order-first">{t("forTravelers")}</h4>
             </div>
-            <div className="w-[clamp(345px,48vw,591px)] min-h-[420px] lg:min-h-[580px] bg-background rounded-(--radius) overflow-hidden shadow-lg flex flex-col">
+            <div className="w-full max-w-[591px] min-h-[420px] lg:min-h-[580px] bg-background rounded-(--radius) overflow-hidden shadow-lg flex flex-col">
               <div className="relative w-full h-[clamp(160px,26vw,325px)]">
                 <CloudinaryImage publicId={IMAGES.contact.hero.booking} alt={t("sectionTitle")} fill className="object-cover" />
               </div>
               <div className="text-md lg:text-lg flex-1 px-5 lg:px-8 py-5 flex flex-col justify-between gap-4 text-left">
                 <span className="font-bold">{t("availabilityText")}</span>
-                <div>
-                  <p className="mb-1 text-sm font-bold uppercase tracking-wide text-secondary/70">
-                    {t("salesChannel")}
-                  </p>
-                  <a className="flex items-center gap-3 hover:text-primary transition-colors" href={`mailto:${SITE_CONTACT.email}`}>
-                    <EnvelopeSimpleIcon className="w-6 h-6 shrink-0 text-secondary" weight="bold" />
-                    <span>{SITE_CONTACT.email}</span>
-                  </a>
-                  <a className="mt-1 flex items-center gap-3 hover:text-primary transition-colors" href={`tel:${SITE_CONTACT.phone}`}>
-                    <PhoneIcon className="w-6 h-6 shrink-0 text-secondary" weight="bold" />
-                    <span>{SITE_CONTACT.display}</span>
-                  </a>
-                </div>
-                <div>
-                  <p className="mb-1 text-sm font-bold uppercase tracking-wide text-secondary/70">
-                    {t("supportChannel")}
-                  </p>
-                  <a className="flex items-center gap-3 hover:text-primary transition-colors" href={`mailto:${SITE_CONTACT.whatsappEmail}`}>
-                    <EnvelopeSimpleIcon className="w-6 h-6 shrink-0 text-secondary" weight="bold" />
-                    <span>{SITE_CONTACT.whatsappEmail}</span>
-                  </a>
-                  <a className="mt-1 flex items-center gap-3 hover:text-primary transition-colors" href={SITE_CONTACT.whatsapp} target="_blank" rel="noopener noreferrer">
-                    <PhoneIcon className="w-6 h-6 shrink-0 text-secondary" weight="bold" />
-                    <span>{SITE_CONTACT.whatsappDisplay}</span>
-                  </a>
+                <div className="space-y-3">
+                  <p className="text-sm font-bold text-secondary">{t("contactHeading")}</p>
+                  {CONTACT_LINES.map(({ display, phone, whatsapp, email }) => {
+                    const isWhatsApp = phone === SITE_CONTACT.whatsappPhone
+                    const Icon = isWhatsApp ? WhatsappLogoIcon : PhoneIcon
+                    return (
+                      <div key={phone} className="grid border-t border-secondary/10 pt-2">
+                        <a className="flex min-h-11 items-center gap-3 font-semibold hover:underline" href={isWhatsApp ? whatsapp : `tel:${phone}`}>
+                          <Icon className="size-5 shrink-0" aria-hidden="true" />
+                          <span>{display}</span>
+                        </a>
+                        <a className="flex min-h-11 items-center gap-3 text-sm hover:underline" href={`mailto:${email}`}>
+                          <EnvelopeSimpleIcon className="size-5 shrink-0" aria-hidden="true" />
+                          <span className="break-all">{email}</span>
+                        </a>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             </div>

@@ -38,3 +38,18 @@ export function localizedUrl(locale: string, path = "") {
   const normalizedPath = path && !path.startsWith("/") ? `/${path}` : path;
   return `${SITE_URL}/${locale}${normalizedPath}`;
 }
+
+export const CONTACT_LINES = [
+  {
+    display: SITE_CONTACT.whatsappDisplay,
+    phone: SITE_CONTACT.whatsappPhone,
+    whatsapp: SITE_CONTACT.whatsapp,
+    email: SITE_CONTACT.whatsappEmail,
+  },
+  {
+    display: SITE_CONTACT.display,
+    phone: SITE_CONTACT.phone,
+    whatsapp: `https://wa.me/${SITE_CONTACT.phoneDigits}`,
+    email: SITE_CONTACT.email,
+  },
+] as const;
