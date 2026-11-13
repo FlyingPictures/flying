@@ -285,6 +285,7 @@ export function FlightExperienceSection() {
             return (
             <article
               key={flight.slug}
+              data-cta-location="home_carousel"
               data-slide
               data-index={index}
               className="shrink-0 w-[var(--slide-width)] select-none flex flex-col"

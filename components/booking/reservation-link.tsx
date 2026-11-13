@@ -12,6 +12,7 @@ export function ReservationLink({ slug, locale, ...props }: ReservationLinkProps
   return (
     <a
       {...props}
+      data-package-id={slug}
       href={getReservationUrl(slug, locale)}
       data-button-text={BOOKING_URLS[slug] ? label : undefined}
       target="_blank"

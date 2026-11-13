@@ -107,7 +107,7 @@ const LanguageSwitcher = () => {
 const HeaderBanner = () => {
   const bannerT = useTranslations("banner")
   return (
-    <div className="flex h-12 w-full flex-col items-center justify-center gap-x-2 bg-destructive px-2 text-[0.7rem] font-bold text-background sm:flex-row lg:text-sm">
+    <div data-cta-location="header" className="flex h-12 w-full flex-col items-center justify-center gap-x-2 bg-destructive px-2 text-[0.7rem] font-bold text-background sm:flex-row lg:text-sm">
       <span>{bannerT("company")}</span>
       <span className="flex items-center gap-2 whitespace-nowrap">
         <a href={`tel:${SITE_CONTACT.phone}`}>{SITE_CONTACT.display}</a>
@@ -127,6 +127,7 @@ export default function Navbar() {
   const [isSheetOpen, setIsSheetOpen] = useState(false)
   const isHeaderHidden = scrollY > 160 && scrollDirection === "down" && !isSheetOpen && !isMenuOpen
   const locale = useLocale()
+  useEffect(() => { document.documentElement.lang = locale }, [locale])
 
   useEffect(() => {
     const desktop = window.matchMedia("(min-width: 64rem)")

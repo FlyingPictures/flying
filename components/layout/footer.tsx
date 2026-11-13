@@ -54,7 +54,7 @@ export async function Footer({ translations }: FooterProps) {
   ]
 
   return (
-    <footer className="bg-secondary text-background relative pt-0 pb-16 px-5 md:px-10 lg:px-16">
+    <footer data-cta-location="footer" className="bg-secondary text-background relative pt-0 pb-16 px-5 md:px-10 lg:px-16">
       <div className="mx-auto w-full max-w-310">
         <div className="flex items-start justify-between gap-6">
           <Link href="/" className="inline-block">

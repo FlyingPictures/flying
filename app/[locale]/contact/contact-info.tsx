@@ -37,7 +37,7 @@ export function ContactInfo() {
   const isDisabled = !company || !groupSize || !date
 
   return (
-    <section className="relative w-full lg:h-265 py-12 overflow-hidden">
+    <section data-cta-location="contact_page" className="relative w-full lg:h-265 py-12 overflow-hidden">
       <style>{`
         input[type="date"]::-webkit-calendar-picker-indicator { display: none; }
         input[type="date"]::-webkit-inner-spin-button { display: none; }
@@ -136,6 +136,8 @@ export function ContactInfo() {
                 size="lg"
                 className="w-full disabled:opacity-100 disabled:pointer-events-none"
                 disabled={isDisabled}
+                data-corporate-inquiry
+                data-cta-location="corporate_form"
                 onClick={handleSubmit}
               >
                 {t("cta")}

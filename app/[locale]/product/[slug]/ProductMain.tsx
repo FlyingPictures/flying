@@ -26,7 +26,7 @@ export default function ProductMain({ slug, data }: { slug: ProductSlug; data: P
           <h2 className="text-left font-inter text-lg font-bold tracking-normal">{data.description.title}</h2>
           <p className="product-body mt-2">{data.description.paragraph}</p>
         </div>
-        <div id={`booking-options-${slug}`} className="w-full space-y-4 rounded-2xl bg-secondary/[.045] p-4 sm:p-5">
+        <div data-cta-location="product_detail" id={`booking-options-${slug}`} className="w-full space-y-4 rounded-2xl bg-secondary/[.045] p-4 sm:p-5">
           {PRODUCT_PRICING[slug]?.model === "customQuote" ? (
             <div>
               <p className="text-sm font-medium text-secondary/75">{price.unitLabel}</p>

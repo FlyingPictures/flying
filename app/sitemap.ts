@@ -30,7 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       routes.push({
         url,
-        lastModified: new Date(),
         changeFrequency: route === '' ? 'daily' : 'weekly',
         priority: route === '' ? 1.0 : 0.8,
         alternates: {

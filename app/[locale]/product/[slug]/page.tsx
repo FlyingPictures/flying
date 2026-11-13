@@ -88,7 +88,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       languages: {
         es: `${SITE_URL}/es/product/${slug}`,
         en: `${SITE_URL}/en/product/${slug}`,
-        "x-default": `${SITE_URL}/en/product/${slug}`,
+        "x-default": `${SITE_URL}/es/product/${slug}`,
       },
     },
     openGraph: {

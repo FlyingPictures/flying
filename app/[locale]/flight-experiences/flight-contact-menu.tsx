@@ -21,7 +21,7 @@ export function FlightContactMenu() {
         </Button>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
-        <DropdownMenu.Content align="start" sideOffset={8} collisionPadding={12} className="z-50 w-72 max-w-[calc(100vw-1.5rem)] rounded-2xl border border-secondary/15 bg-background p-2 text-secondary shadow-xl">
+        <DropdownMenu.Content data-cta-location="catalog_header" align="start" sideOffset={8} collisionPadding={12} className="z-50 w-72 max-w-[calc(100vw-1.5rem)] rounded-2xl border border-secondary/15 bg-background p-2 text-secondary shadow-xl">
           <DropdownMenu.Label className="px-4 py-2 text-sm font-bold leading-snug">{contact("contactHeading")}</DropdownMenu.Label>
           {CONTACT_LINES.map(({ display, whatsapp }) => (
             <DropdownMenu.Item key={display} asChild>

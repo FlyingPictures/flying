@@ -39,7 +39,7 @@ export async function generateMetadata({
       languages: {
         es: `${SITE_URL}/es/safety-heritage`,
         en: `${SITE_URL}/en/safety-heritage`,
-        "x-default": `${SITE_URL}/en/safety-heritage`,
+        "x-default": `${SITE_URL}/es/safety-heritage`,
       },
     },
     openGraph: {

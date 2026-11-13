@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t("privacyDescription"),
     alternates: {
       canonical: `${SITE_URL}/${locale}/legal/privacy`,
-      languages: { es: `${SITE_URL}/es/legal/privacy`, en: `${SITE_URL}/en/legal/privacy`, "x-default": `${SITE_URL}/en/legal/privacy` },
+      languages: { es: `${SITE_URL}/es/legal/privacy`, en: `${SITE_URL}/en/legal/privacy`, "x-default": `${SITE_URL}/es/legal/privacy` },
     },
   };
 }

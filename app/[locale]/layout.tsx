@@ -80,7 +80,7 @@ export async function generateMetadata({
       languages: {
         es: "/es",
         en: "/en",
-        "x-default": "/en",
+        "x-default": "/es",
       },
     },
   };

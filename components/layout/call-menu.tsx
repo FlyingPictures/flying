@@ -5,7 +5,7 @@ import { Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { CONTACT_LINES } from "@/lib/site-config";
 
-export function CallMenu({ onOpenChange }: { onOpenChange?: (open: boolean) => void }) {
+export function CallMenu({ location, onOpenChange }: { location: "floating_bar" | "product_gallery"; onOpenChange?: (open: boolean) => void }) {
   const t = useTranslations("nav");
   const contact = useTranslations("contact.info");
 
@@ -17,7 +17,7 @@ export function CallMenu({ onOpenChange }: { onOpenChange?: (open: boolean) => v
         </button>
       </Menu.Trigger>
       <Menu.Portal>
-        <Menu.Content side="top" align="end" sideOffset={10} collisionPadding={12} aria-label={t("call")}
+        <Menu.Content data-cta-location={location} side="top" align="end" sideOffset={10} collisionPadding={12} aria-label={t("call")}
           className="z-90 w-64 max-w-[calc(100vw-1.5rem)] rounded-2xl border border-border bg-background p-2 text-secondary shadow-2xl">
           <Menu.Label className="px-3 py-2 text-sm font-bold leading-snug">{contact("contactHeading")}</Menu.Label>
           {CONTACT_LINES.map(({ phone, display }) => (

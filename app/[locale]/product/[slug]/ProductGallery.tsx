@@ -100,7 +100,7 @@ export function ProductGallery({ slug, subtitle }: { slug: ProductSlug; subtitle
       </section>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-70 bg-[#101c20]/95" />
-        <Dialog.Content aria-describedby={undefined} onKeyDown={onKeyDown}
+        <Dialog.Content data-cta-location="product_gallery" aria-describedby={undefined} onKeyDown={onKeyDown}
           onCloseAutoFocus={event => { event.preventDefault(); opener.current?.focus({ preventScroll: true }); }}
           className="fixed inset-0 z-80 flex h-dvh flex-col overflow-y-auto bg-[#101c20] text-white outline-none">
           <div className="flex items-center justify-between gap-3 px-4 py-2 sm:px-8">
@@ -133,7 +133,7 @@ export function ProductGallery({ slug, subtitle }: { slug: ProductSlug; subtitle
                 {price.rows[0] ? <><span className="block text-xs">{price.unitLabel}</span><strong>{price.headline}</strong></> : <strong className="text-sm">{price.headline}</strong>}
               </div>
               <div className="flex max-w-full flex-wrap items-center gap-1">
-                <CallMenu />
+                <CallMenu location="product_gallery" />
                 <Button asChild size="md" className="h-auto min-h-11 max-w-full whitespace-normal px-5 text-center text-sm">
                   <ReservationLink slug={slug} locale={locale} onClick={() => setExpanded(false)} />
                 </Button>

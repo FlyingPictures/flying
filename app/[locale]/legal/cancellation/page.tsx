@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t("cancellationDescription"),
     alternates: {
       canonical: `${SITE_URL}/${locale}/legal/cancellation`,
-      languages: { es: `${SITE_URL}/es/legal/cancellation`, en: `${SITE_URL}/en/legal/cancellation`, "x-default": `${SITE_URL}/en/legal/cancellation` },
+      languages: { es: `${SITE_URL}/es/legal/cancellation`, en: `${SITE_URL}/en/legal/cancellation`, "x-default": `${SITE_URL}/es/legal/cancellation` },
     },
   };
 }

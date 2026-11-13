@@ -45,7 +45,7 @@ export function FloatingBar() {
   const actionClass = "min-h-11 min-w-0 whitespace-normal px-3 text-center text-xs leading-tight sm:px-5 sm:text-sm";
 
   return (
-    <aside key={pathname} aria-label={t("contactSupport")} inert={hidden} hidden={hidden}
+    <aside data-cta-location="floating_bar" key={pathname} aria-label={t("contactSupport")} inert={hidden} hidden={hidden}
       className={cn(
         "fixed inset-x-0 bottom-[max(.6rem,env(safe-area-inset-bottom))] z-40 mx-auto w-fit max-w-[calc(100%-1rem)] md:inset-x-auto md:right-6 md:bottom-5",
         slug && "package-booking-bar max-md:w-[calc(100%-1.5rem)]",
@@ -65,7 +65,7 @@ export function FloatingBar() {
             className="inline-flex min-h-11 shrink-0 items-center justify-center gap-1 rounded-full bg-secondary px-2.5 text-xs font-bold text-white hover:bg-secondary/90 focus-visible:ring-2 focus-visible:ring-primary sm:px-4 sm:text-sm">
             <WhatsappLogoIcon size={18} aria-hidden="true" />WhatsApp
           </a>}
-          {!hidden && <CallMenu onOpenChange={slug ? undefined : setCalling} />}
+          {!hidden && <CallMenu location="floating_bar" onOpenChange={slug ? undefined : setCalling} />}
         </div>
       </div>
     </aside>

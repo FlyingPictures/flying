@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(SITE_URL),
-    title,
+    title: { absolute: title },
     description,
     robots: { 
       index: true, 
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         es: "/es",
         en: "/en",
-        "x-default": "/en",
+        "x-default": "/es",
       },
     },
     openGraph: {

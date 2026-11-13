@@ -131,6 +131,7 @@ function FlightCard({
 
   return (
     <article
+      data-cta-location="catalog"
       id={intentId}
       className={cn(
         "group relative flex scroll-mt-36 flex-col overflow-hidden rounded-[1.75rem] border border-secondary/10 bg-background shadow-[0_20px_65px_rgba(3,48,59,0.10)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_80px_rgba(3,48,59,0.16)]",

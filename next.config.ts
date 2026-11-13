@@ -5,6 +5,7 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
   compress: true,
+  skipTrailingSlashRedirect: true,
 
   images: {
     remotePatterns: [
@@ -27,64 +28,6 @@ const nextConfig: NextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  async redirects() {
-    return [
-      ...['es', 'en'].flatMap((locale) =>
-        ['birthday', 'anniversary', 'proposal'].map((slug) => ({
-          source: `/${locale}/product/${slug}`,
-          destination: `/${locale}/product/celebration`,
-          permanent: true,
-        })),
-      ),
-      // Rutas específicas que cambiaron de nombre — español
-      {
-        source: '/la-experiencia/:path*',
-        has: [{ type: 'host', value: 'flyingpictures.mx' }],
-        destination: 'https://www.flyingpicturesmexico.mx/es/flight-experiences/:path*',
-        permanent: true,
-      },
-      {
-        source: '/la-experiencia/:path*',
-        has: [{ type: 'host', value: 'www.flyingpictures.mx' }],
-        destination: 'https://www.flyingpicturesmexico.mx/es/flight-experiences/:path*',
-        permanent: true,
-      },
-      // Rutas específicas que cambiaron de nombre — inglés
-      {
-        source: '/en/la-experiencia/:path*',
-        has: [{ type: 'host', value: 'flyingpictures.mx' }],
-        destination: 'https://www.flyingpicturesmexico.mx/en/flight-experiences/:path*',
-        permanent: true,
-      },
-      {
-        source: '/en/la-experiencia/:path*',
-        has: [{ type: 'host', value: 'www.flyingpictures.mx' }],
-        destination: 'https://www.flyingpicturesmexico.mx/en/flight-experiences/:path*',
-        permanent: true,
-      },
-      // Redirect general — dominio viejo → dominio nuevo (preserva path)
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'flyingpictures.mx' }],
-        destination: 'https://www.flyingpicturesmexico.mx/:path*',
-        permanent: true,
-      },
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.flyingpictures.mx' }],
-        destination: 'https://www.flyingpicturesmexico.mx/:path*',
-        permanent: true,
-      },
-      // Canonicalización sin www → con www
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'flyingpicturesmexico.mx' }],
-        destination: 'https://www.flyingpicturesmexico.mx/:path*',
-        permanent: true,
-      },
-    ];
-  },
-
   async rewrites() {
     return {
       beforeFiles: [
@@ -102,6 +45,11 @@ const nextConfig: NextConfig = {
 
   async headers() {
     return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: '.*\\.vercel\\.app' }],
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
       {
         source: '/:path*',
         headers: [

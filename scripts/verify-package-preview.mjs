@@ -47,15 +47,15 @@ for (const locale of ['es', 'en']) {
     const inquiries = linkValues(html).filter((href) => href.startsWith('https://wa.me/') && href.includes('?text='));
     assert.ok(inquiries.length >= 2, `${path}: WhatsApp contact preserved`);
     for (const href of inquiries) assert.ok(new URL(href).searchParams.get('text').includes(name), `${path}: correct inquiry package`);
-    assert.ok(html.includes(`rel="canonical" href="https://www.flyingpicturesmexico.mx${path}"`), `${path}: canonical`);
-    for (const lang of ['es', 'en']) assert.ok(html.includes(`hrefLang="${lang}" href="https://www.flyingpicturesmexico.mx/${lang}/product/${pkg.id}"`), `${path}: language alternate`);
+    assert.ok(html.includes(`rel="canonical" href="https://flyingpictures.mx${path}"`), `${path}: canonical`);
+    for (const lang of ['es', 'en']) assert.ok(html.includes(`hrefLang="${lang}" href="https://flyingpictures.mx/${lang}/product/${pkg.id}"`), `${path}: language alternate`);
     results.push({path, status: 200, prices: 'source matched', reservation: peekFlows[pkg.id] ? 'correct Peek flow' : 'WhatsApp inquiry', metadata: 'verified'});
   }
   for (const slug of ['birthday', 'anniversary', 'proposal']) {
     const path = `/${locale}/product/${slug}`;
     const response = await fetch(new URL(path, base), {redirect: 'manual'});
     assert.equal(response.status, 308, `${path}: permanent redirect`);
-    assert.equal(response.headers.get('location'), `/${locale}/product/celebration`, `${path}: localized destination`);
+    assert.equal(new URL(response.headers.get('location'), base).pathname, `/${locale}/product/celebration`, `${path}: localized destination`);
     results.push({path, status: 308, to: response.headers.get('location')});
   }
   for (const slug of ['open', 'corporate']) {
