@@ -23,7 +23,7 @@ export default async function PackageDetails({ details, name }: Props) {
 
         <div className="grid gap-5 lg:grid-cols-12">
           <DetailCard
-            title={t("included.title")}
+            title={details.includedTitle ?? t("included.title")}
             items={details.included}
             icon="included"
             className="lg:col-span-6"
@@ -35,7 +35,7 @@ export default async function PackageDetails({ details, name }: Props) {
             className="lg:col-span-6"
           />
           <DetailCard
-            title={t("recommended.title")}
+            title={details.extrasTitle ?? t("recommended.title")}
             items={details.recommendedExtras}
             icon="extra"
             className="border-primary/25 bg-primary/8 lg:col-span-12"
@@ -48,7 +48,7 @@ export default async function PackageDetails({ details, name }: Props) {
             <div className="flex items-center gap-2">
               <Info className="size-5 shrink-0 text-primary" aria-hidden="true" />
               <h4 className="text-base font-bold normal-case text-background md:text-lg">
-                {t("packageNotes.title")}
+                {details.notesTitle ?? t("packageNotes.title")}
               </h4>
             </div>
             <ul className="mt-4 grid gap-3 md:grid-cols-2">

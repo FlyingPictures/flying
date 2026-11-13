@@ -54,7 +54,7 @@ export function FloatingBar() {
         "flex items-center gap-1 rounded-[1.75rem] bg-background p-1.5 text-secondary shadow-[0_6px_30px_rgba(3,48,59,.2)]",
         slug && "max-md:flex-wrap max-md:gap-x-3 max-md:gap-y-2 max-md:rounded-2xl max-md:px-3 max-md:py-2",
       )}>
-        {price && <div className="px-2 max-[519px]:basis-full">
+        {price && price.rows.length > 0 && <div className="px-2 max-[519px]:basis-full">
           <PackagePrices rows={price.rows} compact />
         </div>}
         {isContact && <span className="hidden flex-col px-3 text-xs sm:flex"><strong>{concierge("hours")}</strong>{concierge("location")}</span>}

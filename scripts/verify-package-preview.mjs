@@ -19,7 +19,7 @@ for (const locale of ['es', 'en']) {
     const html = decode(await response.text());
     const copy = JSON.parse(await readFile(`locales/${locale}/product/${pkg.id}.json`, 'utf8'));
     const name = locale === 'es' ? pkg.nameEs : pkg.proposedNameEn;
-    assert.ok(html.includes(`<h1 class="product-title">${name}</h1>`), `${path}: correct name`);
+    assert.equal(html.match(/<h1\b[^>]*>([^<]+)<\/h1>/)?.[1], name, `${path}: correct name`);
     assert.ok(html.includes(copy.description.paragraph), `${path}: current description`);
     for (const item of copy.details.included) assert.ok(html.includes(item), `${path}: inclusion ${item}`);
     assert.ok(!/voucher-de-vuelo/.test(html), `${path}: no legacy voucher purchase`);
@@ -32,6 +32,9 @@ for (const locale of ['es', 'en']) {
       assert.ok(html.includes(money(7999)), `${path}: verified Peek package price`);
       assert.ok(!html.includes('$8,099'), `${path}: unused Excel comment absent`);
       assert.ok(!html.includes(locale === 'es' ? 'Consultar precio' : 'Ask for pricing'), `${path}: price is visible`);
+    } else if (pkg.id === 'charter') {
+      assert.ok(html.includes(locale === 'es' ? 'Paquete a la medida' : 'Tailor-made package'), `${path}: custom quote`);
+      assert.ok(!html.includes(money(30000)), `${path}: no legacy charter price`);
     } else {
       assert.ok(html.includes(money(pkg.basePrice.value)), `${path}: Excel base price`);
     }

@@ -19,6 +19,7 @@ for (const locale of ['es', 'en']) {
 
 test('Spanish base inclusions match every checked Excel service without duplicating champagne', () => {
   for (const pkg of matrix.packages) {
+    if (pkg.id === 'charter') continue; // The November charter brief supersedes the Excel inclusions.
     const source = pkg.included.filter((item) => item.nameEs !== 'Champagne').map((item) => sourceWording[item.nameEs] ?? item.nameEs);
     source.push(pkg.mode === 'private' ? 'Vuelo privado' : 'Vuelo compartido');
     assert.deepEqual(new Set(documents.es[pkg.id].details.included.map(normalize)), new Set(source.map(normalize)), pkg.id);
@@ -45,6 +46,12 @@ test('Key commercial changes remain explicit in the package details', () => {
   assert.ok(documents.es.celebration.details.notIncluded.includes('Lonas de personalización'));
   assert.ok(documents.es.celebration.details.notIncluded.includes('Fotografías y video'));
   assert.ok(documents.es.private.details.included.includes('Brindis tradicional con champagne'));
-  assert.ok(documents.es.charter.details.notIncluded.includes('Tour en cuevas ceremoniales'));
-  assert.ok(!documents.es.charter.details.included.some((item) => /cuevas/i.test(item)));
+  for (const locale of ['es', 'en']) {
+    const {included, recommendedExtras} = documents[locale].charter.details;
+    for (const term of [/video/i, /champagne/i, /canap/i, /cuevas/i]) {
+      assert.doesNotMatch(included.join(' '), term);
+      assert.match(recommendedExtras.join(' '), term);
+    }
+    assert.match(included.join(' '), /Club Campestre/);
+  }
 });

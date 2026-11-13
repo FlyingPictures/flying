@@ -1,57 +1,47 @@
 {
   "hero": {
-    "subtitle": "Private flight | Premium transport and guide from pickup | Club Campestre brunch"
+    "subtitle": "YOUR DAY, AT YOUR OWN PACE."
   },
   "rating": {
     "score": 4.8,
     "reviewsCount": "225 reviews on Tripadvisor"
   },
   "description": {
-    "title": "A private experience with service from pickup",
-    "paragraph": "FPM Private Charter includes a private flight, premium private round-trip transport, a bilingual guide from pickup and archaeological site admission. Enjoy a light buffet breakfast before take-off, a champagne toast, photos and video, waiter service, canapés and snacks, and brunch at Club Campestre. Confirm the guests covered and booking minimum."
+    "title": "A private flight over Teotihuacán",
+    "paragraph": "Ideal for groups, families or couples who want privacy and a flexible itinerary. Fly privately over the Teotihuacán Valley in the early morning in a compartmented Cameron Balloons basket. Executive transport from your pickup point and a reserved brunch complete the day."
   },
   "itinerary": {
     "title": "Your experience",
     "steps": [
       {
+        "time": "Pickup in Mexico City",
+        "title": "Private executive transfer",
+        "description": "Your bilingual guide meets you at the agreed pickup point."
+      },
+      {
         "time": "Before the flight",
-        "title": "Arrival, light breakfast and coffee break",
-        "description": "The team welcomes you for check-in, a coffee break and a light buffet breakfast before take-off. Confirm your pickup."
+        "title": "Welcome coffee",
+        "description": "Enjoy a coffee break while the team prepares you for boarding."
       },
       {
-        "time": "Preparation",
-        "title": "Getting ready to fly",
-        "description": "The team briefs you on boarding and enjoying the experience safely."
-      },
-      {
-        "time": "In the air",
+        "time": "Early morning",
         "title": "Private flight",
-        "description": "See the Teotihuacán Valley from the balloon. The route depends on the day’s conditions."
+        "description": "Fly over the Teotihuacán Valley in a compartmented Cameron Balloons basket."
       },
       {
         "time": "On landing",
-        "title": "Traditional toast",
-        "description": "Celebrate the flight with champagne."
+        "title": "Toast and flight certificate",
+        "description": "Celebrate with a traditional toast and receive your flight certificate."
       },
       {
-        "time": "Flight keepsake",
-        "title": "Flight certificate",
-        "description": "Receive your flight certificate."
+        "time": "During your day",
+        "title": "Archaeological site",
+        "description": "Visit the Teotihuacán archaeological site with your bilingual guide."
       },
       {
-        "time": "According to the confirmed itinerary",
-        "title": "Archaeological site admission",
-        "description": "Enjoy this included service: archaeological site admission. Confirm its timing and place in your itinerary."
-      },
-      {
-        "time": "According to the confirmed itinerary",
-        "title": "Bilingual guide from pickup",
-        "description": "Enjoy this included service: bilingual guide from pickup. Confirm its timing and place in your itinerary."
-      },
-      {
-        "time": "According to the confirmed itinerary",
-        "title": "Brunch at Club Campestre",
-        "description": "Enjoy this included service: brunch at club campestre. Confirm its timing and place in your itinerary."
+        "time": "Brunch and return",
+        "title": "Club Campestre",
+        "description": "Enjoy your reserved brunch before your private return transfer to Mexico City."
       }
     ]
   },
@@ -62,80 +52,59 @@
   },
   "details": {
     "included": [
-      "Private flight",
-      "Coffee break",
-      "Flight insurance",
-      "Traditional champagne toast",
-      "Flight certificate",
-      "Light buffet breakfast before take-off",
-      "Premium private round-trip transport",
-      "Archaeological site admission",
-      "Bilingual guide from pickup",
-      "Photos and video",
-      "Waiter service",
-      "Canapés and snacks",
-      "Brunch at Club Campestre"
+      "Private charter and flight services: exclusive flight, pre-flight coffee break, traditional toast, flight certificate and aviation insurance.",
+      "Premium ground transfer: private round-trip transport from Mexico City with a dedicated bilingual guide from pickup.",
+      "Culture and dining: archaeological site admission and brunch at Club Campestre, home to the Museo Gastronómico Mexicano, with lake views, a pool and equestrian activities on the grounds."
     ],
     "notIncluded": [
-      "Ceremonial cave tour",
-      "Flowers and mariachi music",
-      "Additional passengers"
+      "Guests beyond those covered by your quote."
     ],
     "recommendedExtras": [
-      "Additional passenger",
-      "Flower bouquet",
-      "Mariachi music on landing"
+      "Flight media: professional photography and video.",
+      "VIP service: a dedicated waiter, French Champagne and canapés.",
+      "Special services and culture: celebration setups and a tour of the Cuevas del Inframundo."
     ],
     "notes": [
-      "We set the flight schedule and availability. Your meeting point depends on the area we serve.",
-      "Flight duration, route and activity order are confirmed according to weather and operating conditions.",
-      "Extras are quoted separately; confirm their scope, price and availability.",
-      "Confirm how many guests the package includes, the booking minimum and charges for additional passengers or companions."
+      "Your itinerary is tailored to your group size and selected add-ons. Contact our sales team for a personal quote.",
+      "Flight time and route are confirmed according to weather and operating conditions."
     ],
     "itinerary": {
       "title": "Your experience",
       "steps": [
         {
+          "time": "Pickup in Mexico City",
+          "title": "Private executive transfer",
+          "description": "Your bilingual guide meets you at the agreed pickup point."
+        },
+        {
           "time": "Before the flight",
-          "title": "Arrival, light breakfast and coffee break",
-          "description": "The team welcomes you for check-in, a coffee break and a light buffet breakfast before take-off. Confirm your pickup."
+          "title": "Welcome coffee",
+          "description": "Enjoy a coffee break while the team prepares you for boarding."
         },
         {
-          "time": "Preparation",
-          "title": "Getting ready to fly",
-          "description": "The team briefs you on boarding and enjoying the experience safely."
-        },
-        {
-          "time": "In the air",
+          "time": "Early morning",
           "title": "Private flight",
-          "description": "See the Teotihuacán Valley from the balloon. The route depends on the day’s conditions."
+          "description": "Fly over the Teotihuacán Valley in a compartmented Cameron Balloons basket."
         },
         {
           "time": "On landing",
-          "title": "Traditional toast",
-          "description": "Celebrate the flight with champagne."
+          "title": "Toast and flight certificate",
+          "description": "Celebrate with a traditional toast and receive your flight certificate."
         },
         {
-          "time": "Flight keepsake",
-          "title": "Flight certificate",
-          "description": "Receive your flight certificate."
+          "time": "During your day",
+          "title": "Archaeological site",
+          "description": "Visit the Teotihuacán archaeological site with your bilingual guide."
         },
         {
-          "time": "According to the confirmed itinerary",
-          "title": "Archaeological site admission",
-          "description": "Enjoy this included service: archaeological site admission. Confirm its timing and place in your itinerary."
-        },
-        {
-          "time": "According to the confirmed itinerary",
-          "title": "Bilingual guide from pickup",
-          "description": "Enjoy this included service: bilingual guide from pickup. Confirm its timing and place in your itinerary."
-        },
-        {
-          "time": "According to the confirmed itinerary",
-          "title": "Brunch at Club Campestre",
-          "description": "Enjoy this included service: brunch at club campestre. Confirm its timing and place in your itinerary."
+          "time": "Brunch and return",
+          "title": "Club Campestre",
+          "description": "Enjoy your reserved brunch before your private return transfer to Mexico City."
         }
       ]
-    }
+    },
+    "includedTitle": "Included in your charter",
+    "extrasTitle": "Add-ons and personalization",
+    "notesTitle": "Your personalized premium experience"
   }
 }

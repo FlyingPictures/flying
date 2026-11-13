@@ -159,7 +159,7 @@ function FlightCard({
 
         <div className="absolute inset-x-0 top-0 flex items-start justify-between gap-3 p-5 md:p-7">
           <span className="rounded-full border border-white/20 bg-secondary/75 px-3 py-1.5 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-background backdrop-blur-md">
-            {t(`categories.${CARD_CATEGORY[id]}`)}
+            {id === "charter" ? t("charterTagline") : t(`categories.${CARD_CATEGORY[id]}`)}
           </span>
           {featured && (
             <span className="rounded-full bg-primary px-3 py-1.5 text-[0.68rem] font-bold uppercase tracking-[0.12em] text-secondary shadow-sm">
@@ -196,6 +196,8 @@ function FlightCard({
             </li>
           ))}
         </ul>
+
+        {id === "charter" && <p className="mt-4 text-sm leading-relaxed text-secondary/75">{t("charterExtras")}</p>}
 
         <div className="mt-auto pt-7">
           <div className="flex flex-wrap items-end justify-between gap-4">

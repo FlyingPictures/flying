@@ -51,6 +51,8 @@
         "celebration": "Celebrations",
         "privateVip": "Private & VIP"
       },
+      "charterTagline": "YOUR DAY, AT YOUR OWN PACE.",
+      "charterExtras": "Personalize your flight with photography and video, VIP service, a celebration setup or a tour of the Cuevas del Inframundo.",
       "categories": {
         "complete": "Complete experience",
         "shared": "Shared flight",
@@ -74,7 +76,7 @@
         "celebration": "Ideal for birthdays, anniversaries and special occasions on a private flight.",
         "journey": "Ideal for travelers seeking a flight, guided visit and local traditions.",
         "private": "Ideal for travelers seeking a private flight with breakfast and champagne.",
-        "charter": "Ideal for groups seeking premium transport, a guide from pickup and brunch."
+        "charter": "Ideal for groups, families or couples who want privacy and a flexible itinerary."
       },
       "descriptions": {
         "classic": "Share a balloon flight over the Teotihuacán Valley. The experience includes a coffee break, flight insurance, a sparkling wine toast and a certificate. Breakfast and transport are not included.",
@@ -83,7 +85,7 @@
         "celebration": "A private flight for a birthday, anniversary or special moment. Full breakfast, flowers, cake and/or a birthday song, a coffee break, insurance, a sparkling wine toast and a certificate are included. Personalization banners and photos are quoted separately.",
         "journey": "Traveler combines a shared flight and shared round-trip transport with a full breakfast, archaeological site admission and a bilingual guide. A crafts and traditional drinks workshop, traveler kit or souvenir, coffee break, insurance, sparkling wine toast and certificate are included. Confirm the number of guests covered and your total with any selected extras before booking.",
         "private": "Enjoy the Teotihuacán Valley on a private flight with a coffee break, insurance, a champagne toast, certificate and full breakfast. Transport, photos and ground visits are quoted as extras. Confirm how many people will be joining you.",
-        "charter": "FPM Private Charter includes a private flight, premium private round-trip transport, a bilingual guide from pickup and archaeological site admission. Enjoy a light buffet breakfast before take-off, a champagne toast, photos and video, waiter service, canapés and snacks, and brunch at Club Campestre. Confirm the guests covered and booking minimum."
+        "charter": "Ideal for groups, families or couples who want privacy and a flexible itinerary. Fly privately over the Teotihuacán Valley in the early morning in a compartmented Cameron Balloons basket. Executive transport from your pickup point and a reserved brunch complete the day."
       },
       "includes": {
         "classic": "Shared flight, coffee break, sparkling wine toast",
@@ -92,7 +94,7 @@
         "celebration": "Private flight, full breakfast and flowers, cake and/or birthday song",
         "journey": "Shared flight and transport, archaeological site with bilingual guide, workshop and traveler kit",
         "private": "Private flight, champagne toast, full breakfast",
-        "charter": "Private flight and premium private transport, guide from pickup and archaeological admission, brunch at Club Campestre"
+        "charter": "Exclusive flight in a Cameron Balloons basket, private round-trip transport from Mexico City with a bilingual guide, archaeological site admission and brunch at Club Campestre"
       }
     }
   }

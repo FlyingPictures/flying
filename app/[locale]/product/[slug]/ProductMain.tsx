@@ -27,7 +27,12 @@ export default function ProductMain({ slug, data }: { slug: ProductSlug; data: P
           <p className="product-body mt-2">{data.description.paragraph}</p>
         </div>
         <div id={`booking-options-${slug}`} className="w-full space-y-4 rounded-2xl bg-secondary/[.045] p-4 sm:p-5">
-          <PackagePrices rows={price.rows} />
+          {PRODUCT_PRICING[slug]?.model === "customQuote" ? (
+            <div>
+              <p className="text-sm font-medium text-secondary/75">{price.unitLabel}</p>
+              <strong className="text-xl text-secondary">{price.headline}</strong>
+            </div>
+          ) : <PackagePrices rows={price.rows} />}
           {price.note && <p className="text-xs text-muted-foreground">{price.note}</p>}
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Button asChild><ReservationLink slug={slug} locale={locale} /></Button>

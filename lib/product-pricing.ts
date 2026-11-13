@@ -5,7 +5,7 @@ type PricingBase = {
   secondary: number | null;
 };
 
-export type ProductPricing = PricingBase & (
+export type ProductPricing = { model: "customQuote"; primary: null; secondary: null } | PricingBase & (
   | { model: "perPerson" | "privateForTwo" | "voucher" }
   | {
       model: "perPackage";
@@ -30,6 +30,8 @@ export interface PriceDisplay {
 
 const LABELS = {
   es: {
+    customQuote: "Paquete a la medida",
+    personalService: "Atención personalizada",
     perPerson: "Precio por adulto",
     perPackage: "Precio por paquete",
     privateForTwo: "2 adultos (vuelo privado)",
@@ -43,6 +45,8 @@ const LABELS = {
     minimum: (count: number) => `Mínimo ${count} ${count === 1 ? "persona" : "personas"}.`,
   },
   en: {
+    customQuote: "Tailor-made package",
+    personalService: "Personalized service",
     perPerson: "Price per adult",
     perPackage: "Price per package",
     privateForTwo: "2 adults (private flight)",
@@ -68,6 +72,10 @@ export function getPriceDisplay(
   const labels = LABELS[locale === "es" ? "es" : "en"];
   if (!pricing) {
     return { rows: [], headline: labels.onRequest, summary: labels.onRequest, unitLabel: "", note: null };
+  }
+
+  if (pricing.model === "customQuote") {
+    return { rows: [], headline: labels.customQuote, summary: labels.customQuote, unitLabel: labels.personalService, note: null };
   }
 
   const unitLabel = labels[pricing.model];

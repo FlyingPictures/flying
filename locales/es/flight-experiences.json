@@ -51,6 +51,8 @@
         "celebration": "Celebraciones",
         "privateVip": "Privado y VIP"
       },
+      "charterTagline": "A TU RITMO, TODO TU DÍA.",
+      "charterExtras": "Personalice su vuelo con fotografía y video, servicio VIP, montajes para celebraciones o una visita a las Cuevas del Inframundo.",
       "categories": {
         "complete": "Experiencia completa",
         "shared": "Vuelo compartido",
@@ -74,7 +76,7 @@
         "celebration": "Ideal para cumpleaños, aniversarios y ocasiones especiales en un vuelo privado.",
         "journey": "Ideal para quienes buscan vuelo, visita guiada y tradiciones locales.",
         "private": "Ideal para quienes buscan un vuelo privado con desayuno y champagne.",
-        "charter": "Ideal para grupos que buscan transporte premium, guía desde pickup y brunch."
+        "charter": "Ideal para grupos, familias o parejas que buscan privacidad y una experiencia con horarios flexibles."
       },
       "descriptions": {
         "classic": "Comparte un vuelo en globo sobre el Valle de Teotihuacán. La experiencia incluye coffee break, seguro de vuelo, brindis con vino espumoso y certificado. El desayuno y el transporte se contratan por separado.",
@@ -83,7 +85,7 @@
         "celebration": "Un vuelo privado para celebrar cumpleaños, aniversarios o un momento especial. Incluye desayuno completo, flores, pastel y/o mañanitas, coffee break, seguro, brindis con vino espumoso y certificado. Las lonas de personalización y las fotografías se cotizan por separado.",
         "journey": "Viajero combina vuelo y transporte redondo compartidos con desayuno completo, acceso arqueológico y guía bilingüe. Incluye taller de artesanías y bebidas típicas, kit o souvenir viajero, coffee break, seguro, brindis con vino espumoso y certificado. Confirma las personas cubiertas y el total con los extras que elijas antes de reservar.",
         "private": "Disfruta el Valle de Teotihuacán en un vuelo privado con coffee break, seguro, brindis con champagne, certificado y desayuno completo. El transporte, las fotografías y las visitas en tierra se cotizan como extras. Confirma el total de personas que te acompañan.",
-        "charter": "FPM Private Charter incluye vuelo privado, transporte redondo privado premium, guía bilingüe desde el pickup y acceso arqueológico. Disfruta desayuno buffet ligero previo al despegue, brindis con champagne, fotografías y video, mesero, canapés y snacks, y brunch en Club Campestre. Consulta las personas cubiertas y el mínimo de reserva."
+        "charter": "Ideal para grupos, familias o parejas que buscan privacidad y una experiencia con horarios flexibles. Viva un vuelo exclusivo en las primeras horas del día sobre el valle de Teotihuacán en nuestras canastillas compartimentadas Cameron Balloons, con traslado ejecutivo desde su punto de partida y un cierre gastronómico reservado."
       },
       "includes": {
         "classic": "Vuelo compartido, coffee break, brindis con vino espumoso",
@@ -92,7 +94,7 @@
         "celebration": "Vuelo privado, desayuno completo y flores, pastel y/o mañanitas",
         "journey": "Vuelo y transporte compartidos, zona arqueológica con guía bilingüe, taller y kit viajero",
         "private": "Vuelo privado, brindis con champagne, desayuno completo",
-        "charter": "Vuelo y transporte privado premium, guía desde pickup y acceso arqueológico, brunch en Club Campestre"
+        "charter": "Vuelo exclusivo en canastilla Cameron Balloons, transporte privado redondo desde CDMX con guía bilingüe, acceso arqueológico y brunch en Club Campestre"
       }
     }
   }

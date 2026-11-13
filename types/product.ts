@@ -15,6 +15,9 @@ export interface ItineraryStep {
 }
 
 export interface PackageDetails {
+  includedTitle?: string;
+  extrasTitle?: string;
+  notesTitle?: string;
   included: string[];
   notIncluded: string[];
   recommendedExtras: string[];

@@ -81,8 +81,8 @@ export const NEW_PACKAGE_OFFERS: Record<NewPackageSlug, PackageOffer> = {
   },
   charter: {
     names: { es: "FPM Private Charter", en: "FPM Private Charter" }, mode: "private",
-    pricing: { primary: 30000, secondary: null, model: "perPackage", includedPeople: null, minimumPeople: null },
-    priceSource: "Paquetes!H13", bookingUrl: null,
+    pricing: { primary: null, secondary: null, model: "customQuote" },
+    priceSource: "Actualización comercial FPM, 12 de noviembre de 2026", bookingUrl: null,
     additionalPassengers: [
       { category: "guest", observedAmount: 5000, source: "Paquetes!H51", status: "pendingConfirmation" },
     ],

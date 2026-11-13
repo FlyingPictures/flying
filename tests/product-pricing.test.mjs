@@ -11,6 +11,17 @@ test("new package prices match the source and the verified Traveler Peek price",
     const offer = NEW_PACKAGE_OFFERS[source.id];
     assert.ok(offer, `Missing ${source.id}`);
     assert.equal(offer.mode, source.mode);
+    if (source.id === "charter") {
+      assert.equal(offer.pricing.model, "customQuote");
+      assert.equal(offer.pricing.primary, null);
+      assert.equal(offer.pricing.secondary, null);
+      for (const locale of ["es", "en"]) {
+        const display = getPriceDisplay(offer.pricing, locale);
+        assert.deepEqual(display.rows, []);
+        assert.equal(display.summary, locale === "es" ? "Paquete a la medida" : "Tailor-made package");
+      }
+      continue;
+    }
     assert.equal(offer.pricing.model, source.basePrice.unit === "per_adult" ? "perPerson" : "perPackage");
     assert.equal(offer.pricing.primary, source.id === "journey" ? 7999 : source.basePrice.commercialStatus === "pending_confirmation" ? null : source.basePrice.value);
     assert.equal(offer.pricing.secondary, source.childPrice?.value ?? null);
