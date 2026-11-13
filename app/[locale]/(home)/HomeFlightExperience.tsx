@@ -380,10 +380,11 @@ export function FlightExperienceSection() {
             {t('awardSection.title')}
           </h2>
           <h3
-            className="text-background font-libre-baskerville font-normal"
+            lang="en"
+            className="text-balance font-poppins font-semibold text-background"
             style={{ fontSize: 'clamp(24px,5vw,64px)' }}
           >
-            {t('awardSection.subtitle')}
+            AN AVIATION COMPANY
           </h3>
         </div>
         <p className="mx-auto text-background max-w-[clamp(309px,70vw,608px)]">
