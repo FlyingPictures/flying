@@ -77,6 +77,7 @@ export async function Footer({ translations }: FooterProps) {
         <div className="min-w-0 flex flex-col">
           <span className={TITLE_CLASSES}>Flying Pictures México</span>
           <p className="text-background/70 text-pretty">
+            <span lang="en" className="font-poppins font-semibold text-background">AN AVIATION COMPANY.</span>{" "}
             {translations.description}
           </p>
         </div>
@@ -113,34 +114,21 @@ export async function Footer({ translations }: FooterProps) {
         </div>
         </div>
 
-        <div className="mt-10 grid gap-6 border-t border-background/25 pt-8 md:grid-cols-2">
-          <div>
-            <p className="mb-2 text-sm font-bold uppercase tracking-wide text-background/60">
-              {contactT("salesChannel")}
-            </p>
-            <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:gap-x-5">
-              <a className={LINK_CLASSES} href={`tel:${SITE_CONTACT.phone}`}>
-                {SITE_CONTACT.display}
-              </a>
-              <a className={LINK_CLASSES} href={`mailto:${SITE_CONTACT.email}`}>
-                {SITE_CONTACT.email}
-              </a>
+        <section aria-labelledby="footer-contact-heading" className="mt-10 border-t border-background/25 pt-8">
+          <h2 id="footer-contact-heading" className="mb-5 text-left font-inter text-lg font-bold tracking-normal">
+            {contactT("contactHeading")}
+          </h2>
+          <div className="grid gap-5 md:grid-cols-2">
+            <div className="flex min-w-0 flex-col items-start">
+              <a className={LINK_CLASSES} href={`tel:${SITE_CONTACT.phone}`}>{SITE_CONTACT.display}</a>
+              <a className={LINK_CLASSES} href={`mailto:${SITE_CONTACT.email}`}>{SITE_CONTACT.email}</a>
+            </div>
+            <div className="flex min-w-0 flex-col items-start">
+              <a className={LINK_CLASSES} href={SITE_CONTACT.whatsapp} target="_blank" rel="noopener noreferrer">{SITE_CONTACT.whatsappDisplay}</a>
+              <a className={LINK_CLASSES} href={`mailto:${SITE_CONTACT.whatsappEmail}`}>{SITE_CONTACT.whatsappEmail}</a>
             </div>
           </div>
-          <div>
-            <p className="mb-2 text-sm font-bold uppercase tracking-wide text-background/60">
-              {contactT("supportChannel")}
-            </p>
-            <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:gap-x-5">
-              <a className={LINK_CLASSES} href={SITE_CONTACT.whatsapp} target="_blank" rel="noopener noreferrer">
-                {SITE_CONTACT.whatsappDisplay}
-              </a>
-              <a className={LINK_CLASSES} href={`mailto:${SITE_CONTACT.whatsappEmail}`}>
-                {SITE_CONTACT.whatsappEmail}
-              </a>
-            </div>
-          </div>
-        </div>
+        </section>
 
         <div className="w-full h-px bg-background/50 mt-10 mb-10" />
 
