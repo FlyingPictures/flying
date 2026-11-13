@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import { Link, usePathname, useRouter } from "@/i18n/routing"
 import { BrandLogo } from "@/components/BrandLogo"
 import { Button } from "@/components/ui/button"
@@ -10,9 +11,7 @@ import {
   EqualsIcon,
   XIcon,
   HeadsetIcon,
-  GlobeSimpleIcon,
   CaretDownIcon,
-  CheckIcon,
 } from "@phosphor-icons/react"
 import { useScrollDirection } from "@/hooks/use-scroll-direction"
 import { useLocale, useTranslations } from 'next-intl'
@@ -56,116 +55,52 @@ const BookButton = ({ size = "md", variant = "primary", className = "", onClick 
   )
 }
 
-const LANGUAGE_NAMES = {
-  es: "Español",
-  en: "English",
-} as const
+const LANGUAGES = [
+  { code: "es", name: "Español", flag: "/flags/mx.png" },
+  { code: "en", name: "English", flag: "/flags/us.png" },
+] as const
 
-function persistPreferredLocale(nextLocale: keyof typeof LANGUAGE_NAMES) {
+type LanguageCode = (typeof LANGUAGES)[number]["code"]
+
+function persistPreferredLocale(nextLocale: LanguageCode) {
   document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=31536000; samesite=lax`
   window.localStorage.setItem("preferred-locale", nextLocale)
 }
 
-const LanguageSwitcher = ({
-  className = "",
-  onSelect,
-  mobileCompact = false,
-}: {
-  className?: string
-  onSelect?: () => void
-  mobileCompact?: boolean
-}) => {
+const LanguageSwitcher = () => {
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const t = useTranslations("nav")
 
-  const changeLanguage = (nextLocale: string) => {
-    if (nextLocale !== "en" && nextLocale !== "es") return
-
+  const changeLanguage = (nextLocale: LanguageCode) => {
+    if (nextLocale === locale) return
     persistPreferredLocale(nextLocale)
 
     const query = searchParams.toString()
     const destination = query ? `${pathname}?${query}` : pathname
-    router.replace(destination, { locale: nextLocale })
-    onSelect?.()
-  }
-
-  if (mobileCompact) {
-    return (
-      <div
-        role="group"
-        aria-label={t("switchLanguage")}
-        className={cn("flex h-12 items-center rounded-full border border-secondary/10 bg-secondary/6 p-0.5 pl-2.5", className)}
-      >
-        <GlobeSimpleIcon className="mr-1 shrink-0 text-secondary" size={18} weight="bold" aria-hidden="true" />
-        {(Object.entries(LANGUAGE_NAMES) as Array<[keyof typeof LANGUAGE_NAMES, string]>).map(([code]) => (
-          <button
-            key={code}
-            type="button"
-            aria-pressed={locale === code}
-            aria-label={LANGUAGE_NAMES[code]}
-            onClick={() => changeLanguage(code)}
-            className="grid h-11 min-w-11 place-items-center rounded-full px-2 font-inter text-xs font-bold uppercase text-secondary outline-none transition-colors hover:bg-background focus-visible:ring-2 focus-visible:ring-primary data-[active=true]:bg-secondary data-[active=true]:text-background"
-            data-active={locale === code}
-          >
-            {code}
-          </button>
-        ))}
-      </div>
-    )
+    router.replace(destination + window.location.hash, { locale: nextLocale, scroll: false })
   }
 
   return (
-    <DropdownMenu.Root>
-      <DropdownMenu.Trigger asChild>
+    <div role="group" aria-label={t("switchLanguage")} className="inline-flex shrink-0 items-center rounded-full border border-secondary/15 bg-secondary/5 p-0.5">
+      {LANGUAGES.map(({ code, name, flag }) => (
         <button
+          key={code}
           type="button"
-          aria-label={t("switchLanguage")}
-          className={cn(
-            "group flex items-center gap-2 rounded-full px-2 py-2 font-inter font-bold text-secondary outline-none transition-colors hover:bg-secondary/5 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
-            className,
-          )}
+          lang={code}
+          aria-label={name}
+          aria-pressed={locale === code}
+          onClick={() => changeLanguage(code)}
+          className="relative inline-flex h-11 min-w-11 flex-col items-center justify-center gap-0.5 rounded-full px-1.5 font-inter text-[0.68rem] leading-none font-bold text-secondary transition-colors hover:bg-secondary/10 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary aria-pressed:bg-secondary aria-pressed:text-white motion-reduce:transition-none min-[390px]:flex-row min-[390px]:gap-1 min-[390px]:px-2 min-[390px]:text-xs xl:px-3"
         >
-          <GlobeSimpleIcon size={20} weight="bold" aria-hidden="true" />
-          <span>{LANGUAGE_NAMES[locale as keyof typeof LANGUAGE_NAMES] ?? t("language")}</span>
-          <CaretDownIcon className="transition-transform duration-200 group-data-[state=open]:rotate-180" size={14} weight="bold" aria-hidden="true" />
+          <Image src={flag} alt="" width={18} height={12} unoptimized className="h-3 w-[18px] rounded-[2px] object-cover ring-1 ring-black/10" />
+          <span className="uppercase sm:hidden lg:inline xl:hidden">{code}</span>
+          <span className="hidden sm:inline lg:hidden xl:inline">{name}</span>
         </button>
-      </DropdownMenu.Trigger>
-
-      <DropdownMenu.Portal>
-        <DropdownMenu.Content
-          align="end"
-          sideOffset={10}
-          collisionPadding={16}
-          className="z-70 min-w-52 rounded-2xl border border-secondary/10 bg-background p-2 shadow-[0_18px_60px_rgba(3,48,59,0.20)] data-[state=closed]:animate-out data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95"
-        >
-          <DropdownMenu.Label className="px-3 pb-2 pt-2 text-[0.68rem] font-bold uppercase tracking-[0.16em] text-secondary/50">
-            {t("chooseLanguage")}
-          </DropdownMenu.Label>
-          <DropdownMenu.RadioGroup value={locale} onValueChange={changeLanguage}>
-            {(Object.entries(LANGUAGE_NAMES) as Array<[keyof typeof LANGUAGE_NAMES, string]>).map(([code, name]) => (
-              <DropdownMenu.RadioItem
-                key={code}
-                value={code}
-                className="flex cursor-pointer select-none items-center justify-between gap-6 rounded-xl px-3 py-3 font-inter font-semibold text-secondary outline-none transition-colors data-[highlighted]:bg-secondary data-[highlighted]:text-background"
-              >
-                <span className="flex items-baseline gap-2">
-                  <span>{name}</span>
-                  <span className="text-[0.68rem] font-bold uppercase tracking-[0.12em] opacity-50">{code}</span>
-                </span>
-                <DropdownMenu.ItemIndicator>
-                  <span className="grid size-5 place-items-center rounded-full bg-primary text-secondary">
-                    <CheckIcon size={12} weight="bold" aria-hidden="true" />
-                  </span>
-                </DropdownMenu.ItemIndicator>
-              </DropdownMenu.RadioItem>
-            ))}
-          </DropdownMenu.RadioGroup>
-        </DropdownMenu.Content>
-      </DropdownMenu.Portal>
-    </DropdownMenu.Root>
+      ))}
+    </div>
   )
 }
 
@@ -261,22 +196,23 @@ export default function Navbar() {
 
       <header className={cn("lg:hidden fixed top-0 inset-x-0 z-50 transition-transform duration-200 motion-reduce:transition-none has-[:focus-visible]:translate-y-0", isHeaderHidden ? "-translate-y-32" : scrollY > 80 && !isSheetOpen && "-translate-y-12")}>
         <HeaderBanner />
-        <nav className="flex h-18 items-center justify-between gap-2 bg-white px-3 shadow-md min-[400px]:px-6">
+        <nav className="flex h-18 items-center justify-between gap-1 bg-white px-1 shadow-md min-[360px]:px-3 sm:px-6">
           <Link
             href="/"
             aria-label={locale === "es" ? "Flying Pictures México — Inicio" : "Flying Pictures México — Home"}
             onClick={() => setIsSheetOpen(false)}
-            className="z-10 h-19.5 w-15.5 shrink-0 self-start"
+            className="z-10 h-18 w-10 shrink-0 self-start min-[360px]:h-19.5 min-[360px]:w-15.5"
           >
             <BrandLogo priority className="w-full h-full object-contain" />
           </Link>
-          <div className="ml-auto flex items-center gap-1.5 min-[400px]:gap-3">
-            {showBookButton && <BookButton className="h-11 px-3.5 text-sm min-[400px]:h-12 min-[400px]:px-6" />}
+          <div className="ml-auto flex items-center gap-1 min-[420px]:gap-2 sm:gap-3">
+            <LanguageSwitcher />
+            {showBookButton && <BookButton className="h-11 px-2 text-xs min-[360px]:px-2.5 min-[360px]:text-sm min-[420px]:px-4 sm:h-12 sm:px-6" />}
             <SheetPrimitive.Root open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetPrimitive.Trigger asChild>
-                <button type="button" aria-label={t("openMenu")} className="inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-sm font-bold text-secondary hover:bg-secondary/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary">
+                <button type="button" aria-label={t("openMenu")} className="inline-flex min-h-11 min-w-11 shrink-0 items-center justify-center gap-1.5 rounded-full min-[480px]:px-2.5 text-sm font-bold text-secondary hover:bg-secondary/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary">
                   <EqualsIcon size={22} weight="bold" aria-hidden="true" />
-                  {t("menu")}
+                  <span className="hidden min-[480px]:inline">{t("menu")}</span>
                 </button>
               </SheetPrimitive.Trigger>
               <SheetPrimitive.Portal>
@@ -292,12 +228,9 @@ export default function Navbar() {
                     >
                       <BrandLogo className="h-full w-full object-contain" />
                     </Link>
-                    <div className="flex items-center gap-2">
-                      <LanguageSwitcher mobileCompact onSelect={() => setIsSheetOpen(false)} />
-                      <SheetPrimitive.Close aria-label={t("closeMenu")} className="flex size-12 items-center justify-center rounded-full border border-secondary/15 text-secondary outline-none transition-colors hover:bg-secondary hover:text-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
-                        <XIcon size={24} weight="bold" aria-hidden="true" />
-                      </SheetPrimitive.Close>
-                    </div>
+                    <SheetPrimitive.Close aria-label={t("closeMenu")} className="flex size-12 items-center justify-center rounded-full border border-secondary/15 text-secondary outline-none transition-colors hover:bg-secondary hover:text-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
+                      <XIcon size={24} weight="bold" aria-hidden="true" />
+                    </SheetPrimitive.Close>
                   </div>
 
                   <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-6 py-6">
