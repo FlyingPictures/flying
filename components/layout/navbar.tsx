@@ -57,7 +57,7 @@ const BookButton = ({ size = "md", variant = "primary", className = "", onClick 
 
 const LANGUAGES = [
   { code: "es", name: "Español", flag: "/flags/mx.png" },
-  { code: "en", name: "English", flag: "/flags/us.png" },
+  { code: "en", name: "English", flag: "/flags/england.png" },
 ] as const
 
 type LanguageCode = (typeof LANGUAGES)[number]["code"]
