@@ -1,7 +1,11 @@
 {
   "contact": {
     "whatsapp": {
-      "heading": "Será un placer atenderte por WhatsApp",
+      "heading": "Será un placer atenderte por WhatsApp o llamada",
+      "button": "Contáctanos",
+      "whatsappAction": "WhatsApp",
+      "callAction": "Llamar",
+      "callLabel": "Llamar a {name} al {phone}",
       "contactLabel": "Escribir a {name} por WhatsApp al {phone}",
       "online": "En línea",
       "previews": {

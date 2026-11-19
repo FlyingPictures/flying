@@ -6,11 +6,11 @@ import { ChevronLeft, ChevronRight, Images, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { CloudinaryPhoto } from "@/components/CloudinaryPhoto";
 import { ReservationLink } from "@/components/booking/reservation-link";
-import { CallMenu } from "@/components/layout/call-menu";
+import { WhatsAppMenu, ContactMenuLabel } from "@/components/booking/whatsapp-menu";
 import { Button } from "@/components/ui/button";
 import { IMAGES } from "@/lib/images";
 import { galleryCaptions } from "@/lib/gallery-captions";
-import { getPriceDisplay, getProductName, PRODUCT_PRICING, type ProductSlug } from "@/lib/commercial-config";
+import { BOOKING_URLS, getInquiryMessage, getPriceDisplay, getProductName, PRODUCT_PRICING, type ProductSlug } from "@/lib/commercial-config";
 
 const control = "grid size-11 shrink-0 place-items-center rounded-full border border-current/20 transition-colors hover:bg-current/10 focus-visible:ring-2 focus-visible:ring-primary";
 
@@ -134,7 +134,9 @@ export function ProductGallery({ slug, subtitle }: { slug: ProductSlug; subtitle
                 {price.rows[0] ? <><span className="block text-xs">{price.unitLabel}</span><strong>{price.headline}</strong></> : <strong className="text-sm">{price.headline}</strong>}
               </div>
               <div className="flex max-w-full flex-wrap items-center gap-1">
-                <CallMenu location="product_gallery" />
+                {BOOKING_URLS[slug] && <WhatsAppMenu message={getInquiryMessage(slug, locale)} packageId={slug} location="product_gallery" onContactClick={() => setExpanded(false)}>
+                  <Button variant="ghost" className="min-h-11 px-3 text-sm"><ContactMenuLabel /></Button>
+                </WhatsAppMenu>}
                 <Button asChild size="md" className="h-auto min-h-11 max-w-full whitespace-normal px-5 text-center text-sm">
                   <ReservationLink slug={slug} locale={locale} location="product_gallery" onClick={() => setExpanded(false)} />
                 </Button>

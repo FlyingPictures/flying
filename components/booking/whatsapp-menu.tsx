@@ -1,7 +1,7 @@
 "use client";
 
 import * as Menu from "@radix-ui/react-dropdown-menu";
-import { CaretDownIcon, WhatsappLogoIcon } from "@phosphor-icons/react";
+import { CaretDownIcon, ChatCircleDotsIcon, PhoneIcon, WhatsappLogoIcon } from "@phosphor-icons/react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import type { MouseEventHandler, ReactElement } from "react";
@@ -32,36 +32,47 @@ function WhatsAppContacts({ message, packageId, onContactClick }: Pick<WhatsAppM
 
   return (
     <>
-      <Menu.Label className="border-b border-[#e9edef] bg-[#f0f2f5] px-4 py-4">
+      <Menu.Label className="border-b border-[#e9edef] bg-[#f0f2f5] px-4 py-3">
         <span className="block text-base font-semibold leading-snug text-[#111b21]">{t("heading")}</span>
         <span className="mt-2 flex items-center gap-1.5 text-sm font-normal text-[#008069]">
           <span aria-hidden="true" className="size-2 shrink-0 rounded-full bg-[#25d366]" />
           {t("online")}
         </span>
       </Menu.Label>
-      <Menu.Group className="py-1">
-        {SALES_CONTACTS.map(({ name, display, whatsapp, photoSrc }) => (
-          <Menu.Item asChild key={name}>
-            <a href={`${whatsapp}?text=${encodeURIComponent(inquiry)}`}
-              target="_blank" rel="noopener noreferrer" data-package-id={context.packageId}
-              onClick={onContactClick} aria-label={t("contactLabel", { name, phone: display })}
-              className="relative flex cursor-pointer items-center gap-3 bg-white px-4 py-4 outline-none transition-colors after:absolute after:bottom-0 after:left-19 after:right-4 after:h-px after:bg-[#e9edef] last:after:hidden data-[highlighted]:bg-[#f0f2f5]">
+      <div className="divide-y divide-[#e9edef] px-4">
+        {SALES_CONTACTS.map(({ name, phone, display, whatsapp, photoSrc }) => (
+          <Menu.Group key={name} aria-label={name} className="py-3">
+            <div className="flex items-start gap-3">
               <span data-contact-photo={name} aria-hidden="true" className="relative flex size-12 shrink-0 items-center justify-center rounded-full bg-[#d9fdd3] text-lg font-medium text-[#008069]">
                 {photoSrc ? <Image src={photoSrc} width={48} height={48} alt="" className="size-full rounded-full object-cover" /> : name[0]}
                 <span className="absolute -bottom-0.5 -right-0.5 size-3 rounded-full border-2 border-white bg-[#25d366]" />
               </span>
               <span className="min-w-0 flex-1">
-                <span className="flex items-center justify-between gap-2">
-                  <span className="text-base font-medium text-[#111b21]">{name}</span>
-                  <WhatsappLogoIcon size={18} aria-hidden="true" className="shrink-0 text-[#008069]" />
-                </span>
+                <span className="block text-base font-medium text-[#111b21]">{name}</span>
                 <span title={t(`previews.${context.key}.${name}`, { product })} className="mt-0.5 block truncate text-sm leading-snug text-[#54656f]">{t(`previews.${context.key}.${name}`, { product })}</span>
                 <span className="mt-1 block whitespace-nowrap text-sm tabular-nums text-[#667781]">{display}</span>
               </span>
-            </a>
-          </Menu.Item>
+            </div>
+            <div className="mt-3 grid grid-cols-2 gap-2">
+              <Menu.Item asChild>
+                <a href={`${whatsapp}?text=${encodeURIComponent(inquiry)}`}
+                  target="_blank" rel="noopener noreferrer" data-package-id={context.packageId}
+                  onClick={onContactClick} aria-label={t("contactLabel", { name, phone: display })}
+                  className="inline-flex min-h-11 cursor-pointer items-center justify-center gap-1.5 rounded-full border border-[#008069] bg-[#008069] px-2 text-sm font-semibold text-white outline-none transition-colors data-[highlighted]:border-[#005c4b] data-[highlighted]:bg-[#005c4b]">
+                  <WhatsappLogoIcon size={18} aria-hidden="true" />{t("whatsappAction")}
+                </a>
+              </Menu.Item>
+              <Menu.Item asChild>
+                <a href={`tel:${phone}`} data-package-id={context.packageId}
+                  onClick={onContactClick} aria-label={t("callLabel", { name, phone: display })}
+                  className="inline-flex min-h-11 cursor-pointer items-center justify-center gap-1.5 rounded-full border border-secondary/25 bg-white px-2 text-sm font-semibold text-secondary outline-none transition-colors data-[highlighted]:border-secondary data-[highlighted]:bg-secondary/5">
+                  <PhoneIcon size={18} aria-hidden="true" />{t("callAction")}
+                </a>
+              </Menu.Item>
+            </div>
+          </Menu.Group>
         ))}
-      </Menu.Group>
+      </div>
     </>
   );
 }
@@ -88,4 +99,9 @@ export function WhatsAppMenu({
 
 export function WhatsAppMenuCaret() {
   return <CaretDownIcon size={14} aria-hidden="true" className="shrink-0" />;
+}
+
+export function ContactMenuLabel() {
+  const t = useTranslations("contact.whatsapp");
+  return <><ChatCircleDotsIcon size={18} aria-hidden="true" />{t("button")}<WhatsAppMenuCaret /></>;
 }

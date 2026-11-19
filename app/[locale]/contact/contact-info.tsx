@@ -3,9 +3,9 @@
 import { useTranslations } from "next-intl"
 import { CloudinaryImage } from "@/components/CloudinaryImage"
 import { IMAGES } from "@/lib/images"
-import { EnvelopeSimpleIcon, PhoneIcon, WhatsappLogoIcon } from "@phosphor-icons/react"
+import { EnvelopeSimpleIcon, PhoneIcon } from "@phosphor-icons/react"
 import { Button } from "@/components/ui/button"
-import { WhatsAppMenu, WhatsAppMenuCaret } from "@/components/booking/whatsapp-menu"
+import { WhatsAppMenu, WhatsAppMenuCaret, ContactMenuLabel } from "@/components/booking/whatsapp-menu"
 import { useState } from "react"
 import { CONTACT_LINES } from "@/lib/site-config"
 
@@ -66,7 +66,7 @@ export function ContactInfo() {
                   <p className="text-sm font-bold text-secondary">{t("contactHeading")}</p>
                   <WhatsAppMenu location="contact_page" side="bottom" align="start">
                     <Button variant="secondary" className="w-full">
-                      <WhatsappLogoIcon size={21} aria-hidden="true" />WhatsApp<WhatsAppMenuCaret />
+                      <ContactMenuLabel />
                     </Button>
                   </WhatsAppMenu>
                   {CONTACT_LINES.map(({ display, phone, email }) => (

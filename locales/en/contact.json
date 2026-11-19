@@ -1,7 +1,11 @@
 {
   "contact": {
     "whatsapp": {
-      "heading": "We’d be happy to help you on WhatsApp",
+      "heading": "We’d be happy to help by WhatsApp or phone",
+      "button": "Contact us",
+      "whatsappAction": "WhatsApp",
+      "callAction": "Call",
+      "callLabel": "Call {name} at {phone}",
       "contactLabel": "Message {name} on WhatsApp at {phone}",
       "online": "Online",
       "previews": {
