@@ -48,17 +48,22 @@ function WhatsAppContacts({ message, packageId, onContactClick }: Pick<WhatsAppM
       <div className="divide-y divide-[#e9edef] px-4">
         {SALES_CONTACTS.map(({ name, phone, display, whatsapp, photoSrc }) => (
           <Menu.Group key={name} aria-label={name} className="py-3">
-            <div className="flex items-start gap-3">
-              <span data-contact-photo={name} aria-hidden="true" className="relative flex size-12 shrink-0 items-center justify-center rounded-full bg-[#d9fdd3] text-lg font-medium text-[#008069]">
-                {photoSrc ? <Image src={photoSrc} width={48} height={48} alt="" className="size-full rounded-full object-cover" /> : name[0]}
-                <span className="absolute -bottom-0.5 -right-0.5 size-3 rounded-full border-2 border-white bg-[#25d366]" />
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="block text-base font-medium text-[#111b21]">{name}</span>
-                <span title={t(`previews.${context.key}.${name}`, { product })} className="mt-0.5 block truncate text-sm leading-snug text-[#54656f]">{t(`previews.${context.key}.${name}`, { product })}</span>
-                <span className="mt-1 block whitespace-nowrap text-sm tabular-nums text-[#667781]">{display}</span>
-              </span>
-            </div>
+            <Menu.Item asChild>
+              <a href={`${whatsapp}?text=${encodeURIComponent(inquiry)}`}
+                target="_blank" rel="noopener noreferrer" data-package-id={context.packageId} data-contact-profile={name}
+                onClick={onContactClick} aria-label={t("contactLabel", { name, phone: display })}
+                className="flex cursor-pointer items-start gap-3 rounded-lg outline-none transition-colors data-[highlighted]:bg-[#f0f2f5]">
+                <span data-contact-photo={name} aria-hidden="true" className="relative flex size-12 shrink-0 items-center justify-center rounded-full bg-[#d9fdd3] text-lg font-medium text-[#008069]">
+                  {photoSrc ? <Image src={photoSrc} width={48} height={48} alt="" className="size-full rounded-full object-cover" /> : name[0]}
+                  <span className="absolute -bottom-0.5 -right-0.5 size-3 rounded-full border-2 border-white bg-[#25d366]" />
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block text-base font-medium text-[#111b21]">{name}</span>
+                  <span title={t(`previews.${context.key}.${name}`, { product })} className="mt-0.5 block truncate text-sm leading-snug text-[#54656f]">{t(`previews.${context.key}.${name}`, { product })}</span>
+                  <span className="mt-1 block whitespace-nowrap text-sm tabular-nums text-[#667781]">{display}</span>
+                </span>
+              </a>
+            </Menu.Item>
             <div className="mt-3 grid grid-cols-[1fr_auto] items-center gap-3">
               <Menu.Item asChild>
                 <a href={`${whatsapp}?text=${encodeURIComponent(inquiry)}`}
