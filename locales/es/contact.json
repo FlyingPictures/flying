@@ -2,7 +2,13 @@
   "contact": {
     "whatsapp": {
       "heading": "Será un placer atenderte por WhatsApp",
-      "contactLabel": "Escribir a {name} por WhatsApp al {phone}"
+      "contactLabel": "Escribir a {name} por WhatsApp al {phone}",
+      "serviceOpen": "En horario de atención",
+      "serviceClosed": "Déjanos un mensaje",
+      "previews": {
+        "Tere": "¡Hola! ¿Qué día te gustaría volar?",
+        "Vero": "Cuéntame tu plan y te ayudo a elegir."
+      }
     },
     "hero": {
       "title": "Contacta a la torre de control:\nestamos a tu servicio.",

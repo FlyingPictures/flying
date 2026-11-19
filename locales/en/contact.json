@@ -2,7 +2,13 @@
   "contact": {
     "whatsapp": {
       "heading": "We’d be happy to help you on WhatsApp",
-      "contactLabel": "Message {name} on WhatsApp at {phone}"
+      "contactLabel": "Message {name} on WhatsApp at {phone}",
+      "serviceOpen": "Within service hours",
+      "serviceClosed": "Leave us a message",
+      "previews": {
+        "Tere": "Hi! What day would you like to fly?",
+        "Vero": "Tell me your plans. I’ll help you choose."
+      }
     },
     "hero": {
       "title": "Contact Mission Control:\nWe are at your service.",
