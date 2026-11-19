@@ -6,6 +6,7 @@ export const IMAGES = {
         { publicId: "hero1_rszxmn", width: 2160, height: 1715, focusX: "49%", subjectTop: 0.21 },
         { publicId: "thumbnail_zjstmn", width: 3840, height: 2560, focusX: "54%", subjectTop: 0.145 },
         { publicId: "thumbnail_vnugqt", width: 3840, height: 2560, focusX: "38%", subjectTop: 0.308 },
+        { publicId: "Mariposa_monarca_sqd2vg", width: 1920, height: 1080, focusX: "50%", subjectTop: 0.05 },
       ],
     },
     brandLogos: [
