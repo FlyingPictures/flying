@@ -52,12 +52,15 @@ export function getReservationUrl(slug: ProductSlug, locale: string) {
   return getInquiryUrl(slug, locale);
 }
 
-export function getInquiryUrl(slug: ProductSlug, locale: string) {
+export function getInquiryMessage(slug: ProductSlug, locale: string) {
   const name = getProductName(slug, locale);
-  const message = locale === "es"
+  return locale === "es"
     ? `Hola, quiero consultar disponibilidad, condiciones y precio total para ${name}.`
     : `Hello, I would like to ask about availability, terms and the total price for ${name}.`;
-  return `${SITE_CONTACT.whatsapp}?text=${encodeURIComponent(message)}`;
+}
+
+export function getInquiryUrl(slug: ProductSlug, locale: string) {
+  return `${SITE_CONTACT.whatsapp}?text=${encodeURIComponent(getInquiryMessage(slug, locale))}`;
 }
 
 export const PRODUCT_PRICING: Record<ProductSlug, ProductPricing | null> = {

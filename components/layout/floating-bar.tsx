@@ -5,12 +5,12 @@ import { useLocale, useTranslations } from "next-intl";
 import { WhatsappLogoIcon } from "@phosphor-icons/react";
 import { Link, usePathname } from "@/i18n/routing";
 import { ReservationLink } from "@/components/booking/reservation-link";
+import { WhatsAppMenu, WhatsAppMenuCaret } from "@/components/booking/whatsapp-menu";
 import { Button } from "@/components/ui/button";
 import { PackagePrices } from "@/components/booking/package-prices";
 import { cn } from "@/lib/utils";
 import { CallMenu } from "./call-menu";
-import { SITE_CONTACT } from "@/lib/site-config";
-import { BOOKING_URLS, getInquiryUrl, getPriceDisplay, isProductSlug, PRODUCT_PRICING } from "@/lib/commercial-config";
+import { BOOKING_URLS, getInquiryMessage, getPriceDisplay, isProductSlug, PRODUCT_PRICING } from "@/lib/commercial-config";
 
 function subscribeToViewportChanges(update: () => void) {
   window.addEventListener("scroll", update, { passive: true });
@@ -31,7 +31,6 @@ export function FloatingBar() {
   const pathname = usePathname();
   const candidate = pathname.split("/").pop() ?? "";
   const slug = pathname.startsWith("/product/") && isProductSlug(candidate) ? candidate : null;
-  const inquiry = slug ? getInquiryUrl(slug, locale) : SITE_CONTACT.whatsapp;
   const price = slug && PRODUCT_PRICING[slug] ? getPriceDisplay(PRODUCT_PRICING[slug], locale) : null;
   const isContact = pathname === "/contact";
   const showCatalogLink = !slug && !isContact && pathname !== "/flight-experiences";
@@ -41,7 +40,8 @@ export function FloatingBar() {
     return options !== null && options.getBoundingClientRect().bottom <= 0;
   }, () => false);
   const [calling, setCalling] = useState(false);
-  const hidden = !pastBookingOptions && (slug !== null || !calling);
+  const [messaging, setMessaging] = useState(false);
+  const hidden = !pastBookingOptions && (slug !== null || (!calling && !messaging));
   const actionClass = "min-h-11 min-w-0 whitespace-normal px-3 text-center text-xs leading-tight sm:px-5 sm:text-sm";
 
   return (
@@ -58,13 +58,16 @@ export function FloatingBar() {
           <PackagePrices rows={price.rows} compact />
         </div>}
         {isContact && <span className="hidden flex-col px-3 text-xs sm:flex"><strong>{concierge("hours")}</strong>{concierge("location")}</span>}
-        <div className={cn("flex items-center gap-1", slug && "max-md:flex-1 max-md:justify-end max-[519px]:[&>a]:flex-1")}>
-          {slug && <Button asChild size="xs" className={actionClass}><ReservationLink slug={slug} locale={locale} /></Button>}
+        <div className={cn("flex items-center gap-1", slug && "max-md:flex-1 max-md:justify-end max-[519px]:[&>a]:flex-1 max-[519px]:[&>button[data-package-id]]:flex-1")}>
+          {slug && <Button asChild size="xs" className={actionClass}><ReservationLink slug={slug} locale={locale} location="floating_bar" /></Button>}
           {showCatalogLink && <Button asChild size="xs" className={actionClass}><Link href="/flight-experiences">{t("bookFlight")}</Link></Button>}
-          {(!slug || BOOKING_URLS[slug]) && <a href={inquiry} target="_blank" rel="noopener noreferrer"
-            className="inline-flex min-h-11 shrink-0 items-center justify-center gap-1 rounded-full bg-secondary px-2.5 text-xs font-bold text-white hover:bg-secondary/90 focus-visible:ring-2 focus-visible:ring-primary sm:px-4 sm:text-sm">
-            <WhatsappLogoIcon size={18} aria-hidden="true" />WhatsApp
-          </a>}
+          {(!slug || BOOKING_URLS[slug]) && <WhatsAppMenu message={slug ? getInquiryMessage(slug, locale) : undefined}
+            packageId={slug ?? undefined} location="floating_bar" onOpenChange={setMessaging}>
+            <button type="button"
+              className="inline-flex min-h-11 shrink-0 items-center justify-center gap-1 rounded-full bg-secondary px-2.5 text-xs font-bold text-white hover:bg-secondary/90 focus-visible:ring-2 focus-visible:ring-primary sm:px-4 sm:text-sm">
+              <WhatsappLogoIcon size={18} aria-hidden="true" />WhatsApp<WhatsAppMenuCaret />
+            </button>
+          </WhatsAppMenu>}
           {!hidden && <CallMenu location="floating_bar" onOpenChange={slug ? undefined : setCalling} />}
         </div>
       </div>

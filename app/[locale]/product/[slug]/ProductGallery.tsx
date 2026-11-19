@@ -34,6 +34,7 @@ export function ProductGallery({ slug, subtitle }: { slug: ProductSlug; subtitle
   }
 
   function onKeyDown(event: KeyboardEvent) {
+    if (event.defaultPrevented || (event.target instanceof Element && event.target.closest('[role="menu"]'))) return;
     if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
     event.preventDefault();
     event.stopPropagation();
@@ -135,7 +136,7 @@ export function ProductGallery({ slug, subtitle }: { slug: ProductSlug; subtitle
               <div className="flex max-w-full flex-wrap items-center gap-1">
                 <CallMenu location="product_gallery" />
                 <Button asChild size="md" className="h-auto min-h-11 max-w-full whitespace-normal px-5 text-center text-sm">
-                  <ReservationLink slug={slug} locale={locale} onClick={() => setExpanded(false)} />
+                  <ReservationLink slug={slug} locale={locale} location="product_gallery" onClick={() => setExpanded(false)} />
                 </Button>
               </div>
               {price.note && <p className="basis-full text-xs text-muted-foreground">{price.note}</p>}

@@ -1,5 +1,9 @@
 {
   "contact": {
+    "whatsapp": {
+      "heading": "We’d be happy to help you on WhatsApp",
+      "contactLabel": "Message {name} on WhatsApp at {phone}"
+    },
     "hero": {
       "title": "Contact Mission Control:\nWe are at your service.",
       "subtitle": "We are morning people. How can we help?",

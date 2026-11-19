@@ -39,8 +39,7 @@ function packageOnPage(pathname: string) {
 function trackClick(event: MouseEvent) {
   if (!(event.target instanceof Element)) return;
   const link = event.target.closest<HTMLAnchorElement>('a[href]');
-  const corporateInquiry = event.target.closest('button[data-corporate-inquiry]:enabled');
-  if (!link && !corporateInquiry) return;
+  if (!link) return;
 
   const language = location.pathname.split('/')[1];
   const id = link?.dataset.packageId ?? packageOnPage(location.pathname);
@@ -56,11 +55,11 @@ function trackClick(event: MouseEvent) {
   }
 
   let method;
-  if (corporateInquiry || link?.hostname === 'wa.me') method = 'whatsapp';
+  if (link?.hostname === 'wa.me') method = 'whatsapp';
   else if (link?.protocol === 'tel:') method = 'phone';
   else if (link?.protocol === 'mailto:') method = 'email';
   if (method) window.gtag?.('event', 'contact_click', {
-    ...context, contact_method: method, ...(corporateInquiry && { package_id: 'corporate' }),
+    ...context, contact_method: method,
   });
 }
 

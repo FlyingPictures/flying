@@ -5,8 +5,9 @@ import type { ProductTranslation } from "@/types/product";
 import { TRIPADVISOR_RATING, TRIPADVISOR_REVIEW_COUNT } from "@/lib/tripadvisor-reviews";
 import { PackagePrices } from "@/components/booking/package-prices";
 import { ReservationLink } from "@/components/booking/reservation-link";
+import { WhatsAppMenu, WhatsAppMenuCaret } from "@/components/booking/whatsapp-menu";
 import { Button } from "@/components/ui/button";
-import { BOOKING_URLS, PRODUCT_PRICING, getInquiryUrl, getPriceDisplay, getProductName, type ProductSlug } from "@/lib/commercial-config";
+import { BOOKING_URLS, PRODUCT_PRICING, getInquiryMessage, getPriceDisplay, getProductName, type ProductSlug } from "@/lib/commercial-config";
 import { ProductGallery } from "./ProductGallery";
 
 export default function ProductMain({ slug, data }: { slug: ProductSlug; data: ProductTranslation }) {
@@ -35,8 +36,10 @@ export default function ProductMain({ slug, data }: { slug: ProductSlug; data: P
           ) : <PackagePrices rows={price.rows} />}
           {price.note && <p className="text-xs text-muted-foreground">{price.note}</p>}
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            <Button asChild><ReservationLink slug={slug} locale={locale} /></Button>
-            {BOOKING_URLS[slug] && <a className="inline-flex min-h-11 items-center text-sm font-bold underline underline-offset-4" href={getInquiryUrl(slug, locale)} target="_blank" rel="noopener noreferrer">WhatsApp</a>}
+            <Button asChild><ReservationLink slug={slug} locale={locale} location="product_detail" /></Button>
+            {BOOKING_URLS[slug] && <WhatsAppMenu message={getInquiryMessage(slug, locale)} packageId={slug} location="product_detail">
+              <button type="button" className="inline-flex min-h-11 items-center gap-1.5 text-sm font-bold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary">WhatsApp<WhatsAppMenuCaret /></button>
+            </WhatsAppMenu>}
           </div>
         </div>
         <span className="order-3 text-sm text-muted-foreground">★ {TRIPADVISOR_RATING} · {t("tripadvisorReviews", { count: TRIPADVISOR_REVIEW_COUNT })}</span>

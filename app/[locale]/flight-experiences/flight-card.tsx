@@ -212,7 +212,7 @@ function FlightCard({
               {priceDisplay.note && <p className="mt-2 max-w-sm text-xs text-secondary/60">{priceDisplay.note}</p>}
             </div>
             <Button variant="primary" size="sm" asChild>
-              <ReservationLink slug={id} locale={locale} />
+              <ReservationLink slug={id} locale={locale} location="catalog" />
             </Button>
           </div>
 

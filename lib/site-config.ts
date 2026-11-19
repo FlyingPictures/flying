@@ -49,3 +49,18 @@ export const CONTACT_LINES = [
     email: SITE_CONTACT.email,
   },
 ] as const;
+
+export const WHATSAPP_CONTACTS = [
+  {
+    name: "Tere",
+    display: SITE_CONTACT.display,
+    whatsapp: `https://wa.me/${SITE_CONTACT.phoneDigits}`,
+    photoSrc: null as string | null,
+  },
+  {
+    name: "Vero",
+    display: SITE_CONTACT.whatsappDisplay,
+    whatsapp: SITE_CONTACT.whatsapp,
+    photoSrc: null as string | null,
+  },
+] as const;

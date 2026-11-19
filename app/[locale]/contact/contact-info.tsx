@@ -5,8 +5,9 @@ import { CloudinaryImage } from "@/components/CloudinaryImage"
 import { IMAGES } from "@/lib/images"
 import { EnvelopeSimpleIcon, PhoneIcon, WhatsappLogoIcon } from "@phosphor-icons/react"
 import { Button } from "@/components/ui/button"
+import { WhatsAppMenu, WhatsAppMenuCaret } from "@/components/booking/whatsapp-menu"
 import { useState } from "react"
-import { CONTACT_LINES, SITE_CONTACT } from "@/lib/site-config"
+import { CONTACT_LINES } from "@/lib/site-config"
 
 const inputClass =
   "w-full h-[48px] bg-transparent border-2 border-background rounded-[12px] px-5 text-background placeholder:text-background placeholder:opacity-100 font-bold outline-none focus:ring-2 focus:ring-background/40 transition"
@@ -19,25 +20,19 @@ export function ContactInfo() {
   const [date, setDate] = useState("")
   const [invoice, setInvoice] = useState(false)
 
-  const handleSubmit = () => {
-    if (!company || !groupSize || !date) return
-
-    const message = [
-      t("corporateMessageTitle"),
-      "",
-      `${t("companyName")}: ${company}`,
-      `${t("groupSize")}: ${groupSize}`,
-      `${t("eventDate")}: ${date}`,
-      invoice ? `${t("requireInvoice")}: ${t("invoiceYes")}` : "",
-    ].filter(Boolean).join("\n")
-    const encoded = encodeURIComponent(message)
-    window.open(`${SITE_CONTACT.whatsapp}?text=${encoded}`, "_blank")
-  }
+  const message = [
+    t("corporateMessageTitle"),
+    "",
+    `${t("companyName")}: ${company}`,
+    `${t("groupSize")}: ${groupSize}`,
+    `${t("eventDate")}: ${date}`,
+    invoice ? `${t("requireInvoice")}: ${t("invoiceYes")}` : "",
+  ].filter(Boolean).join("\n")
 
   const isDisabled = !company || !groupSize || !date
 
   return (
-    <section data-cta-location="contact_page" className="relative w-full lg:h-265 py-12 overflow-hidden">
+    <section data-cta-location="contact_page" className="relative w-full py-12 overflow-hidden">
       <style>{`
         input[type="date"]::-webkit-calendar-picker-indicator { display: none; }
         input[type="date"]::-webkit-inner-spin-button { display: none; }
@@ -69,13 +64,15 @@ export function ContactInfo() {
                 <span className="font-bold">{t("availabilityText")}</span>
                 <div className="space-y-3">
                   <p className="text-sm font-bold text-secondary">{t("contactHeading")}</p>
-                  {CONTACT_LINES.map(({ display, phone, whatsapp, email }) => {
-                    const isWhatsApp = phone === SITE_CONTACT.whatsappPhone
-                    const Icon = isWhatsApp ? WhatsappLogoIcon : PhoneIcon
-                    return (
+                  <WhatsAppMenu location="contact_page" side="bottom" align="start">
+                    <Button variant="secondary" className="w-full">
+                      <WhatsappLogoIcon size={21} aria-hidden="true" />WhatsApp<WhatsAppMenuCaret />
+                    </Button>
+                  </WhatsAppMenu>
+                  {CONTACT_LINES.map(({ display, phone, email }) => (
                       <div key={phone} className="grid border-t border-secondary/10 pt-2">
-                        <a className="flex min-h-11 items-center gap-3 font-semibold hover:underline" href={isWhatsApp ? whatsapp : `tel:${phone}`}>
-                          <Icon className="size-5 shrink-0" aria-hidden="true" />
+                        <a className="flex min-h-11 items-center gap-3 font-semibold hover:underline" href={`tel:${phone}`}>
+                          <PhoneIcon className="size-5 shrink-0" aria-hidden="true" />
                           <span>{display}</span>
                         </a>
                         <a className="flex min-h-11 items-center gap-3 text-sm hover:underline" href={`mailto:${email}`}>
@@ -83,8 +80,7 @@ export function ContactInfo() {
                           <span className="break-all">{email}</span>
                         </a>
                       </div>
-                    )
-                  })}
+                  ))}
                 </div>
               </div>
             </div>
@@ -131,17 +127,16 @@ export function ContactInfo() {
                 />
                 {t("requireInvoice")}
               </label>
-              <Button
-                variant="primary"
-                size="lg"
-                className="w-full disabled:opacity-100 disabled:pointer-events-none"
-                disabled={isDisabled}
-                data-corporate-inquiry
-                data-cta-location="corporate_form"
-                onClick={handleSubmit}
-              >
-                {t("cta")}
-              </Button>
+              <WhatsAppMenu message={message} location="corporate_form" packageId="corporate" align="start">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="w-full disabled:opacity-100 disabled:pointer-events-none"
+                  disabled={isDisabled}
+                >
+                  {t("cta")}<WhatsAppMenuCaret />
+                </Button>
+              </WhatsAppMenu>
             </div>
           </div>
 

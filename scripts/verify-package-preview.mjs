@@ -10,6 +10,7 @@ const peekUrl = (slug) => `https://book.peek.com/s/3ed46494-9c75-4a7a-b02c-e78f1
 const decode = (text) => text.replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 const money = (amount) => `$${new Intl.NumberFormat('en-US').format(amount)} MXN`;
 const linkValues = (html) => [...html.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map((match) => decode(match[1]));
+const whatsappTriggers = (html) => [...html.matchAll(/<button\b[^>]*data-whatsapp-trigger[^>]*>/g)].map((match) => match[0]);
 
 for (const locale of ['es', 'en']) {
   for (const pkg of matrix.packages) {
@@ -45,11 +46,13 @@ for (const locale of ['es', 'en']) {
       assert.ok(!html.includes(locale === 'es' ? '<strong>Niños' : '<strong>Children'), `${path}: no invented child fare`);
     }
     const inquiries = linkValues(html).filter((href) => href.startsWith('https://wa.me/') && href.includes('?text='));
-    assert.ok(inquiries.length >= 2, `${path}: WhatsApp contact preserved`);
-    for (const href of inquiries) assert.ok(new URL(href).searchParams.get('text').includes(name), `${path}: correct inquiry package`);
+    assert.equal(inquiries.length, 0, `${path}: choose a WhatsApp contact before leaving the page`);
+    for (const location of ['product_detail', 'floating_bar']) {
+      assert.ok(whatsappTriggers(html).some((button) => button.includes(`data-cta-location="${location}"`)), `${path}: ${location} WhatsApp menu`);
+    }
     assert.ok(html.includes(`rel="canonical" href="https://flyingpictures.mx${path}"`), `${path}: canonical`);
     for (const lang of ['es', 'en']) assert.ok(html.includes(`hrefLang="${lang}" href="https://flyingpictures.mx/${lang}/product/${pkg.id}"`), `${path}: language alternate`);
-    results.push({path, status: 200, prices: 'source matched', reservation: peekFlows[pkg.id] ? 'correct Peek flow' : 'WhatsApp inquiry', metadata: 'verified'});
+    results.push({path, status: 200, prices: 'source matched', reservation: peekFlows[pkg.id] ? 'correct Peek flow' : 'WhatsApp contact menu', metadata: 'verified'});
   }
   for (const slug of ['birthday', 'anniversary', 'proposal']) {
     const path = `/${locale}/product/${slug}`;
@@ -75,13 +78,14 @@ for (const locale of ['es', 'en']) {
     const catalog = route ? html.slice(html.indexOf('id="flight-options"')) : html;
     const inquiryLinks = linkValues(catalog).filter((href) => href.startsWith('https://wa.me/') && href.includes('?text='));
     if (route) {
-      assert.equal(inquiryLinks.length, 1, `${path}: Charter catalog inquiry`);
+      assert.equal(inquiryLinks.length, 0, `${path}: Charter opens a contact menu`);
+      assert.ok(whatsappTriggers(catalog).some((button) => button.includes('data-package-id="charter"')), `${path}: Charter catalog inquiry`);
       const bookingLinks = linkValues(catalog).filter((href) => href.startsWith('https://book.peek.com/s/'));
       assert.equal(bookingLinks.length, 6, `${path}: six Peek booking buttons`);
       for (const pkg of matrix.packages) {
         const name = locale === 'es' ? pkg.nameEs : pkg.proposedNameEn;
         if (peekFlows[pkg.id]) assert.ok(bookingLinks.includes(peekUrl(pkg.id)), `${path}: ${name}`);
-        else assert.ok(inquiryLinks.some((href) => new URL(href).searchParams.get('text').includes(name)), `${path}: ${name}`);
+        else assert.ok(whatsappTriggers(catalog).some((button) => button.includes(`data-package-id="${pkg.id}"`)), `${path}: ${name}`);
       }
     }
     assert.ok(html.includes(money(7999)), `${path}: Traveler price is visible`);
@@ -100,5 +104,5 @@ for (const locale of ['es', 'en']) {
   for (const slug of ['birthday', 'anniversary', 'proposal']) assert.ok(!sitemap.includes(`/product/${slug}`), `sitemap: excludes ${slug}`);
 }
 results.push({path: '/sitemap.xml', newPackages: 14, retiredProducts: 0});
-await writeFile('audit/package-migration-2026-09-30/preview-route-results.json', JSON.stringify({date: '2026-10-16', base: base.origin, results}, null, 2) + '\n');
+await writeFile(process.env.PACKAGE_PREVIEW_REPORT ?? 'audit/package-migration-2026-09-30/preview-route-results.json', JSON.stringify({date: new Date().toISOString().slice(0, 10), base: base.origin, results}, null, 2) + '\n');
 console.log(`Preview verified: ${results.length} route and sitemap checks; Excel prices, Peek flows, inquiries, metadata and redirects match.`);

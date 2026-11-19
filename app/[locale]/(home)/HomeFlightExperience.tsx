@@ -332,7 +332,7 @@ export function FlightExperienceSection() {
                       <strong className="text-[clamp(16px,2vw,22px)]">{priceDisplay.summary}</strong>
                     </div>
                     <Button variant="primary" size="xs" className="pointer-events-auto" asChild>
-                      <ReservationLink slug={flight.slug} locale={locale} />
+                      <ReservationLink slug={flight.slug} locale={locale} location="home_carousel" />
                     </Button>
                   </div>
                 </div>

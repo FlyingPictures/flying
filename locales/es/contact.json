@@ -1,5 +1,9 @@
 {
   "contact": {
+    "whatsapp": {
+      "heading": "Será un placer atenderte por WhatsApp",
+      "contactLabel": "Escribir a {name} por WhatsApp al {phone}"
+    },
     "hero": {
       "title": "Contacta a la torre de control:\nestamos a tu servicio.",
       "subtitle": "Somos madrugadores. ¿Cómo podemos ayudarte?",
