@@ -59,7 +59,7 @@ function WhatsAppContacts({ message, packageId, onContactClick }: Pick<WhatsAppM
                 <span className="mt-1 block whitespace-nowrap text-sm tabular-nums text-[#667781]">{display}</span>
               </span>
             </div>
-            <div className="mt-3 grid grid-cols-2 gap-2">
+            <div className="mt-3 grid grid-cols-[1fr_auto] items-center gap-3">
               <Menu.Item asChild>
                 <a href={`${whatsapp}?text=${encodeURIComponent(inquiry)}`}
                   target="_blank" rel="noopener noreferrer" data-package-id={context.packageId}
@@ -70,9 +70,9 @@ function WhatsAppContacts({ message, packageId, onContactClick }: Pick<WhatsAppM
               </Menu.Item>
               <Menu.Item asChild>
                 <a href={`tel:${phone}`} data-package-id={context.packageId}
-                  onClick={onContactClick} aria-label={t("callLabel", { name, phone: display })}
-                  className="inline-flex min-h-11 cursor-pointer items-center justify-center gap-1.5 rounded-full border border-secondary/25 bg-white px-2 text-sm font-semibold text-secondary outline-none transition-colors data-[highlighted]:border-secondary data-[highlighted]:bg-secondary/5">
-                  <PhoneIcon size={18} aria-hidden="true" />{t("callAction")}
+                  onClick={onContactClick} aria-label={t("callLabel", { name, phone: display })} title={t("callAction")}
+                  className="inline-flex size-12 cursor-pointer items-center justify-center rounded-full border border-[#0eab61] bg-[#0eab61] text-white outline-none transition-colors data-[highlighted]:border-[#078c4e] data-[highlighted]:bg-[#078c4e] data-[highlighted]:ring-2 data-[highlighted]:ring-[#0eab61]/30 data-[highlighted]:ring-offset-2">
+                  <PhoneIcon size={24} weight="fill" aria-hidden="true" /><span className="sr-only">{t("callAction")}</span>
                 </a>
               </Menu.Item>
             </div>
