@@ -13,6 +13,17 @@ export const SITE_CONTACT = {
   whatsappEmail: "volamoscontigo@flyingpictures.mx",
 } as const;
 
+export const SITE_SERVICE_PHONES = {
+  globoport: {
+    phone: "+525574971275",
+    display: "(+52) 55 7497-1275",
+  },
+  office: {
+    phone: "+525553983167",
+    display: "(+52) 55 5398-3167",
+  },
+} as const;
+
 export const SITE_LOCATION = {
   latitude: 19.6923323,
   longitude: -98.8244167,
