@@ -132,6 +132,7 @@ export async function Footer({ translations }: FooterProps) {
             <div className="flex min-w-0 flex-col items-start">
               <h3 className="text-left font-inter text-sm font-bold tracking-normal text-background/90">{contactT("globoportReception")}</h3>
               <a className={`${LINK_CLASSES} inline-flex min-h-11 items-center`} href={`tel:${SITE_SERVICE_PHONES.globoport.phone}`}>{SITE_SERVICE_PHONES.globoport.display}</a>
+              <p className="text-sm leading-relaxed text-background/70">{contactT("globoportHours")}</p>
             </div>
             <div className="flex min-w-0 flex-col items-start">
               <h3 className="text-left font-inter text-sm font-bold tracking-normal text-background/90">{contactT("office")}</h3>
