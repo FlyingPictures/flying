@@ -5,8 +5,89 @@
       "contactLabel": "Message {name} on WhatsApp at {phone}",
       "online": "Online",
       "previews": {
-        "Tere": "Hi! What day would you like to fly?",
-        "Vero": "Tell me your plans. I’ll help you choose."
+        "home": {
+          "Tere": "Hi! What day would you like to fly?",
+          "Vero": "Tell me your plans. I’ll help you choose."
+        },
+        "catalog": {
+          "Tere": "Looking for a shared or private flight?",
+          "Vero": "Let’s compare options for your visit."
+        },
+        "classic": {
+          "Tere": "Shall we check dates for {product}?",
+          "Vero": "I can explain what {product} includes."
+        },
+        "transport": {
+          "Tere": "Where would you be travelling from?",
+          "Vero": "Let’s talk transport and pyramids."
+        },
+        "journey": {
+          "Tere": "When would you like to enjoy {product}?",
+          "Vero": "Let’s talk flights, guides and touring."
+        },
+        "vip": {
+          "Tere": "What date do you have in mind for VIP?",
+          "Vero": "Let’s go over the details of {product}."
+        },
+        "celebration": {
+          "Tere": "What occasion would you like to celebrate?",
+          "Vero": "Let’s plan your balloon celebration."
+        },
+        "private": {
+          "Tere": "Who will join your private flight?",
+          "Vero": "Let’s check dates for your private flight."
+        },
+        "charter": {
+          "Tere": "What would your tailor-made flight be like?",
+          "Vero": "Tell me which services you’d like to add."
+        },
+        "open": {
+          "Tere": "Who would you like to give a flight to?",
+          "Vero": "I can help you ask about a gift card."
+        },
+        "corporate": {
+          "Tere": "How many people are in your group?",
+          "Vero": "Let’s coordinate your event logistics."
+        },
+        "safety": {
+          "Tere": "Have any questions about our flights?",
+          "Vero": "Let’s talk pilots, equipment and safety."
+        },
+        "plan": {
+          "Tere": "How will you get to the Globoport?",
+          "Vero": "Let’s talk travel, weather and what to wear."
+        },
+        "contact": {
+          "Tere": "How can we help with your visit?",
+          "Vero": "Tell me what you need for your flight."
+        },
+        "terms": {
+          "Tere": "Which booking condition can I help with?",
+          "Vero": "I can help explain the booking terms."
+        },
+        "privacy": {
+          "Tere": "Have a question about your personal data?",
+          "Vero": "I can help with our privacy notice."
+        },
+        "cancellation": {
+          "Tere": "Need to change or cancel your booking?",
+          "Vero": "Let’s review your booking conditions."
+        },
+        "general": {
+          "Tere": "Tell me how you’d like to fly.",
+          "Vero": "I’ll help you find the information you need."
+        }
+      },
+      "messages": {
+        "home": "Hello, I’m visiting the Flying Pictures home page and would like some help choosing a flight.",
+        "catalog": "Hello, I’m comparing the flight experiences and would like help choosing a package.",
+        "safety": "Hello, I’m reading the Safety & Heritage page and have a question about the pilots, equipment or flight operations.",
+        "plan": "Hello, I’m planning my visit to the Globoport. Could you help with directions, transport or recommendations for my flight?",
+        "contact": "Hello, I’m visiting the contact page and would like some help with my visit or booking.",
+        "terms": "Hello, I’m reviewing the terms and conditions and would like to clarify a question about my booking.",
+        "privacy": "Hello, I’m reviewing the privacy notice and have a question about how my personal data is handled.",
+        "cancellation": "Hello, I’m reading the cancellation policy and would like to ask about changing or cancelling my booking.",
+        "general": "Hello, I’m visiting the Flying Pictures website and would like more information."
       }
     },
     "hero": {

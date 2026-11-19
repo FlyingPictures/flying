@@ -5,8 +5,89 @@
       "contactLabel": "Escribir a {name} por WhatsApp al {phone}",
       "online": "En línea",
       "previews": {
-        "Tere": "¡Hola! ¿Qué día te gustaría volar?",
-        "Vero": "Cuéntame tu plan y te ayudo a elegir."
+        "home": {
+          "Tere": "¡Hola! ¿Qué día te gustaría volar?",
+          "Vero": "Cuéntame tu plan y te ayudo a elegir."
+        },
+        "catalog": {
+          "Tere": "¿Buscas vuelo compartido o privado?",
+          "Vero": "Comparamos opciones para tu visita."
+        },
+        "classic": {
+          "Tere": "¿Vemos fechas para {product}?",
+          "Vero": "Te cuento qué incluye {product}."
+        },
+        "transport": {
+          "Tere": "¿Desde dónde saldrías a tu vuelo?",
+          "Vero": "Te ayudo con transporte y pirámides."
+        },
+        "journey": {
+          "Tere": "¿Cuándo quieres vivir {product}?",
+          "Vero": "Veamos vuelo, guía y recorrido."
+        },
+        "vip": {
+          "Tere": "¿Qué fecha tienes para tu vuelo VIP?",
+          "Vero": "Te cuento los detalles de {product}."
+        },
+        "celebration": {
+          "Tere": "¿Qué ocasión te gustaría celebrar?",
+          "Vero": "Planeemos tu celebración en globo."
+        },
+        "private": {
+          "Tere": "¿Con quién compartirías tu vuelo privado?",
+          "Vero": "Veamos fechas para su vuelo privado."
+        },
+        "charter": {
+          "Tere": "¿Cómo imaginas tu vuelo a la medida?",
+          "Vero": "Cuéntame qué servicios quieres sumar."
+        },
+        "open": {
+          "Tere": "¿A quién te gustaría regalar un vuelo?",
+          "Vero": "Te ayudo a consultar la tarjeta de regalo."
+        },
+        "corporate": {
+          "Tere": "¿Cuántas personas forman tu grupo?",
+          "Vero": "Coordinemos la logística de tu evento."
+        },
+        "safety": {
+          "Tere": "¿Tienes dudas sobre nuestros vuelos?",
+          "Vero": "Hablemos de pilotos, equipo y seguridad."
+        },
+        "plan": {
+          "Tere": "¿Cómo llegarás al Globopuerto?",
+          "Vero": "Te ayudo con traslado, clima y qué llevar."
+        },
+        "contact": {
+          "Tere": "¿Cómo podemos ayudarte con tu visita?",
+          "Vero": "Cuéntame qué necesitas para tu vuelo."
+        },
+        "terms": {
+          "Tere": "¿Qué condición de tu reserva revisamos?",
+          "Vero": "Te ayudo a entender los términos."
+        },
+        "privacy": {
+          "Tere": "¿Tienes dudas sobre tus datos?",
+          "Vero": "Te oriento sobre el aviso de privacidad."
+        },
+        "cancellation": {
+          "Tere": "¿Necesitas cambiar o cancelar tu reserva?",
+          "Vero": "Revisemos las condiciones de tu reserva."
+        },
+        "general": {
+          "Tere": "Cuéntame cómo te gustaría volar.",
+          "Vero": "Te ayudo a encontrar la información."
+        }
+      },
+      "messages": {
+        "home": "Hola, estoy visitando la página de inicio de Flying Pictures y me gustaría recibir orientación para elegir un vuelo.",
+        "catalog": "Hola, estoy comparando las experiencias de vuelo y quisiera ayuda para elegir un paquete.",
+        "safety": "Hola, estoy revisando la página de seguridad y legado. Tengo una consulta sobre los pilotos, el equipo o la operación de los vuelos.",
+        "plan": "Hola, estoy planeando mi visita al Globopuerto. ¿Pueden ayudarme con las indicaciones, el traslado o las recomendaciones para el vuelo?",
+        "contact": "Hola, vengo de la página de contacto y quisiera ayuda con mi visita o reservación.",
+        "terms": "Hola, estoy revisando los términos y condiciones y quisiera aclarar una duda sobre mi reservación.",
+        "privacy": "Hola, estoy revisando el aviso de privacidad y tengo una consulta sobre el tratamiento de mis datos personales.",
+        "cancellation": "Hola, estoy revisando la política de cancelación. Quisiera consultar las condiciones para cambiar o cancelar mi reservación.",
+        "general": "Hola, estoy visitando el sitio de Flying Pictures y quisiera recibir más información."
       }
     },
     "hero": {
