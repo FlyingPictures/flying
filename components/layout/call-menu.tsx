@@ -3,7 +3,7 @@
 import * as Menu from "@radix-ui/react-dropdown-menu";
 import { Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { CONTACT_LINES } from "@/lib/site-config";
+import { SALES_CONTACTS } from "@/lib/site-config";
 
 export function CallMenu({ location, onOpenChange }: { location: "floating_bar" | "product_gallery"; onOpenChange?: (open: boolean) => void }) {
   const t = useTranslations("nav");
@@ -20,11 +20,14 @@ export function CallMenu({ location, onOpenChange }: { location: "floating_bar" 
         <Menu.Content data-cta-location={location} side="top" align="end" sideOffset={10} collisionPadding={12} aria-label={t("call")}
           className="z-90 w-64 max-w-[calc(100vw-1.5rem)] rounded-2xl border border-border bg-background p-2 text-secondary shadow-2xl">
           <Menu.Label className="px-3 py-2 text-sm font-bold leading-snug">{contact("contactHeading")}</Menu.Label>
-          {CONTACT_LINES.map(({ phone, display }) => (
+          {SALES_CONTACTS.map(({ name, phone, display }) => (
             <Menu.Item asChild key={phone}>
               <a href={`tel:${phone}`} className="flex items-center gap-3 rounded-xl px-3 py-3 outline-none data-[highlighted]:bg-secondary/8">
-                <Phone size={20} aria-hidden="true" />
-                <span className="font-semibold tabular-nums">{display}</span>
+                <Phone size={20} aria-hidden="true" className="shrink-0" />
+                <span>
+                  <span className="block font-semibold">{name}</span>
+                  <span className="block text-sm tabular-nums text-secondary/70">{display}</span>
+                </span>
               </a>
             </Menu.Item>
           ))}

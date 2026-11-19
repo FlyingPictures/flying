@@ -5,7 +5,7 @@ import { CaretDownIcon, WhatsappLogoIcon } from "@phosphor-icons/react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import type { MouseEventHandler, ReactElement } from "react";
-import { WHATSAPP_CONTACTS } from "@/lib/site-config";
+import { SALES_CONTACTS } from "@/lib/site-config";
 
 interface WhatsAppMenuProps {
   children: ReactElement;
@@ -32,13 +32,10 @@ export function WhatsAppMenu({
           sideOffset={12} collisionPadding={12} aria-label={t("heading")}
           className="z-90 w-80 max-w-[calc(100vw-1.5rem)] max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto rounded-3xl border border-secondary/10 bg-background p-2.5 text-secondary shadow-[0_16px_60px_rgba(3,48,59,.22)]">
           <Menu.Label className="px-3 pb-4 pt-3">
-            <span className="mb-2 flex items-center gap-2 text-xs font-bold tracking-wide text-secondary/65">
-              <WhatsappLogoIcon size={17} weight="fill" className="text-[#18794e]" aria-hidden="true" />WhatsApp
-            </span>
             <span className="block max-w-60 font-poppins text-lg font-semibold leading-snug">{t("heading")}</span>
           </Menu.Label>
           <Menu.Group className="space-y-1.5">
-            {WHATSAPP_CONTACTS.map(({ name, display, whatsapp, photoSrc }) => (
+            {SALES_CONTACTS.map(({ name, display, whatsapp, photoSrc }) => (
               <Menu.Item asChild key={name}>
                 <a href={message ? `${whatsapp}?text=${encodeURIComponent(message)}` : whatsapp}
                   target="_blank" rel="noopener noreferrer" data-package-id={packageId}
