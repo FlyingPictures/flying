@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { SITE_URL } from "@/lib/site-config";
+import { CONTACT_LINES, SITE_URL } from "@/lib/site-config";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -97,7 +97,15 @@ export default async function TermsPage({ params }: Props) {
 
         <section>
           <h2 className="text-2xl font-bold tracking-tight mb-4">{tp("contactTitle")}</h2>
-          <p>{tp("contactEmail")} <a href={`mailto:${t("emailTerms")}`} className="text-primary font-bold hover:underline">{t("emailTerms")}</a></p>
+          <p>{tp("contactEmail")}</p>
+          <ul className="mt-4 space-y-4">
+            {CONTACT_LINES.map(({ phone, display, email }) => (
+              <li key={phone} className="flex flex-col items-start gap-1">
+                <a href={`tel:${phone}`} className="text-primary font-bold hover:underline">{display}</a>
+                <a href={`mailto:${email}`} className="text-primary font-bold hover:underline break-all">{email}</a>
+              </li>
+            ))}
+          </ul>
         </section>
 
       </div>
