@@ -5,6 +5,7 @@ import { CaretDownIcon, ChatCircleDotsIcon, PhoneIcon, WhatsappLogoIcon } from "
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import type { MouseEventHandler, ReactElement } from "react";
+import { BrandLogo } from "@/components/BrandLogo";
 import { usePathname } from "@/i18n/routing";
 import { getInquiryMessage, getProductName, type ProductSlug } from "@/lib/commercial-config";
 import { SALES_CONTACTS } from "@/lib/site-config";
@@ -32,11 +33,16 @@ function WhatsAppContacts({ message, packageId, onContactClick }: Pick<WhatsAppM
 
   return (
     <>
-      <Menu.Label className="border-b border-[#e9edef] bg-[#f0f2f5] px-4 py-3">
-        <span className="block text-base font-semibold leading-snug text-[#111b21]">{t("heading")}</span>
-        <span className="mt-2 flex items-center gap-1.5 text-sm font-normal text-[#008069]">
-          <span aria-hidden="true" className="size-2 shrink-0 rounded-full bg-[#25d366]" />
-          {t("online")}
+      <Menu.Label className="flex items-start gap-3 border-b border-[#e9edef] bg-[#f0f2f5] px-4 py-3">
+        <span data-contact-brand-avatar className="flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white bg-[#ed1c24] p-1.5 shadow-sm">
+          <BrandLogo className="size-full object-contain" />
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block text-base font-semibold leading-snug text-[#111b21]">{t("heading")}</span>
+          <span className="mt-2 flex items-center gap-1.5 text-sm font-normal text-[#008069]">
+            <span aria-hidden="true" className="size-2 shrink-0 rounded-full bg-[#25d366]" />
+            {t("online")}
+          </span>
         </span>
       </Menu.Label>
       <div className="divide-y divide-[#e9edef] px-4">
