@@ -5,6 +5,7 @@ import { getLocale, getTranslations } from "next-intl/server"
 import { PACKAGE_SLUGS, getProductName } from "@/lib/commercial-config"
 import { SITE_CONTACT, SITE_SERVICE_PHONES } from "@/lib/site-config"
 import { IMAGES } from "@/lib/images"
+import { PhoneIcon } from "@phosphor-icons/react/dist/ssr"
 
 interface FooterProps {
   translations: {
@@ -120,23 +121,27 @@ export async function Footer({ translations }: FooterProps) {
           </h2>
           <div className="grid gap-5 md:grid-cols-2">
             <div className="flex min-w-0 flex-col items-start">
-              <a className={LINK_CLASSES} href={`tel:${SITE_CONTACT.phone}`}>{SITE_CONTACT.display}</a>
+              <a className={LINK_CLASSES} href={`https://wa.me/${SITE_CONTACT.phoneDigits}`} target="_blank" rel="noopener noreferrer">{SITE_CONTACT.display}</a>
               <a className={LINK_CLASSES} href={`mailto:${SITE_CONTACT.email}`}>{SITE_CONTACT.email}</a>
             </div>
             <div className="flex min-w-0 flex-col items-start">
-              <a className={LINK_CLASSES} href={`tel:${SITE_CONTACT.whatsappPhone}`}>{SITE_CONTACT.whatsappDisplay}</a>
+              <a className={LINK_CLASSES} href={SITE_CONTACT.whatsapp} target="_blank" rel="noopener noreferrer">{SITE_CONTACT.whatsappDisplay}</a>
               <a className={LINK_CLASSES} href={`mailto:${SITE_CONTACT.whatsappEmail}`}>{SITE_CONTACT.whatsappEmail}</a>
             </div>
           </div>
           <div className="mt-6 grid gap-5 border-t border-background/15 pt-6 md:grid-cols-2">
             <div className="flex min-w-0 flex-col items-start">
               <h3 className="text-left font-inter text-sm font-bold tracking-normal text-background/90">{contactT("globoportReception")}</h3>
-              <a className={`${LINK_CLASSES} inline-flex min-h-11 items-center`} href={`tel:${SITE_SERVICE_PHONES.globoport.phone}`}>{SITE_SERVICE_PHONES.globoport.display}</a>
+              <a className={`${LINK_CLASSES} inline-flex min-h-11 items-center gap-2`} href={`tel:${SITE_SERVICE_PHONES.globoport.phone}`}>
+                <PhoneIcon size={19} aria-hidden="true" className="shrink-0" />{SITE_SERVICE_PHONES.globoport.display}
+              </a>
               <p className="text-sm leading-relaxed text-background/70">{contactT("globoportHours")}</p>
             </div>
             <div className="flex min-w-0 flex-col items-start">
               <h3 className="text-left font-inter text-sm font-bold tracking-normal text-background/90">{contactT("office")}</h3>
-              <a className={`${LINK_CLASSES} inline-flex min-h-11 items-center`} href={`tel:${SITE_SERVICE_PHONES.office.phone}`}>{SITE_SERVICE_PHONES.office.display}</a>
+              <a className={`${LINK_CLASSES} inline-flex min-h-11 items-center gap-2`} href={`tel:${SITE_SERVICE_PHONES.office.phone}`}>
+                <PhoneIcon size={19} aria-hidden="true" className="shrink-0" />{SITE_SERVICE_PHONES.office.display}
+              </a>
               <p className="text-sm leading-relaxed text-background/70">{contactT("officeHours")}</p>
             </div>
           </div>
